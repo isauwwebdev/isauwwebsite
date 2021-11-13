@@ -12,7 +12,7 @@ function AboutUs() {
             />
 
             <Container>
-                <section className="my-5">
+                <section className="my-5 about-us">
                     <div className="row">
                         <div className="col-md-12 text-center">
                             <h1 className="my-3"><strong>About Us</strong></h1>
