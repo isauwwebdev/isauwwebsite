@@ -332,5 +332,19 @@
                 ]
             }
         ]
+    },
+    {
+        "content": [
+            {
+                "position": "Inventory",
+                "name": "Bryan So",
+                "img": "https://assets.grooveapps.com/images/5fff4a731d2cfa006f386042/1624073591_Professional-Headshots-Portraits-by-Jared-Wolfe-Alexandria-VA-Portrait-Studio-Testimonial-01.png"
+            },
+            {
+                "position": "Inventory",
+                "name": "Anthony Liem",
+                "img": "https://assets.grooveapps.com/images/5fff4a731d2cfa006f386042/1624073591_Professional-Headshots-Portraits-by-Jared-Wolfe-Alexandria-VA-Portrait-Studio-Testimonial-01.png"
+            }
+        ]
     }
 ]
