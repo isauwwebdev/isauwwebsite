@@ -494,4 +494,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	position: relative;
 }
 	
-
+.about-us {
+	margin-bottom: calc(54px + 2vw) !important;
+}
