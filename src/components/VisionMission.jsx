@@ -7,7 +7,7 @@ function VisionMission() {
                 <div className="col-md-12 text-center">
                     <h1 className="my-3"><strong>Our Vision</strong></h1>
                     <p className="my-3">
-                        The Indonesian Student Association at the University of Washington (ISAUW) commits to celebrating Indonesia's diverse cultures in the Greater Seattle Area and beyond. ISAUW seeks to foster a place of belonging to engage in activities that build understanding and advocacy. 
+                        The Indonesian Student Association at the University of Washington (ISAUW) commits to celebrating Indonesia's diverse culture by fostering a place of belonging and engaging in activities that build understanding and advocacy.
                     </p>
                 </div>
             </div>
@@ -15,7 +15,7 @@ function VisionMission() {
                 <div className="col-md-12 text-center">
                     <h1 className="my-3"><strong>Our Mission</strong></h1>
                     <p className="my-3">
-                        The Indonesian Student Association at the University of Washington (ISAUW) strives to become a leading student organization with respectful, well-rounded, diverse, and nationalistic young Indonesian leaders. 
+                    The Indonesian Student Association at the University of Washington (ISAUW) strives to become a leading organization of proud Indonesian students that promotes cultural diversity in the Greater Seattle Area and beyond.
                     </p>
                 </div>
             </div>
