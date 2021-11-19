@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 import VisionMission from './VisionMission';
 import HomePhotoGallery from './HomePhotoGallery';
+import InstaFeeds from './InstaFeeds';
 
 function Home() {
     return (
@@ -46,9 +47,10 @@ function Home() {
                 </Carousel.Item>
             </Carousel>
 
-            < Container >
+            <Container>
                 <VisionMission />
                 <HomePhotoGallery />
+                <InstaFeeds token={process.env.REACT_APP_INS_TOKEN} limit={12}/>
             </Container>
         </div>
     )

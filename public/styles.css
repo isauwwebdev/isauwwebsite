@@ -50,10 +50,6 @@ p {
 .isauw-logo {
 	height: calc(1.6vw + 36px);
 }
-/* Navbar Hamburger Menu */
-.hamburger:focus{
-	box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.8);
-}
 /* All Navbar items */
 .navList {
 	font-family: 'Roboto', sans-serif;
@@ -278,6 +274,7 @@ z-index: 10000;
 
 @-webkit-keyframes sk-rotatePlane {
 0% {
+<<<<<<< HEAD
 	-webkit-transform: rotateX(0deg) rotateY(0deg);
 	transform: rotateX(0deg) rotateY(0deg);
 }
@@ -305,6 +302,33 @@ z-index: 10000;
 		transform: rotateX(0deg) rotateY(360deg);
 		}
 	}
+=======
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(0deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(0deg); 
+}
+50% {
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(180deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(180deg); 
+}
+100% {
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(360deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(360deg); } 
+}
+
+@keyframes sk-rotatePlane {
+0% {
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(0deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(0deg); 
+}
+50% {
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(180deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(180deg); 
+}
+100% {
+	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(360deg);
+	transform: perspective(200px) translateZ(3vw) rotateY(360deg); } 
+}
+>>>>>>> 3f6a0be28966f5d6fda36c784fb0b9998e0c63ec
 
 /* Allows highlighting of text in the slick carousel */
 .slick-slider {
