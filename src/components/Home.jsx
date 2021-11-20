@@ -46,7 +46,7 @@ function Home() {
                 </Carousel.Item>
             </Carousel>
 
-            < Container >
+            <Container>
                 <VisionMission />
                 <HomePhotoGallery />
             </Container>
