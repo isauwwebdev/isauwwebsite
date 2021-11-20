@@ -215,7 +215,7 @@ p {
 	box-shadow: none;
 }
 
-/* small changes to the carousel text fadeInDown animation from mdb */
+/* carousel text fadeInDown animation from mdb */
 .animated {
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
@@ -379,7 +379,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	color: #dd4139;
 }
 .upcoming-events-date {
-	font-size: calc(12px + 1vw);
+	font-size: calc(16px + 0.6vw);
 	font-weight: 900;
 	margin-bottom: 0;
 	letter-spacing: 1px;
@@ -494,4 +494,32 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	
 .about-us {
 	margin-bottom: calc(54px + 2vw) !important;
+}
+
+.jumbotron {
+	background-image: linear-gradient(280deg, rgba(0,0,0,0) 0%, rgba(20,40,40,1) 70%), url("../images/isauwcard.png");
+	background-position: "0% 10%";
+	background-size: cover;
+	border-radius: 16px;
+	padding: calc(2vw + 16px);
+	margin-top: calc(1vw + 60px); 
+}
+.jumbotron-title {
+	font-size: calc(20px + 1.2vw);
+	font-weight: 700;
+	color: white;
+	text-shadow: 1px 1px 6px black
+}
+.jumbotron-desc {
+	font-size: calc(10px + 0.3vw);
+	color: white;
+	padding-right: calc(256px - 16vw);
+	text-shadow: 1px 1px 3px black
+}
+.jumbotron-btn {
+	font-weight: 600;
+	font-size: calc(12px + 0.6vw) !important;
+	text-transform: none;
+	color: white;
+	margin: calc(1.2vw + 12px) 0 0
 }

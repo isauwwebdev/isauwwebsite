@@ -46,19 +46,21 @@ function Events() {
                 </Carousel.Item>
             </Carousel>
 
-            < Container >
+            <Container>
                 <UpcomingEventsGallery />
 
-                {/* Apply Now Jumbotron */}
-                <div className="jumbotron" style={{ borderRadius: "16px", backgroundImage: `url("../images/isauwcard.png")`, backgroundPosition: "0% 0%", backgroundSize: `calc(240px + 96vw)`, padding: `calc(2vw + 16px)`, marginTop: `calc(1vw + 60px)` }}>
-                    <h1 className="display-4" style={{ fontWeight: "bold", color: "white", textShadow: "black 0 0 0.16em" }} >ISAUW Card</h1>
-                    <p className="events-card-text" style={{ color: "white", textShadow: "black 0 0 0.16em" }}>Get discounts on your favorite restaurants for only $8!</p>
-                    <a className="btn btn-md btn-dark" style={{ fontWeight: "600", fontSize: `calc(0.6vw + 10px)`, textTransform: "none", color: "white", margin: `calc(1.2vw + 12px) 0 0` }} href="#" role="button">Order now</a>
+                {/* Jumbotron */}
+                <div className="jumbotron">
+                    <div>
+                        <h1 className="jumbotron-title display-4">ISAUW Card</h1>
+                        <p className="jumbotron-desc">Discounts on your favorite restaurants for only $8!</p>
+                        <a className="jumbotron-btn btn btn-md btn-dark" href="#" role="button">Order now</a>
+                    </div>
                 </div>
 
                 <PastEventsGallery />
-            </Container >
-        </div >
+            </Container>
+        </div>
     )
 }
 

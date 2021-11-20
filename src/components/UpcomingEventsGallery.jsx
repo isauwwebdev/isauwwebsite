@@ -1,6 +1,7 @@
 import React from 'react';
 import UpcomingEventsCard from './UpcomingEventsCard';
 import Slider from 'react-slick';
+import events from '../data/events.json'
 
 function UpcomingEventsGallery() {
 
@@ -27,7 +28,7 @@ function UpcomingEventsGallery() {
         );
     }
     const settings = {
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 3,
@@ -59,14 +60,15 @@ function UpcomingEventsGallery() {
                     <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
                     {/* Past Events */}
                     <Slider {...settings}>
-                        <UpcomingEventsCard title="FRIENDSGIVING" month="NOV" date="19" time="6:30PM" loc="Bridges @ 11th" img="https://picsum.photos/2000" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis ac est eleifend imperdiet." />
-                        <UpcomingEventsCard title="WINTER BALL" month="JAN" date="14" time="TBA" loc="Intellectual House, UW" img="https://picsum.photos/1800" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis ac est eleifend imperdiet." />
-                        <UpcomingEventsCard title="WINTER CUP" month="MAR" date="TBA" time="TBA" loc="IMA, UW" img="https://picsum.photos/1600" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis ac est eleifend imperdiet." />
-                        <UpcomingEventsCard title="KERATON" month="MAY" date="TBA" time="TBA" loc="Rainier Vista, UW" img="https://picsum.photos/1400" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel turpis ac est eleifend imperdiet." />
+                        {events.map((event, i) => {
+                            return (
+                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} loc={event.loc} img={event.img} />
+                            )
+                        })}
                     </Slider>
                 </div>
             </div>
-        </section >
+        </section>
     );
 }
 

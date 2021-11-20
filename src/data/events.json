@@ -1,0 +1,34 @@
+[
+    {
+        "title": "FRIENDSGIVING",
+        "month": "NOV",
+        "date": "19",
+        "time": "6:30PM",
+        "loc": "Bridges @ 11th",
+        "img": "https://picsum.photos/2000"
+    },
+    {
+        "title": "WINTER BALL",
+        "month": "JAN",
+        "date": "14",
+        "time": "TBA",
+        "loc": "Intellectual House, UW",
+        "img": "https://picsum.photos/1800"
+    },
+    {
+        "title": "WINTER CUP",
+        "month": "MAR",
+        "date": "TBA",
+        "time": "TBA",
+        "loc": "IMA, UW",
+        "img": "https://picsum.photos/1600"
+    },
+    {
+        "title": "KERATON",
+        "month": "MAY",
+        "date": "TBA",
+        "time": "TBA",
+        "loc": "Rainier Vista, UW",
+        "img": "https://picsum.photos/1400"
+    }
+]

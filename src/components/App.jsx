@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Alert from 'react-bootstrap/Alert'
+// import Alert from 'react-bootstrap/Alert'
 
 import Home from './Home';
 import Officers from './Officers'
@@ -41,19 +41,19 @@ function App() {
         })
     })
 
-    const [showPopUp, setShowPopUp] = React.useState(true);
-    function renderPopUp() {
-        if (showPopUp) {
-            return (
-                <Alert className="alert-fixed"
-                    variant="dark"
-                    onClose={() => setShowPopUp(false)}
-                    dismissible
-                    closeVariant="white">
-                </Alert>
-            );
-        }
-    }
+    // const [showPopUp, setShowPopUp] = React.useState(true);
+    // function renderPopUp() {
+    //     if (showPopUp) {
+    //         return (
+    //             <Alert className="alert-fixed"
+    //                 variant="dark"
+    //                 onClose={() => setShowPopUp(false)}
+    //                 dismissible
+    //                 closeVariant="white">
+    //             </Alert>
+    //         );
+    //     }
+    // }
 
     return (
         <BrowserRouter basename="/isauw">
@@ -92,7 +92,7 @@ function App() {
                     <Route path="/events" component={Events} />
                 </Switch>
 
-                {renderPopUp()}
+                {/* {renderPopUp()} */}
 
                 <Footer />
 
