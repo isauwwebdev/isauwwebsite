@@ -1,10 +1,10 @@
 import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 import VisionMission from './VisionMission';
-import HomePhotoGallery from './HomePhotoGallery';
 import InstaFeeds from './InstaFeeds';
 
 function Home() {
+    const API_KEY = process.env.REACT_APP_INS_TOKEN;
     return (
         <div>
             {/* Carousel */}
@@ -49,8 +49,10 @@ function Home() {
 
             <Container>
                 <VisionMission />
-                <HomePhotoGallery />
-                <InstaFeeds token={process.env.REACT_APP_INS_TOKEN} limit={12}/>
+            </Container>
+
+            <Container>
+                <InstaFeeds token={API_KEY} limit={9}/>
             </Container>
         </div>
     )

@@ -1,7 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 
-import Feed from './Feed'
+import Feed from './Feed';
+
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const InstaFeeds = ({token, ...props}) => {
     const [feeds, setFeedsData] = useState([]);
@@ -52,45 +55,50 @@ function InstaGrid(props) {
     for(let i = 0; i < limit / 3; i++) {
         const imgRow = [];
         for(let i = 0; i < 3; i++) {
-            imgRow.push(imgArray[index]);
-            index++;
+            if(index < limit) {
+                imgRow.push(imgArray[index]);
+                index++;
+            }
         }
         imgGrid.push(imgRow);
     }
-    return <Grid img={imgGrid}></Grid>;
-    
+    return (
+        // Creating 3 column grid
+        <GridMaker img={imgGrid}></GridMaker>
+    );   
 }
 
-function Grid(props) {
+function GridMaker(props) {
     const imgGrid = props.img;
     const makeRows = (imgGrid || []).map((img) => {
-        return <Row img={img}></Row>
+        // Making row of 3 images
+        return <RowMaker img={img}></RowMaker>
     });
     return (
-        <div className="grid">
+        <div className="instagramGrid">
             {makeRows}
         </div>
     );
 }
 
-function Row(props) {
+function RowMaker(props) {
     const imgRow = props.img;
     const makeCols = (imgRow || []).map((img) => {
-        return <Col img={img}></Col>
+        // Making columns for where the image will be
+        return <ColMaker img={img}></ColMaker>
     });
     return (
-        <div className="row">
+        <Row>
             {makeCols}
-        </div>
+        </Row>
     );
 }
 
-function Col(props) {
+function ColMaker(props) {
     const img = props.img;
     return (
-        <div className="col-3">{img}</div>
+        <Col className="p-1">{img}</Col>
     );
 }
-
 
 export default InstaFeeds;
