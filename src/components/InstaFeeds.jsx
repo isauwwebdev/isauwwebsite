@@ -6,34 +6,34 @@ import Feed from './Feed';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const InstaFeeds = ({token, ...props}) => {
+const InstaFeeds = ({ token, ...props }) => {
     const [feeds, setFeedsData] = useState([]);
-    //use useRef to store the latest value of the prop without firing the effect
+    // use useRef to store the latest value of the prop without firing the effect
     const tokenProp = useRef(token);
     tokenProp.current = token;
 
     useEffect(() => {
-        // this is to avoid memory leaks
+        // to avoid memory leaks
         const abortController = new AbortController();
 
-        async function fetchInstagramPost () {
-          try {
-            axios
-                .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${tokenProp.current}`)
-                .then((resp) => {
-                    setFeedsData(resp.data.data)
-                })
-          } catch (err) {
-              console.log('error', err)
-          }
+        async function fetchInstagramPost() {
+            try {
+                axios
+                    .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${tokenProp.current}`)
+                    .then((resp) => {
+                        setFeedsData(resp.data.data)
+                    })
+            } catch (err) {
+                console.log('error', err)
+            }
         }
 
         // manually call the fetch function 
         fetchInstagramPost();
-  
+
         return () => {
             // cancel pending fetch request on component unmount
-            abortController.abort(); 
+            abortController.abort();
         };
     }, [props.limit])
 
@@ -43,7 +43,7 @@ const InstaFeeds = ({token, ...props}) => {
 }
 
 function InstaGrid(props) {
-    // putting images into an array
+    // put posts into an array
     const postArray = props.feeds.map((feed) => {
         return <Feed key={feed.id} feed={feed} />
     });
@@ -53,7 +53,7 @@ function InstaGrid(props) {
         const row = [];
         for (let j = 0; j < 3; j++) {
             if (i < props.limit) {
-                row.push(postArray[i+j]);
+                row.push(postArray[i + j]);
             }
         }
         grid.push(row);
@@ -61,23 +61,23 @@ function InstaGrid(props) {
 
     return (
         // Creating 3 column grid
-        <div className="instagramGrid">
+        <section className="my-5">
             {grid.map((row) => {
                 return (
                     <Row>
-                        {row.map((post) => {  
+                        {row.map((post) => {
                             return (
                                 <Col className="p-1 view overlay z-depth-1-half zoom">
                                     {post}
-                                    <div className="mask rgba-white-light waves-effect waves-light"></div>                                    
+                                    <div className="mask rgba-white-light waves-effect waves-light"></div>
                                 </Col>
                             )
                         })}
                     </Row>
                 )
             })}
-        </div>
-    );   
+        </section>
+    );
 }
 
 export default InstaFeeds;

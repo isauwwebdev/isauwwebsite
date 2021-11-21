@@ -524,7 +524,13 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	margin: calc(1.2vw + 12px) 0 0
 }
 
-.p-1.col>img{
+.p-1.col>img, video {
 	max-width: 100%;
-    height: auto;
+    height: 100%;
+	object-fit: cover;
+}
+.p-1 {
+	padding: 0 !important;
+	margin: 0 .5rem 1rem .5rem;
+	height: inherit;
 }
