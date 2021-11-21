@@ -17,7 +17,7 @@ const InstaFeeds = ({token, ...props}) => {
         const abortController = new AbortController();
 
         async function fetchInstagramPost () {
-          try{
+          try {
             axios
                 .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${tokenProp.current}`)
                 .then((resp) => {
@@ -28,7 +28,7 @@ const InstaFeeds = ({token, ...props}) => {
           }
         }
 
-        // manually call the fecth function 
+        // manually call the fetch function 
         fetchInstagramPost();
   
         return () => {
@@ -43,62 +43,41 @@ const InstaFeeds = ({token, ...props}) => {
 }
 
 function InstaGrid(props) {
-    const limit = props.limit;
-    const feeds = props.feeds;
     // putting images into an array
-    const imgArray = feeds.map((feed) => {
+    const postArray = props.feeds.map((feed) => {
         return <Feed key={feed.id} feed={feed} />
     });
-    console.log(imgArray);
-    let index = 0;
-    const imgGrid = [];
-    for(let i = 0; i < limit / 3; i++) {
-        const imgRow = [];
-        for(let i = 0; i < 3; i++) {
-            if(index < limit) {
-                imgRow.push(imgArray[index]);
-                index++;
+
+    const grid = [];
+    for (let i = 0; i < props.limit; i += 3) {
+        const row = [];
+        for (let j = 0; j < 3; j++) {
+            if (i < props.limit) {
+                row.push(postArray[i+j]);
             }
         }
-        imgGrid.push(imgRow);
+        grid.push(row);
     }
+
     return (
         // Creating 3 column grid
-        <GridMaker img={imgGrid}></GridMaker>
-    );   
-}
-
-function GridMaker(props) {
-    const imgGrid = props.img;
-    const makeRows = (imgGrid || []).map((img) => {
-        // Making row of 3 images
-        return <RowMaker img={img}></RowMaker>
-    });
-    return (
         <div className="instagramGrid">
-            {makeRows}
+            {grid.map((row) => {
+                return (
+                    <Row>
+                        {row.map((post) => {  
+                            return (
+                                <Col className="p-1 view overlay z-depth-1-half zoom">
+                                    {post}
+                                    <div className="mask rgba-white-light waves-effect waves-light"></div>                                    
+                                </Col>
+                            )
+                        })}
+                    </Row>
+                )
+            })}
         </div>
-    );
-}
-
-function RowMaker(props) {
-    const imgRow = props.img;
-    const makeCols = (imgRow || []).map((img) => {
-        // Making columns for where the image will be
-        return <ColMaker img={img}></ColMaker>
-    });
-    return (
-        <Row>
-            {makeCols}
-        </Row>
-    );
-}
-
-function ColMaker(props) {
-    const img = props.img;
-    return (
-        <Col className="p-1">{img}</Col>
-    );
+    );   
 }
 
 export default InstaFeeds;

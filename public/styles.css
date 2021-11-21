@@ -523,3 +523,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	color: white;
 	margin: calc(1.2vw + 12px) 0 0
 }
+
+.p-1.col>img{
+	max-width: 100%;
+    height: auto;
+}
