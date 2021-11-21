@@ -1,12 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 
-import Feed from './Feed';
-
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const InstaFeeds = ({ token, ...props }) => {
+const InstaFeed = ({ token, ...props }) => {
     const [feeds, setFeedsData] = useState([]);
     // use useRef to store the latest value of the prop without firing the effect
     const tokenProp = useRef(token);
@@ -20,8 +18,8 @@ const InstaFeeds = ({ token, ...props }) => {
             try {
                 axios
                     .get(`https://graph.instagram.com/me/media?fields=id,media_type,media_url,caption&limit=${props.limit}&access_token=${tokenProp.current}`)
-                    .then((resp) => {
-                        setFeedsData(resp.data.data)
+                    .then((res) => {
+                        setFeedsData(res.data.data)
                     })
             } catch (err) {
                 console.log('error', err)
@@ -45,7 +43,46 @@ const InstaFeeds = ({ token, ...props }) => {
 function InstaGrid(props) {
     // put posts into an array
     const postArray = props.feeds.map((feed) => {
-        return <Feed key={feed.id} feed={feed} />
+        const { id, caption, media_type, media_url } = feed
+        let post;
+
+        switch (media_type) {
+            case "VIDEO":
+                post = (
+                    <video
+                        width='100%'
+                        height='auto'
+                        src={media_url}
+                        type="video/mp4"
+                        controls playsinline>
+                    </video>
+                )
+                return (
+                    <React.Fragment>
+                        <Col className="p-1">
+                            {post}
+                        </Col>
+                    </React.Fragment>
+                );
+            default:
+                post = (
+                    <img
+                        width='100%'
+                        height='auto'
+                        id={id}
+                        src={media_url}
+                        alt={caption}
+                    />
+                );
+                return (
+                    <React.Fragment>
+                        <Col className="p-1 view overlay z-depth-1-half zoom">
+                            {post}
+                            <div className="mask rgba-white-light waves-effect waves-light"></div>
+                        </Col>
+                    </React.Fragment>
+                );
+        }
     });
 
     const grid = [];
@@ -60,17 +97,16 @@ function InstaGrid(props) {
     }
 
     return (
-        // Creating 3 column grid
+        // create 3 column grid
         <section className="my-5">
             {grid.map((row) => {
                 return (
                     <Row>
                         {row.map((post) => {
                             return (
-                                <Col className="p-1 view overlay z-depth-1-half zoom">
+                                <React.Fragment>
                                     {post}
-                                    <div className="mask rgba-white-light waves-effect waves-light"></div>
-                                </Col>
+                                </React.Fragment>
                             )
                         })}
                     </Row>
@@ -80,4 +116,4 @@ function InstaGrid(props) {
     );
 }
 
-export default InstaFeeds;
+export default InstaFeed;
