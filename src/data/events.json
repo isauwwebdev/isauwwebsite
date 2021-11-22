@@ -4,30 +4,30 @@
         "month": "NOV",
         "date": "19",
         "time": "6:30PM",
-        "loc": "Bridges @ 11th",
+        "loc": "The M Seattle",
         "img": "https://picsum.photos/2000"
     },
     {
         "title": "WINTER BALL",
         "month": "JAN",
         "date": "14",
-        "time": "TBA",
+        "time": "--",
         "loc": "Intellectual House, UW",
         "img": "https://picsum.photos/1800"
     },
     {
         "title": "WINTER CUP",
         "month": "MAR",
-        "date": "TBA",
-        "time": "TBA",
+        "date": "--",
+        "time": "--",
         "loc": "IMA, UW",
         "img": "https://picsum.photos/1600"
     },
     {
         "title": "KERATON",
         "month": "MAY",
-        "date": "TBA",
-        "time": "TBA",
+        "date": "--",
+        "time": "--",
         "loc": "Rainier Vista, UW",
         "img": "https://picsum.photos/1400"
     }

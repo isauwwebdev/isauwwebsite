@@ -50,6 +50,10 @@ p {
 .isauw-logo {
 	height: calc(1.6vw + 36px);
 }
+/* Remove Border when Hamburger is clicked */
+.navbar-toggler {
+	box-shadow: none !important;
+}
 /* All Navbar items */
 .navList {
 	font-family: 'Roboto', sans-serif;
@@ -513,15 +517,30 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .jumbotron-desc {
 	font-size: calc(10px + 0.3vw);
 	color: white;
-	padding-right: calc(256px - 16vw);
 	text-shadow: 1px 1px 3px black
 }
+@media only screen and (max-width: 991px) {
+	.jumbotron-desc {
+		width: 33%;
+	}
+} 
+@media only screen and (max-width: 549px) {
+	.jumbotron-desc {
+		width: 48%;
+	}
+} 
+@media only screen and (max-width: 383px) {
+	.jumbotron-desc {
+		width: 70%;
+	}
+} 
 .jumbotron-btn {
 	font-weight: 600;
 	font-size: calc(12px + 0.6vw) !important;
 	text-transform: none;
 	color: white;
-	margin: calc(1.2vw + 12px) 0 0
+	margin: calc(1.2vw + 12px) 0 0;
+	padding: calc(0.4rem + 0.25vw) calc(0.8rem + 0.5vw) !important;
 }
 
 .p-1.col>img, video {
@@ -531,6 +550,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 .p-1 {
 	padding: 0 !important;
-	margin: 0 .5rem 1rem .5rem;
+	margin: 0 calc(.1rem + 0.3vw) calc(.2rem + 0.6vw) calc(.1rem + 0.3vw);
 	height: inherit;
+}
+
+/* matches top spacing */
+.instafeed-section {
+	margin-bottom: 4rem !important;
 }
