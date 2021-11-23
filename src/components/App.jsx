@@ -9,6 +9,7 @@ import Alert from 'react-bootstrap/Alert'
 import Home from './Home';
 import Officers from './Officers'
 import Events from './Events'
+import Shop from './Shop';
 
 import Footer from './Footer';
 
@@ -80,6 +81,7 @@ function App() {
                                     <NavLink to="/" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
                                     <NavLink to="/officers" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Officers</NavLink>
                                     <NavLink to="/events" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
+                                    <NavLink to="/shop" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
                                 </Nav>
                             </Navbar.Collapse>
                         </Container>
@@ -90,6 +92,7 @@ function App() {
                     <Route path="/" exact component={Home} />
                     <Route path="/officers" component={Officers} />
                     <Route path="/events" component={Events} />
+                    <Route path="/shop" component={Shop} />
                 </Switch>
 
                 {/* {renderPopUp()} */}

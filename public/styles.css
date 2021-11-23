@@ -558,3 +558,9 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .instafeed-section {
 	margin-bottom: 4rem !important;
 }
+
+
+/* product */
+.productCard {
+	text-decoration: none;
+}
