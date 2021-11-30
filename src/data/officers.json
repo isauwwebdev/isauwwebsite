@@ -6,12 +6,12 @@
                     {
                         "position": "President",
                         "name": "Amy Dharmawan",
-                        "img": ""
+                        "img": "../images/officers/Amy.png"
                     },
                     {
                         "position": "Vice President",
                         "name": "Jasmine Laksmana",
-                        "img": ""
+                        "img": "../images/officers/Jasmine.png"
                     }
                 ]
             }
@@ -24,17 +24,17 @@
                     {
                         "position": "Director of Finance",
                         "name": "Natasha Valerie",
-                        "img": ""
+                        "img": "../images/officers/Natasha.png"
                     },
                     {
                         "position": "Director of Communications & Outreach",
                         "name": "Tung Alta",
-                        "img": ""
+                        "img": "../images/officers/Alta.png"
                     },
                     {
                         "position": "Director of Operations",
                         "name": "Kevin Yip",
-                        "img": ""
+                        "img": "../images/officers/Kevin.png"
                     }
                 ]
             }
@@ -47,7 +47,7 @@
                     {
                         "position": "Head of Design and Documentation",
                         "name": "Andrea Muljono",
-                        "img": ""
+                        "img": "../images/officers/Andrea.png"
                     }
                 ]
             },
@@ -56,17 +56,17 @@
                     {
                         "position": "Design and Documentation",
                         "name": "Tamaska Nikola",
-                        "img": ""
+                        "img": "../images/officers/Tamaska.png"
                     },
                     {
                         "position": "Design and Documentation",
                         "name": "Angelita Cecilia",
-                        "img": ""
+                        "img": "../images/officers/Angelita.png"
                     },
                     {
                         "position": "Design and Documentation",
                         "name": "Stephen Lim",
-                        "img": ""
+                        "img": "../images/officers/Stephen.png"
                     }
                 ]
             }
@@ -79,7 +79,7 @@
                     {
                         "position": "Head of Information Technology",
                         "name": "Jevin Kosasih",
-                        "img": ""
+                        "img": "../images/officers/Jevin.png"
                     }
                 ]
             },
@@ -88,12 +88,12 @@
                     {
                         "position": "Information Technology",
                         "name": "Ivanna Maxwell",
-                        "img": ""
+                        "img": "../images/officers/Ivanna.png"
                     },
                     {
                         "position": "Information Technology",
                         "name": "Winston Jodjana",
-                        "img": ""
+                        "img": "../images/officers/Winston.png"
                     }
                 ]
             },
@@ -102,12 +102,12 @@
                     {
                         "position": "Information Technology",
                         "name": "Darren Gunadharma",
-                        "img": ""
+                        "img": "../images/officers/Darren.png"
                     },
                     {
                         "position": "Information Technology",
                         "name": "Andrew Darmawan",
-                        "img": ""
+                        "img": "../images/officers/Andrew.png"
                     }
                 ]
             }
@@ -120,7 +120,7 @@
                     {
                         "position": "Head of Marketing Communication",
                         "name": "Ernesto Giovanni",
-                        "img": ""
+                        "img": "../images/officers/Ernesto.png"
                     }
                 ]
             },
@@ -129,17 +129,17 @@
                     {
                         "position": "Marketing Communication",
                         "name": "Charisse Luhur",
-                        "img": ""
+                        "img": "../images/officers/Charisse.png"
                     },
                     {
                         "position": "Marketing Communication",
                         "name": "Gabriel Hendricksen",
-                        "img": ""
+                        "img": "../images/officers/Gabriel.png"
                     },
                     {
                         "position": "Marketing Communication",
                         "name": "Rachel Claudia",
-                        "img": ""
+                        "img": "../images/officers/Rachel.png"
                     }
                 ]
             }
@@ -152,7 +152,7 @@
                     {
                         "position": "Head of Sponsorship",
                         "name": "Darren Kertawiguna",
-                        "img": ""
+                        "img": "../images/officers/Darren-Kertawiguna.png"
                     }
                 ]
             },
@@ -161,12 +161,12 @@
                     {
                         "position": "Sponsorship",
                         "name": "Jordan Huang",
-                        "img": ""
+                        "img": "../images/officers/Jordan.png"
                     },
                     {
                         "position": "Sponsorship",
                         "name": "Aimee Runtukahu",
-                        "img": ""
+                        "img": "../images/officers/Aimee.png"
                     }
                 ]
             },
@@ -175,17 +175,17 @@
                     {
                         "position": "Sponsorship",
                         "name": "Jocelyn Novecia",
-                        "img": ""
+                        "img": "../images/officers/Jocelyn.png"
                     },
                     {
                         "position": "Sponsorship",
                         "name": "Bryan Hanam",
-                        "img": ""
+                        "img": "../images/officers/Bryan-Hanam.png"
                     },
                     {
                         "position": "Sponsorship",
                         "name": "Bryan Hariadi",
-                        "img": ""
+                        "img": "../images/officers/Bryan-Hariadi.png"
                     }
                 ]
             }
@@ -198,7 +198,7 @@
                     {
                         "position": "Head of Treasury",
                         "name": "Vanessa Sujitro",
-                        "img": ""
+                        "img": "../images/officers/Vanessa.png"
                     }
                 ]
             },
@@ -207,17 +207,17 @@
                     {
                         "position": "Treasury",
                         "name": "William Perdana",
-                        "img": ""
+                        "img": "../images/officers/William.png"
                     },
                     {
                         "position": "Treasury",
                         "name": "Daven Tejalaksana",
-                        "img": ""
+                        "img": "../images/officers/Daven.png"
                     },
                     {
                         "position": "Treasury",
                         "name": "Keiko Laksana",
-                        "img": ""
+                        "img": "../images/officers/Keiko.png"
                     }
                 ]
             }
@@ -230,7 +230,7 @@
                     {
                         "position": "Head of Creativity Management",
                         "name": "Alyssa Limit",
-                        "img": ""
+                        "img": "../images/officers/Alyssa.png"
                     }
                 ]
             },
@@ -239,12 +239,12 @@
                     {
                         "position": "Creativity Management",
                         "name": "Michelle Rosallyn",
-                        "img": ""
+                        "img": "../images/officers/Michelle.png"
                     },
                     {
                         "position": "Creativity Management",
                         "name": "Chiara Isabelle",
-                        "img": ""
+                        "img": "../images/officers/Chiara.png"
                     }
                 ]
             },
@@ -253,17 +253,17 @@
                     {
                         "position": "Creativity Management",
                         "name": "Audrey Yip",
-                        "img": ""
+                        "img": "../images/officers/Audrey.png"
                     },
                     {
                         "position": "Creativity Management",
                         "name": "Evangeline Susanto",
-                        "img": ""
+                        "img": "../images/officers/Evangeline.png"
                     },
                     {
                         "position": "Creativity Management",
                         "name": "Kathleen Cahya",
-                        "img": ""
+                        "img": "../images/officers/Kathleen.png"
                     }
                 ]
             }
@@ -276,12 +276,12 @@
                     {
                         "position": "Head of Event Organization",
                         "name": "Nicole Fendi",
-                        "img": ""
+                        "img": "../images/officers/Nicole.png"
                     },
                     {
                         "position": "Co-Head of Event Organization",
                         "name": "Maximilian Mulyono",
-                        "img": ""
+                        "img": "../images/officers/Maximilian.png"
                     }
                 ]
             },
@@ -290,17 +290,17 @@
                     {
                         "position": "Event Organization",
                         "name": "Janice Dermawan",
-                        "img": ""
+                        "img": "../images/officers/Janice.png"
                     },
                     {
                         "position": "Event Organization",
                         "name": "Theresa Rachel Sumarta",
-                        "img": ""
+                        "img": "../images/officers/Theresa.png"
                     },
                     {
                         "position": "Event Organization",
                         "name": "Gilbert Noverio",
-                        "img": ""
+                        "img": "../images/officers/Gilbert.png"
                     }
                 ]
             }
@@ -313,7 +313,7 @@
                     {
                         "position": "Head of Inventory",
                         "name": "Glenndi Tjuandi",
-                        "img": ""
+                        "img": "../images/officers/Glenndi.png"
                     }
                 ]
             },
@@ -322,12 +322,12 @@
                     {
                         "position": "Inventory",
                         "name": "Bryan So",
-                        "img": ""
+                        "img": "../images/officers/Bryan-So.png"
                     },
                     {
                         "position": "Inventory",
                         "name": "Anthony Liem",
-                        "img": ""
+                        "img": "../images/officers/Anthony.png"
                     }
                 ]
             }
