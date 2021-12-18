@@ -1,0 +1,40 @@
+[
+    {
+        "name": "ISAUW Seattle Hoodie",
+        "desc": "permanent collection",
+        "price": 25,
+        "sizes": [
+            "S",
+            "M",
+            "L"
+        ],
+        "img": "",
+        "form": "https://docs.google.com/forms/u/0/"
+    },
+    {
+        "name": "ISAUW Tote Bag",
+        "desc": "permanent collection",
+        "price": 7,
+        "colors": [
+            "Black",
+            "White",
+            "Olive"
+        ],
+        "img": "",
+        "form": "https://docs.google.com/forms/u/0/"
+    },
+    {
+        "name": "ISAUW Face Mask",
+        "desc": "permanent collection",
+        "price": 4,
+        "img": "",
+        "form": "https://docs.google.com/forms/u/0/"
+    },
+    {
+        "name": "ISAUW Card",
+        "desc": "permanent collection",
+        "price": 8,
+        "img": "",
+        "form": "https://docs.google.com/forms/u/0/"
+    }
+]

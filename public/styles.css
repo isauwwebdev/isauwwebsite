@@ -443,9 +443,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-size: calc(12px + 0.3vw);
 	margin-bottom: 0;
 }
-.past-events-img {
-	border-radius: 4px;
-}
 .past-events-content {
 	padding: calc(0.8vw + 8px) calc(0.8vw + 8px) 0;
 }
@@ -458,28 +455,16 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	}
 } 
 
-/* Animations and styling to make the center slide larger */
-.carousel-center-mode .slick-list .slick-slide {
-	opacity: 0.5;
-	-moz-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	-o-transform: scale(0.9);
-	-webkit-transform: scale(0.9);
-	transform: scale(0.9);
-	-webkit-transition: opacity 0.5s ease-in-out;
-    -moz-transition: opacity 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+
+.past-events-carousel .slick-list .slick-track .slick-slide {
+	margin-right: 16px;
+	max-height: 400px;
 }
-.carousel-center-mode .slick-list .slick-center {
-	opacity: 1;
-	-moz-transform: scale(1.0);
-	-ms-transform: scale(1.0);
-	-o-transform: scale(1.0);
-	-webkit-transform: scale(1.0);
-	transform: scale(1.0);
-	-webkit-transition: opacity 1s ease-in-out;
-    -moz-transition: opacity 1s ease-in-out;
-    transition: all 0.4s ease-in-out;
+.past-event-img {
+	border-radius: 12px;
+	height: 100%;
+	width: inherit;
+	object-fit: cover;
 }
 
 /* Ensures that the height of all the upcoming event slides is equal to the slide with the maximum height */
@@ -491,9 +476,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 .slick-slide > div {
 	height: 100%;
-}
-.slick-slider.carousel-center-mode.slick-initialized {
-	position: relative;
 }
 	
 .about-us {
@@ -560,7 +542,40 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 
-/* product */
-.productCard {
-	text-decoration: none;
+/* shop page - product */
+.product-card {
+	border: none;
 }
+.product-body {
+	padding: 16px 8px 8px;
+}
+.product-title {
+	font-size: calc(12px + 0.3vw);
+	font-weight: 700;
+}
+.product-desc {
+	font-size: calc(10px + 0.3vw);
+	font-weight: 400;
+	color: #747373
+}
+.product-btn {
+	border: 1px solid rgb(217, 217, 217) !important;
+	box-shadow: none;
+	text-transform: none;
+	width: 100% !important;
+	padding: 12px 16px;
+	margin-top: 40px;
+}
+.product-btn p {
+	padding: 0 !important;
+	margin: 0 !important;
+	font-size: calc(10px + 0.3vw);
+	font-weight: 700;
+}
+.product-price-left {
+	float: left;
+}
+.product-price-right {
+	float: right;
+}
+

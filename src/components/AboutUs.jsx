@@ -15,7 +15,7 @@ function AboutUs() {
                 <section className="my-5 about-us">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <h1 className="my-3"><strong>About Us</strong></h1>
+                            <h1 className="my-3"><strong>Who We Are</strong></h1>
                             <p className="my-3 div-margin-btm">ISAUW (Indonesian Student Association at the University of Washington) is a non-profit cultural organization
                                 with the purpose of uniting the Indonesian community within the university as well as promoting our Indonesian culture to
                                 the greater Seattle Area community.</p>

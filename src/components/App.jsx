@@ -4,12 +4,12 @@ import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
-import Alert from 'react-bootstrap/Alert'
+// import Alert from 'react-bootstrap/Alert'
 
 import Home from './Home';
-import Officers from './Officers'
-import Events from './Events'
+import Events from './Events';
 import Shop from './Shop';
+import About from './About';
 
 import Footer from './Footer';
 
@@ -26,13 +26,13 @@ function App() {
         });
 
         // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 100px.
-        window.addEventListener('scroll', () => {
-            if (window.scrollY >= 100) {
-                setSolid(true); // true = solid
-            } else {
-                setSolid(false); // false = opaque
-            }
-        });
+        // window.addEventListener('scroll', () => {
+        //     if (window.scrollY >= 100) {
+        //         setSolid(true); // true = solid
+        //     } else {
+        //         setSolid(false); // false = opaque
+        //     }
+        // });
 
         // closes collapsed navbar after clicking outside the navbar */
         document.addEventListener("mousedown", (event) => {
@@ -65,7 +65,7 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" variant="dark" fixed="top" className={solid ? "navSolid" : "navOpaque"} expanded={expanded}>
+                    <Navbar ref={navbarRef} expand="lg" variant="dark" fixed="top" className="navSolid" /* className={solid ? "navSolid" : "navOpaque"} */ expanded={expanded}>
                         <Container>
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">
@@ -79,8 +79,8 @@ function App() {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
                                     <NavLink to="/" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
-                                    <NavLink to="/officers" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Officers</NavLink>
                                     <NavLink to="/events" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
+                                    <NavLink to="/about" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
                                     <NavLink to="/shop" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
                                 </Nav>
                             </Navbar.Collapse>
@@ -90,8 +90,8 @@ function App() {
 
                 <Switch>
                     <Route path="/" exact component={Home} />
-                    <Route path="/officers" component={Officers} />
                     <Route path="/events" component={Events} />
+                    <Route path="/about" component={About} />
                     <Route path="/shop" component={Shop} />
                 </Switch>
 
