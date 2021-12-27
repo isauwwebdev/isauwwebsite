@@ -4,14 +4,14 @@ import Slider from 'react-slick';
 
 function PastEventsCard(props) {
     return (
-        <div>
-            <div style={{ marginLeft: "324px" }}>
+        <div className="past-events-card">
+            <div>
                 <Slider {...props.settings}>
-                    <img src="https://picsum.photos/400/600" className="past-event-img"></img>
-                    <img src="https://picsum.photos/400/500" className="past-event-img"></img>
-                    <img src="https://picsum.photos/600/500" className="past-event-img"></img>
-                    <img src="https://picsum.photos/300/400" className="past-event-img"></img>
-                    <img src="https://picsum.photos/400/400" className="past-event-img"></img>
+                    <img src="https://picsum.photos/400/600" className="past-events-img"></img>
+                    <img src="https://picsum.photos/400/500" className="past-events-img"></img>
+                    <img src="https://picsum.photos/600/500" className="past-events-img"></img>
+                    <img src="https://picsum.photos/300/400" className="past-events-img"></img>
+                    <img src="https://picsum.photos/400/400" className="past-events-img"></img>
                 </Slider>
             </div>
 

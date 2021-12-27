@@ -352,6 +352,10 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 /* Upcoming Events */
+.myclass{
+	margin-top: 0.5rem !important;
+	margin-bottom: 0.5rem !important;
+}
 .upcoming-events-overlay {
     position:relative;
 }
@@ -426,10 +430,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 /* Past Events */
-.h1-past-events {
-	padding: 1rem calc(0.4vw + 14px) 0;
-	margin-bottom: 0;
-}
 .past-events-date {
 	font-size: calc(10px + 0.3vw);
 	font-weight: 300;
@@ -458,13 +458,26 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 .past-events-carousel .slick-list .slick-track .slick-slide {
 	margin-right: 16px;
-	max-height: 400px;
+	max-height: 375px;
 }
-.past-event-img {
-	border-radius: 12px;
+
+.past-events-carousel {
+	margin-left: 16px;
+}
+
+.past-events-img {
+	border-radius: 8px;
 	height: 100%;
 	width: inherit;
 	object-fit: cover;
+}
+
+.past-events-card {
+	margin-bottom: 50px;
+}
+
+.past-events-card:last-child {
+	margin-bottom: 3rem !important;
 }
 
 /* Ensures that the height of all the upcoming event slides is equal to the slide with the maximum height */
@@ -488,7 +501,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	background-size: cover;
 	border-radius: 16px;
 	padding: calc(2vw + 16px);
-	margin-top: calc(1vw + 60px); 
+	margin-top: calc(1vw + 20px); 
 }
 .jumbotron-title {
 	font-size: calc(20px + 1.2vw);
@@ -578,4 +591,3 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .product-price-right {
 	float: right;
 }
-

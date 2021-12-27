@@ -57,7 +57,7 @@ function UpcomingEventsGallery() {
         <section className="my-5 div-margin-btm">
             <div className="row">
                 <div className="col-12">
-                    <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
+                    <h1 className="myclass" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
                     {/* Past Events */}
                     <Slider {...settings}>
                         {events.map((event, i) => {
