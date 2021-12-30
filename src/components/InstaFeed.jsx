@@ -98,7 +98,7 @@ function InstaGrid(props) {
 
     return (
         // create 3 column grid
-        <section className="my-5 instafeed-section">
+        <section className="my-5 btm-margin">
             {grid.map((row) => {
                 return (
                     <Row>

@@ -5,10 +5,10 @@ import officers from '../data/officers.json'
 function Officers() {
 
     return (
-        <div>
+        <div >
             {officers.map((group, i) => {
                 return (
-                    <div style={{ marginBottom: `calc(54px + 2vw)` }}>
+                    <div className="division">
                         {group.content.map((rows, j) => {
                             return (
                                 <div>
@@ -27,8 +27,8 @@ function Officers() {
                                         {rows.row.map((officer, k) => {
                                             return (
                                                 <Col style={{ alignSelf: "flex-start", marginTop: `calc(4px + 0.2vw)` }}>
-                                                    <h3 style={{ fontWeight: "700", fontSize: `calc(8px + 0.75vw)`, marginBottom: "0" }}>{officer.position}</h3>
-                                                    <p style={{ fontWeight: "300", fontSize: `calc(8px + 0.6vw)`, marginBottom: "0" }}>{officer.name}</p>
+                                                    <h3 className="officer-position">{officer.position}</h3>
+                                                    <p className="officer-name">{officer.name}</p>
                                                 </Col>
                                             )
                                         })}
