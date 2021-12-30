@@ -18,9 +18,9 @@ function Sponsors() {
                     {sponsors.map((sponsor) => {
                         if (sponsor.location === "University District") {
                             return (
-                                <Col className="text-center ml-1 mr-1" xs={5} md={3} lg={2} style={{ display: "flex" }}>
+                                <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
                                     <div style={{ alignSelf: "flex-end" }}>
-                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 12vw + 20px)` }}></img>
+                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
                                         <h4>{sponsor.name}</h4>
                                         <h5>{sponsor.offers}</h5>
                                     </div>
@@ -36,9 +36,9 @@ function Sponsors() {
                     {sponsors.map((sponsor) => {
                         if (sponsor.location !== "University District") {
                             return (
-                                <Col className="text-center ml-1 mr-1" xs={5} md={3} lg={2} style={{ display: "flex" }}>
+                                <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
                                     <div style={{ alignSelf: "flex-end" }}>
-                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 12vw + 20px)` }}></img>
+                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
                                         <h4>{sponsor.name}</h4>
                                         <h5>{sponsor.offers}</h5>
                                     </div>

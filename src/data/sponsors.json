@@ -3,175 +3,175 @@
         "name": "Cedars",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/cedars-logo",
+        "img": "../images/sponsors/cedars-logo.png",
         "website": "http://cedarsseattle.com/"
     },
     {
         "name": "Meraki Tea Bar",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/meraki-logo",
+        "img": "../images/sponsors/meraki-logo.png",
         "website": "https://www.clover.com/online-ordering/meraki-tea-bar-seattle"
     },
     {
         "name": "Boba Up",
         "location": "University District",
         "offers": "10% Off Self-serve Boba",
-        "img": "../images/sponsors/bobaup-logo",
+        "img": "../images/sponsors/bobaup-logo.png",
         "website": "https://bobaupseattle.com/"
     },
     {
         "name": "Tea Republik",
         "location": "University District",
         "offers": "10% Off Drinks",
-        "img": "../images/sponsors/tearepublik-logo",
+        "img": "../images/sponsors/tearepublik-logo.png",
         "website": "https://tearepublik.square.site/"
     },
     {
         "name": "Mee Sum Pastry",
         "location": "University District",
         "offers": "$0.50 Off Drinks",
-        "img": "../images/sponsors/meesum-logo",
+        "img": "../images/sponsors/meesum-logo.png",
         "website": "https://www.meesumpastryseattle.com/"
     },
     {
         "name": "U:Don",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/udon-logo",
+        "img": "../images/sponsors/udon-logo.png",
         "website": "https://freshudon.com/"
     },
     {
         "name": "Don't Yell at Me",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/dontyell-logo",
+        "img": "../images/sponsors/dontyell-logo.png",
         "website": "https://www.dontyellatme.com/"
     },
     {
         "name": "Jake's Coffee",
         "location": "University District",
         "offers": "15% Off Total Bill",
-        "img": "../images/sponsors/jakes-logo",
+        "img": "../images/sponsors/jakes-logo.png",
         "website": "https://www.yelp.com/biz/jakes-coffee-seattle"
     },
     {
         "name": "Timeless Tea",
         "location": "University District",
         "offers": "10% Off Drinks",
-        "img": "../images/sponsors/timelesstea-logo",
+        "img": "../images/sponsors/timelesstea-logo.png",
         "website": "http://www.timelessteaseattle.com/"
     },
     {
         "name": "Mr. Lu's Seafood & Burger",
         "location": "University District",
         "offers": "15% Off Total Bill",
-        "img": "../images/sponsors/mrlus-logo",
+        "img": "../images/sponsors/mrlus-logo.png",
         "website": ""
     },
     {
         "name": "Fresh Cafe & Bar",
         "location": "University District",
         "offers": "15% Off Total Bill",
-        "img": "../images/sponsors/freshcafe-logo",
+        "img": "../images/sponsors/freshcafe-logo.png",
         "website": ""
     },
     {
         "name": "Panda Noodle Bar",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/pandanoodle-logo",
+        "img": "../images/sponsors/pandanoodle-logo.png",
         "website": "https://pandanoodlebarwa.com/"
     },
     {
         "name": "Aladdin's Gyro-Cery & Deli",
         "location": "University District",
         "offers": "Free Soda with >$11 using Cash",
-        "img": "../images/sponsors/aladdins-logo",
+        "img": "../images/sponsors/aladdins-logo.png",
         "website": "https://www.aladdingyro.com/"
     },
     {
         "name": "Shwarma King",
         "location": "University District",
         "offers": "15% Off Total Bill",
-        "img": "../images/sponsors/shwarmaking-logo",
+        "img": "../images/sponsors/shwarmaking-logo.png",
         "website": "http://www.shawarmakingus.com/"
     },
     {
         "name": "Santouka",
         "location": "University Village",
         "offers": "Free Upsize & 1 Extra Char Siu",
-        "img": "../images/sponsors/santouka-logo",
+        "img": "../images/sponsors/santouka-logo.png",
         "website": "https://santouka-usa.com/"
     },
     {
         "name": "Juice Press",
         "location": "University Village",
         "offers": "20% Off Total Bill",
-        "img": "../images/sponsors/juicepress-logo",
+        "img": "../images/sponsors/juicepress-logo.png",
         "website": "https://juicepress.com/menu"
     },
     {
         "name": "Capsule Cafe",
         "location": "University District",
         "offers": "Spend $15 & Get Free $2 Drink",
-        "img": "../images/sponsors/capsulecafe-logo",
+        "img": "../images/sponsors/capsulecafe-logo.png",
         "website": "https://www.instagram.com/ilovecapsule_cafe/"
     },
     {
         "name": "Cold Plate",
         "location": "University District",
         "offers": "1 Topping Free",
-        "img": "../images/sponsors/coldplate-logo",
+        "img": "../images/sponsors/coldplate-logo.png",
         "website": "http://ordertogo.com/Coldplate"
     },
     {
         "name": "Seattle Best Tea",
         "location": "International District",
         "offers": "10% Off Drinks and Ice Cream",
-        "img": "../images/sponsors/besttea-logo",
+        "img": "../images/sponsors/besttea-logo.png",
         "website": "http://seattlebesttea.com/"
     },
     {
         "name": "OH Bear",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/ohbear-logo",
+        "img": "../images/sponsors/ohbear-logo.png",
         "website": "https://www.yelp.com/biz/oh-bear-caf%C3%A9-and-teahouse-seattle"
     },
     {
         "name": "Sushi Burrito",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/sushiburrito-logo",
+        "img": "../images/sponsors/sushiburrito-logo.png",
         "website": "https://www.ijsushiburrito.com/hours-and-location/index.html"
     },
     {
         "name": "Mark's Thai Food Box",
         "location": "University District",
         "offers": "10% Off Hot Food",
-        "img": "../images/sponsors/marksthai-logo",
+        "img": "../images/sponsors/marksthai-logo.png",
         "website": "http://www.markhomemadethai.com/"
     },
     {
         "name": "AA Sushi",
         "location": "University District",
         "offers": "10% Off Dine-in",
-        "img": "../images/sponsors/aasushi-logo",
+        "img": "../images/sponsors/aasushi-logo.png",
         "website": "https://www.aasushikirkland.com/"
     },
     {
         "name": "Time Bistro",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/timebistro-logo",
+        "img": "../images/sponsors/timebistro-logo.png",
         "website": "https://www.timebistro.us/"
     },
     {
         "name": "Beetle's Cafe",
         "location": "University District",
         "offers": "10% Off Total Bill",
-        "img": "../images/sponsors/beetles-logo",
+        "img": "../images/sponsors/beetles-logo.png",
         "website": "https://www.facebook.com/4334universitywayNE/"
     }
 ]
