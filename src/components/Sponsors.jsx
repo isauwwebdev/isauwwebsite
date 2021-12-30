@@ -12,7 +12,7 @@ function Sponsors() {
                 alt=""
                 style={{ height: "calc(50vh + 10vw)" }}
             />
-            <h1 className="text-center m-3">University District</h1>
+            <h1 className="text-center m-3"><strong>University District</strong></h1>
             <Container className="justify-content-center">
                 <Row className="justify-content-center">
                     {sponsors.map((sponsor) => {
@@ -32,7 +32,7 @@ function Sponsors() {
                     })}
                 </Row>
             </Container>
-            <h1 className="text-center m-3">Other Locations</h1>
+            <h1 className="text-center m-3"><strong>Other Locations</strong></h1>
             <Container className="justify-content-center">
                 <Row className="justify-content-center">
                     {sponsors.map((sponsor) => {

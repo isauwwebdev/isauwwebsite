@@ -63,7 +63,7 @@
         "website": "http://www.timelessteaseattle.com/"
     },
     {
-        "name": "Mr. Lu's Seafood & Burger",
+        "name": "Mr. Lu's Seafood",
         "location": "University District",
         "offers": "15% Off Total Bill",
         "img": "../images/sponsors/mrlus-logo.png",
@@ -84,9 +84,9 @@
         "website": "https://pandanoodlebarwa.com/"
     },
     {
-        "name": "Aladdin's Gyro-Cery & Deli",
+        "name": "Aladdin's",
         "location": "University District",
-        "offers": "Free Soda with >$11 using Cash",
+        "offers": "Free Soda using Cash",
         "img": "../images/sponsors/aladdins-logo.png",
         "website": "https://www.aladdingyro.com/"
     },
