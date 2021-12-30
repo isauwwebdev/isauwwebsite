@@ -48,16 +48,18 @@ function Shop() {
                 </Carousel.Item>
             </Carousel>
             <Container>
-                <h1 className="my-3"><strong>Shop All</strong></h1>
-                <Row>
-                    {products.map((product, i) => {
-                        return (
-                            <Col xs={6} md={4} lg={3}>
-                                <Product product={product}></Product>
-                            </Col>
-                        );
-                    })}
-                </Row>
+                <section className="my-5 btm-margin" style={{ overflow: "hidden" }}>
+                    <h1 className="my-3"><strong>Shop All</strong></h1>
+                    <Row>
+                        {products.map((product, i) => {
+                            return (
+                                <Col xs={6} md={4} lg={3} style={{ marginBottom: "32px" }}>
+                                    <Product product={product}></Product>
+                                </Col>
+                            );
+                        })}
+                    </Row>
+                </section>
             </Container>
         </div>
     );

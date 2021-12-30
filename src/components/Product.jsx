@@ -5,13 +5,18 @@ function Product(props) {
     // json file to get product's name, price, size, img, etc.
     const product = props.product;
     return (
-        <div>
-            <Card className="product-card">
+        <div style={{ height: "100%" }}>
+            <Card className="product-card" style={{ height: "100%" }}>
                 <Card.Img variant="top" src="https://picsum.photos/2000" />
-                <Card.Body className="product-body">
+                <Card.Body className="product-body" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
                     <Card.Title className="product-title">{product.name}</Card.Title>
                     <Card.Subtitle className="product-desc">{product.desc}</Card.Subtitle>
-                    <Button className="product-btn mx-auto" href="https://docs.google.com/forms/u/0/" variant="outline-dark"><p className="product-price-left">Order Now</p><p className="product-price-right">${product.price}</p></Button>
+                    <div style={{ marginTop: "auto" }}>
+                        <Button className="product-btn mx-auto" href="https://docs.google.com/forms/u/0/" variant="outline-dark" >
+                            <p className="product-price-left">Order Now</p>
+                            <p className="product-price-right">${product.price}</p>
+                        </Button>
+                    </div>
                 </Card.Body>
             </Card>
         </div>
