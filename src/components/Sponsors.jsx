@@ -20,7 +20,9 @@ function Sponsors() {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
                                     <div style={{ alignSelf: "flex-end" }}>
-                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
+                                        <a href={sponsor.website}>
+                                            <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
+                                        </a>
                                         <h4>{sponsor.name}</h4>
                                         <h5>{sponsor.offers}</h5>
                                     </div>
@@ -38,7 +40,9 @@ function Sponsors() {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
                                     <div style={{ alignSelf: "flex-end" }}>
-                                        <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
+                                        <a href={sponsor.website}>
+                                            <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
+                                        </a>
                                         <h4>{sponsor.name}</h4>
                                         <h5>{sponsor.offers}</h5>
                                     </div>
