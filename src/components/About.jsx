@@ -1,4 +1,3 @@
-import AboutUs from "./WhoWeAre";
 import Container from 'react-bootstrap/Container'
 import Officers from "./Officers";
 import VisionMission from "./VisionMission";
