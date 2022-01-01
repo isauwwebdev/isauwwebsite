@@ -12,7 +12,10 @@ function Home() {
     React.useEffect(() => {
         window.addEventListener('scroll', () => {
             var windowTop = window.scrollY;
-            var elementTop = document.getElementById("move").getBoundingClientRect().top;
+            var elementTop = 0;
+            if (document.getElementById("move")) {
+                elementTop = document.getElementById("move").getBoundingClientRect().top;
+            }
             setPosition((windowTop - elementTop) / 10.0);
         });
     });
