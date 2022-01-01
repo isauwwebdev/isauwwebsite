@@ -297,7 +297,7 @@ p {
 	height: auto;
 	width: auto;
 }
-.move-section .bg-move {
+.move-section .move-bg {
 	position: absolute;
 	top: 0;
 	bottom: 0;
