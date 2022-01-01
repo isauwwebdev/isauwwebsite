@@ -65,6 +65,7 @@ function InstaGrid(props) {
                         height='auto'
                         src={media_url}
                         type="video/mp4"
+                        style={{ borderRadius: "16px" }}
                         controls playsinline>
                     </video>
                 )
@@ -81,6 +82,7 @@ function InstaGrid(props) {
                         id={id}
                         src={media_url}
                         alt={caption}
+                        style={{ borderRadius: "16px" }}
                     />
                 );
                 return (
@@ -94,18 +96,18 @@ function InstaGrid(props) {
     return (
         <div>
             <div id="move" className="move-section">
-                <div class="bg-move" style={{ left: `calc(10% + ${position}px)` }}>
+                <div class="bg-move" style={{ left: `calc(10% + ${position}px)`, padding: "4vh" }}>
                     {postArray[0]}
                 </div>
             </div>
             <div className="move-section">
-                <div class="bg-move" style={{ right: `calc(-15% + ${position}px)` }}>
+                <div class="bg-move" style={{ right: `calc(-15% + ${position}px)`, padding: "4vh" }}>
                     {postArray[1]}
                 </div>
             </div>
             <div id="move" className="move-section">
                 <div class="bg-move" style={{ left: `calc(10% + ${position}px)` }}>
-                    <img src={products[0].img} style={{ height: "48vh" }}></img>
+                    <img src={products[0].img} style={{ maxHeight: "48vh", height: "auto", width: "48vh", objectFit: "cover" }}></img>
                 </div>
             </div>
         </div>
