@@ -38,19 +38,7 @@ function Home() {
 
             <Purpose />
 
-            <div id="move" className="move-section">
-                <div class="bg-move" style={{ left: `calc(-25% + ${position}px)` }}></div>
-            </div>
-            <div className="move-section">
-                <div class="bg-move" style={{ right: `calc(-25% + ${position}px)` }}></div>
-            </div>
-            <div className="move-section">
-                <div class="bg-move" style={{ left: `calc(-25% + ${position}px)` }}></div>
-            </div>
-
-            <Container>
-                <InstaFeed token={API_KEY} limit={9} />
-            </Container>
+            <InstaFeed token={API_KEY} limit={2} />
         </div>
     )
 }

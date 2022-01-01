@@ -1,6 +1,5 @@
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import products from '../data/products.json';
 
 function Product(props) {
     // json file to get product's name, price, size, img, etc.

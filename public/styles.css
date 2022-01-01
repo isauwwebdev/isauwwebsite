@@ -290,18 +290,19 @@ p {
 .purpose {
 	margin-bottom: calc(54px + 2vw) !important;
 }
+
 .move-section {
 	position: relative;
-	min-height: 50vh;
+	min-height: 48vh;
+	height: auto;
+	width: auto;
 }
-  .move-section .bg-move {
+.move-section .bg-move {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: 100%;
-	background-image: url("https://www.dropbox.com/s/isdqow2394y3t35/img-blog-background-move-scrolling-boat.png?raw=1");
-	background-size: cover;
-	background-position: center;
+	width: auto;
+	height: auto;
 }
   
 
