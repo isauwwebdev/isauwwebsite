@@ -7,7 +7,7 @@ function Product(props) {
     return (
         <div style={{ height: "100%" }}>
             <Card className="product-card" style={{ height: "100%" }}>
-                <Card.Img variant="top" src="https://picsum.photos/2000" />
+                <Card.Img variant="top" src={product.img} />
                 <Card.Body className="product-body" style={{ display: "flex", flexDirection: "column", height: "100%" }}>
                     <Card.Title className="product-title">{product.name}</Card.Title>
                     <Card.Subtitle className="product-desc">{product.desc}</Card.Subtitle>

@@ -87,7 +87,7 @@ p {
 
 /* Navbar States - Becomes opaque as user scrolls */
 .navOpaque {
-	background: rgba(129, 27, 20, 0.6);
+	background: rgba(129, 27, 20, 0.2);
 	-webkit-transition: background 1000ms linear;
     -ms-transition: background 1000ms linear;
     transition: background 1000ms linear;
@@ -277,6 +277,34 @@ p {
 	animation-name: fadeInDown;
 	animation-delay: 0.08s;
  }
+
+.map {
+	position: absolute;
+	z-index: -1;
+    top: 50%;
+	right: 0;
+    transform: translate(0,-40%);
+	height: calc(48px + 20vw);
+	opacity: 0.5;
+}
+.purpose {
+	margin-bottom: calc(54px + 2vw) !important;
+}
+
+.move-section {
+	position: relative;
+	min-height: 48vh;
+	height: auto;
+	width: auto;
+}
+.move-section .move-bg {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: auto;
+	height: auto;
+}
+  
 
 .division {
 	margin-bottom: calc(54px + 2vw);
@@ -475,10 +503,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 .slick-slide > div {
 	height: 100%;
-}
-	
-.about-us {
-	margin-bottom: calc(54px + 2vw) !important;
 }
 
 .jumbotron {

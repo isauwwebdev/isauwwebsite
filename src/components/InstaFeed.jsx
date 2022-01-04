@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import products from '../data/products.json';
 
 const InstaFeed = ({ token, ...props }) => {
     const [feeds, setFeedsData] = useState([]);
@@ -41,7 +39,20 @@ const InstaFeed = ({ token, ...props }) => {
 }
 
 function InstaGrid(props) {
-    // put posts into an array
+    const [position, setPosition] = React.useState(0);
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', () => {
+            var windowTop = window.scrollY;
+            var elementTop = 0;
+            if (document.getElementById("move")) {
+                elementTop = document.getElementById("move").getBoundingClientRect().top;
+            }
+            setPosition((windowTop - elementTop) / 10.0);
+        });
+    });
+
+    // put instafeed posts into an array
     const postArray = props.feeds.map((feed) => {
         const { id, caption, media_type, media_url } = feed
         let post;
@@ -50,69 +61,56 @@ function InstaGrid(props) {
             case "VIDEO":
                 post = (
                     <video
-                        width='100%'
+                        width='auto'
                         height='auto'
                         src={media_url}
                         type="video/mp4"
+                        style={{ borderRadius: "16px" }}
                         controls playsinline>
                     </video>
                 )
                 return (
                     <React.Fragment>
-                        <Col className="p-1">
-                            {post}
-                        </Col>
+                        {post}
                     </React.Fragment>
                 );
             default:
                 post = (
                     <img
-                        width='100%'
+                        width='auto'
                         height='auto'
                         id={id}
                         src={media_url}
                         alt={caption}
+                        style={{ borderRadius: "16px" }}
                     />
                 );
                 return (
                     <React.Fragment>
-                        <Col className="p-1 view overlay z-depth-1-half zoom">
-                            {post}
-                            <div className="mask rgba-white-light waves-effect waves-light"></div>
-                        </Col>
+                        {post}
                     </React.Fragment>
                 );
         }
     });
 
-    const grid = [];
-    for (let i = 0; i < props.limit; i += 3) {
-        const row = [];
-        for (let j = 0; j < 3; j++) {
-            if (i < props.limit) {
-                row.push(postArray[i + j]);
-            }
-        }
-        grid.push(row);
-    }
-
     return (
-        // create 3 column grid
-        <section className="my-5 btm-margin">
-            {grid.map((row) => {
-                return (
-                    <Row>
-                        {row.map((post) => {
-                            return (
-                                <React.Fragment>
-                                    {post}
-                                </React.Fragment>
-                            )
-                        })}
-                    </Row>
-                )
-            })}
-        </section>
+        <div>
+            <div id="move" className="move-section">
+                <div class="move-bg" style={{ left: `calc(10% + ${position}px)`, padding: "4vh" }}>
+                    {postArray[0]}
+                </div>
+            </div>
+            <div className="move-section">
+                <div class="move-bg" style={{ right: `calc(-15% + ${position}px)`, padding: "4vh" }}>
+                    {postArray[1]}
+                </div>
+            </div>
+            <div className="move-section">
+                <div class="move-bg" style={{ left: `calc(10% + ${position}px)` }}>
+                    <img src={products[0].img} style={{ maxHeight: "48vh", height: "auto", width: "48vh", objectFit: "cover" }}></img>
+                </div>
+            </div>
+        </div>
     );
 }
 
