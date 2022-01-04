@@ -19,12 +19,12 @@ function Sponsors() {
                         if (sponsor.location === "University District") {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
-                                    <div style={{ alignSelf: "flex-end" }}>
+                                    <div style={{ alignSelf: "center" }}>
                                         <a href={sponsor.website}>
                                             <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
                                         </a>
-                                        <h4>{sponsor.name}</h4>
-                                        <h5>{sponsor.offers}</h5>
+                                        <h5>{sponsor.name}</h5>
+                                        <h6 style={{ color: "#808080" }}>{sponsor.offers}</h6>
                                     </div>
                                 </Col>
                             )
@@ -39,12 +39,12 @@ function Sponsors() {
                         if (sponsor.location !== "University District") {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
-                                    <div style={{ alignSelf: "flex-end" }}>
+                                    <div style={{ alignSelf: "center" }}>
                                         <a href={sponsor.website}>
                                             <img className="mx-auto" src={sponsor.img} style={{ width: `calc(100% - 7vw + 20px)` }} alt="logo"></img>
                                         </a>
-                                        <h4>{sponsor.name}</h4>
-                                        <h5>{sponsor.offers}</h5>
+                                        <h5>{sponsor.name}</h5>
+                                        <h6 style={{ color: "#808080" }}>{sponsor.offers}</h6>
                                     </div>
                                 </Col>
                             )
