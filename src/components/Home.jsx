@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 import Purpose from './Purpose';
 import InstaFeed from './InstaFeed';
@@ -6,19 +5,6 @@ import React from 'react';
 
 function Home() {
     const API_KEY = process.env.REACT_APP_INS_TOKEN;
-
-    const [position, setPosition] = React.useState(0);
-
-    React.useEffect(() => {
-        window.addEventListener('scroll', () => {
-            var windowTop = window.scrollY;
-            var elementTop = 0;
-            if (document.getElementById("move")) {
-                elementTop = document.getElementById("move").getBoundingClientRect().top;
-            }
-            setPosition((windowTop - elementTop) / 10.0);
-        });
-    });
 
     return (
         <div>
@@ -37,8 +23,7 @@ function Home() {
             </div>
 
             <Purpose />
-
-            <InstaFeed token={API_KEY} limit={2} />
+            <InstaFeed token={API_KEY} limit={9} />
         </div>
     )
 }

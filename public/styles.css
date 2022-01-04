@@ -2,6 +2,7 @@ html,
 body,
 .view {
 	height: 100%;
+	scroll-behavior: smooth;
 }
 
 /* Preloader */
@@ -291,11 +292,15 @@ p {
 	margin-bottom: calc(54px + 2vw) !important;
 }
 
+/* moving images */
 .move-section {
 	position: relative;
-	min-height: 48vh;
-	height: auto;
+	height: calc(96px + 20vw);
 	width: auto;
+}
+.insta-img {
+	border-radius: 16px;
+	max-height: calc(96px + 20vw); 
 }
 .move-section .move-bg {
 	position: absolute;
@@ -303,8 +308,11 @@ p {
 	bottom: 0;
 	width: auto;
 	height: auto;
+	transition: all 1s ease-out;
 }
-  
+.move-section:last-child {
+	height: calc(112px + 20vw);
+}
 
 .division {
 	margin-bottom: calc(54px + 2vw);
@@ -549,14 +557,9 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 .p-1.col>img, video {
-	max-width: 100%;
+	max-width: auto;
     height: 100%;
 	object-fit: cover;
-}
-.p-1 {
-	padding: 0 !important;
-	margin: 0 calc(.1rem + 0.3vw) calc(.2rem + 0.6vw) calc(.1rem + 0.3vw);
-	height: inherit;
 }
 
 /* shop page - product */
