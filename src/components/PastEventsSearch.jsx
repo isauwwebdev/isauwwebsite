@@ -19,9 +19,9 @@ function PastEventsSearch() {
 
     const applyFilter = (yearPicked) => {
         if (yearPicked === '') {
-            setDisplayedData(displayedData);
+            setDisplayedData(pastEvents);
         } else {
-            const filteredData = displayedData.filter((event) => {
+            const filteredData = pastEvents.filter((event) => {
                 if (event.year === yearPicked) {
                     return true;
                 } else {
@@ -35,10 +35,10 @@ function PastEventsSearch() {
     const handleSearchText = (event) => {
         let value = event.target.value;
         if (value === '') {
-            setDisplayedData(displayedData);
+            setDisplayedData(pastEvents);
         }
         setSearchText(value);
-        const searchEvent = displayedData.filter((event) => {
+        const searchEvent = pastEvents.filter((event) => {
             return event.title.toLowerCase().includes(value.toLowerCase());
         });
         setDisplayedData(searchEvent);
@@ -46,7 +46,7 @@ function PastEventsSearch() {
     };
     const uniqueYearOptions = [...new Set(pastEvents.reduce((all, current) => {
         return all.concat([current.year]);
-    }, []))].reverse();
+    }, []))].sort().reverse();
 
     return (
         <div>
