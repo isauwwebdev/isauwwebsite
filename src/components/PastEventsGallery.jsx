@@ -4,7 +4,6 @@ import PastEventsCard from './PastEventsCard';
 
 function PastEventsGallery(props) {
     const data = props.data;
-    console.log(data);
     function PastEventsNextArrow(props) {
         const { className, style, onClick } = props;
         return (

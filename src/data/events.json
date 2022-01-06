@@ -12,7 +12,7 @@
     {
         "title": "Winter Ball",
         "date": "Jaunuary 14",
-        "year": "2021",
+        "year": "2018",
         "time": "--",
         "location": "Intellectual House, UW",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -22,7 +22,7 @@
     {
         "title": "Winter Cup",
         "date": "March 10",
-        "year": "2021",
+        "year": "2019",
         "time": "--",
         "location": "IMA, UW",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -42,7 +42,7 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2016",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -52,7 +52,7 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2013",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -62,7 +62,7 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2012",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -72,7 +72,7 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2014",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -82,7 +82,7 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2015",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
@@ -92,7 +92,17 @@
     {
         "title": "Friendsgiving",
         "date": "November 19",
-        "year": "2021",
+        "year": "2017",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2020",
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
