@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import products from '../data/products.json';
 
 const InstaFeed = ({ token, ...props }) => {
     const [feeds, setFeedsData] = useState([]);
@@ -41,78 +39,76 @@ const InstaFeed = ({ token, ...props }) => {
 }
 
 function InstaGrid(props) {
-    // put posts into an array
-    const postArray = props.feeds.map((feed) => {
+    const [position, setPosition] = React.useState(0);
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+    const scrollSensitivity = 35.0;
+
+    React.useEffect(() => {
+        window.addEventListener('scroll', () => {
+            var windowTop = window.scrollY;
+            // var elementTop = 0;
+            // if (document.getElementById("move")) {
+            //     elementTop = document.getElementById("move").getBoundingClientRect().top;
+            // }
+            setPosition((windowTop) / scrollSensitivity);
+        });
+
+        window.addEventListener('load', () => {
+            setWindowWidth(window.innerWidth);
+            console.log("load: " + windowWidth)
+        });
+
+        window.addEventListener('resize', () => {
+            setWindowWidth(window.innerWidth);
+            console.log("resize: " + windowWidth)
+        });
+    });
+
+    // only put insta image posts into an array (do not include videos)
+    const postArray = [];
+    props.feeds.map((feed) => {
         const { id, caption, media_type, media_url } = feed
-        let post;
 
         switch (media_type) {
             case "VIDEO":
-                post = (
-                    <video
-                        width='100%'
-                        height='auto'
-                        src={media_url}
-                        type="video/mp4"
-                        controls playsinline>
-                    </video>
-                )
-                return (
-                    <React.Fragment>
-                        <Col className="p-1">
-                            {post}
-                        </Col>
-                    </React.Fragment>
-                );
+                break;
             default:
-                post = (
+                var post = (
                     <img
-                        width='100%'
+                        width='auto'
                         height='auto'
                         id={id}
                         src={media_url}
                         alt={caption}
+                        className="insta-img"
                     />
                 );
-                return (
+                postArray.push(
                     <React.Fragment>
-                        <Col className="p-1 view overlay z-depth-1-half zoom">
-                            {post}
-                            <div className="mask rgba-white-light waves-effect waves-light"></div>
-                        </Col>
+                        {post}
                     </React.Fragment>
                 );
         }
     });
 
-    const grid = [];
-    for (let i = 0; i < props.limit; i += 3) {
-        const row = [];
-        for (let j = 0; j < 3; j++) {
-            if (i < props.limit) {
-                row.push(postArray[i + j]);
-            }
-        }
-        grid.push(row);
-    }
-
     return (
-        // create 3 column grid
-        <section className="my-5 instafeed-section">
-            {grid.map((row) => {
-                return (
-                    <Row>
-                        {row.map((post) => {
-                            return (
-                                <React.Fragment>
-                                    {post}
-                                </React.Fragment>
-                            )
-                        })}
-                    </Row>
-                )
-            })}
-        </section>
+        <div style={{ overflow: "hidden" }}>
+            <div id="move" className="move-section" style={{ marginBottom: `calc(-1 * (9.6px + 2vw))` }}>
+                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 2.0)`, transform: `translateX(calc(${position}px))` }}>
+                    {postArray[0]}
+                </div>
+            </div>
+            <div className="move-section">
+                <div className="move-bg" style={{ left: `calc(${windowWidth}px / 2.0)`, transform: `translateX(calc(-1 * (${position}px)))` }}>
+                    {postArray[1]}
+                </div>
+            </div>
+            <div className="move-section" style={{ marginTop: `calc(-1 * (14px + 2.5vw))` }}>
+                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 2.1)`, transform: `translateX(calc(${position}px))` }}>
+                    <img src={products[0].img} style={{ maxHeight: `calc(112px + 20vw)`, height: "auto", width: `calc(112px + 20vw)`, objectFit: "cover", backgroundColor: "none", borderRadius: "16px" }}></img>
+                </div>
+            </div>
+        </div>
     );
 }
 

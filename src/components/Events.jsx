@@ -57,9 +57,9 @@ function Events() {
                         <a className="jumbotron-btn btn btn-dark" href="#" role="button">Order now</a>
                     </div>
                 </div>
-
-                <PastEventsGallery />
             </Container>
+
+            <PastEventsGallery />
         </div>
     )
 }
