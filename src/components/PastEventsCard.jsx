@@ -21,8 +21,8 @@ function PastEventsCard(props) {
                     <p className="events-title">{props.title}</p>
                     <p className="past-events-text">{props.text}</p>
                 </div>
-            </Container >
-        </div >
+            </Container>
+        </div>
     );
 }
 

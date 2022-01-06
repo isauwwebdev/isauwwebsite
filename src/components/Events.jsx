@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 import PastEventsGallery from './PastEventsGallery';
 import UpcomingEventsGallery from './UpcomingEventsGallery';
+import PastEventsSearch from './PastEventsSearch';
 
 function Events() {
     return (
@@ -58,8 +59,10 @@ function Events() {
                     </div>
                 </div>
             </Container>
-
-            <PastEventsGallery />
+            <Container>
+                    <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(.5rem + 0.6vw)` }}><strong >Past Events</strong></h1>
+            </Container>
+            <PastEventsSearch />
         </div>
     )
 }
