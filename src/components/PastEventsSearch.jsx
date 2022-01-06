@@ -11,7 +11,7 @@ import events from '../data/events.json';
 
 function PastEventsSearch() {
     const pastEvents = events.filter((event) => {
-        return !event.completed;
+        return event.completed;
     });
     const [searchText, setSearchText] = useState("");
     const [displayedData, setDisplayedData] = useState(pastEvents);
