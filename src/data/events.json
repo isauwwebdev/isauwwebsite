@@ -38,5 +38,65 @@
         "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
         "img": "https://picsum.photos/1400",
         "completed": false
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
     }
 ]
