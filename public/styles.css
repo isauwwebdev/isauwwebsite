@@ -107,6 +107,75 @@ p {
 .navbar-toggler {
 	box-shadow: none !important;
 }
+
+/* hamburger button */
+ .closeclass span{
+	width: 0px;
+	height: 0px;
+}
+
+.closeclass span::before,
+.closeclass span::after{
+	content:'';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.closeclass span::before{
+	width: 20px;
+	height: 3px;
+	transform: translateY(-5px);
+}
+.closeclass span::after{
+	width: 20px;
+	height: 3px;
+	transform: translateY(5px);
+}
+
+.openclass span{
+	width: 0px;
+	height: 0px;
+}
+
+.openclass span::before,
+.openclass span::after{
+	content:'';
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background: #fff;
+	border-radius: 5px;
+	transition: all .5s ease-in-out;
+	-webkit-transition: transform .35s ease-in-out;
+	-moz-transition: transform .35s ease-in-out;
+	-o-transition: transform .35s ease-in-out;
+	transition: transform .35s ease-in-out;
+}
+
+.openclass span::before{
+	width: 20px;
+	height: 3px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.openclass span::after{
+	width: 20px;
+	height: 3px;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);}
+
 /* All Navbar items */
 .navList {
 	font-family: 'Roboto', sans-serif;

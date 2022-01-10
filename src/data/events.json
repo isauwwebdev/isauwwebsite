@@ -1,34 +1,112 @@
 [
     {
-        "title": "FRIENDSGIVING",
-        "month": "NOV",
-        "date": "19",
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2021",
         "time": "6:30PM",
-        "loc": "The M Seattle",
-        "img": "https://picsum.photos/2000"
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
     },
     {
-        "title": "WINTER BALL",
-        "month": "JAN",
-        "date": "14",
+        "title": "Winter Ball",
+        "date": "Jaunuary 14",
+        "year": "2018",
         "time": "--",
-        "loc": "Intellectual House, UW",
-        "img": "https://picsum.photos/1800"
+        "location": "Intellectual House, UW",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/1800",
+        "completed": false
     },
     {
-        "title": "WINTER CUP",
-        "month": "MAR",
-        "date": "--",
+        "title": "Winter Cup",
+        "date": "March 10",
+        "year": "2019",
         "time": "--",
-        "loc": "IMA, UW",
-        "img": "https://picsum.photos/1600"
+        "location": "IMA, UW",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/1600",
+        "completed": true
     },
     {
-        "title": "KERATON",
-        "month": "MAY",
-        "date": "--",
+        "title": "Keraton",
+        "date": "May 7",
+        "year": "2022",
         "time": "--",
-        "loc": "Rainier Vista, UW",
-        "img": "https://picsum.photos/1400"
+        "location": "Rainier Vista, UW",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/1400",
+        "completed": false
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2016",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2013",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2012",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2014",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2015",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2017",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
+    },
+    {
+        "title": "Friendsgiving",
+        "date": "November 19",
+        "year": "2020",
+        "time": "6:30PM",
+        "location": "The M Seattle",
+        "text": "aldksjf;alksdjf;laksjdf;lkasjdf;lkajsdf",
+        "img": "https://picsum.photos/2000",
+        "completed": true
     }
 ]
