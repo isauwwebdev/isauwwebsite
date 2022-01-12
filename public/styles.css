@@ -648,6 +648,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 /* shop page - product */
+
 .product-card {
 	border: none;
 }
@@ -671,6 +672,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	padding: 12px 16px;
 	margin-top: calc(16px + 1.2vw);
 	margin-bottom: 0;
+	font-size: 0.8rem;
 }
 .product-btn p {
 	padding: 0 !important;

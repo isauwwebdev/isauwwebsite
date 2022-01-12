@@ -1,4 +1,6 @@
+import React, { useState } from 'react';
 import Product from './Product';
+import Order from './Order';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
@@ -6,7 +8,10 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import products from '../data/products.json';
 
-function Shop() {
+function Shop(props) {
+    const uniqueProducts = [...new Set(products.reduce((all, prod) => {
+        return all.concat([prod.name]);
+      }, []))].sort();
     return (
         <div>
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
@@ -59,6 +64,7 @@ function Shop() {
                             );
                         })}
                     </Row>
+                    <Order prodOptions={uniqueProducts}></Order>
                 </section>
             </Container>
         </div>
