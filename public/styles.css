@@ -686,3 +686,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .product-price-right {
 	float: right;
 }
+
+.order-form label {
+	font-size: calc(0.5vw + 12px);
+}
