@@ -64,7 +64,7 @@ function Shop(props) {
                             );
                         })}
                     </Row>
-                    <Order prodOptions={uniqueProducts}></Order>
+                    {/* <Order prodOptions={uniqueProducts}></Order> */}
                 </section>
             </Container>
         </div>
