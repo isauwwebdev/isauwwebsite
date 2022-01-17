@@ -12,6 +12,7 @@ import Shop from './Shop';
 import About from './About';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
     const [expanded, setExpanded] = React.useState(false);
@@ -56,6 +57,7 @@ function App() {
 
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <div>
                 <section id="preloader">
                     <img alt="isauwbird" src="../images/isauwbird-red.png" />
