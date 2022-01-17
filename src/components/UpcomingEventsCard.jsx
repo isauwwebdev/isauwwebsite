@@ -46,7 +46,7 @@ function UpcomingEventsCard(props) {
                                                 </div>
                                                 <div className="align-self-center align-middle" style={{ paddingLeft: "8px" }}>
                                                     <p className="upcoming-events-icon-text">
-                                                        {props.loc}
+                                                        {props.location}
                                                     </p>
                                                 </div>
                                             </div>

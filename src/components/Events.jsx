@@ -59,9 +59,7 @@ function Events() {
                     </div>
                 </div>
             </Container>
-            <Container>
-                    <h1 style={{ marginBottom: `calc(.5rem + 0.6vw)` }}><strong >Past Events</strong></h1>
-            </Container>
+            
             <PastEventsSearch />
         </div>
     )

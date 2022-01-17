@@ -13,42 +13,33 @@ function PastEventsSearch() {
         return event.completed;
     });
     const [searchText, setSearchText] = useState("");
-    const [displayedData, setDisplayedData] = useState(pastEvents);
+    const [filteredData, setFilteredData] = useState(pastEvents);
 
     const handleSearchText = (event) => {
-        let value = event.target.value;
-        if (value === '') {
-            setDisplayedData(pastEvents);
-        }
+        const value = event.target.value;
         setSearchText(value);
-        const searchEvent = pastEvents.filter((event) => {
+        const filteredEvents = pastEvents.filter((event) => {
             return (event.title.toLowerCase().includes(value.toLowerCase()) ||
                 event.text.toLowerCase().includes(value.toLowerCase()));
         });
-        setDisplayedData(searchEvent);
-
+        setFilteredData(filteredEvents);
     };
     return (
-        <div>
-            <Container className="justify-content-center">
-                <Row className="justify-content-between">
-                    <Col className="col-8">
-                        <form className="ml-2">
-                            <div className="form-group mb-2">
-                                <label htmlFor="searchQuery" className="mb-2">What events do you want to see?</label>
-                                <input type="text" className="searchText form-control" placeholder="Search For a Past Event"
-                                    value={searchText} onChange={handleSearchText} />
-                            </div>
+        <section className="my-5 btm-margin">            
+            <Container>
+                <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(0.12rem + 0.15vw)` }}><strong >Past Events</strong></h1>
+                <Row className="justify-content-between" style={{ marginBottom: `calc(1.25rem + 1.5vw)` }}>
+                    <Col className="col-8" >
+                        <form style={{ paddingLeft: `calc(0.4vw + 1.5px)` }} >
+                            <input type="text" style={{ fontSize: `calc(12px + 0.3vw)` }} className="search-text form-control" placeholder="Search Past Events"
+                                value={searchText} onChange={handleSearchText} />
                         </form>
-                    </Col>
-                    <Col className="col-2">
                     </Col>
                 </Row>
             </Container>
-            <Container>
-                <PastEventsGallery data={displayedData}></PastEventsGallery>
-            </Container>
-        </div>
+
+            <PastEventsGallery data={filteredData}></PastEventsGallery>
+        </section>
     );
 }
 

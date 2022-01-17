@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Switch, NavLink, Link, useLocation } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav'
@@ -11,14 +11,11 @@ import Events from './Events';
 import Shop from './Shop';
 import About from './About';
 import Sponsors from './Sponsors';
-
 import Footer from './Footer';
-
 
 function App() {
     const [expanded, setExpanded] = React.useState(false);
     const [solid, setSolid] = React.useState(false);
-
     var navbarRef = React.useRef()
     React.useEffect(() => {
         // 'load' event listener to hide the preloader once the main content is loaded
@@ -58,7 +55,7 @@ function App() {
     // }
 
     return (
-        <BrowserRouter basename="/isauw">
+        <BrowserRouter>
             <div>
                 <section id="preloader">
                     <img alt="isauwbird" src="../images/isauwbird-red.png" />

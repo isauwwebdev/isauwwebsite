@@ -282,6 +282,9 @@ p {
 	-o-transform: scale(1.1, 1.1);
 	transform: scale(1.1, 1.1);
 }
+.fa-2x {
+	font-size: calc(0.75vw + 1.5rem);
+}
 
 /* Footer background image, supposed to look like batik */
 .footer-copyright {
@@ -452,19 +455,17 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 /* Upcoming Events Home Page */
-.upcoming-events-overlay-homepage {
-    position:relative;
-	bottom: 10
+.home {
+	padding: 0;
 }
-.upcoming-events-overlay-homepage:before {
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 95%);
-    z-index: 1;
+.home .card {
+	border-radius: 0 !important;
+}
+.home img {
+	border-radius: 0 !important;
+}
+.home .upcoming-events-overlay:before {
+	border-radius: 0 !important;
 }
 
 /* Upcoming Events */
@@ -497,6 +498,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-weight: 300;
 	margin-bottom: 0;
 	color: #dd4139;
+	text-transform: uppercase;
 }
 .upcoming-events-date {
 	font-size: calc(16px + 0.6vw);
@@ -539,6 +541,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-size: calc(12px + 0.6vw);
 	margin-bottom: 8px;
 	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 
 /* Past Events */
@@ -669,7 +672,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	box-shadow: none;
 	text-transform: none;
 	width: 100% !important;
-	padding: 12px 16px;
+	padding: calc(4px + 0.6vw) calc(6px + 0.6vw) !important;
 	margin-top: calc(16px + 1.2vw);
 	margin-bottom: 0;
 	font-size: 0.8rem;

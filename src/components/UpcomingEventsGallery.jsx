@@ -52,6 +52,9 @@ function UpcomingEventsGallery() {
         nextArrow: <UpcomingEventsNextArrow />,
         prevArrow: <UpcomingEventsPrevArrow />
     };
+    const upcomingEvents = events.filter((event) => {
+        return !event.completed;
+    });
 
     return (
         <section className="my-5">
@@ -60,9 +63,9 @@ function UpcomingEventsGallery() {
                     <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
                     {/* Past Events */}
                     <Slider {...settings}>
-                        {events.map((event, i) => {
+                        {upcomingEvents.map((event, i) => {
                             return (
-                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} loc={event.loc} img={event.img} />
+                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} location={event.location} img={event.img} />
                             )
                         })}
                     </Slider>
