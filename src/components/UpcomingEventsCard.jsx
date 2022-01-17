@@ -36,7 +36,7 @@ function UpcomingEventsCard(props) {
                         </div>
 
                         <div className="upcoming-events-content">
-                            <div className="row" style={{ paddingRight: `calc(14px)`, paddingLeft: `calc(14px)` }}>
+                            <div className="row" style={{ paddingRight: `calc(12px)`, paddingLeft: `calc(12px)` }}>
                                 {/* Event Date */}
                                 <div className="text-center div-upcoming-events-date">
                                     <p className="upcoming-events-month">{props.month}</p>
