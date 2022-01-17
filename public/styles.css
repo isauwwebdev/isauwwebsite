@@ -569,10 +569,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	margin-bottom: 8px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
-	border: 0.5px solid #e0e0e0 !important;
-	border-radius: 4px;
-	padding-left: 10px;
-	padding-right: 10px;
 }
 
 /* Past Events */

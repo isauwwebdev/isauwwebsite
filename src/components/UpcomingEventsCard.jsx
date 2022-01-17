@@ -7,20 +7,20 @@ function UpcomingEventsCard(props) {
     const [hover, setHover] = React.useState(false);
     const [height, setHeight] = React.useState("0px");
     
+    function handleHeight() {
+        setHeight("" + ref.current.clientWidth + "px");
+    }
     // set width of card equal to height
     // so that card is square
     React.useEffect(() => {
-        window.addEventListener('load', () => {
-            setHeight("" + ref.current.clientWidth + "px");
-        });
-
-        window.addEventListener('resize', () => {
-            setHeight("" + ref.current.clientWidth  + "px");
-        });
-    })
+        window.addEventListener('resize', handleHeight);
+        return () => {
+            window.removeEventListener('resize', handleHeight);
+        }
+    });
 
     return (
-        <div ref={ref} style={{ padding: "0.6vw", height: `${height}` }} onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }}>
+        <div ref={ref} style={{ padding: "0.6vw", height: `${height}` }} onLoad={() => { handleHeight() }} onMouseEnter={() => { setHover(true) }} onMouseLeave={() => { setHover(false) }}>
             <a href="https://www.google.com" className="upcoming-events-a">
                 <Card className="upcoming-events-card">
                     {/* Text and dark filter overlay on top of image */}
