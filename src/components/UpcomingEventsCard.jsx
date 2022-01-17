@@ -12,7 +12,9 @@ function UpcomingEventsCard(props) {
                     {/* Text and dark filter overlay on top of image */}
                     <div className="upcoming-events-overlay">
                         {/* Event Image */}
-                        <Card.Img variant="top" src={props.img} style={{ borderRadius: "16px", filter: hover ? "blur(4px)" : "none", transition: "1s all ease-in-out" }} />
+                        <div class="col-sm-12 col-lg-12 h-100">
+                            <Card.Img variant="top" src={props.img} style={{ borderRadius: "16px", filter: hover ? "blur(4px)" : "none", transition: "1s all ease-in-out"}} />
+                        </div>
                         <div>
                             <div className="upcoming-events-content text-center" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
                                 {/* Event Name */}
