@@ -528,13 +528,13 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	letter-spacing: 1px;
 }
 .div-upcoming-events-date {
-	padding-right: 12px;
+	padding: 0;
 	margin: auto 0;
 	float: left;
 	width: 25% 
 }
 .div-upcoming-events-content {
-	padding: 0px 0px 0px 12px;
+	padding: 0px 0px 0px calc(12px + 0.4vw);
 	box-shadow: -1px 0 0 white;
 	float: left;
 	width: 75%;
@@ -551,10 +551,13 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	color: #7F7F7F;
 	margin: 0
 }
-/* Decreases left margin of the date when there is only 1 card in carousel*/
+/* Decreases width of the date when there is only 1 card in carousel*/
 @media only screen and (max-width: 576px) {
 	.div-upcoming-events-date {
-		width: calc(6vw + 36px);
+		width: calc(5vw + 50px);
+	}
+	.div-upcoming-events-content {
+		width: 65%;
 	}
 } 
 

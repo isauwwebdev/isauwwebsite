@@ -30,20 +30,20 @@ function UpcomingEventsCard(props) {
                     <div>
                         <div className="upcoming-events-content text-center" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>
                             {/* Event Name */}
-                            <h3 className="events-title">
+                            <h3 className="events-title" style={{ fontSize: `calc(15px + 0.6vw)` }}>
                                 {props.title}
                             </h3>
                         </div>
 
                         <div className="upcoming-events-content">
-                            <div className="row">
+                            <div className="row" style={{ paddingRight: `calc(14px)`, paddingLeft: `calc(14px)` }}>
                                 {/* Event Date */}
                                 <div className="text-center div-upcoming-events-date">
                                     <p className="upcoming-events-month">{props.month}</p>
                                     <p className="upcoming-events-date">{props.date}</p>
                                 </div>
 
-                                <div className="div-upcoming-events-content">
+                                <div className="div-upcoming-events-content" style={{ paddingRight: `2vw` }}>
                                     <div>
                                         {/* Time and Location */}
                                         <div className="align-middle align-self-center" style={{ display: "flex", flex: "1" }}>
