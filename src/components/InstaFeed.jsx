@@ -46,10 +46,6 @@ function InstaGrid(props) {
     React.useEffect(() => {
         window.addEventListener('scroll', () => {
             var windowTop = window.scrollY;
-            // var elementTop = 0;
-            // if (document.getElementById("move")) {
-            //     elementTop = document.getElementById("move").getBoundingClientRect().top;
-            // }
             setPosition((windowTop) / scrollSensitivity - (16384 / windowWidth));
         });
 

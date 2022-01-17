@@ -52,12 +52,13 @@ function UpcomingEventsGallery() {
         nextArrow: <UpcomingEventsNextArrow />,
         prevArrow: <UpcomingEventsPrevArrow />
     };
+
     const upcomingEvents = events.filter((event) => {
         return !event.completed;
     });
 
     return (
-        <section className="my-5">
+        <section className="my-5" >
             <div className="row">
                 <div className="col-12">
                     <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
