@@ -50,17 +50,19 @@ function InstaGrid(props) {
             // if (document.getElementById("move")) {
             //     elementTop = document.getElementById("move").getBoundingClientRect().top;
             // }
-            setPosition((windowTop) / scrollSensitivity);
+            setPosition((windowTop) / scrollSensitivity - (16384 / windowWidth));
         });
 
         window.addEventListener('load', () => {
+            var windowTop = window.scrollY;
             setWindowWidth(window.innerWidth);
-            console.log("load: " + windowWidth)
+            setPosition((windowTop) / scrollSensitivity - (16384 / windowWidth));
         });
 
         window.addEventListener('resize', () => {
+            var windowTop = window.scrollY;
             setWindowWidth(window.innerWidth);
-            console.log("resize: " + windowWidth)
+            setPosition((windowTop) / scrollSensitivity - (16384 / windowWidth));
         });
     });
 
@@ -92,20 +94,20 @@ function InstaGrid(props) {
     });
 
     return (
-        <div style={{ overflow: "hidden" }}>
-            <div id="move" className="move-section" style={{ marginBottom: `calc(-1 * (9.6px + 2vw))` }}>
-                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 2.0)`, transform: `translateX(calc(${position}px))` }}>
+        <div style={{ overflow: "hidden" }} className="my-5">
+            <div id="move" className="move-section" style={{ marginBottom: `calc(-1 * (8px + 1vw))` }}>
+                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(${position}px))` }}>
                     {postArray[0]}
                 </div>
             </div>
             <div className="move-section">
-                <div className="move-bg" style={{ left: `calc(${windowWidth}px / 2.0)`, transform: `translateX(calc(-1 * (${position}px)))` }}>
+                <div className="move-bg" style={{ left: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(-1 * (${position}px)))` }}>
                     {postArray[1]}
                 </div>
             </div>
             <div className="move-section" style={{ marginTop: `calc(-1 * (14px + 2.5vw))` }}>
-                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 2.1)`, transform: `translateX(calc(${position}px))` }}>
-                    <img src={products[0].img} style={{ maxHeight: `calc(112px + 20vw)`, height: "auto", width: `calc(112px + 20vw)`, objectFit: "cover", backgroundColor: "none", borderRadius: "16px" }}></img>
+                <div className="move-bg" style={{ right: `calc(${windowWidth}px / 1.775)`, transform: `translateX(calc(${position}px))` }}>
+                    <img src={products[0].img} className="insta-product"></img>
                 </div>
             </div>
         </div>

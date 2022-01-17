@@ -24,13 +24,13 @@ function App() {
         });
 
         // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 100px.
-        window.addEventListener('scroll', () => {
-            if (window.scrollY >= window.innerHeight) {
-                setSolid(true); // true = solid
-            } else {
-                setSolid(false); // false = opaque
-            }
-        });
+        // window.addEventListener('scroll', () => {
+        //     if (window.scrollY >= window.innerHeight) {
+        //         setSolid(true); // true = solid
+        //     } else {
+        //         setSolid(false); // false = opaque
+        //     }
+        // });
 
         // closes collapsed navbar after clicking outside the navbar */
         document.addEventListener("mousedown", (event) => {
@@ -63,7 +63,7 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" variant="dark" fixed="top" className="navSolid" className={solid ? "navSolid" : "navOpaque"} expanded={expanded}>
+                    <Navbar ref={navbarRef} expand="lg" variant="dark" fixed="top" className="navSolid" className="navSolid" expanded={expanded}>
                         <Container>
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">

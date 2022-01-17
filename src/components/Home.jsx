@@ -2,7 +2,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import Purpose from './Purpose';
 import InstaFeed from './InstaFeed';
 import React from 'react';
-import HomeUpcomingEvents from './HomeUpcomingEvents';
+import UpcomingEventsGallery from './UpcomingEventsGallery';
+import Container from 'react-bootstrap/Container';
 
 function Home() {
     const API_KEY = process.env.REACT_APP_INS_TOKEN;
@@ -22,7 +23,9 @@ function Home() {
             </div>
 
             <Purpose />
-            <HomeUpcomingEvents />
+            <Container>
+                <UpcomingEventsGallery />
+            </Container>
             <InstaFeed token={API_KEY} limit={9} />
         </div>
     )

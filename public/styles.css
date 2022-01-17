@@ -360,19 +360,20 @@ p {
 	height: calc(48px + 20vw);
 	opacity: 0.5;
 }
-.purpose {
+
+/* .purpose {
 	margin-bottom: calc(54px + 2vw) !important;
-}
+} */
 
 /* moving images */
 .move-section {
 	position: relative;
-	height: calc(96px + 20vw);
+	height: calc(96px + 16vw);
 	width: auto;
 }
 .insta-img {
 	border-radius: 16px;
-	max-height: calc(96px + 20vw); 
+	max-height: calc(96px + 16vw); 
 }
 .move-section .move-bg {
 	position: absolute;
@@ -383,7 +384,17 @@ p {
 	transition: all 1s ease-out;
 }
 .move-section:last-child {
-	height: calc(112px + 20vw);
+	height: calc(96px + 16vw);
+}
+.insta-product {
+	max-height: calc(96px + 16vw);
+	height: auto;
+	width: calc(96px + 16vw);
+	object-fit: cover;
+	background-color: red;
+	border-radius: 16px;
+	background-image: url("../images/insta-product-backgr.jpg");
+	background-size: contain;
 }
 
 .division {
