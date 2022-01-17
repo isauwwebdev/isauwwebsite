@@ -11,8 +11,8 @@ function Events() {
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2000"
+                        className="d-block w-100 h-100"
+                        src="../images/events/seattle 101/2.png"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -23,8 +23,8 @@ function Events() {
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2200"
+                        className="d-block w-100 h-100"
+                        src="../images/events/keraton/5.jpg"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -35,8 +35,8 @@ function Events() {
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2400"
+                        className="d-block w-100 h-100"
+                        src="../images/events/santapan/3.jpg"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -59,7 +59,9 @@ function Events() {
                     </div>
                 </div>
             </Container>
-            
+            <Container>
+                    <h1 style={{ marginBottom: `calc(.5rem + 0.6vw)` }}><strong >Past Events</strong></h1>
+            </Container>
             <PastEventsSearch />
         </div>
     )
