@@ -7,7 +7,7 @@ function About() {
         <div>
             <img
                 className="d-block w-100"
-                src="https://picsum.photos/2000"
+                src="../images/officers/isauw-group.JPG"
                 alt=""
                 style={{ height: "calc(50vh + 10vw)" }}
             />
