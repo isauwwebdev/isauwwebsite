@@ -66,7 +66,7 @@ function UpcomingEventsGallery() {
                     <Slider {...settings}>
                         {upcomingEvents.map((event, i) => {
                             return (
-                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} location={event.location} img={event.img} />
+                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} location={event.location} img={event.img[0].src} />
                             )
                         })}
                     </Slider>

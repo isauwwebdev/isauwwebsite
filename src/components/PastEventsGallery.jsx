@@ -13,13 +13,14 @@ function PastEventsGallery(props) {
         className: "past-events-carousel",
         arrows: false,
     };
-    const filteredEvents = props.data.map((event) => {
+    const filteredEvents = props.data.map((event, i) => {
         return <PastEventsCard 
             title={event.title.toUpperCase()}
             date={(event.date + ", " + event.year).toUpperCase()}
             text={event.text}
             location={event.location}
             settings={settings}
+            img={event.img}
         />
     });
     return (

@@ -17,8 +17,8 @@ function Shop(props) {
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2000"
+                        className="d-block w-100 h-100"
+                        src="../images/shops/hoodies_carousel.png"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -29,8 +29,8 @@ function Shop(props) {
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2200"
+                        className="d-block w-100 h-100"
+                        src="../images/shops/tote_carousel.png"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -41,8 +41,8 @@ function Shop(props) {
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
                     <img
-                        className="d-block w-100"
-                        src="https://picsum.photos/2400"
+                        className="d-block w-100 h-100"
+                        src="../images/shops/mask_carousel.png"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>

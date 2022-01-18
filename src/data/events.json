@@ -7,7 +7,8 @@
         "time": "--",
         "location": "Intellectual House, UW",
         "text": "",
-        "img": "../images/events/winter ball/6.jpg",
+        "img": [{"src": "../images/events/winter ball/1.jpg"},
+                {"src": "../images/events/winter ball/2.jpg"}],
         "completed": false
     },
     {
@@ -18,7 +19,7 @@
         "time": "--",
         "location": "IMA, UW",
         "text": "",
-        "img": "../images/events/winter cup/wintercup.png",
+        "img": [{"src": "../images/events/winter cup/wintercup.png"}],
         "completed": false
     },
     {
@@ -29,7 +30,15 @@
         "time": "--",
         "location": "Rainier Vista, UW",
         "text": "",
-        "img": "../images/events/keraton/8.jpg",
+        "img": [{"src": "../images/events/keraton/1.jpg"},
+                {"src": "../images/events/keraton/2.jpg"},
+                {"src": "../images/events/keraton/3.jpg"},
+                {"src": "../images/events/keraton/4.jpg"},
+                {"src": "../images/events/keraton/5.jpg"},
+                {"src": "../images/events/keraton/6.jpg"},
+                {"src": "../images/events/keraton/7.jpg"},
+                {"src": "../images/events/keraton/8.jpg"},
+                {"src": "../images/events/keraton/9.jpg"}],
         "completed": false
     },
     {
@@ -39,7 +48,13 @@
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "An interactive social gathering where we’ll be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
-        "img": "../images/events/friendsgiving/1.jpg",
+        "img": [{"src": "../images/events/friendsgiving/1.jpg"},
+                {"src": "../images/events/friendsgiving/2.jpg"},
+                {"src": "../images/events/friendsgiving/3.jpg"},
+                {"src": "../images/events/friendsgiving/4.jpg"},
+                {"src": "../images/events/friendsgiving/5.jpg"},
+                {"src": "../images/events/friendsgiving/6.jpg"},
+                {"src": "../images/events/friendsgiving/7.jpg"}],
         "completed": true
     },
     {
@@ -49,7 +64,12 @@
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
-        "img": "../images/events/seathrough/1.jpeg",
+        "img": [{"src": "../images/events/seathrough/1.jpeg"},
+                {"src": "../images/events/seathrough/2.jpeg"},
+                {"src": "../images/events/seathrough/3.jpeg"},
+                {"src": "../images/events/seathrough/4.jpeg"},
+                {"src": "../images/events/seathrough/5.jpeg"},
+                {"src": "../images/events/seathrough/6.jpeg"}],
         "completed": true
     },
     {
@@ -59,7 +79,8 @@
         "time": "6:30PM",
         "location": "The M Seattle",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
-        "img": "../images/events/seattle 101/1.png",
+        "img": [{"src": "../images/events/seattle 101/1.png"},
+                {"src": "../images/events/seattle 101/2.png"}],
         "completed": true
     }
 ]

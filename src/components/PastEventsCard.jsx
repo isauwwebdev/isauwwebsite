@@ -7,11 +7,9 @@ function PastEventsCard(props) {
         <div className="past-events-card">
             <Container>
                 <Slider {...props.settings}>
-                    <img src="https://picsum.photos/400/600" className="past-events-img"></img>
-                    <img src="https://picsum.photos/400/500" className="past-events-img"></img>
-                    <img src="https://picsum.photos/600/500" className="past-events-img"></img>
-                    <img src="https://picsum.photos/300/400" className="past-events-img"></img>
-                    <img src="https://picsum.photos/400/400" className="past-events-img"></img>
+                    {props.img.map((image) =>
+                        <img src={image.src} className="past-events-img" height="100"></img>
+                    )}
                 </Slider>
             </Container>
 
