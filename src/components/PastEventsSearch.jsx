@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 import _ from 'lodash';
 
 import events from '../data/events.json';
-// import Highlighter from "react-highlight-words";
+import Highlighter from "react-highlight-words";
 
 function PastEventsSearch() {
     const pastEvents = events.filter((event) => {
@@ -35,31 +35,22 @@ function PastEventsSearch() {
     };
 
     const handleClick = () => {
+        let lowerCaseText = searchText.toLowerCase();
         const searchEvents = pastEvents.filter((event) => {
-            return (event.title.toLowerCase().includes(searchText.toLowerCase()) ||
-                event.text.toLowerCase().includes(searchText.toLowerCase()));
+            return (event.title.toLowerCase().includes(lowerCaseText) ||
+                event.text.toLowerCase().includes(lowerCaseText));
         });
         const sortEvents = _.sortBy(searchEvents, sortSelection);
-        /* const highlightEvents = filteredEvents.map((event) => {
-            const titleText = event.title;
-            const descrText = event.text;
-            if (titleText.toLowerCase().includes(value.toLowerCase())) {
-                event.title.replace(value.toLowerCase(), <Highlighter
-                    searchWords={value.toLowerCase()}
-                    autoEscape={true}
-                    textToHighlight={titleText}
-                />);
+        const highlightEvents = sortEvents.map((event) => {
+            if (event.title.toLowerCase().includes(lowerCaseText)) {
+                event.title.replace(lowerCaseText, <Highlight>{lowerCaseText}</Highlight>);
             }
-            if (descrText.toLowerCase().includes(value.toLowerCase())) {
-                event.text.replace(value.toLowerCase(), <Highlighter
-                    searchWords={value.toLowerCase()}
-                    autoEscape={true}
-                    textToHighlight={descrText}
-                />);
+            if (event.text.toLowerCase().includes(lowerCaseText)) {
+                event.text.replace(lowerCaseText, <Highlight>{lowerCaseText}</Highlight>);
             }
             return event;
-        }); */
-        setFilteredData(sortEvents);
+        });
+        setFilteredData(highlightEvents);
     };
     return (
         <section className="my-5 btm-margin">
@@ -88,6 +79,10 @@ function PastEventsSearch() {
             <PastEventsGallery data={filteredData}></PastEventsGallery>
         </section>
     );
+}
+
+function Highlight(text) {
+    return <mark>{text}</mark>;
 }
 
 export default PastEventsSearch;
