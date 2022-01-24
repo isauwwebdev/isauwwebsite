@@ -4,6 +4,8 @@ import officers from '../data/officers.json'
 
 function Officers() {
 
+var hi = "display: 'flex', background: 'linear-gradient(#f0f 0 0) bottom/80% 70% no-repeat'";
+
     return (
         <div >
             {officers.map((group, i) => {
@@ -15,7 +17,7 @@ function Officers() {
                                     <Row xs={3} className="justify-content-center" style={{ display: "flex" }}>
                                         {rows.row.map((officer, k) => {
                                             return (
-                                                <Col style={{ display: "flex", background: "linear-gradient(#fddd39 0 0) bottom/100% 50% no-repeat" }}>
+                                                <Col className = {officer.position} >
                                                     <div style={{ alignSelf: "flex-end" }}>
                                                         <img className="mx-auto" src={officer.img} style={{ width: `calc(100% - 12vw + 20px)` }}></img>
                                                     </div>
