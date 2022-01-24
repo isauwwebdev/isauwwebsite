@@ -8,6 +8,7 @@ import _ from 'lodash';
 
 import events from '../data/events.json';
 import Highlighter from "react-highlight-words";
+import { computeHeadingLevel } from '@testing-library/react';
 
 function PastEventsSearch() {
     const pastEvents = events.filter((event) => {
@@ -35,7 +36,7 @@ function PastEventsSearch() {
     };
 
     const handleClick = () => {
-        let lowerCaseText = searchText.toLowerCase();
+        const lowerCaseText = searchText.toLowerCase();
         const searchEvents = pastEvents.filter((event) => {
             return (event.title.toLowerCase().includes(lowerCaseText) ||
                 event.text.toLowerCase().includes(lowerCaseText));
@@ -43,10 +44,14 @@ function PastEventsSearch() {
         const sortEvents = _.sortBy(searchEvents, sortSelection);
         const highlightEvents = sortEvents.map((event) => {
             if (event.title.toLowerCase().includes(lowerCaseText)) {
-                event.title.replace(lowerCaseText, <Highlight>{lowerCaseText}</Highlight>);
+                let title = document.getElementById("title-name");
+                let pattern = new RegExp(`${lowerCaseText}`, 'gi');
+                title.innerHTML = title.textContent.replace(pattern, match => `<mark>${match}</mark>`);
             }
             if (event.text.toLowerCase().includes(lowerCaseText)) {
-                event.text.replace(lowerCaseText, <Highlight>{lowerCaseText}</Highlight>);
+                let descr = document.getElementById("descr-text");
+                let pattern = new RegExp(`${lowerCaseText}`, 'gi');
+                descr.innerHTML = descr.textContent.replace(pattern, match => `<mark>${match}</mark>`);
             }
             return event;
         });
@@ -75,14 +80,9 @@ function PastEventsSearch() {
                     </Col>
                 </Row>
             </Container>
-
             <PastEventsGallery data={filteredData}></PastEventsGallery>
         </section>
     );
-}
-
-function Highlight(text) {
-    return <mark>{text}</mark>;
 }
 
 export default PastEventsSearch;

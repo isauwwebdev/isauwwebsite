@@ -742,3 +742,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .order-form label {
 	font-size: calc(0.5vw + 12px);
 }
+
+mark {
+	background-color: #fceba8;
+}
