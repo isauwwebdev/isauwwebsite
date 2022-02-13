@@ -32,29 +32,29 @@ z-index: 10000;
 @-webkit-keyframes sk-rotatePlane {
 0% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(0deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(0deg); 
+	transform: perspective(200px) translateZ(3vw) rotateY(0deg);
 }
 50% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(180deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(180deg); 
+	transform: perspective(200px) translateZ(3vw) rotateY(180deg);
 }
 100% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(360deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(360deg); } 
+	transform: perspective(200px) translateZ(3vw) rotateY(360deg); }
 }
 
 @keyframes sk-rotatePlane {
 0% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(0deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(0deg); 
+	transform: perspective(200px) translateZ(3vw) rotateY(0deg);
 }
 50% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(180deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(180deg); 
+	transform: perspective(200px) translateZ(3vw) rotateY(180deg);
 }
 100% {
 	-webkit-transform: perspective(200px) translateZ(3vw) rotateY(360deg);
-	transform: perspective(200px) translateZ(3vw) rotateY(360deg); } 
+	transform: perspective(200px) translateZ(3vw) rotateY(360deg); }
 }
 
 body {
@@ -83,7 +83,7 @@ p {
 @media (max-width: 768px){
 	.container{
 		max-width: 90%;
-	}  
+	}
 }
 
 /* Navbar States - Becomes opaque as user scrolls */
@@ -199,17 +199,17 @@ p {
 
 /* Ad Banner */
 .alert-fixed {
-    position: fixed; 
+    position: fixed;
 	bottom: 0%;
 	left: 50%;
 	height: 90px;
     width: 728px;
 	margin-left: -364px; /* Negative half of width. */
-    z-index: 999; 
+    z-index: 999;
 	background-image: url("https://picsum.photos/800");
 }
 .btn-close {
-	padding: 1rem !important; 
+	padding: 1rem !important;
 }
 .btn-close:focus {
 	box-shadow: none;
@@ -220,7 +220,7 @@ p {
 		width: 320px;
 		margin-left: -160px; /* Negative half of width. */
 		background-image: url("https://picsum.photos/400");
-	}	
+	}
 	.btn-close {
 		padding: 0.25rem !important;
 		width: 0.5rem;
@@ -231,10 +231,10 @@ p {
 
 /* Carousel Size */
 .carousel .carousel-inner {
-	height: 100%; 
+	height: 100%;
 }
 .carousel .carousel-inner .carousel-item {
-	height: 100%; 
+	height: 100%;
 }
 /* Carousel Arrows */
 .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon {
@@ -242,6 +242,29 @@ p {
     height: 60px !important;
 	display: none;
 }
+
+/*officer background*/
+.Creativity, .Inventory, .Event{
+	display: flex;
+	background: linear-gradient(#d1b1b6 0 0) bottom/100% 50% no-repeat;
+	 /*style={{display: 'flex', background: 'linear-gradient(#00f 0 0) bottom/80% 70% no-repeat'}}*/
+}
+
+.Treasury, .Sponsorship{
+	display: flex;
+	background: linear-gradient(#9cbaba 0 0) bottom/100% 50% no-repeat
+}
+
+.President, .Director{
+	display: flex;
+	background: linear-gradient(#c18789 0 0) bottom/100% 50% no-repeat;
+}
+
+.Design, .Technology, .Marketing{
+	display: flex;
+	background: linear-gradient(#e3d3a2 0 0) bottom/100% 50% no-repeat;
+}
+
 /* Carousel Images - zooms in instead of stretching image */
 .w-100 {
     width:100%;
@@ -264,7 +287,7 @@ p {
 /* Footer */
 .page-footer {
 	font-family: 'Roboto', sans-serif;
-	background-color: #811B16; 
+	background-color: #811B16;
 }
 
 /* Social icons and hover animation */
@@ -273,7 +296,7 @@ p {
 	padding-right: 1rem;
 }
 .social-icon i {
-	transition: transform .5s; 
+	transition: transform .5s;
 }
 .social-icon i:hover {
 	-webkit-transform: scale(1.1, 1.1);
@@ -373,7 +396,7 @@ p {
 }
 .insta-img {
 	border-radius: 16px;
-	max-height: calc(96px + 16vw); 
+	max-height: calc(96px + 16vw);
 }
 .move-section .move-bg {
 	position: absolute;
@@ -401,7 +424,7 @@ p {
 	margin-bottom: calc(54px + 2vw);
  }
 .division:last-child {
-	margin-bottom: 4rem !important; 
+	margin-bottom: 4rem !important;
 }
 .officer-position {
 	font-weight: 700;
@@ -531,7 +554,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	padding: 0;
 	margin: auto 0;
 	float: left;
-	width: 25% 
+	width: 25%
 }
 .div-upcoming-events-content {
 	padding: 0px 0px 0px calc(12px + 0.4vw);
@@ -543,10 +566,10 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 .upcoming-events-icon {
 	font-size: calc(10px + 0.4vw);
-	width: calc(12px + 0.4vw) 
+	width: calc(12px + 0.4vw)
 }
 .upcoming-events-icon-text {
-	font-size: calc(14px + 0.1vw); 
+	font-size: calc(14px + 0.1vw);
 	font-weight: 300;
 	color: #7F7F7F;
 	margin: 0
@@ -559,9 +582,9 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.div-upcoming-events-content {
 		width: 65%;
 	}
-} 
+}
 
-/* Both Events */ 
+/* Both Events */
 .events-title {
 	font-weight: 700;
 	font-size: calc(12px + 0.6vw);
@@ -576,7 +599,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-weight: 300;
 	color: #7F7F7F;
 	margin: 0;
-	letter-spacing: 0.8px; 
+	letter-spacing: 0.8px;
 }
 .past-events-text {
 	color: #747373;
@@ -591,7 +614,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.past-events-content {
 		padding-left: 0;
 	}
-} 
+}
 
 
 .past-events-carousel .slick-list .slick-track .slick-slide {
@@ -634,7 +657,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	background-size: cover;
 	border-radius: 16px;
 	padding: calc(2vw + 16px);
-	margin-top: calc(1vw + 20px); 
+	margin-top: calc(1vw + 20px);
 }
 .jumbotron-title {
 	font-size: calc(20px + 1.2vw);
@@ -651,17 +674,17 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.jumbotron-desc {
 		width: 33%;
 	}
-} 
+}
 @media only screen and (max-width: 549px) {
 	.jumbotron-desc {
 		width: 48%;
 	}
-} 
+}
 @media only screen and (max-width: 383px) {
 	.jumbotron-desc {
 		width: 70%;
 	}
-} 
+}
 .jumbotron-btn {
 	font-weight: 600;
 	font-size: calc(12px + 0.6vw) !important;
@@ -719,4 +742,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 .order-form label {
 	font-size: calc(0.5vw + 12px);
+}
+
+mark {
+	background-color: #fceba8;
 }

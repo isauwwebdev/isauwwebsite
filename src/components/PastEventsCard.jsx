@@ -16,8 +16,8 @@ function PastEventsCard(props) {
             <Container>
                 <div className="mx-auto" style={{ padding: `calc(0.8vw + 8px) 0 0 calc(1.5px + 0.4vw)` }}>
                     <p className="past-events-date">{props.date}</p>
-                    <p className="events-title">{props.title}</p>
-                    <p className="past-events-text">{props.text}</p>
+                    <p id="title-name" className="events-title">{props.title}</p>
+                    <p id="descr-text" className="past-events-text">{props.text}</p>
                 </div>
             </Container>
         </div>

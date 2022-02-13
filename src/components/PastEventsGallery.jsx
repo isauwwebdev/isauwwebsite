@@ -13,8 +13,8 @@ function PastEventsGallery(props) {
         className: "past-events-carousel",
         arrows: false,
     };
-    const filteredEvents = props.data.map((event, i) => {
-        return <PastEventsCard 
+    const filteredEvents = props.data.map((event) => {
+        return <PastEventsCard
             title={event.title.toUpperCase()}
             date={(event.date + ", " + event.year).toUpperCase()}
             text={event.text}
