@@ -596,7 +596,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 .past-events-carousel .slick-list .slick-track .slick-slide {
 	margin-right: 1.2vw;
-	max-height: calc(8vw + 168px);
+	max-height: calc(6vw + 256px);
 }
 .past-events-carousel {
 	margin-left: 0.4vw;
@@ -607,6 +607,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	height: 100%;
 	width: inherit;
 	object-fit: cover;
+	width: auto;
 }
 
 .past-events-card {

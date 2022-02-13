@@ -11,7 +11,7 @@ function Events() {
                 <Carousel.Item interval={4000}>
                     <img
                         className="d-block w-100 h-100"
-                        src="../images/events/keraton/5.jpg"
+                        src="../images/events/carousel/1.jpeg"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -23,7 +23,7 @@ function Events() {
                 <Carousel.Item interval={4000}>
                     <img
                         className="d-block w-100 h-100"
-                        src="../images/events/seattle 101/2.png"
+                        src="../images/events/carousel/2.jpeg"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
@@ -35,7 +35,7 @@ function Events() {
                 <Carousel.Item interval={4000}>
                     <img
                         className="d-block w-100 h-100"
-                        src="../images/events/seathrough/1.jpeg"
+                        src="../images/events/carousel/3.jpeg"
                         alt=""
                     />
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>

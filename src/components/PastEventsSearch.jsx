@@ -29,7 +29,7 @@ function PastEventsSearch() {
             <Container>
                 <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(0.12rem + 0.15vw)` }}><strong >Past Events</strong></h1>
                 <Row className="justify-content-between" style={{ marginBottom: `calc(1.25rem + 1.5vw)` }}>
-                    <Col className="col-8" >
+                    <Col className="col-9" >
                         <form style={{ paddingLeft: `calc(0.4vw + 1.5px)` }} >
                             <input type="text" style={{ fontSize: `calc(12px + 0.3vw)` }} className="search-text form-control" placeholder="Search Past Events"
                                 value={searchText} onChange={handleSearchText} />

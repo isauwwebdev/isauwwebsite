@@ -26,6 +26,12 @@ function Home() {
             <Container>
                 <UpcomingEventsGallery />
             </Container>
+            <Container className="align-items-center text-center" style={{marginTop: "4rem", overflow: "auto"}}>
+                <h1 className="my-3"><strong>Join the ISAUW Family</strong></h1>
+                <p className="text-center">Support our community</p>
+                <button type="button" className="btn btn-outline-danger" style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}><i class="fa-brands fa-instagram"></i> Find us on Instagram</button>
+                <button type="button" className="btn btn-outline-danger" style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}><i class="fa-solid fa-bag-shopping"></i> Shop our Merchandise</button>
+            </Container>
             <InstaFeed token={API_KEY} limit={9} />
         </div>
     )
