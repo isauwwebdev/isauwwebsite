@@ -1,8 +1,15 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import Slider from 'react-slick';
+import Moment from 'react-moment';
+
 
 function PastEventsCard(props) {
+    const toUpperCaseFilter = (d) => {
+        return d.toUpperCase();
+    };
+    let date = <Moment filter={toUpperCaseFilter} parse="MM/DD/YYYY" format="ddd, MMM DD YYYY">{props.date}</Moment>
+
     return (
         <div className="past-events-card">
             <Container>
@@ -15,9 +22,9 @@ function PastEventsCard(props) {
 
             <Container>
                 <div className="mx-auto" style={{ padding: `calc(0.8vw + 8px) 0 0 calc(1.5px + 0.4vw)` }}>
-                    <p className="past-events-date">{props.date}</p>
-                    <p id="title-name" className="events-title">{props.title}</p>
-                    <p id="descr-text" className="past-events-text">{props.text}</p>
+                    <p className="past-events-date">{date}</p>
+                    <p className="events-title highlight-title">{props.title}</p>
+                    <p className="past-events-text highlight-desc">{props.text}</p>
                 </div>
             </Container>
         </div>

@@ -61,12 +61,12 @@ function UpcomingEventsGallery() {
         <section className="my-5" >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}><strong>Upcoming Events</strong></h1>
+                    <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)`}}><strong>Upcoming Events</strong></h1>
                     {/* Past Events */}
                     <Slider {...settings}>
                         {upcomingEvents.map((event, i) => {
                             return (
-                                <UpcomingEventsCard title={event.title} month={event.month} date={event.date} time={event.time} location={event.location} img={event.img[0].src} />
+                                <UpcomingEventsCard title={event.title} date={event.date} time={event.time} location={event.location} img={event.img[0].src} />
                             )
                         })}
                     </Slider>

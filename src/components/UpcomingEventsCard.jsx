@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
+import Moment from 'react-moment';
 
 function UpcomingEventsCard(props) {
 
@@ -17,6 +18,12 @@ function UpcomingEventsCard(props) {
             window.removeEventListener('resize', handleHeight);
         }
     });
+
+    const toUpperCaseFilter = (d) => {
+        return d.toUpperCase();
+    };
+    let month = <Moment filter={toUpperCaseFilter} parse="MM/DD/YYYY" format="MMM">{props.date}</Moment>
+    let date = <Moment filter={toUpperCaseFilter} parse="MM/DD/YYYY" format="DD">{props.date}</Moment>
 
     return (
         <div ref={ref} style={{ padding: "0.6vw", height: `${height}` }} onLoad={() => { handleHeight() }}>
@@ -39,8 +46,8 @@ function UpcomingEventsCard(props) {
                             <div className="row" style={{ paddingRight: `calc(12px)`, paddingLeft: `calc(12px)` }}>
                                 {/* Event Date */}
                                 <div className="text-center div-upcoming-events-date">
-                                    <p className="upcoming-events-month">{props.month}</p>
-                                    <p className="upcoming-events-date">{props.date}</p>
+                                    <p className="upcoming-events-month">{month}</p>
+                                    <p className="upcoming-events-date">{date}</p>
                                 </div>
 
                                 <div className="div-upcoming-events-content" style={{ paddingRight: `2vw` }}>

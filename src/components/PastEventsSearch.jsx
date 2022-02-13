@@ -42,17 +42,23 @@ function PastEventsSearch() {
                 event.text.toLowerCase().includes(lowerCaseText));
         });
         const sortEvents = _.sortBy(searchEvents, sortSelection);
+        console.log(sortEvents);
+        
+        let i = 0;
         const highlightEvents = sortEvents.map((event) => {
             if (event.title.toLowerCase().includes(lowerCaseText)) {
-                let title = document.getElementById("title-name");
-                let pattern = new RegExp(`${lowerCaseText}`, 'gi');
+                let title = document.getElementsByClassName("highlight-title")[i];
+                let pattern = new RegExp(`${lowerCaseText}`, "gi");
                 title.innerHTML = title.textContent.replace(pattern, match => `<mark>${match}</mark>`);
             }
+
             if (event.text.toLowerCase().includes(lowerCaseText)) {
-                let descr = document.getElementById("descr-text");
-                let pattern = new RegExp(`${lowerCaseText}`, 'gi');
-                descr.innerHTML = descr.textContent.replace(pattern, match => `<mark>${match}</mark>`);
+                let desc = document.getElementsByClassName("highlight-desc")[i];
+                let pattern = new RegExp(`${lowerCaseText}`, "gi");
+                desc.innerHTML = desc.textContent.replace(pattern, match => `<mark>${match}</mark>`);
             }
+            i++;
+
             return event;
         });
         setFilteredData(highlightEvents);
@@ -62,26 +68,21 @@ function PastEventsSearch() {
             <Container>
                 <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(0.12rem + 0.15vw)` }}><strong >Past Events</strong></h1>
                 <Row className="justify-content-between" style={{ marginBottom: `calc(1.25rem + 1.5vw)` }}>
-<<<<<<< HEAD
-                    <Col className="col-9" >
-=======
-                    <Col className="col-8">
->>>>>>> ec39fdff9b4d5c0a43fe08129d66c0f17130519a
-                        <form style={{ paddingLeft: `calc(0.4vw + 1.5px)` }} >
-                            <input type="text" style={{ fontSize: `calc(12px + 0.3vw)` }} className="search-text form-control" placeholder="Search Event Name or Keywords"
+                    <Col className="col-10">
+                        <form className="row search-bar">
+                            <input type="text" className="col-10 search-text form-control-custom" placeholder="Search Event Name or Keywords"
                                 value={searchText} onChange={handleSearchText} />
+                            <span type="submit" className="btn btn-dark col-1" style={{margin: "0"}} onClick={handleClick}><i class="fas fa-search"></i></span>
                         </form>
                     </Col>
-                    <Col className="col-3">
-                        <select className="sortForm form-select" value={sortSelection} onChange={handleSelection}>
-                            <option value="" disabled selected>Sort By</option>
-                            <option>Show All Events</option>
-                            {sortOptions}
-                        </select>
-                    </Col>
-                    <Col className="col-1">
-                        <button type="submit" className="btn btn-dark" onClick={handleClick}>Search!</button>
-                    </Col>
+                    <Col className="col-2">
+                        <div className="row">
+                            <span className="col-4">Sort: </span>
+                            <select style={{border: "none", margin: "0"}} className="sortForm form-select-custom col-4" value={sortSelection} onChange={handleSelection}>
+                                {sortOptions}
+                            </select>
+                        </div>
+                    </Col>  
                 </Row>
             </Container>
             <PastEventsGallery data={filteredData}></PastEventsGallery>
