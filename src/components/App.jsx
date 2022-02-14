@@ -75,7 +75,7 @@ function App() {
                             </Navbar.Brand>
 
                             {/* Collapses to a hamburger menu at the expand="lg" breakpoint */}
-                            <Navbar.Toggle aria-controls="basic-navbar-nav"  className={expanded ? "openclass" : "closeclass"} onClick={() => setExpanded(!expanded)}/>
+                            <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "openclass" : "closeclass"} onClick={() => setExpanded(!expanded)} />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
                                     <NavLink to="/" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
