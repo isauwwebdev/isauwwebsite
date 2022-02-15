@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route, Switch, NavLink, Link, useLocation } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
@@ -16,22 +16,13 @@ import ScrollToTop from './ScrollToTop';
 
 function App() {
     const [expanded, setExpanded] = React.useState(false);
-    const [solid, setSolid] = React.useState(false);
+    const [navBar, setNavBar] = useState(false);
     var navbarRef = React.useRef()
     React.useEffect(() => {
         // 'load' event listener to hide the preloader once the main content is loaded
         window.addEventListener('load', () => {
             document.getElementById("preloader").style.display = "none";
         });
-
-        // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 100px.
-        // window.addEventListener('scroll', () => {
-        //     if (window.scrollY >= window.innerHeight) {
-        //         setSolid(true); // true = solid
-        //     } else {
-        //         setSolid(false); // false = opaque
-        //     }
-        // });
 
         // closes collapsed navbar after clicking outside the navbar */
         document.addEventListener("mousedown", (event) => {
@@ -55,6 +46,30 @@ function App() {
     //     }
     // }
 
+    // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 70px.
+    const navBarBackground = () => {
+        if(window.scrollY >= 70) {
+            setNavBar(true)
+        } else {
+            setNavBar(false);
+        }
+    }
+
+    /*
+    const nav = document.querySelector(".navBar")
+    const navBarHide = () => {
+        let yPos = window.scrollY;
+        if(yPos < window.scrollY) {
+            nav.classList.add("navHide");
+        } else {
+            nav.classList.remove("navHide");
+        }
+    }
+    */
+
+    window.addEventListener('scroll', navBarBackground);
+    // window.addEventListener('scroll', navBarHide);
+
     return (
         <BrowserRouter>
             <ScrollToTop />
@@ -65,7 +80,7 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" variant="dark" fixed="top" className="navSolid" className="navSolid" expanded={expanded}>
+                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={navBar ? 'navSolid active' : 'navSolid'} expanded={expanded}>
                         <Container>
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">

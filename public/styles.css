@@ -83,18 +83,27 @@ p {
 }
 
 /* Navbar States - Becomes opaque as user scrolls */
-.navOpaque {
-	background: rgba(129, 27, 20, 0.2);
-	-webkit-transition: background 1000ms linear;
-    -ms-transition: background 1000ms linear;
-    transition: background 1000ms linear;
+/*
+.navHide {
+	transform: translateY(-50px);
 }
+*/
 .navSolid {
-	background: rgba(129, 27, 20, 1.0);
-	-webkit-transition: background 1000ms linear;
-    -ms-transition: background 1000ms linear;
-    transition: background 1000ms linear;
+	background: transparent;
+	box-shadow: none;
+	-webkit-transition: background 200ms linear;
+    -ms-transition: background 200ms linear;
+    transition: background 200ms linear;
 }
+
+.navSolid.active {
+	background: rgba(129, 27, 20, 1.0);
+	box-shadow: none;
+	-webkit-transition: background 200ms linear;
+    -ms-transition: background 200ms linear;
+    transition: background 200ms linear;
+}
+
 /* Navbar Brand */
 .isauw-logo {
 	height: calc(1.6vw + 36px);
@@ -174,24 +183,28 @@ p {
 
 /* All Navbar items */
 .navList {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 300;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
 	letter-spacing: 1px;
 	font-size: calc(0.4vw + 12px);
-	text-shadow: darkslategray 1px 1px 0.2rem;
+	/* text-shadow: darkslategray 1px 1px 0.2rem; */
 }
 .navLink {
 	text-decoration: none;
+	display: inline-block;
 	padding: .5rem 1rem .5rem 32px !important;
-	color: rgba(255,255,255,.70);
+	color: rgb(255, 255, 255);
 }
+
 .navLink:hover {
-	color: rgba(255,255,255,1);
+	color: #f9f1e2ff;
 }
+/*
 .navLinkActive {
 	color: rgba(255,255,255,1);
 	text-shadow: 1px 1px 25px rgba(255,255,255,.50);
 }
+*/
 
 /* Ad Banner */
 .alert-fixed {
