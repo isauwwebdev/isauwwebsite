@@ -12,13 +12,15 @@ function Home() {
         <div>
             {/* Carousel */}
             <div>
-                <img
-                    src="https://picsum.photos/2200"
-                    alt=""
-                    style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover" }}
-                />
+                <div className="navbar-overlay">
+                    <img
+                        src="https://picsum.photos/2200"
+                        alt=""
+                        style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover" }}
+                    />
+                </div>
                 <Carousel.Caption style={{ top: "40%", bottom: "60%" }} className="animated fadeInDown">
-                    <h1 className="carousel-title">Indonesian Student Association at the University of Washington</h1>
+                    <h1 className="carousel-title" style = {{ zIndex: "100" }}>Indonesian Student Association at the University of Washington</h1>
                 </Carousel.Caption>
             </div>
 
