@@ -31,25 +31,25 @@ body,
 
 @keyframes sk-rotatePlane {
 	0% {
-		transform: perspective(200px) translateZ(3vw) rotateY(0deg);
+		transform: perspective(200px) translateZ(50px) rotateY(0deg);
 	}
 	50% {
-		transform: perspective(200px) translateZ(3vw) rotateY(180deg);
+		transform: perspective(200px) translateZ(50px) rotateY(180deg);
 	}
 	100% {
-		transform: perspective(200px) translateZ(3vw) rotateY(360deg); 
+		transform: perspective(200px) translateZ(50px) rotateY(360deg); 
 	}
 }
 
 @-webkit-keyframes sk-rotatePlane {
 	0% {
-		-webkit-transform: perspective(200px) translateZ(3vw) rotateY(0deg);
+		-webkit-transform: perspective(200px) translateZ(50px) rotateY(0deg);
 	}
 	50% {
-		-webkit-transform: perspective(200px) translateZ(3vw) rotateY(180deg);
+		-webkit-transform: perspective(200px) translateZ(50px) rotateY(180deg);
 	}
 	100% {
-		-webkit-transform: perspective(200px) translateZ(3vw) rotateY(360deg);
+		-webkit-transform: perspective(200px) translateZ(50px) rotateY(360deg);
 	}
 }
 
