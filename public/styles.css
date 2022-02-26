@@ -326,7 +326,6 @@ p {
 }
 .navLink::after {
 	margin-top: 12.5px;
-	transition: 300ms;
 	display: block;
 	height: 1.5px;
 	content: "";
@@ -343,12 +342,15 @@ p {
 	opacity: 1;
 }
 
-/*
 .navLinkActive {
-	color: rgba(255,255,255,1);
-	text-shadow: 1px 1px 25px rgba(255,255,255,.50);
+	opacity: 1 !important;
 }
-*/
+.navLinkActive::after {
+	margin-top: 2.5px;
+	opacity: 1 !important;
+	transition: none !important;
+	transform: none !important;
+}
 
 /* Ad Banner */
 .alert-fixed {
