@@ -669,9 +669,9 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 .past-events-img {
 	border-radius: 8px;
 	height: 100%;
-	width: inherit;
+	max-height: calc(6vw + 256px);
+	width: inherit*1.2;
 	object-fit: cover;
-	width: auto;
 }
 
 .past-events-card {
