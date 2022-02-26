@@ -118,7 +118,6 @@ p {
 	height: 100%;
 }
 .navbar-overlay:before {
-	border-radius: 16px;
     content: '';
     position: absolute;
     top:0;
@@ -207,31 +206,32 @@ p {
 }
 .navLink {
 	text-decoration: none;
+	text-transform: uppercase;
 	display: inline-block;
-	padding: .5rem 0.5rem 0rem 32px !important;
+	padding: .5rem 0.5rem 0 32px !important;
 	color: rgb(255, 255, 255);
+	display: block;
 }
-
 .navLink:hover {
+	display: block;
 	color: white;
 }
-
-.navLink::before {
+.navLink::after {
+	margin-top: 12.5px;
 	transition: 300ms;
-	height: 3px;
+	display: block;
+	height: 1.5px;
 	content: "";
-	position: absolute;
 	background-color: #ffffff;
-  }
-  
-.navLink-fade-up::before {
-	width: calc(1.4vw + 12px);
-	bottom: 5px;
+}
+.navLink-fade-up::after {
+	display: block;
+	width: 100%;
 	opacity: 0;
 }
-  
-.navLink-fade-up:hover::before {
-	bottom: 10px;
+.navLink-fade-up:hover::after {
+	transform: translateY(-10px);
+	transition: opacity 0.3s, transform 0.3s;
 	opacity: 1;
 }
 
