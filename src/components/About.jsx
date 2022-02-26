@@ -5,12 +5,14 @@ import VisionMission from "./VisionMission";
 function About() {
     return (
         <div>
-            <img
-                className="d-block w-100"
-                src="../images/officers/isauw-group.jpg"
-                alt=""
-                style={{ height: "calc(50vh + 10vw)" }}
-            />
+            <div className="navbar-overlay">
+                <img
+                    className="d-block w-100"
+                    src="../images/officers/isauw-group.jpg"
+                    alt=""
+                    style={{ height: "calc(50vh + 10vw)" }}
+                />
+            </div>
             <Container>
                 <VisionMission />
             </Container>

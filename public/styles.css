@@ -113,6 +113,22 @@ p {
 	box-shadow: none !important;
 }
 
+.navbar-overlay {
+    position: relative;
+	height: 100%;
+}
+.navbar-overlay:before {
+	border-radius: 16px;
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 0;
+}
+
 /* hamburger button */
  .closeclass span{
 	width: 0px;
@@ -541,7 +557,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
     right: 0;
     bottom: 0;
     background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 95%);
-    z-index: 1;
+    z-index: 0;
 }
 .upcoming-events-card {
 	border-radius: 16px;

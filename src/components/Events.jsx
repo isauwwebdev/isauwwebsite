@@ -9,11 +9,13 @@ function Events() {
             {/* Carousel */}
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/events/carousel/1.jpeg"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/events/carousel/1.jpeg"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">KERATON</h1>
@@ -21,11 +23,13 @@ function Events() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/events/carousel/2.jpeg"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/events/carousel/2.jpeg"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">SEATTLE 101</h1>
@@ -33,11 +37,13 @@ function Events() {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/events/carousel/3.jpeg"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/events/carousel/3.jpeg"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">SEATHROUGH</h1>

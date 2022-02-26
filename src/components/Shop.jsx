@@ -16,11 +16,13 @@ function Shop(props) {
         <div>
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/shops/hoodies_carousel.png"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/shops/hoodies_carousel.png"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">HOODIES</h1>
@@ -28,11 +30,13 @@ function Shop(props) {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/shops/tote_carousel.png"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/shops/tote_carousel.png"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">TOTE BAGS</h1>
@@ -40,11 +44,13 @@ function Shop(props) {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={4000}>
-                    <img
-                        className="d-block w-100 h-100"
-                        src="../images/shops/mask_carousel.png"
-                        alt=""
-                    />
+                    <div className="navbar-overlay">
+                        <img
+                            className="d-block w-100 h-100"
+                            src="../images/shops/mask_carousel.png"
+                            alt=""
+                        />
+                    </div>
                     <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
                         <div className="animated fadeInDown">
                             <h1 className="carousel-title">FACE MASKS</h1>
