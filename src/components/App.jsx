@@ -93,7 +93,9 @@ function App() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "openclass" : "closeclass"} onClick={() => setExpanded(!expanded)} />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
+                                    <div style={{width: "auto"}}>
                                     <NavLink to="/" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
+                                    </div>
                                     <NavLink to="/events" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
                                     <NavLink to="/about" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
                                     <NavLink to="/shop" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
