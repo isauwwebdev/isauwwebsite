@@ -218,14 +218,14 @@ p {
 
 .navLink::before {
 	transition: 300ms;
-	height: 3.5px;
+	height: 3px;
 	content: "";
 	position: absolute;
 	background-color: #ffffff;
   }
   
 .navLink-fade-up::before {
-	width: calc(1.8vw + 12px);
+	width: calc(1.4vw + 12px);
 	bottom: 5px;
 	opacity: 0;
 }
