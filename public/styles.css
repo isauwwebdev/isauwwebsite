@@ -327,7 +327,7 @@ p {
 .navLink::after {
 	margin-top: 12.5px;
 	display: block;
-	height: 1.5px;
+	height: 1px;
 	content: "";
 	background-color: #ffffff;
 }
