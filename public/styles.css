@@ -1031,12 +1031,12 @@ mark {
 
 /* Text next to icon */
 .btn-home:hover span {
-	max-width: 12rem;
+	max-width: 18rem;
 	padding-left: 10px;
 	padding-right: 10px;
 }
 .btn-home span {
-	color: white;
+	color: black;
 	max-width: 0;
 	-webkit-transition: max-width 1s;
 	transition: max-width 1s;
@@ -1047,15 +1047,22 @@ mark {
 	font-weight: 300 !important;
 }
 
+/* Home button Icon */
 .btn-home-icon {
 	font-size: calc(36px + 1.2vw);
 	padding: calc(6px + 0.2vw) !important;
+	color: #811B16;
 }
 .btn-home:hover .btn-home-icon {
-	background-color: white;
 	border-radius: 50%;
+	color: white;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+	background-clip: text;
+	-webkit-background-clip: text;
 }
 
+/* Home Button */
 .btn-home {
 	font-size: calc(14px + 0.1vw);
 	padding: calc(1.5px) !important;
@@ -1064,11 +1071,6 @@ mark {
 .btn-home:hover {
 	font-size: calc(14px + 0.1vw) !important;
 	padding: 0;
-	color: transparent;
-	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-	background-clip: text;
-	-webkit-background-clip: text;
 }
 
 /* homepage button*/
