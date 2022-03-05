@@ -325,7 +325,6 @@ p {
 	margin: calc(3.4vh) 0 calc(3.4vh) 0;
 	text-align: center;
 }
-
 .navOpen .navLink {
 	margin: calc(2.8vh) auto calc(2.8vh) auto;
 	padding: 0 !important;
@@ -345,7 +344,7 @@ p {
 
 .navIcon {
 	color: white;
-	margin: calc(1vw + 12px);
+	margin: calc(0.8vw + 12px);
 }
 
 .social{
@@ -353,6 +352,14 @@ p {
 	text-decoration: none;
 }
 
+.social-footer {
+	text-decoration: none;
+	font-size: calc(1.4vw + 16px);
+}
+
+.navIcon-footer {
+	margin: 0 calc(0.8vw + 16px) 0 calc(0.8vw + 16px);
+}
 /* hamburger menu close */
 .navClose {
 	background: transparent;
