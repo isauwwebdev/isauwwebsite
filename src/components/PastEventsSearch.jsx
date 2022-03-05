@@ -42,8 +42,12 @@ function PastEventsSearch() {
             return (event.title.toLowerCase().includes(lowerCaseText) ||
                 event.text.toLowerCase().includes(lowerCaseText));
         });
-        const sortEvents = _.sortBy(searchEvents, sortSelection);
-        console.log(sortEvents);
+
+        const sortEvents = searchEvents.sort(function compare(a, b) {
+            var dateA = new Date(a.date);
+            var dateB = new Date(b.date);
+            return dateA - dateB;
+        }).reverse();
         
         let i = 0;
         const highlightEvents = sortEvents.map((event) => {

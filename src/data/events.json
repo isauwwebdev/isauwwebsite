@@ -1,29 +1,48 @@
 [
     {
+        "title": "Social Night",
+        "date": "04/06/2022",
+        "time": "7:00PM",
+        "location": "HUB, UW",
+        "text": "A night of mingling to form new bonds and rekindle old ones. Get a chance to win prizes, merchandise, food, and a sneak peak of our upcoming events. Enjoy yourself, and let us know what you'd want to see next.",
+        "img": [{"src": "../images/events/socialnight/1.JPG"}],
+        "completed": false
+    },
+    {
+        "title": "Seathrough",
+        "date": "10/02/2022",
+        "time": "1:00PM",
+        "location": "HUB, UW",
+        "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
+        "img": [{"src": "../images/events/seathrough/1.jpeg"}],
+        "completed": false
+    },
+    {
+        "title": "Seattle 101",
+        "date": "08/14/2022",
+        "time": "1:00PM",
+        "location": "Jakarta, Indonesia",
+        "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
+        "img": [{"src": "../images/events/seattle 101/1.png"},
+                {"src": "../images/events/seattle 101/2.png"}],
+        "completed": false
+    },
+    {
         "title": "Winter Ball",
         "date": "02/14/2022",
         "time": "--",
         "location": "Intellectual House, UW",
-        "text": "",
+        "text": "Get your suits and dresses ready and get lost in your dance in ISAUW’s Winter Ball. Be ready for a night of love, laughter, and beautiful pictures as you get serenaded by live music. A three-course meal is provided as we sway you into a magical night. ",
         "img": [{"src": "../images/events/winter ball/1.jpg"},
                 {"src": "../images/events/winter ball/2.jpg"}],
-        "completed": false
-    },
-    {
-        "title": "Winter Cup",
-        "date": "03/10/2022",
-        "time": "--",
-        "location": "IMA, UW",
-        "text": "",
-        "img": [{"src": "../images/events/winter cup/wintercup.png"}],
-        "completed": false
+        "completed": true
     },
     {
         "title": "Keraton",
         "date": "05/07/2022",
-        "time": "--",
+        "time": "12:00PM",
         "location": "Rainier Vista, UW",
-        "text": "",
+        "text": "Keraton is an annual Indonesian cultural festival hosted by ISAUW (Indonesian Student Association at University of Washington) with a purpose to introduce the rich culture of Indonesia to the greater Seattle Community. This event is a free 'one day pass to Indonesia' filled with food, games, music and performances.",
         "img": [{"src": "../images/events/keraton/1.jpg"},
                 {"src": "../images/events/keraton/2.jpg"},
                 {"src": "../images/events/keraton/3.jpg"},
@@ -39,7 +58,7 @@
         "title": "Friendsgiving",
         "date": "11/19/2021",
         "time": "6:30PM",
-        "location": "The M Seattle",
+        "location": "The M Seattle, U District",
         "text": "An interactive social gathering where we’ll be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
         "img": [{"src": "../images/events/friendsgiving/1.jpg"},
                 {"src": "../images/events/friendsgiving/2.jpg"},
@@ -52,9 +71,9 @@
     },
     {
         "title": "Seathrough",
-        "date": "09/19/2021",
+        "date": "10/02/2021",
         "time": "6:30PM",
-        "location": "The M Seattle",
+        "location": "HUB 214, UW",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
         "img": [{"src": "../images/events/seathrough/1.jpeg"},
                 {"src": "../images/events/seathrough/2.jpeg"},
@@ -62,10 +81,21 @@
         "completed": true
     },
     {
+        "title": "Boba Tour",
+        "date": "09/28/2021",
+        "time": "2:00PM",
+        "location": "Red Square, UW",
+        "text": "Travel around Seattle’s most iconic landmarks while getting a taste of boba. A fun welcoming experience to meet new friends and familiarize with the day-to-day places and transport of a Seattleite.",
+        "img": [{"src": "../images/events/bobatour/bobatour3.jpg"},
+                {"src": "../images/events/bobatour/bobatour4.jpg"},
+                {"src": "../images/events/bobatour/bobatour6.jpg"}],
+        "completed": true
+    },
+    {
         "title": "Seattle 101",
-        "date": "11/19/2021",
-        "time": "6:30PM",
-        "location": "The M Seattle",
+        "date": "08/14/2021",
+        "time": "1:00PM",
+        "location": "Zoom, Online",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
         "img": [{"src": "../images/events/seattle 101/1.png"},
                 {"src": "../images/events/seattle 101/2.png"}],
