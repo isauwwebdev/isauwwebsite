@@ -322,12 +322,12 @@ p {
 }
 
 .navOpen .navList {
-	margin: calc(2.4vh) 0 calc(2.4vh) 0;
+	margin: calc(3.4vh) 0 calc(3.4vh) 0;
 	text-align: center;
 }
 
 .navOpen .navLink {
-	margin: calc(2.4vh) auto calc(2.4vh) auto;
+	margin: calc(2.8vh) auto calc(2.8vh) auto;
 	padding: 0 !important;
 	text-align: center;
 	font-size: calc(1.2vw + 12px);
@@ -340,7 +340,7 @@ p {
 
 /* social media icons on nav hamburger menu */
 .nav-social-media {
-	margin-top: calc(2.4vh);
+	margin-top: calc(4.4vh);
 }
 
 .navIcon {
