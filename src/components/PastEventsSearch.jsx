@@ -66,8 +66,9 @@ function PastEventsSearch() {
     return (
         <section className="my-5 btm-margin">
             <Container>
-                <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(0.12rem + 0.15vw)` }}><strong >Past Events</strong></h1>
-                <Row className="justify-content-between" style={{ marginBottom: `calc(1.25rem + 1.5vw)` }}>
+                <h1 style={{ paddingLeft: `calc(0.4vw + 1.5px)`, marginBottom: `calc(1rem + 0.6vw)`, display: "block" }}><strong >Past Events</strong></h1>
+                {/* TODO: remove display: "none" to show search bar */}
+                <Row className="justify-content-between" style={{ marginBottom: `calc(1.25rem + 1.5vw)`, display: "none" }}>
                     <Col className="col-10">
                         <form className="row search-bar">
                             <input type="text" className="col-10 search-text form-control-custom" placeholder="Search Event Name or Keywords"
