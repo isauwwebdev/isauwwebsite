@@ -1045,6 +1045,7 @@ mark {
 	white-space: nowrap;
 	overflow: hidden;
 	font-weight: 300 !important;
+	font-size: calc(12px + 0.4vw);
 }
 
 /* Home button Icon */
@@ -1054,7 +1055,7 @@ mark {
 	color: #811B16;
 }
 .btn-home:hover .btn-home-icon {
-	border-radius: 50%;
+	border-radius: 45%;
 	color: white;
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
 	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
@@ -1069,7 +1070,6 @@ mark {
 	overflow: hidden;
 }
 .btn-home:hover {
-	font-size: calc(14px + 0.1vw) !important;
 	padding: 0;
 }
 
@@ -1078,4 +1078,9 @@ a[type='button'] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+}
+
+.cta {
+	letter-spacing: 0.5pt;
+	margin-bottom: 0 !important;
 }

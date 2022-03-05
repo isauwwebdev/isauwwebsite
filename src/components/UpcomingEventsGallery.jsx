@@ -2,7 +2,6 @@ import React from 'react';
 import UpcomingEventsCard from './UpcomingEventsCard';
 import Slider from 'react-slick';
 import events from '../data/events.json'
-import Fade from 'react-reveal/Fade';
 
 function UpcomingEventsGallery() {
 

@@ -6,6 +6,7 @@ import UpcomingEventsGallery from './UpcomingEventsGallery';
 import Container from 'react-bootstrap/Container';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { IoBagHandleOutline } from 'react-icons/io5'
+import Fade from 'react-reveal/Fade';
 
 function Home() {
     const API_KEY = process.env.REACT_APP_INS_TOKEN;
@@ -30,20 +31,22 @@ function Home() {
             <Container>
                 <UpcomingEventsGallery />
             </Container>
-            <Container className="align-items-center text-center" style={{marginTop: "4rem", overflow: "auto"}}>
-                <h1 className="my-3"><strong>Join the ISAUW Family</strong></h1>
-                <p className="text-center">Support the community</p>
-                <a type="button" className="btn btn-home" 
-                    href="https://instagram.com/isauwhuskies/" 
-                    style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
-                    <AiOutlineInstagram class="btn-home-icon" /><span> Find us on Instagram</span>
-                </a>
-                <a type="button" className="btn btn-home" 
-                    href="./Shop" 
-                    style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
-                    <IoBagHandleOutline class="btn-home-icon" /><span> Explore the Collection</span>
-                </a>
-            </Container>
+            <Fade bottom>
+                <Container className="align-items-center text-center" style={{marginTop: "4rem", overflow: "auto"}}>
+                    <h1 className="my-3 cta"><strong>JOIN THE ISAUW FAMILY</strong></h1>
+                    <p className="text-center" style={{	fontFamily: 'brandon_grotesqueregular', fontSize: 'calc(20px + 0.6vw)'}}>support the community</p>
+                    <a type="button" className="btn btn-home" 
+                        href="https://instagram.com/isauwhuskies/" 
+                        style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
+                        <AiOutlineInstagram class="btn-home-icon" /><span> Find us on Instagram</span>
+                    </a>
+                    <a type="button" className="btn btn-home" 
+                        href="./Shop" 
+                        style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
+                        <IoBagHandleOutline class="btn-home-icon" /><span> Explore the Collection</span>
+                    </a>
+                </Container>
+            </Fade>
             <InstaFeed token={API_KEY} limit={9} />
         </div>
     )
