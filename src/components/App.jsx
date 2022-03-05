@@ -13,6 +13,7 @@ import About from './About';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import SocialLinks from './SocialLinks';
 
 function App() {
     const [expanded, setExpanded] = React.useState(false);
@@ -23,6 +24,13 @@ function App() {
         window.addEventListener('load', () => {
             document.getElementById("preloader").style.display = "none";
         });
+
+        // update window size
+        window.addEventListener('resize', () => {
+            if(window.innerWidth > 992) {
+                setExpanded(false);
+            }
+        })
 
         // closes collapsed navbar after clicking outside the navbar */
         document.addEventListener("mousedown", (event) => {
@@ -48,27 +56,13 @@ function App() {
 
     // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 70px.
     const navBarBackground = () => {
-        if(window.scrollY >= 70) {
+        if (window.scrollY >= 70) {
             setNavBar(true)
         } else {
             setNavBar(false);
         }
     }
-
-    /*
-    const nav = document.querySelector(".navBar")
-    const navBarHide = () => {
-        let yPos = window.scrollY;
-        if(yPos < window.scrollY) {
-            nav.classList.add("navHide");
-        } else {
-            nav.classList.remove("navHide");
-        }
-    }
-    */
-
     window.addEventListener('scroll', navBarBackground);
-    // window.addEventListener('scroll', navBarHide);
 
     return (
         <BrowserRouter>
@@ -80,8 +74,8 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={navBar ? 'navSolid active' : 'navSolid'} expanded={expanded}>
-                        <Container>
+                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={`${navBar ? 'navSolid active' : 'navSolid'} ${expanded ? 'navOpen' : 'navClose'}`} expanded={expanded}>
+                        <Container className="navContainer">
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">
                                 <Link to="/">
@@ -93,12 +87,13 @@ function App() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "openclass" : "closeclass"} onClick={() => setExpanded(!expanded)} />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
-                                    <NavLink to="/" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
-                                    <NavLink to="/events" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
-                                    <NavLink to="/about" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
-                                    <NavLink to="/shop" className="navLink navLink-fade-up" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
+                                    <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
+                                    <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
+                                    <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
+                                    <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
                                     {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
                                 </Nav>
+                                { expanded ? <SocialLinks /> : null }
                             </Navbar.Collapse>
                         </Container>
                     </Navbar>

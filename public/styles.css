@@ -281,10 +281,10 @@ p {
 	background: #fff;
 	border-radius: 5px;
 	transition: all .5s ease-in-out;
-	-webkit-transition: transform .35s ease-in-out;
-	-moz-transition: transform .35s ease-in-out;
-	-o-transition: transform .35s ease-in-out;
-	transition: transform .35s ease-in-out;
+	-webkit-transition: transform .45s ease-in-out;
+	-moz-transition: transform .45s ease-in-out;
+	-o-transition: transform .45s ease-in-out;
+	transition: transform .45s ease-in-out;
 }
 
 .openclass span::before{
@@ -311,6 +311,65 @@ p {
 	font-size: calc(0.4vw + 12px);
 	/* text-shadow: darkslategray 1px 1px 0.2rem; */
 }
+
+/* hamburger menu open */
+.navOpen {
+	background-color: rgba(129, 27, 20, 1.0);
+	text-align: center;
+	-webkit-transition: background 300ms ease-out;
+    -ms-transition: background 300ms ease-out;
+	transition: background 300ms ease-out;
+}
+
+.navOpen .navList {
+	margin: calc(2.2vw + 12px) 0 calc(2.2vw + 12px) 0;
+	text-align: center;
+}
+
+.navOpen .navLink {
+	margin: calc(3.2vw + 12px) auto calc(3.2vw + 12px) auto;
+	padding: 0 !important;
+	text-align: center;
+	font-size: calc(1.2vw + 12px);
+	display: inline-block;
+}
+
+.navOpen .navLink::after {
+	visibility: visible;
+}
+
+/* social media icons on nav hamburger menu */
+.nav-social-media {
+	margin-top: calc(4.2vw + 12px);
+}
+
+.navIcon {
+	color: white;
+	margin: calc(1vw + 12px);
+}
+
+.social{
+	height: 2em;
+	text-decoration: none;
+}
+
+/* hamburger menu close */
+.navClose {
+	background: transparent;
+	text-align: center;
+	-webkit-transition: background 100ms ease-in;
+    -ms-transition: background 100ms ease-in;
+	transition: background 100ms ease-in;
+}
+
+.navClose .navLink {
+	margin: 0 auto 0 auto;
+}
+
+.navList {
+	transition: padding 5s;
+}
+
 .navLink {
 	font-family: 'brandon_grotesquemedium', sans-serif !important;
 	text-decoration: none;
