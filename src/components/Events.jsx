@@ -54,7 +54,6 @@ function Events() {
 
             <Container>
                 <UpcomingEventsGallery />
-
                 {/* Jumbotron */}
                 <div className="jumbotron">
                     <div>
@@ -64,6 +63,7 @@ function Events() {
                     </div>
                 </div>
             </Container>
+
             <PastEventsSearch />
         </div>
     )

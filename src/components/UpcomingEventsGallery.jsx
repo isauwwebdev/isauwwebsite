@@ -2,6 +2,7 @@ import React from 'react';
 import UpcomingEventsCard from './UpcomingEventsCard';
 import Slider from 'react-slick';
 import events from '../data/events.json'
+import Fade from 'react-reveal/Fade';
 
 function UpcomingEventsGallery() {
 
@@ -61,15 +62,15 @@ function UpcomingEventsGallery() {
         <section className="my-5" >
             <div className="row">
                 <div className="col-12">
-                    <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)`}}><strong>Upcoming Events</strong></h1>
-                    {/* Past Events */}
-                    <Slider {...settings}>
-                        {upcomingEvents.map((event, i) => {
-                            return (
-                                <UpcomingEventsCard title={event.title} date={event.date} time={event.time} location={event.location} img={event.img[0].src} />
-                            )
-                        })}
-                    </Slider>
+                        <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)`}}><strong>Upcoming Events</strong></h1>
+                        {/* Past Events */}
+                        <Slider {...settings}>
+                                {upcomingEvents.map((event, i) => {
+                                    return (
+                                        <UpcomingEventsCard title={event.title} date={event.date} time={event.time} location={event.location} img={event.img[0].src} />
+                                    )
+                                })}
+                        </Slider>
                 </div>
             </div>
         </section>
