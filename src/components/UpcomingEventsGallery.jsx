@@ -56,7 +56,11 @@ function UpcomingEventsGallery() {
     const upcomingEvents = events.filter((event) => {
         return !event.completed;
     });
-
+    upcomingEvents.sort(function compare(a, b) {
+        var dateA = new Date(a.date);
+        var dateB = new Date(b.date);
+        return dateA - dateB;
+    });
     return (
         <section className="my-5" >
             <div className="row">
