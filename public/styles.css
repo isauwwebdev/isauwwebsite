@@ -539,6 +539,25 @@ p {
 	opacity: 0.5;
 }
 
+/* homepage button*/
+a[type='button'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.btn-outline-danger {
+    color: #b31828 !important;
+	border-color: #b31828 !important;
+	font-size: calc(14px + 0.1vw) !important;
+}
+
+.btn-outline-danger:hover {
+	border-color: #af2a36 !important;
+	color: #af2a36 !important;
+	font-size: calc(14px + 0.1vw) !important;
+}
+
 /* moving images */
 .move-section {
 	position: relative;
