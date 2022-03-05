@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
 import UpcomingEventsGallery from './UpcomingEventsGallery';
 import PastEventsSearch from './PastEventsSearch';
-import Fade from 'react-reveal/Fade';
 
 function Events() {
     return (
@@ -56,15 +55,13 @@ function Events() {
             <Container>
                 <UpcomingEventsGallery />
                 {/* Jumbotron */}
-                <Fade bottom>
-                    <div className="jumbotron">
-                        <div>
-                            <h1 className="jumbotron-title display-4">ISAUW Card</h1>
-                            <p className="jumbotron-desc">Discounts on your favorite restaurants for only $8!</p>
-                            <a className="jumbotron-btn btn btn-dark" href="https://docs.google.com/forms/u/0/" role="button">Order now</a>
-                        </div>
+                <div className="jumbotron">
+                    <div>
+                        <h1 className="jumbotron-title display-4">ISAUW Card</h1>
+                        <p className="jumbotron-desc">Discounts on your favorite restaurants for only $8!</p>
+                        <a className="jumbotron-btn btn btn-dark" href="https://docs.google.com/forms/u/0/" role="button">Order now</a>
                     </div>
-                </Fade>
+                </div>
             </Container>
 
             <PastEventsSearch />
