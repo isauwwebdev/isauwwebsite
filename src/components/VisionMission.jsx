@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 
 function VisionMission() {
     return (
-        <section className="my-5">
+        <section className="my-5 mx-auto" style={{width: "70%"}}>
             <Fade bottom cascade>
                 <div className="row">
                     <div className="col-md-12 text-center">
