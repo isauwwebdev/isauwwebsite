@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaInstagram, FaYoutube, FaFacebookSquare, FaTiktok } from 'react-icons/fa';
 
 function Footer() {
     // Dynamic year for our copyright
@@ -8,18 +9,10 @@ function Footer() {
         <footer className="page-footer text-center">
             {/* Social Icons */}
             <div className="py-4 mx-auto">
-                <a className="social-icon" href="http://www.facebook.com/isauw.huskies">
-                    <i className="fa fa-2x fa-facebook"></i>
-                </a>
-                <a className="social-icon" href="http://instagram.com/isauwhuskies">
-                    <i className="fa fa-2x fa-instagram"></i>
-                </a>
-                <a className="social-icon" href="http://www.youtube.com/user/isauwHuskies">
-                    <i className="fa fa-2x fa-youtube"></i>
-                </a>
-                <a className="social-icon" href="mailto:isauw@uw.edu">
-                    <i className="fa fa-2x fa-envelope-o"></i>
-                </a>
+                <a href="https://www.instagram.com/isauwhuskies/?hl=en" className="social-footer" target="_blank"> <FaInstagram className="navIcon-footer" /> </a>
+                <a href="https://www.youtube.com/user/isauwHuskies" className="social-footer" target="_blank"> <FaYoutube className="navIcon-footer" /> </a>
+                <a href="https://www.facebook.com/isauw.huskies/" className="social-footer" target="_blank"> <FaFacebookSquare className="navIcon-footer" /> </a>
+                <a href="https://www.tiktok.com/@isauwhuskies" className="social-footer" target="_blank"> <FaTiktok className="navIcon-footer" /> </a>
             </div>
 
             {/* Copyright and Conditions */}
