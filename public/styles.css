@@ -1044,6 +1044,7 @@ mark {
 	vertical-align: middle;
 	white-space: nowrap;
 	overflow: hidden;
+	font-weight: 300 !important;
 }
 
 .btn-home-icon {
@@ -1057,7 +1058,7 @@ mark {
 
 .btn-home {
 	font-size: calc(14px + 0.1vw);
-	padding: calc(1.5px);
+	padding: calc(1.5px) !important;
 	overflow: hidden;
 }
 .btn-home:hover {
