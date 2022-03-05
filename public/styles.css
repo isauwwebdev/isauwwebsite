@@ -1041,13 +1041,11 @@ mark {
 
 .btn-home-icon {
 	font-size: calc(36px + 1.2vw);
-	padding: calc(6px + 0.2vw);
+	padding: calc(6px + 0.2vw) !important;
 }
 .btn-home:hover .btn-home-icon {
 	background-color: white;
 	border-radius: 50%;
-	border-width: thin;
-	overflow: hidden;
 }
 
 .btn-home {
