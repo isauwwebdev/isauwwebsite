@@ -5,7 +5,7 @@
         "time": "7:00PM",
         "location": "HUB, UW",
         "text": "A night of mingling to form new bonds and rekindle old ones. Get a chance to win prizes, merchandise, food, and a sneak peak of our upcoming events. Enjoy yourself, and let us know what you'd want to see next.",
-        "img": [{"src": "../images/events/socialnight/1.JPG"}],
+        "img": [{"src": "../images/events/socialnight/1.jpg"}],
         "completed": false
     },
     {
