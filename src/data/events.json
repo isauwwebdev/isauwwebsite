@@ -34,6 +34,9 @@
         "location": "Intellectual House, UW",
         "text": "Get your suits and dresses ready and get lost in your dance in ISAUW’s Winter Ball. Be ready for a night of love, laughter, and beautiful pictures as you get serenaded by live music. A three-course meal is provided as we sway you into a magical night. ",
         "img": [{"src": "../images/events/winter ball/1.jpg"},
+                {"src": "../images/events/winter ball/3.jpg"},
+                {"src": "../images/events/winter ball/4.jpg"},
+                {"src": "../images/events/winter ball/5.jpg"},
                 {"src": "../images/events/winter ball/2.jpg"}],
         "completed": true
     },
