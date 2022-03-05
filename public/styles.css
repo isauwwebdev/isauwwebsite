@@ -605,25 +605,6 @@ p {
 	opacity: 0.5;
 }
 
-/* homepage button*/
-a[type='button'] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
-
-.btn-outline-danger {
-    color: #b31828 !important;
-	border-color: #b31828 !important;
-	font-size: calc(14px + 0.1vw) !important;
-}
-
-.btn-outline-danger:hover {
-	border-color: #af2a36 !important;
-	color: #af2a36 !important;
-	font-size: calc(14px + 0.1vw) !important;
-}
-
 /* moving images */
 .move-section {
 	position: relative;
@@ -1035,4 +1016,66 @@ mark {
 	--bs-gutter-x: 0; 
 	padding-left: calc(0.4vw + 1.5px);
 	font-size: calc(12px + 0.3vw);
+}
+
+/* Remove all shadows */
+.btn-home {
+	box-shadow: none;
+}
+.btn-home:hover {
+	box-shadow: none;
+}
+.btn-home:active {
+	box-shadow: none;
+}
+
+/* Text next to icon */
+.btn-home:hover span {
+	max-width: 18rem;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.btn-home span {
+	color: black;
+	max-width: 0;
+	-webkit-transition: max-width 1s;
+	transition: max-width 1s;
+	display: inline-block;
+	vertical-align: middle;
+	white-space: nowrap;
+	overflow: hidden;
+	font-weight: 300 !important;
+}
+
+/* Home button Icon */
+.btn-home-icon {
+	font-size: calc(36px + 1.2vw);
+	padding: calc(6px + 0.2vw) !important;
+	color: #811B16;
+}
+.btn-home:hover .btn-home-icon {
+	border-radius: 50%;
+	color: white;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+	background-clip: text;
+	-webkit-background-clip: text;
+}
+
+/* Home Button */
+.btn-home {
+	font-size: calc(14px + 0.1vw);
+	padding: calc(1.5px) !important;
+	overflow: hidden;
+}
+.btn-home:hover {
+	font-size: calc(14px + 0.1vw) !important;
+	padding: 0;
+}
+
+/* homepage button*/
+a[type='button'] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
