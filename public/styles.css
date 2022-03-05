@@ -322,12 +322,12 @@ p {
 }
 
 .navOpen .navList {
-	margin: calc(2.2vw + 12px) 0 calc(2.2vw + 12px) 0;
+	margin: calc(2.4vh) 0 calc(2.4vh) 0;
 	text-align: center;
 }
 
 .navOpen .navLink {
-	margin: calc(3.2vw + 12px) auto calc(3.2vw + 12px) auto;
+	margin: calc(2.4vh) auto calc(2.4vh) auto;
 	padding: 0 !important;
 	text-align: center;
 	font-size: calc(1.2vw + 12px);
@@ -340,7 +340,7 @@ p {
 
 /* social media icons on nav hamburger menu */
 .nav-social-media {
-	margin-top: calc(4.2vw + 12px);
+	margin-top: calc(2.4vh);
 }
 
 .navIcon {
@@ -349,7 +349,7 @@ p {
 }
 
 .social{
-	height: 2em;
+	font-size: calc(1.2vw + 12px);
 	text-decoration: none;
 }
 
