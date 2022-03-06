@@ -1031,26 +1031,27 @@ mark {
 
 /* Text next to icon */
 .btn-home:hover span {
-	max-width: 18rem;
-	padding-left: 10px;
-	padding-right: 10px;
+	max-width: 16rem;
+	padding-left: calc(6px + 0.2vw);
+	padding-right: calc(6px + 0.2vw);
 }
 .btn-home span {
-	color: black;
 	max-width: 0;
-	-webkit-transition: max-width 1s;
-	transition: max-width 1s;
+	-webkit-transition: max-width 1s ease-out;
+	transition: max-width 1s ease-out;
 	display: inline-block;
 	vertical-align: middle;
 	white-space: nowrap;
 	overflow: hidden;
-	font-weight: 300 !important;
 	font-size: calc(12px + 0.4vw);
+	font-weight: 900;
+	letter-spacing: 0.5pt;
+	color: #212529;
 }
 
 /* Home button Icon */
 .btn-home-icon {
-	font-size: calc(36px + 1.2vw);
+	font-size: calc(48px + 1.2vw);
 	padding: calc(6px + 0.2vw) !important;
 	color: #811B16;
 }
@@ -1083,4 +1084,5 @@ a[type='button'] {
 .cta {
 	letter-spacing: 0.5pt;
 	margin-bottom: 0 !important;
+	font-family: 'brandon_grotesqueblack';
 }
