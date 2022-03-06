@@ -21,14 +21,16 @@ function PastEventsGallery(props) {
     }).reverse();
 
     const filteredEvents = sortEvents.map((event) => {
-        return <PastEventsCard
-            title={event.title.toUpperCase()}
-            date={(event.date + ", " + event.year).toUpperCase()}
-            text={event.text}
-            location={event.location}
-            settings={settings}
-            img={event.img}
-        />
+        return (
+            <PastEventsCard
+                title={event.title.toUpperCase()}
+                date={(event.date + ", " + event.year).toUpperCase()}
+                text={event.text}
+                location={event.location}
+                settings={settings}
+                img={event.img}
+            />
+        )
     });
     return (
         <div>

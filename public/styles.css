@@ -1039,29 +1039,37 @@ mark {
 	max-width: 0;
 	-webkit-transition: max-width 1s ease-out;
 	transition: max-width 1s ease-out;
+
 	display: inline-block;
 	vertical-align: middle;
 	white-space: nowrap;
 	overflow: hidden;
 	font-size: calc(12px + 0.4vw);
-	font-weight: 900;
-	letter-spacing: 0.5pt;
+	font-family: 'brandon_grotesqueblack';
+	letter-spacing: 2pt;
 	color: #212529;
 }
 
 /* Home button Icon */
 .btn-home-icon {
-	font-size: calc(48px + 1.2vw);
-	padding: calc(6px + 0.2vw) !important;
+	font-size: calc(40px + 1.5vw);
 	color: #811B16;
+	padding: calc(6px + 0.2vw) !important;
+	
+	-webkit-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+
+	background: transparent;
 }
 .btn-home:hover .btn-home-icon {
 	border-radius: 45%;
 	color: white;
-	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
-	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+
 	background-clip: text;
 	-webkit-background-clip: text;
+
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
+	background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%) !important;
 }
 
 /* Home Button */
@@ -1082,7 +1090,8 @@ a[type='button'] {
 }
 
 .cta {
-	letter-spacing: 0.5pt;
 	margin-bottom: 0 !important;
-	font-family: 'brandon_grotesqueblack';
+	font-family: 'brandon_grotesquebold';
+	font-weight: 700;
+	letter-spacing: 2px;
 }
