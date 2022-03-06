@@ -16,11 +16,12 @@ function Home() {
             {/* Carousel */}
             <div>
                 <div className="navbar-overlay">
-                    <img
-                        src="https://picsum.photos/2200"
-                        alt=""
-                        style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover" }}
-                    />
+                <video height="256" loop="true" autoplay="autoplay" id="vid" muted>
+                  <source
+                    src="../images/cabin.mp4"
+                    type="video/mp4"
+                  />
+                </video>
                 </div>
                 <Carousel.Caption style={{ top: "40%", bottom: "60%" }} className="animated fadeInDown">
                     <h1 className="carousel-title" style = {{ zIndex: "100" }}>Indonesian Student Association at the University of Washington</h1>
