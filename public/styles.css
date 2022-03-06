@@ -337,29 +337,40 @@ p {
 	visibility: visible;
 }
 
-/* social media icons on nav hamburger menu */
+/* Social icons and hover animation */
 .nav-social-media {
 	margin-top: calc(4.4vh);
 }
-
-.navIcon {
+.nav-social-icon {
 	color: white;
 	margin: calc(0.8vw + 12px);
 }
-
-.social{
-	font-size: calc(1.2vw + 12px);
-	text-decoration: none;
-}
-
-.social-footer {
-	text-decoration: none;
+.social {
 	font-size: calc(1.4vw + 16px);
+	text-decoration: none;
 }
+.social svg {
+	transition: transform .5s;
 
-.navIcon-footer {
+	-webkit-transform: scale(1, 1);
+	-moz-transform: scale(1, 1);
+	-ms-transform: scale(1, 1);
+	-o-transform: scale(1, 1);
+	transform: scale(1, 1);
+}
+.social:hover svg {
+	transition: transform .5s;
+
+	-webkit-transform: scale(1.1, 1.1);
+	-moz-transform: scale(1.1, 1.1);
+	-ms-transform: scale(1.1, 1.1);
+	-o-transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
+}
+.footer-social-icon {
 	margin: 0 calc(0.8vw + 16px) 0 calc(0.8vw + 16px);
 }
+
 /* hamburger menu close */
 .navClose {
 	background: transparent;
@@ -509,25 +520,6 @@ p {
 .page-footer {
 	font-family: 'Roboto', sans-serif;
 	background-color: #811B16;
-}
-
-/* Social icons and hover animation */
-.social-icon {
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
-.social-icon i {
-	transition: transform .5s;
-}
-.social-icon i:hover {
-	-webkit-transform: scale(1.1, 1.1);
-	-moz-transform: scale(1.1, 1.1);
-	-ms-transform: scale(1.1, 1.1);
-	-o-transform: scale(1.1, 1.1);
-	transform: scale(1.1, 1.1);
-}
-.fa-2x {
-	font-size: calc(0.75vw + 1.5rem);
 }
 
 /* Footer background image, supposed to look like batik */
