@@ -16,11 +16,12 @@ function Home() {
             {/* Carousel */}
             <div>
                 <div className="navbar-overlay">
-                    <img
-                        src="https://picsum.photos/2200"
-                        alt=""
-                        style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover" }}
-                    />
+                <video height="256" loop="true" autoplay="autoplay" id="vid" muted>
+                  <source
+                    src="../images/cabin.mp4"
+                    type="video/mp4"
+                  />
+                </video>
                 </div>
                 <Carousel.Caption style={{ top: "40%", bottom: "60%" }} className="animated fadeInDown">
                     <h1 className="carousel-title" style = {{ zIndex: "100" }}>Indonesian Student Association at the University of Washington</h1>
@@ -35,13 +36,13 @@ function Home() {
                 <Container className="align-items-center text-center" style={{marginTop: "4rem", overflow: "auto"}}>
                     <h1 className="my-3 cta"><strong>JOIN THE FAMILY</strong></h1>
                     <p className="text-center" style={{	fontFamily: 'brandon_grotesqueregular', fontSize: 'calc(20px + 0.6vw)', marginBottom: "0.1rem"}}>support the ISAUW community</p>
-                    <a type="button" className="btn btn-home" 
-                        href="https://instagram.com/isauwhuskies/" 
+                    <a type="button" className="btn btn-home"
+                        href="https://instagram.com/isauwhuskies/"
                         style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
                         <AiOutlineInstagram class="btn-home-icon" /><span> FOLLOW</span>
                     </a>
-                    <a type="button" className="btn btn-home" 
-                        href="./Shop" 
+                    <a type="button" className="btn btn-home"
+                        href="./Shop"
                         style={{textTransform: "none", borderRadius: "50px 50px 50px 50px", padding: "10px 20px 10px 20px"}}>
                         <IoBagHandleOutline class="btn-home-icon" /><span> EXPLORE</span>
                     </a>
