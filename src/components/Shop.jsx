@@ -5,13 +5,47 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
+import Button from 'react-bootstrap/Button';
 
 import products from '../data/products.json';
 
+import { FaShoppingCart } from 'react-icons/fa';
+
 function Shop(props) {
+    /*
     const uniqueProducts = [...new Set(products.reduce((all, prod) => {
         return all.concat([prod.name]);
       }, []))].sort();
+    */
+    const [cartSection, setCartSection] = useState(false);
+    const [cartItems, setCartItems] = useState([]);
+    const [numCartItems, setNumCartItems] = useState(0);
+
+    /*const onAdd = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist) {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+                )
+            );
+        } else {
+            setCartItems([...cartItems, { ...product, qty: 1 }]);
+        }
+    };
+    const onRemove = (product) => {
+        const exist = cartItems.find((x) => x.id === product.id);
+        if (exist.qty === 1) {
+            setCartItems(cartItems.filter((x) => x.id !== product.id));
+        } else {
+            setCartItems(
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
+        }
+    };
+    */
     return (
         <div>
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
@@ -61,11 +95,19 @@ function Shop(props) {
             <Container>
                 <section className="my-5 btm-margin" style={{ overflow: "hidden" }}>
                     <h1 className="my-3"><strong>Shop All</strong></h1>
+                    {/*<div className="cart-icon" onClick={() => setCartSection(!cartSection)}>
+                        <FaShoppingCart className="shopping-cart-icon" />
+                    </div>
+                    <Container className={cartSection ? "show-cart-section" : "hide-cart-section"}>
+                        <h2>cart</h2>
+                        {cartItems}
+                    </Container>
+                    */}
                     <Row>
                         {products.map((product, i) => {
                             return (
                                 <Col xs={6} md={4} lg={3} style={{ marginBottom: "32px" }}>
-                                    <Product product={product}></Product>
+                                    <Product key={product.id} product={product}></Product>
                                 </Col>
                             );
                         })}

@@ -920,6 +920,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 /* shop page - product */
 
 .product-card {
+	display: flex;
 	border: none;
 }
 .product-body {
@@ -930,10 +931,33 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-weight: 700;
 }
 .product-desc {
-	font-size: calc(10px + 0.3vw);
+	font-size: calc(9px + 0.2vw);
 	font-weight: 400;
 	color: #747373
 }
+
+.shopping-cart-icon {
+	font-size: calc(1.2vw + 12px);
+}
+
+.show-cart-section {
+	-webkit-transition: background 500ms ease-in;
+    -ms-transition: background 500ms ease-in;
+	transition: background 500ms ease-in;
+}
+
+.hide-cart-section {
+	visibility: hidden;
+	-webkit-transition: background 500ms ease-in;
+    -ms-transition: background 500ms ease-in;
+	transition: background 500ms ease-in;
+}
+
+.product-price {
+	font-size: calc(10px + 0.3vw);
+	font-weight: 500;
+}
+
 .product-btn {
 	border: 1px solid rgb(217, 217, 217) !important;
 	box-shadow: none;
@@ -950,11 +974,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	font-size: calc(10px + 0.3vw);
 	font-weight: 700;
 }
-.product-price-left {
-	float: left;
-}
-.product-price-right {
-	float: right;
+.product-button-center {
+	float: center;
 }
 
 .order-form label {
