@@ -111,7 +111,7 @@ function Order(props) {
                             </select>
                         </div>
                     </Col>
-                    <Col xs={6} md={4} lg={3} style={{ height: "100%", marginBottom: "10px" }}>
+                    {/* <Col xs={6} md={4} lg={3} style={{ height: "100%", marginBottom: "10px" }}>
                         <div className="form-group" style={{ height: "100%" }}>
                             <label htmmlFor="size">Size (Only For Hoodies)</label>
                             <input
@@ -124,7 +124,7 @@ function Order(props) {
                                 placeholder="What size are you? (e.g. S, M, L, XL)"
                             />
                         </div>
-                    </Col>
+                    </Col> */}
                 </Row>
                 <Row className="justify-content-center mb-3">
                     <Col className="" xs={6} md={4} lg={3} style={{ height: "100%" }}>

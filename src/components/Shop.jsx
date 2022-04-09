@@ -1,27 +1,30 @@
 import React, { useState } from 'react';
 import Product from './Product';
 import Order from './Order';
+import Cart from './Cart';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-import Button from 'react-bootstrap/Button';
 
 import products from '../data/products.json';
 
 import { FaShoppingCart } from 'react-icons/fa';
 
 function Shop(props) {
-    /*
-    const uniqueProducts = [...new Set(products.reduce((all, prod) => {
-        return all.concat([prod.name]);
-      }, []))].sort();
-    */
-    const [cartSection, setCartSection] = useState(false);
-    const [cartItems, setCartItems] = useState([]);
-    const [numCartItems, setNumCartItems] = useState(0);
+    
+    // const uniqueProducts = [...new Set(products.reduce((all, prod) => {
+    //     return all.concat([prod.name]);
+    //   }, []))].sort();
+    // const [cartSection, setCartSection] = useState(false);
 
-    /*const onAdd = (product) => {
+    const [cartItems, setCartItems] = useState([]);
+
+    const [show, setShow] = useState(false);
+    const handleClose = () => setShow(false);
+    const handleOpen = () => setShow(true);
+
+    const onAdd = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist) {
             setCartItems(
@@ -32,7 +35,9 @@ function Shop(props) {
         } else {
             setCartItems([...cartItems, { ...product, qty: 1 }]);
         }
+        handleOpen();
     };
+
     const onRemove = (product) => {
         const exist = cartItems.find((x) => x.id === product.id);
         if (exist.qty === 1) {
@@ -45,7 +50,7 @@ function Shop(props) {
             );
         }
     };
-    */
+    
     return (
         <div>
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
@@ -95,23 +100,19 @@ function Shop(props) {
             <Container>
                 <section className="my-5 btm-margin" style={{ overflow: "hidden" }}>
                     <h1 className="my-3"><strong>Shop All</strong></h1>
-                    {/*<div className="cart-icon" onClick={() => setCartSection(!cartSection)}>
-                        <FaShoppingCart className="shopping-cart-icon" />
-                    </div>
-                    <Container className={cartSection ? "show-cart-section" : "hide-cart-section"}>
-                        <h2>cart</h2>
-                        {cartItems}
-                    </Container>
-                    */}
+                    <button type="button" onClick={handleOpen}>Show Bag ({cartItems.length})</button>
+                    <Cart onRemove={onRemove} cartItems={cartItems} show={show} onHide={handleClose}></Cart>
+
                     <Row>
                         {products.map((product, i) => {
                             return (
                                 <Col xs={6} md={4} lg={3} style={{ marginBottom: "32px" }}>
-                                    <Product key={product.id} product={product}></Product>
+                                    <Product onAdd={onAdd} key={product.id} product={product}></Product>
                                 </Col>
                             );
                         })}
                     </Row>
+
                     {/* <Order prodOptions={uniqueProducts}></Order> */}
                 </section>
             </Container>

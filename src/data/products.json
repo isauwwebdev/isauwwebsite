@@ -9,8 +9,7 @@
             "M",
             "L"
         ],
-        "img": "../images/shops/hoodies.png",
-        "form": "https://docs.google.com/forms/u/0/"
+        "img": "../images/shops/hoodies.png"
     },
     {
         "id": 2,
@@ -22,23 +21,20 @@
             "White",
             "Olive"
         ],
-        "img": "../images/shops/tote_white.png",
-        "form": "https://docs.google.com/forms/u/0/"
+        "img": "../images/shops/tote_white.png"
     },
     {
         "id": 3,
         "name": "ISAUW Face Mask",
         "desc": "permanent collection",
         "price": 4,
-        "img": "../images/shops/mask_white.png",
-        "form": "https://docs.google.com/forms/u/0/"
+        "img": "../images/shops/mask_white.png"
     },
     {
         "id": 4,
         "name": "ISAUW Card",
         "desc": "permanent collection",
         "price": 8,
-        "img": "../images/shops/isauwcard_white.png",
-        "form": "https://docs.google.com/forms/u/0/"
+        "img": "../images/shops/isauwcard_white.png"
     }
 ]
