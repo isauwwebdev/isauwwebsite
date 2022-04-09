@@ -8,7 +8,6 @@ function KeratonPerformers() {
     return (
         <div>
             <Container className="keraton-performers">
-                <h1 className="my-3"><strong>Performers</strong></h1>
                 <Row>
                 <h2 className="my-3">Dhruv</h2>
                     <Col>
@@ -37,7 +36,7 @@ function KeratonPerformers() {
                 </Row>
             </Container>
             <Container className="keraton-student-performers">
-                <h1 className="my-3"><strong>Student Performers</strong></h1>
+                <h1 className="my-3">Student Performers</h1>
                 <Row>
                     <p>
                         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum

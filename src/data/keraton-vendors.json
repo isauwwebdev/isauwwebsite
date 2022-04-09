@@ -1,0 +1,340 @@
+[
+    {
+        "id": 1,
+        "name": "PERMIAS Seattle",
+        "contact": "Wendy Sunanda",
+        "menu": [
+            {
+                "name": "Ayam Geprek",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "ISASU (Seattle U)",
+        "contact": "Darren Jonany",
+        "menu": [
+            {
+                "name": "Telor Gulung",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Pisang Goreng",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Makaroni Goreng",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Lidi-lidi An Goreng",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Jajanan Indo",
+        "contact": "Widiana Sepang",
+        "menu": [
+            {
+                "name": "Martabak Mini 1 Topping",
+                "price": 3.5,
+                "notes": "Cheese, Chocolate, Peanut, Nutella "
+            },
+            {
+                "name": "Martabak Mini 2 Topping",
+                "price": 4.75,
+                "notes": "Cheese, Chocolate, Peanut, Nutella "
+            },
+            {
+                "name": "Martabak Mini 3 Topping",
+                "price": 5,
+                "notes": "Cheese, Chocolate, Peanut, Nutella "
+            },
+            {
+                "name": "Martabak Telur",
+                "price": 6,
+                "notes": "4 pieces"
+            },
+            {
+                "name": "Martabak Telur",
+                "price": 10,
+                "notes": "8 pieces"
+            },
+            {
+                "name": "Pancake Durian",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Jasuke 1 Topping",
+                "price": 5,
+                "notes": "Keju Manis, Coklat Manis, Pedas Manis"
+            },
+            {
+                "name": "Jasuke 2 Topping",
+                "price": 0,
+                "notes": "Keju Pedas Manis, Coklat Keju Manis"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Indonesian Eatery",
+        "contact": "Ervi Gordong",
+        "menu": [
+            {
+                "name": "Siomay Bandung",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Bakmi Ayam",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Bakmi Kepiting",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Kue Lapis",
+                "price": 3,
+                "notes": ""
+            },
+            {
+                "name": "Kue Nagasari",
+                "price": 3,
+                "notes": ""
+            },
+            {
+                "name": "Arem-Arem",
+                "price": 3,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Bellevue College",
+        "contact": "Joylyn Subali",
+        "menu": [
+            {
+                "name": "Roti Panggang",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Es Buah",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Shoreline CC",
+        "contact": "Aiko",
+        "menu": []
+    },
+    {
+        "id": 7,
+        "name": " Liv's Kitchen",
+        "contact": "Olivia Sunandar",
+        "menu": [
+            {
+                "name": "Nasi Padang",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Nasi Kuning",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Batagor Bowl",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Soto Padang Bowl",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Martabak Telur",
+                "price": 0,
+                "notes": "Vegetarian/Daging"
+            },
+            {
+                "name": "Lumpia Semarang",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Bala-bala",
+                "price": 0,
+                "notes": "Vegetarian/Daging"
+            },
+            {
+                "name": "Risoles",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Solar Chapter Seattle",
+        "contact": "Ekin Njotoatmodjo",
+        "menu": [
+            {
+                "name": "Lidi",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Cireng",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Seblak",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Pie susu",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Bakso",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Tahu isi",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Kain makna 1",
+                "price": 20,
+                "notes": ""
+            },
+            {
+                "name": "Kain makna 2",
+                "price": 30,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Coco Pandan",
+        "contact": "Michelle Chandradinata",
+        "menu": [
+            {
+                "name": "Assorted Mini Martabak",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Mango sticky rice",
+                "price": 9,
+                "notes": ""
+            },
+            {
+                "name": "Steamed layer cake",
+                "price": 2.5,
+                "notes": ""
+            },
+            {
+                "name": "Pandan chiffon cake",
+                "price": 0,
+                "notes": "original, cheese, choco sprinkles"
+            },
+            {
+                "name": "Lotus Flower Cookie",
+                "price": 2,
+                "notes": ""
+            },
+            {
+                "name": "Lapis Legit",
+                "price": 3.5,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Pantjoeran UW",
+        "contact": "Angelita Cecilia",
+        "menu": [
+            {
+                "name": "Takoyaki",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Okonomiyaki",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Martabak Mie",
+                "price": 10,
+                "notes": ""
+            },
+            {
+                "name": "Indomie",
+                "price": 10,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Koepi keraton",
+        "contact": "????",
+        "menu": [
+            {
+                "name": "Es milo",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "ISAUW drinks",
+        "contact": "????",
+        "menu": [
+            {
+                "name": "Bottled drinks",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "Bottled drinks",
+                "price": 0,
+                "notes": ""
+            },
+            {
+                "name": "teh botol/ teh kotak",
+                "price": 0,
+                "notes": ""
+            }
+        ]
+    }
+]

@@ -17,7 +17,7 @@ function KeratonAbout() {
                         Indonesian culture provided through Indonesian traditional performances and activities.
                     </p>
                 </Row>
-                <Row className="my-2">
+                <Row className="about-col my-2">
                     <Col className="mr-5">
                         <div className="jumbotron mx-4">
                             <div>
@@ -36,27 +36,22 @@ function KeratonAbout() {
                     </Col>
                 </Row>
                 <h2 className="mt-5"><strong>What to expect...</strong></h2>
-                <Row className="my-3">
-                    <Col >
+                <Row className="about-col my-3">
+                    <Col>
                         <p>
                             A picture says a thousand words, a movie says a thousand emotions, and an experience creates
                             a thousand memories. This year’s theme is Indonesia’s vintage movies; capturing iconic performances
                             in Dilan, AADC, Check Toko Sebelah, and more.
-                        </p>
-                        <br></br>
-                        <p>
+                            <br></br>
                             What goes best with movies? Food. We’ll be showcasing a series of Indonesian delicacies from martabak,
                             sate, and so much more.
+                            <br></br>
+                            If not for the food, this year’s headliner will be a musical performance by Dhruv and X.
                         </p>
                     </Col>
                     <Col className="mx-5">
-                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "400px" }}></img>
+                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "300px" }}></img>
                     </Col>
-                </Row>
-                <Row className="my-3">
-                    <p>
-                        If not for the food, this year’s headliner will be a musical performance by Dhruv and X.
-                    </p>
                 </Row>
             </Container>
         </div>
