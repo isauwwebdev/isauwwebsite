@@ -1114,3 +1114,12 @@ a[type='button'] {
 	font-weight: 700;
 	letter-spacing: 2px;
 }
+
+/* Keraton Page */
+.about-col {
+	flex-direction: column;
+}
+
+.keraton-accordion-header {
+	font-size: calc(10px + 1.2vw);
+}

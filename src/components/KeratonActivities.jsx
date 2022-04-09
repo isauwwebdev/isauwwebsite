@@ -12,7 +12,7 @@ function KeratonActivities() {
                 <Row>
                 <h2 className="my-3">GAME 1</h2>
                     <Col>
-                        <p>
+                        <p className="game-desc">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                             has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                             took a galley of type and scrambled it to make a type specimen book.
@@ -29,7 +29,7 @@ function KeratonActivities() {
                         <img src="../images/isauwcard.png" style={{ width: "600px", height: "500px" }}></img>
                     </Col>
                     <Col>
-                        <p>
+                        <p className="game-desc">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
                             has been the industry's standard dummy text ever since the 1500s, when an unknown printer
                             took a galley of type and scrambled it to make a type specimen book.
@@ -56,7 +56,7 @@ function KeratonActivities() {
         </Row>
         <Row>
             <Col>
-                <p>Some description for competition</p>
+                <p className="competition-desc">Some description for competition</p>
             </Col>
         </Row>
         </Container>
