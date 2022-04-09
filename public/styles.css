@@ -976,6 +976,15 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	float: center;
 }
 
+.product-count {
+	font-size: calc(0.05vw + 12px);
+    background: rgba(129, 27, 20, 1.0);
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: bottom;
+    border-radius: 50%;
+}
+
 .order-form label {
 	font-size: calc(0.5vw + 12px);
 }
