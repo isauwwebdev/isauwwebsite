@@ -22,7 +22,7 @@ function Home() {
                 </div>
 
                 <Carousel.Caption style={{ top: "40%", bottom: "60%" }} className="animated fadeInDown">
-                    <h1 className="carousel-title" style = {{ zIndex: "100", fontFamily: "brandon_grotesquemedium, sans-serif" }}>Indonesian Student Association at the University of Washington</h1>
+                    <h1 className="carousel-title" style = {{ zIndex: "100", fontFamily: "brandon_grotesquemedium, sans-serif", fontWeight: "normal" }}>Indonesian Student Association at the University of Washington</h1>
                 </Carousel.Caption>
             </div>
 
