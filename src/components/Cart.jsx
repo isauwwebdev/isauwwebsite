@@ -24,7 +24,12 @@ function Cart(props) {
             </Row>
 
             <Offcanvas.Body>
-                {cartItems.length == 0 && <h3>Cart is Empty</h3>}
+                {cartItems.length == 0 && 
+                    <div className='text-center' style={{ marginTop: "64px" }}>
+                        <img alt="isauwbird" className="mx-auto" src="../images/isauwbird-white.png" style={{ width: "20%", filter: `contrast(0.8)` }} />
+                        <h3 style={{ textAlign: "center", fontSize: `calc(14px + 0.1vw)`, marginTop: "24px" }}>Your shopping bag is empty</h3>
+                    </div>
+                }
                 <div className="flex-row row">
                     {cartItems.map((item) => (
                         <Col xs={6} style={{marginBottom: "16px"}}>
