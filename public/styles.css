@@ -1134,3 +1134,39 @@ a[type='button'] {
 .keraton-accordion-header {
 	font-size: calc(10px + 1.2vw);
 }
+
+.shop-btn {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: calc(24px + 0.8vw);
+	text-transform: none;
+	font-size: calc(11px + 0.1vw);
+	box-shadow: none;
+	border: 0;
+	border-radius: 0;
+	border-top: 1px solid rgba(0,0,0,.125);
+}
+.shop-btn:hover {
+	box-shadow: none;
+}
+.shop-btn-div {
+	display: flex;
+	align-items: flex-end;
+	flex: 50%;
+	width: 100%;
+}
+
+.flex-row.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+  .flex-row.row > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+  }
+
+ .flex-row.row:after, 
+ .flex-row.row:before {
+	display: flex;
+ }

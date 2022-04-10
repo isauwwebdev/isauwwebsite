@@ -13,11 +13,11 @@ function Cart(props) {
             <Row>
                 <Offcanvas.Header>
                     <button type="button" class="btn-close text-reset" aria-label="Close" onClick={onHide}></button>
-                    <Col xs={4}>
-                        <h3 style={{ float: "left" }}>Your Bag</h3>
+                    <Col xs={6}>
+                        <h3 style={{ float: "left", margin: "0", fontWeight: "600", fontSize: `calc(16px + 0.1vw)` }}>Your Bag</h3>
                     </Col>
                     <Col xs={4}>
-                        <p style={{ float: "right" }}>{cartItems.length} item{cartItems.length == 1 ? "" : "s"}</p>
+                        <p style={{ float: "right", margin: "0", fontSize: `calc(16px + 0.1vw)` }}>{cartItems.length} item{cartItems.length == 1 ? "" : "s"}</p>
                     </Col>
                     <hr/>
                 </Offcanvas.Header>
@@ -25,37 +25,37 @@ function Cart(props) {
 
             <Offcanvas.Body>
                 {cartItems.length == 0 && <h3>Cart is Empty</h3>}
-                <Row>
+                <div className="flex-row row">
                     {cartItems.map((item) => (
-                        <Col xs={6}>
-                            <Card>
-                                <div style={{ fontWeight: "800" }}>{item.qty}x {item.name}</div>
-                                <div className='text-right'>
-                                    ${item.price}
+                        <Col xs={6} style={{marginBottom: "16px"}}>
+                            <Card style={{ fontSize: `calc(13px + 0.1vw)`, height: "100%" }}>
+                                <div style={{ padding: `calc(6px + 0.2vw) calc(8px + 0.2vw) 0` }}>
+                                    <div style={{ fontWeight: "800" }}>{item.qty}x {item.name}</div>
+                                    <div className='text-right'>${item.price}</div>
                                 </div>
 
                                 <Card.Img src={item.img} style={{ padding: "0 10%" }}/>
 
-                                <div>
-                                    <button onClick={() => alert("Not yet implemented.")} style={{ width: "50%" }}>Edit</button>
-                                    <button onClick={() => onRemove(item)} style={{ width: "50%" }}>Remove</button>
+                                <div className="shop-btn-div">
+                                    <button className="btn shop-btn" onClick={() => alert("Not yet implemented.")} style={{ width: "50%", borderRight: "1px solid rgba(0,0,0,.125)" }}>Edit</button>
+                                    <button className="btn shop-btn" onClick={() => onRemove(item)} style={{ width: "50%" }}>Remove</button>
                                 </div>
                             </Card>
                         </Col>
                     ))}
-                </Row>
+                </div>
 
                 {cartItems.length !== 0 && (
-                    <Row>
-                        <hr/>
+                    <Row style={{ boxShadow: "rgb(0 0 0 / 15%) 0px 0px 12px 0px", paddingTop: "16px" }}>
                         <Col xs={6}>
-                            <p style={{ float: "left" }}>Subtotal</p>
+                            <p style={{ float: "left", fontSize: `calc(19px + 0.1vw)`, fontWeight: "700" }}>Subtotal</p>
                         </Col>
                         <Col xs={6}>
-                            <p style={{ float: "right" }}>${totalPrice.toFixed(2)}</p>
+                            <p style={{ float: "right", fontSize: `calc(19px + 0.1vw)`, fontWeight: "700" }}>${totalPrice.toFixed(2)}</p>
                         </Col>
-                        <hr/>
-                        <button onClick={() => alert('Not yet implemented.')} >Checkout</button>
+                        <Col xs={12}>
+                        <button style={{margin: "0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px" }} className="btn btn-dark" onClick={() => alert('Not yet implemented.')} >Next</button>
+                        </Col>
                     </Row>
                 )}
             </Offcanvas.Body>
