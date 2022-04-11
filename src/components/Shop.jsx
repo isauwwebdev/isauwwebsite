@@ -6,21 +6,13 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
-
 import products from '../data/products.json';
 
-function Shop(props) {
-    
-    // const uniqueProducts = [...new Set(products.reduce((all, prod) => {
-    //     return all.concat([prod.name]);
-    //   }, []))].sort();
-    // const [cartSection, setCartSection] = useState(false);
-
+function Shop(props) {    
     const [cartItems, setCartItems] = useState(sessionStorage.getItem('cookies') ? JSON.parse(sessionStorage.getItem('cookies')) : []);
-
-    const [show, setShow] = useState(false);
-    const handleClose = () => setShow(false);
-    const handleOpen = () => setShow(true);
+    const [showCart, setShowCart] = useState(false);
+    const handleClose = () => setShowCart(false);
+    const handleOpen = () => setShowCart(true);
 
     const onAdd = (product) => {
         const exist = cartItems.find((x) => x.id == product.id);
@@ -52,6 +44,11 @@ function Shop(props) {
             })
             sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => x.id == product.id ? { ...exist, qty: exist.qty - 1 } : x)))
         }
+    };
+
+    const clearCart = () => {
+        setCartItems([]);
+        sessionStorage.setItem('cookies', JSON.stringify([]));
     };
     
     return (
@@ -112,7 +109,7 @@ function Shop(props) {
                             </button>
                         </Col>
                     </Row>
-                    <Cart onRemove={onRemove} cartItems={cartItems} show={show} onHide={handleClose}></Cart>
+                    <Cart onRemove={onRemove} cartItems={cartItems} showCart={showCart} onHide={handleClose} clearCart={clearCart}></Cart>
 
                     <Row>
                         {products.map((product, i) => {
@@ -123,8 +120,6 @@ function Shop(props) {
                             );
                         })}
                     </Row>
-
-                    {/* <Order prodOptions={uniqueProducts}></Order> */}
                 </section>
             </Container>
         </div>

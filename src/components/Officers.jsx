@@ -4,9 +4,6 @@ import officers from '../data/officers.json'
 import Fade from 'react-reveal/Fade';
 
 function Officers() {
-
-var hi = "display: 'flex', background: 'linear-gradient(#f0f 0 0) bottom/80% 70% no-repeat'";
-
     return (
         <div >
             {officers.map((group, i) => {
