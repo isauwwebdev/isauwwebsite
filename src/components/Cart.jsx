@@ -30,7 +30,7 @@ function Cart(props) {
         e.preventDefault();
         console.log(e);
         setOrder({
-            id: _uniqueId(),
+            id: Math.random().toString(36).slice(2).toUpperCase(),
             name: name,
             email: email,
             phone: phone,
@@ -127,7 +127,7 @@ function Cart(props) {
                 </Offcanvas.Body>
             </Offcanvas>
 
-            <Modal size="lg" centered show={showModal} >
+            <Modal size="lg" centered show={showModal} onHide={() => {setShowModal(false)}}>
                 <Modal.Header closeButton>
                     <Modal.Title>Your Order has been placed!</Modal.Title>
                 </Modal.Header>
