@@ -26,10 +26,9 @@ function Cart(props) {
         cartItems: []
     });
 
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9uIfPnprSh-2gbR8cxm9C5klRjX_VfPCFEr7z9me15PBXQ/exec'
     const createOrder = (e) => {
-        e.preventDefault();
-        console.log(e);
-        setOrder({
+        const order = {
             id: Math.random().toString(36).slice(2).toUpperCase(),
             name: name,
             email: email,
@@ -37,7 +36,23 @@ function Cart(props) {
             date: Date().toLocaleString(),
             total: totalPrice.toFixed(2),
             cartItems: cartItems
-        });
+        }
+        e.preventDefault();
+        setOrder(order);
+
+        var formData = new FormData(); 
+        formData.append('id', order.id);
+        formData.append('name', order.name);
+        formData.append('email', order.email);
+        formData.append('phone', order.phone);
+        formData.append('date', order.date);
+        formData.append('total', order.total);
+        formData.append('cartItems', JSON.stringify(order.cartItems));
+
+        fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message));
+
         onHide();
         setShowCheckout(false);
         setShowModal(true);
@@ -165,3 +180,4 @@ function Cart(props) {
 }
 
 export default Cart;
+
