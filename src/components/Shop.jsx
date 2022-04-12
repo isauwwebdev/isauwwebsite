@@ -20,7 +20,7 @@ function Shop(props) {
             setCartItems(() => {
                 return cartItems.map((x) => x.id == product.id ? { ...exist, qty: exist.qty + 1 } : x)
             })
-            // make cart persistent, we cannot just setItem(cartItems) because setState is an asynchronous function. 
+            // make cart persistent, we cannot just sessionStorage.setItem(cartItems) because setState is an asynchronous function. 
             sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => x.id == product.id ? { ...exist, qty: exist.qty + 1 } : x)))
         } else {
             setCartItems(() => {

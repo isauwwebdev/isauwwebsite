@@ -80,7 +80,12 @@ function Cart(props) {
 
                                     <div className="shop-btn-div">
                                         <button className="btn shop-btn" onClick={() => alert("Not yet implemented.")} style={{ width: "50%", borderRight: "1px solid rgba(0,0,0,.125)" }}>Edit</button>
-                                        <button className="btn shop-btn" onClick={() => onRemove(item)} style={{ width: "50%" }}>Remove</button>
+                                        <button className="btn shop-btn" onClick={() => {
+                                            onRemove(item);
+                                            if (JSON.parse(sessionStorage.getItem('cookies')).length == 0) {
+                                                setShowCheckout(false);
+                                            }
+                                        }} style={{ width: "50%" }}>Remove</button>
                                     </div>
                                 </Card>
                             </Col>
