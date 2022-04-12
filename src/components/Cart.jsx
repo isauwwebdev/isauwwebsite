@@ -14,27 +14,31 @@ function Cart(props) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
+    const [venmo, setVenmo] = useState("");
 
     const [showModal, setShowModal] = useState(false);
     const [order, setOrder] = useState({
         id: "",
         name: "",
         email: "",
+        venmo: "",
         phone: "",
         date: "",
-        total: "",
+        totalPrice: "",
         cartItems: []
     });
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9uIfPnprSh-2gbR8cxm9C5klRjX_VfPCFEr7z9me15PBXQ/exec'
     const createOrder = (e) => {
+        const d = new Date();
         const order = {
             id: Math.random().toString(36).slice(2).toUpperCase(),
             name: name,
             email: email,
             phone: phone,
-            date: Date().toLocaleString(),
-            total: totalPrice.toFixed(2),
+            venmo: venmo,
+            date: d.toLocaleString(),
+            totalPrice: totalPrice.toFixed(2),
             cartItems: cartItems
         }
         e.preventDefault();
@@ -45,9 +49,17 @@ function Cart(props) {
         formData.append('name', order.name);
         formData.append('email', order.email);
         formData.append('phone', order.phone);
+        formData.append('venmo', order.venmo);
         formData.append('date', order.date);
-        formData.append('total', order.total);
-        formData.append('cartItems', JSON.stringify(order.cartItems));
+        formData.append('totalPrice', order.totalPrice);
+        var result = ""; 
+        order.cartItems.map((item) => {
+            if (result != "") {
+                result += "\n"
+            }
+            result += item.qty + "x " + item.name; 
+        });
+        formData.append('cartItems', result);
 
         fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => console.log('Success!', response))
@@ -134,6 +146,10 @@ function Cart(props) {
                                         <input name="Email" type="email" onChange={(e) => {setEmail(e.target.value)}} required></input>
                                     </li>
                                     <li>
+                                        <label>Venmo</label>
+                                        <input name="Venmo" type="text" onChange={(e) => {setVenmo(e.target.value)}} required></input>
+                                    </li>
+                                    <li>
                                         <label>Phone</label>
                                         <input name="Phone" type="tel" onChange={(e) => {setPhone(e.target.value)}} required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"></input>
                                     </li>
@@ -156,9 +172,10 @@ function Cart(props) {
                     <ul>
                         <li>Name: {order.name}</li>
                         <li>Email: {order.email}</li>
+                        <li>Venmo: {order.venmo}</li>
                         <li>Phone: {order.phone}</li>
                         <li>Date: {order.date}</li>
-                        <li>Total: ${order.total}</li>
+                        <li>Total: ${order.totalPrice}</li>
                         <li>
                             <div>Cart Items:</div>
                             <div>
