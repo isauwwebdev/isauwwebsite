@@ -8,54 +8,25 @@ function KeratonPerformers() {
     return (
         <div>
             <Container className="keraton-performers">
-                <Row>
-                <h2 className="my-3">Dhruv</h2>
+                <h1 className="my-3 keraton-performers-header"><strong>PERFORMERS</strong></h1>
+                <Row className="performers-main-row">
                     <Col>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                            took a galley of type and scrambled it to make a type specimen book.
-                        </p>
+                        <h2 className="performer-name">DHRUV</h2>
                     </Col>
                     <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "400px" }}></img>
+                        <h2 className="performer-name">AUDREY MIKA</h2>
                     </Col>
                 </Row>
-                <Row>
-                <h2 className="my-3">Elvania</h2>
+                <h1 className="my-3 performer-name">STUDENT PERFORMERS</h1>
+                <Row className="performers-student-row">
                     <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "400px" }}></img>
+                        <h3 className="student-performer-name">PERFORMER1</h3>
                     </Col>
                     <Col>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                            took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                    </Col>
-                </Row>
-            </Container>
-            <Container className="keraton-student-performers">
-                <h1 className="my-3">Student Performers</h1>
-                <Row>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                        has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                        took a galley of type and scrambled it to make a type specimen book.
-                    </p>
-                </Row>
-                <Row className="student-performers-images">
-                    <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "300px", height: "300px" }}></img>
-                        <h3>Performer1</h3>
+                        <h3 className="student-performer-name">PERFORMER2</h3>
                     </Col>
                     <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "300px", height: "300px" }}></img>
-                        <h3>Performer2</h3>
-                    </Col>
-                    <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "300px", height: "300px" }}></img>
-                        <h3>Performer3</h3>
+                        <h3 className="student-performer-name">PERFORMER3</h3>
                     </Col>
                 </Row>
             </Container>

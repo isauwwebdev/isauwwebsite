@@ -1,19 +1,37 @@
 import React from 'react';
 import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
+import Carousel from 'react-bootstrap/Carousel';
 
+import KeratonCountdown from './KeratonCountdown';
 import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
 import KeratonFood from './KeratonFood';
 import KeratonActivities from './KeratonActivities';
-import Sponsors from './Sponsors';
 import KeratonGetInvolved from './KeratonGetInvolved'
 
+
+
 function Keraton() {
+
     return (
         <div>
             <KeratonVideo></KeratonVideo>
+            <Container>
+                <KeratonAbout></KeratonAbout>
+                <KeratonPerformers></KeratonPerformers>
+                <KeratonFood></KeratonFood>
+            </Container>
+        </div>
+    );
+}
+
+export default Keraton;
+
+/*
+<KeratonVideo></KeratonVideo>
+            <KeratonCountdown keratonDate={new Date(1651964400000)}></KeratonCountdown>
             <KeratonAbout></KeratonAbout>
             <Container>
                 <Accordion defaultActiveKey="0" flush>
@@ -43,8 +61,4 @@ function Keraton() {
                     </Accordion.Item>
                 </Accordion>
             </Container>
-        </div>
-    );
-}
-
-export default Keraton;
+ */

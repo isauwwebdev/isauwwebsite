@@ -92,7 +92,7 @@ function App() {
                                     <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
                                     <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
                                     <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
-                                    <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Keraton</NavLink>
+                                    {/*<NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Keraton</NavLink>*/}
                                     {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
                                 </Nav>
                                 { expanded ? <SocialLinks /> : null }

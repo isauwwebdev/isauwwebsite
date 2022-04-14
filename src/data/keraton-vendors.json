@@ -3,6 +3,7 @@
         "id": 1,
         "name": "PERMIAS Seattle",
         "contact": "Wendy Sunanda",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Ayam Geprek",
@@ -15,6 +16,7 @@
         "id": 2,
         "name": "ISASU (Seattle U)",
         "contact": "Darren Jonany",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Telor Gulung",
@@ -42,20 +44,11 @@
         "id": 3,
         "name": "Jajanan Indo",
         "contact": "Widiana Sepang",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Martabak Mini 1 Topping",
                 "price": 3.5,
-                "notes": "Cheese, Chocolate, Peanut, Nutella "
-            },
-            {
-                "name": "Martabak Mini 2 Topping",
-                "price": 4.75,
-                "notes": "Cheese, Chocolate, Peanut, Nutella "
-            },
-            {
-                "name": "Martabak Mini 3 Topping",
-                "price": 5,
                 "notes": "Cheese, Chocolate, Peanut, Nutella "
             },
             {
@@ -64,22 +57,12 @@
                 "notes": "4 pieces"
             },
             {
-                "name": "Martabak Telur",
-                "price": 10,
-                "notes": "8 pieces"
-            },
-            {
                 "name": "Pancake Durian",
                 "price": 0,
                 "notes": ""
             },
             {
-                "name": "Jasuke 1 Topping",
-                "price": 5,
-                "notes": "Keju Manis, Coklat Manis, Pedas Manis"
-            },
-            {
-                "name": "Jasuke 2 Topping",
+                "name": "Jasuke",
                 "price": 0,
                 "notes": "Keju Pedas Manis, Coklat Keju Manis"
             }
@@ -89,6 +72,7 @@
         "id": 4,
         "name": "Indonesian Eatery",
         "contact": "Ervi Gordong",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Siomay Bandung",
@@ -126,6 +110,7 @@
         "id": 5,
         "name": "Bellevue College",
         "contact": "Joylyn Subali",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Roti Panggang",
@@ -143,12 +128,14 @@
         "id": 6,
         "name": "Shoreline CC",
         "contact": "Aiko",
+        "img": "../images/keraton/permias-logo.png",
         "menu": []
     },
     {
         "id": 7,
         "name": " Liv's Kitchen",
         "contact": "Olivia Sunandar",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Nasi Padang",
@@ -196,6 +183,7 @@
         "id": 8,
         "name": "Solar Chapter Seattle",
         "contact": "Ekin Njotoatmodjo",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Lidi",
@@ -228,12 +216,7 @@
                 "notes": ""
             },
             {
-                "name": "Kain makna 1",
-                "price": 20,
-                "notes": ""
-            },
-            {
-                "name": "Kain makna 2",
+                "name": "Kain Makna",
                 "price": 30,
                 "notes": ""
             }
@@ -243,6 +226,7 @@
         "id": 9,
         "name": "Coco Pandan",
         "contact": "Michelle Chandradinata",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Assorted Mini Martabak",
@@ -280,6 +264,7 @@
         "id": 10,
         "name": "Pantjoeran UW",
         "contact": "Angelita Cecilia",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Takoyaki",
@@ -307,6 +292,7 @@
         "id": 11,
         "name": "Koepi keraton",
         "contact": "????",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Es milo",
@@ -319,6 +305,7 @@
         "id": 12,
         "name": "ISAUW drinks",
         "contact": "????",
+        "img": "../images/keraton/permias-logo.png",
         "menu": [
             {
                 "name": "Bottled drinks",
