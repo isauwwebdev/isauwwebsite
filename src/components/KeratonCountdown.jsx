@@ -31,18 +31,14 @@ function DisplayBlocks(props) {
     const { timeArray, stringArray } = props;
     const displayTime = timeArray.map((time, i) => {
         return (
-            <Col>
+            <Col className="col-3">
                 <TimeBlock time={time} stringArray={stringArray} index={i}></TimeBlock>
             </Col>
         )
     });
     return (
-        <Row className="countdown-row">
-            <Col />
-            <Col />
+        <Row className="countdown-row justify-content-center my-3">
             {displayTime}
-            <Col />
-            <Col />
         </Row>
     )
 }

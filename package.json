@@ -12,6 +12,7 @@
     "axios": "^0.24.0",
     "bootstrap": "^5.1.1",
     "dotenv": "^10.0.0",
+    "flickity": "^3.0.0",
     "mdb-ui-kit": "^3.9.0",
     "mdbootstrap": "^4.20.0",
     "moment": "^2.29.1",
@@ -28,6 +29,7 @@
     "react-scripts": "^5.0.0",
     "react-scroll-parallax": "^3.0.6",
     "react-slick": "^0.28.1",
+    "react-stack-cards": "^1.0.8",
     "reactjs-popup": "^2.0.5",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^1.1.2"

@@ -1246,7 +1246,7 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(4.2vw + 16px);
+	font-size: calc(3.8vw + 16px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: 5px;
 }
@@ -1359,11 +1359,12 @@ a[type='button'] {
 }
 
 .keraton-countdown-card {
+	text-align: center;
+	align-items: center;
 	font-family: 'Monoton', cursive;
 	display: flex;
 	border: none;
 	border-radius: 10px;
-	padding: 20px 0;
 	background: transparent;
 	margin: 0;
 }
@@ -1371,17 +1372,16 @@ a[type='button'] {
 .countdown-row {
 	text-align: center;
 	align-items: center;
-	width: 100%;
 }
 
 .countdown-title {
-	font-size: calc(16px + 0.7vw);
+	font-size: calc(12px + 0.6vw);
 	font-weight: 700;
 	color: white;
 }
 
 .countdown-sub-title {
-	font-size: calc(10px + 0.3vw);
+	font-size: calc(8px + 0.2vw);
 	font-weight: 400;
 	color: white;
 }
