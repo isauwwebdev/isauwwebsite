@@ -1452,3 +1452,25 @@ a[type='button'] {
 .flex-row.row:before {
 	display: flex;
 }
+
+.keraton-get-involved {
+	text-align: center;
+	font-family: 'Apple Chancery';
+}
+
+.keraton-get-involved-button1 {  
+	width: 40%;  
+	height: 80px;  
+	border: 0px;  
+	background-color: lightblue;  /*can be background images if you want*/
+	display: flex; 
+	justify-content: center;
+	margin-left: 30%;  
+	align-items: center;
+	text-decoration: none;   
+} 
+
+.keraton-games, .keraton-competition{
+	text-align: center;
+	font-family: 'Chalkduster';
+}

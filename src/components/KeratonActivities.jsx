@@ -7,8 +7,8 @@ import Container from 'react-bootstrap/Container';
 function KeratonActivities() {
     return(
         <div>
-        <Container className="keraton-games">
-            <h1 className="my-3"><strong>Games</strong></h1>
+        <Container className="">
+            <h1 className="my-3 keraton-games"><strong>Games</strong></h1>
                 <Row>
                 <h2 className="my-3">GAME 1</h2>
                     <Col>
@@ -38,8 +38,8 @@ function KeratonActivities() {
                 </Row>
         </Container>
 
-        <Container className="keraton-competitions">
-        <h1 className="my-1"><strong>Competition</strong></h1>
+        <Container className="">
+        <h1 className="my-1 keraton-competition"><strong>Competition</strong></h1>
         <Row>
             <Col>
                 <h2 className="my-3">Title 1</h2>
