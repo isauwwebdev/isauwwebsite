@@ -39,7 +39,9 @@ function DisplayBlocks(props) {
     return (
         <Row className="countdown-row">
             <Col />
+            <Col />
             {displayTime}
+            <Col />
             <Col />
         </Row>
     )

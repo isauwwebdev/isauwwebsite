@@ -1244,24 +1244,38 @@ a[type='button'] {
 }
 
 /* Keraton Page */
+.keraton-header {
+	font-family: 'Monoton', cursive;
+	font-size: calc(4.2vw + 16px);
+	text-shadow: #606060 0px 0px 10px;
+	letter-spacing: 5px;
+}
+
+.keraton-completed {
+	font-size: calc(2.2vw + 16px);
+}
+
 .keraton-about {
-	text-align: center;
+	font-family: 'Purple Purse', cursive;
 }
 
 .keraton-about-header {
+	text-align: center;
 	letter-spacing: 5px;
 	font-size: calc(2.8vw + 16px);
 	font-weight: bold;
 }
 
 .keraton-about-text {
-	text-align: center;
+	text-align: left;
 	letter-spacing: 1px;
 	word-spacing: 2px;
+	font-weight: normal;
 }
 
 .keraton-food {
 	text-align: center;
+	font-family: 'Peralta', cursive;
 }
 
 .keraton-food-header {
@@ -1289,16 +1303,14 @@ a[type='button'] {
 	box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
 	position: relative;
 	padding: 20%;
-	background-image: linear-gradient(to bottom right, #811B16, #344465);
+	background-image: linear-gradient(to bottom right, #811B16, #85754d);
 	margin: 5px;
 	transform-style: preserve-3d; 
 	border-radius: 10px;
 	-webkit-transition: 200ms;
 	-ms-transition: 200ms;
 	transition: 200ms;
-
 	cursor: pointer;
-
 	transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
 }
 
@@ -1314,8 +1326,9 @@ a[type='button'] {
 }
 
 .keraton-food-card .back {
+	height: 100%;
 	width: 100%;
-	background-color: #ebe3db;
+	background-color: #f0e4ca;
 	border-radius: 10px;
 	transform: rotateY(180deg);
 }
@@ -1331,7 +1344,6 @@ a[type='button'] {
 }
 
 .back-card-header {
-  	padding: 30px 30px 40px;
 	width: 100%;
 }
 
@@ -1347,6 +1359,7 @@ a[type='button'] {
 }
 
 .keraton-countdown-card {
+	font-family: 'Monoton', cursive;
 	display: flex;
 	border: none;
 	border-radius: 10px;
@@ -1362,24 +1375,31 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(16px + 0.6vw);
+	font-size: calc(16px + 0.7vw);
 	font-weight: 700;
 	color: white;
 }
 
 .countdown-sub-title {
-	font-size: calc(12px + 0.5vw);
+	font-size: calc(10px + 0.3vw);
 	font-weight: 400;
 	color: white;
 }
 
 .keraton-performers {
 	text-align: center;
+	font-family: 'Warnes', cursive;
 }
 
 .keraton-performers-header {
 	letter-spacing: 5px;
-	font-size: calc(2.8vw + 16px);
+	font-size: calc(3.8vw + 16px);
+	font-weight: bold;
+}
+
+.keraton-performers-sub-header {
+	letter-spacing: 5px;
+	font-size: calc(1.2vw + 16px);
 	font-weight: bold;
 }
 

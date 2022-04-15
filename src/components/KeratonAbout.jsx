@@ -7,7 +7,7 @@ function KeratonAbout() {
     return (
         <div>
             <Container className="keraton-about">
-                <h1 className="my-3 keraton-about-header"><strong>ABOUT</strong></h1>
+                <h1 className="mt-5 keraton-about-header"><strong>ABOUT</strong></h1>
                 <p className="keraton-about-text">
                     Keraton is an annual Indonesian cultural festival hosted by ISAUW (Indonesian
                     Student Association at University of Washington) with a purpose to introduce the
