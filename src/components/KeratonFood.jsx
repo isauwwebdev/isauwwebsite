@@ -1,46 +1,35 @@
-import { React, useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+
 import vendors from '../data/keraton-vendors.json';
 
 function KeratonFood() {
-
-    const foodCards = vendors.map((vendor) => {
-        return (
-            <VendorCard key={vendor.id} vendor={vendor}></VendorCard>
-        )
-    });
-
-    const grid = [];
-    for (let i = 0; i < vendors.length; i += 3) {
-        const row = [];
-        for (let j = 0; j < 3; j++) {
-            row.push(foodCards[i + j]);
-        }
-        grid.push(row);
-    }
+    const [numOfItems, setNumOfItems] = useState(3);
+    React.useEffect(() => {
+        window.addEventListener('resize', () => {
+            if(window.innerWidth < 900) {
+                setNumOfItems(1);
+            } else {
+                setNumOfItems(3);
+            }
+        })
+    })
     return (
         <div>
             <Container className="keraton-food">
                 <h1 className="my-3 keraton-food-header"><strong>VENDORS</strong></h1>
-                <div className="keraton-food-grid">
-                    {grid.map((row) => {
-                        return (
-                            <Row className="keraton-food-row">
-                                {row.map((vendor) => {
-                                    return (
-                                        <Col className="keraton-food-col p-1">
-                                            {vendor}
-                                        </Col>
-                                    )
-                                })}
-                            </Row>
-                        )
+                <OwlCarousel className='owl-theme' loop margin={10} items={numOfItems} mouseDrag={true} pullDrag={true}>
+                    {vendors.map((vendor) => {
+                        return <VendorCard vendor={vendor}></VendorCard>
                     })}
-                </div>
+                </OwlCarousel>
             </Container>
         </div>
     )
@@ -59,19 +48,21 @@ function VendorCard(props) {
     });
 
     return (
-        <Card className={`keraton-food-card ${isFlipped ? 'flip' : ''}`} onClick={() => { setIsFlipped(!isFlipped) }} style={{ height: "450px" }}>
-            <div className="front" ref={front}>
-                <Card.Title className="keraton-food-title">{vendor.name.toUpperCase()}</Card.Title>
-            </div>
-            <div className="back" ref={back}>
-                <div className="back-card-header my-1">
-                    <img src={vendor.img} alt="" className="my-2" />
+        <div className="item">
+            <Card className={`keraton-food-card ${isFlipped ? 'flip' : ''}`} onClick={() => { setIsFlipped(!isFlipped) }} style={{ height: "450px" }}>
+                <div className="front" ref={front}>
+                    <Card.Title className="keraton-food-title">{vendor.name.toUpperCase()}</Card.Title>
                 </div>
-                <div class="back-card-body my-3">
-                    {menuItems}
+                <div className="back" ref={back}>
+                    <div className="back-card-header my-1">
+                        <img src={vendor.img} alt="" className="my-2" />
+                    </div>
+                    <div class="back-card-body my-3">
+                        {menuItems}
+                    </div>
                 </div>
-            </div>
-        </Card>
+            </Card>
+        </div>
     )
 }
 

@@ -1244,6 +1244,12 @@ a[type='button'] {
 }
 
 /* Keraton Page */
+.owl-theme .item {
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
 .keraton-header {
 	font-family: 'Monoton', cursive;
 	font-size: calc(3.8vw + 16px);
@@ -1343,13 +1349,10 @@ a[type='button'] {
 	color: white;
 }
 
-.back-card-header {
-	width: 100%;
-}
-
 .back-card-header img {
-	height: 50px;
-	width: 50px;
+	margin: auto;
+	height: 50px !important;
+	width: 50px !important;
 }
 
 .keraton-food-sub-title {
@@ -1361,7 +1364,6 @@ a[type='button'] {
 .keraton-countdown-card {
 	text-align: center;
 	align-items: center;
-	font-family: 'Monoton', cursive;
 	display: flex;
 	border: none;
 	border-radius: 10px;
@@ -1375,13 +1377,13 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(12px + 0.6vw);
+	font-size: calc(12px + 0.8vw);
 	font-weight: 700;
 	color: white;
 }
 
 .countdown-sub-title {
-	font-size: calc(8px + 0.2vw);
+	font-size: calc(8px + 0.4vw);
 	font-weight: 400;
 	color: white;
 }
