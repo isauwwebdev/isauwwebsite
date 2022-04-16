@@ -25,7 +25,7 @@ function KeratonFood() {
         <div>
             <Container className="keraton-food">
                 <h1 className="my-3 keraton-food-header"><strong>VENDORS</strong></h1>
-                <OwlCarousel className='owl-theme' loop margin={10} items={numOfItems} mouseDrag={true} pullDrag={true}>
+                <OwlCarousel className='owl-theme' margin={10} items={numOfItems} mouseDrag={true} pullDrag={true}>
                     {vendors.map((vendor) => {
                         return <VendorCard vendor={vendor}></VendorCard>
                     })}
@@ -49,7 +49,7 @@ function VendorCard(props) {
 
     return (
         <div className="item">
-            <Card className={`keraton-food-card ${isFlipped ? 'flip' : ''}`} onClick={() => { setIsFlipped(!isFlipped) }} style={{ height: "450px" }}>
+            <Card className={`keraton-food-card ${isFlipped ? 'flip' : ''}`} onClick={() => { setIsFlipped(!isFlipped) }} style={{ height: "420px" }}>
                 <div className="front" ref={front}>
                     <Card.Title className="keraton-food-title">{vendor.name.toUpperCase()}</Card.Title>
                 </div>
