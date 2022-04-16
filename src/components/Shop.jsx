@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Product from './Product';
-import { IoBagHandleOutline } from 'react-icons/io5'
+import { IoFolderOutline } from 'react-icons/io5'
 import Cart from './Cart';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -105,7 +105,7 @@ function Shop(props) {
                         </Col>
                         <Col xs={5} style={{ margin: "auto" }}>
                             <button type="button" className="btn" onClick={handleOpen} style={{ boxShadow: "none", float: "right" }}>
-                                <IoBagHandleOutline style={{ fontSize: `calc(1.2vw + 32px)` }} /><span className='product-count'>{cartItems.length}</span>
+                                <IoFolderOutline style={{ fontSize: `calc(1.2vw + 32px)` }} /><span className='product-count'>{cartItems.length}</span>
                             </button>
                         </Col>
                     </Row>
