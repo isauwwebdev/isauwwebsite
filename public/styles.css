@@ -1087,15 +1087,23 @@ video {
 	float: center;
 }
 
-.product-count {
-	font-size: calc(0.05vw + 12px);
-	background: rgba(129, 27, 20, 1.0);
-	font-family: 'brandon_grotesqueregular';
-	text-align: center;
-	color: #fff;
-	padding: 1px 5px 0;
-	vertical-align: bottom;
-	border-radius: 50%;
+.wallet {
+	font-size: calc(1.2vw + 32px);
+}
+
+.cart-count {
+	display: inline-block;
+	position: relative;
+	font-size: 40px;
+}
+
+.cart-count::after {
+	content: attr(data-after);
+	display: inline-block;
+	position: absolute;
+	top:50%;
+	left:42%;
+	font-size: 12px;
 }
 
 .order-form label {

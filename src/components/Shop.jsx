@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import products from '../data/products.json';
+import $ from 'jquery';
 
 function Shop(props) {    
     const [cartItems, setCartItems] = useState(sessionStorage.getItem('cookies') ? JSON.parse(sessionStorage.getItem('cookies')) : []);
@@ -50,7 +51,9 @@ function Shop(props) {
         setCartItems([]);
         sessionStorage.setItem('cookies', JSON.stringify([]));
     };
-    
+
+    $('.cart-count').attr('data-after', cartItems.length);
+
     return (
         <div>
             <Carousel touch={true} style={{ height: "calc(50vh + 10vw)" }}>
@@ -104,9 +107,13 @@ function Shop(props) {
                             <h1 className="my-3"><strong>Shop All</strong></h1>
                         </Col>
                         <Col xs={5} style={{ margin: "auto" }}>
-                            <button type="button" className="btn" onClick={handleOpen} style={{ boxShadow: "none", float: "right" }}>
-                                <IoFolderOutline style={{ fontSize: `calc(1.2vw + 32px)` }} /><span className='product-count'>{cartItems.length}</span>
-                            </button>
+                            <span class='wallet'>
+                                <button type="button" className="btn" onClick={handleOpen} style={{ boxShadow: "none", float: "right" }}>
+                                    <i className='cart-count'>
+                                        <IoFolderOutline/>
+                                    </i>
+                                </button>                                 
+                            </span>
                         </Col>
                     </Row>
                     <Cart onRemove={onRemove} cartItems={cartItems} showCart={showCart} onHide={handleClose} clearCart={clearCart}></Cart>
