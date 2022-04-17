@@ -76,7 +76,7 @@ function Cart(props) {
             if (result != "") {
                 result += "\n"
             }
-            result += item.qty + "x " + item.name; 
+            result += item.qty + "x " + item.name + " (" + item.selected + ")"; 
         });
         formData.append('cartItems', result);
         formData.append('pickup', order.pickup);
@@ -161,6 +161,7 @@ function Cart(props) {
                                     </div>
 
                                     <Card.Img src={item.img} style={{ padding: "0 10%" }}/>
+                                    <div className='text-left' style={{ padding: `0 calc(8px + 0.2vw) calc(6px + 0.2vw)` }}>{item.selected}</div>
 
                                     <div className="shop-btn-div">
                                         <button className="btn shop-btn" onClick={() => alert("Not yet implemented.")} style={{ width: "50%", borderRight: "1px solid rgba(0,0,0,.125)" }}>Edit</button>
@@ -275,7 +276,7 @@ function Cart(props) {
                     <div className="row" style={{marginTop: "20px"}}><h3 style={{fontWeight: "700", marginBottom: "0"}}>Your Purchase</h3></div>
                     {order.cartItems.map((x) => (
                         <div className="row">
-                            <div className="col-9">{x.name} x {x.qty}</div>
+                            <div className="col-9">{x.name} {x.selected && ("(" + x.selected + ")")} x {x.qty}</div>
                             <div className="col-3" style={{textAlign: "right"}}>${(x.price * x.qty).toFixed(2)}</div>
                         </div>
                     ))}

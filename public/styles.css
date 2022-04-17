@@ -1071,7 +1071,6 @@ video {
 	text-transform: none;
 	width: 100% !important;
 	padding: calc(4px + 0.6vw) calc(6px + 0.6vw) !important;
-	margin-top: calc(16px + 1.2vw);
 	margin-bottom: 0;
 	font-size: 0.8rem;
 }
@@ -1502,4 +1501,11 @@ a[type='button'] {
 select:invalid {
 	color: #212529;
 	font-weight: 300;
+}
+
+.show {
+	visibility: visible;
+}
+.hide {
+	visibility: hidden;
 }
