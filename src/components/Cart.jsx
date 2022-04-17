@@ -268,32 +268,37 @@ function Cart(props) {
 
             <Modal size="lg" centered show={showModal} onHide={() => {setShowModal(false)}}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Your Order has been placed!</Modal.Title>
+                    <Modal.Title style={{textTransform: "uppercase", fontFamily: "brandon_grotesqueblack, sans-serif", fontSize: "2.6rem"}}>Thanks for your order {order.firstName}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <h4>Order #{order.id}</h4>
-                    <ul>
-                        <li>Name: {order.name}</li>
-                        <li>Email: {order.email}</li>
-                        <li>Venmo: {order.venmo}</li>
-                        <li>Phone: {order.phone}</li>
-                        <li>Date: {order.date}</li>
-                        <li>Total: ${order.totalPrice}</li>
-                        <li>
-                            <div>Cart Items:</div>
-                            <div>
-                                {order.cartItems.map((x) => (
-                                    <div>
-                                    {x.qty} {" x "} {x.name}
-                                    </div>
-                                ))}
-                            </div>
-                        </li>
-                    </ul>
+                    <div className="row"><h4 style={{fontWeight: "600"}}>Order # {order.id}</h4></div>
+                    <div className="row" style={{marginTop: "20px"}}><h3 style={{fontWeight: "700", marginBottom: "0"}}>Your Purchase</h3></div>
+                    {order.cartItems.map((x) => (
+                        <div className="row">
+                            <div className="col-9">{x.name} x {x.qty}</div>
+                            <div className="col-3" style={{textAlign: "right"}}>${(x.price * x.qty).toFixed(2)}</div>
+                        </div>
+                    ))}
+
+                    <hr style={{margin: "24px 0 6px"}}/>
+                    <div className="row" style={{fontWeight: "600"}}>
+                        <div className="col-6">Total</div>
+                        <div className="col-6" style={{textAlign: "right"}}>${order.totalPrice}</div>
+                    </div>
+                    <hr style={{margin: "6px 0 48px"}}/>
+
+                    <div style={{fontSize: "12px"}}>
+                        <div className="row"><div className="col">Name: {order.firstName} {order.lastName}</div></div>
+                        <div className="row"><div className="col">Email: {order.email}</div></div>
+                        <div className="row"><div className="col">Venmo: {order.venmo}</div></div>
+                        <div className="row"><div className="col">Phone: {order.phone}</div></div>
+                        <div className="row"><div className="col">Date: {(order.date).split(", ").slice(0, 1)}</div></div>
+                        <div className="row"><div className="col">Time: {(order.date).split(", ").slice(1)}</div></div>
+                    </div>
                 </Modal.Body>
-                <Modal.Footer>
+                {/* <Modal.Footer>
                     <Button onClick={() => {setShowModal(false)}}>Close</Button>
-                </Modal.Footer>
+                </Modal.Footer> */}
             </Modal>
         </div>
     );
