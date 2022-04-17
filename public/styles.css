@@ -1476,7 +1476,30 @@ a[type='button'] {
 	text-decoration: none;   
 } 
 
-.keraton-games, .keraton-competition{
+.keraton-games, .keraton-competition {
 	text-align: center;
 	font-family: 'Chalkduster';
+}
+
+.invalid-feedback {
+	font-size: 12px;
+}
+.form-floating>label {
+	padding: 0.75rem 0.75rem;
+}
+.form-floating>.form-control, .form-floating>.form-select {
+	height: calc(3rem + 2px);
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+/* otherwise dropdown text will get cut */
+.form-floating>.form-select {
+	padding-top: 16px;
+	padding-bottom: 0;
+}
+/* first dropdown text */
+select:invalid {
+	color: #212529;
+	font-weight: 300;
 }

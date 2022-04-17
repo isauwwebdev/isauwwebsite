@@ -6,15 +6,19 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import _uniqueId from 'lodash/uniqueId';
+import Form from 'react-bootstrap/Form';
+import FloatingLabel from 'react-bootstrap/FloatingLabel'
 
 function Cart(props) {
     const {cartItems, onRemove, showCart, onHide, clearCart} = props;
     const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
     const [showCheckout, setShowCheckout] = useState(false);
-    const [name, setName] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
     const [venmo, setVenmo] = useState("");
+    const [pickup, setPickup] = useState("");
 
     const [showModal, setShowModal] = useState(false);
     const [order, setOrder] = useState({
@@ -25,28 +29,43 @@ function Cart(props) {
         phone: "",
         date: "",
         totalPrice: "",
-        cartItems: []
+        cartItems: [],
+        pickup: ""
     });
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9uIfPnprSh-2gbR8cxm9C5klRjX_VfPCFEr7z9me15PBXQ/exec'
     const createOrder = (e) => {
+        const form = e.currentTarget;
+        if (form.checkValidity() === false) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        setValidated(true);
+
+        if (form.checkValidity() === false) {
+            return;
+        }
+  
         const d = new Date();
         const order = {
             id: Math.random().toString(36).slice(2).toUpperCase(),
-            name: name,
+            firstName: firstName,
+            lastName: lastName,
             email: email,
             phone: phone,
             venmo: venmo,
             date: d.toLocaleString(),
             totalPrice: totalPrice.toFixed(2),
-            cartItems: cartItems
+            cartItems: cartItems,
+            pickup: pickup
         }
         e.preventDefault();
         setOrder(order);
 
         var formData = new FormData(); 
         formData.append('id', order.id);
-        formData.append('name', order.name);
+        formData.append('firstName', order.firstName);
+        formData.append('lastName', order.lastName);
         formData.append('email', order.email);
         formData.append('phone', order.phone);
         formData.append('venmo', order.venmo);
@@ -60,6 +79,7 @@ function Cart(props) {
             result += item.qty + "x " + item.name; 
         });
         formData.append('cartItems', result);
+        formData.append('pickup', order.pickup);
 
         fetch(scriptURL, { method: 'POST', body: formData })
         .then(response => console.log('Success!', response))
@@ -71,6 +91,43 @@ function Cart(props) {
         clearCart();
     }
 
+    function formatPhoneNumber(value) {
+        // if input value is falsy eg if the user deletes the input, then just return
+        if (!value) return value;
+      
+        // clean the input for any non-digit values.
+        const phoneNumber = value.replace(/[^\d]/g, "");
+      
+        // phoneNumberLength is used to know when to apply our formatting for the phone number
+        const phoneNumberLength = phoneNumber.length;
+      
+        // we need to return the value with no formatting if its less then four digits
+        // this is to avoid weird behavior that occurs if you  format the area code to early
+        if (phoneNumberLength < 4) return phoneNumber;
+      
+        // if phoneNumberLength is greater than 4 and less the 7 we start to return
+        // the formatted number
+        if (phoneNumberLength < 7) {
+          return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
+        }
+      
+        // finally, if the phoneNumberLength is greater then seven, we add the last
+        // bit of formatting and return it.
+        return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
+          3,
+          6
+        )}-${phoneNumber.slice(6, 10)}`;
+    }
+
+    const handlePhoneInput = (e) => {
+        // this is where we'll call the phoneNumberFormatter function
+        const formattedPhoneNumber = formatPhoneNumber(e.target.value);
+        // we'll set the input value using our setInputValue
+        setPhone(formattedPhoneNumber);
+    };
+
+    const [validated, setValidated] = useState(false);  
+        
     return (
         <div>
             <Offcanvas show={showCart} onHide={onHide} placement="end">
@@ -127,38 +184,84 @@ function Cart(props) {
                             <Col xs={6}>
                                 <p style={{ float: "right", fontSize: `calc(19px + 0.1vw)`, fontWeight: "700" }}>${totalPrice.toFixed(2)}</p>
                             </Col>
-                            <Col xs={12}>
-                            <button style={{margin: "0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px" }} className="btn btn-dark" onClick={() => setShowCheckout(true)} >Next</button>
-                            </Col>
+
+                            {!showCheckout && (
+                                <Col xs={12}>
+                                <button style={{margin: "0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px" }} className="btn btn-dark" onClick={() => setShowCheckout(true)} href="#form" >Next</button>
+                                </Col>
+                            )}
                         </Row>
                     )}
                 
                     {showCheckout && (
-                        <div>
-                            <form onSubmit={createOrder}>
-                                <ul>
-                                    <li>
-                                        <label>Name</label>
-                                        <input name="Name" type="text" onChange={(e) => {setName(e.target.value)}} required></input>
-                                    </li>
-                                    <li>
-                                        <label>Email</label>
-                                        <input name="Email" type="email" onChange={(e) => {setEmail(e.target.value)}} required></input>
-                                    </li>
-                                    <li>
-                                        <label>Venmo</label>
-                                        <input name="Venmo" type="text" onChange={(e) => {setVenmo(e.target.value)}} required></input>
-                                    </li>
-                                    <li>
-                                        <label>Phone</label>
-                                        <input name="Phone" type="tel" onChange={(e) => {setPhone(e.target.value)}} required pattern="[0-9]{3}[0-9]{3}[0-9]{4}"></input>
-                                    </li>
-                                    <li>
-                                        <button type="submit">Checkout</button>
-                                    </li>
-                                </ul>
-                            </form>
-                        </div>
+                            <Form noValidate validated={validated} onSubmit={createOrder} id="form">
+                                <div className="row" style={{marginTop: "16px"}}>
+                                    <div className="col-6" style={{paddingRight: "6px"}}>
+                                        <Form.Group>
+                                            <FloatingLabel label="First Name" >
+                                                <Form.Control name="Name" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Please enter your first name
+                                                </Form.Control.Feedback>
+                                            </FloatingLabel>
+                                        </Form.Group>
+                                    </div>
+                                    <div className="col-6" style={{paddingLeft: "6px"}}>
+                                        <Form.Group>
+                                            <FloatingLabel label="Last Name" >
+                                                <Form.Control name="Name" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Please enter your last name
+                                                </Form.Control.Feedback>
+                                            </FloatingLabel>
+                                        </Form.Group>
+                                    </div>
+                                </div>
+
+                                <Form.Group style={{margin: "16px 0"}}>
+                                    <FloatingLabel label="Phone" >
+                                        <Form.Control name="Phone" type="tel" onChange={(e) => handlePhoneInput(e)} placeholder="Phone" value={phone} pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}" title="Please enter a valid phone number." required></Form.Control>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a valid US phone number
+                                        </Form.Control.Feedback>
+                                    </FloatingLabel>
+                                </Form.Group>
+
+                                <Form.Group style={{margin: "16px 0"}}>
+                                    <FloatingLabel label="Email" >
+                                        <Form.Control name="Email" type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Email" required></Form.Control>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a valid email address
+                                        </Form.Control.Feedback>
+                                    </FloatingLabel>
+                                </Form.Group>
+
+                                <Form.Group style={{margin: "16px 0"}}>
+                                    <FloatingLabel label="Venmo" >
+                                        <Form.Control name="Venmo" type="text" onChange={(e) => {setVenmo(e.target.value)}} placeholder="Email" required></Form.Control>
+                                        <Form.Control.Feedback type="invalid">
+                                            Please enter a valid venmo username
+                                        </Form.Control.Feedback>
+                                    </FloatingLabel>
+                                </Form.Group>
+
+                                <Form.Group style={{margin: "16px 0"}} required>
+                                    <FloatingLabel label="Pickup Location" required>
+                                        <Form.Select required onChange={(e) => {setPickup(e.target.value)}}>
+                                            <option selected disabled value="" >Select a pickup location</option>
+                                            <option value="UW">UW</option>
+                                            <option value="Northgate">Northgate</option>
+                                            <option value="Shoreline">Shoreline</option>
+                                        </Form.Select>
+                                        <Form.Control.Feedback type="invalid">
+                                                Please select a pickup location
+                                        </Form.Control.Feedback>
+                                    </FloatingLabel>
+                                </Form.Group>
+
+
+                                <button type="submit" className="btn btn-dark" style={{margin: "24px 0 0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px" }}>Checkout</button>
+                            </Form>
                     )}
                 </Offcanvas.Body>
             </Offcanvas>
