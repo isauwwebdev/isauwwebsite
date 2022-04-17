@@ -11,6 +11,25 @@ function Product(props) {
         setSize(e.target.value);
     }
 
+    const [validated, setValidated] = useState(false);  
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!product.sizes) {
+            onAdd(product);
+        } else {
+            const form = e.currentTarget;
+            if (form.checkValidity() === false) {
+              e.stopPropagation();
+            } else {
+                /* deep copy product */
+                let copy = JSON.parse(JSON.stringify(product));
+                copy.selected = size;
+                onAdd(copy);
+            }    
+        }
+        setValidated(true);
+    }
+
     return (
         <div style={{ height: "100%" }}>
             <Card className="product-card" style={{ height: "100%" }}>
@@ -19,22 +38,27 @@ function Product(props) {
                     <Card.Title className="product-title">{product.name}</Card.Title>
                     <Card.Title className="product-price">${product.price}</Card.Title>
                     <Card.Subtitle className="product-desc">{product.desc}</Card.Subtitle>
-                    <Form.Select required size="sm" onChange={handleSize} className={product.sizes ? "show" : "hide"} style={{fontSize: `calc(10px + 0.3vw)`, borderRadius: "24px", margin: "8px 0 6px", paddingLeft: `calc(9px + 0.3vw)`}}>
-                        <option selected disabled value="">Select size...</option>
-                        {product.sizes && product.sizes.map((size) => (
-                            <option value={size}>{size}</option>
-                        ))}
-                    </Form.Select>
-                    <div style={{ marginTop: "auto" }}>
-                        <Button className="product-btn mx-auto" onClick={() => {
-                                /* deep copy product */
-                                let copy = JSON.parse(JSON.stringify(product));
-                                copy.selected = size;
-                                onAdd(copy);
-                            }} variant="outline-dark" >
-                            <p className="product-button-center">Add to Cart</p>
-                        </Button>
-                    </div>
+                    <Form noValidate validated={validated} onSubmit={handleSubmit} style={{margin: "auto 0 0"}}>
+                        {product.sizes && (
+                            <Form.Group required>
+                                <Form.Select name="size" required size="sm" onChange={handleSize} style={{fontSize: `calc(10px + 0.3vw)`, borderRadius: "24px", margin: "8px 0 6px", paddingLeft: `calc(9px + 0.3vw)`}}>
+                                    <option selected disabled value="">Select size...</option>
+                                    {product.sizes && product.sizes.map((size) => (
+                                        <option value={size}>{size}</option>
+                                    ))}
+                                </Form.Select>
+                                <Form.Control.Feedback type="invalid">
+                                    Please select a size
+                                </Form.Control.Feedback>
+                            </Form.Group>
+                        )}
+
+                        <div style={{ marginTop: "auto" }}>
+                            <Button type="submit" className="product-btn mx-auto" variant="outline-dark">
+                                <p className="product-button-center">Add to Cart</p>
+                            </Button>
+                        </div>
+                    </Form>
                 </Card.Body>
             </Card>
         </div>

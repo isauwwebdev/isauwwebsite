@@ -1502,10 +1502,3 @@ select:invalid {
 	color: #212529;
 	font-weight: 300;
 }
-
-.show {
-	visibility: visible;
-}
-.hide {
-	visibility: hidden;
-}
