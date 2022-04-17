@@ -269,7 +269,7 @@ function Cart(props) {
 
             <Modal size="lg" centered show={showModal} onHide={() => {setShowModal(false)}}>
                 <Modal.Header closeButton>
-                    <Modal.Title style={{textTransform: "uppercase", fontFamily: "brandon_grotesqueblack, sans-serif", fontSize: "2.6rem"}}>Thanks for your order {order.firstName}</Modal.Title>
+                    <Modal.Title style={{textTransform: "uppercase", fontFamily: "brandon_grotesqueblack, sans-serif", fontSize: `calc(21px + 1.2vw)`}}>Thanks for your order</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="row"><h4 style={{fontWeight: "600"}}>Order # {order.id}</h4></div>
