@@ -40,7 +40,7 @@ function Product(props) {
                     <Card.Subtitle className="product-desc">{product.desc}</Card.Subtitle>
                     <Form noValidate validated={validated} onSubmit={handleSubmit} style={{margin: "auto 0 0"}}>
                         {product.sizes && (
-                            <Form.Group required>
+                            <Form.Group>
                                 <Form.Select name="size" required size="sm" onChange={handleSize} style={{fontSize: `calc(10px + 0.3vw)`, borderRadius: "24px", margin: "8px 0 6px", paddingLeft: `calc(9px + 0.3vw)`}}>
                                     <option selected disabled value="">Select size...</option>
                                     {product.sizes && product.sizes.map((size) => (

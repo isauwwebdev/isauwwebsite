@@ -1481,7 +1481,7 @@ a[type='button'] {
 }
 
 .invalid-feedback {
-	font-size: 12px;
+	font-size: calc(9px + 0.3vw);
 }
 .form-floating>label {
 	padding: 0.75rem 0.75rem;

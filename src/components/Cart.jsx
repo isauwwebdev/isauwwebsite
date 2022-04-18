@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import _uniqueId from 'lodash/uniqueId';
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Modal from 'react-bootstrap/Modal';
@@ -71,7 +70,7 @@ function Cart(props) {
         formData.append('totalPrice', order.totalPrice);
         var result = ""; 
         order.cartItems.map((item) => {
-            if (result != "") {
+            if (result !== "") {
                 result += "\n"
             }
             result += item.qty + "x " + item.name + " (" + item.selected + ")"; 
@@ -136,14 +135,14 @@ function Cart(props) {
                             <h3 style={{ float: "left", margin: "0", fontWeight: "600", fontSize: `calc(16px + 0.1vw)` }}>Your Bag</h3>
                         </Col>
                         <Col xs={4}>
-                            <p style={{ float: "right", margin: "0", fontSize: `calc(16px + 0.1vw)` }}>{cartItems.length} item{cartItems.length == 1 ? "" : "s"}</p>
+                            <p style={{ float: "right", margin: "0", fontSize: `calc(16px + 0.1vw)` }}>{cartItems.length} item{cartItems.length === 1 ? "" : "s"}</p>
                         </Col>
                         <hr/>
                     </Offcanvas.Header>
                 </Row>
 
                 <Offcanvas.Body>
-                    {cartItems.length == 0 && 
+                    {cartItems.length === 0 && 
                         <div className='text-center' style={{ marginTop: "64px" }}>
                             <img alt="isauwbird" className="mx-auto" src="../images/isauwbird-white.png" style={{ width: "20%", filter: `contrast(0.8)` }} />
                             <h3 style={{ textAlign: "center", fontSize: `calc(14px + 0.1vw)`, marginTop: "24px" }}>Your shopping bag is empty</h3>
@@ -165,7 +164,7 @@ function Cart(props) {
                                         <button className="btn shop-btn" onClick={() => alert("Not yet implemented.")} style={{ width: "50%", borderRight: "1px solid rgba(0,0,0,.125)" }}>Edit</button>
                                         <button className="btn shop-btn" onClick={() => {
                                             onRemove(item);
-                                            if (JSON.parse(sessionStorage.getItem('cookies')).length == 0) {
+                                            if (JSON.parse(sessionStorage.getItem('cookies')).length === 0) {
                                                 setShowCheckout(false);
                                             }
                                         }} style={{ width: "50%" }}>Remove</button>
@@ -198,7 +197,7 @@ function Cart(props) {
                                     <div className="col-6" style={{paddingRight: "6px"}}>
                                         <Form.Group>
                                             <FloatingLabel label="First Name" >
-                                                <Form.Control name="Name" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                                                <Form.Control name="first-name" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
                                                 <Form.Control.Feedback type="invalid">
                                                     Please enter your first name
                                                 </Form.Control.Feedback>
@@ -208,7 +207,7 @@ function Cart(props) {
                                     <div className="col-6" style={{paddingLeft: "6px"}}>
                                         <Form.Group>
                                             <FloatingLabel label="Last Name" >
-                                                <Form.Control name="Name" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                                                <Form.Control name="family-name" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="First Name" required></Form.Control>
                                                 <Form.Control.Feedback type="invalid">
                                                     Please enter your last name
                                                 </Form.Control.Feedback>
@@ -219,7 +218,7 @@ function Cart(props) {
 
                                 <Form.Group style={{margin: "16px 0"}}>
                                     <FloatingLabel label="Phone" >
-                                        <Form.Control name="Phone" type="tel" onChange={(e) => handlePhoneInput(e)} placeholder="Phone" value={phone} pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}" title="Please enter a valid phone number." required></Form.Control>
+                                        <Form.Control name="tel" type="tel" onChange={(e) => handlePhoneInput(e)} placeholder="Phone" value={phone} pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}" title="Please enter a valid phone number." required></Form.Control>
                                         <Form.Control.Feedback type="invalid">
                                             Please enter a valid US phone number
                                         </Form.Control.Feedback>
@@ -228,7 +227,7 @@ function Cart(props) {
 
                                 <Form.Group style={{margin: "16px 0"}}>
                                     <FloatingLabel label="Email" >
-                                        <Form.Control name="Email" type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Email" required></Form.Control>
+                                        <Form.Control name="email" type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Email" required></Form.Control>
                                         <Form.Control.Feedback type="invalid">
                                             Please enter a valid email address
                                         </Form.Control.Feedback>
@@ -237,7 +236,7 @@ function Cart(props) {
 
                                 <Form.Group style={{margin: "16px 0"}}>
                                     <FloatingLabel label="Venmo" >
-                                        <Form.Control name="Venmo" type="text" onChange={(e) => {setVenmo(e.target.value)}} placeholder="Email" required></Form.Control>
+                                        <Form.Control name="username" type="text" onChange={(e) => {setVenmo(e.target.value)}} placeholder="Email" required></Form.Control>
                                         <Form.Control.Feedback type="invalid">
                                             Please enter a valid venmo username
                                         </Form.Control.Feedback>
@@ -257,7 +256,6 @@ function Cart(props) {
                                         </Form.Control.Feedback>
                                     </FloatingLabel>
                                 </Form.Group>
-
 
                                 <button type="submit" className="btn btn-dark" style={{margin: "24px 0 0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px" }}>Checkout</button>
                             </Form>
