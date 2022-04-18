@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import Product from './Product';
-import { IoFolderOutline } from 'react-icons/io5'
 import Cart from './Cart';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import products from '../data/products.json';
+import { IoFolderOutline } from 'react-icons/io5'
 import $ from 'jquery';
 
 function Shop(props) {    
     const [cartItems, setCartItems] = useState(sessionStorage.getItem('cookies') ? JSON.parse(sessionStorage.getItem('cookies')) : []);
     const [showCart, setShowCart] = useState(false);
+    const [showCheckout, setShowCheckout] = useState(false);
+
     const handleClose = () => setShowCart(false);
     const handleOpen = () => setShowCart(true);
 
     const onAdd = (product) => {
+        setShowCheckout(false);
         const exist = cartItems.find((x) => ((x.id == product.id) && (x.selected == product.selected)));
         if (exist) {
             setCartItems(() => {
@@ -116,7 +119,7 @@ function Shop(props) {
                             </span>
                         </Col>
                     </Row>
-                    <Cart onRemove={onRemove} cartItems={cartItems} showCart={showCart} onHide={handleClose} clearCart={clearCart}></Cart>
+                    <Cart onRemove={onRemove} cartItems={cartItems} showCart={showCart} onHide={handleClose} clearCart={clearCart} showCheckout={showCheckout} setShowCheckout={setShowCheckout}></Cart>
 
                     <Row>
                         {products.map((product, i) => {

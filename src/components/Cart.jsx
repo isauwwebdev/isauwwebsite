@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
+import _uniqueId from 'lodash/uniqueId';
+import FloatingLabel from 'react-bootstrap/FloatingLabel'
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import Modal from 'react-bootstrap/Modal';
+import Card from 'react-bootstrap/Card';
+import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import _uniqueId from 'lodash/uniqueId';
-import Form from 'react-bootstrap/Form';
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
 
 function Cart(props) {
-    const {cartItems, onRemove, showCart, onHide, clearCart} = props;
+    const {cartItems, onRemove, showCart, onHide, clearCart, showCheckout, setShowCheckout} = props;
     const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
-    const [showCheckout, setShowCheckout] = useState(false);
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
@@ -20,7 +18,7 @@ function Cart(props) {
     const [venmo, setVenmo] = useState("");
     const [pickup, setPickup] = useState("");
 
-    const [showModal, setShowModal] = useState(false);
+    const [showReceipt, setShowReceipt] = useState(false);
     const [order, setOrder] = useState({
         id: "",
         name: "",
@@ -87,7 +85,7 @@ function Cart(props) {
 
         onHide();
         setShowCheckout(false);
-        setShowModal(true);
+        setShowReceipt(true);
         clearCart();
     }
 
@@ -267,7 +265,7 @@ function Cart(props) {
                 </Offcanvas.Body>
             </Offcanvas>
 
-            <Modal size="lg" centered show={showModal} onHide={() => {setShowModal(false)}}>
+            <Modal size="lg" centered show={showReceipt} onHide={() => {setShowReceipt(false)}}>
                 <Modal.Header closeButton>
                     <Modal.Title style={{textTransform: "uppercase", fontFamily: "brandon_grotesqueblack, sans-serif", fontSize: `calc(21px + 1.2vw)`}}>Thanks for your order</Modal.Title>
                 </Modal.Header>
@@ -297,9 +295,6 @@ function Cart(props) {
                         <div className="row"><div className="col">Time: {(order.date).split(", ").slice(1)}</div></div>
                     </div>
                 </Modal.Body>
-                {/* <Modal.Footer>
-                    <Button onClick={() => {setShowModal(false)}}>Close</Button>
-                </Modal.Footer> */}
             </Modal>
         </div>
     );

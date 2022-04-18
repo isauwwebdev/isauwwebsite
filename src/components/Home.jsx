@@ -1,9 +1,9 @@
-import Carousel from 'react-bootstrap/Carousel';
+import React from 'react';
 import Purpose from './Purpose';
 import InstaFeed from './InstaFeed';
-import React from 'react';
 import UpcomingEventsGallery from './UpcomingEventsGallery';
 import Container from 'react-bootstrap/Container';
+import Carousel from 'react-bootstrap/Carousel';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { IoBagHandleOutline } from 'react-icons/io5'
 import Fade from 'react-reveal/Fade';
