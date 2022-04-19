@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 
 function KeratonAbout() {
     return (
-        <div>
+        <div className="pb-5">
             <Container className="keraton-about">
                 <h1 className="mt-5 keraton-about-header"><strong>ABOUT</strong></h1>
                 <p className="keraton-about-text">

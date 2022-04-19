@@ -941,7 +941,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 /* Ensures that the height of all the upcoming event slides is equal to the slide with the maximum height */
-.slick-track {
+.past-events-card .slick-track {
+	display: flex !important;
+}
+
+.upcoming-event-gal .slick-track {
 	display: flex !important;
 }
 
@@ -980,8 +984,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		width: 33%;
 	}
 
-	.keraton-food-row {
-		flex-direction: column;
+	.slider-performer-row {
+		flex-direction: column-reverse;
 	}
 }
 
@@ -990,8 +994,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		width: 48%;
 	}
 
-	.keraton-food-row {
-		flex-direction: column;
+	.slider-performer-row {
+		flex-direction: column-reverse;
 	}
 }
 
@@ -1000,8 +1004,8 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		width: 70%;
 	}
 
-	.keraton-food-row {
-		flex-direction: column;
+	.slider-performer-row {
+		flex-direction: column-reverse;
 	}
 }
 
@@ -1243,12 +1247,6 @@ a[type='button'] {
 }
 
 /* Keraton Page */
-.owl-theme .item {
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-}
-
 .keraton-header {
 	font-family: 'Monoton', cursive;
 	font-size: calc(3.8vw + 16px);
@@ -1260,7 +1258,77 @@ a[type='button'] {
 	font-size: calc(2.2vw + 16px);
 }
 
-.keraton-about {
+.keraton-performers-header {
+	text-align: center;
+}
+/*
+.keraton-performer-slider:before {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom : 75%;
+    content: "";
+    background: linear-gradient(0deg,transparent, #031B28);
+    z-index: 99;
+}
+
+.keraton-performer-slider:after {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 75%;
+    bottom : 0;
+    content: "";
+    background: linear-gradient(0deg, #031B28, transparent);
+    z-index: 99;
+}
+*/
+.keraton-performer-slider .slick-list .slick-track .slick-slide {
+	max-height: calc(2vw + 150px);
+	padding: 0;
+	margin: 0;
+}
+
+.keraton-performer-slider .slick-list .slick-track .slick-slide > div {
+	padding: 0;
+	margin: 0;
+}
+
+.slider-performer-row {
+	display: flex;
+}
+
+.slick-vertical .slick-current {
+	color: #E89C31;
+}
+
+.performer-name {
+	font-size: calc(1.6vw + 16px);
+	font-weight: 700;
+}
+
+.performer-details {
+	font-size: calc(0.4vw + 12px);
+}
+
+.performer-social {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.performer-img-container {
+	overflow: hidden;
+}
+
+.performer-img-container img {
+	width: 100%;
+	height: 100%;
+	transition: 0.8s;
+}
+
+.performer-img-container img:hover {
+	transform: scale(1.1);
 }
 
 .keraton-about-header {
@@ -1275,87 +1343,6 @@ a[type='button'] {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: normal;
-}
-
-.keraton-food {
-	text-align: center;
-}
-
-.keraton-food-header {
-	letter-spacing: 5px;
-	font-size: calc(2.8vw + 16px);
-	font-weight: bold;
-}
-
-.keraton-food-row {
-	display: flex;
-	align-items: stretch;
-	margin: 5px;
-}
-
-.keraton-food-col {
-	margin: 10px;
-}
-
-.keraton-food-card {
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	border: none;
-	border-radius: 0;
-	box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.2);
-	position: relative;
-	padding: 20%;
-	background-image: linear-gradient(to bottom right, #811B16, #85754d);
-	margin: 5px;
-	transform-style: preserve-3d; 
-	border-radius: 10px;
-	-webkit-transition: 200ms;
-	-ms-transition: 200ms;
-	transition: 200ms;
-	cursor: pointer;
-	transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
-}
-
-.keraton-food-card:hover {
-	--translate-y: -3px;
-}
-
-.keraton-food-card .front,
-.keraton-food-card .back {
-	position: absolute;
-	backface-visibility: hidden;
-	padding: 1.5rem;
-}
-
-.keraton-food-card .back {
-	height: 100%;
-	width: 100%;
-	background-color: #f0e4ca;
-	border-radius: 10px;
-	transform: rotateY(180deg);
-}
-
-.keraton-food-card.flip {
-	--rotate-y: 180deg;
-}
-
-.keraton-food-title {
-	font-size: calc(16px + 0.7vw);
-	font-weight: 700;
-	color: white;
-}
-
-.back-card-header img {
-	margin: auto;
-	height: 50px !important;
-	width: 50px !important;
-}
-
-.keraton-food-sub-title {
-	font-size: calc(12px + 0.4vw);
-	font-weight: 500;
-	color: black;
 }
 
 .keraton-countdown-card {
@@ -1383,34 +1370,6 @@ a[type='button'] {
 	font-size: calc(8px + 0.4vw);
 	font-weight: 400;
 	color: white;
-}
-
-.keraton-performers {
-	text-align: center;
-}
-
-.keraton-performers-header {
-	letter-spacing: 5px;
-	font-size: calc(3.8vw + 16px);
-	font-weight: bold;
-}
-
-.keraton-performers-sub-header {
-	letter-spacing: 5px;
-	font-size: calc(1.2vw + 16px);
-	font-weight: bold;
-}
-
-.performer-name {
-	letter-spacing: 3px;
-	font-size: calc(1.3vw + 12px);
-	font-weight: bold;
-}
-
-.student-performer-name {
-	letter-spacing: 3px;
-	font-size: calc(0.8vw + 10px);
-	font-weight: bold;
 }
 
 .shop-btn {
@@ -1456,19 +1415,21 @@ a[type='button'] {
 	font-family: 'Apple Chancery';
 }
 
-.keraton-get-involved-button1 {  
-	width: 40%;  
-	height: 80px;  
-	border: 0px;  
-	background-color: lightblue;  /*can be background images if you want*/
-	display: flex; 
+.keraton-get-involved-button1 {
+	width: 40%;
+	height: 80px;
+	border: 0px;
+	background-color: lightblue;
+	/*can be background images if you want*/
+	display: flex;
 	justify-content: center;
-	margin-left: 30%;  
+	margin-left: 30%;
 	align-items: center;
-	text-decoration: none;   
-} 
+	text-decoration: none;
+}
 
-.keraton-games, .keraton-competition{
+.keraton-games,
+.keraton-competition {
 	text-align: center;
 	font-family: 'Chalkduster';
 }
