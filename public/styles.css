@@ -1435,12 +1435,7 @@ a[type='button'] {
 	text-decoration: none;
 }
 
-<<<<<<< HEAD
-.keraton-games,
-.keraton-competition {
-=======
 .keraton-games, .keraton-competition {
->>>>>>> adfbedf38d14128e45a9ce5bef1333de387031f1
 	text-align: center;
 	font-family: 'Chalkduster';
 }
