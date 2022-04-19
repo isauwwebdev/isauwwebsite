@@ -987,6 +987,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.slider-performer-row {
 		flex-direction: column-reverse;
 	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 549px) {
@@ -997,6 +1002,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.slider-performer-row {
 		flex-direction: column-reverse;
 	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 383px) {
@@ -1006,6 +1016,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.slider-performer-row {
 		flex-direction: column-reverse;
+	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
 	}
 }
 
@@ -1104,8 +1119,8 @@ video {
 	content: attr(data-after);
 	display: inline-block;
 	position: absolute;
-	top:50%;
-	left:42%;
+	top: 50%;
+	left: 42%;
 	font-size: 12px;
 }
 
@@ -1265,41 +1280,83 @@ a[type='button'] {
 	font-size: calc(2.2vw + 16px);
 }
 
-.keraton-performers-header {
-	text-align: center;
-}
-/*
-.keraton-performer-slider:before {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom : 75%;
-    content: "";
-    background: linear-gradient(0deg,transparent, #031B28);
-    z-index: 99;
+@font-face {
+	font-family: 'Hot Mess';
+	src: url('../fonts/hot-mess/Hot Mess.ttf') format('truetype'),
+		url("../fonts/hot-mess/HotMessSVG.otf") format("opentype");
 }
 
-.keraton-performer-slider:after {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 75%;
-    bottom : 0;
-    content: "";
-    background: linear-gradient(0deg, #031B28, transparent);
-    z-index: 99;
+.keraton-performers {
+	font-family: 'Hot Mess', sans-serif;
 }
-*/
+
+.keraton-performers-header {
+	text-align: center;
+	color: #E89C31;
+	font-size: calc(2.4vw + 16px)
+}
+
+@media only screen and (min-width: 991px) {
+	.keraton-performer-slider:before {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 70%;
+		content: "";
+		background: linear-gradient(0deg, transparent, #031B28);
+		z-index: 99;
+	}
+
+	.keraton-performer-slider:after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 70%;
+		bottom: 0;
+		content: "";
+		background: linear-gradient(0deg, #031B28, transparent);
+		z-index: 99;
+	}
+}
+
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
 	max-height: calc(2vw + 150px);
 	padding: 0;
 	margin: 0;
 }
 
-.keraton-performer-slider .slick-list .slick-track .slick-slide > div {
+.keraton-performer-slider .slick-list .slick-track .slick-slide>div {
 	padding: 0;
 	margin: 0;
+}
+
+.slider-performer-img {
+	position: relative;
+}
+
+.slider-performer-img:after {
+	display: block;
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	border-top: 10px solid #E89C31;
+	border-right: 10px solid #E89C31;
+}
+
+.slider-performer-img:before {
+	display: block;
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	border-bottom: 10px solid #E89C31;
+	border-left: 10px solid #E89C31;
 }
 
 .slider-performer-row {
@@ -1311,12 +1368,12 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-size: calc(1.6vw + 16px);
+	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-size: calc(0.4vw + 12px);
+	font-size: calc(0.8vw + 12px);
 }
 
 .performer-social {
@@ -1435,7 +1492,8 @@ a[type='button'] {
 	text-decoration: none;
 }
 
-.keraton-games, .keraton-competition {
+.keraton-games,
+.keraton-competition {
 	text-align: center;
 	font-family: 'Chalkduster';
 }
@@ -1443,10 +1501,13 @@ a[type='button'] {
 .invalid-feedback {
 	font-size: calc(9px + 0.3vw);
 }
+
 .form-floating>label {
 	padding: 0.75rem 0.75rem;
 }
-.form-floating>.form-control, .form-floating>.form-select {
+
+.form-floating>.form-control,
+.form-floating>.form-select {
 	height: calc(3rem + 2px);
 	font-size: 14px;
 	line-height: 1.5;
@@ -1457,6 +1518,7 @@ a[type='button'] {
 	padding-top: 16px;
 	padding-bottom: 0;
 }
+
 /* first dropdown text */
 select:invalid {
 	color: #212529;
