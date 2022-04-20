@@ -1286,14 +1286,11 @@ a[type='button'] {
 		url("../fonts/hot-mess/HotMessSVG.otf") format("opentype");
 }
 
-.keraton-performers {
-	font-family: 'Hot Mess', sans-serif;
-}
-
 .keraton-performers-header {
+	font-family: 'Hot Mess', sans-serif;
 	text-align: center;
 	color: #E89C31;
-	font-size: calc(2.4vw + 16px)
+	font-size: calc(2.8vw + 26px)
 }
 
 @media only screen and (min-width: 991px) {
@@ -1368,11 +1365,13 @@ a[type='button'] {
 }
 
 .performer-name {
+	font-family: 'Hot Mess', sans-serif;
 	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
+	font-family: sans-serif;
 	font-size: calc(0.8vw + 12px);
 }
 
