@@ -1397,8 +1397,11 @@ a[type='button'] {
 .keraton-about-header {
 	text-align: center;
 	letter-spacing: 5px;
+	padding-top: 3rem;
 	font-size: calc(2.8vw + 16px);
 	font-weight: bold;
+	color:white;
+	background-color: #031B28;
 }
 
 .keraton-about-text {
@@ -1406,6 +1409,7 @@ a[type='button'] {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: normal;
+	color: white;
 }
 
 .keraton-countdown-card {

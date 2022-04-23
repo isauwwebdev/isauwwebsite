@@ -5,7 +5,7 @@ import KeratonCountdown from './KeratonCountdown';
 
 function KeratonVideo() {
     return (
-        <div className="navbar-overlay keraton-video">
+        <div className="navbar-overlay keraton-video" style={{ "background-color": "#031B28"}}>
             <video playsinline="playsinline" autoplay="autoplay" muted loop style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover" }}>
                 <source src="http://students.washington.edu/isauw/images/keraton-2018-new.mp4" type="video/mp4"></source>
             </video>
