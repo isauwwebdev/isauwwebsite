@@ -142,6 +142,11 @@ body,
 	src: url('../fonts/Cervanttis/Cervanttis.ttf') format('truetype');
 }
 
+@font-face {
+	font-family: 'palm-canyon';
+	src: url('../fonts/palm-canyon/PalmCanyon.otf') format('opentype');
+}
+
 /* Preloader */
 #preloader {
 	position: fixed;
