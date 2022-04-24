@@ -1,326 +1,301 @@
 [
     {
-        "id": 1,
-        "name": "PERMIAS Seattle",
-        "contact": "Wendy Sunanda",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
+        "name": "Food",
+        "index": 0,
+        "icon": "",
+        "vendors": [
             {
-                "name": "Ayam Geprek",
-                "price": 0,
-                "notes": ""
+                "name": "PERMIAS Seattle",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Ayam Geprek"
+                    },
+                    {
+                        "name": "Tiramisu"
+                    }            
+                ]
+            },
+            {
+                "name": "ISASU (Seattle U)",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Telor Gulung"
+                    },
+                    {
+                        "name": "Pisang Goreng"
+                    },
+                    {
+                        "name": "Makaroni Goreng"
+                    },
+                    {
+                        "name": "Lidi-lidi An Goreng"
+                    }
+                ]
+            },
+            {
+                "name": "Jajanan Indo",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Martabak Mini"
+                    },
+                    {
+                        "name": "Martabak Telur"
+                    },
+                    {
+                        "name": "Pancake Durian"
+                    },
+                    {
+                        "name": "Jasuke"
+                    },
+                    {
+                        "name": "Lumpia Veggie"
+                    },
+                    {
+                        "name": "Pancit Bihon"
+                    },
+                    {
+                        "name": "Fried Chicken"
+                    }
+                ]
+            },
+            {
+                "name": "Indonesian Eatery",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Siomay Bandung"
+                    },
+                    {
+                        "name": "Bakmi Ayam"
+                    },
+                    {
+                        "name": "Bakmi Kepiting"
+                    },
+                    {
+                        "name": "Kue Lapis"
+                    },
+                    {
+                        "name": "Ayam Bakar"
+                    },
+                    {
+                        "name": "Ketoprak"
+                    },
+                    {
+                        "name": "Tongseng"
+                    }           
+                ]
+            },
+            {
+                "name": "Bellevue Indonesian Club",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Roti Panggang"
+                    },
+                    {
+                        "name": "Es Buah"
+                    }
+                ]
+            },
+            {
+                "name": "Indonesian Student Community",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Roti Panggang"
+                    },
+                    {
+                        "name": "Es Buah"
+                    }
+                ]
+            },
+            {
+                "name": " Liv's Kitchen",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Nasi Padang"
+                    },
+                    {
+                        "name": "Nasi Kuning"
+                    },
+                    {
+                        "name": "Nasi Cumi Hitam"
+                    },
+                    {
+                        "name": "Batagor Bowl"
+                    },
+                    {
+                        "name": "Soto Padang"
+                    },
+                    {
+                        "name": "Risoles"
+                    },
+                    {
+                        "name": "Lumpia Semarang"
+                    },
+                    {
+                        "name": "Bakwan Sayur"
+                    },
+                    {
+                        "name": "Aneka Sambal"
+                    }
+                ]
+            },
+            {
+                "name": "Solar Chapter Seattle",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Sate"
+                    },
+                    {
+                        "name": "Cireng"
+                    },
+                    {
+                        "name": "Kain Makna"
+                    }
+                ]
+            },
+            {
+                "name": "Coco Pandan",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Martabak"
+                    },
+                    {
+                        "name": "Pandan Chiffon Slice"
+                    },
+                    {
+                        "name": "Bolu Gulung (Roll Cake)"
+                    },
+                    {
+                        "name": "Kue Pepe (Steamed Layer Cake)"
+                    },
+                    {
+                        "name": "Crispy Spring Roll"
+                    }
+                ]
+            },
+            {
+                "name": "Pantjoeran UW",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Takoyaki"
+                    },
+                    {
+                        "name": "Okonomiyaki"
+                    }
+                ]
+            },
+            {
+                "name": "Raja Kaki Lima",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Se'i Sapi"
+                    },
+                    {
+                        "name": "Pempek"
+                    },
+                    {
+                        "name": "Ekkado"
+                    },
+                    {
+                        "name": "Kerupuk"
+                    }                  
+                ]
+            },
+            {
+                "name": "Indonesian Student Organization",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Salted Egg Chicken"
+                    },
+                    {
+                        "name": "Chicken Skin"
+                    },
+                    {
+                        "name": "Cimol"
+                    }
+                ]
+            },
+            {
+                "name": "Indomie by Indofood",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Indomie"
+                    }
+                ]
             }
         ]
     },
     {
-        "id": 2,
-        "name": "ISASU (Seattle U)",
-        "contact": "Darren Jonany",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
+        "name": "Drinks",
+        "index": 1,
+        "icon": "",
+        "vendors": [
             {
-                "name": "Telor Gulung",
-                "price": 0,
-                "notes": ""
+                "name": "Kopi Keraton",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Kopi Susu Gula Aren"
+                    },
+                    {
+                        "name": "Kopi Hitam"
+                    },
+                    {
+                        "name": "Kopi and Coconut Water"
+                    },
+                    {
+                        "name": "Milo Dinosaur"
+                    },
+                    {
+                        "name": "Pandan Latte"
+                    }
+                ]
             },
             {
-                "name": "Pisang Goreng",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Makaroni Goreng",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Lidi-lidi An Goreng",
-                "price": 0,
-                "notes": ""
+                "name": "ISAUW Drinks",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Bottled Drinks"
+                    },
+                    {
+                        "name": "Canned Drinks"
+                    },
+                    {
+                        "name": "Teh Botol/Teh Kotak"
+                    }              
+                ]
             }
         ]
     },
     {
-        "id": 3,
-        "name": "Jajanan Indo",
-        "contact": "Widiana Sepang",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
+        "name": "Merch",
+        "index": 2,
+        "icon": "",
+        "vendors": [
             {
-                "name": "Martabak Mini 1 Topping",
-                "price": 3.5,
-                "notes": "Cheese, Chocolate, Peanut, Nutella "
-            },
-            {
-                "name": "Martabak Telur",
-                "price": 6,
-                "notes": "4 pieces"
-            },
-            {
-                "name": "Pancake Durian",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Jasuke",
-                "price": 0,
-                "notes": "Keju Pedas Manis, Coklat Keju Manis"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Indonesian Eatery",
-        "contact": "Ervi Gordong",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Siomay Bandung",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Bakmi Ayam",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Bakmi Kepiting",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Kue Lapis",
-                "price": 3,
-                "notes": ""
-            },
-            {
-                "name": "Kue Nagasari",
-                "price": 3,
-                "notes": ""
-            },
-            {
-                "name": "Arem-Arem",
-                "price": 3,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Bellevue College",
-        "contact": "Joylyn Subali",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Roti Panggang",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Es Buah",
-                "price": 0,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 6,
-        "name": "Shoreline CC",
-        "contact": "Aiko",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": []
-    },
-    {
-        "id": 7,
-        "name": " Liv's Kitchen",
-        "contact": "Olivia Sunandar",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Nasi Padang",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Nasi Kuning",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Batagor Bowl",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Soto Padang Bowl",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Martabak Telur",
-                "price": 0,
-                "notes": "Vegetarian/Daging"
-            },
-            {
-                "name": "Lumpia Semarang",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Bala-bala",
-                "price": 0,
-                "notes": "Vegetarian/Daging"
-            },
-            {
-                "name": "Risoles",
-                "price": 0,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 8,
-        "name": "Solar Chapter Seattle",
-        "contact": "Ekin Njotoatmodjo",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Lidi",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Cireng",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Seblak",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Pie susu",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Bakso",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Tahu isi",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Kain Makna",
-                "price": 30,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 9,
-        "name": "Coco Pandan",
-        "contact": "Michelle Chandradinata",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Assorted Mini Martabak",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Mango sticky rice",
-                "price": 9,
-                "notes": ""
-            },
-            {
-                "name": "Steamed layer cake",
-                "price": 2.5,
-                "notes": ""
-            },
-            {
-                "name": "Pandan chiffon cake",
-                "price": 0,
-                "notes": "original, cheese, choco sprinkles"
-            },
-            {
-                "name": "Lotus Flower Cookie",
-                "price": 2,
-                "notes": ""
-            },
-            {
-                "name": "Lapis Legit",
-                "price": 3.5,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 10,
-        "name": "Pantjoeran UW",
-        "contact": "Angelita Cecilia",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Takoyaki",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Okonomiyaki",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Martabak Mie",
-                "price": 10,
-                "notes": ""
-            },
-            {
-                "name": "Indomie",
-                "price": 10,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 11,
-        "name": "Koepi keraton",
-        "contact": "????",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Es milo",
-                "price": 0,
-                "notes": ""
-            }
-        ]
-    },
-    {
-        "id": 12,
-        "name": "ISAUW drinks",
-        "contact": "????",
-        "img": "../images/keraton/permias-logo.png",
-        "menu": [
-            {
-                "name": "Bottled drinks",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "Bottled drinks",
-                "price": 0,
-                "notes": ""
-            },
-            {
-                "name": "teh botol/ teh kotak",
-                "price": 0,
-                "notes": ""
+                "name": "ISAUW Batik and Merch",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Batik"
+                    },
+                    {
+                        "name": "Merch"
+                    }             
+                ]
             }
         ]
     }
