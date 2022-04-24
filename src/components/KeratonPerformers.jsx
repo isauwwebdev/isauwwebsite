@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useRef } from 'react';
 import Slider from "react-slick";
 
 import Row from 'react-bootstrap/Row';
@@ -15,6 +15,7 @@ import performers from '../data/keraton-performers';
 function KeratonPerformers() {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
+    const customSlider = useRef();
 
     const settingsText = {
         dots: false,
@@ -62,10 +63,12 @@ function KeratonPerformers() {
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-5 slider-performer-row">
                     <Col className="col-6 slider-performer-text">
-                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
+                        <Slider ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
-                                    <PerformerItem key={performer.id} performer={performer}></PerformerItem>
+                                    <a onClick={() => customSlider.current.slickGoTo(1)}>
+                                        <PerformerItem key={performer.id} performer={performer}></PerformerItem>
+                                    </a>
                                 )
                             })}
                         </Slider>
