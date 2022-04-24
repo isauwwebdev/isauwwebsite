@@ -1305,7 +1305,7 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.8vw + 18px);
+	font-size: calc(3.2vw + 10px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: 20px;
 }
@@ -1455,14 +1455,14 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(20px + 0.8vw);
+	font-size: calc(12px + 1.2vw);
 	font-weight: 700;
 	color: white;
 	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
-	font-size: calc(12px + 0.4vw);
+	font-size: calc(6px + 0.8vw);
 	font-weight: 400;
 	color: white;
 }
