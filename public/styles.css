@@ -113,6 +113,35 @@ body,
 
 }
 
+@font-face {
+	font-family: 'butler_ultra_light';
+	src: url('../fonts/butler/Burler-UltraLight.woff') format('woff'),
+		url('../fonts/butler/Burler-UltraLight.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'butler_light';
+	src: url('../fonts/butler/Burler-Light.woff') format('woff'),
+		url('../fonts/butler/Burler-Light.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'butler_stencil_light';
+	src: url('../fonts/butler-stencil/BurlerStencil-Light.woff') format('woff'),
+		url('../fonts/butler/BurlerStencil-Light.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cervanttis';
+	src: url('../fonts/Cervanttis/Cervanttis.ttf') format('truetype');
+}
+
 /* Preloader */
 #preloader {
 	position: fixed;
@@ -1271,9 +1300,9 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.8vw + 16px);
+	font-size: calc(3.8vw + 18px);
 	text-shadow: #606060 0px 0px 10px;
-	letter-spacing: 5px;
+	letter-spacing: 20px;
 }
 
 .keraton-completed {
@@ -1287,7 +1316,7 @@ a[type='button'] {
 }
 
 .keraton-performers-header {
-	font-family: 'Hot Mess', sans-serif;
+	font-family: 'Hot Mess';
 	text-align: center;
 	color: #E89C31;
 	font-size: calc(2.8vw + 26px);
@@ -1397,8 +1426,11 @@ a[type='button'] {
 .keraton-about-header {
 	text-align: center;
 	letter-spacing: 5px;
+	padding-top: 3rem;
 	font-size: calc(2.8vw + 16px);
-	font-weight: bold;
+	color:white;
+	background-color: #031B28;
+	font-family: 'butlet_light';
 }
 
 .keraton-about-text {
@@ -1406,6 +1438,7 @@ a[type='button'] {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: normal;
+	color: white;
 }
 
 .keraton-countdown-card {
@@ -1424,13 +1457,14 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(12px + 0.8vw);
+	font-size: calc(20px + 0.8vw);
 	font-weight: 700;
 	color: white;
+	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
-	font-size: calc(8px + 0.4vw);
+	font-size: calc(12px + 0.4vw);
 	font-weight: 400;
 	color: white;
 }
