@@ -1020,6 +1020,15 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.slider-performer-row {
 		flex-direction: column-reverse;
+		align-items: center;
+	}
+
+	.performer-img-col {
+		width: 90%;
+	}
+
+	.slider-performer-text {
+		width: 70%;
 	}
 
 	.performers-container {
@@ -1032,29 +1041,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.jumbotron-desc {
 		width: 48%;
 	}
-
-	.slider-performer-row {
-		flex-direction: column-reverse;
-	}
-
-	.performers-container {
-		margin: auto;
-		justify-content: center;
-	}
 }
 
 @media only screen and (max-width: 383px) {
 	.jumbotron-desc {
 		width: 70%;
-	}
-
-	.slider-performer-row {
-		flex-direction: column-reverse;
-	}
-
-	.performers-container {
-		margin: auto;
-		justify-content: center;
 	}
 }
 
@@ -1344,6 +1335,10 @@ a[type='button'] {
 	}
 }
 
+.keraton-performers {
+	font-family: 'Hot Mess', sans-serif;
+}
+
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
 	max-height: calc(2vw + 150px);
 	padding: 0;
@@ -1355,7 +1350,22 @@ a[type='button'] {
 	margin: 0;
 }
 
-.slider-performer-img {
+.keraton-student-performer .slick-dots li button:before {
+	color: white;
+}
+
+.keraton-student-performer .slick-dots li.slick-active button:before {
+	color: white;
+}
+
+.student-performer-img img.framed {
+	box-shadow:
+    -50px -50px 0 -40px #E89C31,
+    50px 50px 0 -40px #E89C31;
+}
+
+.slider-performer-img, 
+.student-performer-img {
 	position: relative;
 }
 
@@ -1392,13 +1402,11 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-family: 'Hot Mess', sans-serif;
 	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-family: 'Hot Mess', sans-serif;
 	font-size: calc(0.8vw + 12px);
 }
 
@@ -1598,13 +1606,9 @@ select:invalid {
 }
 
 /* KERATON FAQ */
-.keraton-faq-header {
-	color:white;
-	background-color: black;
-}
 .keraton-faq,
 .keraton-faq-item {
-	background-color: black;
+	background-color: #031B28;
 }
 .keraton-faq-item {
 	border-bottom-color: rgba(152, 152, 152, 0.6);
@@ -1624,7 +1628,7 @@ select:invalid {
 	font-size: calc(14px + 0.3vw); 
 	font-family: "Open Sans";
 	font-weight: 600;
-	background-color: black;
+	background-color: #031B28;
 	border-top: none;
 }
 /* accordion body */

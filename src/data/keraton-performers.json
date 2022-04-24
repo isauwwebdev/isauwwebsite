@@ -2,37 +2,49 @@
     {
         "id": 1,
         "name": "Dhruv",
-        "time": "7:00",
+        "time": "7:50",
         "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Singer"
-        
+        "type": "Vocalist"
     },
     {
         "id": 2,
-        "name": "Dhruv",
-        "time": "7:00",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Singer"
-        
+        "name": "Lullaboy",
+        "time": "6:45",
+        "img": "../../images/keraton/performers/lullaboy.jpg",
+        "insta": "https://www.instagram.com/lullaboyxo/",
+        "type": "Vocalist"
     },
     {
         "id": 3,
-        "name": "Dhruv",
-        "time": "7:00",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Singer"
-        
+        "name": "Xavier Weeks",
+        "time": "5:45",
+        "img": "../../images/keraton/performers/xavier-weeks.jpg",
+        "insta": "https://www.instagram.com/xavierweeks/",
+        "type": "Vocalist"
     },
     {
         "id": 4,
         "name": "Dhruv",
-        "time": "7:00",
+        "time": "7:50",
         "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Singer"
-        
+        "type": "Vocalist"
+    },
+    {
+        "id": 5,
+        "name": "Lullaboy",
+        "time": "6:45",
+        "img": "../../images/keraton/performers/lullaboy.jpg",
+        "insta": "https://www.instagram.com/lullaboyxo/",
+        "type": "Vocalist"
+    },
+    {
+        "id": 6,
+        "name": "Xavier Weeks",
+        "time": "5:45",
+        "img": "../../images/keraton/performers/xavier-weeks.jpg",
+        "insta": "https://www.instagram.com/xavierweeks/",
+        "type": "Vocalist"
     }
 ]
