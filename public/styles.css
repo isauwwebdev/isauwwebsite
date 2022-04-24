@@ -1290,7 +1290,7 @@ a[type='button'] {
 	font-family: 'Hot Mess', sans-serif;
 	text-align: center;
 	color: #E89C31;
-	font-size: calc(2.8vw + 26px)
+	font-size: calc(2.8vw + 26px);
 }
 
 @media only screen and (min-width: 991px) {
@@ -1371,7 +1371,7 @@ a[type='button'] {
 }
 
 .performer-details {
-	font-family: sans-serif;
+	font-family: 'Hot Mess', sans-serif;
 	font-size: calc(0.8vw + 12px);
 }
 
@@ -1523,3 +1523,59 @@ select:invalid {
 	color: #212529;
 	font-weight: 300;
 }
+
+/* KERATON FAQ */
+
+.keraton-faq-header {
+	text-align: center;
+	color: white;
+	font-size: calc(1.8vw + 26px)
+}
+
+.keraton-faq-header2 {
+	font-weight: 800;
+	text-align: center;
+	color: white;
+	font-size: calc(0.6vw + 22px)
+}
+
+.keraton-faq,
+.keraton-faq-item {
+	background-color: black;
+}
+
+.keraton-faq-item-header .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.keraton-faq-item {
+	border-bottom-color: rgba(152, 152, 152, 0.6);
+	border-bottom: 5px solid;
+}
+
+.keraton-faq-item .accordion-button {
+	background-color: black;
+	border-top: none;
+}
+
+.keraton-faq-item-header .accordion-button {
+	color: white;
+}
+
+.keraton-faq-item .accordion-body {
+	color: white;
+}
+
+.keraton-faq-item-header .accordion-button:not(.collapsed) {
+	color: #ff5470
+}
+
+.keraton-faq-item .accordion-button:after {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.keraton-faq-item .accordion-button:not(.collapsed):after {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+

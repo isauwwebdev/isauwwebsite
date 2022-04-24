@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Slider from "react-slick";
 
 import Row from 'react-bootstrap/Row';
@@ -28,6 +28,9 @@ function KeratonPerformers() {
         asNavFor: nav2,
         pauseOnHover: true,
         centerMode: true,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -59,7 +62,7 @@ function KeratonPerformers() {
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-5 slider-performer-row">
                     <Col className="col-6 slider-performer-text">
-                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText} vertical={true} verticalSwiping={true}>
+                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
                                     <PerformerItem key={performer.id} performer={performer}></PerformerItem>
