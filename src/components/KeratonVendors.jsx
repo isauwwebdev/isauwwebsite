@@ -24,18 +24,7 @@ function KeratonVendors() {
         infinite: false,
         pauseOnFocus: true,
         pauseOnHover: true,
-        centerMode: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    vertical: false,
-                    verticalSwiping: false,
-                    slidesToShow: 1,
-                    centerMode: false
-                }
-            }
-        ]
+        centerMode: true
     };
 
     const bigSettings = {
@@ -61,12 +50,12 @@ function KeratonVendors() {
     };
 
     return (
-        <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-5 keraton-section-header">Vendors</h1>
-            <Container style={{ "color": "white" }}>
+        <div className="keraton-performers py-5" style={{ backgroundColor: "#031B28", color: "white" }}>
+            <Container>
+                <h1 className="py-5 keraton-section-header">Vendors</h1>
                 <Row className="my-5">
-                    <Col className="col-3">
-                        <Slider ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="slider vendor-slider" {...vendorCategorySettings} vertical={true} verticalSwiping={true}>
+                    <Col xs={3}>
+                        <Slider style={{marginLeft: "auto", marginRight: "0"}} ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="vendor-slider" {...vendorCategorySettings} vertical={true} verticalSwiping={true}>
                             {vendorList.map((category) => {
                                 return (
                                     <a style={{height: "fit-content", display: "inline-block"}} onClick={() => customSlider.current.slickGoTo(category.index)}>
@@ -77,7 +66,7 @@ function KeratonVendors() {
                             })}
                         </Slider>
                     </Col>
-                    <Col className="col-8">
+                    <Col xs={9}>
                         <Slider className="vendor-image-slider" ref={(slider2) => setNav2(slider2)} {...bigSettings}>
                             {vendorList.map((category) => {
                                 return (
@@ -85,8 +74,8 @@ function KeratonVendors() {
                                         {category.vendors.map((vendor) => {
                                             return (
                                                 <Row className="vendor-image-row">
-                                                    <Col xs={4}>
-                                                        <div style={{paddingRight: "40px", paddingTop: "35px"}}> {/* change this padding to be responsive. match padding top with col-8*/}
+                                                    <Col xs={5}>
+                                                        <div style={{paddingRight: "20px", paddingTop: "35px"}}> {/* change this padding to be responsive. match padding top with col-8*/}
                                                             <h1 style={{fontFamily: "Open Sans, sans-serif", fontWeight: "700" }}>{vendor.name}</h1>
                                                             {vendor.menu.map((menuItem) => {
                                                                 return (
@@ -97,7 +86,7 @@ function KeratonVendors() {
                                                             }
                                                         </div>
                                                     </Col>
-                                                    <Col xs={8} style={{paddingTop: "35px"}}> {/* change this padding to be responsive*/}
+                                                    <Col xs={7} style={{paddingTop: "35px"}}> {/* change this padding to be responsive*/}
                                                         <div className="vendor-img-container">
                                                             <div style={{position: "relative"}}>
                                                                 <img src={vendor.img} style={{width: "100%", height: "100%", display: "block"}}></img>
