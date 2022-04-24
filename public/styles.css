@@ -1320,13 +1320,6 @@ a[type='button'] {
 		url("../fonts/hot-mess/HotMessSVG.otf") format("opentype");
 }
 
-.keraton-performers-header {
-	font-family: 'Hot Mess';
-	text-align: center;
-	color: #E89C31;
-	font-size: calc(2.8vw + 26px);
-}
-
 @media only screen and (min-width: 991px) {
 	.keraton-performer-slider:before {
 		position: absolute;
@@ -1428,14 +1421,14 @@ a[type='button'] {
 	transform: scale(1.1);
 }
 
-.keraton-about-header {
+.keraton-section-header {
 	text-align: center;
 	letter-spacing: 5px;
 	padding-top: 3rem;
-	font-size: calc(2.8vw + 16px);
-	color:white;
+	font-size: calc(3.0vw + 24px);
+	color:rgb(247 213 161);
 	background-color: #031B28;
-	font-family: 'butlet_light';
+	font-family: 'palm-canyon';
 }
 
 .keraton-about-text {

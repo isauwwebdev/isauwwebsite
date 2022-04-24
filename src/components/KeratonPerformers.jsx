@@ -59,7 +59,7 @@ function KeratonPerformers() {
 
     return (
         <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-5 keraton-performers-header">PERFORMERS</h1>
+            <h1 className="py-5 keraton-section-header">Performers</h1>
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-5 slider-performer-row">
                     <Col className="col-6 slider-performer-text">
