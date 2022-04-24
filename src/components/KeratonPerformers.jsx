@@ -64,6 +64,7 @@ function KeratonPerformers() {
         slidesToScroll: 1,
         autoplaySpeed: 4000,
         infinite: true,
+        centerMode: true, 
         responsive: [
             {
                 breakpoint: 992,
@@ -102,7 +103,7 @@ function KeratonPerformers() {
                         </div>
                     </Col>
                 </Row>
-                <Row className="slider-performer-row">
+                <Row className="slider-student-performer-row">
                     <Col>
                         <Slider className="my-5 keraton-student-performer" {...settingsStudents}>
                             {students.map((student) => {
@@ -144,10 +145,10 @@ function PerformerImage(props) {
 function StudentPerformer(props) {
     const { student } = props;
     return (
-        <div className="mb-5">
+        <div className="mb-2 px-2 mx-5">
             <Row>
-                <div className="student-performer-img">
-                    <img className="framed" src={student.img} style={{ width: '24rem' }}></img>
+                <div className="py-2 px-2 student-performer-img">
+                    <img className="framed" src={student.img} style={{ width: '100%' }}></img>
                 </div>
                 <h2 className="mt-4">{student.name}</h2>
             </Row>

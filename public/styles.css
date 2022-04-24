@@ -1023,6 +1023,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		align-items: center;
 	}
 
+	.slider-student-performer-row {
+		flex-direction: column;
+		align-items: center;
+	}
+
 	.performer-img-col {
 		width: 90%;
 	}
