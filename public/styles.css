@@ -1632,6 +1632,7 @@ select:invalid {
 	color: white;
 	font-size: calc(11px + 0.3vw); 
 	padding-top: 0 !important;
+	padding-bottom: 2rem !important;
 }
 .keraton-faq-item-header .accordion-button:not(.collapsed) {
 	color: #ff5470

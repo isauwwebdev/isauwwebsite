@@ -24,18 +24,7 @@ function KeratonVendors() {
         infinite: false,
         pauseOnFocus: true,
         pauseOnHover: true,
-        centerMode: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    vertical: false,
-                    verticalSwiping: false,
-                    slidesToShow: 1,
-                    centerMode: false
-                }
-            }
-        ]
+        centerMode: true
     };
 
     const bigSettings = {
@@ -61,9 +50,9 @@ function KeratonVendors() {
     };
 
     return (
-        <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-5 keraton-section-header">Vendors</h1>
-            <Container style={{ "color": "white" }}>
+        <div className="keraton-performers py-5" style={{ backgroundColor: "#031B28", color: "white" }}>
+            <Container>
+                <h1 className="py-5 keraton-section-header">Vendors</h1>
                 <Row className="my-5">
                     <Col xs={3}>
                         <Slider style={{marginLeft: "auto", marginRight: "0"}} ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="vendor-slider" {...vendorCategorySettings} vertical={true} verticalSwiping={true}>
