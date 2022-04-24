@@ -1462,3 +1462,40 @@ select:invalid {
 	color: #212529;
 	font-weight: 300;
 }
+
+.vendor-image-row {
+	display: flex !important; /* row will not work without this */
+}
+.vendor-img-container {
+	display: inline-block; 	/* makes div wrap around content */
+	height: 100%;
+	width: 60%;
+}
+.vendor-img-container div::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #eb5942;
+	position: absolute;
+	top: -35px;
+	right: -35px;
+	z-index: -1;
+  }
+.vendor-slider {
+	width: 160px;
+    padding-top: 35px;
+}
+
+.vendor-slider div div div {
+	height: fit-content !important;
+	display: inline-block !important;
+}
+
+.vendor-slider .slick-slide {
+	margin: 20px;
+}
+
+.vendor-image-slider .slick-list {
+	padding-bottom: 30px; /* if not, dots are cut off */
+}

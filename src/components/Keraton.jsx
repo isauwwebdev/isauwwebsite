@@ -9,7 +9,7 @@ import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
 import KeratonActivities from './KeratonActivities';
 import KeratonGetInvolved from './KeratonGetInvolved'
-
+import KeratonVendors from './KeratonVendors';
 
 
 function Keraton() {
@@ -18,7 +18,7 @@ function Keraton() {
         <div>
             <KeratonVideo></KeratonVideo>
             <KeratonAbout></KeratonAbout>
-            <KeratonPerformers></KeratonPerformers>
+            <KeratonVendors></KeratonVendors>
         </div>
     );
 }
