@@ -1425,7 +1425,7 @@ a[type='button'] {
 	text-align: center;
 	letter-spacing: 5px;
 	padding-top: 3rem;
-	font-size: calc(3.0vw + 24px);
+	font-size: calc(40px + 2.0vw);
 	color:rgb(247 213 161);
 	background-color: #031B28;
 	font-family: 'palm-canyon';
@@ -1598,12 +1598,9 @@ select:invalid {
 }
 
 /* KERATON FAQ */
-
 .keraton-faq-header {
-	text-align: center;
-	color: white;
-	font-size: calc(1.8vw + 26px);
-	font-weight: 800
+	color:white;
+	background-color: black;
 }
 .keraton-faq,
 .keraton-faq-item {
@@ -1616,28 +1613,32 @@ select:invalid {
     box-shadow: none;
     border-color: rgba(0,0,0,.125);
 }
+/* accordion area, minus section header */
+.keraton-faq-accordion {
+	padding-top: 1.5rem;
+	padding-bottom: 3rem;
+}
 /* accordion button */
 .keraton-faq-item-header .accordion-button {
 	color: white;
-	font-size: calc(14px + 0.6vw); 
+	font-size: calc(14px + 0.3vw); 
 	font-family: "Open Sans";
 	font-weight: 600;
 	background-color: black;
 	border-top: none;
 }
-
+/* accordion body */
 .keraton-faq-item .accordion-body {
 	color: white;
-	font-size: calc(12px + 0.3vw); 
+	font-size: calc(11px + 0.3vw); 
+	padding-top: 0 !important;
 }
 .keraton-faq-item-header .accordion-button:not(.collapsed) {
 	color: #ff5470
 }
-
 .keraton-faq-item .accordion-button:after {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
-
 .keraton-faq-item .accordion-button:not(.collapsed):after {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }

@@ -11,9 +11,9 @@ function KeratonFAQ() {
     }) 
     return (
         <div className="keraton-faq">
-            <h1 className="pt-5 keraton-faq-header">Frequently Asked Questions</h1>
             <Container>
-                <Accordion defaultActiveKey="0" flush className="py-5 keraton-faq-accordion">
+                <h1 className="pt-5 keraton-faq-header keraton-section-header">Frequently Asked Questions</h1>
+                <Accordion defaultActiveKey="0" flush className="keraton-faq-accordion">
                     {questionItems}
                 </Accordion>
             </Container>
