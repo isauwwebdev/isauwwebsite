@@ -7,7 +7,7 @@ function KeratonAbout() {
     return (
         <div className="pb-5" style={{ "background-color": "#031B28"}}>
             <Container className="keraton-about">
-                <h1 className="keraton-about-header">ABOUT</h1>
+                <h1 className="keraton-section-header">About</h1>
                 <p className="keraton-about-text">
                 Keraton is ISAUW’s largest and most iconic event that is held annually every Spring since 2002 at the University of Washington.
                 This year will be a huge comeback of the event after the two-year pause due to COVID-19. However, we are hoping to come back stronger than ever
