@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import Slider from "react-slick";
 
 import Row from 'react-bootstrap/Row';
@@ -28,6 +28,9 @@ function KeratonPerformers() {
         asNavFor: nav2,
         pauseOnHover: true,
         centerMode: true,
+        vertical: true,
+        verticalSwiping: true,
+        focusOnSelect: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -55,11 +58,11 @@ function KeratonPerformers() {
 
     return (
         <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-5 keraton-performers-header" style={{ "color": "white" }}><strong>PERFORMERS</strong></h1>
-            <Container style={{ "color": "white" }}>
+            <h1 className="py-5 keraton-performers-header">PERFORMERS</h1>
+            <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-5 slider-performer-row">
                     <Col className="col-6 slider-performer-text">
-                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText} vertical={true} verticalSwiping={true}>
+                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
                                     <PerformerItem key={performer.id} performer={performer}></PerformerItem>
@@ -67,14 +70,16 @@ function KeratonPerformers() {
                             })}
                         </Slider>
                     </Col>
-                    <Col className="col-6 slider-performer-img">
-                        <Slider ref={(slider2) => setNav2(slider2)} className="keraton-performer-slider2" {...settingsImg}>
-                            {performers.map((performer) => {
-                                return (
-                                    <PerformerImage key={performer.id} performer={performer}></PerformerImage>
-                                )
-                            })}
-                        </Slider>
+                    <Col className="mb-5 col-6">
+                        <div className="slider-performer-img">
+                            <Slider ref={(slider2) => setNav2(slider2)} className="keraton-performer-slider2" {...settingsImg}>
+                                {performers.map((performer) => {
+                                    return (
+                                        <PerformerImage key={performer.id} performer={performer}></PerformerImage>
+                                    )
+                                })}
+                            </Slider>
+                        </div>
                     </Col>
                 </Row>
             </Container>

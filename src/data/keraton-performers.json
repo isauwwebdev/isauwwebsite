@@ -3,36 +3,36 @@
         "id": 1,
         "name": "Dhruv",
         "time": "7:00",
-        "img": "https://picsum.photos/id/123/500",
+        "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Songwriter/Singer"
+        "type": "Singer"
         
     },
     {
         "id": 2,
         "name": "Dhruv",
         "time": "7:00",
-        "img": "https://picsum.photos/id/124/500",
+        "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Songwriter/Singer"
+        "type": "Singer"
         
     },
     {
         "id": 3,
         "name": "Dhruv",
         "time": "7:00",
-        "img": "https://picsum.photos/id/125/500",
+        "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Songwriter/Singer"
+        "type": "Singer"
         
     },
     {
         "id": 4,
         "name": "Dhruv",
         "time": "7:00",
-        "img": "https://picsum.photos/id/126/500",
+        "img": "../../images/keraton/performers/dhruv.jpg",
         "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Songwriter/Singer"
+        "type": "Singer"
         
     }
 ]

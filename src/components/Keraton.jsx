@@ -8,8 +8,12 @@ import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
 import KeratonActivities from './KeratonActivities';
+<<<<<<< HEAD
 import KeratonGetInvolved from './KeratonGetInvolved'
 import KeratonVendors from './KeratonVendors';
+=======
+import KeratonFAQ from './KeratonFAQ';
+>>>>>>> 052ebad06c160fcd097617bbc193832e6ad839d6
 
 
 function Keraton() {
@@ -18,43 +22,14 @@ function Keraton() {
         <div>
             <KeratonVideo></KeratonVideo>
             <KeratonAbout></KeratonAbout>
+<<<<<<< HEAD
             <KeratonVendors></KeratonVendors>
+=======
+            <KeratonPerformers></KeratonPerformers>
+            <KeratonFAQ></KeratonFAQ>
+>>>>>>> 052ebad06c160fcd097617bbc193832e6ad839d6
         </div>
     );
 }
 
 export default Keraton;
-
-/*
-<KeratonVideo></KeratonVideo>
-            <KeratonCountdown keratonDate={new Date(1651964400000)}></KeratonCountdown>
-            <KeratonAbout></KeratonAbout>
-            <Container>
-                <Accordion defaultActiveKey="0" flush>
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header className="keraton-accordion-header">Performers</Accordion.Header>
-                        <Accordion.Body>
-                            <KeratonPerformers></KeratonPerformers>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="1">
-                        <Accordion.Header className="keraton-accordion-header">Food</Accordion.Header>
-                        <Accordion.Body>
-                            <KeratonFood></KeratonFood>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="2">
-                        <Accordion.Header className="keraton-accordion-header">Activities</Accordion.Header>
-                        <Accordion.Body>
-                            <KeratonActivities></KeratonActivities>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    <Accordion.Item eventKey="3">
-                        <Accordion.Header className="keraton-accordion-header">Get Involved!</Accordion.Header>
-                        <Accordion.Body>
-                            <KeratonGetInvolved></KeratonGetInvolved>
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
-            </Container>
- */

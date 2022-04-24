@@ -113,6 +113,35 @@ body,
 
 }
 
+@font-face {
+	font-family: 'butler_ultra_light';
+	src: url('../fonts/butler/Burler-UltraLight.woff') format('woff'),
+		url('../fonts/butler/Burler-UltraLight.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'butler_light';
+	src: url('../fonts/butler/Burler-Light.woff') format('woff'),
+		url('../fonts/butler/Burler-Light.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'butler_stencil_light';
+	src: url('../fonts/butler-stencil/BurlerStencil-Light.woff') format('woff'),
+		url('../fonts/butler/BurlerStencil-Light.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Cervanttis';
+	src: url('../fonts/Cervanttis/Cervanttis.ttf') format('truetype');
+}
+
 /* Preloader */
 #preloader {
 	position: fixed;
@@ -987,6 +1016,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.slider-performer-row {
 		flex-direction: column-reverse;
 	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 549px) {
@@ -997,6 +1031,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.slider-performer-row {
 		flex-direction: column-reverse;
 	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
+	}
 }
 
 @media only screen and (max-width: 383px) {
@@ -1006,6 +1045,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.slider-performer-row {
 		flex-direction: column-reverse;
+	}
+
+	.performers-container {
+		margin: auto;
+		justify-content: center;
 	}
 }
 
@@ -1104,8 +1148,8 @@ video {
 	content: attr(data-after);
 	display: inline-block;
 	position: absolute;
-	top:50%;
-	left:42%;
+	top: 50%;
+	left: 42%;
 	font-size: 12px;
 }
 
@@ -1256,50 +1300,89 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.8vw + 16px);
+	font-size: calc(3.8vw + 18px);
 	text-shadow: #606060 0px 0px 10px;
-	letter-spacing: 5px;
+	letter-spacing: 20px;
 }
 
 .keraton-completed {
 	font-size: calc(2.2vw + 16px);
 }
 
-.keraton-performers-header {
-	text-align: center;
-}
-/*
-.keraton-performer-slider:before {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom : 75%;
-    content: "";
-    background: linear-gradient(0deg,transparent, #031B28);
-    z-index: 99;
+@font-face {
+	font-family: 'Hot Mess';
+	src: url('../fonts/hot-mess/Hot Mess.ttf') format('truetype'),
+		url("../fonts/hot-mess/HotMessSVG.otf") format("opentype");
 }
 
-.keraton-performer-slider:after {
-	position: absolute;
-    left: 0;
-    right: 0;
-    top: 75%;
-    bottom : 0;
-    content: "";
-    background: linear-gradient(0deg, #031B28, transparent);
-    z-index: 99;
+.keraton-performers-header {
+	font-family: 'Hot Mess';
+	text-align: center;
+	color: #E89C31;
+	font-size: calc(2.8vw + 26px);
 }
-*/
+
+@media only screen and (min-width: 991px) {
+	.keraton-performer-slider:before {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 70%;
+		content: "";
+		background: linear-gradient(0deg, transparent, #031B28);
+		z-index: 99;
+	}
+
+	.keraton-performer-slider:after {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 70%;
+		bottom: 0;
+		content: "";
+		background: linear-gradient(0deg, #031B28, transparent);
+		z-index: 99;
+	}
+}
+
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
 	max-height: calc(2vw + 150px);
 	padding: 0;
 	margin: 0;
 }
 
-.keraton-performer-slider .slick-list .slick-track .slick-slide > div {
+.keraton-performer-slider .slick-list .slick-track .slick-slide>div {
 	padding: 0;
 	margin: 0;
+}
+
+.slider-performer-img {
+	position: relative;
+}
+
+.slider-performer-img:after {
+	display: block;
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	border-top: 10px solid #E89C31;
+	border-right: 10px solid #E89C31;
+}
+
+.slider-performer-img:before {
+	display: block;
+	content: "";
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: -10px;
+	left: -10px;
+	border-bottom: 10px solid #E89C31;
+	border-left: 10px solid #E89C31;
 }
 
 .slider-performer-row {
@@ -1311,12 +1394,14 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-size: calc(1.6vw + 16px);
+	font-family: 'Hot Mess', sans-serif;
+	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-size: calc(0.4vw + 12px);
+	font-family: 'Hot Mess', sans-serif;
+	font-size: calc(0.8vw + 12px);
 }
 
 .performer-social {
@@ -1341,8 +1426,11 @@ a[type='button'] {
 .keraton-about-header {
 	text-align: center;
 	letter-spacing: 5px;
+	padding-top: 3rem;
 	font-size: calc(2.8vw + 16px);
-	font-weight: bold;
+	color:white;
+	background-color: #031B28;
+	font-family: 'butlet_light';
 }
 
 .keraton-about-text {
@@ -1350,6 +1438,7 @@ a[type='button'] {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-weight: normal;
+	color: white;
 }
 
 .keraton-countdown-card {
@@ -1368,13 +1457,14 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(12px + 0.8vw);
+	font-size: calc(20px + 0.8vw);
 	font-weight: 700;
 	color: white;
+	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
-	font-size: calc(8px + 0.4vw);
+	font-size: calc(12px + 0.4vw);
 	font-weight: 400;
 	color: white;
 }
@@ -1435,7 +1525,8 @@ a[type='button'] {
 	text-decoration: none;
 }
 
-.keraton-games, .keraton-competition {
+.keraton-games,
+.keraton-competition {
 	text-align: center;
 	font-family: 'Chalkduster';
 }
@@ -1443,10 +1534,13 @@ a[type='button'] {
 .invalid-feedback {
 	font-size: calc(9px + 0.3vw);
 }
+
 .form-floating>label {
 	padding: 0.75rem 0.75rem;
 }
-.form-floating>.form-control, .form-floating>.form-select {
+
+.form-floating>.form-control,
+.form-floating>.form-select {
 	height: calc(3rem + 2px);
 	font-size: 14px;
 	line-height: 1.5;
@@ -1457,12 +1551,14 @@ a[type='button'] {
 	padding-top: 16px;
 	padding-bottom: 0;
 }
+
 /* first dropdown text */
 select:invalid {
 	color: #212529;
 	font-weight: 300;
 }
 
+<<<<<<< HEAD
 .vendor-image-row {
 	display: flex !important; /* row will not work without this */
 }
@@ -1499,3 +1595,60 @@ select:invalid {
 .vendor-image-slider .slick-list {
 	padding-bottom: 30px; /* if not, dots are cut off */
 }
+=======
+/* KERATON FAQ */
+
+.keraton-faq-header {
+	text-align: center;
+	color: white;
+	font-size: calc(1.8vw + 26px)
+}
+
+.keraton-faq-header2 {
+	font-weight: 800;
+	text-align: center;
+	color: white;
+	font-size: calc(0.6vw + 22px)
+}
+
+.keraton-faq,
+.keraton-faq-item {
+	background-color: black;
+}
+
+.keraton-faq-item-header .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0,0,0,.125);
+}
+
+.keraton-faq-item {
+	border-bottom-color: rgba(152, 152, 152, 0.6);
+	border-bottom: 5px solid;
+}
+
+.keraton-faq-item .accordion-button {
+	background-color: black;
+	border-top: none;
+}
+
+.keraton-faq-item-header .accordion-button {
+	color: white;
+}
+
+.keraton-faq-item .accordion-body {
+	color: white;
+}
+
+.keraton-faq-item-header .accordion-button:not(.collapsed) {
+	color: #ff5470
+}
+
+.keraton-faq-item .accordion-button:after {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.keraton-faq-item .accordion-button:not(.collapsed):after {
+	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+>>>>>>> 052ebad06c160fcd097617bbc193832e6ad839d6
