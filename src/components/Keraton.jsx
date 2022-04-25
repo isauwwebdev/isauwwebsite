@@ -20,6 +20,7 @@ function Keraton() {
             <KeratonAbout></KeratonAbout>
             <KeratonPerformers></KeratonPerformers>
             <KeratonVendors></KeratonVendors>
+            {/* <KeratonActivities></KeratonActivities> */}
             <KeratonFAQ></KeratonFAQ>
         </div>
     );
