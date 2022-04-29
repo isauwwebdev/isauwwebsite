@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import performers from '../data/keraton-performers';
+import students from '../data/keraton-student-performers';
 
 function KeratonPerformers() {
     const [nav1, setNav1] = useState();
@@ -57,13 +58,30 @@ function KeratonPerformers() {
         asNavFor: nav1
     };
 
+    const settingsStudents = {
+        dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplaySpeed: 4000,
+        infinite: true,
+        centerMode: true, 
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    }
+
     return (
         <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-5 keraton-section-header">Performers</h1>
+            <h1 className="py-3 keraton-section-header">Performers</h1>
             <Container className="performers-container" style={{ "color": "white" }}>
-                <Row className="my-5 slider-performer-row">
+                <Row className="my-3 slider-performer-row">
                     <Col className="col-6 slider-performer-text">
-                        <Slider ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="keraton-performer-slider" {...settingsText}>
+                        <Slider ref={slider1 => { (customSlider.current = slider1); setNav1(slider1); }} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
                                     <a onClick={() => customSlider.current.slickGoTo(1)}>
@@ -73,7 +91,7 @@ function KeratonPerformers() {
                             })}
                         </Slider>
                     </Col>
-                    <Col className="mb-5 col-6">
+                    <Col className="mb-5 col-6 performer-img-col">
                         <div className="slider-performer-img">
                             <Slider ref={(slider2) => setNav2(slider2)} className="keraton-performer-slider2" {...settingsImg}>
                                 {performers.map((performer) => {
@@ -83,6 +101,17 @@ function KeratonPerformers() {
                                 })}
                             </Slider>
                         </div>
+                    </Col>
+                </Row>
+                <Row className="slider-student-performer-row">
+                    <Col>
+                        <Slider className="my-5 keraton-student-performer" {...settingsStudents}>
+                            {students.map((student) => {
+                                return (
+                                    <StudentPerformer key={student.id} student={student}></StudentPerformer>
+                                )
+                            })}
+                        </Slider>
                     </Col>
                 </Row>
             </Container>
@@ -109,6 +138,23 @@ function PerformerImage(props) {
     return (
         <div className="performer-img-container">
             <img src={performer.img}></img>
+        </div>
+    )
+}
+
+function StudentPerformer(props) {
+    const { student } = props;
+    return (
+        <div className="mb-2 px-2 mx-5">
+            <Row>
+                <div className="py-2 px-2 student-performer-img">
+                    <img className="framed" src={student.img} style={{ width: '100%' }}></img>
+                </div>
+                <h2 className="mt-4">{student.name}</h2>
+            </Row>
+            <Row>
+                <h3>{student.type}&emsp;|&emsp;{student.time}</h3>
+            </Row>
         </div>
     )
 }

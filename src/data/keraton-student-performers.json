@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "A2V Locboy Queens",
+        "time": "4:30",
+        "img": "../../images/keraton/performers/hhsa.jpg",
+        "type": "K-Pop Dance"
+    },
+    {
+        "id": 2,
+        "name": "Blue Band",
+        "time": "4:45",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Vocalist"
+    },
+    {
+        "id": 3,
+        "name": "Nicole & Vanvan",
+        "time": "5:10",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Vocalist"
+    },
+    {
+        "id": 4,
+        "name": "HHSA",
+        "time": "5:30",
+        "img": "../../images/keraton/performers/hhsa.jpg",
+        "type": "Hip Hop Dance"
+    }
+]

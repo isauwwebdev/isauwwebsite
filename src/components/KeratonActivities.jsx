@@ -6,57 +6,36 @@ import Container from 'react-bootstrap/Container';
 
 function KeratonActivities() {
     return(
-        <div>
-        <Container className="">
-            <h1 className="my-3 keraton-games"><strong>Games</strong></h1>
-                <Row>
-                <h2 className="my-3">GAME 1</h2>
-                    <Col>
-                        <p className="game-desc">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                            took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                    </Col>
-                    <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "500px" }}></img>
-                    </Col>
-                </Row>
-                <Row>
-                <h2 className="my-3">GAME 2</h2>
-
-                    <Col>
-                        <img src="../images/isauwcard.png" style={{ width: "600px", height: "500px" }}></img>
-                    </Col>
-                    <Col>
-                        <p className="game-desc">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                            has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                            took a galley of type and scrambled it to make a type specimen book.
-                        </p>
-                    </Col>
-                </Row>
-        </Container>
-
-        <Container className="">
-        <h1 className="my-1 keraton-competition"><strong>Competition</strong></h1>
+        <div className="keraton-activities">
+        <Container>
+        <h1 className="my-1 keraton-games"><strong>Games</strong></h1>
         <Row>
             <Col>
-                <h2 className="my-3">Title 1</h2>
-                <img src="../images/isauwcard.png" style={{ width: "300px", height: "250px" }}></img>
+            <div className='activity-container'>
+                <img src="../images/bakiak.jpeg" alt="games_image" class="keraton-activities-image"></img>
+                <div class="keraton-activities-overlay">
+                    <h2 className="my-3" style={{ color: 'red'  }}>Bakiak</h2>
+                    <p className="competition-desc">Bakiak is a kind of sandals made from wood. The Bakiak game requires togetherness and cooperation in the team to win.  The participants should walk together to keep the balance and avoid falling. The bakiak itself is a long wooden sandal that can be used by four to six participants</p>
+                </div>
+            </div>
             </Col>
             <Col>
-                <h2 className="my-3">Title 2</h2>
-                <img src="../images/isauwcard.png" style={{ width: "300px", height: "250px" }}></img>
+                <div className='activity-container'>
+                    <img src="../images/sack.jpeg" alt="games_image" class="keraton-activities-image"></img>
+                    <div class="keraton-activities-overlay">
+                        <h2 className="my-3" style={{ color: 'red'  }}>Balap Karung</h2>
+                        <p className="competition-desc">Balap karung (sack race) game is one of popular traditional games in Indonesia Independence Day commemoration. To play the game, the participant should put their lower body into a sack; then, they race to the finish line (Munir, 2019)</p>
+                    </div>
+                </div>
             </Col>
             <Col>
-                <h2 className="my-3">Title 1</h2>
-                <img src="../images/isauwcard.png" style={{ width: "300px", height: "250px" }}></img>
-            </Col>
-        </Row>
-        <Row>
-            <Col>
-                <p className="competition-desc">Some description for competition</p>
+                <div className='activity-container'>
+                    <img src="../images/hopscotch.jpeg" alt="games_image" class="keraton-activities-image"></img>
+                    <div class="keraton-activities-overlay">
+                        <h2 className="my-3" style={{ color: 'red'  }}>Hopscotch</h2>
+                        <p className="competition-desc">Hopscotch is a game where a player tosses an object (such as a stone) into areas of a figure outlined on the ground and hops through the figure and back to regain the object. It is a game played by the masses and everyone can enjoy.</p>
+                    </div>
+                </div>
             </Col>
         </Row>
         </Container>
