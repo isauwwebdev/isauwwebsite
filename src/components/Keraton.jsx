@@ -10,7 +10,7 @@ import KeratonPerformers from './KeratonPerformers';
 import KeratonActivities from './KeratonActivities';
 import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
-
+import KeratonSponsors from './KeratonSponsors';
 
 function Keraton() {
 
@@ -22,6 +22,7 @@ function Keraton() {
             <KeratonVendors></KeratonVendors>
             <KeratonActivities></KeratonActivities>
             <KeratonFAQ></KeratonFAQ>
+            <KeratonSponsors></KeratonSponsors>
         </div>
     );
 }
