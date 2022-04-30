@@ -1,29 +1,43 @@
 [
     {
         "id": 1,
+        "name": "Christina Sunardi",
+        "time": "4:35",
+        "img": "../../images/keraton/performers/hhsa.jpg",
+        "type": "Cultural"
+    },
+    {
+        "id": 2,
         "name": "A2V Locboy Queens",
-        "time": "4:30",
+        "time": "4:35",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "K-Pop Dance"
+    },
+    {
+        "id": 3,
+        "name": "Husky Jam",
+        "time": "4:50",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Dance"
+    },
+    {
+        "id": 4,
+        "name": "ISAUW Performance",
+        "time": "5:20",
+        "img": "../../images/keraton/performers/hhsa.jpg",
+        "type": "Dance"
+    },
+    {
+        "id": 5,
+        "name": "Indonesian Cultural Association",
+        "time": "5:25",
         "img": "../../images/keraton/performers/hhsa.jpg",
         "type": "K-Pop Dance"
     },
     {
-        "id": 2,
-        "name": "Blue Band",
-        "time": "4:45",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
-        "type": "Vocalist"
-    },
-    {
-        "id": 3,
-        "name": "Nicole & Vanvan",
-        "time": "5:10",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
-        "type": "Vocalist"
-    },
-    {
-        "id": 4,
-        "name": "HHSA",
-        "time": "5:30",
+        "id": 6,
+        "name": "HHSA: Divided",
+        "time": "5:40",
         "img": "../../images/keraton/performers/hhsa.jpg",
         "type": "Hip Hop Dance"
     }
