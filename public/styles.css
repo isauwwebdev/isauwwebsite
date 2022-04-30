@@ -1536,12 +1536,6 @@ a[type='button'] {
 	text-decoration: none;
 }
 
-.keraton-games,
-.keraton-competition {
-	text-align: center;
-	font-family: 'Chalkduster';
-}
-
 .invalid-feedback {
 	font-size: calc(9px + 0.3vw);
 }
@@ -1664,36 +1658,23 @@ select:invalid {
 .activity-container{
 	position: relative;
 	border: '1px solid gray';
-	width: 300px;
-	height: 250px;
-	margin: 20px;
+	height: 60vh;
 	margin-left: auto;
   	margin-right: auto;
-
   }
 
   .activity-container:hover .keraton-activities-overlay {
-	opacity: 0.9;
+	opacity: 0;
   }
 
   .keraton-activities-image {
-	display: block;
-	width: 300px;
-	height: 250px;
+	width: 100%;
+	height: inherit;
+	opacity: 0.5;
+	object-fit: cover;
   }
 
-  .competition-desc {
-	color: white;
-	font-size: 13px;
-	position: absolute;
-	top: 60%;
-	left: 35%;
-	opacity: 1;
-	-webkit-transform: translate(-50%, -45%);
-	transform: translate(-50%, -55%);
-  }
-
-  .keraton-activities-overlay {
+  .keraton-activities-overlay2 {
 	position: absolute;
 	border: 10px;
 	top: 0;
@@ -1704,5 +1685,43 @@ select:invalid {
 	width: 100%;
 	opacity: 0;
 	transition: .5s ease;
-	background-color: #A0A0A0;
+  }
+
+  .activity-container:hover .keraton-activities-overlay2 {
+	opacity: 1;
+  }
+
+.keraton-activities-text{
+	font-size: 100px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px white;
+}
+
+.keraton-activities-text:hover{
+	font-size: 100px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px white;
+}
+
+
+.keraton-activities-text2{
+	position: absolute;
+	font-size: 100px;
+	opacity: 1;
+	color:white;
+}
+
+  .keraton-activities-overlay {
+	position: absolute;
+	border: 10px;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 1.0;
+	transition: .5s ease;
   }
