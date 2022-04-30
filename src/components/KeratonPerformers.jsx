@@ -64,7 +64,7 @@ function KeratonPerformers() {
         slidesToScroll: 1,
         autoplaySpeed: 4000,
         infinite: true,
-        centerMode: true, 
+        centerMode: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -80,7 +80,7 @@ function KeratonPerformers() {
             <h1 className="py-3 keraton-section-header">Performers</h1>
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-3 slider-performer-row">
-                    <Col className="col-6 slider-performer-text">
+                    <Col className="col-6 my-auto mx-auto slider-performer-text">
                         <Slider ref={slider1 => { (customSlider.current = slider1); setNav1(slider1); }} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
@@ -137,7 +137,9 @@ function PerformerImage(props) {
     const { performer } = props;
     return (
         <div className="performer-img-container">
-            <img src={performer.img}></img>
+            <div>
+                <img src={performer.img}></img>
+            </div>
         </div>
     )
 }

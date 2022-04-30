@@ -1345,7 +1345,7 @@ a[type='button'] {
 }
 
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
-	max-height: calc(2vw + 150px);
+	max-height: calc(2vw + 100px);
 	padding: 0;
 	margin: 0;
 }
@@ -1365,8 +1365,8 @@ a[type='button'] {
 
 .student-performer-img img.framed {
 	box-shadow:
-    -50px -50px 0 -40px #E89C31,
-    50px 50px 0 -40px #E89C31;
+    -50px -50px 0 -45px #E89C31,
+    50px 50px 0 -45px #E89C31;
 }
 
 .slider-performer-img, 
@@ -1407,12 +1407,12 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-size: calc(1.8vw + 16px);
+	font-size: calc(2.2vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-size: calc(0.8vw + 12px);
+	font-size: calc(1.2vw + 12px);
 }
 
 .performer-social {
@@ -1422,6 +1422,7 @@ a[type='button'] {
 
 .performer-img-container {
 	overflow: hidden;
+	height: 100%;
 }
 
 .performer-img-container img {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, NavLink, Link, useLocation } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
@@ -19,6 +19,8 @@ import SocialLinks from './SocialLinks';
 function App() {
     const [expanded, setExpanded] = React.useState(false);
     const [navBar, setNavBar] = useState(false);
+    const [keratonPage, setKeratonPage] = useState(false);
+
     var navbarRef = React.useRef()
     React.useEffect(() => {
         // 'load' event listener to hide the preloader once the main content is loaded
@@ -28,7 +30,7 @@ function App() {
 
         // update window size
         window.addEventListener('resize', () => {
-            if(window.innerWidth > 992) {
+            if (window.innerWidth > 992) {
                 setExpanded(false);
             }
         })
@@ -65,6 +67,11 @@ function App() {
     }
     window.addEventListener('scroll', navBarBackground);
 
+    const keratonClick = () => {
+        setKeratonPage(true);
+        setExpanded(false);
+    }
+
     return (
         <BrowserRouter>
             <ScrollToTop />
@@ -75,7 +82,7 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={`${navBar ? 'navSolid active' : 'navSolid'} ${expanded ? 'navOpen' : 'navClose'}`} expanded={expanded}>
+                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={`${keratonPage ? 'keratonNav' : ''} ${navBar ? 'navSolid active' : 'navSolid'} ${expanded ? 'navOpen' : 'navClose'}`} expanded={expanded}>
                         <Container className="navContainer">
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">
@@ -88,14 +95,14 @@ function App() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "hamburger-icon-open" : "hamburger-icon-close"} onClick={() => setExpanded(!expanded)} />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
-                                    <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Home</NavLink>
-                                    <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Events</NavLink>
-                                    <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>About</NavLink>
-                                    <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Shop</NavLink>
-                                    {/*<NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Keraton</NavLink>*/}
+                                    <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Home</NavLink>
+                                    <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Events</NavLink>
+                                    <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>
+                                    <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
+                                    <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={keratonClick}>Keraton</NavLink>
                                     {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
                                 </Nav>
-                                { expanded ? <SocialLinks /> : null }
+                                {expanded ? <SocialLinks /> : null}
                             </Navbar.Collapse>
                         </Container>
                     </Navbar>
