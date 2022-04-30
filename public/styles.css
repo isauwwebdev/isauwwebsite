@@ -1655,73 +1655,60 @@ select:invalid {
 }
 
 
-.activity-container{
+
+
+.activity-container {
 	position: relative;
-	border: '1px solid gray';
-	height: 60vh;
-	margin-left: auto;
-  	margin-right: auto;
-  }
-
-  .activity-container:hover .keraton-activities-overlay {
-	opacity: 0;
-  }
-
-  .keraton-activities-image {
+	overflow: hidden;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;  
+	transition: .5s ease;
+	overflow: hidden;
 	width: 100%;
+}
+
+.keraton-activities-image {
 	height: inherit;
-	opacity: 0.5;
-	object-fit: cover;
-  }
-
-  .keraton-activities-overlay2 {
-	position: absolute;
-	border: 10px;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
 	opacity: 0;
+	object-fit: contain;
 	transition: .5s ease;
-  }
+	overflow: hidden;
 
-  .activity-container:hover .keraton-activities-overlay2 {
-	opacity: 1;
-  }
-
-.keraton-activities-text{
-	font-size: 100px;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px white;
-}
-
-.keraton-activities-text:hover{
-	font-size: 100px;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px white;
-}
-
-
-.keraton-activities-text2{
 	position: absolute;
-	font-size: 100px;
-	opacity: 1;
-	color:white;
-}
-
-  .keraton-activities-overlay {
-	position: absolute;
-	border: 10px;
-	top: 0;
-	bottom: 0;
 	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 1.0;
-	transition: .5s ease;
-  }
+	top: 0;
+}
+
+.keraton-activities-text {
+	font-size: 100px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 2px #D5A694;
+	opacity: 1;
+	transition: 0.5s ease-in-out;
+
+	z-index: 999;
+}
+
+.activity-container:hover .keraton-activities-image {
+	opacity: 0.5;
+}
+
+.activity-container:hover .keraton-activities-text {
+	font-size: 100px;
+	-webkit-text-fill-color: #D5A694;
+}
+
+.target .col-4:not(:last-child) .activity-container::after {
+    content: '';
+    display: block;
+    width: 0.5px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 1;
+    z-index: 2;
+	background: linear-gradient(rgb(213, 166, 148) 0%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
+}
