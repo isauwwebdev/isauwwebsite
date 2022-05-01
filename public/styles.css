@@ -6,6 +6,20 @@ body,
 }
 
 @font-face {
+	font-family: 'bon_vivant_semi_bold';
+	src: url('../fonts/Bon_Vivant/BonVivantSerifBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'signatura_monoline_script';
+	src: url('../fonts/signatura_monoline_script/Signatura Monoline.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'brandon_grotesquebold_italic';
 	src: url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff') format('woff');
@@ -1676,19 +1690,18 @@ select:invalid {
 	object-fit: contain;
 	transition: .5s ease;
 	overflow: hidden;
-
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
 .keraton-activities-text {
-	font-size: 100px;
+	font-size: 60px;
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 2px #D5A694;
 	opacity: 1;
 	transition: 0.5s ease-in-out;
-
+	font-family: 'palm-canyon';
 	z-index: 999;
 }
 
@@ -1697,7 +1710,6 @@ select:invalid {
 }
 
 .activity-container:hover .keraton-activities-text {
-	font-size: 100px;
 	-webkit-text-fill-color: #D5A694;
 }
 
@@ -1712,4 +1724,22 @@ select:invalid {
     opacity: 1;
     z-index: 2;
 	background: linear-gradient(rgb(213, 166, 148) 0%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
+}
+
+@media (min-width: 576px) {
+	.sponsor-left {
+		text-align: right !important;
+	}
+	.sponsor-right {
+		text-align: left !important;
+	}
+}
+
+@media (max-width: 576px) {
+	.sponsor-left {
+		text-align: center !important;
+	}
+	.sponsor-right {
+		text-align: center !important;
+	}
 }
