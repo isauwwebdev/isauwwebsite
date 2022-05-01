@@ -2,21 +2,36 @@
     {
         "id": 1,
         "question": "How can I support Keraton?",
-        "answer": "Lorem ipsum dolor sit amet, nec primis minimum delicata ne, in cibo dicunt cum. Mel simul definitiones ad, ad copiosae praesent vim. Et illum scripta ornatus duo, possim nusquam fierent cum te, ut elitr affert nominati vel. Eos habemus molestie et, ne graece fabellas ius. Dicam omnium argumentum nam ex."
+        "answer": "Contribute to Keraton through donating to our gofundme. Every dollar and extra hand makes a difference to the success of this free open-to-all festival. Gofundme link:",
+        "link": "https://www.gofundme.com/f/keraton-indonesia-festival-fund",
+        "icon": "../images/gofundme.png"
     },
     {
         "id": 2,
-        "question": "How can I support Keraton?",
-        "answer": "Lorem ipsum dolor sit amet, nec primis minimum delicata ne, in cibo dicunt cum. Mel simul definitiones ad, ad copiosae praesent vim. Et illum scripta ornatus duo, possim nusquam fierent cum te, ut elitr affert nominati vel. Eos habemus molestie et, ne graece fabellas ius. Dicam omnium argumentum nam ex."
+        "question": "Can I volunteer in ISAUW?",
+        "answer": "Yes! This year's volunteer application has closed, however we always welcome familiar and new faces next year. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management team in making Keraton work. They’ll receive merchandise and food coupons as benefits.",
+        "link": "",
+        "icon": ""
     },
     {
         "id": 3,
-        "question": "How can I support Keraton?",
-        "answer": "Lorem ipsum dolor sit amet, nec primis minimum delicata ne, in cibo dicunt cum. Mel simul definitiones ad, ad copiosae praesent vim. Et illum scripta ornatus duo, possim nusquam fierent cum te, ut elitr affert nominati vel. Eos habemus molestie et, ne graece fabellas ius. Dicam omnium argumentum nam ex."
+        "question": "How do I pay for food?",
+        "answer": "You will pay directly to the food vendor you’re ordering from. We accept credit cards, debit cards, and apple pay.",
+        "link": "",
+        "icon": ""
     },
     {
         "id": 4,
-        "question": "How can I support Keraton?",
-        "answer": "Lorem ipsum dolor sit amet, nec primis minimum delicata ne, in cibo dicunt cum. Mel simul definitiones ad, ad copiosae praesent vim. Et illum scripta ornatus duo, possim nusquam fierent cum te, ut elitr affert nominati vel. Eos habemus molestie et, ne graece fabellas ius. Dicam omnium argumentum nam ex."
+        "question": "Is there an admission fee?",
+        "answer": "Free admission. You just need to come free of charge!",
+        "link": "",
+        "icon": ""
+    },
+    {
+        "id": 5,
+        "question": "Where is Keraton taking place?",
+        "answer": "UW Rainier Vista: Stevens Way NE, Seattle, WA 98195",
+        "link": "https://goo.gl/maps/JVayv7aSUjtVb9u96",
+        "icon": "../images/maps.png"
     }
 ]
