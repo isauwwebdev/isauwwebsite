@@ -7,7 +7,7 @@ import KeratonCountdown from './KeratonCountdown';
 import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
-import KeratonActivities from './KeratonActivities';
+import KeratonGames from './KeratonGames';
 import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
@@ -15,12 +15,12 @@ import KeratonSponsors from './KeratonSponsors';
 function Keraton() {
 
     return (
-        <div>
+        <div style={{overflowX: "hidden"}}>
             <KeratonVideo></KeratonVideo>
             <KeratonAbout></KeratonAbout>
             <KeratonPerformers></KeratonPerformers>
             <KeratonVendors></KeratonVendors>
-            <KeratonActivities></KeratonActivities>
+            <KeratonGames></KeratonGames>
             <KeratonFAQ></KeratonFAQ>
             <KeratonSponsors></KeratonSponsors>
         </div>
