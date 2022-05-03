@@ -15,7 +15,11 @@ function KeratonActivities() {
                         <div style={{position: "relative"}}>
                             <p className="keraton-activities-text">Bakiak</p>
                         </div>
+                        <span class="test"></span>
+                        <span class="test2"></span>
                     </div>
+                    <span class="test"></span>
+                    <span class="test2"></span>
                 </Col>
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='activity-container'>
@@ -23,6 +27,8 @@ function KeratonActivities() {
                         <div style={{position: "relative"}}>
                             <p className="keraton-activities-text">Sack Race</p>
                         </div>
+                        <span class="test"></span>
+                        <span class="test2"></span>
                     </div>
                 </Col>
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
@@ -31,6 +37,8 @@ function KeratonActivities() {
                         <div style={{position: "relative"}}>
                             <p className="keraton-activities-text">Engklek</p>
                         </div>
+                        <span class="test"></span>
+                        <span class="test2"></span>
                     </div>
                 </Col>
             </Row>

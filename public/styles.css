@@ -1639,7 +1639,7 @@ select:invalid {
 /* accordion button */
 .keraton-faq-item-header .accordion-button {
 	color: white;
-	font-size: calc(14px + 0.3vw); 
+	font-size: calc(13px + 0.35vw); 
 	font-family: "Open Sans";
 	font-weight: 600;
 	background-color: #031B28;
@@ -1674,29 +1674,29 @@ select:invalid {
 
 .activity-container {
 	position: relative;
-	overflow: hidden;
-	height: 100vh;
+	height: 90vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;  
 	transition: .5s ease;
-	overflow: hidden;
 	width: 100%;
+	overflow: hidden;
 }
 
 .keraton-activities-image {
-	height: inherit;
+	width: auto;
+	height: 100%;
 	opacity: 0;
 	object-fit: contain;
 	transition: .5s ease;
-	overflow: hidden;
 	position: absolute;
 	left: 0;
 	top: 0;
 }
 
 .keraton-activities-text {
-	font-size: 60px;
+	text-align: center;
+	font-size: calc(20px + 2.8vw);
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 2px #D5A694;
 	opacity: 1;
@@ -1716,14 +1716,14 @@ select:invalid {
 .target .col-4:not(:last-child) .activity-container::after {
     content: '';
     display: block;
-    width: 0.5px;
+    width: 1px;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    opacity: 1;
+    opacity: .2;
     z-index: 2;
-	background: linear-gradient(rgb(213, 166, 148) 0%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
+	background: linear-gradient(rgb(3,27,40) 0%,rgb(213, 166, 148) 20%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
 }
 
 @media (min-width: 576px) {
@@ -1742,4 +1742,26 @@ select:invalid {
 	.sponsor-right {
 		text-align: center !important;
 	}
+}
+
+.test {
+	top: 0;
+	height: 30.88%;
+    background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+	position: absolute;
+	left: 0;
+	transform: rotate(-180deg);
+	width: 100%;
+	z-index: 1;
+	color: rgb(3, 27, 40);
+}
+.test2 {
+	bottom: 0;
+	height: 30.88%;
+    background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+	color: rgb(3, 27, 40);
 }
