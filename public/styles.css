@@ -1372,9 +1372,10 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.2vw + 8px);
+	font-size: calc(3.2vw + 14px);
 	text-shadow: #606060 0px 0px 10px;
-	letter-spacing: 20px;
+	letter-spacing: calc(12px + 1.2vw);
+	margin-right: calc(-1 * (12px + 1.2vw)); /* counteract the letter spacing for the last letter because the title won't be centered o.w. */
 }
 
 .keraton-completed {
