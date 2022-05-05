@@ -1697,7 +1697,6 @@ select:invalid {
 }
 
 .activity-container:hover .keraton-activities-text {
-	font-size: 100px;
 	-webkit-text-fill-color: #D5A694;
 }
 

@@ -58,9 +58,11 @@ function KeratonVendors() {
                         <Slider style={{marginLeft: "auto", marginRight: "0"}} ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="vendor-slider" {...vendorCategorySettings} vertical={true} verticalSwiping={true}>
                             {vendorList.map((category) => {
                                 return (
-                                    <a style={{height: "fit-content", display: "inline-block"}} onClick={() => customSlider.current.slickGoTo(category.index)}>
-                                        {category.name}
+                                    <a style={{height: "fit-content", display: "inline-block", textAlign: "center"}} onClick={() => customSlider.current.slickGoTo(category.index)}>
                                         {/* <img style={{width: "50px", height: "auto"}}></img> */}
+                                        {category.name === 'Food' ? <i class="fas fa-utensils" style={{fontSize: `calc(16px + 2vw)`}}></i> : <></>}
+                                        {category.name === 'Drinks' ? <i class="fas fa-beer" style={{fontSize: `calc(16px + 2vw)`}}></i> : <></>}
+                                        {category.name === 'Merch' ? <i class="fas fa-shirt" style={{fontSize: `calc(16px + 2vw)`}}></i> : <></>}
                                     </a>
                                 )
                             })}
