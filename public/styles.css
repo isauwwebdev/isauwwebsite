@@ -6,6 +6,61 @@ body,
 }
 
 @font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikBlack.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikBold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikExtralight.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikLight.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikMedium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikRegular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikSemibold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikSuper.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Graphik';
+	src: url('../fonts/Graphik/GraphikThin.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'bon_vivant_semi_bold';
 	src: url('../fonts/Bon_Vivant/BonVivantSerifBold.woff') format('woff');
 	font-weight: normal;
@@ -20,109 +75,109 @@ body,
 }
 
 @font-face {
-	font-family: 'brandon_grotesquebold_italic';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 600;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquebold';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_bld-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_bld-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 600;
 	font-style: normal;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesqueblack_italic';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_blk_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_blk_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 700;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesqueblack';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_blk-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_blk-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 700;
 	font-style: normal;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquelight_italic';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_light_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_light_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 300;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquelight';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_light-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_light-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 300;
 	font-style: normal;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesqueMdIt';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_med_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_med_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 400;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquemedium';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_med-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_med-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesqueRgIt';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_reg_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_reg_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 500;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesqueregular';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_reg-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_reg-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 500;
 	font-style: normal;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquethin_italic';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_thin_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_thin_it-webfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+	font-weight: 200;
+	font-style: italic;
 
 }
 
 @font-face {
-	font-family: 'brandon_grotesquethin';
+	font-family: 'brandon_grotesque';
 	src: url('../fonts/brandon-grotesque/brandon_thin-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_thin-webfont.woff') format('woff');
-	font-weight: normal;
+	font-weight: 200;
 	font-style: normal;
 
 }
@@ -462,7 +517,8 @@ p {
 }
 
 .navLink {
-	font-family: 'brandon_grotesquemedium', sans-serif !important;
+	font-family: 'brandon_grotesque', sans-serif !important;
+	font-weight: 400;
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
@@ -1259,7 +1315,8 @@ mark {
 	white-space: nowrap;
 	overflow: hidden;
 	font-size: calc(12px + 0.4vw);
-	font-family: 'brandon_grotesqueblack';
+	font-family: 'brandon_grotesque';
+	font-weight: 700;
 	letter-spacing: 2pt;
 	color: #212529;
 }
@@ -1307,7 +1364,7 @@ a[type='button'] {
 
 .cta {
 	margin-bottom: 0 !important;
-	font-family: 'brandon_grotesquebold';
+	font-family: 'brandon_grotesque';
 	font-weight: 700;
 	letter-spacing: 2px;
 }
@@ -1592,39 +1649,36 @@ select:invalid {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 1px solid #eb5942;
+	border: 2px solid #eb5942;
 	position: absolute;
-	top: -35px;
-	right: -35px;
+	top: calc(-1 * (8px + 1.2vw));
+	right: calc(-1 * (8px + 1.2vw));
 	z-index: -1;
 }
+
+
 .vendor-slider {
-	width: 160px;
-    padding-top: 35px;
-
-	/*align right*/
 	margin-left: auto;
-	margin-right: 0;
+	margin-right: auto;
+	margin-bottom: 50px;
 }
-
+/* Equally space icons horizontally */
+.vendor-slider .slick-list .slick-track {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;  
+	height: auto !important;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 20%;
+	padding-right: 20%;
+}
 .vendor-slider div div div {
 	height: fit-content !important;
 	display: inline-block !important;
 }
-
-.vendor-slider .slick-slide {
-	margin: 20px;
-}
-
-.keraton-vendor .slick-list {
-	padding-bottom: 30px; /* if not, dots are cut off */
-}
-
-.keraton-vendor-mini .slick-dots li button:before { /* color dots white */
-	color: white;
-}
-.keraton-vendor-mini .slick-dots li.slick-active button:before {
-	color: white;
+.vendor-slider .slick-slide { /* space between icons and slides */
+	margin: 16px;
 }
 
 /* KERATON FAQ */
