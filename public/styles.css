@@ -6,6 +6,20 @@ body,
 }
 
 @font-face {
+	font-family: 'bon_vivant_semi_bold';
+	src: url('../fonts/Bon_Vivant/BonVivantSerifBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'signatura_monoline_script';
+	src: url('../fonts/signatura_monoline_script/Signatura Monoline.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'brandon_grotesquebold_italic';
 	src: url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff2') format('woff2'),
 		url('../fonts/brandon-grotesque/brandon_bld_it-webfont.woff') format('woff');
@@ -1301,7 +1315,7 @@ a[type='button'] {
 /* Keraton Page */
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.2vw + 10px);
+	font-size: calc(3.2vw + 8px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: 20px;
 }
@@ -1469,15 +1483,15 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(12px + 1.2vw);
-	font-weight: 700;
+	font-size: calc(10px + 1.2vw);
+	font-weight: 900;
 	color: white;
 	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
 	font-size: calc(6px + 0.8vw);
-	font-weight: 400;
+	font-weight: 300;
 	color: white;
 }
 
@@ -1564,6 +1578,7 @@ select:invalid {
 	font-weight: 300;
 }
 
+/* KERATON VENDORS */
 .vendor-image-row {
 	display: flex !important; /* row will not work without this */
 }
@@ -1582,7 +1597,7 @@ select:invalid {
 	top: -35px;
 	right: -35px;
 	z-index: -1;
-  }
+}
 .vendor-slider {
 	width: 160px;
     padding-top: 35px;
@@ -1601,8 +1616,15 @@ select:invalid {
 	margin: 20px;
 }
 
-.vendor-image-slider .slick-list {
+.keraton-vendor .slick-list {
 	padding-bottom: 30px; /* if not, dots are cut off */
+}
+
+.keraton-vendor-mini .slick-dots li button:before { /* color dots white */
+	color: white;
+}
+.keraton-vendor-mini .slick-dots li.slick-active button:before {
+	color: white;
 }
 
 /* KERATON FAQ */
@@ -1625,7 +1647,7 @@ select:invalid {
 /* accordion button */
 .keraton-faq-item-header .accordion-button {
 	color: white;
-	font-size: calc(14px + 0.3vw); 
+	font-size: calc(13px + 0.35vw); 
 	font-family: "Open Sans";
 	font-weight: 600;
 	background-color: #031B28;
@@ -1657,58 +1679,94 @@ select:invalid {
 
 
 
-
-.activity-container {
-	position: relative;
-	overflow: hidden;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;  
-	transition: .5s ease;
-	overflow: hidden;
-	width: 100%;
-}
-
-.keraton-activities-image {
-	height: inherit;
+/* KERATON GAMES */
+.keraton-games-image {
+	width: auto;
+	height: 100%;
 	opacity: 0;
 	object-fit: contain;
 	transition: .5s ease;
-	overflow: hidden;
-
 	position: absolute;
 	left: 0;
 	top: 0;
 }
-
-.keraton-activities-text {
-	font-size: 100px;
+.keraton-games-text {
+	text-align: center;
+	font-size: calc(20px + 2.8vw);
+	font-family: 'palm-canyon';
 	-webkit-text-fill-color: transparent;
 	-webkit-text-stroke: 2px #D5A694;
 	opacity: 1;
 	transition: 0.5s ease-in-out;
-
-	z-index: 999;
 }
-
-.activity-container:hover .keraton-activities-image {
+.keraton-games-container {
+	position: relative;
+	height: 90vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;  
+	transition: .5s ease;
+	width: 100%;
+	overflow: hidden;
+}
+.keraton-games-container:hover .keraton-games-image {
 	opacity: 0.5;
 }
 
-.activity-container:hover .keraton-activities-text {
+.keraton-games-container:hover .keraton-games-text {
 	-webkit-text-fill-color: #D5A694;
 }
 
-.target .col-4:not(:last-child) .activity-container::after {
+.keraton-games-overlay-top {
+	top: 0;
+	height: 30.88%;
+    background: linear-gradient(0deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.keraton-games-overlay-btm {
+	bottom: 0;
+	height: 30.88%;
+    background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 1;
+}
+.keraton-games-row {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+.keraton-games-row .col-4:not(:last-child) .keraton-games-container::after { /* vertical lines */
     content: '';
     display: block;
-    width: 0.5px;
+    width: 1px;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    opacity: 1;
+    opacity: .5;
     z-index: 2;
-	background: linear-gradient(rgb(213, 166, 148) 0%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
+	background: linear-gradient(rgb(3,27,40) 0%,rgb(213, 166, 148) 20%, rgb(213, 166, 148) 80%, rgb(3,27,40) 100%);
+}
+
+@media (min-width: 576px) {
+	.sponsor-left {
+		text-align: right !important;
+	}
+	.sponsor-right {
+		text-align: left !important;
+	}
+}
+
+@media (max-width: 576px) {
+	.sponsor-left {
+		text-align: center !important;
+	}
+	.sponsor-right {
+		text-align: center !important;
+	}
 }

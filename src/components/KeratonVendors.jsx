@@ -69,15 +69,15 @@ function KeratonVendors() {
                         </Slider>
                     </Col>
                     <Col xs={9}>
-                        <Slider className="vendor-image-slider" ref={(slider2) => setNav2(slider2)} {...bigSettings}>
+                        <Slider className="keraton-vendor" ref={(slider2) => setNav2(slider2)} {...bigSettings}>
                             {vendorList.map((category) => {
                                 return (
-                                    <Slider {...miniSettings}>
+                                    <Slider {...miniSettings} className="keraton-vendor-mini">
                                         {category.vendors.map((vendor) => {
                                             return (
                                                 <Row className="vendor-image-row">
                                                     <Col xs={5}>
-                                                        <div style={{paddingRight: "20px", paddingTop: "35px"}}> {/* change this padding to be responsive. match padding top with col-8*/}
+                                                        <div style={{paddingRight: "20px", paddingTop: "35px", textAlign: "right"}}> {/* change this padding to be responsive. match padding top with col-8*/}
                                                             <h1 style={{fontFamily: "Open Sans, sans-serif", fontWeight: "700" }}>{vendor.name}</h1>
                                                             {vendor.menu.map((menuItem) => {
                                                                 return (
