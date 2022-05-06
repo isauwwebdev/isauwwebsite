@@ -5,24 +5,52 @@
         "icon": "",
         "vendors": [
             {
-                "name": "PERMIAS Seattle",
-                "img": "https://picsum.photos/800",
+                "name": "Solar Chapter",
+                "img": "../images/keraton/vendors/sate.jpeg",
                 "menu": [
                     {
-                        "name": "Ayam Geprek"
+                        "name": "Sate"
                     },
                     {
-                        "name": "Tiramisu"
-                    }            
+                        "name": "Ketupat"
+                    }
+                ],
+                "name2": "BIC",
+                "menu2": [
+                    {
+                        "name": "Roti Panggang"
+                    }
                 ]
             },
             {
-                "name": "ISASU (Seattle U)",
-                "img": "https://picsum.photos/800",
+                "name": "Jajanan Indo",
+                "img": "../images/keraton/vendors/martabak-telur.jpeg",
                 "menu": [
                     {
-                        "name": "Telor Gulung"
+                        "name": "Martabak Mini"
                     },
+                    {
+                        "name": "Martabak Telur"
+                    }
+                ],
+                "name2": " Liv's Kitchen",
+                "menu2": [
+                    {
+                        "name": "Batagor"
+                    }
+                ]
+
+            },
+            {
+                "name": "Shoreline",
+                "img": "../images/keraton/vendors/pisang-goreng.jpeg",
+                "menu": [
+                    {
+                        "name": "Tahu Cabe Goreng"
+                    }
+                ],
+                "name2": "ISASU",
+                "menu2": [
                     {
                         "name": "Pisang Goreng"
                     },
@@ -35,185 +63,8 @@
                 ]
             },
             {
-                "name": "Jajanan Indo",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Martabak Mini"
-                    },
-                    {
-                        "name": "Martabak Telur"
-                    },
-                    {
-                        "name": "Pancake Durian"
-                    },
-                    {
-                        "name": "Jasuke"
-                    },
-                    {
-                        "name": "Lumpia Veggie"
-                    },
-                    {
-                        "name": "Pancit Bihon"
-                    },
-                    {
-                        "name": "Fried Chicken"
-                    }
-                ]
-            },
-            {
-                "name": "Indonesian Eatery",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Siomay Bandung"
-                    },
-                    {
-                        "name": "Bakmi Ayam"
-                    },
-                    {
-                        "name": "Bakmi Kepiting"
-                    },
-                    {
-                        "name": "Kue Lapis"
-                    },
-                    {
-                        "name": "Ayam Bakar"
-                    },
-                    {
-                        "name": "Ketoprak"
-                    },
-                    {
-                        "name": "Tongseng"
-                    }           
-                ]
-            },
-            {
-                "name": "Bellevue Indonesian Club",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Roti Panggang"
-                    },
-                    {
-                        "name": "Es Buah"
-                    }
-                ]
-            },
-            {
-                "name": "Indonesian Student Community",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Roti Panggang"
-                    },
-                    {
-                        "name": "Es Buah"
-                    }
-                ]
-            },
-            {
-                "name": " Liv's Kitchen",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Nasi Padang"
-                    },
-                    {
-                        "name": "Nasi Kuning"
-                    },
-                    {
-                        "name": "Nasi Cumi Hitam"
-                    },
-                    {
-                        "name": "Batagor Bowl"
-                    },
-                    {
-                        "name": "Soto Padang"
-                    },
-                    {
-                        "name": "Risoles"
-                    },
-                    {
-                        "name": "Lumpia Semarang"
-                    },
-                    {
-                        "name": "Bakwan Sayur"
-                    },
-                    {
-                        "name": "Aneka Sambal"
-                    }
-                ]
-            },
-            {
-                "name": "Solar Chapter Seattle",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Sate"
-                    },
-                    {
-                        "name": "Cireng"
-                    },
-                    {
-                        "name": "Kain Makna"
-                    }
-                ]
-            },
-            {
-                "name": "Coco Pandan",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Martabak"
-                    },
-                    {
-                        "name": "Pandan Chiffon Slice"
-                    },
-                    {
-                        "name": "Bolu Gulung (Roll Cake)"
-                    },
-                    {
-                        "name": "Kue Pepe (Steamed Layer Cake)"
-                    },
-                    {
-                        "name": "Crispy Spring Roll"
-                    }
-                ]
-            },
-            {
-                "name": "Pantjoeran UW",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Takoyaki"
-                    },
-                    {
-                        "name": "Okonomiyaki"
-                    }
-                ]
-            },
-            {
-                "name": "Raja Kaki Lima",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Se'i Sapi"
-                    },
-                    {
-                        "name": "Pempek"
-                    },
-                    {
-                        "name": "Ekkado"
-                    },
-                    {
-                        "name": "Kerupuk"
-                    }                  
-                ]
-            },
-            {
-                "name": "Indonesian Student Organization",
-                "img": "https://picsum.photos/800",
+                "name": "GRC",
+                "img": "../images/keraton/vendors/salted-egg-chicken.jpeg",
                 "menu": [
                     {
                         "name": "Salted Egg Chicken"
@@ -224,14 +75,50 @@
                     {
                         "name": "Cimol"
                     }
+                ],
+                "name2": "Raja Kaki Lima",
+                "menu2": [
+                    {
+                        "name": "Pempek"
+                    }                
                 ]
             },
             {
-                "name": "Indomie by Indofood",
-                "img": "https://picsum.photos/800",
+                "name": "Indonesian Eatery",
+                "img": "../images/keraton/vendors/tongseng.jpeg",
                 "menu": [
                     {
-                        "name": "Indomie"
+                        "name": "Tongseng"
+                    },
+                    {
+                        "name": "Gudeg"
+                    }        
+                ],
+                "name2": "Coco Pandan",
+                "menu2": [
+                    {
+                        "name": "Martabak Manis"
+                    },
+                    {
+                        "name": "Sampler Box"
+                    }
+                ]
+            },
+            {
+                "name": "PERMIAS Seattle",
+                "img": "../images/keraton/vendors/ayam-geprek.jpeg",
+                "menu": [
+                    {
+                        "name": "Ayam Geprek"
+                    },
+                    {
+                        "name": "Tiramisu"
+                    }            
+                ],
+                "name2": "Pantjoeran",
+                "menu2": [
+                    {
+                        "name": "Okonomiyaki"
                     }
                 ]
             }
@@ -243,8 +130,8 @@
         "icon": "",
         "vendors": [
             {
-                "name": "Kopi Keraton",
-                "img": "https://picsum.photos/800",
+                "name": "Haus House",
+                "img": "../images/keraton/vendors/coffee.jpg",
                 "menu": [
                     {
                         "name": "Kopi Susu Gula Aren"
@@ -260,23 +147,13 @@
                     },
                     {
                         "name": "Pandan Latte"
+                    },
+                    {
+                        "name": "Prepackaged Drinks"
                     }
-                ]
-            },
-            {
-                "name": "ISAUW Drinks",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Bottled Drinks"
-                    },
-                    {
-                        "name": "Canned Drinks"
-                    },
-                    {
-                        "name": "Teh Botol/Teh Kotak"
-                    }              
-                ]
+                ],
+                "name2": "",
+                "menu2": []
             }
         ]
     },
@@ -286,8 +163,8 @@
         "icon": "",
         "vendors": [
             {
-                "name": "ISAUW Batik and Merch",
-                "img": "https://picsum.photos/800",
+                "name": "ISAUWear",
+                "img": "../images/keraton/vendors/merch.jpg",
                 "menu": [
                     {
                         "name": "Batik"
@@ -295,7 +172,9 @@
                     {
                         "name": "Merch"
                     }             
-                ]
+                ],
+                "name2": "",
+                "menu2": []
             }
         ]
     }

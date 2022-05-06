@@ -145,7 +145,6 @@ function App() {
                     src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
                     crossOrigin></script>
             </div>
-            {keratonPage ? '' : <Footer />}
         </BrowserRouter>
 
     );

@@ -1269,7 +1269,7 @@ mark {
 	line-height: 1.5;
 	color: #212529;
 	background-color: #fff;
-	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+	background-image: url("data:image/svg+xml,%3csvg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
 	background-repeat: no-repeat;
 	background-position: right .75rem center;
 	background-size: 16px 12px;
@@ -1386,6 +1386,7 @@ a[type='button'] {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+	background-color: "#031B28";
 }
 
 .keraton-header {
@@ -1588,7 +1589,8 @@ a[type='button'] {
 	text-align: left;
 	letter-spacing: 1px;
 	word-spacing: 2px;
-	font-weight: normal;
+	font-family: "Graphik";
+	font-weight: 300;
 	color: white;
 }
 
@@ -1704,16 +1706,40 @@ select:invalid {
 }
 
 /* KERATON VENDORS */
-.vendor-image-row {
-	display: flex !important; /* row will not work without this */
+.keraton-vendors-row {
+	margin-top: 0px !important;
+}
+.keraton-vendors-mini {
+	margin-bottom: 24px; /* if not dots won't show */
+}
+.keraton-vendors-mini .slick-dots li button:before {
+	color: white;
+}
+.keraton-vendors-mini .slick-dots li.slick-active button:before {
+	color: white;
+}
+.keraton-vendors-mini .slick-dots {
+	width: 58.33%;
+	margin-left: auto;
+	position: relative;
+	text-align: end !important;
+}
+@media (max-width: 576px) {
+	.keraton-vendors-mini .slick-dots {
+		margin-right: calc();
+	}
+}
+.keraton-vendors-mini .slick-dots li {
+	margin: 0;
+	padding: 0;
 }
 
-.vendor-img-container {
+.keraton-vendors-img-container {
 	display: inline-block; 	/* makes div wrap around content */
 	height: 100%;
 	width: 90%;
 }
-.vendor-img-container div::before {
+.keraton-vendors-img-container div::before { /* outline around image */
 	content: "";
 	display: block;
 	width: 100%;
@@ -1724,29 +1750,39 @@ select:invalid {
 	right: calc(-1 * (8px + 1.2vw));
 	z-index: -1;
 }
+.keraton-vendors-img-row {
+	display: flex !important; /* row will not work without this */
+}
+.keraton-vendors-img {
+	width: 100%;
+	height: 100%;
+	max-height: 528px;
+	display: block;
+	aspect-ratio: 600 / 768;
+	object-fit: cover;
+} 
 
-
-.vendor-slider {
+.keraton-vendors-category {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 50px;
+	margin-bottom: calc(2vw);
 }
 /* Equally space icons horizontally */
-.vendor-slider .slick-list .slick-track {
+.keraton-vendors-category .slick-list .slick-track {
 	display: flex;
 	justify-content: space-between;
 	flex-direction: row;  
 	height: auto !important;
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 16%;
+	padding-right: 16%;
 }
-.vendor-slider div div div {
+.keraton-vendors-category div div div {
 	height: fit-content !important;
 	display: inline-block !important;
 }
-.vendor-slider .slick-slide { /* space between icons and slides */
+.keraton-vendors-category .slick-slide { /* space between icons and slides */
 	margin: 16px;
 }
 
@@ -1787,10 +1823,10 @@ select:invalid {
 	color: rgb(247 213 161)
 }
 .keraton-faq-item .accordion-button:after {
-	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 .keraton-faq-item .accordion-button:not(.collapsed):after {
-	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 .keraton-sponsors {
@@ -1800,14 +1836,12 @@ select:invalid {
 	padding: 1rem;
 }
 
-
-
 /* KERATON GAMES */
 .keraton-games-image {
-	width: auto;
+	width: 100%;
 	height: 100%;
 	opacity: 0;
-	object-fit: contain;
+	object-fit: cover;
 	transition: .5s ease;
 	position: absolute;
 	left: 0;
@@ -1821,10 +1855,11 @@ select:invalid {
 	-webkit-text-stroke: 2px rgb(247 213 161);
 	opacity: 1;
 	transition: 0.5s ease-in-out;
+	padding: 12px;
 }
 .keraton-games-container {
 	position: relative;
-	height: 90vh;
+	height: 80vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;  
@@ -1850,7 +1885,7 @@ select:invalid {
 .keraton-games-overlay-top {
 	top: 0;
 	height: 30.88%;
-    background: linear-gradient(0deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+    background: linear-gradient(0deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -1859,7 +1894,7 @@ select:invalid {
 .keraton-games-overlay-btm {
 	bottom: 0;
 	height: 30.88%;
-    background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 80%);
+    background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -1952,4 +1987,40 @@ select:invalid {
 	.sponsor-right {
 		text-align: center !important;
 	}
+}
+
+.keraton-about-media {
+	width: 100%;
+	height: 100%;
+	object-position: center;
+	object-fit: cover;
+	border-radius: 221px 221px 0 0;
+	position: relative;
+	max-width: 441px;
+}
+
+.testing {
+	position: relative;
+	width: 75%;
+	height: 100%;
+}
+@media (max-width: 576px) {
+	.testing {
+		width: 90%;
+		height: 90%;
+	}
+
+}
+
+.testing::after {
+	content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: translate(calc(8px + 1.2vw), calc(12px + 1.2vw));
+    border-radius: 221px 221px 0 0;
+    border: 1px solid #ff5470;
 }

@@ -76,7 +76,7 @@ function KeratonPerformers() {
 
     return (
         <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>
-            <h1 className="py-3 keraton-section-header">Performers</h1>
+            <h1 className="py-3 keraton-section-header" style={{marginBottom: "3vw"}}>Performers</h1>
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-3 slider-performer-row">
                     <Col className="col-6 my-auto mx-auto slider-performer-text">
@@ -100,10 +100,10 @@ function KeratonPerformers() {
                         </div>
                     </Col>
                 </Row>
-                <h2 className="pt-3 keraton-student-section-header">Students</h2>
+                <h2 className="py-3 keraton-student-section-header" style={{marginBottom: "2vw"}}>Students</h2>
                 <Row className="slider-student-performer-row">
                     <Col>
-                        <Slider className="my-5 keraton-student-performer" {...settingsStudents}>
+                        <Slider className="mb-5 keraton-student-performer" {...settingsStudents}>
                             {students.map((student) => {
                                 return (
                                     <StudentPerformer key={student.id} student={student}></StudentPerformer>
