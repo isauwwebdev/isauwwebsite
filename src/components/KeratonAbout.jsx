@@ -17,7 +17,7 @@ function KeratonAbout() {
                     </Col>
                     <Col xs={6} sm={5} style={{display: "flex", alignItems: "center", padding: "0"}}>
                         <div className='testing'>
-                            <video playsinline="playsinline" autoplay="autoplay" muted loop className="keraton-about-media" src="../images/keraton/about/pak-raden.mp4"></video>
+                            <video playsinline="playsinline" autoplay="autoplay" muted loop className="keraton-about-media" src="../images/keraton/about/pak-raden-trimmed.mp4"></video>
                         </div>
                     </Col>
                 </Row>
