@@ -5,32 +5,20 @@
         "icon": "",
         "vendors": [
             {
-                "name": "PERMIAS Seattle",
+                "name": "Solar Chapter",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
-                        "name": "Ayam Geprek"
+                        "name": "Sate"
                     },
                     {
-                        "name": "Tiramisu"
-                    }            
-                ]
-            },
-            {
-                "name": "ISASU (Seattle U)",
-                "img": "https://picsum.photos/800",
-                "menu": [
+                        "name": "Ketupat"
+                    }
+                ],
+                "name2": "BIC",
+                "menu2": [
                     {
-                        "name": "Telor Gulung"
-                    },
-                    {
-                        "name": "Pisang Goreng"
-                    },
-                    {
-                        "name": "Makaroni Goreng"
-                    },
-                    {
-                        "name": "Lidi-lidi An Goreng"
+                        "name": "Roti Panggang"
                     }
                 ]
             },
@@ -43,53 +31,18 @@
                     },
                     {
                         "name": "Martabak Telur"
-                    },
+                    }
+                ],
+                "name2": " Liv's Kitchen",
+                "menu2": [
                     {
-                        "name": "Pancake Durian"
-                    },
-                    {
-                        "name": "Jasuke"
-                    },
-                    {
-                        "name": "Lumpia Veggie"
-                    },
-                    {
-                        "name": "Pancit Bihon"
-                    },
-                    {
-                        "name": "Fried Chicken"
+                        "name": "Batagor"
                     }
                 ]
+
             },
             {
-                "name": "Indonesian Eatery",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Siomay Bandung"
-                    },
-                    {
-                        "name": "Bakmi Ayam"
-                    },
-                    {
-                        "name": "Bakmi Kepiting"
-                    },
-                    {
-                        "name": "Kue Lapis"
-                    },
-                    {
-                        "name": "Ayam Bakar"
-                    },
-                    {
-                        "name": "Ketoprak"
-                    },
-                    {
-                        "name": "Tongseng"
-                    }           
-                ]
-            },
-            {
-                "name": "Bellevue Indonesian Club",
+                "name": "Shoreline",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
@@ -98,121 +51,22 @@
                     {
                         "name": "Es Buah"
                     }
-                ]
-            },
-            {
-                "name": "Indonesian Student Community",
-                "img": "https://picsum.photos/800",
-                "menu": [
+                ],
+                "name2": "ISASU",
+                "menu2": [
                     {
-                        "name": "Roti Panggang"
+                        "name": "Pisang Goreng"
                     },
                     {
-                        "name": "Es Buah"
+                        "name": "Makaroni Goreng"
+                    },
+                    {
+                        "name": "Lidi-lidi An Goreng"
                     }
                 ]
             },
             {
-                "name": " Liv's Kitchen",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Nasi Padang"
-                    },
-                    {
-                        "name": "Nasi Kuning"
-                    },
-                    {
-                        "name": "Nasi Cumi Hitam"
-                    },
-                    {
-                        "name": "Batagor Bowl"
-                    },
-                    {
-                        "name": "Soto Padang"
-                    },
-                    {
-                        "name": "Risoles"
-                    },
-                    {
-                        "name": "Lumpia Semarang"
-                    },
-                    {
-                        "name": "Bakwan Sayur"
-                    },
-                    {
-                        "name": "Aneka Sambal"
-                    }
-                ]
-            },
-            {
-                "name": "Solar Chapter Seattle",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Sate"
-                    },
-                    {
-                        "name": "Cireng"
-                    },
-                    {
-                        "name": "Kain Makna"
-                    }
-                ]
-            },
-            {
-                "name": "Coco Pandan",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Martabak"
-                    },
-                    {
-                        "name": "Pandan Chiffon Slice"
-                    },
-                    {
-                        "name": "Bolu Gulung (Roll Cake)"
-                    },
-                    {
-                        "name": "Kue Pepe (Steamed Layer Cake)"
-                    },
-                    {
-                        "name": "Crispy Spring Roll"
-                    }
-                ]
-            },
-            {
-                "name": "Pantjoeran UW",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Takoyaki"
-                    },
-                    {
-                        "name": "Okonomiyaki"
-                    }
-                ]
-            },
-            {
-                "name": "Raja Kaki Lima",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Se'i Sapi"
-                    },
-                    {
-                        "name": "Pempek"
-                    },
-                    {
-                        "name": "Ekkado"
-                    },
-                    {
-                        "name": "Kerupuk"
-                    }                  
-                ]
-            },
-            {
-                "name": "Indonesian Student Organization",
+                "name": "GRC",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
@@ -224,14 +78,50 @@
                     {
                         "name": "Cimol"
                     }
+                ],
+                "name2": "Raja Kaki Lima",
+                "menu2": [
+                    {
+                        "name": "Pempek"
+                    }                
                 ]
             },
             {
-                "name": "Indomie by Indofood",
+                "name": "Indonesian Eatery",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
-                        "name": "Indomie"
+                        "name": "Tongseng"
+                    },
+                    {
+                        "name": "Gudeg"
+                    }        
+                ],
+                "name2": "Coco Pandan",
+                "menu2": [
+                    {
+                        "name": "Martabak Manis"
+                    },
+                    {
+                        "name": "Sampler Box"
+                    }
+                ]
+            },
+            {
+                "name": "PERMIAS Seattle",
+                "img": "https://picsum.photos/800",
+                "menu": [
+                    {
+                        "name": "Ayam Geprek"
+                    },
+                    {
+                        "name": "Tiramisu"
+                    }            
+                ],
+                "name2": "Pantjoeran",
+                "menu2": [
+                    {
+                        "name": "Okonomiyaki"
                     }
                 ]
             }
@@ -243,7 +133,7 @@
         "icon": "",
         "vendors": [
             {
-                "name": "Kopi Keraton",
+                "name": "Haus House",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
@@ -260,23 +150,13 @@
                     },
                     {
                         "name": "Pandan Latte"
+                    },
+                    {
+                        "name": "Prepackaged Drinks"
                     }
-                ]
-            },
-            {
-                "name": "ISAUW Drinks",
-                "img": "https://picsum.photos/800",
-                "menu": [
-                    {
-                        "name": "Bottled Drinks"
-                    },
-                    {
-                        "name": "Canned Drinks"
-                    },
-                    {
-                        "name": "Teh Botol/Teh Kotak"
-                    }              
-                ]
+                ],
+                "name2": "",
+                "menu2": []
             }
         ]
     },
@@ -286,7 +166,7 @@
         "icon": "",
         "vendors": [
             {
-                "name": "ISAUW Batik and Merch",
+                "name": "ISAUWear",
                 "img": "https://picsum.photos/800",
                 "menu": [
                     {
@@ -295,7 +175,9 @@
                     {
                         "name": "Merch"
                     }             
-                ]
+                ],
+                "name2": "",
+                "menu2": []
             }
         ]
     }

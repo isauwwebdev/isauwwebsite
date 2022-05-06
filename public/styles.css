@@ -1637,6 +1637,25 @@ select:invalid {
 }
 
 /* KERATON VENDORS */
+.keraton-vendors-mini {
+	margin-bottom: 24px; /* if not dots won't show */
+}
+.keraton-vendors-mini .slick-dots li button:before {
+	color: white;
+}
+.keraton-vendors-mini .slick-dots li.slick-active button:before {
+	color: white;
+}
+.keraton-vendors-mini .slick-dots {
+	width: 58.33%;
+	margin-left: auto;
+	margin-right: 3.3%;
+	position: relative;
+}
+.keraton-vendors-mini .slick-dots li {
+	margin: 0;
+	padding: 0;
+}
 .vendor-image-row {
 	display: flex !important; /* row will not work without this */
 }
@@ -1657,11 +1676,10 @@ select:invalid {
 	z-index: -1;
 }
 
-
 .vendor-slider {
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 50px;
+	margin-bottom: calc(2vw);
 }
 /* Equally space icons horizontally */
 .vendor-slider .slick-list .slick-track {
@@ -1731,8 +1749,6 @@ select:invalid {
 .keraton-sponsors-row {
 	padding: 1rem;
 }
-
-
 
 /* KERATON GAMES */
 .keraton-games-image {
