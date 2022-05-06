@@ -10,7 +10,7 @@ function KeratonFAQ() {
         )
     }) 
     return (
-        <div className="py-5 keraton-faq" style={{ "background-color": "#031B28" }}>
+        <div className="keraton-faq" style={{ "background-color": "#031B28", paddingTop: "5rem", paddingBottom: "5rem" }}>
             <Container>
                 <h1 className="py-3 keraton-section-header">Frequently Asked Questions</h1>
                 <Accordion defaultActiveKey="0" flush className="keraton-faq-accordion">

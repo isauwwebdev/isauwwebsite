@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 function KeratonFAQ() {
     return (
-        <div className="py-5 keraton-sponsors">
+        <div className="keraton-sponsors" style={{ "background-color": "#031B28", paddingTop: "2rem", paddingBottom: "2rem", backgroundImage: "url(https://www.transparenttextures.com/patterns/arabesque.png)"}}>
             <Container >
                 <Row className="text-center keraton-sponsors-row">
                     <Col>
