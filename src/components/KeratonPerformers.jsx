@@ -59,7 +59,6 @@ function KeratonPerformers() {
     };
 
     const settingsStudents = {
-        dots: true,
         slidesToShow: 2,
         slidesToScroll: 1,
         autoplaySpeed: 4000,
@@ -81,12 +80,10 @@ function KeratonPerformers() {
             <Container className="performers-container" style={{ "color": "white" }}>
                 <Row className="my-3 slider-performer-row">
                     <Col className="col-6 my-auto mx-auto slider-performer-text">
-                        <Slider ref={slider1 => { (customSlider.current = slider1); setNav1(slider1); }} className="keraton-performer-slider" {...settingsText}>
+                        <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
                             {performers.map((performer) => {
                                 return (
-                                    <a onClick={() => customSlider.current.slickGoTo(1)}>
-                                        <PerformerItem key={performer.id} performer={performer}></PerformerItem>
-                                    </a>
+                                    <PerformerItem className="" key={performer.id} performer={performer}></PerformerItem>
                                 )
                             })}
                         </Slider>
@@ -103,6 +100,7 @@ function KeratonPerformers() {
                         </div>
                     </Col>
                 </Row>
+                <h2 className="pt-3 keraton-student-section-header">Students</h2>
                 <Row className="slider-student-performer-row">
                     <Col>
                         <Slider className="my-5 keraton-student-performer" {...settingsStudents}>
@@ -124,10 +122,10 @@ function PerformerItem(props) {
     return (
         <div>
             <Row>
-                <h2 className="performer-name mb-2">{performer.name}</h2>
+                <h2 className="performer-name mb-1 mt-3">{performer.name}</h2>
             </Row>
             <Row>
-                <h3 className="performer-details"> {performer.type}&emsp;|&emsp;{performer.time}&emsp;|&emsp;<a className="performer-social" href={performer.insta}><FaInstagram className="" /></a> </h3>
+                <h3 className="performer-details mb-3"> {performer.type}&emsp;|&emsp;{performer.time}&emsp;|&emsp;<a className="performer-social" href={performer.insta}><FaInstagram className="" /></a> </h3>
             </Row>
         </div>
     )
@@ -147,16 +145,12 @@ function PerformerImage(props) {
 function StudentPerformer(props) {
     const { student } = props;
     return (
-        <div className="mb-2 px-2 mx-5">
-            <Row>
-                <div className="py-2 px-2 student-performer-img">
-                    <img className="framed" src={student.img} style={{ width: '100%' }}></img>
-                </div>
-                <h2 className="mt-4">{student.name}</h2>
-            </Row>
-            <Row>
-                <h3>{student.type}&emsp;|&emsp;{student.time}</h3>
-            </Row>
+        <div className="">
+            <div className="py-2 px-4 student-performer-img">
+                <img className="framed" src={student.img}></img>
+            </div>
+            <h2 className="mt-4 px-4 student-performer-name">{student.name}</h2>
+            <h3 className="px-4 student-performer-details">{student.type}&emsp;|&emsp;{student.time}</h3>
         </div>
     )
 }

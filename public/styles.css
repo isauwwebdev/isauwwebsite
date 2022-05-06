@@ -1046,6 +1046,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.jumbotron-desc {
 		width: 48%;
 	}
+
+	.student-performer-name, 
+	.student-performer-details {
+		padding: 0;
+	}
 }
 
 @media only screen and (max-width: 383px) {
@@ -1299,6 +1304,14 @@ a[type='button'] {
 }
 
 /* Keraton Page */
+.keraton {
+	width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .keraton-header {
 	font-family: 'Monoton', cursive;
 	font-size: calc(3.2vw + 10px);
@@ -1346,8 +1359,6 @@ a[type='button'] {
 
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
 	max-height: calc(2vw + 100px);
-	padding: 0;
-	margin: 0;
 }
 
 .keraton-performer-slider .slick-list .slick-track .slick-slide>div {
@@ -1355,8 +1366,26 @@ a[type='button'] {
 	margin: 0;
 }
 
+.keraton-performer-slider .slick-list {
+	padding: 0 !important;
+	margin: 0;
+}
+
 .keraton-student-performer .slick-dots li button:before {
 	color: white;
+	font-size: calc(0.2vw + 6px);
+}
+
+.keraton-student-performer .slick-dots {
+	margin: 5px 0;
+}
+
+.student-performer-details {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.performer-details {
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .keraton-student-performer .slick-dots li.slick-active button:before {
@@ -1407,12 +1436,12 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-size: calc(2.2vw + 16px);
+	font-size: calc(2vw + 16px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-size: calc(1.2vw + 12px);
+	font-size: calc(1vw + 12px);
 }
 
 .performer-social {
@@ -1435,11 +1464,36 @@ a[type='button'] {
 	transform: scale(1.1);
 }
 
+.student-performer-img img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.student-performer-name {
+	font-size: calc(1.4vw + 14px);
+	font-weight: 700;
+}
+
+.student-performer-details {
+	font-size: calc(0.4vw + 10px);
+}
+
 .keraton-section-header {
 	text-align: center;
 	letter-spacing: 5px;
 	padding-top: 3rem;
 	font-size: calc(40px + 2.0vw);
+	color:rgb(247 213 161);
+	background-color: #031B28;
+	font-family: 'palm-canyon';
+}
+
+.keraton-student-section-header {
+	text-align: center;
+	letter-spacing: 5px;
+	padding-top: 3rem;
+	font-size: calc(40px + 1.6vw);
 	color:rgb(247 213 161);
 	background-color: #031B28;
 	font-family: 'palm-canyon';
@@ -1567,6 +1621,7 @@ select:invalid {
 .vendor-image-row {
 	display: flex !important; /* row will not work without this */
 }
+
 .vendor-img-container {
 	display: inline-block; 	/* makes div wrap around content */
 	height: 100%;
@@ -1706,7 +1761,6 @@ select:invalid {
 	-webkit-text-stroke: 2px white;
 }
 
-
 .keraton-activities-text2{
 	position: absolute;
 	font-size: 100px;
@@ -1726,3 +1780,53 @@ select:invalid {
 	opacity: 1.0;
 	transition: .5s ease;
   }
+
+.back-to-top {
+	color: white;
+}
+
+.keratonNav {
+	background-color: white;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+
+.keratonNav .navLink,
+.keratonNav .navLinkeActive,
+.keratonNav .navLink-fade-up::after,
+.keratonNav .nav-social-icon,
+.keratonHide .navLink,
+.keratonHide .navLinkeActive,
+.keratonHide .navLink-fade-up::after,
+.keratonHide .nav-social-icon {
+	color:#031B28;
+}
+
+.keratonNav .navLink::after {
+	background-color: #031B28;
+}
+
+.keratonNav .navbar-brand img {
+	filter: invert(92%) sepia(34%) saturate(2202%) hue-rotate(171deg) brightness(93%) contrast(98%);
+}
+
+.keratonNav .hamburger-icon-close .navbar-toggler-icon,
+.keratonNav .hamburger-icon-open .navbar-toggler-icon {
+	filter: invert(92%) sepia(34%) saturate(2202%) hue-rotate(171deg) brightness(93%) contrast(98%);
+}
+
+.keratonHide {
+	background-color: white;
+	-webkit-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.keratonNav .page-footer {
+	background-color: white;
+}
+
+.keratonNav .footer-social-icon {
+	color: #031B28
+}
