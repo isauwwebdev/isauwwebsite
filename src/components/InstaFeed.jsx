@@ -93,12 +93,12 @@ function InstaGrid(props) {
         <div style={{ overflow: "hidden" }} className="my-5">
             <div id="move" className="move-section" style={{ marginBottom: `calc(-1 * (8px + 1vw))` }}>
                 <div className="move-bg" style={{ right: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(${position}px))` }}>
-                    {postArray[3]}
+                <img src="../images/instagram/bag.jpeg" className="insta-product"></img>
                 </div>
             </div>
             <div className="move-section">
                 <div className="move-bg" style={{ left: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(-1 * (${position}px)))` }}>
-                    {postArray[4]}
+                <img src="../images/instagram/mask.jpeg" className="insta-product"></img>
                 </div>
             </div>
             <div className="move-section" style={{ marginTop: `calc(-1 * (14px + 2.5vw))` }}>

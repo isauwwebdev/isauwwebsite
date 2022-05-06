@@ -9,7 +9,7 @@ function KeratonGames() {
             <Row className="keraton-games-row">
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='keraton-games-container'>
-                        <img src="../images/bakiak.jpeg" className="keraton-games-image"></img>
+                        <img src="https://cdn-image.hipwee.com/wp-content/uploads/2016/08/hipwee-lomba-balap-bakiak.jpg" className="keraton-games-image"></img>
                         <div style={{position: "relative"}}>
                             <p className="keraton-games-text">Bakiak</p>
                         </div>
