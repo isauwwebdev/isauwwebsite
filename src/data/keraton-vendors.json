@@ -6,7 +6,7 @@
         "vendors": [
             {
                 "name": "Solar Chapter",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/sate.jpeg",
                 "menu": [
                     {
                         "name": "Sate"
@@ -24,7 +24,7 @@
             },
             {
                 "name": "Jajanan Indo",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/martabak-telur.jpeg",
                 "menu": [
                     {
                         "name": "Martabak Mini"
@@ -43,13 +43,10 @@
             },
             {
                 "name": "Shoreline",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/pisang-goreng.jpeg",
                 "menu": [
                     {
-                        "name": "Roti Panggang"
-                    },
-                    {
-                        "name": "Es Buah"
+                        "name": "Tahu Cabe Goreng"
                     }
                 ],
                 "name2": "ISASU",
@@ -67,7 +64,7 @@
             },
             {
                 "name": "GRC",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/salted-egg-chicken.jpeg",
                 "menu": [
                     {
                         "name": "Salted Egg Chicken"
@@ -88,7 +85,7 @@
             },
             {
                 "name": "Indonesian Eatery",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/tongseng.jpeg",
                 "menu": [
                     {
                         "name": "Tongseng"
@@ -109,7 +106,7 @@
             },
             {
                 "name": "PERMIAS Seattle",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/ayam-geprek.jpeg",
                 "menu": [
                     {
                         "name": "Ayam Geprek"
@@ -134,7 +131,7 @@
         "vendors": [
             {
                 "name": "Haus House",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/coffee.jpg",
                 "menu": [
                     {
                         "name": "Kopi Susu Gula Aren"
@@ -167,7 +164,7 @@
         "vendors": [
             {
                 "name": "ISAUWear",
-                "img": "https://picsum.photos/800",
+                "img": "../images/keraton/vendors/merch.jpg",
                 "menu": [
                     {
                         "name": "Batik"

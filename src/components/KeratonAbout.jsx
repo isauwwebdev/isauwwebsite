@@ -9,12 +9,7 @@ function KeratonAbout() {
             <Container className="keraton-about">
                 <h1 className="keraton-section-header">About</h1>
                 <p className="keraton-about-text">
-                Keraton is ISAUW’s largest and most iconic event that is held annually every Spring since 2002 at the University of Washington.
-                This year will be a huge comeback of the event after the two-year pause due to COVID-19. However, we are hoping to come back stronger than ever
-                as we commit to leave an undeniable impression to a crowd of over 3,000 international audiences. We aim to provide in-depth and hands-on experience
-                of Indonesian culture through traditional performances and activities. Keraton has grown much since its start in 2002, from a small crowd of
-                70 attendees to a staggering audience of over 3,000 visitors in its latest display, consisting of people from various backgrounds.
-                This event is currently the largest of its kind in the PNW, and the second largest in the United States.
+                    Feeling homesick? After a 4-year hiatus, Keraton is back in 2022 with sensational musical headliners, cultural shows, stunning cuisine, and exciting activities that will immerse you in Indonesian culture.
                 </p>
             </Container>
         </div>

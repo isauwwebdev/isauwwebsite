@@ -9,7 +9,7 @@ function KeratonGames() {
             <Row className="keraton-games-row">
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='keraton-games-container'>
-                        <img src="https://cdn-image.hipwee.com/wp-content/uploads/2016/08/hipwee-lomba-balap-bakiak.jpg" className="keraton-games-image"></img>
+                        <img src="../images/keraton/games/bakiak.jpeg" className="keraton-games-image"></img>
                         <div style={{position: "relative"}}>
                             <p className="keraton-games-text">Bakiak</p>
                         </div>
@@ -19,9 +19,9 @@ function KeratonGames() {
                 </Col>
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='keraton-games-container'>
-                        <img src="../images/sack.jpeg" className="keraton-games-image"></img>
+                        <img src="../images/keraton/games/balap-karung-alt.jpeg" className="keraton-games-image"></img>
                         <div style={{position: "relative"}}>
-                            <p className="keraton-games-text">Sack Race</p>
+                            <p className="keraton-games-text">Balap Karung</p>
                         </div>
                         <span class="keraton-games-overlay-top"></span>
                         <span class="keraton-games-overlay-btm"></span>
@@ -29,7 +29,7 @@ function KeratonGames() {
                 </Col>
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='keraton-games-container'>
-                        <img src="../images/hopscotch.jpeg" className="keraton-games-image"></img>
+                        <img src="../images/keraton/games/engklek.jpeg" className="keraton-games-image"></img>
                         <div style={{position: "relative"}}>
                             <p className="keraton-games-text">Engklek</p>
                         </div>
