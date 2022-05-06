@@ -9,18 +9,18 @@
     },
     {
         "id": 2,
-        "name": "Lullaboy",
-        "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 3,
         "name": "Xavier Weeks",
         "time": "4:50",
         "img": "../../images/keraton/performers/xavier-weeks.jpg",
         "insta": "https://www.instagram.com/xavierweeks/",
+        "type": "Vocalist"
+    },
+    {
+        "id": 3,
+        "name": "Lullaboy",
+        "time": "6:45",
+        "img": "../../images/keraton/performers/lullaboy.jpg",
+        "insta": "https://www.instagram.com/lullaboyxo/",
         "type": "Vocalist"
     },
     {
@@ -33,18 +33,18 @@
     },
     {
         "id": 5,
-        "name": "Lullaboy",
-        "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 6,
         "name": "Xavier Weeks",
         "time": "4:50",
         "img": "../../images/keraton/performers/xavier-weeks.jpg",
         "insta": "https://www.instagram.com/xavierweeks/",
+        "type": "Vocalist"
+    },
+    {
+        "id": 6,
+        "name": "Lullaboy",
+        "time": "6:45",
+        "img": "../../images/keraton/performers/lullaboy.jpg",
+        "insta": "https://www.instagram.com/lullaboyxo/",
         "type": "Vocalist"
     }
 ]

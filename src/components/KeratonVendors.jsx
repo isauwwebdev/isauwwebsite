@@ -87,7 +87,7 @@ function KeratonVendors() {
                                                             <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name}</h1>
                                                             {vendor.menu.map((menuItem) => {
                                                                 return (
-                                                                    <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(9px + 0.6vw)` }}>
+                                                                    <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(11px + 0.6vw)` }}>
                                                                         {menuItem.name}                                    
                                                                     </div>
                                                             )})}
@@ -95,7 +95,7 @@ function KeratonVendors() {
                                                                 <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name2}</h1>
                                                                 {vendor.menu2.map((menuItem) => {
                                                                     return (
-                                                                        <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(8px + 0.6vw)` }}>
+                                                                        <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(12px + 0.6vw)` }}>
                                                                             {menuItem.name}                                    
                                                                         </div>
                                                                 )})}
