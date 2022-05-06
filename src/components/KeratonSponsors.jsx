@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 function KeratonFAQ() {
     return (
-        <div className="keraton-sponsors">
+        <div className="py-5 keraton-sponsors">
             <Container >
                 <Row className="text-center keraton-sponsors-row">
                     <Col>

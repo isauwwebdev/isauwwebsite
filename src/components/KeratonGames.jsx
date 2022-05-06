@@ -4,8 +4,8 @@ import Col from 'react-bootstrap/Col';
 
 function KeratonGames() {
     return (
-        <div style={{ backgroundColor: "#031B28"}}>
-            <h1 className="py-5 keraton-section-header">Games</h1>
+        <div className="py-5" style={{ backgroundColor: "#031B28"}}>
+            <h1 className="py-3 keraton-section-header">Activities</h1>
             <Row className="keraton-games-row">
                 <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
                     <div className='keraton-games-container'>

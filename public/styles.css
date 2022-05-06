@@ -1576,7 +1576,7 @@ a[type='button'] {
 	letter-spacing: 1px;
 	word-spacing: 2px;
 	font-family: "Graphik";
-	font-weight: 400;
+	font-weight: 300;
 	color: white;
 }
 
@@ -1761,8 +1761,8 @@ select:invalid {
 	height: auto !important;
 	padding-top: 0;
 	padding-bottom: 0;
-	padding-left: 20%;
-	padding-right: 20%;
+	padding-left: 16%;
+	padding-right: 16%;
 }
 .keraton-vendors-category div div div {
 	height: fit-content !important;
@@ -1841,6 +1841,7 @@ select:invalid {
 	-webkit-text-stroke: 2px #D5A694;
 	opacity: 1;
 	transition: 0.5s ease-in-out;
+	padding: 12px;
 }
 .keraton-games-container {
 	position: relative;
@@ -1972,4 +1973,31 @@ select:invalid {
 	.sponsor-right {
 		text-align: center !important;
 	}
+}
+
+.keraton-about-media {
+	width: 100%;
+	height: auto;
+	object-position: center;
+	object-fit: cover;
+	border-radius: 221px 221px 0 0;
+	position: relative;
+	max-width: 441px;
+}
+
+.testing {
+	position: relative;
+	width: 80%;
+}
+.testing::after {
+	content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transform: translate(34px, 29px);
+    border-radius: 221px 221px 0 0;
+    border: 1px solid #ff5470;
 }
