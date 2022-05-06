@@ -18,7 +18,7 @@ function Footer() {
             {/* Copyright and Conditions */}
             <div className="footer-copyright" style={{ padding: `calc(1.2vw + 20px) 0` }}>
                 {/* Required if website is hosted using UW shared hosting */}
-                <div id="conditions">
+                <div className="privacy-terms" id="conditions">
                     <a style={{ marginRight: "12px" }} href="https://www.washington.edu/online/privacy" className="text-decoration-none">Privacy</a>
                     <a style={{ marginLeft: "12px" }} href="https://www.washington.edu/online/terms" className="text-decoration-none">Terms</a>
                 </div>

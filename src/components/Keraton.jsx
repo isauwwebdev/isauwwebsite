@@ -1,9 +1,4 @@
-import React from 'react';
-import Accordion from 'react-bootstrap/Accordion';
-import Container from 'react-bootstrap/Container';
-import Carousel from 'react-bootstrap/Carousel';
-
-import KeratonCountdown from './KeratonCountdown';
+import React, { useState, useEffect } from 'react';
 import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
@@ -12,10 +7,12 @@ import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
 
-function Keraton() {
+import { FaArrowUp } from 'react-icons/fa';
 
+
+function Keraton() {
     return (
-        <div style={{overflowX: "hidden"}}>
+        <div className="keraton">
             <KeratonVideo></KeratonVideo>
             <KeratonAbout></KeratonAbout>
             <KeratonPerformers></KeratonPerformers>
@@ -26,5 +23,40 @@ function Keraton() {
         </div>
     );
 }
+
+// function ScrollToTop() {
+//     const [backToTop, setBackToTop] = useState(false);
+
+//     const toggleBackToTop = () => {
+//         if (window.pageYOffset > 300) {
+//             setBackToTop(true);
+//         } else {
+//             setBackToTop(false);
+//         }
+//     };
+
+//     const scrollToTop = () => {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         })
+//     };
+
+//     useEffect(() => {
+//         window.addEventListener('scroll', toggleBackToTop);
+
+//         return () => {
+//             window.addEventListener('scroll', toggleBackToTop);
+//         }
+//     }, []);
+
+//     return (
+//         <div className="" style={{ position: 'fixed', bottom: '10px', right: '10px' }}>
+//             <a onClick={scrollToTop} className={`${backToTop ? 'visible' : 'invisible'}`}>
+//                 <FaArrowUp className="back-to-top" style={{ fontSize: `calc(1.2vw + 20px)` }} />
+//             </a>
+//         </div>
+//     );
+// }
 
 export default Keraton;

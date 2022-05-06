@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, NavLink, Link, useLocation } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 // import Alert from 'react-bootstrap/Alert'
 
 import Home from './Home';
@@ -19,13 +19,25 @@ import SocialLinks from './SocialLinks';
 function App() {
     const [expanded, setExpanded] = React.useState(false);
     const [navBar, setNavBar] = useState(false);
+
     const [keratonPage, setKeratonPage] = useState(false);
+    const [keratonScrollDown, setKeratonScrollDown] = useState(false);
+
+    const [currentPage, setCurrentPage] = useState(window.location.pathname.substring(1));
+
+    let keratonY = window.scrollY;
 
     var navbarRef = React.useRef()
     React.useEffect(() => {
         // 'load' event listener to hide the preloader once the main content is loaded
         window.addEventListener('load', () => {
             document.getElementById("preloader").style.display = "none";
+            if (currentPage.includes("keraton")) {
+                setKeratonPage(true);
+            } else {
+                setKeratonPage(false);
+            }
+            setCurrentPage(window.location.pathname.substring(1));
         });
 
         // update window size
@@ -40,6 +52,15 @@ function App() {
             if (!navbarRef.current.contains(event.target)) {
                 setExpanded(false)
             }
+        })
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > keratonY) {
+                setKeratonScrollDown(true);
+            } else {
+                setKeratonScrollDown(false);
+            }
+            keratonY = window.scrollY;
         })
     })
 
@@ -58,19 +79,13 @@ function App() {
     // }
 
     // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 70px.
-    const navBarBackground = () => {
+    window.addEventListener('scroll', () => {
         if (window.scrollY >= 70) {
             setNavBar(true)
         } else {
             setNavBar(false);
         }
-    }
-    window.addEventListener('scroll', navBarBackground);
-
-    const keratonClick = () => {
-        setKeratonPage(true);
-        setExpanded(false);
-    }
+    });
 
     return (
         <BrowserRouter>
@@ -82,7 +97,7 @@ function App() {
 
                 <header>
                     {/* Navbar */}
-                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={`${keratonPage ? 'keratonNav' : ''} ${navBar ? 'navSolid active' : 'navSolid'} ${expanded ? 'navOpen' : 'navClose'}`} expanded={expanded}>
+                    <Navbar ref={navbarRef} expand="lg" fixed="top" className={`${keratonPage ? keratonScrollDown ? 'keratonHide' : 'keratonNav' : navBar ? 'navSolid active' : 'navSolid'} ${expanded ? 'navOpen' : 'navClose'}`} expanded={expanded}>
                         <Container className="navContainer">
                             {/* ISAUW Brand */}
                             <Navbar.Brand href="#home">
@@ -95,11 +110,11 @@ function App() {
                             <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "hamburger-icon-open" : "hamburger-icon-close"} onClick={() => setExpanded(!expanded)} />
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
-                                    <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Home</NavLink>
-                                    <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Events</NavLink>
-                                    <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>
-                                    <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
-                                    <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={keratonClick}>Keraton</NavLink>
+                                    <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Home</NavLink>
+                                    <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Events</NavLink>
+                                    <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>About</NavLink>
+                                    <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Shop</NavLink>
+                                    <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>
                                     {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
                                 </Nav>
                                 {expanded ? <SocialLinks /> : null}
@@ -119,7 +134,7 @@ function App() {
 
                 {/* {renderPopUp()} */}
 
-                <Footer />
+                {keratonPage ? '' : <Footer />}
 
                 {/* Bootstrap JS */}
                 <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin></script>
@@ -130,6 +145,7 @@ function App() {
                     src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
                     crossOrigin></script>
             </div>
+            {keratonPage ? '' : <Footer />}
         </BrowserRouter>
 
     );
