@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 function KeratonFAQ() {
+
     return (
         <div className="keraton-sponsors" style={{ "background-color": "#031B28", paddingTop: "2rem", paddingBottom: "2rem", backgroundImage: "url(https://www.transparenttextures.com/patterns/arabesque.png)"}}>
             <Container >
@@ -26,12 +27,12 @@ function KeratonFAQ() {
                     </Col>
                 </Row>
                 <Row className="text-center keraton-sponsors-row">
-                    <Col sm={6} style={{margin: "0", padding: "0"}} className="sponsor-left">
+                    <Col sm={6} className="keraton-sponsors-row-first">
                         <img src="../images/keraton/sponsors/4-hub.png" style={{width: `10%`, margin: "5px 20px"}}></img>
                         <img src="../images/keraton/sponsors/4-wells.png" style={{maxWidth: "10%", margin: "5px 20px"}}></img>
                         <img src="../images/keraton/sponsors/4-kjri.png" style={{width: `10%`, margin: "5px 20px"}}></img>
                     </Col>
-                    <Col sm={6} style={{margin: "0", padding: "0"}} className="sponsor-right">
+                    <Col sm={6} className="keraton-sponsors-row-second">
                         <img src="../images/keraton/sponsors/4-uwaa.png" style={{width: `10%`, margin: "5px 20px"}}></img>
                         <img src="../images/keraton/sponsors/4-indomie.png" style={{maxWidth: "10%", margin: "5px 20px"}}></img>
                         <img src="../images/keraton/sponsors/4-uwsao.png" style={{width: `10%`, margin: "5px 20px"}}></img>

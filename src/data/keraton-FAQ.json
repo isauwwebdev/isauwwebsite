@@ -2,28 +2,28 @@
     {
         "id": 1,
         "question": "How can I support Keraton?",
-        "answer": "Contribute to Keraton by donating to our GoFundMe. Every dollar makes a difference.",
+        "answer": "Contribute to Keraton by donating to our GoFundMe. Every dollar makes a difference!",
         "link": "https://www.gofundme.com/f/keraton-indonesia-festival-fund",
         "icon": "../images/gofundme.png"
     },
     {
         "id": 2,
         "question": "Can I volunteer in ISAUW?",
-        "answer": "Yes, but this year's volunteer application has closed. Nevertheless, we are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They’ll receive merchandise and food coupons as compensation for their hard work!",
+        "answer": "Definitely! However, this year's volunteer application has closed. But don't fret! We are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They’ll receive merchandise and food coupons as compensation for their hard work!",
         "link": "",
         "icon": ""
     },
     {
         "id": 3,
         "question": "How do I pay for food?",
-        "answer": "You can pay the food vendor you’re ordering from. We accept credit cards, debit cards, and apple pay.",
+        "answer": "We have cashiers located at each vendor stall. We accept credit cards, debit cards, and apple pay.",
         "link": "",
         "icon": ""
     },
     {
         "id": 4,
         "question": "Is there an admission fee?",
-        "answer": "Admission is free! What are you waiting for?",
+        "answer": "Admission is free! What are you waiting for? Come and join us!",
         "link": "",
         "icon": ""
     },
