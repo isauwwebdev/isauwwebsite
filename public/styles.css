@@ -1902,10 +1902,10 @@ select:invalid {
 }
 
 .keratonNav .footer-social-icon {
-	color: #031B28
-}
+	color: #031B28;
 	z-index: 1;
 }
+
 .keraton-games-row {
 	padding: 0;
 	margin: 0;
