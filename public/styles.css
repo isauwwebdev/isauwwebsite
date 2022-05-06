@@ -306,6 +306,11 @@ p {
 	.container {
 		max-width: 90%;
 	}
+
+	.keraton-performer-slider .slick-current .performer-name,
+	.keraton-student-performer .slick-current .student-performer-name {
+		color: rgb(247 213 161);
+	}
 }
 
 /* Navbar States - Becomes opaque as user scrolls */
@@ -1464,10 +1469,14 @@ a[type='button'] {
 	color: white;
 }
 
+.student-performer-img img {
+	object-fit: cover;
+}
+
 .student-performer-img img.framed {
 	box-shadow:
-    -50px -50px 0 -45px #E89C31,
-    50px 50px 0 -45px #E89C31;
+    -50px -50px 0 -45px rgb(247 213 161),
+    50px 50px 0 -45px rgb(247 213 161);
 }
 
 .slider-performer-img, 
@@ -1483,8 +1492,8 @@ a[type='button'] {
 	position: absolute;
 	top: -10px;
 	right: -10px;
-	border-top: 10px solid #E89C31;
-	border-right: 10px solid #E89C31;
+	border-top: 10px solid rgb(247 213 161);
+	border-right: 10px solid rgb(247 213 161);
 }
 
 .slider-performer-img:before {
@@ -1495,8 +1504,8 @@ a[type='button'] {
 	position: absolute;
 	bottom: -10px;
 	left: -10px;
-	border-bottom: 10px solid #E89C31;
-	border-left: 10px solid #E89C31;
+	border-bottom: 10px solid rgb(247 213 161);
+	border-left: 10px solid rgb(247 213 161);
 }
 
 .slider-performer-row {
@@ -1504,16 +1513,18 @@ a[type='button'] {
 }
 
 .slick-vertical .slick-current {
-	color: #E89C31;
+	color: rgb(247 213 161);
 }
 
 .performer-name {
-	font-size: calc(2vw + 16px);
+	font-size: calc(2.2vw + 18px);
 	font-weight: 700;
 }
 
 .performer-details {
-	font-size: calc(1vw + 12px);
+	font-size: calc(0.8vw + 12px);
+	font-family: 'Graphik', 'sans-serif';
+	font-weight: 300;
 }
 
 .performer-social {
@@ -1549,6 +1560,8 @@ a[type='button'] {
 
 .student-performer-details {
 	font-size: calc(0.4vw + 10px);
+	font-weight: 300;
+	font-family: 'Graphik', 'sans-serif';
 }
 
 .keraton-section-header {
@@ -1705,7 +1718,7 @@ select:invalid {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 2px solid #eb5942;
+	border: 2px solid rgb(247 213 161);
 	position: absolute;
 	top: calc(-1 * (8px + 1.2vw));
 	right: calc(-1 * (8px + 1.2vw));
@@ -1771,7 +1784,7 @@ select:invalid {
 	padding-bottom: 2rem !important;
 }
 .keraton-faq-item-header .accordion-button:not(.collapsed) {
-	color: #ff5470
+	color: rgb(247 213 161)
 }
 .keraton-faq-item .accordion-button:after {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
@@ -1805,7 +1818,7 @@ select:invalid {
 	font-size: calc(20px + 2.8vw);
 	font-family: 'palm-canyon';
 	-webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 2px #D5A694;
+	-webkit-text-stroke: 2px rgb(247 213 161);
 	opacity: 1;
 	transition: 0.5s ease-in-out;
 }
@@ -1831,7 +1844,7 @@ select:invalid {
 }
 
 .keraton-games-container:hover .keraton-games-text {
-	-webkit-text-fill-color: #D5A694;
+	-webkit-text-fill-color: rgb(247 213 161);
 }
 
 .keraton-games-overlay-top {

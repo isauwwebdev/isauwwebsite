@@ -3,42 +3,42 @@
         "id": 1,
         "name": "Christina Sunardi",
         "time": "4:35",
-        "img": "../../images/keraton/performers/hhsa.jpg",
+        "img": "../../images/keraton/performers/christina.jpg",
         "type": "Cultural"
     },
     {
         "id": 2,
         "name": "A2V Locboy Queens",
         "time": "4:35",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "img": "../../images/keraton/performers/a2v.png",
         "type": "K-Pop Dance"
     },
     {
         "id": 3,
-        "name": "Husky Jam: Moonlight Marmalade",
+        "name": "Moonlight Marmalade",
         "time": "4:50",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "img": "../../images/keraton/performers/moonlight.jpg",
         "type": "Dance"
     },
     {
         "id": 4,
         "name": "ISAUW Performance",
         "time": "5:20",
-        "img": "../../images/keraton/performers/hhsa.jpg",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
         "type": "Dance"
     },
     {
         "id": 5,
         "name": "Indonesian Cultural Association",
         "time": "5:25",
-        "img": "../../images/keraton/performers/hhsa.jpg",
-        "type": "K-Pop Dance"
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Dance"
     },
     {
         "id": 6,
-        "name": "HHSA: Divided",
+        "name": "UW Undivided XS",
         "time": "5:40",
-        "img": "../../images/keraton/performers/hhsa.jpg",
+        "img": "../../images/keraton/performers/undivided.jpg",
         "type": "Hip Hop Dance"
     }
 ]
