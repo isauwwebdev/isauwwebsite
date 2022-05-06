@@ -22,7 +22,7 @@ function Home() {
                 </div>
 
                 <Carousel.Caption style={{ top: "40%", bottom: "60%" }} className="animated fadeInDown">
-                    <h1 className="carousel-title" style = {{ zIndex: "100", fontFamily: "brandon_grotesquemedium, sans-serif", fontWeight: "normal" }}>Indonesian Student Association at the University of Washington</h1>
+                    <h1 className="carousel-title" style = {{ zIndex: "100", fontFamily: "brandon_grotesque, sans-serif", fontWeight: "400" }}>Indonesian Student Association at the University of Washington</h1>
                 </Carousel.Caption>
             </div>
 
@@ -36,8 +36,8 @@ function Home() {
 
             <Fade bottom>
                 <Container className="align-items-center text-center" style={{marginTop: "4rem", overflow: "auto"}}>
-                    <h1 className="my-3 cta"><strong>DON'T MISS OUT</strong></h1>
-                    <p className="text-center" style={{	fontFamily: 'brandon_grotesqueregular', fontSize: 'calc(15px + 0.6vw)', marginBottom: "0.1rem"}}>join the ISAUW family today</p>
+                    <h1 className="my-3 cta"><strong style={{fontFamily: 'brandon_grotesque'}}>DON'T MISS OUT</strong></h1>
+                    <p className="text-center" style={{	fontFamily: 'brandon_grotesque', fontWeight: "400", fontSize: 'calc(15px + 0.6vw)', marginBottom: "0.1rem"}}>join the ISAUW family today</p>
                     <a type="button" className="btn btn-home" href="https://instagram.com/isauwhuskies/">
                         <AiOutlineInstagram class="btn-home-icon" /><span> FOLLOW</span>
                     </a>
