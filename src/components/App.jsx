@@ -55,6 +55,9 @@ function App() {
         })
 
         window.addEventListener("scroll", () => {
+            if (window.pageYOffset === 0) {
+                setKeratonScrollDown(false)
+            }
             if (window.scrollY > keratonY) {
                 setKeratonScrollDown(true);
             } else {
