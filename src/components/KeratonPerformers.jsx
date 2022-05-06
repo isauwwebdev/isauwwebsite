@@ -120,10 +120,10 @@ function KeratonPerformers() {
 function PerformerItem(props) {
     const { performer } = props;
     return (
-        <div className="py-2">
+        <div className="">
 
-                <h2 className="performer-name mt-3">{performer.name}</h2>
-                <h3 className="performer-details mb-3"> {performer.type}&emsp;|&emsp;{performer.time}&emsp;|&emsp;<a className="performer-social" href={performer.insta}><FaInstagram className="" /></a> </h3>
+                <h2 className="performer-name">{performer.name}</h2>
+                <h3 className="performer-details"> {performer.type}&emsp;|&emsp;{performer.time}&emsp;|&emsp;<a className="performer-social" href={performer.insta}><FaInstagram className="" /></a> </h3>
 
         </div>
     )
