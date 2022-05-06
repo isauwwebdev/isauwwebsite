@@ -14,7 +14,7 @@ function KeratonCountdown(props) {
         if (completed) {
             return <Completionist />;
         } else {
-            return <DisplayBlocks timeArray={[days, hours, minutes, seconds]} stringArray={["days", "hours", "minutes", "seconds"]} />
+            return <DisplayBlocks timeArray={[days, hours, minutes, seconds]} stringArray={[days === 1 ? "day" : "days", hours === 1 ? "hour" : "hours", minutes === 1 ? "minute" : "minutes", "hours", minutes === 1 ? "second" : "seconds"]} />
         }
     };
     return (

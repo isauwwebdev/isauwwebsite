@@ -11,7 +11,7 @@ function KeratonAbout() {
                     <Col xs={6} sm={6} style={{margin: "auto", padding: "0"}}>
                         <h1 className="py-4 keraton-section-header" style={{textAlign: "left", marginLeft: "12px"}}>About</h1>
 
-                        <p className="keraton-about-text" style={{fontSize: `calc(10px + 0.8vw)`, paddingRight: "16px"}}>
+                        <p className="keraton-about-text" style={{fontSize: `calc(12px + 0.6vw)`, paddingRight: "16px"}}>
                             Feeling homesick? After a 4-year hiatus, Keraton is back in 2022 with sensational musical headliners, cultural shows, stunning cuisine, and exciting activities that will immerse you in Indonesian culture.
                         </p>
                     </Col>

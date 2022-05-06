@@ -100,7 +100,7 @@ function KeratonPerformers() {
                         </div>
                     </Col>
                 </Row>
-                <h2 className="py-3 keraton-student-section-header" style={{marginBottom: "2vw"}}>Students</h2>
+                {/* <h2 className="py-3 keraton-student-section-header" style={{marginBottom: "2vw"}}>Students</h2>
                 <Row className="slider-student-performer-row">
                     <Col>
                         <Slider className="mb-5 keraton-student-performer" {...settingsStudents}>
@@ -111,7 +111,7 @@ function KeratonPerformers() {
                             })}
                         </Slider>
                     </Col>
-                </Row>
+                </Row> */}
             </Container>
         </div>
     )
