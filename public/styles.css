@@ -1381,6 +1381,7 @@ a[type='button'] {
     margin: 0px;
     padding: 0px;
     overflow-x: hidden; 
+	background-color: "#031B28";
 }
 
 .keraton-header {

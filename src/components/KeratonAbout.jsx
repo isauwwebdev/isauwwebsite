@@ -5,8 +5,8 @@ import Container from 'react-bootstrap/Container';
 
 function KeratonAbout() {
     return (
-        <div className="pt-5 pb-3" style={{ "background-color": "#031B28"}}>
-            <Container className="keraton-about">
+        <div style={{ backgroundColor: "#031B28"}}>
+            <Container className="keraton-about" style={{paddingTop: "7rem", paddingBottom: "7rem"}}>
                 <Row>
                     <Col xs={6} sm={6} style={{margin: "auto", padding: "0"}}>
                         <h1 className="py-4 keraton-section-header" style={{textAlign: "left", marginLeft: "12px"}}>About</h1>
