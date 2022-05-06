@@ -2022,5 +2022,5 @@ select:invalid {
     position: absolute;
     transform: translate(calc(8px + 1.2vw), calc(12px + 1.2vw));
     border-radius: 221px 221px 0 0;
-    border: 1px solid #ff5470;
+    border: 1px solid rgb(247 213 161);
 }
