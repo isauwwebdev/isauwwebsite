@@ -11,11 +11,7 @@ function KeratonCountdown(props) {
     const Completionist = () => <h2 className="keraton-completed">Keraton has passed!</h2>;
 
     const renderer = ({ days, hours, minutes, seconds, completed }) => {
-        if (completed) {
-            return <Completionist />;
-        } else {
-            return <DisplayBlocks timeArray={[days, hours, minutes, seconds]} stringArray={[days === 1 ? "day" : "days", hours === 1 ? "hour" : "hours", minutes === 1 ? "minute" : "minutes", seconds === 1 ? "second" : "seconds"]} />
-        }
+        return <DisplayBlocks timeArray={[days, hours, minutes, seconds]} stringArray={[days === 1 ? "day" : "days", hours === 1 ? "hour" : "hours", minutes === 1 ? "minute" : "minutes", seconds === 1 ? "second" : "seconds"]} />
     };
     return (
         <div>
