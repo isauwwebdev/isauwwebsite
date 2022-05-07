@@ -7,7 +7,7 @@ function KeratonMap() {
     function StudentPerformer(props) {
         const { student } = props;
         return (
-            <div className="" style={{width: "80%", textAlign: "center", alignItems: "center", display: "flex", margin: "auto"}}>
+            <div className="keraton-map" style={{width: "80%", textAlign: "center", alignItems: "center", display: "flex", margin: "auto"}}>
                 <div className="py-2 px-4 student-performer-img">
                     <img className="framed" src="../images/keraton/map/keraton-map.png"></img>
                 </div>
