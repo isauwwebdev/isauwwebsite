@@ -14,7 +14,7 @@ function KeratonVideo() {
             <Carousel.Caption style={{ top: "35%", bottom: "65%", left: "5%", right: "5%" }} className="animated fadeInDown">
                 <h1 className="keraton-header" style={{ zIndex: "100" }}>KERATON</h1>
             </Carousel.Caption>
-            <Carousel.Caption style={{ top: "50%", bottom: "50%" }} className="animated fadeInDown">
+            <Carousel.Caption style={{ top: "40%", bottom: "50%" }} className="animated fadeInDown">
                 <KeratonCountdown keratonDate={new Date(1651964400000)}></KeratonCountdown>
             </Carousel.Caption>
         </div>
