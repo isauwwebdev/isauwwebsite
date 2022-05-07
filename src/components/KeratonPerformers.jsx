@@ -100,18 +100,6 @@ function KeratonPerformers() {
                         </div>
                     </Col>
                 </Row>
-                {/* <h2 className="py-3 keraton-student-section-header" style={{marginBottom: "2vw"}}>Students</h2>
-                <Row className="slider-student-performer-row">
-                    <Col>
-                        <Slider className="mb-5 keraton-student-performer" {...settingsStudents}>
-                            {students.map((student) => {
-                                return (
-                                    <StudentPerformer key={student.id} student={student}></StudentPerformer>
-                                )
-                            })}
-                        </Slider>
-                    </Col>
-                </Row> */}
             </Container>
         </div>
     )
@@ -136,19 +124,6 @@ function PerformerImage(props) {
             <div>
                 <img src={performer.img}></img>
             </div>
-        </div>
-    )
-}
-
-function StudentPerformer(props) {
-    const { student } = props;
-    return (
-        <div className="">
-            <div className="py-2 px-4 student-performer-img">
-                <img className="framed" src={student.img}></img>
-            </div>
-            <h2 className="mt-4 px-4 student-performer-name">{student.name}</h2>
-            <h3 className="px-4 student-performer-details">{student.type}&emsp;|&emsp;{student.time}</h3>
         </div>
     )
 }

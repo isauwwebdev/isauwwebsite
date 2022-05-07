@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
+import KeratonMap from './KeratonMap';
 import KeratonGames from './KeratonGames';
 import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
@@ -17,6 +18,7 @@ function Keraton() {
             <KeratonAbout></KeratonAbout>
             <KeratonPerformers></KeratonPerformers>
             <KeratonVendors></KeratonVendors>
+            <KeratonMap></KeratonMap>
             <KeratonGames></KeratonGames>
             <KeratonFAQ></KeratonFAQ>
             <KeratonSponsors></KeratonSponsors>
