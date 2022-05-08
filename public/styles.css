@@ -1399,7 +1399,7 @@ a[type='button'] {
 }
 
 .keraton-completed {
-	font-size: calc(2vw + 36px);
+	font-size: calc(3.2vw + 24px);
 	font-family: 'signatura_monoline_script', cursive;
 	word-spacing: calc(0.4vw + 6px);
 	letter-spacing: calc(0.4vw + 2px);
