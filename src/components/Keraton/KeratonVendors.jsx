@@ -64,11 +64,14 @@ function KeratonVendors() {
                         <Slider style={{marginLeft: "auto", marginRight: "0"}} ref={slider1 => {(customSlider.current = slider1); setNav1(slider1);}} className="keraton-vendors-category" {...vendorCategorySettings} vertical={true} verticalSwiping={true}>
                             {vendorList.map((category) => {
                                 return (
-                                    <a style={{height: "fit-content", display: "inline-block", textAlign: "center"}} onClick={() => customSlider.current.slickGoTo(category.index)}>
+                                    <button 
+                                      className="keraton-vendors-button"
+                                      onClick={() => customSlider.current.slickGoTo(category.index)}
+                                    >
                                         {category.name === 'Food' && <MdOutlineTakeoutDining style={{fontSize: `calc(16px + 3vw)`}}/>}
                                         {category.name === 'Drinks' && <MdOutlineLocalCafe style={{fontSize: `calc(16px + 3vw)`}}/>}
                                         {category.name === 'Merch' && <MdStorefront style={{fontSize: `calc(16px + 3vw)`}}/>}
-                                    </a>
+                                    </button>
                                 )
                             })}
                         </Slider>
