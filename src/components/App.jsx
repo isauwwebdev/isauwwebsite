@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Switch, NavLink, Link, useLocation } from 'react-router-dom'
+import React, { useState } from 'react';
+import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
 
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
@@ -25,9 +25,9 @@ function App() {
 
     const [currentPage, setCurrentPage] = useState(window.location.pathname.substring(1));
 
-    let keratonY = window.scrollY;
+    const keratonY = window.scrollY;
 
-    var navbarRef = React.useRef()
+    const navbarRef = React.useRef()
     React.useEffect(() => {
         // 'load' event listener to hide the preloader once the main content is loaded
         window.addEventListener('load', () => {
@@ -137,19 +137,23 @@ function App() {
 
                 {/* {renderPopUp()} */}
 
-                {keratonPage ? '' : <Footer />}
+                {!keratonPage && <Footer />}
 
                 {/* Bootstrap JS */}
-                <script src="https://unpkg.com/react/umd/react.production.min.js" crossOrigin></script>
+                <script 
+                  src="https://unpkg.com/react/umd/react.production.min.js"
+                  crossOrigin>
+                </script>
                 <script
                     src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
-                    crossOrigin></script>
+                    crossOrigin>
+                </script>
                 <script
                     src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
-                    crossOrigin></script>
+                    crossOrigin>
+                </script>
             </div>
         </BrowserRouter>
-
     );
 }
 

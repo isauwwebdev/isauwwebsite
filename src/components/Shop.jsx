@@ -19,13 +19,13 @@ function Shop(props) {
 
     const onAdd = (product) => {
         setShowCheckout(false);
-        const exist = cartItems.find((x) => ((x.id == product.id) && (x.selected == product.selected)));
+        const exist = cartItems.find((x) => ((x.id === product.id) && (x.selected === product.selected)));
         if (exist) {
             setCartItems(() => {
-                return cartItems.map((x) => ((x.id == product.id) && (x.selected == product.selected)) ? { ...exist, qty: exist.qty + 1 } : x)
+                return cartItems.map((x) => ((x.id === product.id) && (x.selected === product.selected)) ? { ...exist, qty: exist.qty + 1 } : x)
             })
             // make cart persistent, we cannot just sessionStorage.setItem(cartItems) because setState is an asynchronous function. 
-            sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => ((x.id == product.id) && (x.selected == product.selected)) ? { ...exist, qty: exist.qty + 1 } : x)))
+            sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => ((x.id === product.id) && (x.selected === product.selected)) ? { ...exist, qty: exist.qty + 1 } : x)))
         } else {
             setCartItems(() => {
                 return [...cartItems, { ...product, qty: 1 }]
@@ -36,17 +36,17 @@ function Shop(props) {
     };
 
     const onRemove = (product) => {
-        const exist = cartItems.find((x) => ((x.id == product.id) && (x.selected == product.selected)));
-        if (exist.qty == 1) {
+        const exist = cartItems.find((x) => ((x.id === product.id) && (x.selected === product.selected)));
+        if (exist.qty === 1) {
             setCartItems(() => {
-                return cartItems.filter((x) => ((x.id != product.id) || (x.selected != product.selected)))
+                return cartItems.filter((x) => ((x.id !== product.id) || (x.selected !== product.selected)))
             })
-            sessionStorage.setItem('cookies', JSON.stringify(cartItems.filter((x) => (x.id != product.id) || (x.selected != product.selected))))
+            sessionStorage.setItem('cookies', JSON.stringify(cartItems.filter((x) => (x.id !== product.id) || (x.selected !== product.selected))))
         } else {
             setCartItems(() => {
-                return cartItems.map((x) => ((x.id == product.id) && (x.selected == product.selected)) ? { ...exist, qty: exist.qty - 1 } : x)
+                return cartItems.map((x) => ((x.id === product.id) && (x.selected === product.selected)) ? { ...exist, qty: exist.qty - 1 } : x)
             })
-            sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => ((x.id == product.id) && (x.selected == product.selected)) ? { ...exist, qty: exist.qty - 1 } : x)))
+            sessionStorage.setItem('cookies', JSON.stringify(cartItems.map((x) => ((x.id === product.id) && (x.selected === product.selected)) ? { ...exist, qty: exist.qty - 1 } : x)))
         }
     };
 

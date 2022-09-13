@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Slider from "react-slick";
 
 import Row from 'react-bootstrap/Row';
@@ -11,12 +11,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import performers from '../data/keraton-performers';
-import students from '../data/keraton-student-performers';
 
 function KeratonPerformers() {
     const [nav1, setNav1] = useState();
     const [nav2, setNav2] = useState();
-    const customSlider = useRef();
 
     const settingsText = {
         dots: false,
@@ -57,22 +55,6 @@ function KeratonPerformers() {
         pauseOnHover: true,
         asNavFor: nav1
     };
-
-    const settingsStudents = {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplaySpeed: 4000,
-        infinite: true,
-        centerMode: true,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 1,
-                }
-            }
-        ]
-    }
 
     return (
         <div className="keraton-performers py-5" style={{ "background-color": "#031B28" }}>

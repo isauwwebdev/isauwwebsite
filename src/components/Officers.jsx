@@ -18,7 +18,7 @@ function Officers() {
                                                 return (
                                                     <Col className = {officer.position} >
                                                         <div style={{ alignSelf: "flex-end" }}>
-                                                            <img className="mx-auto" src={officer.img} style={{ width: `calc(100% - 12vw + 20px)` }}></img>
+                                                            <img className="mx-auto" src={officer.img} style={{ width: `calc(100% - 12vw + 20px)` }} alt="Officers photoshoot"></img>
                                                         </div>
                                                     </Col>
                                                 )

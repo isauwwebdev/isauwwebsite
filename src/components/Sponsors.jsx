@@ -15,7 +15,7 @@ function Sponsors() {
             <h1 className="text-center m-3"><strong>University District</strong></h1>
             <Container className="justify-content-center">
                 <Row className="justify-content-center">
-                    {sponsors.map((sponsor) => {
+                    {sponsors.forEach((sponsor) => {
                         if (sponsor.location === "University District") {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>
@@ -35,7 +35,7 @@ function Sponsors() {
             <h1 className="text-center m-3"><strong>Other Locations</strong></h1>
             <Container className="justify-content-center">
                 <Row className="justify-content-center">
-                    {sponsors.map((sponsor) => {
+                    {sponsors.forEach((sponsor) => {
                         if (sponsor.location !== "University District") {
                             return (
                                 <Col className="text-center p-2 m-2" xs={5} md={3} lg={2} style={{ display: "flex" }}>

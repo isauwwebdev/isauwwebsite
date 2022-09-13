@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import KeratonVideo from './KeratonVideo';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
-import KeratonMap from './KeratonMap';
 import KeratonGames from './KeratonGames';
 import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
-
-import { FaArrowUp } from 'react-icons/fa';
-
 
 function Keraton() {
     return (
@@ -18,7 +14,6 @@ function Keraton() {
             <KeratonAbout></KeratonAbout>
             <KeratonPerformers></KeratonPerformers>
             <KeratonVendors></KeratonVendors>
-            <KeratonMap></KeratonMap>
             <KeratonGames></KeratonGames>
             <KeratonFAQ></KeratonFAQ>
             <KeratonSponsors></KeratonSponsors>
@@ -27,7 +22,7 @@ function Keraton() {
 }
 
 // function ScrollToTop() {
-//     const [backToTop, setBackToTop] = useState(false);
+//     const [backToTop, setBacckToTop] = useState(false);
 
 //     const toggleBackToTop = () => {
 //         if (window.pageYOffset > 300) {
