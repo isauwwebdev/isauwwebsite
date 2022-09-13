@@ -23,6 +23,13 @@ function App() {
     const [keratonScrollDown, setKeratonScrollDown] = useState(false);
     const [currentPage, setCurrentPage] = useState(window.location.pathname.substring(1));
 
+    const resetHeight = () => {
+      // reset the body height to that of the inner browser
+      document.body.style.height = window.innerHeight + "px";
+    }
+    // called to initially set the height.
+    resetHeight();
+
     const navbarRef = React.useRef()
     React.useEffect(() => {
         let keratonY = window.scrollY;
@@ -43,6 +50,8 @@ function App() {
             if (window.innerWidth > 992) {
                 setExpanded(false);
             }
+            // reset the height whenever the window's resized
+            resetHeight();
         })
 
         // closes collapsed navbar after clicking outside the navbar */

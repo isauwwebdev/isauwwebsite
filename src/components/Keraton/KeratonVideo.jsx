@@ -8,7 +8,7 @@ function KeratonVideo() {
 
     return (
         <div className="navbar-overlay keraton-video" style={{ "background-color": "#031B28", height: "100vh"}}>
-            <video playsinline="playsinline" autoplay="autoplay" muted loop style={{ minHeight: "-webkit-fill-available", width: "100%", margin: "auto", objectFit: "cover", display: "block" }}>
+            <video playsinline="playsinline" autoplay="autoplay" muted loop style={{ height: "100vh", width: "100%", margin: "auto", objectFit: "cover", display: "block" }}>
                 <source src="https://students.washington.edu/isauw/images/keraton-2018-trimmed.mp4" type="video/mp4"></source>
             </video>
             <Carousel.Caption style={{ top: "35%", bottom: "65%", left: "5%", right: "5%" }} className="animated fadeInDown">
