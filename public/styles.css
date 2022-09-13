@@ -346,11 +346,11 @@ p {
 }
 
 .navbar-overlay {
-	height: 100vh;
+	height: 100%;
 }
 
 .navbar-overlay:before {
-	height: 100vh;
+	height: 100%;
 	content: '';
 	position: absolute;
 	top: 0;
