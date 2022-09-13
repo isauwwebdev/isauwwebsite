@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container'
 import Carousel from 'react-bootstrap/Carousel';
-import UpcomingEventsGallery from './UpcomingEventsGallery';
+import UpcomingEventsGallery from '../Shared/UpcomingEventsGallery';
 import PastEventsSearch from './PastEventsSearch';
 import Fade from 'react-reveal/Fade';
 

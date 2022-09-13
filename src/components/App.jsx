@@ -6,11 +6,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import Alert from 'react-bootstrap/Alert'
 
-import Home from './Home';
-import Events from './Events';
-import Shop from './Shop';
-import About from './About';
-import Keraton from './Keraton';
+import Home from './Home/Home';
+import Events from './Events/Events';
+import Shop from './Shop/Shop';
+import About from './About/About';
+import Keraton from './Keraton/Keraton';
 import Sponsors from './Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
@@ -19,16 +19,14 @@ import SocialLinks from './SocialLinks';
 function App() {
     const [expanded, setExpanded] = React.useState(false);
     const [navBar, setNavBar] = useState(false);
-
     const [keratonPage, setKeratonPage] = useState(false);
     const [keratonScrollDown, setKeratonScrollDown] = useState(false);
-
     const [currentPage, setCurrentPage] = useState(window.location.pathname.substring(1));
-
-    const keratonY = window.scrollY;
 
     const navbarRef = React.useRef()
     React.useEffect(() => {
+        let keratonY = window.scrollY;
+
         // 'load' event listener to hide the preloader once the main content is loaded
         window.addEventListener('load', () => {
             document.getElementById("preloader").style.display = "none";
@@ -120,7 +118,7 @@ function App() {
                                     <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>
                                     {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
                                 </Nav>
-                                {expanded ? <SocialLinks /> : null}
+                                {expanded && <SocialLinks />}
                             </Navbar.Collapse>
                         </Container>
                     </Navbar>

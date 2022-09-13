@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import products from '../data/products.json';
+import products from '../../data/products.json';
 
 const InstaFeed = ({ token, ...props }) => {
     const [feeds, setFeedsData] = useState([]);
@@ -64,7 +64,7 @@ function InstaGrid(props) {
 
     // only put insta image posts into an array (do not include videos)
     const postArray = [];
-    props.feeds.map((feed) => {
+    props.feeds.forEach((feed) => {
         const { id, caption, media_type, media_url } = feed
 
         switch (media_type) {
@@ -93,17 +93,17 @@ function InstaGrid(props) {
         <div style={{ overflow: "hidden" }} className="my-5">
             <div id="move" className="move-section" style={{ marginBottom: `calc(-1 * (8px + 1vw))` }}>
                 <div className="move-bg" style={{ right: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(${position}px))` }}>
-                <img src="../images/instagram/bag.jpeg" className="insta-product"></img>
+                <img src="../images/instagram/bag.jpeg" className="insta-product" alt="Instagram Post 1"></img>
                 </div>
             </div>
             <div className="move-section">
                 <div className="move-bg" style={{ left: `calc(${windowWidth}px / 1.95)`, transform: `translateX(calc(-1 * (${position}px)))` }}>
-                <img src="../images/instagram/mask.jpeg" className="insta-product"></img>
+                <img src="../images/instagram/mask.jpeg" className="insta-product" alt="Instagram Post 2"></img>
                 </div>
             </div>
             <div className="move-section" style={{ marginTop: `calc(-1 * (14px + 2.5vw))` }}>
                 <div className="move-bg" style={{ right: `calc(${windowWidth}px / 1.775)`, transform: `translateX(calc(${position}px))` }}>
-                    <img src={products[0].img} className="insta-product"></img>
+                    <img src={products[0].img} className="insta-product" alt="Instagram Post 3"></img>
                 </div>
             </div>
         </div>

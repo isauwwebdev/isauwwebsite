@@ -69,7 +69,7 @@ function Cart(props) {
         formData.append('date', order.date);
         formData.append('totalPrice', order.totalPrice);
         var result = ""; 
-        order.cartItems.map((item) => {
+        order.cartItems.forEach((item) => {
             if (result !== "") {
                 result += "\n"
             }
@@ -135,7 +135,7 @@ function Cart(props) {
                             <h3 style={{ float: "left", margin: "0", fontWeight: "600", fontSize: `calc(16px + 0.1vw)` }}>Your Bag</h3>
                         </Col>
                         <Col xs={4}>
-                            <p style={{ float: "right", margin: "0", fontSize: `calc(16px + 0.1vw)` }}>{cartItems.length} item{cartItems.length === 1 ? "" : "s"}</p>
+                            <p style={{ float: "right", margin: "0", fontSize: `calc(16px + 0.1vw)` }}>{cartItems.length} item{cartItems.length !== 1 && "s"}</p>
                         </Col>
                         <hr/>
                     </Offcanvas.Header>

@@ -10,7 +10,7 @@ import { FaInstagram } from 'react-icons/fa';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import performers from '../data/keraton-performers';
+import performers from '../../data/keraton-performers';
 
 function KeratonPerformers() {
     const [nav1, setNav1] = useState();
@@ -104,7 +104,7 @@ function PerformerImage(props) {
     return (
         <div className="performer-img-container">
             <div>
-                <img src={performer.img}></img>
+                <img src={performer.img} alt=""></img>
             </div>
         </div>
     )

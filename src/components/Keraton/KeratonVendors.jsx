@@ -13,7 +13,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import { mdiFoodTakeoutBoxOutline } from '@mdi/js'; 
 
-import vendorList from '../data/keraton-vendors';
+import vendorList from '../../data/keraton-vendors';
 
 function KeratonVendors() {
     const [nav1, setNav1] = useState();
@@ -65,10 +65,9 @@ function KeratonVendors() {
                             {vendorList.map((category) => {
                                 return (
                                     <a style={{height: "fit-content", display: "inline-block", textAlign: "center"}} onClick={() => customSlider.current.slickGoTo(category.index)}>
-                                        {/* {category.name === 'Food' ? <i class="fas fa-utensils" style={{fontSize: `calc(16px + 2vw)`}}></i> : <></>} */}
-                                        {category.name === 'Food' ? <MdOutlineTakeoutDining style={{fontSize: `calc(16px + 3vw)`}}/> : <></>}
-                                        {category.name === 'Drinks' ? <MdOutlineLocalCafe style={{fontSize: `calc(16px + 3vw)`}}/> : <></>}
-                                        {category.name === 'Merch' ? <MdStorefront style={{fontSize: `calc(16px + 3vw)`}}/> : <></>}
+                                        {category.name === 'Food' && <MdOutlineTakeoutDining style={{fontSize: `calc(16px + 3vw)`}}/>}
+                                        {category.name === 'Drinks' && <MdOutlineLocalCafe style={{fontSize: `calc(16px + 3vw)`}}/>}
+                                        {category.name === 'Merch' && <MdStorefront style={{fontSize: `calc(16px + 3vw)`}}/>}
                                     </a>
                                 )
                             })}
@@ -105,7 +104,7 @@ function KeratonVendors() {
                                                     <Col xs={6} sm={7} style={{paddingTop: "35px"}}> {/* change this padding to be responsive*/}
                                                         <div className="keraton-vendors-img-container">
                                                             <div style={{position: "relative", width: "fit-content"}}>
-                                                                <img src={vendor.img} className="keraton-vendors-img" style={{}}></img>
+                                                                <img src={vendor.img} className="keraton-vendors-img" alt=""></img>
                                                             </div>
                                                         </div>
                                                     </Col>

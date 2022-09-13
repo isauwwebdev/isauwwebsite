@@ -1,7 +1,7 @@
 import React from 'react';
 import Purpose from './Purpose';
 import InstaFeed from './InstaFeed';
-import UpcomingEventsGallery from './UpcomingEventsGallery';
+import UpcomingEventsGallery from '../Shared/UpcomingEventsGallery';
 import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import { AiOutlineInstagram } from 'react-icons/ai';

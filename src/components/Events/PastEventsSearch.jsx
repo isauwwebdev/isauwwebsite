@@ -3,12 +3,7 @@ import PastEventsGallery from './PastEventsGallery';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-import _ from 'lodash';
-
-import events from '../data/events.json';
-import Highlighter from "react-highlight-words";
-import { computeHeadingLevel } from '@testing-library/react';
+import events from '../../data/events.json';
 
 function PastEventsSearch() {
     const pastEvents = events.filter((event) => {

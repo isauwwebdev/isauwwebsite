@@ -1,7 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import Container from 'react-bootstrap/Container';
 import React from 'react'
-import questions from '../data/keraton-FAQ.json';
+import questions from '../../data/keraton-FAQ.json';
 
 function KeratonFAQ() {  
     const questionItems = questions.map((item) => {
@@ -26,7 +26,18 @@ function Item(props) {
     return (
         <Accordion.Item eventKey={String(item.id)} className="keraton-faq-item">
             <Accordion.Header className="keraton-faq-item-header">{item.question}</Accordion.Header>
-            <Accordion.Body className="keraton-faq-item-body">{item.link && <a href={item.link} target="_blank" rel="noreferrer" ><img src={item.icon} style={{width: `calc(20px + 0.4vw)`, marginRight: `calc(2px + 0.2vw)`, paddingBottom: "8px"}}></img></a>} {item.answer}</Accordion.Body>
+            <Accordion.Body className="keraton-faq-item-body">
+              {item.link && 
+                <a href={item.link} target="_blank" rel="noreferrer" >
+                  <img 
+                    src={item.icon} 
+                    style={{width: `calc(20px + 0.4vw)`, marginRight: `calc(2px + 0.2vw)`, paddingBottom: "8px" }} 
+                    alt="">
+                  </img>
+                </a>
+              }
+              {item.answer}
+            </Accordion.Body>
         </Accordion.Item>
     )
 }

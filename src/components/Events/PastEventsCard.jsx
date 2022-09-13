@@ -16,7 +16,7 @@ function PastEventsCard(props) {
                 <Container>
                     <Slider {...props.settings}>
                         {props.img.map((image) =>
-                            <img src={image.src} className="past-events-img"></img>
+                            <img src={image.src} className="past-events-img" alt=""></img>
                         )}
                     </Slider>
                 </Container>

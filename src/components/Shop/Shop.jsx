@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Carousel from 'react-bootstrap/Carousel';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import products from '../data/products.json';
+import products from '../../data/products.json';
 import { IoFolderOutline } from 'react-icons/io5'
 import $ from 'jquery';
 
-function Shop(props) {    
+function Shop() {    
     const [cartItems, setCartItems] = useState(sessionStorage.getItem('cookies') ? JSON.parse(sessionStorage.getItem('cookies')) : []);
     const [showCart, setShowCart] = useState(false);
     const [showCheckout, setShowCheckout] = useState(false);

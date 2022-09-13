@@ -1,6 +1,6 @@
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import officers from '../data/officers.json'
+import officers from '../../data/officers.json'
 import Fade from 'react-reveal/Fade';
 
 function Officers() {
@@ -18,7 +18,7 @@ function Officers() {
                                                 return (
                                                     <Col className = {officer.position} >
                                                         <div style={{ alignSelf: "flex-end" }}>
-                                                            <img className="mx-auto" src={officer.img} style={{ width: `calc(100% - 12vw + 20px)` }} alt="Officers photoshoot"></img>
+                                                            <img className="mx-auto" src={officer.img} style={{ width: `calc(100% - 12vw + 20px)` }} alt=""></img>
                                                         </div>
                                                     </Col>
                                                 )
