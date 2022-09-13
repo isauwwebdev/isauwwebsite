@@ -1990,6 +1990,7 @@ select:invalid {
 	border-radius: 221px 221px 0 0;
 	position: relative;
 	max-width: 441px;
+  display: block;
 }
 
 .testing {
