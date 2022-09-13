@@ -11,7 +11,7 @@ import Events from './Events/Events';
 import Shop from './Shop/Shop';
 import About from './About/About';
 import Keraton from './Keraton/Keraton';
-import Sponsors from './Sponsors';
+import Sponsors from './InProgress/Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
