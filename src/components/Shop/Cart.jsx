@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import axios from 'axios';
 
 function Cart(props) {
     const {cartItems, onRemove, showCart, onHide, clearCart, showCheckout, setShowCheckout} = props;
@@ -83,19 +84,15 @@ function Cart(props) {
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message));
 
-        // send order confirmation email 
-        fetch("/order",
-          { 
-            method: 'POST', 
-            body: JSON.stringify({
-              name: "Jevin Kosasih",
-              email: "jevin.kosasih@yahoo.com",
-              message: "Testing Order Endpoint"
-            })
+        axios({
+          method: "POST",
+          url: "/order",
+          data: {
+            name: "Jevin Kosasih",
+            email: "jevin.kosasih@yahoo.com",
+            message: "Testing Order Endpoint"
           }
-        )
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message));
+        });
 
         onHide();
         setShowCheckout(false);
