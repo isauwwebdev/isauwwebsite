@@ -75,11 +75,11 @@ function App() {
 
         axios({
           method: "POST",
-          url: "http://localhost:5000/send",
+          url: "/order",
           data: {
-            name: "hello",
+            name: "Jevin Kosasih",
             email: "jevin.kosasih@yahoo.com",
-            message: "hi"
+            message: "Testing Order Endpoint"
           }
         });
     })
