@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import Modal from 'react-bootstrap/Modal';
 import Card from 'react-bootstrap/Card';
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
-import {renderToString} from 'react-dom/server'
+import {renderToString} from 'react-dom/server';
+import {createFormData, generateOrderHTML} from './shopTools';
+import Checkout from './Checkout';
 
 function Cart(props) {
   const {cartItems, onRemove, showCart, onHide, clearCart, showCheckout, setShowCheckout} = props;
@@ -18,7 +18,7 @@ function Cart(props) {
   const [phone, setPhone] = useState("");
   const [venmo, setVenmo] = useState("");
   const [pickup, setPickup] = useState("");
-
+  const [validated, setValidated] = useState(false);
   const [showReceipt, setShowReceipt] = useState(false);
   const [order, setOrder] = useState({
     id: "",
@@ -32,38 +32,6 @@ function Cart(props) {
     pickup: ""
   });
 
-  function getOrderHTML(order) {
-    return (
-      <div>
-        <div className="row"><h4 style={{fontWeight: "600"}}>Order # {order.id}</h4></div>
-        <div className="row" style={{marginTop: "20px"}}><h3 style={{fontWeight: "700", marginBottom: "0"}}>Your Purchase</h3></div>
-        {order.cartItems.map((x) => (
-          <div className="row">
-            <div className="col-9">{x.name} {x.selected && ("(" + x.selected + ")")} x {x.qty}</div>
-            <div className="col-3" style={{textAlign: "right"}}>${(x.price * x.qty).toFixed(2)}</div>
-          </div>
-        ))}
-
-        <hr style={{margin: "24px 0 6px"}} />
-        <div className="row" style={{fontWeight: "600"}}>
-          <div className="col-6">Total</div>
-          <div className="col-6" style={{textAlign: "right"}}>${order.totalPrice}</div>
-        </div>
-        <hr style={{margin: "6px 0 48px"}} />
-
-        <div style={{fontSize: "12px"}}>
-          <div className="row"><div className="col">Name: {order.firstName} {order.lastName}</div></div>
-          <div className="row"><div className="col">Email: {order.email}</div></div>
-          <div className="row"><div className="col">Venmo: {order.venmo}</div></div>
-          <div className="row"><div className="col">Phone: {order.phone}</div></div>
-          <div className="row"><div className="col">Date: {(order.date).split(", ").slice(0, 1)}</div></div>
-          <div className="row"><div className="col">Time: {(order.date).split(", ").slice(1)}</div></div>
-        </div>
-      </div>
-    );
-  }
-
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9uIfPnprSh-2gbR8cxm9C5klRjX_VfPCFEr7z9me15PBXQ/exec'
   const createOrder = (e) => {
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
@@ -73,6 +41,7 @@ function Cart(props) {
     setValidated(true);
 
     if (form.checkValidity() === false) {
+      setValidated(true);
       return;
     }
 
@@ -92,29 +61,10 @@ function Cart(props) {
     e.preventDefault();
     setOrder(order);
 
-    var formData = new FormData();
-    formData.append('id', order.id);
-    formData.append('firstName', order.firstName);
-    formData.append('lastName', order.lastName);
-    formData.append('email', order.email);
-    formData.append('phone', order.phone);
-    formData.append('venmo', order.venmo);
-    formData.append('date', order.date);
-    formData.append('totalPrice', order.totalPrice);
-    var result = "";
-    order.cartItems.forEach((item) => {
-      if (result !== "") {
-        result += "\n"
-      }
-      result += item.qty + "x " + item.name;
-      if (item.selected) {
-        result += " (" + item.selected + ")";
-      }
-    });
-    formData.append('cartItems', result);
-    formData.append('pickup', order.pickup);
+    var formData = createFormData(order);
 
     // update Google Sheets
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzy9uIfPnprSh-2gbR8cxm9C5klRjX_VfPCFEr7z9me15PBXQ/exec'
     fetch(scriptURL, {method: 'POST', body: formData})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message));
@@ -125,7 +75,7 @@ function Cart(props) {
       data: {
         id: order.id,
         email: order.email,
-        html: renderToString(getOrderHTML(order))
+        html: renderToString(generateOrderHTML(order))
       }
     });
 
@@ -134,47 +84,6 @@ function Cart(props) {
     setShowReceipt(true);
     clearCart();
   }
-
-  const formatPhoneNumber = (value) => {
-    // if input value is falsy e.g. if the user deletes the input, then just return
-    if (!value) {
-      return value;
-    }
-
-    // clean the input for any non-digit values.
-    const phoneNumber = value.replace(/[^\d]/g, "");
-
-    // phoneNumberLength is used to know when to apply our formatting for the phone number
-    const phoneNumberLength = phoneNumber.length;
-
-    // we need to return the value with no formatting if its less than four digits
-    // this is to avoid weird behavior that occurs if you format the area code too early
-    if (phoneNumberLength < 4) {
-      return phoneNumber;
-    }
-
-    // if phoneNumberLength is greater than 4 and less than 7 
-    // we start to return the formatted number
-    if (phoneNumberLength < 7) {
-      return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3)}`;
-    }
-
-    // finally, if the phoneNumberLength is greater than seven, 
-    // we add the last bit of formatting and return it.
-    return `(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(
-      3,
-      6
-    )}-${phoneNumber.slice(6, 10)}`;
-  }
-
-  const handlePhoneInput = (e) => {
-    // this is where we'll call the phoneNumberFormatter function
-    const formattedPhoneNumber = formatPhoneNumber(e.target.value);
-    // we'll set the input value using our setInputValue
-    setPhone(formattedPhoneNumber);
-  };
-
-  const [validated, setValidated] = useState(false);
 
   return (
     <div>
@@ -242,84 +151,28 @@ function Cart(props) {
             </Row>
           )}
 
-          {showCheckout && (
-            <Form noValidate validated={validated} onSubmit={createOrder} id="form">
-              <div className="row" style={{marginTop: "16px"}}>
-                <div className="col-6" style={{paddingRight: "6px"}}>
-                  <Form.Group>
-                    <FloatingLabel label="First Name" >
-                      <Form.Control name="firstName" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
-                      <Form.Control.Feedback type="invalid">
-                        Please enter your first name
-                      </Form.Control.Feedback>
-                    </FloatingLabel>
-                  </Form.Group>
-                </div>
-                <div className="col-6" style={{paddingLeft: "6px"}}>
-                  <Form.Group>
-                    <FloatingLabel label="Last Name" >
-                      <Form.Control name="lastName" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="Last Name" required></Form.Control>
-                      <Form.Control.Feedback type="invalid">
-                        Please enter your last name
-                      </Form.Control.Feedback>
-                    </FloatingLabel>
-                  </Form.Group>
-                </div>
-              </div>
-
-              <Form.Group style={{margin: "16px 0"}}>
-                <FloatingLabel label="Phone" >
-                  <Form.Control name="tel" type="tel" onChange={(e) => handlePhoneInput(e)} placeholder="Phone" value={phone} pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}" title="Please enter a valid phone number." required></Form.Control>
-                  <Form.Control.Feedback type="invalid">
-                    Please enter a valid US phone number
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group style={{margin: "16px 0"}}>
-                <FloatingLabel label="Email" >
-                  <Form.Control name="email" type="email" onChange={(e) => {setEmail(e.target.value)}} placeholder="Email" required></Form.Control>
-                  <Form.Control.Feedback type="invalid">
-                    Please enter a valid email address
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group style={{margin: "16px 0"}}>
-                <FloatingLabel label="Venmo" >
-                  <Form.Control name="username" type="text" onChange={(e) => {setVenmo(e.target.value)}} placeholder="Email" required></Form.Control>
-                  <Form.Control.Feedback type="invalid">
-                    Please enter a valid venmo username
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group style={{margin: "16px 0"}} required>
-                <FloatingLabel label="Pickup Location" required>
-                  <Form.Select required onChange={(e) => {setPickup(e.target.value)}}>
-                    <option selected disabled value="" >Select a pickup location</option>
-                    <option value="UW">UW</option>
-                    <option value="Northgate">Northgate</option>
-                    <option value="Shoreline">Shoreline</option>
-                  </Form.Select>
-                  <Form.Control.Feedback type="invalid">
-                    Please select a pickup location
-                  </Form.Control.Feedback>
-                </FloatingLabel>
-              </Form.Group>
-
-              <button type="submit" className="btn btn-dark" style={{margin: "24px 0 0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px"}}>Checkout</button>
-            </Form>
-          )}
+          {showCheckout &&
+            <Checkout
+              validated={validated}
+              createOrder={createOrder}
+              setFirstName={setFirstName}
+              setLastName={setLastName}
+              setEmail={setEmail}
+              setVenmo={setVenmo}
+              setPickup={setPickup}
+              setPhone={setPhone}
+              phone={phone}
+            />
+          }
         </Offcanvas.Body>
       </Offcanvas>
 
-      <Modal size="lg" centered show={showReceipt} onHide={setShowReceipt(false)}>
+      <Modal size="lg" centered show={showReceipt} onHide={() => setShowReceipt(false)}>
         <Modal.Header closeButton>
           <Modal.Title style={{textTransform: "uppercase", fontFamily: "brandon_grotesque, sans-serif", fontSize: `calc(21px + 1.2vw)`, fontWeight: "700"}}>Thanks for your order</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {getOrderHTML(order)}
+          {generateOrderHTML(order)}
         </Modal.Body>
       </Modal>
     </div>
