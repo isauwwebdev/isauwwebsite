@@ -44,9 +44,9 @@ module.exports = (req, res) => {
     const mail = {
       from: 'ISAUW Shop',
       to: email,
-      subject: `Order for ${name}`,
+      subject: `Order for hello`,
       // text: message,
-      html: `${message}</h1>`,
+      html: `<h1>hello</h1>`,
     }
   
     sendMail(mail);
