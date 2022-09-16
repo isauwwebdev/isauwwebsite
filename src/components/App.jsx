@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
-
+import axios from 'axios';
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -17,7 +17,7 @@ import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
 
 function App() {
-    const [expanded, setExpanded] = React.useState(false);
+    const [expanded, setExpanded] = useState(false);
     const [navBar, setNavBar] = useState(false);
     const [keratonPage, setKeratonPage] = useState(false);
     const [keratonScrollDown, setKeratonScrollDown] = useState(false);
@@ -30,8 +30,8 @@ function App() {
     // called to initially set the height.
     resetHeight();
 
-    const navbarRef = React.useRef()
-    React.useEffect(() => {
+    const navbarRef = useRef()
+    useEffect(() => {
         let keratonY = window.scrollY;
 
         // 'load' event listener to hide the preloader once the main content is loaded
@@ -72,9 +72,19 @@ function App() {
             }
             keratonY = window.scrollY;
         })
+
+        axios({
+          method: "POST",
+          url: "http://localhost:5000/send",
+          data: {
+            name: "hello",
+            email: "jevin.kosasih@yahoo.com",
+            message: "hi"
+          }
+        });
     })
 
-    // const [showPopUp, setShowPopUp] = React.useState(true);
+    // const [showPopUp, setShowPopUp] = useState(true);
     // function renderPopUp() {
     //     if (showPopUp) {
     //         return (
