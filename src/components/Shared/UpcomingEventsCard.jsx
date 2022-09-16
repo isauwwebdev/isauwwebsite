@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import Moment from 'react-moment';
 
 function UpcomingEventsCard(props) {
 
-    const ref = React.useRef(null);
-    const [height, setHeight] = React.useState("0px");
+    const ref = useRef(null);
+    const [height, setHeight] = useState("0px");
     
     function handleHeight() {
         setHeight("" + ref.current.clientWidth + "px");
     }
     // set width of card equal to height
     // so that card is square
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('resize', handleHeight);
         return () => {
             window.removeEventListener('resize', handleHeight);

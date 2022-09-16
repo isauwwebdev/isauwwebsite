@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import UpcomingEventsGallery from '../Shared/UpcomingEventsGallery';
 import PastEventsSearch from './PastEventsSearch';
 import Fade from 'react-reveal/Fade';
+import React from 'react';
 
 function Events() {
     return (

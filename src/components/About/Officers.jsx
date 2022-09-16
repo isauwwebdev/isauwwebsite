@@ -2,6 +2,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import officers from '../../data/officers.json'
 import Fade from 'react-reveal/Fade';
+import React from 'react';
 
 function Officers() {
     return (

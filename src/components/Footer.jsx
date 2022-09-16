@@ -9,10 +9,10 @@ function Footer() {
         <footer className="page-footer text-center">
             {/* Social Icons */}
             <div className="py-4 mx-auto">
-                <a href="https://www.instagram.com/isauwhuskies/?hl=en" className="social" target="_blank"> <FaInstagram className="footer-social-icon" /> </a>
-                <a href="https://www.youtube.com/user/isauwHuskies" className="social" target="_blank"> <FaYoutube className="footer-social-icon" /> </a>
-                <a href="https://www.facebook.com/isauw.huskies/" className="social" target="_blank"> <FaFacebookSquare className="footer-social-icon" /> </a>
-                <a href="https://www.tiktok.com/@isauwhuskies" className="social" target="_blank"> <FaTiktok className="footer-social-icon" /> </a>
+                <a href="https://www.instagram.com/isauwhuskies/?hl=en" className="social" target="_blank" rel="noreferrer" > <FaInstagram className="footer-social-icon" /> </a>
+                <a href="https://www.youtube.com/user/isauwHuskies" className="social" target="_blank" rel="noreferrer" > <FaYoutube className="footer-social-icon" /> </a>
+                <a href="https://www.facebook.com/isauw.huskies/" className="social" target="_blank" rel="noreferrer" > <FaFacebookSquare className="footer-social-icon" /> </a>
+                <a href="https://www.tiktok.com/@isauwhuskies" className="social" target="_blank" rel="noreferrer" > <FaTiktok className="footer-social-icon" /> </a>
             </div>
 
             {/* Copyright and Conditions */}

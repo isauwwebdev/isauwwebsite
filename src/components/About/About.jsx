@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container'
 import Officers from "./Officers";
 import VisionMission from "./VisionMission";
+import React from 'react';
 
 function About() {
     return (

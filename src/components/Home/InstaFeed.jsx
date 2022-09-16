@@ -39,11 +39,11 @@ const InstaFeed = ({ token, ...props }) => {
 }
 
 function InstaGrid(props) {
-    const [position, setPosition] = React.useState(0);
-    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+    const [position, setPosition] = useState(0);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const scrollSensitivity = 35.0;
 
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', () => {
             var windowTop = window.scrollY;
             setPosition((windowTop) / scrollSensitivity - (16384 / windowWidth));
