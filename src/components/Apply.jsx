@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import FileUploaded from './FileUploaded';
+import Carousel from 'react-bootstrap/Carousel';
+
 
 function Apply() {
 // gdrive client ID: 799175424998-b3j32lo9hpli5lkc3e886d9lft6vicmg.apps.googleusercontent.com
@@ -32,6 +34,7 @@ function Apply() {
   // oauth2Client.setCredentials({refresh_token: REFRESH_TOKEN});
 
   const[resume, setResume] = useState(null);
+  const[link, setLink] = useState("");
 
   const {name, phoneNumber, email, major, year, strengths, past, c1, c2, c3} = info;
 
@@ -39,35 +42,43 @@ function Apply() {
       setInfo({ ...info, [event.target.name]: event.target.value });
   }
 
-  const submitForm = (e) => {
-    let file = resume
-    let reader = new FileReader()
-    reader.readAsDataURL(file);
-    reader.onload = function(e){
-      let rawLog = reader.result.split(',')[1];
-      var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-        fetch('https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec', //your AppsScript URL
-          { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
-          .then(res => res.json()).then((a) => {
-            console.log(a) //See response
-          }).catch(e => console.log(e)) // Or Error in console
+    const uploadFile = () => {
+      let file = resume
+      let reader = new FileReader()
+      try{
+        reader.readAsDataURL(file);
+        reader.onload = function(e){
+          let rawLog = reader.result.split(',')[1];
+          var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
+            fetch('https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec', //your AppsScript URL
+              { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
+              .then(res => res.json()).then((a) => {
+                console.log(a.url) //See response
+                setLink(a.url)
+              }).catch(e => console.log(e)) // Or Error in console
+          }
+      }catch{
+        alert("error uploading resume");
       }
-};
 
-  const handleEffect =()=>{
-    console.log(resume)
-  }
+  };
+
+
+const submitForm = (e) => {
+};
 
   return (
     <div>
-      <div className="navbar-overlay">
-          <img
-              className="d-block w-100"
-              src="../images/officers/isauw-group.jpg"
-              alt=""
-              style={{ height: "calc(50vh + 10vw)" }}
-          />
-      </div>
+    <div className="navbar-overlay" style={{position: "relative"}}>
+      <img
+        className="d-block w-100"
+        src="../images/officers/isauw-group.jpg"
+        alt=""
+        style={{height: "calc(50vh + 10vw)"}}
+      />
+      <Carousel.Caption style={{top: "40%", bottom: "60%"}} className="animated fadeInUp">
+        <h1 className="carousel-title" style={{zIndex: "100", fontFamily: "brandon_grotesque, sans-serif", fontWeight: "400", color:"red"}}>Your Journey at ISAUW starts here!!!</h1>
+      </Carousel.Caption>    </div>
 
       <form
       className="apply-form"
@@ -213,11 +224,12 @@ function Apply() {
           Resume:
           <br />
           <input type="file" name="resume" onChange={(e)=>{
-            console.log(e.target.files)
             setResume(e.target.files[0])
+            uploadFile()
           }
         }/>
         <br/>
+        <input type="hidden" name="link"  value={link}/>
           <br />
           <button onClick={submitForm}>Submit</button>
       </form>
