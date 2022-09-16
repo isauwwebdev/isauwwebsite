@@ -42,11 +42,11 @@ module.exports = (req, res) => {
     const { name, email, message } = req.body;
   
     const mail = {
-      from: name,
+      from: 'ISAUW Shop',
       to: email,
-      subject: 'Order',
-      text: message,
-      html: '<h1>Hello from gmail email using API</h1>',
+      subject: `Order for ${name}`,
+      // text: message,
+      html: `${message}</h1>`,
     }
   
     sendMail(mail);

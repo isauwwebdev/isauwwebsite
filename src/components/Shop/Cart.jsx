@@ -78,7 +78,18 @@ function Cart(props) {
         formData.append('cartItems', result);
         formData.append('pickup', order.pickup);
 
+        // update Google Sheets
         fetch(scriptURL, { method: 'POST', body: formData })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message));
+        console.log(formData);
+
+        // send order confirmation email 
+        fetch("/order", { method: 'POST', body: {
+          name: "Jevin Kosasih",
+          email: "jevin.kosasih@yahoo.com",
+          message: "Testing Order Endpoint"
+        }})
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message));
 

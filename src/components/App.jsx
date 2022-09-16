@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
-import axios from 'axios';
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -72,16 +71,6 @@ function App() {
             }
             keratonY = window.scrollY;
         })
-
-        axios({
-          method: "POST",
-          url: "/order",
-          data: {
-            name: "Jevin Kosasih",
-            email: "jevin.kosasih@yahoo.com",
-            message: "Testing Order Endpoint"
-          }
-        });
     })
 
     // const [showPopUp, setShowPopUp] = useState(true);
