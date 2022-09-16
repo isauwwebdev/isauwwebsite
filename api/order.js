@@ -49,6 +49,10 @@ module.exports = (req, res) => {
       html: `<h1>hello</h1>`,
     }
   
-    sendMail(mail);
+    sendMail(mail)
+    .then( response => {res.json({msg: 'success'})
+    })
+    .catch( error => {res.json({msg: 'failed'})
+    })
   }
 }
