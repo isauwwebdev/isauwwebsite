@@ -33,6 +33,7 @@ function Apply() {
   //
   // oauth2Client.setCredentials({refresh_token: REFRESH_TOKEN});
 
+  // need time to upload resume, need to delay their responses
   const[resume, setResume] = useState(null);
   const[link, setLink] = useState("");
 
@@ -42,29 +43,47 @@ function Apply() {
       setInfo({ ...info, [event.target.name]: event.target.value });
   }
 
-    const uploadFile = () => {
+const delay = ms => new Promise(
+  resolve => setTimeout(resolve, ms)
+);
+
+
+const handleFile = (e) =>{
+  const fileObj = e.target.files && e.target.files[0];
+    if (!fileObj) {
+      return;
+    }
+    console.log('fileObj is', fileObj);
+
+    setResume(fileObj)
+    console.log(e.target.files[0])
+    uploadFile(e);
+}
+
+    const uploadFile = (e) => {
       let file = resume
       let reader = new FileReader()
       try{
-        reader.readAsDataURL(file);
-        reader.onload = function(e){
-          let rawLog = reader.result.split(',')[1];
-          var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
-            fetch('https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec', //your AppsScript URL
-              { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
-              .then(res => res.json()).then((a) => {
-                console.log(a.url) //See response
-                setLink(a.url)
-              }).catch(e => console.log(e)) // Or Error in console
-          }
-      }catch{
-        alert("error uploading resume");
+        reader.readAsDataURL(file)
+      }catch(err){
+        alert("file failed to upload")
+        e.target.value = null;
       }
 
-  };
+      reader.onload = function(e){
+        let rawLog = reader.result.split(',')[1];
+        var dataSend = { dataReq: { data: rawLog, name: file.name, type: file.type }, fname: "uploadFilesToGoogleDrive" }; //preapre info to send to API
+          fetch('https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec', //your AppsScript URL
+            { method: "POST", body: JSON.stringify(dataSend) }) //send to Api
+            .then(res => res.json()).then((a) => {
+              console.log(a.url) //See response
+              setLink(a.url)
+            }).catch(e => console.log(e)) // Or Error in console
+        }
+      };
 
-
-const submitForm = (e) => {
+const submitForm = async (e) => {
+  delay(10000);
 };
 
   return (
@@ -100,7 +119,7 @@ const submitForm = (e) => {
         <br/>
         <label>
           Phone:
-          <input // might use react phoneNumber
+          <input
             type="number"
             name="phoneNumber"
             value={phoneNumber}
@@ -145,30 +164,6 @@ const submitForm = (e) => {
             <option value="junior">Junior</option>
             <option value="senior">Senior</option>
           </select>
-        </label>
-        <br />
-        <label>
-          What would you say are your strengths and weaknesses?
-          <br />
-          <textarea
-          type="text"
-          name="strengths"
-          value={strengths}
-          onChange={handleChange}
-          required
-          />
-        </label>
-        <br />
-        <label>
-          Describe a past experience that you think will help you contribute to ISAUW.
-          <br />
-          <textarea
-          type="text"
-          name="past"
-          value={past}
-          onChange={handleChange}
-          required
-          />
         </label>
         <br />
           From most to least priority, list up to 3 positions that you are most interested in and explain why.
@@ -224,11 +219,35 @@ const submitForm = (e) => {
           Resume:
           <br />
           <input type="file" name="resume" onChange={(e)=>{
-            setResume(e.target.files[0])
-            uploadFile()
+            handleFile(e)
           }
         }/>
         <br/>
+        <label>
+          What would you say are your strengths and weaknesses?
+          <br />
+          <textarea
+          type="text"
+          name="strengths"
+          value={strengths}
+          onChange={handleChange}
+          required
+          />
+        </label>
+        <br />
+        <label>
+          Describe a past experience that you think will help you contribute to ISAUW.
+          <br />
+          <textarea
+          type="text"
+          name="past"
+          value={past}
+          onChange={handleChange}
+          required
+          />
+        </label>
+        <br />
+
         <input type="hidden" name="link"  value={link}/>
           <br />
           <button onClick={submitForm}>Submit</button>
