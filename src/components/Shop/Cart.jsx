@@ -106,7 +106,10 @@ function Cart(props) {
       if (result !== "") {
         result += "\n"
       }
-      result += item.qty + "x " + item.name + " (" + item.selected + ")";
+      result += item.qty + "x " + item.name;
+      if (item.selected) {
+        result += " (" + item.selected + ")";
+      }
     });
     formData.append('cartItems', result);
     formData.append('pickup', order.pickup);
@@ -241,7 +244,7 @@ function Cart(props) {
                 <div className="col-6" style={{paddingRight: "6px"}}>
                   <Form.Group>
                     <FloatingLabel label="First Name" >
-                      <Form.Control name="first-name" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                      <Form.Control name="firstName" type="text" onChange={(e) => {setFirstName(e.target.value)}} placeholder="First Name" required></Form.Control>
                       <Form.Control.Feedback type="invalid">
                         Please enter your first name
                       </Form.Control.Feedback>
@@ -251,7 +254,7 @@ function Cart(props) {
                 <div className="col-6" style={{paddingLeft: "6px"}}>
                   <Form.Group>
                     <FloatingLabel label="Last Name" >
-                      <Form.Control name="family-name" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="First Name" required></Form.Control>
+                      <Form.Control name="lastName" type="text" onChange={(e) => {setLastName(e.target.value)}} placeholder="Last Name" required></Form.Control>
                       <Form.Control.Feedback type="invalid">
                         Please enter your last name
                       </Form.Control.Feedback>
