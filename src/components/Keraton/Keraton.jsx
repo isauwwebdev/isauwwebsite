@@ -8,17 +8,17 @@ import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
 
 function Keraton() {
-    return (
-        <div className="keraton">
-            <KeratonVideo></KeratonVideo>
-            <KeratonAbout></KeratonAbout>
-            <KeratonPerformers></KeratonPerformers>
-            <KeratonVendors></KeratonVendors>
-            <KeratonGames></KeratonGames>
-            <KeratonFAQ></KeratonFAQ>
-            <KeratonSponsors></KeratonSponsors>
-        </div>
-    );
+  return (
+    <div className="keraton">
+      <KeratonVideo></KeratonVideo>
+      <KeratonAbout></KeratonAbout>
+      <KeratonPerformers></KeratonPerformers>
+      <KeratonVendors></KeratonVendors>
+      <KeratonGames></KeratonGames>
+      <KeratonFAQ></KeratonFAQ>
+      <KeratonSponsors></KeratonSponsors>
+    </div>
+  );
 }
 
 // function ScrollToTop() {

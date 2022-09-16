@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer');
-const { google } = require('googleapis');
+const {google} = require('googleapis');
 
 // TODO: these IDs and secrets should come from a .env file.
 const CLIENT_ID = '872495884254-dfijj5j631d0i60cdu47m4uv960uode6.apps.googleusercontent.com';
@@ -12,7 +12,7 @@ const oAuth2Client = new google.auth.OAuth2(
   CLIENT_SECRET,
   REDIRECT_URI
 );
-oAuth2Client.setCredentials({ refresh_token: REFRESH_TOKEN });
+oAuth2Client.setCredentials({refresh_token: REFRESH_TOKEN});
 
 async function sendMail(mail) {
   try {
@@ -39,20 +39,23 @@ async function sendMail(mail) {
 
 module.exports = (req, res) => {
   if (req.method === 'POST') {
-    const { name, email, message } = req.body;
-  
+    const {id, email, html} = req.body;
+
     const mail = {
-      from: 'ISAUW Shop',
+      from: 'ISAUW',
       to: email,
-      subject: `Order for hello`,
+      subject: `Your Order #${id}`,
       // text: message,
-      html: `<h1>hello</h1>`,
+      html: html,
     }
-  
+
+    // for some reason we need to send a response back, otherwise the api call will timeout
     sendMail(mail)
-    .then( response => {res.json({msg: 'success'})
-    })
-    .catch( error => {res.json({msg: 'failed'})
-    })
+      .then(response => {
+        res.json({message: 'success'})
+      })
+      .catch(error => {
+        res.json({message: 'failed'})
+      })
   }
 }
