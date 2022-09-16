@@ -7,6 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios';
+import {renderToString} from 'react-dom/server'
 
 function Cart(props) {
   const {cartItems, onRemove, showCart, onHide, clearCart, showCheckout, setShowCheckout} = props;
@@ -121,7 +122,7 @@ function Cart(props) {
       data: {
         id: order.id,
         email: "jevin.kosasih@yahoo.com",
-        html: getOrderHTML(order)
+        html: renderToString(getOrderHTML(order))
       }
     });
 
