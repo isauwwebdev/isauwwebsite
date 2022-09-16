@@ -119,8 +119,15 @@ function Shop() {
               </span>
             </Col>
           </Row>
-          <Cart onRemove={onRemove} cartItems={cartItems} showCart={showCart} onHide={handleClose} clearCart={clearCart} showCheckout={showCheckout} setShowCheckout={setShowCheckout}></Cart>
-
+          <Cart
+            onRemove={onRemove}
+            cartItems={cartItems}
+            showCart={showCart}
+            onHide={handleClose}
+            clearCart={clearCart}
+            showCheckout={showCheckout}
+            setShowCheckout={setShowCheckout}>
+          </Cart>
           <Row>
             {products.map((product, i) => {
               return (
