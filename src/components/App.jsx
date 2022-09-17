@@ -14,6 +14,7 @@ import Sponsors from './InProgress/Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
+import NotFoundPage from './Home/NotFoundPage';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -139,6 +140,7 @@ function App() {
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
           <Route path="/sponsors" component={Sponsors} />
+          <Route path="*" component={NotFoundPage}/>
         </Switch>
 
         {/* {renderPopUp()} */}

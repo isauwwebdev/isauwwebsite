@@ -2044,3 +2044,8 @@ select:invalid {
   border: none;
   background-color: transparent;
 }
+
+.not-found-page {
+	width: 1440px;
+	display: block;
+}
