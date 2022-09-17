@@ -4,12 +4,13 @@ import Form from 'react-bootstrap/Form';
 import {formatPhoneNumber} from './shopTools';
 
 function Checkout(props) {
-  const {validated, createOrder, setFirstName, setLastName, setEmail, setVenmo, setPickup, setPhone, phone} = props;
+  const {setValidated, validated, createOrder, setFirstName, setLastName, setEmail, setVenmo, setPickup, setPhone, phone} = props;
 
-  // clear phone input on render
+  // clear form on render
   useEffect(() => {
     setPhone("");
-  }, [setPhone]);
+    setValidated(false);
+  }, [setPhone, setValidated]);
 
   const handlePhoneInput = (e) => {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);

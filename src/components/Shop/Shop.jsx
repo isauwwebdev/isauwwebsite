@@ -14,9 +14,6 @@ function Shop() {
   const [showCart, setShowCart] = useState(false);
   const [showCheckout, setShowCheckout] = useState(false);
 
-  const handleClose = () => setShowCart(false);
-  const handleOpen = () => setShowCart(true);
-
   const onAdd = (product) => {
     setShowCheckout(false);
     const exist = cartItems.find((x) => ((x.id === product.id) && (x.selected === product.selected)));
@@ -32,7 +29,7 @@ function Shop() {
       })
       sessionStorage.setItem('cookies', JSON.stringify([...cartItems, {...product, qty: 1}]))
     }
-    handleOpen();
+    setShowCart(true);
   };
 
   const onRemove = (product) => {
@@ -111,7 +108,7 @@ function Shop() {
             </Col>
             <Col xs={5} style={{margin: "auto"}}>
               <span class='wallet'>
-                <button type="button" className="btn" onClick={handleOpen} style={{boxShadow: "none", float: "right"}}>
+                <button type="button" className="btn" onClick={() => setShowCart(true)} style={{boxShadow: "none", float: "right"}}>
                   <i className='cart-count'>
                     <IoFolderOutline />
                   </i>
@@ -122,9 +119,9 @@ function Shop() {
           <Cart
             onRemove={onRemove}
             cartItems={cartItems}
-            showCart={showCart}
-            onHide={handleClose}
             clearCart={clearCart}
+            showCart={showCart}
+            setShowCart={setShowCart}
             showCheckout={showCheckout}
             setShowCheckout={setShowCheckout}>
           </Cart>

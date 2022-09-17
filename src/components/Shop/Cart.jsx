@@ -10,7 +10,7 @@ import {createFormData, generateOrderHTML} from './shopTools';
 import Checkout from './Checkout';
 
 function Cart(props) {
-  const {cartItems, onRemove, showCart, onHide, clearCart, showCheckout, setShowCheckout} = props;
+  const {cartItems, clearCart, showCart, setShowCart, onRemove, showCheckout, setShowCheckout} = props;
   const totalPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -40,8 +40,8 @@ function Cart(props) {
     }
     setValidated(true);
 
+    // what does this even do?
     if (form.checkValidity() === false) {
-      setValidated(true);
       return;
     }
 
@@ -79,7 +79,7 @@ function Cart(props) {
       }
     });
 
-    onHide();
+    setShowCart(false);
     setShowCheckout(false);
     setShowReceipt(true);
     clearCart();
@@ -87,10 +87,10 @@ function Cart(props) {
 
   return (
     <div>
-      <Offcanvas show={showCart} onHide={onHide} placement="end">
+      <Offcanvas show={showCart} onHide={() => setShowCart(false)} placement="end">
         <Row>
           <Offcanvas.Header style={{borderBottom: "1px solid rgba(0,0,0,.125)"}}>
-            <button type="button" class="btn-close text-reset" aria-label="Close" onClick={onHide}></button>
+            <button type="button" class="btn-close text-reset" aria-label="Close" onClick={() => setShowCart(false)}></button>
             <Col xs={6}>
               <h3 style={{float: "left", margin: "0", fontWeight: "600", fontSize: `calc(16px + 0.1vw)`}}>Your Bag</h3>
             </Col>
@@ -153,6 +153,7 @@ function Cart(props) {
 
           {showCheckout &&
             <Checkout
+              setValidated={setValidated}
               validated={validated}
               createOrder={createOrder}
               setFirstName={setFirstName}
