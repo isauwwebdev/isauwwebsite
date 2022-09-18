@@ -2,13 +2,15 @@ import React from 'react';
 
 function NotFoundPage() {
     return (
-        <div>
-            <img 
-            src="../images/404.jpeg" 
-            alt="404 page not found"
-            class="not-found-page"
-            />
-        </div>
+      <div className="navbar-overlay" style={{position: "relative"}}>
+        <img
+          className="not-found-page-image"
+          src="../images/husky.png"
+          alt=""
+          style={{height: "calc(40vh + 10vw)"}}
+        />
+         <center className="not-found-page">404 Page Not Found</center>
+      </div>
     );
 }
 

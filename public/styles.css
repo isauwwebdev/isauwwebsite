@@ -2045,7 +2045,15 @@ select:invalid {
   background-color: transparent;
 }
 
+.not-found-page-image {
+	display: flex;
+	margin-left: auto;
+    margin-right: auto;
+	height: 570px;
+}
+
 .not-found-page {
-	width: 1440px;
-	display: block;
+	font-size: calc(3.2vw + 16px);
+	font-weight: bold;
+	bottom: 18%; 
 }
