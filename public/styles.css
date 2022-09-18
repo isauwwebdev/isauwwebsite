@@ -2110,11 +2110,12 @@ form {
 }
 
 .apply-form,
-input, .curr_year {
+input,
+.curr_year {
 	font-family: "Avenir Next", Avenir, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 }
 
-.apply-title{
+.apply-title {
 	text-align: center;
 	position: relative;
 	-webkit-animation: moveDown .3s;
@@ -2125,8 +2126,9 @@ input, .curr_year {
 	animation-fill-mode: forwards;
 }
 
-h6{
-	margin-left: 15%; /* good on mobile but not so good on laptop*/
+h6 {
+	margin-left: 15%;
+	/* good on mobile but not so good on laptop*/
 	margin-right: 20%;
 }
 
@@ -2168,7 +2170,7 @@ input {
 	transition: border .25s;
 }
 
-.curr_year{
+.curr_year {
 	font-size: 1.5em;
 	outline: none;
 	box-shadow: none;
@@ -2185,7 +2187,7 @@ input {
 	transition: border .25s;
 }
 
-.resume_class{
+.resume_class {
 	font-size: 1em;
 	border-bottom: none;
 }
@@ -2217,7 +2219,9 @@ input:focus::-ms-input-placeholder {
 	color: #E35F5F;
 }
 
-.past_experience, .strengths_weaknesses, .why_isauw {
+.past_experience,
+.strengths_weaknesses,
+.why_isauw {
 	background: rgba(255, 255, 255, 0.1);
 	border: none;
 	font-size: 16px;
@@ -2230,7 +2234,8 @@ input:focus::-ms-input-placeholder {
 	margin-bottom: 30px;
 }
 
-.positions, h5{
+.positions,
+h5 {
 	text-align: left;
 	position: relative;
 }

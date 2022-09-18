@@ -44,16 +44,14 @@ function Apply() {
   const handleChange = (event) => {
     setInfo({ ...info, [event.target.name]: event.target.value });
   }
-  
+
   const handleFile = (e) => {
     const fileObj = e.target.files && e.target.files[0];
     if (!fileObj) {
       return;
     }
-    console.log('fileObj is', fileObj);
-
     setResume(fileObj)
-    console.log(e.target.files[0])
+    // console.log(e.target.files[0])
     uploadFile(e);
   }
 
@@ -78,12 +76,13 @@ function Apply() {
         }).catch(e => console.log(e)) // Or Error in console
     }
   };
-
-  const submitForm = async (e) => {
-    setTimeout( function () { 
-      e.submit();
-  }, 30000);
+  const showMessage =() =>{
+    if(link === ""){
+    return(
+    <p>resume has not finish uploading</p>
+    )}
   };
+  const submitForm = () => { };
 
   return (
     <div>
@@ -112,16 +111,16 @@ function Apply() {
         method="POST"
         action="https://script.google.com/macros/s/AKfycbzCwqJl0_tfZrPQsVyYmCWfjmpfLwXkJwK9VW4ihZBmIGoZnWv01nais7SNnWeKya4/exec"
       >
-        <span class="input"></span>
+        <span className="input"></span>
         <input
           type="text"
           name="name"
           value={name}
           placeholder="Full name"
           onChange={handleChange}
-          autocomplete="off"
+          autoComplete="off"
           title="Format: Xx[space]Xx (e.g. Alex Cican)"
-          autofocus
+          autoFocus
           required
           pattern="^\w+\s\w+$"
         />
@@ -131,7 +130,7 @@ function Apply() {
           name="personal_email"
           value={personal_email}
           onChange={handleChange}
-          autocomplete="off"
+          autoComplete="off"
           placeholder="Personal Email"
           required
         />
@@ -141,24 +140,21 @@ function Apply() {
           name="uw_email"
           value={uw_email}
           onChange={handleChange}
-          autocomplete="on"
+          autoComplete="on"
           placeholder="UW Email"
           title="Format: xxx@uw.edu"
-          autofocus
           required
           pattern="^\w+@uw.edu"
         />
         <br />
-        <span class="input"></span>
+        <span className="input"></span>
         <input
-          type="number"
+          type="tel"
           name="phoneNumber"
+          pattern="[0-9]+"
           value={phoneNumber}
-          international={false}
           onChange={handleChange}
-          autocomplete="on"
-          defaultCountry={'US'}
-          countries={["NG", "MG", "SC", "KM", "BW", "MR"]}
+          autoComplete="on"
           placeholder="WA Phone Number"
           required
         />
@@ -168,13 +164,13 @@ function Apply() {
           name="major"
           value={major}
           onChange={handleChange}
-          autocomplete="on"
+          autoComplete="on"
           placeholder="Major/Intended Major"
           required
         />
         <br />
         <select className="curr_year" name="year" value={year} onChange={handleChange} required>
-          <option disabled selected value="">  Current Year</option>
+          <option disabled value="">  Current Year</option>
           <option value="freshman">Freshman</option>
           <option value="sophomore">Sophomore</option>
           <option value="junior">Junior</option>
@@ -196,7 +192,7 @@ function Apply() {
           <li>Design</li>
           <li>Documentation</li>
           <li>Web Development</li>
-          Want to know more about the positions? <a href='https://docs.google.com/presentation/d/1WZyhpHxiMuP-IsPmlmj5wFNDYkGTLTTxwPLy_uXqvLE/edit?usp=sharing'>Roles of Each Position</a>
+          <p>Want to know more about the positions? <a href='https://docs.google.com/presentation/d/1WZyhpHxiMuP-IsPmlmj5wFNDYkGTLTTxwPLy_uXqvLE/edit?usp=sharing'>Roles of Each Position</a></p>
         </ul>
         <br />
 
@@ -206,7 +202,7 @@ function Apply() {
 
         <br />
         <p>Resume:</p>
-        <input type="file" name="resume" className='resume_class' required onChange={(e) => {handleFile(e)}}/>
+        <input type="file" name="resume" className='resume_class' required onChange={(e) => { handleFile(e) }} />
         <br />
         <p>From most to least priority, list up to 3 positions that you are most interested in and explain why.</p>
         <br />
@@ -300,7 +296,10 @@ function Apply() {
         <br />
         <input type="hidden" name="link" value={link} />
         <br />
-        <button onClick={submitForm}>Submit</button>
+        <div>
+          <div disabled={!(!link)} style={{display: link==="" ? "block":"none"}}>Resume has not been uploaded</div>
+          <button id="submitBtn" onClick={submitForm} disabled={!link} >Submit</button>
+        </div>
       </form>
     </div>
   );
