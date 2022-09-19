@@ -15,6 +15,7 @@ import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
 import Apply from './Apply';
+import RegistrationForm from './RegistrationForm';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -142,6 +143,7 @@ function App() {
           <Route path="/keraton" component={Keraton} />
           <Route path="/sponsors" component={Sponsors} />
           <Route path="/apply" component={Apply} />
+          <Route path="/register" component={RegistrationForm} />
         </Switch>
 
         {/* {renderPopUp()} */}

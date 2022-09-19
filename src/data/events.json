@@ -6,7 +6,8 @@
         "location": "HUB, UW",
         "text": "A night of mingling to form new bonds and rekindle old ones. Get a chance to win prizes, merchandise, food, and a sneak peak of our upcoming events. Enjoy yourself, and let us know what you'd want to see next.",
         "img": [{"src": "../images/events/socialnight/1.jpg"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Seathrough",
@@ -15,17 +16,19 @@
         "location": "HUB, UW",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
         "img": [{"src": "../images/events/seathrough/1.jpeg"}],
-        "completed": false
+        "completed": false,
+        "registration": "aksjdf"
     },
     {
         "title": "Seattle 101",
         "date": "08/14/2022",
         "time": "1:00PM",
-        "location": "Jakarta, Indonesia",
+        "location": "Zoom, Online",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
         "img": [{"src": "../images/events/seattle 101/1.png"},
                 {"src": "../images/events/seattle 101/2.png"}],
-        "completed": false
+        "completed": false,
+        "registration": "asdfasd"
     },
     {
         "title": "Winter Ball",
@@ -38,7 +41,8 @@
                 {"src": "../images/events/winter ball/4.jpg"},
                 {"src": "../images/events/winter ball/5.jpg"},
                 {"src": "../images/events/winter ball/2.jpg"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Keraton",
@@ -55,7 +59,8 @@
                 {"src": "../images/events/keraton/7.jpg"},
                 {"src": "../images/events/keraton/8.jpg"},
                 {"src": "../images/events/keraton/9.jpg"}],
-        "completed": false
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Friendsgiving",
@@ -70,7 +75,8 @@
                 {"src": "../images/events/friendsgiving/5.jpg"},
                 {"src": "../images/events/friendsgiving/6.jpg"},
                 {"src": "../images/events/friendsgiving/7.jpg"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Seathrough",
@@ -81,7 +87,8 @@
         "img": [{"src": "../images/events/seathrough/1.jpeg"},
                 {"src": "../images/events/seathrough/2.jpeg"},
                 {"src": "../images/events/seathrough/3.jpeg"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Boba Tour",
@@ -92,7 +99,8 @@
         "img": [{"src": "../images/events/bobatour/bobatour3.jpg"},
                 {"src": "../images/events/bobatour/bobatour4.jpg"},
                 {"src": "../images/events/bobatour/bobatour6.jpg"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     },
     {
         "title": "Seattle 101",
@@ -102,6 +110,7 @@
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
         "img": [{"src": "../images/events/seattle 101/1.png"},
                 {"src": "../images/events/seattle 101/2.png"}],
-        "completed": true
+        "completed": true,
+        "registration": ""
     }
 ]
