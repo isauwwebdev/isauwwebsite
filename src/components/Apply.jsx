@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import FileUploaded from './FileUploaded';
 import Carousel from 'react-bootstrap/Carousel';
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
@@ -17,11 +17,13 @@ function Apply() {
     strengths: "",
     past: "",
     why: "",
+  });
+
+  const [choices, setChoices] = useState({
     c1: "",
     c2: "",
     c3: "",
-    portfolio: "",
-  });
+  })
 
   const updateSheetsURL = 'https://script.google.com/macros/s/AKfycbzCwqJl0_tfZrPQsVyYmCWfjmpfLwXkJwK9VW4ihZBmIGoZnWv01nais7SNnWeKya4/exec'
   const uploadToGDriveURL = 'https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec'
@@ -30,7 +32,9 @@ function Apply() {
   const [resume, setResume] = useState(null);
   const [phone, setPhone] = useState("");
   const [validated, setValidated] = useState(false);
-  const { name, personal_email, uw_email, major, year, strengths, past, why, c1, c2, c3, portfolio } = info;
+  const [portfolio, setPortfolio] = useState(false);
+  const { name, personal_email, uw_email, major, year, strengths, past, why} = info;
+  const { c1, c2, c3} = choices;
 
   const handleChange = (event) => {
     setInfo({ ...info, [event.target.name]: event.target.value });
@@ -151,12 +155,25 @@ function Apply() {
     const formattedPhoneNumber = formatPhoneNumber(e.target.value);
     // we'll set the input value using our setInputValue
     setPhone(formattedPhoneNumber);
-    console.log(phone)
   };
 
-  const mustBringPortfolio = () => {
-    return false;
+  const handleChoice = async (e) => {
+    setChoices({ ...choices, [e.target.name]: e.target.value });
   }
+
+  useEffect(() =>{
+    const set = new Set()
+    const values = Object.keys(choices).map(function(key){
+      console.log(choices[key])
+      set.add(choices[key])
+    });
+    // (choices.contains("Documentary")) || (e.target.value ==="Design") || (e.target.value ==="Creativity Management" )
+    if(set.has("Documentary") || set.has("Design") || set.has("Creativity Management")){
+      setPortfolio("exists")
+    }else{
+      setPortfolio("")
+    }
+  },[choices])
 
   return (
     <div>
@@ -274,7 +291,7 @@ function Apply() {
 
         <Form.Group required>
           <FloatingLabel label="Choice 1" required>
-            <Form.Select required name="c1" onChange={handleChange}>
+            <Form.Select required name="c1" onChange={handleChoice} >
               <option selected disabled value="" >Select 1st option</option>
               <option value="Event Organizers">Event Organizers</option>
               <option value="Inventory and Logistics">Inventory & Logistics</option>
@@ -294,7 +311,7 @@ function Apply() {
 
         <Form.Group required>
           <FloatingLabel label="Choice 2" required>
-            <Form.Select required name="c2" onChange={handleChange}>
+            <Form.Select required name="c2" onChange={handleChoice}>
               <option selected disabled value="" >Select 2nd option</option>
               <option value="Event Organizers">Event Organizers</option>
               <option value="Inventory and Logistics">Inventory & Logistics</option>
@@ -314,7 +331,7 @@ function Apply() {
 
         <Form.Group required>
           <FloatingLabel label="Choice 3" required>
-            <Form.Select required name="c3" onChange={handleChange}>
+            <Form.Select required name="c3" onChange={handleChoice}>
               <option selected disabled value="" >Select 3rd option</option>
               <option value="Event Organizers">Event Organizers</option>
               <option value="Inventory and Logistics">Inventory & Logistics</option>
@@ -334,10 +351,10 @@ function Apply() {
 
         </Form.Group>
 
-        <Form.Group required style={{ display: {mustBringPortfolio} ? "" : "block" }}>
+        <Form.Group required style={{ display: portfolio ? "" : "none" }}>
           <Form.Label>You have indicated that you are applying for the position of Documentary, Design or Creativity Management. Please provide a link to your portfolio below</Form.Label>
           <FloatingLabel label="Link to portfolio" required>
-            <Form.Control name="portfolio" type="text" onChange={handleChange} placeholder="Link to portfolio"></Form.Control>
+            <Form.Control name="portfolio" type="text" required onChange={handleChange} placeholder="Link to portfolio" pattern='\w+'></Form.Control>
             <Form.Control.Feedback type="invalid">
               Please provide a link to your portfolio
             </Form.Control.Feedback>
