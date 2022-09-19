@@ -5,7 +5,7 @@ function NotFoundPage() {
       <div className="navbar-overlay" style={{position: "relative"}}>
         <img
           className="not-found-page-image"
-          src="../images/husky.png"
+          src="../images/page-not-found.png"
           alt=""
           style={{height: "calc(40vh + 10vw)"}}
         />
