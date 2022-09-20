@@ -1,8 +1,9 @@
 import React, {useEffect, useState, useMemo} from 'react';
 import Form from 'react-bootstrap/Form';
 import FormHelper from './FormHelper';
-import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import {Container} from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function Apply() {
   const standingOptions = useMemo(() => [
@@ -126,11 +127,15 @@ function Apply() {
 
           // update Google Sheets
           fetch('https://script.google.com/macros/s/AKfycbzCwqJl0_tfZrPQsVyYmCWfjmpfLwXkJwK9VW4ihZBmIGoZnWv01nais7SNnWeKya4/exec', {method: 'POST', body: formData})
-            .then(response => console.log('Success', response))
-
+            .then(response => {
+              console.log('Success', response);
+              setShowThankYou(true);
+            });
         }).catch(error => console.error('Error', error.message));
     }
   }
+
+  const [showThankYou, setShowThankYou] = useState(false);
 
   return (
     <div>
@@ -192,6 +197,29 @@ function Apply() {
 
           <button type="submit" className="btn btn-dark" style={{margin: "24px 0 0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px"}}>Submit</button>
         </Form>
+
+        <Modal
+          show={showThankYou}
+          onHide={() => setShowThankYou(false)}
+          backdrop="static"
+          keyboard={false}
+          centered
+          size="lg"
+        >
+          {/* redirects to home ("/") within 5 seconds of the modal rendering */}
+          <meta http-equiv="refresh" content="5;url=/" />
+          <Modal.Header>
+            <Modal.Title>Thank you</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            Thank you for applying. We will get back to you regarding the status of your application.
+            <br />
+            You will be automatically redirected to the home page in 5 seconds.
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="primary" href="/">Back to Home</Button>
+          </Modal.Footer>
+        </Modal>
       </Container>
     </div>
   );
