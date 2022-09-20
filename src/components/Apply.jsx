@@ -57,7 +57,7 @@ function Apply() {
   const [options2, setOptions2] = useState(positionOptions);
   const [options3, setOptions3] = useState(positionOptions);
   const [showPortfolio, setShowPortfolio] = useState(false);
-  // remove concurrently selected options from the options list, and show portfolio if needed
+  // remove concurrently selected options from the options list, and show portfolio message if needed
   useEffect(() => {
     setOptions1(positionOptions.filter((option) => option.value !== appContent.secondChoice).filter((option) => option.value !== appContent.thirdChoice));
     setOptions2(positionOptions.filter((option) => option.value !== appContent.firstChoice).filter((option) => option.value !== appContent.thirdChoice));
@@ -104,7 +104,6 @@ function Apply() {
     formData.append('strengthsWeaknesses', strengthsWeaknesses);
     formData.append('pastExperiences', pastExperiences);
     formData.append('whyISAUW', whyISAUW);
-    // formData.append('portfolio', portfolio);
 
     const reader = new FileReader();
     reader.readAsDataURL(resumeFile);
@@ -179,15 +178,10 @@ function Apply() {
           <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} />
 
           {showPortfolio &&
-            <Form.Group>
-              <Form.Label>You have indicated that you are applying for the position of Creativity Management and/or Documentation & Design. Please provide a link to your portfolio below</Form.Label>
-              <FloatingLabel label="Link to portfolio" required>
-                <Form.Control name="portfolio" type="text" required onChange={handleChange} placeholder="Link to portfolio"></Form.Control>
-                <Form.Control.Feedback type="invalid">
-                  Please provide a link to your portfolio
-                </Form.Control.Feedback>
-              </FloatingLabel>
-            </Form.Group>
+            <span>
+              You have indicated that you are applying for the position of Creativity Management and/or Documentation & Design.
+              Please be sure to bring your portfolio should you be contacted for an intervew.
+            </span>
           }
           <hr />
 
