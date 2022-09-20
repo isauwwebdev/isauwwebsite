@@ -30,6 +30,8 @@ function Apply() {
 
 
   const [resume, setResume] = useState(null);
+  const [showForm, setShowForm] = useState(true);
+
   const [phone, setPhone] = useState("");
   const [validated, setValidated] = useState(false);
   const [portfolio, setPortfolio] = useState(false);
@@ -114,7 +116,10 @@ function Apply() {
 
           // update Google Sheets
           fetch(updateSheetsURL, { method: 'POST', body: formData })
-            .then(response => console.log('Success!', response))
+            .then(response => {
+              console.log('Success!', response)
+              setShowForm(false)
+          })
             .catch(error => console.error('Error!', error.message));
 
           }).catch(e => console.log(e)) // Or Error in console
@@ -189,7 +194,8 @@ function Apply() {
             Your Journey at ISAUW starts here!!!</h1>
         </Carousel.Caption>
       </div>
-
+      {showForm && (
+      <div>      
       <h1 className="apply-title"> Apply form </h1>
       <h6>ISAUW Officer Recruitment 22'-23'</h6>
       <h6>We are thrilled to welcome new members to ISAUW!</h6>
@@ -197,8 +203,8 @@ function Apply() {
       <h6>Please fill in this form to apply, qualified students will be contacted for an interview.</h6>
       <h6>Do not hesitate to contact us on Instagram @isauwhuskies or email us at isauw@uw.edu if you have any questions.</h6>
       <h6>Requirement: currently enrolled as a UW student.</h6>
-      <Form noValidate validated={validated} onSubmit={submitForm} id="form">
-
+      
+        <Form noValidate validated={validated} onSubmit={submitForm} id="form">
         <Form.Group>
           <FloatingLabel label="Full Name" >
             <Form.Control name="name" type="text" onChange={handleChange} placeholder="Full Name" autoFocus required></Form.Control>
@@ -404,6 +410,14 @@ function Apply() {
           <button type="submit" className="apply-button">Submit</button>
         </div>
       </Form>
+      </div>
+      )}
+
+    {!showForm && (
+      <div>      
+      <h1 className="apply-title"> Thank you for Applying.</h1>
+      </div>
+      )}
     </div>
   );
 }
