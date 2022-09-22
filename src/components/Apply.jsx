@@ -220,7 +220,7 @@ function Apply() {
                 <div>
                   <Row>
                     <Row>
-                      <Col xs={4}>
+                      <Col xs={7} sm={6} md={5} lg={4}>
                         <label id="fakeResume" class="btn" for="resume" style={{fontSize: "14px", fontWeight: "300", textTransform: "none", margin: "0", width: "100%", boxShadow: "none", border: "1px solid #ced4da"}}>
                           Upload Resume
                           <FormHelper name="resume" type="file" accept=".doc,.docx,application/pdf" handleChange={handleFile} />
@@ -231,7 +231,7 @@ function Apply() {
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={4}>
+                      <Col xs={7} sm={6} md={5} lg={4}>
                         <p style={{fontSize: "12px", margin: "8px 0 0", padding: "0", textAlign: "center"}}>DOC, DOCX, PDF</p>
                       </Col>
                     </Row>
