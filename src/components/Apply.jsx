@@ -153,7 +153,7 @@ function Apply() {
       <Container>
         <Row className="justify-content-center">
           <Col xs={12} sm={10} md={8} lg={6}>
-            <h1 className="my-3"><strong>22'-23' ISAUW Officer Application</strong></h1>
+            <h1 className="my-3"><strong>'22-'23 ISAUW Officer Application</strong></h1>
             <p style={{fontSize: "14px"}}>
               We are thrilled to welcome new members to ISAUW this year!
               Please fill in the form below to apply.
@@ -164,7 +164,7 @@ function Apply() {
             </p>
             <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student</p>
 
-            <Form noValidate validated={validated} onSubmit={submitForm}>
+            <Form noValidate validated={validated} onSubmit={submitForm} className="mx-auto" style={{display: "flex", flexDirection: "column"}}>
               <section className="my-5">
                 <h1><strong>Personal Information</strong></h1>
                 <div className="row">
@@ -218,7 +218,7 @@ function Apply() {
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
               </section>
 
-              <button type="submit" className="btn btn-dark" style={{margin: "24px 0 0", width: "100%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px"}}>Submit</button>
+              <button type="submit" className="btn btn-dark" style={{margin: "8px 0 24px", width: "80%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>Submit</button>
             </Form>
           </Col>
         </Row>
