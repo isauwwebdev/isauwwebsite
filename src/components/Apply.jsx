@@ -279,15 +279,15 @@ function Apply() {
           centered
           size="lg"
         >
-          {/* redirects to home ("/") within 5 seconds of the modal rendering */}
-          <meta http-equiv="refresh" content="5;url=/" />
+          {/* redirects to home ("/") within 10 seconds of the modal rendering */}
+          <meta http-equiv="refresh" content="10;url=/" />
           <Modal.Header>
             <Modal.Title>We appreciate your time.</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             Thank you for applying. We will get back to you regarding the status of your application.
             <br />
-            You will be automatically redirected to the home page in 5 seconds.
+            You will be automatically redirected to the home page in 10 seconds.
           </Modal.Body>
           <Modal.Footer>
             <Button variant="primary" href="/" style={{textTransform: "none"}}>Back to Home</Button>
