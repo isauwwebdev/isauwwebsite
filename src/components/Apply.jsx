@@ -152,20 +152,22 @@ function Apply() {
       </div>
       <Container>
         <Row className="justify-content-center">
-          <Col xs={12} sm={10} md={8} lg={6}>
-            <h1 className="my-3"><strong>'22-'23 ISAUW Officer Application</strong></h1>
-            <p style={{fontSize: "14px"}}>
-              We are thrilled to welcome new members to ISAUW this year!
-              Please fill in the form below to apply.
-              Selected applicants will be contacted for an interview.
-            </p>
-            <p style={{fontSize: "14px"}}>
-              Reach out to us on Instagram @isauwhuskies or email us at isauw@uw.edu for any questions.
-            </p>
-            <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student</p>
+          <Col xs={12} sm={10} md={8} lg={6} className="my-5">
+            <div>
+              <h1><strong>'22-'23 ISAUW Officer Application</strong></h1>
+              <p style={{fontSize: "14px"}}>
+                We are thrilled to welcome new members to ISAUW this year!
+                Please fill in the form below to apply.
+                Selected applicants will be contacted for an interview.
+              </p>
+              <p style={{fontSize: "14px"}}>
+                Reach out to us on Instagram @isauwhuskies or email us at isauw@uw.edu for any questions.
+              </p>
+              <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student</p>
+            </div>
 
             <Form noValidate validated={validated} onSubmit={submitForm} className="mx-auto" style={{display: "flex", flexDirection: "column"}}>
-              <section className="my-5">
+              <section className="my-3">
                 <h1><strong>Personal Information</strong></h1>
                 <div className="row">
                   <div className="col-6" style={{paddingRight: "6px"}}>
@@ -194,7 +196,7 @@ function Apply() {
 
               </section>
 
-              <section className="my-5" >
+              <section className="my-3" >
                 <h1><strong>Positions</strong></h1>
                 <span>Rank the positions you are interested in</span>
                 <br />
@@ -211,14 +213,14 @@ function Apply() {
                 }
               </section>
 
-              <section className="my-5" >
+              <section className="my-3" >
                 <h1><strong>About You</strong></h1>
                 <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
               </section>
 
-              <button type="submit" className="btn btn-dark" style={{margin: "8px 0 24px", width: "80%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>Submit</button>
+              <button type="submit" className="btn btn-dark" style={{width: "75%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>Submit</button>
             </Form>
           </Col>
         </Row>
