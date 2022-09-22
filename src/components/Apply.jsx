@@ -86,7 +86,7 @@ function Apply() {
     set.add(appContent.secondChoice);
     set.add(appContent.thirdChoice);
 
-    if (set.has("CM") || set.has("Design")) {
+    if (set.has("CM") || set.has("Design") || set.has("Documentation")) {
       setShowPortfolio(true);
     } else {
       setShowPortfolio(false);
@@ -251,8 +251,8 @@ function Apply() {
 
                 {showPortfolio &&
                   <span style={{color: "rgba(129, 27, 20, 1.0)"}}>
-                    You have indicated that you are applying for the position of Creativity Management and/or Documentation & Design.
-                    Please be sure to bring your portfolio should you be contacted for an intervew.
+                    You have indicated that you are applying to at least one of the following positions: Creativity Management, Documentation or Design.
+                    Please be sure to bring your portfolio should you be contacted for an interview.
                   </span>
                 }
               </section>
