@@ -30,8 +30,7 @@ function FormHelper(props) {
       case 'file':
         return (
           <Form.Group>
-            <Form.Label>{label}</Form.Label>
-            <Form.Control type="file" name={name} accept={accept} onChange={(e) => handleChange(e)} required />
+            <Form.Control style={{fontFamily: "Open Sans", fontWeight: "300", color: "#212529", display: "none"}} id={name} type="file" name={name} accept={accept} onChange={(e) => handleChange(e)} required />
           </Form.Group>
         )
       case 'textarea':
@@ -56,7 +55,7 @@ function FormHelper(props) {
   }
 
   return (
-    <div style={{marginBottom: "24px"}}>
+    <div style={{marginBottom: type !== "file" ? "24px" : ""}}>
       {renderSwitch(type)}
     </div>
   )
