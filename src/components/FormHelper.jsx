@@ -37,7 +37,7 @@ function FormHelper(props) {
         return (
           <Form.Group>
             <Form.Label>{label}</Form.Label>
-            <Form.Control as="textarea" name={name} onChange={(e) => handleChange(e)} rows={rows} required />
+            <Form.Control style={{fontSize: "14px"}} as="textarea" name={name} onChange={(e) => handleChange(e)} rows={rows} required />
           </Form.Group>
         )
       default:

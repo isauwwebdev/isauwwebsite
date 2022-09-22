@@ -259,9 +259,9 @@ function Apply() {
 
               <section className="my-3" >
                 <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>More About You</strong></h1>
-                <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="5" handleChange={handleChange} />
-                <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
-                <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
+                <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="10" handleChange={handleChange} />
+                <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
+                <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
               </section>
 
               <button type="submit" className="btn btn-dark" style={{width: "60%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>
