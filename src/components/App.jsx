@@ -10,10 +10,10 @@ import Events from './Events/Events';
 import Shop from './Shop/Shop';
 import About from './About/About';
 import Keraton from './Keraton/Keraton';
-import Sponsors from './InProgress/Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
+import Apply from './Apply';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -124,7 +124,7 @@ function App() {
                   <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
                   <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(true)}}>Keraton</NavLink>
-                  {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
+                  <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink>
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
@@ -138,7 +138,7 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
-          <Route path="/sponsors" component={Sponsors} />
+          <Route path="/apply" component={Apply} />
         </Switch>
 
         {/* {renderPopUp()} */}

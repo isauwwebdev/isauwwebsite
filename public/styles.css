@@ -2044,3 +2044,11 @@ select:invalid {
   border: none;
   background-color: transparent;
 }
+
+.position-descr-slider .slick-list .slick-track {
+    display: flex !important;
+}
+.position-icon svg {
+	width: 50px;
+	height: 50px;
+}
