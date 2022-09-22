@@ -53,7 +53,11 @@ function Apply() {
     const fileObj = e.target.files && e.target.files[0];
     if (fileObj) {
       setResumeFile(fileObj);
-      console.log(fileObj);
+      if (validated) {
+        const color = window.getComputedStyle(document.getElementById("resume")).borderColor;
+        document.getElementById("fakeResume").style.borderColor = color;
+        document.getElementById("fakeResumeText").style.color = color;
+      }
     }
   }
 
@@ -138,6 +142,14 @@ function Apply() {
     }
   }
 
+  useEffect(() => {
+    if (validated) {
+      const color = window.getComputedStyle(document.getElementById("resume")).borderColor;
+      document.getElementById("fakeResume").style.borderColor = color;
+      document.getElementById("fakeResumeText").style.color = color;
+    }
+  }, [validated]);
+
   const [showThankYou, setShowThankYou] = useState(false);
 
   return (
@@ -163,12 +175,12 @@ function Apply() {
               <p style={{fontSize: "14px"}}>
                 Reach out to us on Instagram @isauwhuskies or email us at isauw@uw.edu for any questions.
               </p>
-              <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student</p>
+              <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student.</p>
             </div>
 
             <Form noValidate validated={validated} onSubmit={submitForm} className="mx-auto" style={{display: "flex", flexDirection: "column"}}>
               <section className="my-3">
-                <h1><strong>Personal Information</strong></h1>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Personal Information</strong></h1>
                 <div className="row">
                   <div className="col-6" style={{paddingRight: "6px"}}>
                     <FormHelper name="firstName" label="First Name" datatype="text" handleChange={handleChange} feedback="Please enter your first name" />
@@ -186,18 +198,30 @@ function Apply() {
                 {/* Wrapper to hide file input with custom button */}
                 {/* TODO: Add validation */}
                 <div>
-                  <label class="btn" for="resume" style={{fontFamily: "Open Sans", fontWeight: "300", color: "#212529", textTransform: "none"}}>
-                    Upload Resume
-                    <FormHelper name="resume" type="file" accept=".doc,.docx,application/pdf" handleChange={handleFile} />
-                  </label>
-                  <span>{resumeFile ? resumeFile.name : "No file selected."}</span>
-                  <p style={{fontSize: "14px", margin: "0", padding: "0"}}>DOC, DOCX, PDF</p>
+                  <Row>
+                    <Row>
+                      <Col xs={4}>
+                        <label id="fakeResume" class="btn" for="resume" style={{fontSize: "14px", fontWeight: "300", textTransform: "none", margin: "0", width: "100%", boxShadow: "none", border: "1px solid #ced4da"}}>
+                          Upload Resume
+                          <FormHelper name="resume" type="file" accept=".doc,.docx,application/pdf" handleChange={handleFile} />
+                        </label>
+                      </Col>
+                      <Col className="col-md-auto" style={{margin: "auto 0", padding: "0"}}>
+                        <span id="fakeResumeText" style={{fontSize: "14px"}}>{resumeFile ? resumeFile.name : "No file selected."}</span>
+                      </Col>
+                    </Row>
+                    <Row>
+                      <Col xs={4}>
+                        <p style={{fontSize: "12px", margin: "8px 0 0", padding: "0", textAlign: "center"}}>DOC, DOCX, PDF</p>
+                      </Col>
+                    </Row>
+                  </Row>
                 </div>
 
               </section>
 
               <section className="my-3" >
-                <h1><strong>Positions</strong></h1>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Positions</strong></h1>
                 <span>Rank the positions you are interested in</span>
                 <br />
                 <span><a href='https://docs.google.com/presentation/d/1WZyhpHxiMuP-IsPmlmj5wFNDYkGTLTTxwPLy_uXqvLE/edit?usp=sharing'>Click to find out more about each position</a></span>
@@ -214,7 +238,7 @@ function Apply() {
               </section>
 
               <section className="my-3" >
-                <h1><strong>About You</strong></h1>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>About You</strong></h1>
                 <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
