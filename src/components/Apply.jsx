@@ -66,6 +66,7 @@ function Apply() {
         document.getElementById("fakeResume").style.backgroundSize = `calc(0.75em + 0.375rem) calc(0.75em + 0.375rem)`;
         document.getElementById("fakeResume").style.backgroundRepeat = `no-repeat`;
         document.getElementById("fakeResume").style.borderColor = color;
+        document.getElementById("fakeResume").style.textAlign = `left`;
         document.getElementById("fakeResumeText").style.color = color;
       }
     }
@@ -167,7 +168,9 @@ function Apply() {
       document.getElementById("fakeResume").style.backgroundPosition = `right 0.75rem center,center right 2.25rem`;
       document.getElementById("fakeResume").style.backgroundRepeat = `no-repeat`;
       document.getElementById("fakeResume").style.borderColor = color;
+      document.getElementById("fakeResume").style.textAlign = `left`;
       document.getElementById("fakeResumeText").style.color = color;
+      
     }
   }, [validated]);
 
@@ -228,7 +231,7 @@ function Apply() {
                           <FormHelper name="resume" type="file" accept=".doc,.docx,application/pdf" handleChange={handleFile} />
                         </label>
                       </Col>
-                      <Col className="col-md-auto" style={{margin: "auto 0", padding: "0"}}>
+                      <Col xs={5} sm={6} md={7} lg={8} style={{margin: "auto 0", padding: "0", overflow: "hidden", textOverflow: "ellipsis"}}>
                         <span id="fakeResumeText" style={{fontSize: "14px"}}>{resumeFile ? resumeFile.name : "No file selected."}</span>
                       </Col>
                     </Row>
