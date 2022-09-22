@@ -346,11 +346,11 @@ p {
 }
 
 .navbar-overlay {
-	height: 100vh;
+	height: 100%;
 }
 
 .navbar-overlay:before {
-	height: 100vh;
+	height: 100%;
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1990,6 +1990,7 @@ select:invalid {
 	border-radius: 221px 221px 0 0;
 	position: relative;
 	max-width: 441px;
+  display: block;
 }
 
 .testing {
@@ -2031,4 +2032,23 @@ select:invalid {
 	.keraton-map {
 		width: 95% !important;
 	}
+}
+
+.keraton-vendors-button {
+  height: fit-content;
+  display: inline-block;
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  background-color: transparent;
+}
+
+.position-descr-slider .slick-list .slick-track {
+    display: flex !important;
+}
+.position-icon svg {
+	width: 50px;
+	height: 50px;
 }

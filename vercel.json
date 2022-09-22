@@ -1,0 +1,11 @@
+{
+  "routes": [
+    {
+      "src": "/order",
+      "dest": "/api/order.js",
+      "methods": [
+        "POST"
+      ]
+    }
+  ]
+}
