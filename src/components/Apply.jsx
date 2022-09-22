@@ -193,7 +193,7 @@ function Apply() {
                 Selected applicants will be contacted for an interview.
               </p>
               <p style={{fontSize: "14px"}}>
-                Reach out to us on Instagram @isauwhuskies or email us at isauw@uw.edu for any questions.
+                Reach out on Instagram @isauwhuskies or email us at isauw@uw.edu for any questions.
               </p>
               <p style={{fontSize: "14px"}}><strong style={{fontSize: "14px"}}>Requirement:</strong> Currently enrolled as a UW student.</p>
             </div>
