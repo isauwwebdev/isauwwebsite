@@ -7,6 +7,8 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
+import PositionDescriptions from './PositionDescriptions';
+
 function Apply() {
   const standingOptions = useMemo(() => [
     {value: "default", text: "Select your class standing"},
@@ -239,6 +241,7 @@ function Apply() {
                 <span>Rank the positions you are interested in</span>
                 <br />
                 <span><a href='https://docs.google.com/presentation/d/1WZyhpHxiMuP-IsPmlmj5wFNDYkGTLTTxwPLy_uXqvLE/edit?usp=sharing'>Click to find out more about each position</a></span>
+                <PositionDescriptions />
                 <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
                 <FormHelper name="secondChoice" label="Second Choice" type="select" options={options2} value={appContent.secondChoice} handleChange={handleChange} />
                 <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} />

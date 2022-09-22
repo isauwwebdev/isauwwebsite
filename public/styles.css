@@ -2044,3 +2044,11 @@ select:invalid {
   border: none;
   background-color: transparent;
 }
+
+.position-descr-card .slick-track {
+	display: flex !important;
+}
+
+.position-descr-slider .slick-list .slick-track .slick-slide {
+	max-height: calc(6vw + 256px);
+}
