@@ -1,6 +1,5 @@
 import React, {useEffect, useState, useMemo} from 'react';
 import Form from 'react-bootstrap/Form';
-import FormHelper from './FormHelper';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -8,6 +7,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Spinner from 'react-bootstrap/Spinner';
 
+import FormHelper from '../Shared/FormHelper';
 import PositionDescriptions from './PositionDescriptions';
 
 function Apply() {

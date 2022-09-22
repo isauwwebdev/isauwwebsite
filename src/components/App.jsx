@@ -3,7 +3,6 @@ import {BrowserRouter, Route, Switch, NavLink, Link} from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import Alert from 'react-bootstrap/Alert'
 
 import Home from './Home/Home';
 import Events from './Events/Events';
@@ -13,7 +12,7 @@ import Keraton from './Keraton/Keraton';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
-import Apply from './Apply';
+import Apply from './Apply/Apply';
 
 function App() {
   const [expanded, setExpanded] = useState(false);

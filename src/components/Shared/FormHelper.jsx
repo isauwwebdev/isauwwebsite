@@ -1,6 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel'
-import {formatPhoneNumber} from './Shop/shopTools';
+import {formatPhoneNumber} from '../Shop/shopTools';
 
 function FormHelper(props) {
   const {type, label, name, datatype, options, value, accept, rows, handleChange, feedback, pattern} = props;
