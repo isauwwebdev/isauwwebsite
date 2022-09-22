@@ -22,12 +22,14 @@ function Apply() {
   const positionOptions = useMemo(() => [
     {value: "default", text: "Select your preferred position"},
     {value: "EO", text: "Event Organization"},
-    {value: "Inventory", text: "Inventory & Logistics"},
     {value: "CM", text: "Creativity Management"},
-    {value: "Sponsorship", text: "Sponsorship"},
+    {value: "Inventory", text: "Inventory"},
     {value: "Treasury", text: "Treasury"},
+    {value: "Fundraising", text: "Fundraising"},
+    {value: "Sponsorship", text: "Sponsorship"},
     {value: "MarCom", text: "Marketing Communication"},
-    {value: "Design", text: "Documentation & Design"},
+    {value: "Design", text: "Design"},
+    {value: "Documentation", text: "Documentation"},
     {value: "WebDev", text: "Web Development"},
   ], []);
 
