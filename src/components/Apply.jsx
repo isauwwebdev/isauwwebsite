@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Spinner from 'react-bootstrap/Spinner';
 
 import PositionDescriptions from './PositionDescriptions';
 
@@ -104,6 +105,7 @@ function Apply() {
       return;
     }
     e.preventDefault();
+    setLoadingSpinner(true);
 
     const formData = new FormData();
     formData.append('firstName', firstName);
@@ -143,6 +145,7 @@ function Apply() {
           fetch('https://script.google.com/macros/s/AKfycbzCwqJl0_tfZrPQsVyYmCWfjmpfLwXkJwK9VW4ihZBmIGoZnWv01nais7SNnWeKya4/exec', {method: 'POST', body: formData})
             .then(response => {
               console.log('Success', response);
+              setLoadingSpinner(false);
               setShowThankYou(true);
             });
         }).catch(error => console.error('Error', error.message));
@@ -167,6 +170,7 @@ function Apply() {
   }, [validated]);
 
   const [showThankYou, setShowThankYou] = useState(false);
+  const [loadingSpinner, setLoadingSpinner] = useState(false);
 
   return (
     <div style={{fontSize: "14px"}}>
@@ -237,17 +241,14 @@ function Apply() {
               </section>
 
               <section className="my-3" >
-                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Positions</strong></h1>
-                <span>Rank the positions you are interested in</span>
-                <br />
-                <span><a href='https://docs.google.com/presentation/d/1WZyhpHxiMuP-IsPmlmj5wFNDYkGTLTTxwPLy_uXqvLE/edit?usp=sharing'>Click to find out more about each position</a></span>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Rank Your Positions</strong></h1>
                 <PositionDescriptions />
                 <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
                 <FormHelper name="secondChoice" label="Second Choice" type="select" options={options2} value={appContent.secondChoice} handleChange={handleChange} />
                 <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} />
 
                 {showPortfolio &&
-                  <span>
+                  <span style={{color: "rgba(129, 27, 20, 1.0)"}}>
                     You have indicated that you are applying for the position of Creativity Management and/or Documentation & Design.
                     Please be sure to bring your portfolio should you be contacted for an intervew.
                   </span>
@@ -255,13 +256,15 @@ function Apply() {
               </section>
 
               <section className="my-3" >
-                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>About You</strong></h1>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>More About You</strong></h1>
                 <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="5" handleChange={handleChange} />
               </section>
 
-              <button type="submit" className="btn btn-dark" style={{width: "75%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>Submit</button>
+              <button type="submit" className="btn btn-dark" style={{width: "60%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>
+                {loadingSpinner ? <Spinner animation="border" style={{width: "1.5rem", height: "1.5rem"}}></Spinner> : "Submit"}
+              </button>
             </Form>
           </Col>
         </Row>
@@ -277,7 +280,7 @@ function Apply() {
           {/* redirects to home ("/") within 5 seconds of the modal rendering */}
           <meta http-equiv="refresh" content="5;url=/" />
           <Modal.Header>
-            <Modal.Title>Thank you</Modal.Title>
+            <Modal.Title>We appreciate your time.</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             Thank you for applying. We will get back to you regarding the status of your application.
@@ -285,7 +288,7 @@ function Apply() {
             You will be automatically redirected to the home page in 5 seconds.
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="primary" href="/">Back to Home</Button>
+            <Button variant="primary" href="/" style={{textTransform: "none"}}>Back to Home</Button>
           </Modal.Footer>
         </Modal>
       </Container>
