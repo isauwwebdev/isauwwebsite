@@ -3,18 +3,17 @@ import {BrowserRouter, Route, Switch, NavLink, Link} from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-// import Alert from 'react-bootstrap/Alert'
 
 import Home from './Home/Home';
 import Events from './Events/Events';
 import Shop from './Shop/Shop';
 import About from './About/About';
 import Keraton from './Keraton/Keraton';
-import Sponsors from './InProgress/Sponsors';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
 import NotFoundPage from './Home/NotFoundPage';
+import Apply from './Apply/Apply';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -125,7 +124,7 @@ function App() {
                   <NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
                   <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(true)}}>Keraton</NavLink>
-                  {/* <NavLink to="/sponsors" className="navLink" exact activeClassName="navLinkActive" onClick={() => setExpanded(false)}>Sponsors</NavLink> */}
+                  <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink>
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
@@ -141,6 +140,7 @@ function App() {
           <Route path="/keraton" component={Keraton} />
           <Route path="/sponsors" component={Sponsors} />
           <Route path="*" component={NotFoundPage}/>
+          <Route path="/apply" component={Apply} />
         </Switch>
 
         {/* {renderPopUp()} */}
