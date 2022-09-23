@@ -138,9 +138,9 @@ function App() {
           <Route path="/about" component={About} />
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
-          <Route path="/sponsors" component={Sponsors} />
-          <Route path="*" component={NotFoundPage}/>
+         {/* <Route path="/sponsors" component={Sponsors} /> */}
           <Route path="/apply" component={Apply} />
+          <Route path="*" component={NotFoundPage}/>
         </Switch>
 
         {/* {renderPopUp()} */}
