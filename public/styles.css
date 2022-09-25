@@ -335,6 +335,12 @@ p {
 	transition: background 200ms linear;
 }
 
+.navSolid2 {
+	height: 100%;
+    background: linear-gradient(180deg, rgba(129, 27, 20, 1.0) 14%, white 0%);
+	display: flex;
+}
+
 /* Navbar Brand */
 .isauw-logo {
 	height: calc(1.6vw + 36px);
@@ -2060,6 +2066,7 @@ select:invalid {
 	font-size: calc(2vw + 24px);
 	font-weight: bold !important;
 	color: #031B28;
+	position: relative;
 }
 
 .position-descr-slider .slick-list .slick-track {
