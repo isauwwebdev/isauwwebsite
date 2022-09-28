@@ -336,7 +336,6 @@ p {
 }
 
 .navSolid2 {
-	height: 100%;
     background: linear-gradient(180deg, rgba(129, 27, 20, 1.0) 14%, white 0%);
 	display: flex;
 }
@@ -2063,10 +2062,8 @@ select:invalid {
 }
 
 .not-found-page {
-	font-size: calc(2vw + 24px);
-	font-weight: bold !important;
+	font-size: calc(2vw + 20px);
 	color: #031B28;
-	position: relative;
 }
 
 .position-descr-slider .slick-list .slick-track {
