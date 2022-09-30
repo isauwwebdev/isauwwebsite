@@ -1,8 +1,35 @@
+:root {
+	--background: rgba(255, 249, 235, 1);
+	--isauw-red: rgba(130, 50, 51, 1);
+	--red-complementary: rgba(159, 140, 118, 1);
+	--secondary-green: rgba(85, 90, 70, 1);
+	--green-complementary: rgba(230, 210, 115, 1);
+	--tertiary-blue: rgba(54, 82, 96, 1);
+	--blue-complementary: rgba(211, 220, 225, 1);
+	--font-header: 'Gazpacho', 'sans-serif';
+	--font-body: 'Futura', 'sans-serif';
+}
+
 html,
 body,
 .view {
 	height: 100%;
 	scroll-behavior: smooth;
+	background-color: var(--background);
+}
+
+@font-face {
+	font-family: 'Gazpacho';
+	src: url('../fonts/Gazpacho/GazpachoBlack.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Futura';
+	src: url('../fonts/Futura/FuturaBook.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
 }
 
 @font-face {
@@ -227,7 +254,7 @@ body,
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-items: center;
-	background: none repeat scroll 0 0 #fff;
+	background: none repeat scroll 0 0 var(--background);
 	z-index: 9999;
 }
 
@@ -295,10 +322,14 @@ h4,
 h5,
 h6 {
 	line-height: 1.5em;
+	font-family: var(--font-header);
+	color: var(--isauw-red);
 }
 
 p {
 	font-size: calc(0.8vw + 12px);
+	font-family: var(--font-body);
+	color: var(--red-complementary);
 }
 
 /* Adjustment to the Bootstrap containers*/
@@ -328,7 +359,7 @@ p {
 }
 
 .navSolid.active {
-	background: rgba(129, 27, 20, 1.0);
+	background: var(--isauw-red);
 	box-shadow: none;
 	-webkit-transition: background 200ms linear;
 	-ms-transition: background 200ms linear;
@@ -446,7 +477,7 @@ p {
 
 /* hamburger menu open */
 .navOpen {
-	background-color: rgba(129, 27, 20, 1.0);
+	background-color: var(--isauw-red);
 	text-align: center;
 	-webkit-transition: background 300ms ease-out;
 	-ms-transition: background 300ms ease-out;
@@ -681,7 +712,7 @@ p {
 /* Footer */
 .page-footer {
 	font-family: 'Roboto', sans-serif;
-	background-color: #811B16;
+	background-color: var(--isauw-red);
 }
 
 /* Footer background image, supposed to look like batik */
@@ -1335,7 +1366,7 @@ mark {
 /* Home button Icon */
 .btn-home-icon {
 	font-size: calc(40px + 1.5vw);
-	color: #811B16;
+	color: var(--isauw-red);
 	padding: calc(6px + 0.2vw) !important;
 
 	-webkit-transition: color 0.5s ease;
