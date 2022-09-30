@@ -10,7 +10,7 @@ function NotFoundPage() {
            alt=""
            style={{height: "calc(40vh + 10vw)"}}
          />
-      <Carousel.Caption style={{top: "65%", bottom: "65%", left: "5%", right: "5%"}}>
+      <Carousel.Caption style={{top: "70%", bottom: "55%", left: "5%", right: "5%"}}>
         <h1 className="not-found-page" style={{zIndex: "100", fontWeight: "bold"}}>404</h1>
         <h1 className="not-found-page" style={{zIndex: "100"}}>Page Not Found</h1>
       </Carousel.Caption>
