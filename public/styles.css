@@ -2064,8 +2064,9 @@ select:invalid {
 }
 
 .not-found-page {
-	font-size: calc(2vw + 20px);
+	font-size: calc(2vw + 25px);
 	color: #031B28;
+	margin-top: -1.25rem;
 }
 
 .position-descr-slider .slick-list .slick-track {
