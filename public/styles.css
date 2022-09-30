@@ -2054,9 +2054,9 @@ select:invalid {
 	display: flex;
 	margin-left: auto;
 	margin-right: auto;
-	object-fit: cover;
-	max-width: max-content;
+	object-fit:scale-down;
 	max-height: max-content;
+	max-width: max-content;
 	width: 100%;
 	height: 100%;
 	margin-bottom: 10rem;
