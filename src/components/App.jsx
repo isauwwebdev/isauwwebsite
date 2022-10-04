@@ -15,7 +15,7 @@ import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
 import Apply from './Apply';
-import RegistrationForm from './RegistrationForm';
+import RegistrationForm from './Registration/RegistrationForm';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
