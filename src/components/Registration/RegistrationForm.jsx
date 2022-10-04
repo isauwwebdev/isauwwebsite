@@ -120,7 +120,7 @@ function RegistrationForm() {
                     <Col xs={12} sm={10} md={8} lg={6} className="my-5">
                         <h1><strong>{eventToday(currentDate)}</strong></h1>
                         <p style={{ fontSize: "14px" }}>{eventDescr(currentDate)}</p>
-                        <Form noValidate validated={validated}>
+                        <Form noValidate validated={validated} style={{ width: "100%"}}>
                             <Row style={{ marginTop: "16px" }}>
                                 <Col style={{ paddingRight: "6px" }}>
                                     <Form.Group>
@@ -199,15 +199,14 @@ function RegistrationForm() {
                     </Col>
                 </Row>
 
-                <Modal
+                {/* <Modal
                     show={showThankYou}
                     onHide={() => setShowThankYou(false)}
                     backdrop="static"
                     keyboard={false}
                     centered
                     size="lg"
-                >
-                    {/* redirects to home ("/") within 10 seconds of the modal rendering */}
+                    >
                     <meta http-equiv="refresh" content="10;url=/" />
                     <Modal.Header>
                         <Modal.Title>We appreciate your time.</Modal.Title>
@@ -220,7 +219,7 @@ function RegistrationForm() {
                     <Modal.Footer>
                         <Button variant="primary" href="/" style={{ textTransform: "none" }}>Back to Home</Button>
                     </Modal.Footer>
-                </Modal>
+                </Modal> */}
             </Container>
         </div>
     )
