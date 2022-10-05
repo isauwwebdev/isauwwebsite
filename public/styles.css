@@ -2051,25 +2051,22 @@ select:invalid {
 }
 
 .not-found-page-image {
-	display: flex;
+	display: inline-flex;
 	object-fit: scale-down;
 	max-height: max-content;
 	max-width: max-content;
 	width: 100%;
 	height: 100%;
 	padding-top: 1rem;
-	margin: 0 auto 10rem auto;
-	z-index: 1;
-	position: relative;
+	margin: auto auto 18vh auto;
 }
 
 .not-found-page {
 	font-size: calc(1vw + 20px);
 	color: #031B28;
-	display: block;
+	font-display: inline-block;
 	margin: 0 auto 0 auto;
-	z-index: 1;
-	position: relative;
+	
 }
 
 .position-descr-slider .slick-list .slick-track {

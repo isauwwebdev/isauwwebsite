@@ -11,7 +11,6 @@ function NotFoundPage() {
            style={{height: "calc(60vh + 10vw)"}}
          />
       <Carousel.Caption>
-      <br></br>
         <h1 className="not-found-page" style={{fontWeight: "bold", fontSize: "calc(1vw + 100px)", marginTop: "5rem", paddingTop: "1rem"}}>404</h1>
         <h1 className="not-found-page">Page Not Found</h1>
       </Carousel.Caption>
