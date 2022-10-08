@@ -2065,7 +2065,7 @@ select:invalid {
 	font-size: calc(1vw + 20px);
 	color: #031B28;
 	font-display: inline-block;
-	margin: 0 auto 0 auto;
+	margin: -1rem auto -1rem auto;
 	
 }
 
