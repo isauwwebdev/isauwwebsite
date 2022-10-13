@@ -14,7 +14,7 @@
         "time": "1:30PM",
         "location": "Dahl Playground & Wading Pool",
         "text": "A fun-filled day of adventure filled with traditional Indonesian Independence Day games, where you and your team will have to cooperate to be the fastest team to complete each race!",
-        "img": [{"src": "../images/events/socialnight/1.jpg"}],
+        "img": [{"src": "../images/events/searace/2022.jpg"}],
         "completed": true
     },
     { 
@@ -23,7 +23,7 @@
         "time": "6:00PM",
         "location": "Husky Union Building, UW",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
-        "img": [{"src": "../images/events/seathrough/1.jpeg"}],
+        "img": [{"src": "../images/events/seathrough/seathrough 2022.jpeg"}],
         "completed": true
     },
     {
@@ -32,8 +32,7 @@
         "time": "1:00PM",
         "location": "Jakarta, Indonesia",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
-        "img": [{"src": "../images/events/seattle 101/1.png"},
-                {"src": "../images/events/seattle 101/2.png"}],
+        "img": [{"src": "../images/events/seattle 101/seattle101.jpg"}],
         "completed": true
     },
     {
