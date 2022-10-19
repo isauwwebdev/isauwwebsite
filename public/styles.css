@@ -2052,3 +2052,84 @@ select:invalid {
 	width: 50px;
 	height: 50px;
 }
+
+#notfound .notfound {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	background-color: white;
+}
+
+.notfound {
+	padding-top: 5%;
+	height: 100%;
+    width: 100%;
+    text-align: center;
+	margin-bottom: 10%;
+}
+
+.notfound .notfound-404 {
+    height: 500px;
+    position: relative;
+}
+
+.notfound .notfound-404 h1 {
+    font-family: 'brandon_grotesque', sans-serif !important;
+    font-size: 400px;
+    margin: 0;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: url(../images/maroon-batik.png);
+    background-clip: text;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: fit;
+    background-position: center;
+	background-color: rgba(129, 27, 20, 1.0);
+}
+
+.notfound h2 {
+    font-family: 'brandon_grotesque', sans-serif !important;
+    color: #000;
+    font-size: 30px;
+    margin-top: auto;
+	font-weight: 900;
+}
+
+.notfound a {
+    font-family: 'brandon_grotesque', sans-serif !important;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(129, 27, 20, 1.0);
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 767px) {
+	.notfound {
+		padding-top: 20%;
+	}
+    .notfound .notfound-404 {
+        height: 300px;
+    }
+
+    .notfound .notfound-404 h1 {
+        font-size: 250px;
+		width: 100%
+    }
+
+	.notfound h2 {
+		font-size: 20px;
+	}
+}
