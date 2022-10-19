@@ -2053,6 +2053,11 @@ select:invalid {
 	height: 50px;
 }
 
+#notfound {
+	position: relative;
+	height: 100vh;
+	display: block;
+}
 #notfound .notfound {
     position: absolute;
     left: 50%;
@@ -2068,7 +2073,6 @@ select:invalid {
 	height: 100%;
     width: 100%;
     text-align: center;
-	margin-bottom: 10%;
 }
 
 .notfound .notfound-404 {
@@ -2125,8 +2129,10 @@ select:invalid {
     }
 
     .notfound .notfound-404 h1 {
-        font-size: 250px;
-		width: 100%
+        font-size: 200px;
+		width: 100%;
+		background-size: cover;
+		position:absolute;
     }
 
 	.notfound h2 {

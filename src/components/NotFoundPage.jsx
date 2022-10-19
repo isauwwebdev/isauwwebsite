@@ -2,7 +2,7 @@ import React from 'react';
 
 function NotFoundPage() {
     return (
-    <body style={{height:"100vh"}}>
+    <body style={{height:"100vh", wdith:"100vw"}}>
         <div id="notfound">
             <div class="notfound">
                 <div class="notfound-404">
