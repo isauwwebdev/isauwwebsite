@@ -12,7 +12,8 @@ import Keraton from './Keraton/Keraton';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
-import Apply from './Apply/Apply';
+//import Apply from './Apply/Apply';
+import NotFoundPage from './NotFoundPage';
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -138,6 +139,7 @@ function App() {
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
           {/* <Route path="/apply" component={Apply} /> */}
+          <Route path="/*" component={NotFoundPage} />
         </Switch>
 
         {/* {renderPopUp()} */}
