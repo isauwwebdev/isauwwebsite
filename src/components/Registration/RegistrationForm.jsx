@@ -174,7 +174,6 @@ function RegistrationForm() {
                             <Form.Group style={{ margin: "16px 0" }} required>
                                 <FloatingLabel label="University Selection" required>
                                     <Form.Select name="university" required onChange={handleChange}>
-                                        <option selected disabled value="">Select Your University</option>
                                         <option value="University of Washington - Seattle">University of Washington - Seattle</option>
                                         <option value="University of Washington - Bothell">University of Washington - Bothell</option>
                                         <option value="University of Washington - Tacoma">University of Washington - Tacoma</option>
