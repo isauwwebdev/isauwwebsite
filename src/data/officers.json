@@ -1,336 +1,347 @@
 [
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "President",
-                        "name": "Amy Dharmawan",
-                        "img": "../images/officers/Amy.png"
-                    },
-                    {
-                        "position": "Vice President",
-                        "name": "Jasmine Laksmana",
-                        "img": "../images/officers/Jasmine.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Tung Alta Kania",
+        "department": "",
+        "role": "President",
+        "position": "Primaries",
+        "major": "Business Major with a Finance, Marketing, and IS concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Director of Finance",
-                        "name": "Natasha Valerie",
-                        "img": "../images/officers/Natasha.png"
-                    },
-                    {
-                        "position": "Director of Communications & Outreach",
-                        "name": "Tung Alta",
-                        "img": "../images/officers/Alta.png"
-                    },
-                    {
-                        "position": "Director of Operations",
-                        "name": "Kevin Yip",
-                        "img": "../images/officers/Kevin.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Stephen Jireh Lim",
+        "department": "",
+        "role": "Vice President",
+        "position": "Primaries",
+        "major": "Civil Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Design and Documentation",
-                        "name": "Andrea Muljono",
-                        "img": "../images/officers/Andrea.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Design and Documentation",
-                        "name": "Tamaska Nikola",
-                        "img": "../images/officers/Tamaska.png"
-                    },
-                    {
-                        "position": "Design and Documentation",
-                        "name": "Angelita Cecilia",
-                        "img": "../images/officers/Angelita.png"
-                    },
-                    {
-                        "position": "Design and Documentation",
-                        "name": "Stephen Lim",
-                        "img": "../images/officers/Stephen.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Jocelyn Novecia",
+        "department": "Finance",
+        "role": "Department Head",
+        "position": "Primaries",
+        "major": "Business Major with a Accounting concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Information Technology",
-                        "name": "Jevin Kosasih",
-                        "img": "../images/officers/Jevin.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Information Technology",
-                        "name": "Ivanna Maxwell",
-                        "img": "../images/officers/Ivanna.png"
-                    },
-                    {
-                        "position": "Information Technology",
-                        "name": "Winston Jodjana",
-                        "img": "../images/officers/Winston.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Information Technology",
-                        "name": "Darren Gunadharma",
-                        "img": "../images/officers/Darren.png"
-                    },
-                    {
-                        "position": "Information Technology",
-                        "name": "Andrew Darmawan",
-                        "img": "../images/officers/Andrew.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Anthony Liem",
+        "department": "Operations",
+        "role": "Department Head",
+        "position": "Primaries",
+        "major": "Industrial Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Marketing Communication",
-                        "name": "Ernesto Giovanni",
-                        "img": "../images/officers/Ernesto.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Marketing Communication",
-                        "name": "Charisse Luhur",
-                        "img": "../images/officers/Charisse.png"
-                    },
-                    {
-                        "position": "Marketing Communication",
-                        "name": "Gabriel Hendricksen",
-                        "img": "../images/officers/Gabriel.png"
-                    },
-                    {
-                        "position": "Marketing Communication",
-                        "name": "Rachel Claudia",
-                        "img": "../images/officers/Rachel.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Charisse Valerie Luhur",
+        "department": "Communications & Outreach",
+        "role": "Department Head",
+        "position": "Primaries",
+        "major": "Business Major with a Marketing and IS concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Sponsorship",
-                        "name": "Darren Kertawiguna",
-                        "img": "../images/officers/Darren-Kertawiguna.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Sponsorship",
-                        "name": "Jordan Huang",
-                        "img": "../images/officers/Jordan.png"
-                    },
-                    {
-                        "position": "Sponsorship",
-                        "name": "Aimee Runtukahu",
-                        "img": "../images/officers/Aimee.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Sponsorship",
-                        "name": "Jocelyn Novecia",
-                        "img": "../images/officers/Jocelyn.png"
-                    },
-                    {
-                        "position": "Sponsorship",
-                        "name": "Bryan Hanam",
-                        "img": "../images/officers/Bryan-Hanam.png"
-                    },
-                    {
-                        "position": "Sponsorship",
-                        "name": "Bryan Hariadi",
-                        "img": "../images/officers/Bryan-Hariadi.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Bryan Adijaya Hanam",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Team Head",
+        "major": "Business Major with a IS and Supply Chain concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Treasury",
-                        "name": "Vanessa Sujitro",
-                        "img": "../images/officers/Vanessa.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Treasury",
-                        "name": "William Perdana",
-                        "img": "../images/officers/William.png"
-                    },
-                    {
-                        "position": "Treasury",
-                        "name": "Daven Tejalaksana",
-                        "img": "../images/officers/Daven.png"
-                    },
-                    {
-                        "position": "Treasury",
-                        "name": "Keiko Laksana",
-                        "img": "../images/officers/Keiko.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Clairine Buntoro",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Business Major with a Finance concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Creativity Management",
-                        "name": "Alyssa Limit",
-                        "img": "../images/officers/Alyssa.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Creativity Management",
-                        "name": "Michelle Rosallyn",
-                        "img": "../images/officers/Michelle.png"
-                    },
-                    {
-                        "position": "Creativity Management",
-                        "name": "Chiara Isabelle",
-                        "img": "../images/officers/Chiara.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Creativity Management",
-                        "name": "Audrey Yip",
-                        "img": "../images/officers/Audrey.png"
-                    },
-                    {
-                        "position": "Creativity Management",
-                        "name": "Evangeline Susanto",
-                        "img": "../images/officers/Evangeline.png"
-                    },
-                    {
-                        "position": "Creativity Management",
-                        "name": "Kathleen Cahya",
-                        "img": "../images/officers/Kathleen.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Jessica Fredlina",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Applied Computational & Mathematical Sciences & Business Major",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Event Organization",
-                        "name": "Nicole Fendi",
-                        "img": "../images/officers/Nicole.png"
-                    },
-                    {
-                        "position": "Co-Head of Event Organization",
-                        "name": "Maximilian Mulyono",
-                        "img": "../images/officers/Maximilian.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Event Organization",
-                        "name": "Janice Dermawan",
-                        "img": "../images/officers/Janice.png"
-                    },
-                    {
-                        "position": "Event Organization",
-                        "name": "Theresa Rachel Sumarta",
-                        "img": "../images/officers/Theresa.png"
-                    },
-                    {
-                        "position": "Event Organization",
-                        "name": "Gilbert Noverio",
-                        "img": "../images/officers/Gilbert.png"
-                    }
-                ]
-            }
-        ]
+        "name": "Michael Giovanni Onggo",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Electrical Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
     },
     {
-        "content": [
-            {
-                "row": [
-                    {
-                        "position": "Head of Inventory",
-                        "name": "Glenndi Tjuandi",
-                        "img": "../images/officers/Glenndi.png"
-                    }
-                ]
-            },
-            {
-                "row": [
-                    {
-                        "position": "Inventory",
-                        "name": "Bryan So",
-                        "img": "../images/officers/Bryan-So.png"
-                    },
-                    {
-                        "position": "Inventory",
-                        "name": "Anthony Liem",
-                        "img": "../images/officers/Anthony.png"
-                    }
-                ]
-            }
-        ]
-    }
+        "name": "Andira Resyita Andala",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Marianne Elizabeth Keiko Laksana",
+        "department": "Finance",
+        "role": "Fundraising",
+        "position": "Team Head",
+        "major": "Business Major with a Finance and Operations & Supply Chain concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Kathleen Cahya",
+        "department": "Finance",
+        "role": "Fundraising",
+        "position": "Officer",
+        "major": "Statistics",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Bryan Sanusi",
+        "department": "Finance",
+        "role": "Fundraising",
+        "position": "Officer",
+        "major": "Electrical Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "William Perdana",
+        "department": "Finance",
+        "role": "Treasury",
+        "position": "Team Head",
+        "major": "Pre-Science with Intended Computer Science Major",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Evangeline Cassey Susanto",
+        "department": "Finance",
+        "role": "Treasury",
+        "position": "Officer",
+        "major": "Business Major with an Accounting and IS concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Octavio Gunawan",
+        "department": "Finance",
+        "role": "Treasury",
+        "position": "Officer",
+        "major": "Electrical Computer Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Janice Dermawan",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Team Head",
+        "major": "Business Major with an IS concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Tamaska Nikola Alimutomo",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Pre-Science with Intended Business Major in Marketing and Supply Chain concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Enrico Pratama",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Pre-Science with Intended Computer Science Major",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Charity Joy",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Communication",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Gilbert Noverio",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Team Head",
+        "major": "Civil Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Chiara Gunawan",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Officer",
+        "major": "Psychology",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Steven Wilbert",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Officer",
+        "major": "Pre-Science with an Intended Business Major",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Tiffany Sada",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Officer",
+        "major": "Psychology & Sociology",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Catherine Darma",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Officer",
+        "major": "Industrial Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Nadine Setiawan",
+        "department": "Operations",
+        "role": "Creative Management",
+        "position": "Officer",
+        "major": "Applied Computational & Mathematical Sciences",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Bryan So",
+        "department": "Operations",
+        "role": "Inventory",
+        "position": "Team Head",
+        "major": "Human Centered Design Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "George Soekawan",
+        "department": "Operations",
+        "role": "Inventory",
+        "position": "Officer",
+        "major": "Business Major with an IS concentration",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Jeremy Tan",
+        "department": "Operations",
+        "role": "Inventory",
+        "position": "Officer",
+        "major": "Food & Nutritional Sciences",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Gabriel Hendricksen",
+        "department": "Communications and Outreach",
+        "role": "Marketing Communications",
+        "position": "Team Head",
+        "major": "Mechanical Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Rachel Claudia",
+        "department": "Communications and Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Real Estate",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Kezia Proverby",
+        "department": "Communications and Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Sharon Sutandinata",
+        "department": "Communications and Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Engineering Undeclared",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Gillian Seokawan",
+        "department": "Communications and Outreach",
+        "role": "Design",
+        "position": "Officer",
+        "major": "Psychology",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Cherry Winarto",
+        "department": "Communications and Outreach",
+        "role": "Design",
+        "position": "Officer",
+        "major": "Computer Science & Bioengineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Alyssa Limit",
+        "department": "Communications and Outreach",
+        "role": "Documentation",
+        "position": "Team Head",
+        "major": "Psychology",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Angelita Cecilia",
+        "department": "Communications and Outreach",
+        "role": "Documentation",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Eugene Wongso",
+        "department": "Communications and Outreach",
+        "role": "Documentation",
+        "position": "Officer",
+        "major": "Pre-Science with Intended Computer Science Major",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Darren Gunadharma",
+        "department": "Communications and Outreach",
+        "role": "Web Development",
+        "position": "Team Head",
+        "major": "Informatics",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Daven Giftian Tejalaksana",
+        "department": "Communications and Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Audrey Yip",
+        "department": "Communications and Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Engineering",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Andrew Darmawan",
+        "department": "Communications and Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+    {
+        "name": "Arvin Oentoro",
+        "department": "Communications and Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+    },
+
 ]
