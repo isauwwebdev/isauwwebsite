@@ -9,7 +9,8 @@ function Events() {
   return (
     <div>
       {/* Carousel */}
-      <Carousel touch={true} style={{height: "calc(50vh + 10vw)"}}>
+      <Carousel touch={true} indicators={false}
+        controls={false} style={{height: "calc(50vh + 10vw)"}}>
         <Carousel.Item interval={4000}>
           <div className="navbar-overlay">
             <img
