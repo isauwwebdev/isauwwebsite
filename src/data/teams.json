@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Sponsorship",
+        "department": "Finance",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We connect ISAUW with businesses!"
+    },
+    {
+        "name": "Fundraising",
+        "department": "Finance",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We help ISAUW raise money!"
+    },
+    {
+        "name": "Treasury",
+        "department": "Finance",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We handle ISAUW's finances!"
+    },
+    {
+        "name": "Event Organizer",
+        "department": "Operations",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We plan and organize ISAUW events!"
+    },
+    {
+        "name": "Creativity Management",
+        "department": "Operations",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We create the decorations for ISAUW events!"
+    },
+    {
+        "name": "Inventory",
+        "department": "Operations",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We handle the supplies ISAUW needs!"
+    },
+    {
+        "name": "Marketing Communications",
+        "department": "Communications and Outreach",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We handle ISAUW's social media!"
+    },
+    {
+        "name": "Design",
+        "department": "Communications and Outreach",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We design ISAUW's content!"
+    },
+    {
+        "name": "Documentation",
+        "department": "Communications and Outreach",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We film and photograph ISAUW memories!"
+    },
+    {
+        "name": "Web Development",
+        "department": "Communications and Outreach",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "description": "We develop and maintain ISAUW's website!"
+    }
+]
