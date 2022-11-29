@@ -31,9 +31,9 @@ function RegistrationForm() {
             eventName = "Seattle 101"
         } else if (month === 9) {
             eventName = "SeaThrough"
-        } else if (month === 10) {
+        } else if (month === 10 || month == 11) {
             eventName = "Friendsgiving"
-        } else if (month === 11) {
+        } else if (month === 12) {
             eventName = "Winter Ball"
         }
         return eventName;
@@ -46,9 +46,9 @@ function RegistrationForm() {
             descr = "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc."
         } else if (month === 9) {
             descr = "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!"
-        } else if (month === 10) {
+        } else if (month === 10 || month == 11) {
             descr = "An interactive social gathering where we will be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break."
-        } else if (month === 11) {
+        } else if (month === 12) {
             descr = "Get your suits and dresses ready and get lost in your dance in ISAUW’s Winter Ball. Be ready for a night of love, laughter, and beautiful pictures as you get serenaded by live music. A three-course meal is provided as we sway you into a magical night."
         }
         return descr;
@@ -100,7 +100,7 @@ function RegistrationForm() {
         formData.append('phone', phone);
         formData.append('venmo', venmo);
         formData.append('university', university);
-        formData.append('sheetName', eventToday(new Date()));
+        formData.append('sheetName', eventToday(new Date()).replaceAll(" ", ""));
 
         fetch('https://script.google.com/macros/s/AKfycbw2iG2mpphZZGH5Lw9T8VNVQ3k-EmH4dTZZgb14q9zvFqA8RVCWptH36C6B3NRyLxrj/exec', { method: 'POST', body: formData })
             .then(response => {
@@ -174,6 +174,7 @@ function RegistrationForm() {
                             <Form.Group style={{ margin: "16px 0" }} required>
                                 <FloatingLabel label="University Selection" required>
                                     <Form.Select name="university" required onChange={handleChange}>
+                                        <option disabled selected value="">Select University</option>
                                         <option value="University of Washington - Seattle">University of Washington - Seattle</option>
                                         <option value="University of Washington - Bothell">University of Washington - Bothell</option>
                                         <option value="University of Washington - Tacoma">University of Washington - Tacoma</option>
@@ -198,7 +199,7 @@ function RegistrationForm() {
                     </Col>
                 </Row>
 
-                {/* <Modal
+                <Modal
                     show={showThankYou}
                     onHide={() => setShowThankYou(false)}
                     backdrop="static"
@@ -218,7 +219,7 @@ function RegistrationForm() {
                     <Modal.Footer>
                         <Button variant="primary" href="/" style={{ textTransform: "none" }}>Back to Home</Button>
                     </Modal.Footer>
-                </Modal> */}
+                </Modal>
             </Container>
         </div>
     )
