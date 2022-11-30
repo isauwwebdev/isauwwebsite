@@ -1,5 +1,53 @@
 [
     {
+        "name": "Primaries",
+        "department": "",
+        "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Tung Alta Kania",
+                "department": "",
+                "role": "President",
+                "position": "Primaries",
+                "major": "Business Major with a Finance, Marketing, and IS concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Stephen Jireh Lim",
+                "department": "",
+                "role": "Vice President",
+                "position": "Primaries",
+                "major": "Civil Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Jocelyn Novecia",
+                "department": "Finance",
+                "role": "Department Head",
+                "position": "Primaries",
+                "major": "Business Major with a Accounting concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Anthony Liem",
+                "department": "Operations",
+                "role": "Department Head",
+                "position": "Primaries",
+                "major": "Industrial Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Charisse Valerie Luhur",
+                "department": "Communications & Outreach",
+                "role": "Department Head",
+                "position": "Primaries",
+                "major": "Business Major with a Marketing and IS concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
+        "description": "We lead ISAUW!"
+    },
+    {
         "name": "Sponsorship",
         "department": "Finance",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
