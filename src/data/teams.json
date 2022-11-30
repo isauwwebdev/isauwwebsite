@@ -3,60 +3,384 @@
         "name": "Sponsorship",
         "department": "Finance",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Bryan Adijaya Hanam",
+                "department": "Finance",
+                "role": "Sponsorship",
+                "position": "Team Head",
+                "major": "Business Major with a IS and Supply Chain concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Clairine Buntoro",
+                "department": "Finance",
+                "role": "Sponsorship",
+                "position": "Officer",
+                "major": "Business Major with a Finance concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Jessica Fredlina",
+                "department": "Finance",
+                "role": "Sponsorship",
+                "position": "Officer",
+                "major": "Applied Computational & Mathematical Sciences & Business Major",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Michael Giovanni Onggo",
+                "department": "Finance",
+                "role": "Sponsorship",
+                "position": "Officer",
+                "major": "Electrical Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Andira Resyita Andala",
+                "department": "Finance",
+                "role": "Sponsorship",
+                "position": "Officer",
+                "major": "Communications",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We connect ISAUW with businesses!"
     },
     {
         "name": "Fundraising",
         "department": "Finance",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Marianne Elizabeth Keiko Laksana",
+                "department": "Finance",
+                "role": "Fundraising",
+                "position": "Team Head",
+                "major": "Business Major with a Finance and Operations & Supply Chain concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Kathleen Cahya",
+                "department": "Finance",
+                "role": "Fundraising",
+                "position": "Officer",
+                "major": "Statistics",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Bryan Sanusi",
+                "department": "Finance",
+                "role": "Fundraising",
+                "position": "Officer",
+                "major": "Electrical Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We help ISAUW raise money!"
     },
     {
         "name": "Treasury",
         "department": "Finance",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "William Perdana",
+                "department": "Finance",
+                "role": "Treasury",
+                "position": "Team Head",
+                "major": "Pre-Science with Intended Computer Science Major",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Evangeline Cassey Susanto",
+                "department": "Finance",
+                "role": "Treasury",
+                "position": "Officer",
+                "major": "Business Major with an Accounting and IS concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Octavio Gunawan",
+                "department": "Finance",
+                "role": "Treasury",
+                "position": "Officer",
+                "major": "Electrical Computer Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We handle ISAUW's finances!"
     },
     {
         "name": "Event Organizer",
         "department": "Operations",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Janice Dermawan",
+                "department": "Operations",
+                "role": "Event Organizer",
+                "position": "Team Head",
+                "major": "Business Major with an IS concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Tamaska Nikola Alimutomo",
+                "department": "Operations",
+                "role": "Event Organizer",
+                "position": "Officer",
+                "major": "Pre-Science with Intended Business Major in Marketing and Supply Chain concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Enrico Pratama",
+                "department": "Operations",
+                "role": "Event Organizer",
+                "position": "Officer",
+                "major": "Pre-Science with Intended Computer Science Major",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Charity Joy",
+                "department": "Operations",
+                "role": "Event Organizer",
+                "position": "Officer",
+                "major": "Communication",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We plan and organize ISAUW events!"
     },
     {
         "name": "Creativity Management",
         "department": "Operations",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Gilbert Noverio",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Team Head",
+                "major": "Civil Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Chiara Gunawan",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Officer",
+                "major": "Psychology",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Steven Wilbert",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Officer",
+                "major": "Pre-Science with an Intended Business Major",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Tiffany Sada",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Officer",
+                "major": "Psychology & Sociology",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Catherine Darma",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Officer",
+                "major": "Industrial Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Nadine Setiawan",
+                "department": "Operations",
+                "role": "Creativity Management",
+                "position": "Officer",
+                "major": "Applied Computational & Mathematical Sciences",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We create the decorations for ISAUW events!"
     },
     {
         "name": "Inventory",
         "department": "Operations",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Bryan So",
+                "department": "Operations",
+                "role": "Inventory",
+                "position": "Team Head",
+                "major": "Human Centered Design Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "George Soekawan",
+                "department": "Operations",
+                "role": "Inventory",
+                "position": "Officer",
+                "major": "Business Major with an IS concentration",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Jeremy Tan",
+                "department": "Operations",
+                "role": "Inventory",
+                "position": "Officer",
+                "major": "Food & Nutritional Sciences",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We handle the supplies ISAUW needs!"
     },
     {
         "name": "Marketing Communications",
         "department": "Communications and Outreach",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Gabriel Hendricksen",
+                "department": "Communications and Outreach",
+                "role": "Marketing Communications",
+                "position": "Team Head",
+                "major": "Mechanical Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Rachel Claudia",
+                "department": "Communications and Outreach",
+                "role": "Marketing Communications",
+                "position": "Officer",
+                "major": "Real Estate",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Kezia Proverby",
+                "department": "Communications and Outreach",
+                "role": "Marketing Communications",
+                "position": "Officer",
+                "major": "Communications",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Sharon Sutandinata",
+                "department": "Communications and Outreach",
+                "role": "Marketing Communications",
+                "position": "Officer",
+                "major": "Engineering Undeclared",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We handle ISAUW's social media!"
     },
     {
         "name": "Design",
         "department": "Communications and Outreach",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Gillian Seokawan",
+                "department": "Communications and Outreach",
+                "role": "Design",
+                "position": "Officer",
+                "major": "Psychology",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Cherry Winarto",
+                "department": "Communications and Outreach",
+                "role": "Design",
+                "position": "Officer",
+                "major": "Computer Science & Bioengineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We design ISAUW's content!"
     },
     {
         "name": "Documentation",
         "department": "Communications and Outreach",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Alyssa Limit",
+                "department": "Communications and Outreach",
+                "role": "Documentation",
+                "position": "Team Head",
+                "major": "Psychology",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Angelita Cecilia",
+                "department": "Communications and Outreach",
+                "role": "Documentation",
+                "position": "Officer",
+                "major": "Communications",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Eugene Wongso",
+                "department": "Communications and Outreach",
+                "role": "Documentation",
+                "position": "Officer",
+                "major": "Pre-Science with Intended Computer Science Major",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We film and photograph ISAUW memories!"
     },
     {
         "name": "Web Development",
         "department": "Communications and Outreach",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg"}],
+        "members": [
+            {
+                "name": "Darren Gunadharma",
+                "department": "Communications and Outreach",
+                "role": "Web Development",
+                "position": "Team Head",
+                "major": "Informatics",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Daven Giftian Tejalaksana",
+                "department": "Communications and Outreach",
+                "role": "Web Development",
+                "position": "Officer",
+                "major": "Computer Science",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Audrey Yip",
+                "department": "Communications and Outreach",
+                "role": "Web Development",
+                "position": "Officer",
+                "major": "Computer Engineering",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Andrew Darmawan",
+                "department": "Communications and Outreach",
+                "role": "Web Development",
+                "position": "Officer",
+                "major": "Computer Science",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            },
+            {
+                "name": "Arvin Oentoro",
+                "department": "Communications and Outreach",
+                "role": "Web Development",
+                "position": "Officer",
+                "major": "Computer Science",
+                "img": [{"src": "../images/events/winter ball/2019/1.jpg"}]
+            }
+        ],
         "description": "We develop and maintain ISAUW's website!"
     }
 ]
