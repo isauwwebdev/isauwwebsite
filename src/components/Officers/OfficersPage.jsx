@@ -1,6 +1,6 @@
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import teams from '../../data/teams.json'
+import officers from '../../data/officers.json'
 import Fade from 'react-reveal/Fade';
 import React from 'react';
 
