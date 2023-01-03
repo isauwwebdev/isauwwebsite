@@ -170,7 +170,17 @@
                 "role": "Event Organizer",
                 "position": "Team Head",
                 "major": "Business Major with an IS concentration",
+                "description": "Janice is passionate about tea and loves to travel and explore new places.",
                 "img": [{"src": "../images/officers/Janice.png"}]
+            },
+            {
+                "name": "Caitlyn Widjaja",
+                "department": "Operations",
+                "role": "Event Organizer",
+                "position": "Officer",
+                "major": "Computer Science",
+                "description": "Caitlyn loves Uniqlo clothing and DPR Ian's music, and enjoys sleeping in her spare time.",
+                "img": [{"src": "../images/officers/Tamaska.png"}]
             },
             {
                 "name": "Tamaska Nikola Alimutomo",
@@ -178,6 +188,7 @@
                 "role": "Event Organizer",
                 "position": "Officer",
                 "major": "Pre-Science with Intended Business Major in Marketing and Supply Chain concentration",
+                "description": "Tamaska is a calm and timid person who enjoys horror movies, cooking, and drinking boba while watching the sunset.",
                 "img": [{"src": "../images/officers/Tamaska.png"}]
             },
             {
@@ -186,6 +197,7 @@
                 "role": "Event Organizer",
                 "position": "Officer",
                 "major": "Pre-Science with Intended Computer Science Major",
+                "description": "Enrico enjoys going to the gym and playing sports, and is a fan of Marvel movies, particularly Avengers Infinity War.",
                 "img": [{"src": "../images/officers/Enrico.png"}]
             },
             {
@@ -194,6 +206,7 @@
                 "role": "Event Organizer",
                 "position": "Officer",
                 "major": "Communication",
+                "description": "Joy is a big fan of Friends, loves the clear skies during spring, summer, and fall, and misses Gojek.",
                 "img": [{"src": "../images/officers/Joy.png"}]
             }
         ],
@@ -210,6 +223,7 @@
                 "role": "Creativity Management",
                 "position": "Team Head",
                 "major": "Civil Engineering",
+                "description": "Gilbert likes to listen to music and is known to be a talkative introvert.",
                 "img": [{"src": "../images/officers/Gilbert.png"}]
             },
             {
@@ -217,7 +231,8 @@
                 "department": "Operations",
                 "role": "Creativity Management",
                 "position": "Officer",
-                "major": "Psychology",
+                "major": "Nutrition",
+                "description": "Chiara loves the TV show Modern Family and is a certified dog lover.",
                 "img": [{"src": "../images/officers/Chiara.png"}]
             },
             {
@@ -225,7 +240,8 @@
                 "department": "Operations",
                 "role": "Creativity Management",
                 "position": "Officer",
-                "major": "Pre-Science with an Intended Business Major",
+                "major": "Pre-Science with an Intended Business/Economics Major",
+                "description": "Steven enjoys watching How to Get Away With Murder and is good at comebacks.",
                 "img": [{"src": "../images/officers/Steven.png"}]
             },
             {
@@ -234,6 +250,7 @@
                 "role": "Creativity Management",
                 "position": "Officer",
                 "major": "Psychology & Sociology",
+                "description": "Tiffany likes the fall season, playing volleyball, and going to Paint the Town in UVill.",
                 "img": [{"src": "../images/officers/Tiffany.png"}]
             },
             {
@@ -241,7 +258,8 @@
                 "department": "Operations",
                 "role": "Creativity Management",
                 "position": "Officer",
-                "major": "Industrial Engineering",
+                "major": "Engineering Undeclared Intended Industrial Engineering",
+                "description": "Catherine loves to watch movies and TV shows related to her Chinese food.",
                 "img": [{"src": "../images/officers/Catherine.png"}]
             },
             {
@@ -249,7 +267,8 @@
                 "department": "Operations",
                 "role": "Creativity Management",
                 "position": "Officer",
-                "major": "Applied Computational & Mathematical Sciences",
+                "major": "Pre-Science with an Intended ACMS Major",
+                "description": "Nadine loves to watch sunsets in Seattle and enjoys the cherry blossoms at the Quad during spring.",
                 "img": [{"src": "../images/officers/Nadine.png"}]
             }
         ],
@@ -266,6 +285,7 @@
                 "role": "Inventory",
                 "position": "Team Head",
                 "major": "Human Centered Design Engineering",
+                "description": "Bryan loves to collect and built keyboards, and is looking for a job.",
                 "img": [{"src": "../images/officers/So.png"}]
             },
             {
@@ -274,6 +294,7 @@
                 "role": "Inventory",
                 "position": "Officer",
                 "major": "Business Major with an IS concentration",
+                "description": "George is a fanatic of Japanese cuisine and enjoys sleeping, watching TikToks, and playing tennis and basketball.",
                 "img": [{"src": "../images/officers/George.png"}]
             },
             {
@@ -281,7 +302,8 @@
                 "department": "Operations",
                 "role": "Inventory",
                 "position": "Officer",
-                "major": "Food & Nutritional Sciences",
+                "major": "Food & Nutritional Sciences and Public Health",
+                "description": "Jeremy is a professional at assembling and disassembling cars.",
                 "img": [{"src": "../images/officers/Jeremy.png"}]
             }
         ],
