@@ -13,6 +13,15 @@
         "completed": false
     },
     {
+        "title": "Asian Brawl",
+        "date": "42/07/2023",
+        "time": "12:00PM",
+        "location": "IMA, UW",
+        "text": "An internal collaboration event between UW's student associations where each organization competes for a variety of different sports and activities. ",
+        "img": [{"src": "../images/officers/isauw-group.jpg"}],
+        "completed": false
+    },
+    {
         "title": "Keraton",
         "date": "05/07/2023",
         "time": "4:00PM",
