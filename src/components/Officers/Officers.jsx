@@ -74,7 +74,7 @@ function Officers() {
   }
 
   return (
-    <div>
+    <div className="officer-page">
       <div className="navbar-overlay" style={{ position: "relative" }}>
         <img
           className="d-block w-100"
