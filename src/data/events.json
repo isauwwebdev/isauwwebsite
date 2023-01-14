@@ -42,7 +42,7 @@
                 {"src": "../images/events/friendsgiving/2019/5.jpg"},
                 {"src": "../images/events/friendsgiving/2019/6.jpg"},
                 {"src": "../images/events/friendsgiving/2019/7.jpg"}],
-        "completed": false
+        "completed": true
     },
     {
         "title": "Social Night",
