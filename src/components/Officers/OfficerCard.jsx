@@ -16,7 +16,7 @@ function OfficerCard(props) {
 
     return (
         <div>
-            <Card className="officer-card my-3" onClick={handleClick} style={{ width: "230px", height: "400px", color: "white", margin: "auto", "border-radius": "0.3rem", "object-fit": "cover", "border": "none" }}>
+            <Card className="officer-card my-3" onClick={handleClick} style={{ width: "230px", height: "350px", color: "white", margin: "auto", "border-radius": "0.3rem", "object-fit": "cover", "border": "none" }}>
                 <Card.Img className="officer-image" src={officerImg} alt="officer portrait" style={{ width: "230px", height: "300px", "border-radius": "0.3rem", "object-fit": "cover" }} />
                 <Card.Body>
                     <Card.Title className="officer-intro" style={{ "font-size": "calc(0.6vw + 8px)", "font-weight": "600", "color": "black", "text-align": "center" }}>{officerName}</Card.Title>
@@ -36,7 +36,7 @@ function OfficerCard(props) {
                     <Modal.Title>
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body className="px-4">
+                <Modal.Body className="">
                     <Row className="officer-modal-information">
                         <Col xs={12} md={12} lg={4}>
                             <img src={officerImg} style={{ width: "200px", height: "200px", "object-fit": "cover" }}></img>

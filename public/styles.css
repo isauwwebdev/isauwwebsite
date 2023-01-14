@@ -819,6 +819,14 @@ p {
 	margin-bottom: 4rem !important;
 }
 
+.officer-page {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
 .officer-position {
 	font-weight: 700;
 	font-size: calc(8px + 0.75vw);
