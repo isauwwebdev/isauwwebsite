@@ -15,6 +15,7 @@ function OfficerGallery(props) {
                     officerMajor={officer.major}
                     officerImg={officer.img[0].src} 
                     officerPosition={officer.position}
+                    officerDescr={officer.descr}
                     />
             </Col>
         );
