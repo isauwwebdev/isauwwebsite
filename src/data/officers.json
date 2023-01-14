@@ -1,456 +1,544 @@
 [
     {
-        "name": "Primaries",
-        "department": "",
-        "img": [{"src": "../images/officers/Primaries.png"}],
-        "members": [
+        "name": "Tung Alta",
+        "department": "Primaries",
+        "role": "President",
+        "position": "",
+        "major": "Business Administration",
+        "img": [
             {
-                "name": "Tung Alta Kania",
-                "department": "",
-                "role": "President",
-                "position": "Primaries",
-                "major": "Business Major with a Finance, Marketing, and IS concentration",
-                "img": [{"src": "../images/officers/Tata.png"}]
-            },
-            {
-                "name": "Stephen Jireh Lim",
-                "department": "",
-                "role": "Vice President",
-                "position": "Primaries",
-                "major": "Civil Engineering",
-                "img": [{"src": "../images/officers/Stephen.png"}]
-            },
-            {
-                "name": "Jocelyn Novecia",
-                "department": "Finance",
-                "role": "Department Head",
-                "position": "Primaries",
-                "major": "Business Major with a Accounting concentration",
-                "img": [{"src": "../images/officers/Jocelyn.png"}]
-            },
-            {
-                "name": "Anthony Liem",
-                "department": "Operations",
-                "role": "Department Head",
-                "position": "Primaries",
-                "major": "Industrial Engineering",
-                "img": [{"src": "../images/officers/Anthony.png"}]
-            },
-            {
-                "name": "Charisse Valerie Luhur",
-                "department": "Communications & Outreach",
-                "role": "Department Head",
-                "position": "Primaries",
-                "major": "Business Major with a Marketing and IS concentration",
-                "img": [{"src": "../images/officers/Charisse.png"}]
+                "src": "../images/officers/Tata.jpg"
             }
-        ],
-        "description": "We lead ISAUW!"
+        ]
     },
     {
-        "name": "Sponsorship",
+        "name": "Stephen Lim",
+        "department": "Primaries",
+        "role": "Vice President",
+        "position": "",
+        "major": "Civil Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Stephen.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Jocelyn Novecia",
+        "department": "Finance, Primaries",
+        "role": "Department Director",
+        "position": "Finance",
+        "major": "Business Administration",
+        "img": [
+            {
+                "src": "../images/officers/Jocelyn.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Anthony Liem",
+        "department": "Operations, Primaries",
+        "role": "Department Director",
+        "position": "Operations",
+        "major": "Industrial Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Anthony.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Charisse Luhur",
+        "department": "Communications & Outreach, Primaries",
+        "role": "Department Director",
+        "position": "Communications & Outreach",
+        "major": "Business Administration",
+        "img": [
+            {
+                "src": "../images/officers/Charisse.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Bryan Hanam",
         "department": "Finance",
-        "img": [{"src": "../images/officers/Sponsorship.png"}],
-        "members": [
+        "role": "Sponsorship",
+        "position": "Head",
+        "major": "Business Administration",
+        "img": [
             {
-                "name": "Bryan Adijaya Hanam",
-                "department": "Finance",
-                "role": "Sponsorship",
-                "position": "Team Head",
-                "major": "Business Major with a IS and Supply Chain concentration",
-                "img": [{"src": "../images/officers/Hanam.png"}]
-            },
-            {
-                "name": "Clairine Buntoro",
-                "department": "Finance",
-                "role": "Sponsorship",
-                "position": "Officer",
-                "major": "Business Major with a Finance concentration",
-                "img": [{"src": "../images/officers/Clairine.png"}]
-            },
-            {
-                "name": "Jessica Fredlina",
-                "department": "Finance",
-                "role": "Sponsorship",
-                "position": "Officer",
-                "major": "Applied Computational & Mathematical Sciences & Business Major",
-                "img": [{"src": "../images/officers/Jessica.png"}]
-            },
-            {
-                "name": "Michael Giovanni Onggo",
-                "department": "Finance",
-                "role": "Sponsorship",
-                "position": "Officer",
-                "major": "Electrical Engineering",
-                "img": [{"src": "../images/officers/Michael.png"}]
-            },
-            {
-                "name": "Andira Resyita Andala",
-                "department": "Finance",
-                "role": "Sponsorship",
-                "position": "Officer",
-                "major": "Communications",
-                "img": [{"src": "../images/officers/Andira.png"}]
+                "src": "../images/officers/Hanam.jpg"
             }
-        ],
-        "description": "We connect ISAUW with businesses!"
+        ]
     },
     {
-        "name": "Fundraising",
+        "name": "Keiko Laksana",
         "department": "Finance",
-        "img": [{"src": "../images/officers/Fundraising.png"}],
-        "members": [
+        "role": "Fundraising",
+        "position": "Head",
+        "major": "Business Administration",
+        "img": [
             {
-                "name": "Marianne Elizabeth Keiko Laksana",
-                "department": "Finance",
-                "role": "Fundraising",
-                "position": "Team Head",
-                "major": "Business Major with a Finance and Operations & Supply Chain concentration",
-                "img": [{"src": "../images/officers/Keiko.png"}]
-            },
-            {
-                "name": "Kathleen Cahya",
-                "department": "Finance",
-                "role": "Fundraising",
-                "position": "Officer",
-                "major": "Statistics",
-                "img": [{"src": "../images/officers/Kathleen.png"}]
-            },
-            {
-                "name": "Bryan Sanusi",
-                "department": "Finance",
-                "role": "Fundraising",
-                "position": "Officer",
-                "major": "Electrical Engineering",
-                "img": [{"src": "../images/officers/Sanusi.png"}]
+                "src": "../images/officers/Keiko.jpg"
             }
-        ],
-        "description": "We help ISAUW raise money!"
+        ]
     },
     {
-        "name": "Treasury",
+        "name": "William Perdana",
         "department": "Finance",
-        "img": [{"src": "../images/officers/Treasury.png"}],
-        "members": [
+        "role": "Treasury",
+        "position": "Head",
+        "major": "Computer Science",
+        "img": [
             {
-                "name": "William Perdana",
-                "department": "Finance",
-                "role": "Treasury",
-                "position": "Team Head",
-                "major": "Pre-Science with Intended Computer Science Major",
-                "img": [{"src": "../images/officers/WP.png"}]
-            },
-            {
-                "name": "Evangeline Cassey Susanto",
-                "department": "Finance",
-                "role": "Treasury",
-                "position": "Officer",
-                "major": "Business Major with an Accounting and IS concentration",
-                "img": [{"src": "../images/officers/Eva.png"}]
-            },
-            {
-                "name": "Octavio Gunawan",
-                "department": "Finance",
-                "role": "Treasury",
-                "position": "Officer",
-                "major": "Electrical Computer Engineering",
-                "img": [{"src": "../images/officers/Octavio.png"}]
+                "src": "../images/officers/WP.jpg"
             }
-        ],
-        "description": "We handle ISAUW's finances!"
+        ]
     },
     {
-        "name": "Event Organizer",
+        "name": "Janice Dermawan",
         "department": "Operations",
-        "img": [{"src": "../images/officers/EO.png"}],
-        "members": [
+        "role": "Event Organizer",
+        "position": "Head",
+        "major": "Business Administration",
+        "description": "Janice is passionate about tea and loves to travel and explore new places.",
+        "img": [
             {
-                "name": "Janice Dermawan",
-                "department": "Operations",
-                "role": "Event Organizer",
-                "position": "Team Head",
-                "major": "Business Major with an IS concentration",
-                "description": "Janice is passionate about tea and loves to travel and explore new places.",
-                "img": [{"src": "../images/officers/Janice.png"}]
-            },
-            {
-                "name": "Caitlyn Widjaja",
-                "department": "Operations",
-                "role": "Event Organizer",
-                "position": "Officer",
-                "major": "Computer Science",
-                "description": "Caitlyn loves Uniqlo clothing and DPR Ian's music, and enjoys sleeping in her spare time.",
-                "img": [{"src": "../images/officers/Tamaska.png"}]
-            },
-            {
-                "name": "Tamaska Nikola Alimutomo",
-                "department": "Operations",
-                "role": "Event Organizer",
-                "position": "Officer",
-                "major": "Pre-Science with Intended Business Major in Marketing and Supply Chain concentration",
-                "description": "Tamaska is a calm and timid person who enjoys horror movies, cooking, and drinking boba while watching the sunset.",
-                "img": [{"src": "../images/officers/Tamaska.png"}]
-            },
-            {
-                "name": "Enrico Pratama",
-                "department": "Operations",
-                "role": "Event Organizer",
-                "position": "Officer",
-                "major": "Pre-Science with Intended Computer Science Major",
-                "description": "Enrico enjoys going to the gym and playing sports, and is a fan of Marvel movies, particularly Avengers Infinity War.",
-                "img": [{"src": "../images/officers/Enrico.png"}]
-            },
-            {
-                "name": "Charity Joy Njotorahardjo",
-                "department": "Operations",
-                "role": "Event Organizer",
-                "position": "Officer",
-                "major": "Communication",
-                "description": "Joy is a big fan of Friends, loves the clear skies during spring, summer, and fall, and misses Gojek.",
-                "img": [{"src": "../images/officers/Joy.png"}]
+                "src": "../images/officers/Janice.jpg"
             }
-        ],
-        "description": "We plan and organize ISAUW events!"
+        ]
     },
     {
-        "name": "Creativity Management",
+        "name": "Gilbert Noverio",
         "department": "Operations",
-        "img": [{"src": "../images/officers/CM.png"}],
-        "members": [
+        "role": "Creativity Management",
+        "position": "Head",
+        "major": "Civil Engineering",
+        "description": "Gilbert likes to listen to music and is known to be a talkative introvert.",
+        "img": [
             {
-                "name": "Gilbert Noverio",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Team Head",
-                "major": "Civil Engineering",
-                "description": "Gilbert likes to listen to music and is known to be a talkative introvert.",
-                "img": [{"src": "../images/officers/Gilbert.png"}]
-            },
-            {
-                "name": "Chiara Gunawan",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Officer",
-                "major": "Nutrition",
-                "description": "Chiara loves the TV show Modern Family and is a certified dog lover.",
-                "img": [{"src": "../images/officers/Chiara.png"}]
-            },
-            {
-                "name": "Steven Wilbert Heng",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Officer",
-                "major": "Pre-Science with an Intended Business/Economics Major",
-                "description": "Steven enjoys watching How to Get Away With Murder and is good at comebacks.",
-                "img": [{"src": "../images/officers/Steven.png"}]
-            },
-            {
-                "name": "Tiffany Sada",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Officer",
-                "major": "Psychology & Sociology",
-                "description": "Tiffany likes the fall season, playing volleyball, and going to Paint the Town in UVill.",
-                "img": [{"src": "../images/officers/Tiffany.png"}]
-            },
-            {
-                "name": "Catherine Darma",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Officer",
-                "major": "Engineering Undeclared Intended Industrial Engineering",
-                "description": "Catherine loves to watch movies and TV shows related to her Chinese food.",
-                "img": [{"src": "../images/officers/Catherine.png"}]
-            },
-            {
-                "name": "Nadine Setiawan",
-                "department": "Operations",
-                "role": "Creativity Management",
-                "position": "Officer",
-                "major": "Pre-Science with an Intended ACMS Major",
-                "description": "Nadine loves to watch sunsets in Seattle and enjoys the cherry blossoms at the Quad during spring.",
-                "img": [{"src": "../images/officers/Nadine.png"}]
+                "src": "../images/officers/Gilbert.jpg"
             }
-        ],
-        "description": "We create the decorations for ISAUW events!"
+        ]
     },
     {
-        "name": "Inventory",
+        "name": "Bryan So",
         "department": "Operations",
-        "img": [{"src": "../images/officers/Inventory.png"}],
-        "members": [
+        "role": "Inventory",
+        "position": "Head",
+        "major": "Human Centered Design & Engineering",
+        "description": "Bryan loves to collect and built keyboards, and is looking for a job.",
+        "img": [
             {
-                "name": "Bryan So",
-                "department": "Operations",
-                "role": "Inventory",
-                "position": "Team Head",
-                "major": "Human Centered Design Engineering",
-                "description": "Bryan loves to collect and built keyboards, and is looking for a job.",
-                "img": [{"src": "../images/officers/So.png"}]
-            },
-            {
-                "name": "George Soekawan",
-                "department": "Operations",
-                "role": "Inventory",
-                "position": "Officer",
-                "major": "Business Major with an IS concentration",
-                "description": "George is a fanatic of Japanese cuisine and enjoys sleeping, watching TikToks, and playing tennis and basketball.",
-                "img": [{"src": "../images/officers/George.png"}]
-            },
-            {
-                "name": "Jeremy Tan",
-                "department": "Operations",
-                "role": "Inventory",
-                "position": "Officer",
-                "major": "Food & Nutritional Sciences and Public Health",
-                "description": "Jeremy is a professional at assembling and disassembling cars.",
-                "img": [{"src": "../images/officers/Jeremy.png"}]
+                "src": "../images/officers/So.jpg"
             }
-        ],
-        "description": "We handle the supplies ISAUW needs!"
+        ]
     },
     {
-        "name": "Marketing Communications",
-        "department": "Communications and Outreach",
-        "img": [{"src": "../images/officers/Marcom.png"}],
-        "members": [
+        "name": "Gabriel Hendricksen",
+        "department": "Communications & Outreach",
+        "role": "Marketing Communications",
+        "position": "Head",
+        "major": "Mechanical Engineering",
+        "img": [
             {
-                "name": "Gabriel Hendricksen",
-                "department": "Communications and Outreach",
-                "role": "Marketing Communications",
-                "position": "Team Head",
-                "major": "Mechanical Engineering",
-                "img": [{"src": "../images/officers/Gabriel.png"}]
-            },
-            {
-                "name": "Rachel Claudia",
-                "department": "Communications and Outreach",
-                "role": "Marketing Communications",
-                "position": "Officer",
-                "major": "Real Estate",
-                "img": [{"src": "../images/officers/Rachel.png"}]
-            },
-            {
-                "name": "Kezia Proverby",
-                "department": "Communications and Outreach",
-                "role": "Marketing Communications",
-                "position": "Officer",
-                "major": "Communications",
-                "img": [{"src": "../images/officers/Kezia.png"}]
-            },
-            {
-                "name": "Sharon Sutandinata",
-                "department": "Communications and Outreach",
-                "role": "Marketing Communications",
-                "position": "Officer",
-                "major": "Engineering Undeclared",
-                "img": [{"src": "../images/officers/Sharon.png"}]
+                "src": "../images/officers/Gabriel.jpg"
             }
-        ],
-        "description": "We handle ISAUW's social media!"
+        ]
     },
     {
-        "name": "Design",
-        "department": "Communications and Outreach",
-        "img": [{"src": "../images/officers/Design.png"}],
-        "members": [
+        "name": "Alyssa Limit",
+        "department": "Communications & Outreach",
+        "role": "Documentation",
+        "position": "Head",
+        "major": "Psychology",
+        "img": [
             {
-                "name": "Gillian Seokawan",
-                "department": "Communications and Outreach",
-                "role": "Design",
-                "position": "Officer",
-                "major": "Psychology",
-                "img": [{"src": "../images/officers/Gillian.png"}]
-            },
-            {
-                "name": "Cherry Winarto",
-                "department": "Communications and Outreach",
-                "role": "Design",
-                "position": "Officer",
-                "major": "Computer Science & Bioengineering",
-                "img": [{"src": "../images/officers/Cherry.png"}]
+                "src": "../images/officers/Alyssa.jpg"
             }
-        ],
-        "description": "We design ISAUW's content!"
+        ]
     },
     {
-        "name": "Documentation",
-        "department": "Communications and Outreach",
-        "img": [{"src": "../images/officers/Doc.png"}],
-        "members": [
+        "name": "Gillian Seokawan",
+        "department": "Communications & Outreach",
+        "role": "Design",
+        "position": "Head",
+        "major": "Psychology",
+        "img": [
             {
-                "name": "Alyssa Limit",
-                "department": "Communications and Outreach",
-                "role": "Documentation",
-                "position": "Team Head",
-                "major": "Psychology",
-                "img": [{"src": "../images/officers/Alyssa.png"}]
-            },
-            {
-                "name": "Angelita Cecilia",
-                "department": "Communications and Outreach",
-                "role": "Documentation",
-                "position": "Officer",
-                "major": "Communications",
-                "img": [{"src": "../images/officers/Angel.png"}]
-            },
-            {
-                "name": "Eugene Wongso",
-                "department": "Communications and Outreach",
-                "role": "Documentation",
-                "position": "Officer",
-                "major": "Pre-Science with Intended Computer Science Major",
-                "img": [{"src": "../images/officers/Eugene.png"}]
+                "src": "../images/officers/Gillian.jpg"
             }
-        ],
-        "description": "We film and photograph ISAUW memories!"
+        ]
     },
     {
-        "name": "Web Development",
-        "department": "Communications and Outreach",
-        "img": [{"src": "../images/officers/Webdev.png"}],
-        "members": [
+        "name": "Darren Gunadharma",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Head",
+        "major": "Informatics",
+        "img": [
             {
-                "name": "Darren Gunadharma",
-                "department": "Communications and Outreach",
-                "role": "Web Development",
-                "position": "Team Head",
-                "major": "Informatics",
-                "img": [{"src": "../images/officers/Darren.png"}]
-            },
-            {
-                "name": "Daven Giftian Tejalaksana",
-                "department": "Communications and Outreach",
-                "role": "Web Development",
-                "position": "Officer",
-                "major": "Computer Science",
-                "img": [{"src": "../images/officers/Daven.png"}]
-            },
-            {
-                "name": "Audrey Yip",
-                "department": "Communications and Outreach",
-                "role": "Web Development",
-                "position": "Officer",
-                "major": "Computer Engineering",
-                "img": [{"src": "../images/officers/Audrey.png"}]
-            },
-            {
-                "name": "Andrew Darmawan",
-                "department": "Communications and Outreach",
-                "role": "Web Development",
-                "position": "Officer",
-                "major": "Computer Science",
-                "img": [{"src": "../images/officers/Andrew.png"}]
-            },
-            {
-                "name": "Arvin Oentoro",
-                "department": "Communications and Outreach",
-                "role": "Web Development",
-                "position": "Officer",
-                "major": "Computer Science",
-                "img": [{"src": "../images/officers/Arvin.png"}]
+                "src": "../images/officers/Darren.jpg"
             }
-        ],
-        "description": "We develop and maintain ISAUW's website!"
+        ]
+    },
+    {
+        "name": "Clairine Buntoro",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Business Administration",
+        "img": [
+            {
+                "src": "../images/officers/Clairine.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Jessica Fredlina",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "ACMS | Business Administration",
+        "img": [
+            {
+                "src": "../images/officers/Jessica.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Michael Giovanni",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Electrical Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Michael.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Andira Andala",
+        "department": "Finance",
+        "role": "Sponsorship",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [
+            {
+                "src": "../images/officers/Andira.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Kathleen Cahya",
+        "department": "Finance",
+        "role": "Fundraising",
+        "position": "Officer",
+        "major": "Statistics",
+        "img": [
+            {
+                "src": "../images/officers/Kathleen.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Bryan Sanusi",
+        "department": "Finance",
+        "role": "Fundraising",
+        "position": "Officer",
+        "major": "Electrical Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Sanusi.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Evangeline Susanto",
+        "department": "Finance",
+        "role": "Treasury",
+        "position": "Officer",
+        "major": "Business Administration",
+        "img": [
+            {
+                "src": "../images/officers/Eva.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Octavio Gunawan",
+        "department": "Finance",
+        "role": "Treasury",
+        "position": "Officer",
+        "major": "Electrical & Computer Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Octavio.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Caitlyn Widjaja",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Computer Science",
+        "description": "Caitlyn loves Uniqlo clothing and DPR Ian's music, and enjoys sleeping in her spare time.",
+        "img": [
+            {
+                "src": "../images/officers/Caitlyn.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Tamaska Alimutomo",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Business Administration",
+        "description": "Tamaska is a calm and timid person who enjoys horror movies, cooking, and drinking boba while watching the sunset.",
+        "img": [
+            {
+                "src": "../images/officers/Tamaska.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Enrico Pratama",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Computer Science",
+        "description": "Enrico enjoys going to the gym and playing sports, and is a fan of Marvel movies, particularly Avengers Infinity War.",
+        "img": [
+            {
+                "src": "../images/officers/Enrico.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Charity Joy",
+        "department": "Operations",
+        "role": "Event Organizer",
+        "position": "Officer",
+        "major": "Communication",
+        "description": "Joy is a big fan of Friends, loves the clear skies during spring, summer, and fall, and misses Gojek.",
+        "img": [
+            {
+                "src": "../images/officers/Joy.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Chiara Gunawan",
+        "department": "Operations",
+        "role": "Creativity Management",
+        "position": "Officer",
+        "major": "Nutrition",
+        "description": "Chiara loves the TV show Modern Family and is a certified dog lover.",
+        "img": [
+            {
+                "src": "../images/officers/Chiara.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Steven Heng",
+        "department": "Operations",
+        "role": "Creativity Management",
+        "position": "Officer",
+        "major": "Informatics",
+        "description": "Steven enjoys watching How to Get Away With Murder and is good at comebacks.",
+        "img": [
+            {
+                "src": "../images/officers/Steven.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Tiffany Sada",
+        "department": "Operations",
+        "role": "Creativity Management",
+        "position": "Officer",
+        "major": "Psychology | Sociology",
+        "description": "Tiffany likes the fall season, playing volleyball, and going to Paint the Town in UVill.",
+        "img": [
+            {
+                "src": "../images/officers/Tiffany.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Catherine Darma",
+        "department": "Operations",
+        "role": "Creativity Management",
+        "position": "Officer",
+        "major": "Industrial Engineering",
+        "description": "Catherine loves to watch movies and TV shows related to her Chinese food.",
+        "img": [
+            {
+                "src": "../images/officers/Catherine.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Nadine Setiawan",
+        "department": "Operations",
+        "role": "Creativity Management",
+        "position": "Officer",
+        "major": "ACMSs",
+        "description": "Nadine loves to watch sunsets in Seattle and enjoys the cherry blossoms at the Quad during spring.",
+        "img": [
+            {
+                "src": "../images/officers/Nadine.jpg"
+            }
+        ]
+    },
+    {
+        "name": "George Soekawan",
+        "department": "Operations",
+        "role": "Inventory",
+        "position": "Officer",
+        "major": "Business Administration",
+        "description": "George is a fanatic of Japanese cuisine and enjoys sleeping, watching TikToks, and playing tennis and basketball.",
+        "img": [
+            {
+                "src": "../images/officers/George.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Jeremy Tan",
+        "department": "Operations",
+        "role": "Inventory",
+        "position": "Officer",
+        "major": "Nutrition | Public Health",
+        "description": "Jeremy is a professional at assembling and disassembling cars.",
+        "img": [
+            {
+                "src": "../images/officers/Jeremy.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Rachel Claudia",
+        "department": "Communications & Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Real Estate",
+        "img": [
+            {
+                "src": "../images/officers/Rachel.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Kezia Proverby",
+        "department": "Communications & Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [
+            {
+                "src": "../images/officers/Kezia.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Sharon Sutandinata",
+        "department": "Communications & Outreach",
+        "role": "Marketing Communications",
+        "position": "Officer",
+        "major": "Bioengineering",
+        "img": [
+            {
+                "src": "../images/officers/Sharon.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Cherry Winarto",
+        "department": "Communications & Outreach",
+        "role": "Design",
+        "position": "Officer",
+        "major": "Computer Science | Bioengineering",
+        "img": [
+            {
+                "src": "../images/officers/Cherry.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Angelita Cecilia",
+        "department": "Communications & Outreach",
+        "role": "Documentation",
+        "position": "Officer",
+        "major": "Communications",
+        "img": [
+            {
+                "src": "../images/officers/Angel.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Eugene Wongso",
+        "department": "Communications & Outreach",
+        "role": "Documentation",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [
+            {
+                "src": "../images/officers/Eugene.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Daven Tejalaksana",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [
+            {
+                "src": "../images/officers/Daven.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Audrey Yip",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Audrey.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Andrew Darmawan",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [
+            {
+                "src": "../images/officers/Andrew.jpg"
+            }
+        ]
+    },
+    {
+        "name": "Arvin Oentoro",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [
+            {
+                "src": "../images/officers/Arvin.jpg"
+            }
+        ]
     }
 ]
