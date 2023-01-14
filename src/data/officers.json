@@ -9,7 +9,8 @@
             {
                 "src": "../images/officers/Tata.jpg"
             }
-        ]
+        ],
+        "descr": "Meet Alta, ISAUW’s current President! This senior triple majoring in Finance, Information Systems, and Marketing not only loves to sleep, but also has a weird foot fetish. If you’ve ever seen her around before, you’ll come to notice that her favorite color is yellow. She has a yellow phone case, a yellow bucket hat, and a yellow top that’s the exact same shade. Ms. President’s additional skills also include the ability to sleep anywhere, anytime (impressive)!"
     },
     {
         "name": "Stephen Lim",
@@ -21,7 +22,8 @@
             {
                 "src": "../images/officers/Stephen.jpg"
             }
-        ]
+        ],
+        "descr": "Our VP, Stephen, a senior studying Civil Engineering. His main weapon of choice is always his camera, as his photography skills are just beyond this world! His skills doesn’t only lie within taking photos however, he’s perfect in editing videos as well. Our VP is definitely the motivational speaker, as this Indo-food-loving person lives by the quote “Life can only be understood backwards; but it must be lived forwards” by Soren Kierkegaard, we hope that you can spread this kind of love when you eventually visit Lake Como!"
     },
     {
         "name": "Jocelyn Novecia",
@@ -33,7 +35,8 @@
             {
                 "src": "../images/officers/Jocelyn.jpg"
             }
-        ]
+        ],
+        "descr": "Our Director of Finance, Jocelyn! This senior in accounting describes herself as fun, brilliant, and pretty, although we’re not 100% sure on the validity of that claim. You can always recognize her from down the hall since she has a very iconic high pitched voice that you can’t unhear. Another fun fact about her is that she loves horseback riding, with a horse named Horsey."
     },
     {
         "name": "Anthony Liem",
@@ -45,7 +48,8 @@
             {
                 "src": "../images/officers/Anthony.jpg"
             }
-        ]
+        ],
+        "descr": "Our Director of Operations, Anthony, is a senior in Industrial Engineering who happens to be the uncle of ISAUW. Never hesitate to call him if you need help, as he’ll come to the rescue ASAP! We also find it quite funny how he dresses like an ‘om-om’ too. Don’t let his ‘uncle’ facade fool you however; Known for his abilities to host lit parties, Anthony tend to call himself the ‘Director of Party’, a very suiting title indeed."
     },
     {
         "name": "Charisse Luhur",
@@ -57,7 +61,8 @@
             {
                 "src": "../images/officers/Charisse.jpg"
             }
-        ]
+        ],
+        "descr": "Our Director of Communications and Outreach, Charisse! Our junior in Marketing and Information Systems turns out to be an amazing chef! She’s able to prepare meals that you’d expect to see in fine dining restaurants and tastes just as good. Getting to know her more, making her laugh is the funniest thing ever! Her laugh is so iconic that you’ll end up laughing more because of it. "
     },
     {
         "name": "Bryan Hanam",
@@ -69,7 +74,8 @@
             {
                 "src": "../images/officers/Hanam.jpg"
             }
-        ]
+        ],
+        "descr": "Meet the Head of Sponsorship, Hanam! Hanam is one of the three Bryans we have here in ISAUW, though we’ll need to find a replacement soon since he is already a Senior :/. He gets lost in his own world when he plays games even though he's studying both Information Systems and Supply Chain. When in Seattle, he misses his friends and family most. But that doesn’t stop him from wanting to travel the world with his dream destination being Maldives!"
     },
     {
         "name": "Keiko Laksana",
@@ -81,7 +87,8 @@
             {
                 "src": "../images/officers/Keiko.jpg"
             }
-        ]
+        ],
+        "descr": "Firstly, let’s welcome our Head of Fundraising, Keiko! She is a senior majoring in Finance and Supply Chain, who loves to caffeinate herself with iced matcha latte 🍵 every day. I guess it does make her day so MATCHA better 🤓 (not her wallet tho 💸). Another thing that could boost Kei’s mood is when the weather gets sunny and chilly, which makes Seattle during fall her favorite kind of weather to live in. "
     },
     {
         "name": "William Perdana",
@@ -93,7 +100,8 @@
             {
                 "src": "../images/officers/WP.jpg"
             }
-        ]
+        ],
+        "descr": "Introducing you to WP, who is not only our Head of Treasury, but also a well known coffee addict ☕️. The best coffee in the city according to him must be from Coffeeholic and Sip House. Music is also something he is interested in, and he would gladly listen to just music for the rest of his life since he always has music on no matter what he’s doing. Aside from coffee and music, he is also very passionate about games, especially Teamfight Tactics and League of Legends. It’s a stress reliever for him, but sometimes it actually does the opposite 😅. We challenge you to challenge him for a match 🤨!"
     },
     {
         "name": "Janice Dermawan",
@@ -106,7 +114,8 @@
             {
                 "src": "../images/officers/Janice.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Gilbert Noverio",
@@ -119,7 +128,8 @@
             {
                 "src": "../images/officers/Gilbert.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Bryan So",
@@ -132,7 +142,8 @@
             {
                 "src": "../images/officers/So.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Gabriel Hendricksen",
@@ -144,7 +155,8 @@
             {
                 "src": "../images/officers/Gabriel.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Alyssa Limit",
@@ -156,7 +168,8 @@
             {
                 "src": "../images/officers/Alyssa.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Gillian Seokawan",
@@ -168,7 +181,8 @@
             {
                 "src": "../images/officers/Gillian.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Darren Gunadharma",
@@ -180,7 +194,8 @@
             {
                 "src": "../images/officers/Darren.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Clairine Buntoro",
@@ -192,7 +207,8 @@
             {
                 "src": "../images/officers/Clairine.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Jessica Fredlina",
@@ -204,7 +220,8 @@
             {
                 "src": "../images/officers/Jessica.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Michael Giovanni",
@@ -216,7 +233,8 @@
             {
                 "src": "../images/officers/Michael.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Andira Andala",
@@ -228,7 +246,8 @@
             {
                 "src": "../images/officers/Andira.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Kathleen Cahya",
@@ -240,7 +259,8 @@
             {
                 "src": "../images/officers/Kathleen.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Bryan Sanusi",
@@ -252,7 +272,8 @@
             {
                 "src": "../images/officers/Sanusi.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Evangeline Susanto",
@@ -264,7 +285,8 @@
             {
                 "src": "../images/officers/Eva.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Octavio Gunawan",
@@ -276,7 +298,8 @@
             {
                 "src": "../images/officers/Octavio.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Caitlyn Widjaja",
@@ -289,7 +312,8 @@
             {
                 "src": "../images/officers/Caitlyn.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Tamaska Alimutomo",
@@ -302,7 +326,8 @@
             {
                 "src": "../images/officers/Tamaska.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Enrico Pratama",
@@ -315,7 +340,8 @@
             {
                 "src": "../images/officers/Enrico.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Charity Joy",
@@ -328,7 +354,8 @@
             {
                 "src": "../images/officers/Joy.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Chiara Gunawan",
@@ -341,7 +368,8 @@
             {
                 "src": "../images/officers/Chiara.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Steven Heng",
@@ -354,7 +382,8 @@
             {
                 "src": "../images/officers/Steven.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Tiffany Sada",
@@ -367,7 +396,8 @@
             {
                 "src": "../images/officers/Tiffany.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Catherine Darma",
@@ -380,7 +410,8 @@
             {
                 "src": "../images/officers/Catherine.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Nadine Setiawan",
@@ -393,7 +424,8 @@
             {
                 "src": "../images/officers/Nadine.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "George Soekawan",
@@ -406,7 +438,8 @@
             {
                 "src": "../images/officers/George.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Jeremy Tan",
@@ -419,7 +452,8 @@
             {
                 "src": "../images/officers/Jeremy.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Rachel Claudia",
@@ -431,7 +465,8 @@
             {
                 "src": "../images/officers/Rachel.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Kezia Proverby",
@@ -443,7 +478,8 @@
             {
                 "src": "../images/officers/Kezia.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Sharon Sutandinata",
@@ -455,7 +491,8 @@
             {
                 "src": "../images/officers/Sharon.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Cherry Winarto",
@@ -467,7 +504,8 @@
             {
                 "src": "../images/officers/Cherry.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Angelita Cecilia",
@@ -479,7 +517,8 @@
             {
                 "src": "../images/officers/Angel.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Eugene Wongso",
@@ -491,7 +530,8 @@
             {
                 "src": "../images/officers/Eugene.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Daven Tejalaksana",
@@ -503,7 +543,8 @@
             {
                 "src": "../images/officers/Daven.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Audrey Yip",
@@ -515,7 +556,8 @@
             {
                 "src": "../images/officers/Audrey.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Andrew Darmawan",
@@ -527,7 +569,8 @@
             {
                 "src": "../images/officers/Andrew.jpg"
             }
-        ]
+        ],
+        "descr": ""
     },
     {
         "name": "Arvin Oentoro",
@@ -539,6 +582,7 @@
             {
                 "src": "../images/officers/Arvin.jpg"
             }
-        ]
+        ],
+        "descr": ""
     }
 ]
