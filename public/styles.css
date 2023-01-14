@@ -2108,7 +2108,7 @@ select:invalid {
 }
 
 .officer-card {
-	transition: transform .2s;
+	transition: transform .3s;
 }
 
 .officer-card:hover {
@@ -2125,3 +2125,36 @@ select:invalid {
 	overflow-y: scroll;
 	padding-right: 0 !important;
 }
+
+.officer-selected {
+	background-color: rgba(129, 27, 20, 1.0);
+	color: white;
+}
+
+.officer-selected:hover {
+	color: white;
+}
+
+.officer-button {
+	border-radius: 1.5rem !important;
+	text-transform: capitalize !important;
+	-webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.officer-button:focus {
+	outline: none !important;
+}
+
+.officer-button:hover {
+	background-color: rgba(129, 27, 20, 1.0);
+	transition: transform .6s;
+	color: white;
+}
+
+
