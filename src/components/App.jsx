@@ -120,7 +120,7 @@ function App() {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
                   <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Home</NavLink>
-                  <NavLink to="/officers" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Team</NavLink>
+                  <NavLink to="/team" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Team</NavLink>
                   <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Events</NavLink>
                   {/*<NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>*/}
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
