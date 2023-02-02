@@ -22,7 +22,7 @@ function OfficerGallery(props) {
     })
 
     return (
-        <Row>
+        <Row className="mx-2">
             {officerCards}
         </Row>
     )
