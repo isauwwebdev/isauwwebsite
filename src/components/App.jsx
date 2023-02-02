@@ -9,6 +9,7 @@ import Events from './Events/Events';
 import Shop from './Shop/Shop';
 import About from './About/About';
 import Keraton from './Keraton/Keraton';
+import Officers from './Officers/Officers';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
 import SocialLinks from './SocialLinks';
@@ -119,6 +120,7 @@ function App() {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
                   <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Home</NavLink>
+                  <NavLink to="/officers" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Team</NavLink>
                   <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Events</NavLink>
                   {/*<NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>*/}
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
@@ -137,6 +139,7 @@ function App() {
           {/* <Route path="/about" component={About} /> */}
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
+          <Route path="/team" component={Officers} />
           {/* <Route path="/apply" component={Apply} /> */}
         </Switch>
 
