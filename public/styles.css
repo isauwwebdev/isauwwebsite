@@ -1136,6 +1136,11 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	.officer-modal-information {
 		flex-direction: column;
 	}
+
+	.officer-modal-profile {
+		align-items: center;
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 549px) {
@@ -2165,5 +2170,3 @@ select:invalid {
 	transition: transform .6s;
 	color: white;
 }
-
-
