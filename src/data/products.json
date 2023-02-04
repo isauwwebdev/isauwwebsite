@@ -34,7 +34,35 @@
         "id": 4,
         "name": "ISAUW Card",
         "desc": "permanent collection",
+        "price": 10,
+        "img": "../images/shops/isauwcard_2023.png"
+    },
+    {
+        "id": 5,
+        "name": "ISAUW 206 green hat",
+        "desc": "22-23 collection",
         "price": 8,
-        "img": "../images/shops/isauwcard_white.png"
+        "img": "../images/shops/green_cap.png"
+    },
+    {
+        "id": 6,
+        "name": "ISAUW 206 cream hat",
+        "desc": "22-23 collection",
+        "price": 8,
+        "img": "../images/shops/cream_cap.png"
+    },
+    {
+        "id": 7,
+        "name": "ISAUW 206 black hat",
+        "desc": "22-23 collection",
+        "price": 8,
+        "img": "../images/shops/black_cap.png"
+    },
+    {
+        "id": 8,
+        "name": "ISAUW Crewneck",
+        "desc": "22-23 collection",
+        "price": 20,
+        "img": "../images/shops/crewneck_2023.png"
     }
 ]
