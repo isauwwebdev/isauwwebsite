@@ -185,19 +185,6 @@
         "descr": "Gillian : Meet our amazing head of design, Gillian (She goes by Gill)! She is a junior studying psychology and intending to minor in Informatics. Gill is very artsy 👩‍🎨 that the activities that makes her lose track of time are anything that practices her creative muscles like dancing 💃 and designing! 👩‍💻 Other than that, binge watching on her free time is something she likes to do. She finished the show How to Get Away with Murder and Black Clover in just a week! "
     },
     {
-        "name": "Darren Gunadharma",
-        "department": "Communications & Outreach",
-        "role": "Web Development",
-        "position": "Head",
-        "major": "Informatics",
-        "img": [
-            {
-                "src": "../images/officers/Darren.jpg"
-            }
-        ],
-        "descr": "Welcoming this year’s head of Webdev, Darren! He is currently studying Informatics. Darren is ISAUW’s ray of sunshine who favors an activity that would help him release stress, which is spending time with friends. “I would rather regret the things i have done than regret the things I haven’t done” is the quote he lives by, unsurprising since he happen to try everything and anything you can think of. With that said, we don't think he's particularly sus, unlike some of his friends (if you know who we're talking about LOL)."
-    },
-    {
         "name": "Clairine Buntoro",
         "department": "Finance",
         "role": "Sponsorship",
@@ -534,30 +521,17 @@
         "descr": "Eugene is a freshmen currently in pre-science intending to take Computer Science. The one thing he looks forward to most in the day is going back to sleep after a long day, which we think is very relatable. The man sure do loves his bakmi, since he can’t really get it here in Seattle, especially not during quarantine times, when all he did was binge TV series nonstop!"
     },
     {
-        "name": "Daven Tejalaksana",
+        "name": "Darren Gunadharma",
         "department": "Communications & Outreach",
         "role": "Web Development",
-        "position": "Officer",
-        "major": "Computer Science",
+        "position": "Head",
+        "major": "Informatics",
         "img": [
             {
-                "src": "../images/officers/Daven.jpg"
+                "src": "../images/officers/Darren.jpg"
             }
         ],
-        "descr": "Up next is Daven! he is a junior/seniorISH standing in computer science! One unique thing about him is he is ambidextrous in a unique way. He writes and plays basketball with his right hand but played ping pong, tennis, and badminton with his left hand! Dav’s favorite weather to live in is summer, especially being able to enjoy the warm sun and visit beaches and the mountains, which is why Maldives and Miami are on top of his bucket list of places to travel to! "
-    },
-    {
-        "name": "Audrey Yip",
-        "department": "Communications & Outreach",
-        "role": "Web Development",
-        "position": "Officer",
-        "major": "Computer Engineering",
-        "img": [
-            {
-                "src": "../images/officers/Audrey.jpg"
-            }
-        ],
-        "descr": "Introducing the only girl on the team, Audrey. She is a senior studying Computer Engineering. Not only does this girl have the brains, but she got the talent too. Audrey loves hiking to absorb all the pretty greeneries around Washington (she absolutely loves Sunrise Loop and Kendall Katwalk). With all those natures in hiking, her absolute dream vacation would be to visit Africa! From the wet n’ wild of Victoria Falls all the way to the hustle and bustle of Cape Town in South Africa. She adores the art of nature, but so does she towards the art of music! Her favorite artist, who was in Keraton, would be Lullaboy!  "
+        "descr": "Welcoming this year’s head of Webdev, Darren! He is currently studying Informatics. Darren is ISAUW’s ray of sunshine who favors an activity that would help him release stress, which is spending time with friends. “I would rather regret the things i have done than regret the things I haven’t done” is the quote he lives by, unsurprising since he happen to try everything and anything you can think of. With that said, we don't think he's particularly sus, unlike some of his friends (if you know who we're talking about LOL)."
     },
     {
         "name": "Andrew Darmawan",
@@ -584,5 +558,31 @@
             }
         ],
         "descr": "Lastly, we have Arvin, he is currently a sophomore studying computer science. What is the number one on his bucket list for places to travel? Rick’s secret toilet in Rick and Morty S2 Ep4 (iykyk) 🤫🚽 He is also the life of the party, that “Rage Cage?? WHERE?” is how he described himself in three words. A quote that he lives by is “life isn’t about waiting for the storm to pass. It’s learning about how to dance in the rain.”"
+    },
+    {
+        "name": "Audrey Yip",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Engineering",
+        "img": [
+            {
+                "src": "../images/officers/Audrey.jpg"
+            }
+        ],
+        "descr": "Introducing the only girl on the team, Audrey. She is a senior studying Computer Engineering. Not only does this girl have the brains, but she got the talent too. Audrey loves hiking to absorb all the pretty greeneries around Washington (she absolutely loves Sunrise Loop and Kendall Katwalk). With all those natures in hiking, her absolute dream vacation would be to visit Africa! From the wet n’ wild of Victoria Falls all the way to the hustle and bustle of Cape Town in South Africa. She adores the art of nature, but so does she towards the art of music! Her favorite artist, who was in Keraton, would be Lullaboy!  "
+    },
+    {
+        "name": "Daven Tejalaksana",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Officer",
+        "major": "Computer Science",
+        "img": [
+            {
+                "src": "../images/officers/Daven.jpg"
+            }
+        ],
+        "descr": "Up next is Daven! he is a junior/seniorISH standing in computer science! One unique thing about him is he is ambidextrous in a unique way. He writes and plays basketball with his right hand but played ping pong, tennis, and badminton with his left hand! Dav’s favorite weather to live in is summer, especially being able to enjoy the warm sun and visit beaches and the mountains, which is why Maldives and Miami are on top of his bucket list of places to travel to! "
     }
 ]
