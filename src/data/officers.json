@@ -172,6 +172,19 @@
         "descr": "Meet the head of Documentation, Alyssa. This junior in Psychology is so addicted to Snowy Village that she claims she can live off it, even to a point where she ate it twice in a day. This newly-licensed 20 year-old is so confident in driving, that she calls herself Max Verstappen in hopes to run some of her friends off the road. "
     },
     {
+        "name": "Darren Gunadharma",
+        "department": "Communications & Outreach",
+        "role": "Web Development",
+        "position": "Head",
+        "major": "Informatics",
+        "img": [
+            {
+                "src": "../images/officers/Darren.jpg"
+            }
+        ],
+        "descr": "Welcoming this year’s head of Webdev, Darren! He is currently studying Informatics. Darren is ISAUW’s ray of sunshine who favors an activity that would help him release stress, which is spending time with friends. “I would rather regret the things i have done than regret the things I haven’t done” is the quote he lives by, unsurprising since he happen to try everything and anything you can think of. With that said, we don't think he's particularly sus, unlike some of his friends (if you know who we're talking about LOL)."
+    },
+    {
         "name": "Gillian Seokawan",
         "department": "Communications & Outreach",
         "role": "Design",
@@ -519,19 +532,6 @@
             }
         ],
         "descr": "Eugene is a freshmen currently in pre-science intending to take Computer Science. The one thing he looks forward to most in the day is going back to sleep after a long day, which we think is very relatable. The man sure do loves his bakmi, since he can’t really get it here in Seattle, especially not during quarantine times, when all he did was binge TV series nonstop!"
-    },
-    {
-        "name": "Darren Gunadharma",
-        "department": "Communications & Outreach",
-        "role": "Web Development",
-        "position": "Head",
-        "major": "Informatics",
-        "img": [
-            {
-                "src": "../images/officers/Darren.jpg"
-            }
-        ],
-        "descr": "Welcoming this year’s head of Webdev, Darren! He is currently studying Informatics. Darren is ISAUW’s ray of sunshine who favors an activity that would help him release stress, which is spending time with friends. “I would rather regret the things i have done than regret the things I haven’t done” is the quote he lives by, unsurprising since he happen to try everything and anything you can think of. With that said, we don't think he's particularly sus, unlike some of his friends (if you know who we're talking about LOL)."
     },
     {
         "name": "Andrew Darmawan",
