@@ -1,0 +1,64 @@
+[{
+    "url": "seathrough",
+    "imgs": [p1, p2, p3],
+    "cover": p1,
+    "text": "this is my first project and i'm so proud of it because it's so awesome and amazing.",
+    "price": 10
+  },
+  {
+    "url": "sea-race",
+    "imgs": [p4, p5,p6],
+    "cover": p4,
+    "text": "now this one will blow your mind even more than the past one. i spent a lot of time on it and used a new medium.",
+    "price": 10
+  },
+  {
+    "url": "seattle-101",
+    "imgs": [p7, p8, p9],
+    "cover": p7,
+    "text": "forget what i said about project 2, i broke new ground on this one. the world has never seen anything like it before.",
+    "price": 10
+  },
+  {
+    "url": "winter-ball",
+    "imgs": [p10, p11, p12],
+    "cover": p10,
+    "text": "this project could be the description of mind blowing. i spent day and night making it the best it can be.",
+    "price": 10
+  },
+  {
+    "url": "friendsgiving",
+    "imgs": [p13,p14,p15],
+    "cover": p13,
+    "text": "this is from a rough patch in my life after my girlfriend dumped me and i sought meaning in my surroundings. the architecture of the world relaly spoke to me.",
+    "price": 10
+  },
+  {
+    "url": "keraton",
+    "imgs": [p16, p17, p18],
+    "cover": p16,
+    "text": "ha i don't have depression anymore i'm completely cured. sunshine and lots of uppers.",
+    "price": 10
+  },
+  {
+    "url": "boba-tour",
+    "imgs": [p19, p20, p21],
+    "cover": p19,
+    "text": "hello is this thing on?",
+    "price": 10
+  },
+  {
+    "url": "social-night",
+    "imgs": [p22, p23, p24],
+    "cover": p22,
+    "text": "i hate myself.",
+    "price": 10
+  },
+  {
+    "url": "asian-brawl",
+    "imgs": [p22, p23, p24],
+    "cover": p22,
+    "text": "i hate myself.",
+    "price": 10
+  }
+];
