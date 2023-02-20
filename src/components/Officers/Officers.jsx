@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import OfficerGallery from "./OfficerGallery";
 import officers from '../../data/officers.json';
 import Row from 'react-bootstrap/Row';
+import Container from 'react-bootstrap/Container';
 
 function Officers() {
   const [userSelection, setUserSelection] = useState("");
@@ -89,33 +90,33 @@ function Officers() {
         </Carousel.Caption>
       </div>
       <Row className="justify-content-center mt-5">
-        <button className={`btn officer-button m-2 ${allIsClicked ? "officer-selected" : "unselected" }`}
+        <button className={`btn officer-button m-2 ${allIsClicked ? "officer-selected" : "unselected"}`}
           onClick={handleClick}
           style={{ width: "fit-content", borderRight: "1px solid rgba(0,0,0,.125)", "font-size": "calc(10px + 0.4vw)", "white-space": "nowrap" }}
           value="All">
           All
         </button>
-        <button className={`btn officer-button m-2 ${primariesIsClicked ? "officer-selected" : "unselected" }`}
+        <button className={`btn officer-button m-2 ${primariesIsClicked ? "officer-selected" : "unselected"}`}
           onClick={handleClick}
           style={{ width: "fit-content", borderRight: "1px solid rgba(0,0,0,.125)", "font-size": "calc(10px + 0.4vw)", "white-space": "nowrap" }}
           value="Primaries">
           Primaries
         </button>
-        <button className={`btn officer-button m-2 ${FINIsClicked ? "officer-selected" : "unselected" }`}
+        <button className={`btn officer-button m-2 ${FINIsClicked ? "officer-selected" : "unselected"}`}
           onClick={handleClick}
           style={{ width: "fit-content", borderRight: "1px solid rgba(0,0,0,.125)", "font-size": "calc(10px + 0.4vw)", "white-space": "nowrap" }}
           value="Finance">
           Finance
         </button>
         <button
-          className={`btn officer-button m-2 ${OPSIsClicked ? "officer-selected" : "unselected" }`}
+          className={`btn officer-button m-2 ${OPSIsClicked ? "officer-selected" : "unselected"}`}
           onClick={handleClick}
           style={{ width: "fit-content", borderRight: "1px solid rgba(0,0,0,.125)", "font-size": "calc(10px + 0.4vw)", "white-space": "nowrap" }}
           value="Operations">
           Operations
         </button>
         <button
-          className={`btn officer-button m-2 ${COIsClicked ? "officer-selected" : "unselected" }`}
+          className={`btn officer-button m-2 ${COIsClicked ? "officer-selected" : "unselected"}`}
           onClick={handleClick}
           style={{ width: "fit-content", borderRight: "1px solid rgba(0,0,0,.125)", "font-size": "calc(10px + 0.4vw)", "white-space": "nowrap" }}
           value="Communications & Outreach">
@@ -123,7 +124,9 @@ function Officers() {
         </button>
       </Row>
       <div className="my-4">
-        <OfficerGallery officerData={filteredOfficers} />
+        <Container>
+          <OfficerGallery officerData={filteredOfficers} />
+        </Container>
       </div>
 
     </div>
