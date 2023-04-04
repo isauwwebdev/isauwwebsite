@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 
 function KeratonAbout() {
   return (
-    <div style={{backgroundColor: "#031B28"}}>
+    <div style={{ }}>
       <Container className="keraton-about" style={{paddingTop: "7rem", paddingBottom: "7rem"}}>
         <Row>
           <Col xs={6} sm={6} style={{margin: "auto", padding: "0"}}>

@@ -56,7 +56,7 @@ function KeratonVendors() {
   };
 
   return (
-    <div className="keraton-performers py-5" style={{backgroundColor: "#031B28", color: "white"}}>
+    <div className="keraton-performers py-5" style={{ color: "white"}}>
       <Container>
         <h1 className="py-3 keraton-section-header">Vendors</h1>
         <Row className="my-5 keraton-vendors-row">

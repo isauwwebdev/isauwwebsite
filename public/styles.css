@@ -317,7 +317,7 @@ p {
 
 	.keraton-performer-slider .slick-current .performer-name,
 	.keraton-student-performer .slick-current .student-performer-name {
-		color: rgb(247 213 161);
+		color: #c1a361;
 	}
 }
 
@@ -1137,9 +1137,17 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		flex-direction: column;
 	}
 
-	.officer-modal-profile {
+	.officer-name-title {
 		align-items: center;
 		text-align: center;
+	}
+
+	.officer-descr {
+		padding: 1rem;
+	}
+
+	.modal-body {
+		padding: 2rem;
 	}
 }
 
@@ -1412,7 +1420,7 @@ a[type='button'] {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
-	background-color: "#031B28";
+	background-image: url("./images/keraton/batik_background2.png");
 }
 
 .keraton-header {
@@ -1446,7 +1454,6 @@ a[type='button'] {
 		top: 0;
 		bottom: 70%;
 		content: "";
-		background: linear-gradient(0deg, transparent, #031B28);
 		z-index: 99;
 	}
 
@@ -1457,7 +1464,6 @@ a[type='button'] {
 		top: 70%;
 		bottom: 0;
 		content: "";
-		background: linear-gradient(0deg, #031B28, transparent);
 		z-index: 99;
 	}
 }
@@ -1503,8 +1509,8 @@ a[type='button'] {
 
 .student-performer-img img.framed {
 	box-shadow:
-		-50px -50px 0 -45px rgb(247 213 161),
-		50px 50px 0 -45px rgb(247 213 161);
+		-50px -50px 0 -45px #c1a361,
+		50px 50px 0 -45px #c1a361;
 }
 
 .slider-performer-img,
@@ -1520,8 +1526,8 @@ a[type='button'] {
 	position: absolute;
 	top: -10px;
 	right: -10px;
-	border-top: 10px solid rgb(247 213 161);
-	border-right: 10px solid rgb(247 213 161);
+	border-top: 10px solid #c1a361;
+	border-right: 10px solid #c1a361;
 }
 
 .slider-performer-img:before {
@@ -1532,8 +1538,8 @@ a[type='button'] {
 	position: absolute;
 	bottom: -10px;
 	left: -10px;
-	border-bottom: 10px solid rgb(247 213 161);
-	border-left: 10px solid rgb(247 213 161);
+	border-bottom: 10px solid #c1a361;
+	border-left: 10px solid #c1a361;
 }
 
 .slider-performer-row {
@@ -1541,7 +1547,7 @@ a[type='button'] {
 }
 
 .slick-vertical .slick-current {
-	color: rgb(247 213 161);
+	color: #c1a361;
 }
 
 .performer-name {
@@ -1597,8 +1603,7 @@ a[type='button'] {
 	letter-spacing: 5px;
 	padding-top: 3rem;
 	font-size: calc(40px + 2.0vw);
-	color: rgb(247 213 161);
-	background-color: #031B28;
+	color: #c1a361;
 	font-family: 'palm-canyon';
 }
 
@@ -1607,8 +1612,7 @@ a[type='button'] {
 	letter-spacing: 5px;
 	padding-top: 3rem;
 	font-size: calc(40px + 1.6vw);
-	color: rgb(247 213 161);
-	background-color: #031B28;
+	color: #c1a361;
 	font-family: 'palm-canyon';
 }
 
@@ -1779,7 +1783,7 @@ select:invalid {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 2px solid rgb(247 213 161);
+	border: 2px solid #c1a361;
 	position: absolute;
 	top: calc(-1 * (8px + 1.2vw));
 	right: calc(-1 * (8px + 1.2vw));
@@ -1831,7 +1835,7 @@ select:invalid {
 /* KERATON FAQ */
 .keraton-faq,
 .keraton-faq-item {
-	background-color: #031B28;
+	
 }
 
 .keraton-faq-item {
@@ -1855,7 +1859,6 @@ select:invalid {
 	font-size: calc(13px + 0.35vw);
 	font-family: "Open Sans";
 	font-weight: 600;
-	background-color: #031B28;
 	border-top: none;
 }
 
@@ -1868,7 +1871,7 @@ select:invalid {
 }
 
 .keraton-faq-item-header .accordion-button:not(.collapsed) {
-	color: rgb(247 213 161)
+	color: #c1a361
 }
 
 .keraton-faq-item .accordion-button:after {
@@ -1926,10 +1929,10 @@ select:invalid {
 	text-align: center;
 	font-size: calc(32px + 2.4vw);
 	font-family: 'signatura_monoline_script';
-	color: rgb(247 213 161);
+	color: #c1a361;
 	/* DELETE THIS LINE WHEN REVERTING */
 	/* -webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 1px rgb(247 213 161); */
+	-webkit-text-stroke: 1px #c1a361; */
 	opacity: 1;
 	transition: 0.5s ease-in-out;
 	padding: 12px;
@@ -1952,12 +1955,11 @@ select:invalid {
 }
 
 /* .keraton-games-container:hover .keraton-games-text {
-	-webkit-text-fill-color: rgb(247 213 161);
+	-webkit-text-fill-color: #c1a361;
 } */
 .keraton-games-overlay-top {
 	top: 0;
 	height: 30.88%;
-	background: linear-gradient(0deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -1967,7 +1969,6 @@ select:invalid {
 .keraton-games-overlay-btm {
 	bottom: 0;
 	height: 30.88%;
-	background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -2081,7 +2082,7 @@ select:invalid {
 	position: absolute;
 	transform: translate(calc(8px + 1.2vw), calc(12px + 1.2vw));
 	border-radius: 221px 221px 0 0;
-	border: 1px solid rgb(247 213 161);
+	border: 1px solid #c1a361;
 }
 
 .keraton-map {
@@ -2152,12 +2153,12 @@ select:invalid {
 	border-radius: 1.5rem !important;
 	text-transform: capitalize !important;
 	-webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 6px 0 rgb(0 0 0 / 8%);
 }
 
@@ -2169,4 +2170,13 @@ select:invalid {
 	background-color: rgba(129, 27, 20, 1.0);
 	transition: transform .6s;
 	color: white;
+}
+
+.modal-80w {
+	width: 80vw;
+	max-width: 80vw;
+}
+
+.modal-dialog {
+	margin: auto;
 }
