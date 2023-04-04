@@ -1,50 +1,50 @@
 [
     {
         "id": 1,
-        "name": "Dhruv",
-        "time": "7:50",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
+        "name": "Fiji Blue",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/fiji_blue.jpg",
+        "insta": "https://www.instagram.com/fijiblue/",
         "type": "Vocalist"
     },
     {
         "id": 2,
-        "name": "Xavier Weeks",
-        "time": "4:50",
-        "img": "../../images/keraton/performers/xavier-weeks.jpg",
-        "insta": "https://www.instagram.com/xavierweeks/",
+        "name": "mxmtoon",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/mxmtoon.jpeg",
+        "insta": "https://www.instagram.com/mxmtoon/",
         "type": "Vocalist"
     },
     {
         "id": 3,
-        "name": "Lullaboy",
-        "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
+        "name": "Grent Perez",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/grent_perez.jpg",
+        "insta": "https://www.instagram.com/grentperez/",
         "type": "Vocalist"
     },
     {
         "id": 4,
-        "name": "Dhruv",
-        "time": "7:50",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
+        "name": "Public Library Commute",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/plc.jpg",
+        "insta": "https://www.instagram.com/publiclibrarycommute/",
         "type": "Vocalist"
     },
     {
         "id": 5,
-        "name": "Xavier Weeks",
-        "time": "4:50",
-        "img": "../../images/keraton/performers/xavier-weeks.jpg",
-        "insta": "https://www.instagram.com/xavierweeks/",
-        "type": "Vocalist"
+        "name": "HHSA",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/hhsa.jpg",
+        "insta": "https://www.instagram.com/hhsasessions/",
+        "type": "Dance Group"
     },
     {
         "id": 6,
-        "name": "Lullaboy",
-        "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
-        "type": "Vocalist"
+        "name": "UW Undivided",
+        "time": "00:00",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "insta": "https://www.instagram.com/uwundivided/",
+        "type": "Dance Group"
     }
 ]
