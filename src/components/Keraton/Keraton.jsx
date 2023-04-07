@@ -7,7 +7,7 @@ import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
 
-function Keraton() {
+/*function Keraton() {
   return (
     <div className="keraton">
       <KeratonVideo></KeratonVideo>
@@ -17,6 +17,13 @@ function Keraton() {
       <KeratonGames></KeratonGames>
       <KeratonFAQ></KeratonFAQ>
       <KeratonSponsors></KeratonSponsors>
+    </div>
+  );
+}*/
+function Keraton() {
+  return (
+    <div className="keraton">
+      <KeratonVideo></KeratonVideo>
     </div>
   );
 }
