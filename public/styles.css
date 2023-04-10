@@ -1620,6 +1620,7 @@ a[type='button'] {
 }
 
 .keraton-countdown-card {
+	font-family: 'signatura_monoline_script', cursive;
 	text-align: center;
 	align-items: center;
 	display: flex;
