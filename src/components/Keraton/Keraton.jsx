@@ -11,12 +11,12 @@ function Keraton() {
   return (
     <div className="keraton">
       <KeratonVideo></KeratonVideo>
-      <KeratonAbout></KeratonAbout>
+      {/* <KeratonAbout></KeratonAbout>
       <KeratonPerformers></KeratonPerformers>
       <KeratonVendors></KeratonVendors>
       <KeratonGames></KeratonGames>
       <KeratonFAQ></KeratonFAQ>
-      <KeratonSponsors></KeratonSponsors>
+      <KeratonSponsors></KeratonSponsors> */}
     </div>
   );
 }
