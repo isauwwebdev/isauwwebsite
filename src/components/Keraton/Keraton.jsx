@@ -1,5 +1,6 @@
 import React from 'react';
 import KeratonVideo from './KeratonVideo';
+import KeratonHeader from './KeratonHeader';
 import KeratonAbout from './KeratonAbout';
 import KeratonPerformers from './KeratonPerformers';
 import KeratonGames from './KeratonGames';
@@ -10,7 +11,8 @@ import KeratonSponsors from './KeratonSponsors';
 function Keraton() {
   return (
     <div className="keraton">
-      <KeratonVideo></KeratonVideo>
+      {/* <KeratonVideo></KeratonVideo> */}
+      <KeratonHeader></KeratonHeader>
       <KeratonAbout></KeratonAbout>
       <KeratonPerformers></KeratonPerformers>
       <KeratonVendors></KeratonVendors>
