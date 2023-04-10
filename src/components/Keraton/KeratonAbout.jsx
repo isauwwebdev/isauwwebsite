@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 
+import KeratonCountdown from './KeratonCountdown';
+
 function KeratonAbout() {
   return (
     <div style={{ }}>
@@ -16,8 +18,8 @@ function KeratonAbout() {
               </p>
           </Col>
           <Col xs={6} sm={5} style={{display: "flex", alignItems: "center", padding: "0"}}>
-            <div className='testing'>
-              <video playsinline="playsinline" autoplay="autoplay" muted loop className="keraton-about-media" src="../images/keraton/about/pak-raden-trimmed.mp4"></video>
+            <div className="keraton-countdown-container">
+              <KeratonCountdown keratonDate={new Date("2023-05-06")}></KeratonCountdown>
             </div>
           </Col>
         </Row>
