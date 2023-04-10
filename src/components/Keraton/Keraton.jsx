@@ -22,6 +22,13 @@ function Keraton() {
     </div>
   );
 }
+function Keraton() {
+  return (
+    <div className="keraton">
+      <KeratonVideo></KeratonVideo>
+    </div>
+  );
+}
 
 // function ScrollToTop() {
 //     const [backToTop, setBacckToTop] = useState(false);
