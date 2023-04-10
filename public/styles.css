@@ -365,7 +365,7 @@ p {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.6);
 	z-index: 0;
 }
 
@@ -1417,7 +1417,7 @@ a[type='button'] {
 
 .keraton-header {
 	font-family: 'Monoton', cursive;
-	font-size: calc(3.2vw + 14px);
+	font-size: calc(3.2vw + 22px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: calc(12px + 1.2vw);
 	margin-right: calc(-1 * (12px + 1.2vw));
@@ -1428,7 +1428,7 @@ a[type='button'] {
 	font-size: calc(3.2vw + 24px);
 	font-family: 'signatura_monoline_script', cursive;
 	word-spacing: calc(0.4vw + 6px);
-	letter-spacing: calc(0.4vw + 2px);
+	letter-spacing: calc(1.2vw + 2px);
 	font-weight: 600;
 }
 
@@ -1636,15 +1636,15 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(10px + 1.2vw);
+	font-size: calc(16px + 1.5vw);
 	font-weight: 900;
 	color: white;
 	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
-	font-size: calc(6px + 0.8vw);
-	font-weight: 300;
+	font-size: calc(10px + 1.1vw);
+	font-weight: 500;
 	color: white;
 }
 
