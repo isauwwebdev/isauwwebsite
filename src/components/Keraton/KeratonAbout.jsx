@@ -18,7 +18,7 @@ function KeratonAbout() {
               </p>
           </Col>
           <Col xs={6} sm={5} style={{display: "flex", alignItems: "center", padding: "0"}}>
-            <div className="keraton-countdown-container">
+            <div className="keraton-countdown-container mx-auto mt-5">
               <KeratonCountdown keratonDate={new Date("2023-05-06")}></KeratonCountdown>
             </div>
           </Col>
