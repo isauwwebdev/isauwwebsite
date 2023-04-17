@@ -1620,30 +1620,35 @@ a[type='button'] {
 }
 
 .keraton-countdown-card {
-	font-family: 'signatura_monoline_script', cursive;
+	font-family: 'Stencil Std', 'fantasy';
 	text-align: center;
 	align-items: center;
 	display: flex;
 	border: none;
 	border-radius: 10px;
 	background: transparent;
-	margin: 0;
 }
 
 .countdown-row {
 	text-align: center;
 	align-items: center;
+	width: auto;
 }
 
 .countdown-title {
-	font-size: calc(16px + 1.5vw);
-	font-weight: 900;
+	font-family: 'Roboto Condensed';
+	font-stretch: condensed;
+	font-size: calc(15px + 1.5vw);
+	font-weight: 750;
 	color: white;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 }
 
 .countdown-sub-title {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-stretch: condensed;
 	font-size: calc(10px + 1.1vw);
+	letter-spacing: 1.5px;
 	font-weight: 500;
 	color: white;
 }
