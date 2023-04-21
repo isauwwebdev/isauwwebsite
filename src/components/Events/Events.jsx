@@ -63,7 +63,7 @@ function Events() {
         <div className="jumbotron">
           <div>
             <h1 className="jumbotron-title display-4">ISAUW Card</h1>
-            <p className="jumbotron-desc">Discounts on your favorite restaurants for only $8!</p>
+            <p className="jumbotron-desc">Discounts on your favorite restaurants for only $10!</p>
             <a className="jumbotron-btn btn btn-dark" href="/shop" role="button">Order now</a>
           </div>
         </div>

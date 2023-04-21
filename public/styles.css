@@ -951,7 +951,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 .upcoming-events-month {
-	font-size: calc(12px + 0.4vw);
+	font-size: calc(10px + 0.3vw);
 	font-family: 'Roboto', sans-serif;
 	font-weight: 300;
 	margin-bottom: 0;
@@ -960,7 +960,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 .upcoming-events-date {
-	font-size: calc(16px + 0.6vw);
+	font-size: calc(14px + 0.5vw);
 	font-weight: 900;
 	margin-bottom: 0;
 	letter-spacing: 1px;
@@ -970,14 +970,23 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	padding: 0;
 	margin: auto 0;
 	float: left;
-	width: 25%
+	width: 21% !important;
+}
+
+.div-upcoming-events-button {
+	width: 34%;
+	padding: 0;
+	margin: auto 0;
+	float: right;
+	align-items: center;
+	text-align: center;
 }
 
 .div-upcoming-events-content {
-	padding: 0px 0px 0px calc(12px + 0.4vw);
-	box-shadow: -1px 0 0 white;
+	padding: 0px 0px 0px calc(8px + 0.3vw);
+	box-shadow: -0.5px 0 0 white;
 	float: left;
-	width: 75%;
+	width: 40%;
 	display: flex;
 	align-items: center;
 }
@@ -988,7 +997,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 }
 
 .upcoming-events-icon-text {
-	font-size: calc(14px + 0.1vw);
+	font-size: calc(10px + 0.4vw) !important;
 	font-weight: 300;
 	color: #7F7F7F;
 	margin: 0
@@ -998,10 +1007,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 @media only screen and (max-width: 576px) {
 	.div-upcoming-events-date {
 		width: calc(5vw + 50px);
-	}
-
-	.div-upcoming-events-content {
-		width: 65%;
 	}
 }
 
@@ -1167,6 +1172,21 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 	color: white;
 	margin: calc(1.2vw + 12px) 0 0;
 	padding: calc(0.4rem + 0.25vw) calc(0.8rem + 0.5vw) !important;
+}
+
+.event-card-keraton-button {
+	font-weight: 400;
+	font-size: calc(10px + 0.4vw) !important;
+	text-transform: none;
+	color: rgb(162, 162, 162);
+	background-color: transparent !important;
+	border-radius: 12px !important;
+	border-color: rgb(162, 162, 162) !important;
+}
+
+.event-card-keraton-button:hover {
+	border-color: white !important;
+	color: white !important;
 }
 
 .p-1.col>img,
