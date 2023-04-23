@@ -438,6 +438,26 @@ p {
 	height: 0px;
 }
 
+.keratonNav .hamburger-icon-close span::before,
+.keratonNav .hamburger-icon-close span::after {
+	background: #fff9eb !important;
+}
+
+.keratonNav .hamburger-icon-open span::before,
+.keratonNav .hamburger-icon-open span::after {
+	background: #fff9eb !important;
+}
+
+.keratonHide .hamburger-icon-close span::before,
+.keratonHide .hamburger-icon-close span::after {
+	background: #fff9eb !important;
+}
+
+.keratonHide .hamburger-icon-open span::before,
+.keratonHide .hamburger-icon-open span::after {
+	background: #fff9eb !important;
+}
+
 .hamburger-icon-close span::before,
 .hamburger-icon-close span::after {
 	content: '';
@@ -1211,6 +1231,10 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.modal-body {
 		padding: 2rem;
+	}
+
+	.all-keraton-performers {
+		flex-direction: column !important;
 	}
 }
 
@@ -2167,20 +2191,16 @@ select:invalid {
 }
 
 .keratonNav .navLink::after {
-	background-color: #fff9eb;
+	background-color: #6c9e74;
 }
 
-.keratonNav .navbar-brand img {
-	filter: invert(79%) sepia(3%) saturate(2632%) hue-rotate(321deg) brightness(125%) contrast(108%);
-}
-
-.keratonNav .hamburger-icon-close .navbar-toggler-icon,
-.keratonNav .hamburger-icon-open .navbar-toggler-icon {
+.keratonNav .navbar-brand img,
+.keratonHide .navbar-brand img {
 	filter: invert(79%) sepia(3%) saturate(2632%) hue-rotate(321deg) brightness(125%) contrast(108%);
 }
 
 .keratonHide {
-	background-color: white;
+	background-color: #6c9e74;
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 	-webkit-transform: translateY(-100%);

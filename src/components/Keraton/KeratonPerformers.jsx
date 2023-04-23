@@ -62,8 +62,8 @@ function KeratonPerformers() {
     <div className="keraton-performers py-5" style={{}}>
       <h1 className="py-3 keraton-section-header" style={{ marginBottom: "3vw" }}>Performers</h1>
       <Container className="performers-container" style={{ "color": "white" }}>
-        <Row className="flex-row">
-          <Col className="col-6">
+        <Row className="all-keraton-performers">
+          <Col sm={12} md={12} lg={6}>
             <Row className="my-3 slider-performer-row flex-column-reverse">
               <Col className="my-auto slider-performer-text">
                 <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
@@ -87,7 +87,7 @@ function KeratonPerformers() {
               </Col>
             </Row>
           </Col>
-          <Col className="col-6">
+          <Col sm={12} md={12} lg={6}>
               
           </Col>
         </Row>
@@ -100,7 +100,7 @@ function StudentPerformerItem(props) {
   const { student } = props;
   return (
     <div>
-      
+
     </div>
   )
 }
