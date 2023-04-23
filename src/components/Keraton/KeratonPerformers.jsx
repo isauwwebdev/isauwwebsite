@@ -11,14 +11,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import performers from '../../data/keraton-performers';
+import studentPerformers from '../../data/keraton-student-performers';
 
 function KeratonPerformers() {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
 
   const settingsText = {
-    dots: true,
-    speed: 500,
+    dots: false,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -47,7 +48,7 @@ function KeratonPerformers() {
 
   const settingsImg = {
     dots: false,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -62,9 +63,9 @@ function KeratonPerformers() {
       <h1 className="py-3 keraton-section-header" style={{ marginBottom: "3vw" }}>Performers</h1>
       <Container className="performers-container" style={{ "color": "white" }}>
         <Row className="flex-row">
-          <Col className="col-8">
+          <Col className="col-6">
             <Row className="my-3 slider-performer-row flex-column-reverse">
-              <Col className="col-6 my-auto mx-auto slider-performer-text">
+              <Col className="my-auto slider-performer-text">
                 <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
                   {performers.map((performer) => {
                     return (
@@ -73,7 +74,7 @@ function KeratonPerformers() {
                   })}
                 </Slider>
               </Col>
-              <Col className="mb-5 col-6 performer-img-col">
+              <Col className="mb-5 performer-img-col">
                 <div className="slider-performer-img">
                   <Slider ref={(slider2) => setNav2(slider2)} className="keraton-performer-slider2" {...settingsImg}>
                     {performers.map((performer) => {
@@ -86,11 +87,20 @@ function KeratonPerformers() {
               </Col>
             </Row>
           </Col>
-          <Col className="col-4">
-              Hello
+          <Col className="col-6">
+              
           </Col>
         </Row>
       </Container>
+    </div>
+  )
+}
+
+function StudentPerformerItem(props) {
+  const { student } = props;
+  return (
+    <div>
+      
     </div>
   )
 }
