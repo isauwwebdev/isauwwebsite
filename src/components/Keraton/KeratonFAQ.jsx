@@ -36,7 +36,9 @@ function Item(props) {
             </img>
           </a>
         }
-        {item.answer}
+        <div>
+          {item.answer}
+        </div>
       </Accordion.Body>
     </Accordion.Item>
   )
