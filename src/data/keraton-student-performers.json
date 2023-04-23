@@ -1,44 +1,65 @@
 [
     {
         "id": 1,
-        "name": "Christina Sunardi",
-        "time": "4:35",
+        "name": "Enrico's Band",
+        "time": "0:00",
         "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Cultural"
+        "type": "Performer"
     },
     {
         "id": 2,
-        "name": "A2V Locboy Queens",
-        "time": "4:35",
-        "img": "../../images/keraton/performers/a2v.png",
-        "type": "K-Pop Dance"
+        "name": "StarkrUW",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
     },
     {
         "id": 3,
-        "name": "Moonlight Marmalade",
-        "time": "4:50",
-        "img": "../../images/keraton/performers/moonlight.jpg",
-        "type": "Dance"
+        "name": "Tari Tradisional Indonesia",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
     },
     {
         "id": 4,
-        "name": "ISAUW Performance",
-        "time": "5:20",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
-        "type": "Dance"
+        "name": "Husky Jam",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
     },
     {
         "id": 5,
-        "name": "Indonesian Cultural Association",
-        "time": "5:25",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
-        "type": "Dance"
+        "name": "Celine x Regina",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
     },
     {
         "id": 6,
-        "name": "UW Undivided XS",
-        "time": "5:40",
-        "img": "../../images/keraton/performers/undivided.jpg",
-        "type": "Hip Hop Dance"
+        "name": "ICA Tari Tradisional",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
+    },
+    {
+        "id": 7,
+        "name": "Faith's Group",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
+    },
+    {
+        "id": 8,
+        "name": "UW Undivided",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
+    },
+    {
+        "id": 9,
+        "name": "Celine x Jeremy",
+        "time": "0:00",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Performer"
     }
 ]
