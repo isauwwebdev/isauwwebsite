@@ -6,6 +6,69 @@ body,
 }
 
 @font-face {
+	font-family: 'Blackberry Dingbats';
+	src: url('../fonts/Blackberry/Blackberry-Dingbats.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Eight';
+	src: url('../fonts/Blackberry/Blackberry-Eight.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Five';
+	src: url('../fonts/Blackberry/Blackberry-Five.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Flags';
+	src: url('../fonts/Blackberry/Blackberry-Flags.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry One';
+	src: url('../fonts/Blackberry/Blackberry-One.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Seven';
+	src: url('../fonts/Blackberry/Blackberry-Seven.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Six';
+	src: url('../fonts/Blackberry/Blackberry-Six.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Three';
+	src: url('../fonts/Blackberry/Blackberry-Three.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Two';
+	src: url('../fonts/Blackberry/Blackberry-Two.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Graphik';
 	src: url('../fonts/Graphik/GraphikBlack.otf') format('opentype');
 	font-weight: 800;
@@ -1426,13 +1489,23 @@ a[type='button'] {
 
 .keraton-header {
 	color: #fff9eb;;
-	font-family: 'Regulators Expanded', sans-serif;
+	font-family: 'Blackberry Three', sans-serif;
 	line-height: 1.6;
 	font-size: calc(5.2vw + 14px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: calc(12px + 1.2vw);
 	margin-right: calc(-1 * (12px + 1.2vw));
 	/* counteract the letter spacing for the last letter because the title won't be centered o.w. */
+}
+
+.keraton-sub-header {
+	color: #fff9eb;;
+	font-family: 'Blackberry Five', sans-serif;
+	line-height: 1.6;
+	font-size: calc(1.8vw + 12px);
+	text-shadow: #606060 0px 0px 10px;
+	letter-spacing: calc(10px + 0.8vw);
+	margin-right: calc(-1 * (12px + 1.2vw));
 }
 
 .keraton-completed {
@@ -1472,7 +1545,7 @@ a[type='button'] {
 }
 
 .keraton-performers {
-	font-family: 'Hot Mess', sans-serif;
+	font-family: 'Blackberry One', sans-serif;
 }
 
 .keraton-performer-slider .slick-list .slick-track .slick-slide {
@@ -1554,7 +1627,7 @@ a[type='button'] {
 }
 
 .performer-name {
-	font-size: calc(2.2vw + 18px);
+	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
 }
 
@@ -1591,7 +1664,7 @@ a[type='button'] {
 }
 
 .student-performer-name {
-	font-size: calc(1.4vw + 14px);
+	font-size: calc(1.2vw + 14px);
 	font-weight: 700;
 }
 
@@ -1607,7 +1680,7 @@ a[type='button'] {
 	padding-top: 3rem;
 	font-size: calc(40px + 2.0vw);
 	color: #6c9e74;
-	font-family: 'Regulators Expanded', sans-serif;
+	font-family: 'Blackberry One', sans-serif;
 }
 
 .keraton-student-section-header {
@@ -1616,12 +1689,12 @@ a[type='button'] {
 	padding-top: 3rem;
 	font-size: calc(40px + 1.6vw);
 	color: #6c9e74;
-	font-family: 'Regulators Expanded', sans-serif;
+	font-family: 'Blackberry One', sans-serif;
 }
 
 .keraton-about-text {
 	text-align: left;
-	font-family: "Graphik";
+	font-family: "Blackberry Seven";
 	font-weight: 400;
 	color: #1f1f1f;
 }
@@ -1643,7 +1716,7 @@ a[type='button'] {
 
 .countdown-title {
 	font-size: calc(22px + 1.2vw);
-	font-family: 'Regulators Expanded', sans-serif;
+	font-family: 'Blackberry One', sans-serif;
 	color: #6c9e74;
 	letter-spacing: 2px;
 }
@@ -1748,11 +1821,16 @@ select:invalid {
 }
 
 .keraton-vendors-mini .slick-dots li button:before {
-	color: white;
+	color: rgb(103, 103, 103);
+}
+
+.keraton-vendors-mini .slick-dots li button:before:hover {
+	color: #6c9e74;
+	opacity: 0.75;
 }
 
 .keraton-vendors-mini .slick-dots li.slick-active button:before {
-	color: white;
+	color: #6c9e74 !important;
 }
 
 .keraton-vendors-mini .slick-dots {
@@ -1887,7 +1965,7 @@ select:invalid {
 
 /* KERATON SPONSORS */
 .keraton-sponsors {
-	background-color: rgb(3, 27, 40);
+	background-color: #6c9e74;
 }
 
 .keraton-sponsors-row {
@@ -1985,6 +2063,7 @@ select:invalid {
 
 .keratonNav {
 	background-color: #6c9e74;
+	background-image: "url(https://www.transparenttextures.com/patterns/arabesque.png)";
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 }

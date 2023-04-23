@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "name": "Fiji Blue",
+        "name": "Main Artist 1",
         "time": "00:00",
         "img": "../../images/keraton/performers/fiji_blue.jpg",
         "insta": "https://www.instagram.com/fijiblue/",
@@ -9,42 +9,10 @@
     },
     {
         "id": 2,
-        "name": "mxmtoon",
+        "name": "Main Artist 2",
         "time": "00:00",
         "img": "../../images/keraton/performers/mxmtoon.jpeg",
         "insta": "https://www.instagram.com/mxmtoon/",
         "type": "Vocalist"
-    },
-    {
-        "id": 3,
-        "name": "Grent Perez",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/grent_perez.jpg",
-        "insta": "https://www.instagram.com/grentperez/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 4,
-        "name": "Public Library Commute",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/plc.jpg",
-        "insta": "https://www.instagram.com/publiclibrarycommute/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 5,
-        "name": "HHSA",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/hhsa.jpg",
-        "insta": "https://www.instagram.com/hhsasessions/",
-        "type": "Dance Group"
-    },
-    {
-        "id": 6,
-        "name": "UW Undivided",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/undivided.jpg",
-        "insta": "https://www.instagram.com/uwundivided/",
-        "type": "Dance Group"
     }
 ]

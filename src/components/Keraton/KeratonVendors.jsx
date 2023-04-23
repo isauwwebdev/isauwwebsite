@@ -35,6 +35,7 @@ function KeratonVendors() {
   const bigSettings = {
     asNavFor: nav1,
     dots: false,
+    arrows: true,
     speed: 500,
     swipe: false,
     slidesToShow: 1,
@@ -86,19 +87,19 @@ function KeratonVendors() {
                         <Row className="keraton-vendors-img-row" style={{margin: "0"}}>
                           <Col xs={6} sm={5} style={{paddingRight: "0", paddingLeft: `calc(2px + 0.6vw)`}}>
                             <div style={{paddingRight: `calc(1.6vw)`, paddingTop: `calc(24px + 1.2vw)`, paddingBottom: `calc(8px + 1.2vw)`, textAlign: "right", height: "100%", display: "flex", flexDirection: "column"}}>
-                              <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name}</h1>
+                              <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74" }}>{vendor.name}</h1>
                               {vendor.menu.map((menuItem) => {
                                 return (
-                                  <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(11px + 0.6vw)`}}>
+                                  <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(11px + 0.6vw)`, color: "#6c9e74"}}>
                                     {menuItem.name}
                                   </div>
                                 )
                               })}
                               <div style={{marginTop: "auto"}}>
-                                <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name2}</h1>
+                                <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74"}}>{vendor.name2}</h1>
                                 {vendor.menu2.map((menuItem) => {
                                   return (
-                                    <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(12px + 0.6vw)`}}>
+                                    <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(12px + 0.6vw)`, color: "#6c9e74"}}>
                                       {menuItem.name}
                                     </div>
                                   )
