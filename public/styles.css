@@ -954,7 +954,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 /* Remove the old Slick Carousel Buttons */
 .slick-prev:before,
 .slick-next:before {
-	display: none;
+	
 }
 
 /* Upcoming Events Home Page */
@@ -1221,6 +1221,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.student-performer-name,
 	.student-performer-details {
+		color: #6c9e74;
 		padding: 0;
 	}
 }
@@ -1562,6 +1563,19 @@ a[type='button'] {
 	margin: 0;
 }
 
+.keraton-performer-slider2 .slick-next:before {
+	font-family: "FontAwesome";
+	content: "\f054";
+	color: #6c9e74;
+	font-size: calc(1.2vw + 10px);
+	opacity: 1;
+}
+
+.keraton-performer-slider .slick-next,
+.keraton-performer-slider .slick-prev {
+	display: none !important;
+}
+
 .keraton-student-performer .slick-dots li button:before {
 	color: white;
 	font-size: calc(0.2vw + 6px);
@@ -1629,17 +1643,20 @@ a[type='button'] {
 .performer-name {
 	font-size: calc(1.8vw + 16px);
 	font-weight: 700;
+	color: #6c9e74;
 }
 
 .performer-details {
 	font-size: calc(0.6vw + 12px);
-	font-family: 'Graphik', 'sans-serif';
+	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
+	color: #6c9e74;
 }
 
 .performer-social {
 	color: inherit;
 	text-decoration: inherit;
+	color: #6c9e74;
 }
 
 .performer-img-container {
@@ -1680,7 +1697,7 @@ a[type='button'] {
 	padding-top: 3rem;
 	font-size: calc(40px + 2.0vw);
 	color: #6c9e74;
-	font-family: 'Blackberry One', sans-serif;
+	font-family: 'Blackberry Three', sans-serif;
 }
 
 .keraton-student-section-header {
@@ -1689,13 +1706,14 @@ a[type='button'] {
 	padding-top: 3rem;
 	font-size: calc(40px + 1.6vw);
 	color: #6c9e74;
-	font-family: 'Blackberry One', sans-serif;
+	font-family: 'Blackberry Three', sans-serif;
 }
 
 .keraton-about-text {
 	text-align: left;
-	font-family: "Blackberry Seven";
-	font-weight: 400;
+	line-height: 2;
+	font-family: 'Blackberry Seven', 'sans-serif';
+	font-weight: 800;
 	color: #1f1f1f;
 }
 
@@ -1715,8 +1733,8 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-size: calc(22px + 1.2vw);
-	font-family: 'Blackberry One', sans-serif;
+	font-size: calc(22px + 1.8vw);
+	font-family: 'Blackberry Five', sans-serif;
 	color: #6c9e74;
 	letter-spacing: 2px;
 }

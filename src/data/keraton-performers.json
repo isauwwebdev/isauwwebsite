@@ -1,18 +1,18 @@
 [
     {
         "id": 1,
-        "name": "Main Artist 1",
+        "name": "Charlie Burg",
         "time": "00:00",
         "img": "../../images/keraton/performers/fiji_blue.jpg",
-        "insta": "https://www.instagram.com/fijiblue/",
-        "type": "Vocalist"
+        "insta": "https://www.instagram.com/charburg/",
+        "type": "Headliner"
     },
     {
         "id": 2,
-        "name": "Main Artist 2",
+        "name": "demenxtia",
         "time": "00:00",
         "img": "../../images/keraton/performers/mxmtoon.jpeg",
-        "insta": "https://www.instagram.com/mxmtoon/",
-        "type": "Vocalist"
+        "insta": "https://www.instagram.com/demenxtia/",
+        "type": "Opening Act"
     }
 ]
