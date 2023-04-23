@@ -2051,8 +2051,8 @@ select:invalid {
 .keraton-faq-item .accordion-body {
 	background-color: #fff9eb;
 	font-size: calc(11px + 0.3vw);
-	font-weight: 300;
-	color: #6c9e74;
+	font-weight: bolder;
+	color: #1f1f1f;
 	font-family: "Blackberry Seven" !important;
 	padding-top: 0 !important;
 	padding-bottom: 2rem !important;
