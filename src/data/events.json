@@ -19,7 +19,11 @@
         "time": "12:00PM",
         "location": "HUB 250, UW",
         "text": "A Spring Quarter kick off collaboration event with Indomie USA, where students can participate in an Indomie eating competition to win prizes and meet others!",
-        "img": [{"src": "../images/officers/isauw-group.jpg"}],
+        "img": [{"src": "../images/events/socialnight/2023/indomie-1.jpeg"},
+                {"src": "../images/events/socialnight/2023/indomie-2.jpeg"},
+                {"src": "../images/events/socialnight/2023/indomie-3.jpeg"},
+                {"src": "../images/events/socialnight/2023/indomie-4.jpeg"},
+                {"src": "../images/events/socialnight/2023/indomie-5.jpeg"}],
         "completed": true
     },
     {
