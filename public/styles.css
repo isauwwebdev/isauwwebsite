@@ -432,6 +432,18 @@ p {
 	z-index: 0;
 }
 
+.keraton .navbar-overlay:before {
+	height: 100%;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.05) !important;
+	z-index: 0;
+}
+
 /* hamburger button */
 .hamburger-icon-close span {
 	width: 0px;
@@ -2075,7 +2087,7 @@ select:invalid {
 
 /* KERATON SPONSORS */
 .keraton-sponsors {
-	background-color: rgb(3, 27, 40);
+	background-color: #6c9e74;
 }
 
 .keraton-sponsors-row {
