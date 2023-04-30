@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Ring Toss",
+        "img": "../../images/keraton/performers/fiji_blue.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Kaleng Toss",
+        "img": "../../images/keraton/performers/mxmtoon.jpeg"
+    },
+    {
+        "id": 3,
+        "name": "Indomie",
+        "img": "../../images/keraton/performers/mxmtoon.jpeg"
+    },
+    {
+        "id": 4,
+        "name": "Kerupuk",
+        "img": "../../images/keraton/games/kerupuk.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "Basketball",
+        "img": "../../images/keraton/performers/mxmtoon.jpeg"
+    },
+    {
+        "id": 6,
+        "name": "Bakiak",
+        "img": "../../images/keraton/games/bakiak.jpeg"
+    }
+]

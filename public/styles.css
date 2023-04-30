@@ -2063,8 +2063,8 @@ select:invalid {
 .keraton-faq-item .accordion-body {
 	background-color: #fff9eb;
 	font-size: calc(11px + 0.3vw);
-	font-weight: 300;
-	color: #6c9e74;
+	font-weight: bolder;
+	color: #1f1f1f;
 	font-family: "Blackberry Seven" !important;
 	padding-top: 0 !important;
 	padding-bottom: 2rem !important;
@@ -2132,7 +2132,7 @@ select:invalid {
 
 .keraton-games-text {
 	text-align: center;
-	font-size: calc(20px + 1.1vw);
+	font-size: calc(15px + 1.1vw);
 	font-family: 'Blackberry One';
 	color: #6c9e74;
 	/* DELETE THIS LINE WHEN REVERTING */
@@ -2153,33 +2153,18 @@ select:invalid {
 	transition: .5s ease;
 	width: 100%;
 	overflow: hidden;
+	object-fit: cover;
 }
 
-.keraton-games-container:hover .keraton-games-image {
-	opacity: 0.5;
-}
-
-/* .keraton-games-container:hover .keraton-games-text {
-	-webkit-text-fill-color: #6c9e74;
-} */
-.keraton-games-overlay-top {
-	top: 0;
-	height: 30.88%;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-.keraton-games-overlay-btm {
-	bottom: 0;
-	height: 30.88%;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	opacity: 1.0;
-	transition: .5s ease;
-}
+.games-row {
+	margin-top: 20px;
+	margin-bottom: 20px;
+  }
+  
+  .games-col {
+	margin-right: 20px;
+	margin-left: 20px;
+  }
 
 .back-to-top {
 	color: white;
