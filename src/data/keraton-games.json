@@ -21,11 +21,6 @@
     },
     {
         "id": 5,
-        "name": "Basketball",
-        "img": "../../images/keraton/performers/mxmtoon.jpeg"
-    },
-    {
-        "id": 6,
         "name": "Bakiak",
         "img": "../../images/keraton/games/bakiak.jpeg"
     }
