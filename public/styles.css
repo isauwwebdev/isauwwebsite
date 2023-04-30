@@ -1658,10 +1658,6 @@ a[type='button'] {
 	display: flex;
 }
 
-.slick-vertical .slick-current {
-	color: #6c9e74;
-}
-
 .performer-name {
 	font-family: 'Blackberry One', 'sans-serif';
 	font-size: calc(2.2vw + 16px);
@@ -1720,6 +1716,7 @@ a[type='button'] {
 	padding-top: 3rem;
 	font-size: calc(40px + 2.0vw);
 	color: #6c9e74;
+	opacity: 100%;
 	font-family: 'Blackberry Three', sans-serif;
 }
 
@@ -1947,6 +1944,7 @@ select:invalid {
 .keraton-vendors-category .slick-slide {
 	/* space between icons and slides */
 	margin: 16px;
+	color: rgba(108, 158, 116, 0.5)
 }
 
 /* KERATON FAQ */
@@ -2289,6 +2287,10 @@ select:invalid {
 	transition: all 0.2s ease-in-out;
 	border: none;
 	background-color: transparent;
+}
+
+.keraton-vendors-category .slick-current {
+	color: #6c9e74;
 }
 
 .position-descr-slider .slick-list .slick-track {
