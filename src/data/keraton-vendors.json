@@ -100,7 +100,7 @@
         "vendors": [
             {
                 "name": "ISAUW Drinks",
-                "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
+                "img": "../images/keraton/2023/vendors/ISAUW-Drinks/nestea.jpeg",
                 "menu": [
                     {
                         "name": "Nutrisari"
@@ -130,6 +130,30 @@
                         "name":"Black Milk Tea"
                     }
                 ]
+            },
+            {
+                "name": "ISAUW Coffee Experience",
+                "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
+                "menu": [
+                    {
+                        "name": "Coffee"
+                    }
+                ],
+                "name2": "Seattle Best Tea",
+                "menu2": [
+                    {
+                        "name":"Jasmine Milk Tea"
+                    },
+                    {
+                        "name":"Heavy Oolong"
+                    },
+                    {
+                        "name":"Honey Jasmine"
+                    },
+                    {
+                        "name":"Black Milk Tea"
+                    }
+                ]
             }
         ]
     },
@@ -139,15 +163,45 @@
         "icon": "",
         "vendors": [
             {
-                "name": "ISAUWear",
+                "name": "Merch",
                 "img": "../images/keraton/vendors/merch.jpg",
                 "menu": [
                     {
-                        "name": "Batik"
+                        "name": "Baju Barong"
                     },
                     {
-                        "name": "Merch"
-                    }             
+                        "name": "Batik Premium"
+                    },
+                    {
+                        "name":"Batik Biasa"
+                    },
+                    {
+                        "name":"Kebaya"
+                    },
+                    {
+                        "name":"Hats"
+                    },
+                    {
+                        "name":"Sarung"
+                    },
+                    {
+                        "name": "Hoodie (S)"
+                    },
+                    {
+                        "name": "Sweater"
+                    },
+                    {
+                        "name":"Tote Bag"
+                    },
+                    {
+                        "name":"206 Hat"
+                    },
+                    {
+                        "name":"Bottle"
+                    },
+                    {
+                        "name":"Old Shirts"
+                    }                      
                 ],
                 "name2": "",
                 "menu2": []

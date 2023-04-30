@@ -8,30 +8,23 @@
     },
     {
         "id": 2,
-        "question": "Can I volunteer in ISAUW?",
-        "answer": "Definitely! However, this year's volunteer application has closed. But don't fret! We are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They’ll receive merchandise and food coupons as compensation for their hard work!",
+        "question": "How do I pay for food?",
+        "answer": "We have cashiers located at each vendor stall. We accept credit cards and debit cards.",
         "link": "",
         "icon": ""
     },
     {
         "id": 3,
-        "question": "How do I pay for food?",
-        "answer": "We have cashiers located at each vendor stall. We accept credit cards, and debit cards.",
-        "link": "",
-        "icon": ""
-    },
-    {
-        "id": 4,
         "question": "Is there an admission fee?",
         "answer": "Admission is free! What are you waiting for? Come and join us!",
         "link": "",
         "icon": ""
     },
     {
-        "id": 5,
+        "id": 4,
         "question": "Where will Keraton be held?",
-        "answer": "UW Rainier Vista: Stevens Way NE, Seattle, WA 98195",
-        "link": "https://goo.gl/maps/JVayv7aSUjtVb9u96",
-        "icon": "../images/maps.png"
+        "answer": "Hub Lawn, Seattle, WA 98195",
+        "link": "https://www.google.com/maps?q=HUB+Yard,+Seattle,+WA+98105",
+        "icon": "../images/keraton/2023/hub-lawn-map.jpg"
     }
 ]
