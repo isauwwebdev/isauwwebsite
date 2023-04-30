@@ -18,34 +18,15 @@
                         "name": "Pudding Cendol"
                     }
                 ],
-                "name2": "ISAUWMaret",
+                "name2": "ISAUW Indomie",
                 "menu2": [
                     {
-                        "name": "Indomie"
+                        "name": "Indomie Single"
                     },
                     {
-                        "name": "NutriSari"
-                    },
-                    {
-                        "name": "Tora Bika Coffee"
+                        "name": "Indomie Double"
                     }
                 ]
-            },
-            {
-                "name": "Kopisauw",
-                "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
-                "menu": [
-                    {
-                        "name": "Indonesian Coffee"
-                    }
-                ],
-                "name2": "Seattle Best Tea",
-                "menu2": [
-                    {
-                        "name": "Milk Tea & Baby"
-                    }
-                ]
-
             },
             {
                 "name": "Solar Chapter",
@@ -70,13 +51,43 @@
                         "name": "Kuping Gajah Mini"
                     },
                     {
-                        "name": "Shirt Merch and Kain Makna"
+                        "name": "Shirt Merch"
+                    },
+                    {
+                        "name":"Kain Makna"
                     }
                 ],
                 "name2": "Waroeng Jajanan",
                 "menu2": [
                     {
-                        "name": "Indonesian Snacks"
+                        "name": "Kusuka"
+                    },
+                    {
+                        "name":"Teh Botol"
+                    },
+                    {
+                        "name":"Krupuk"
+                    },
+                    {
+                        "name":"Permen Kopiko"
+                    },
+                    {
+                        "name":"Silver Queen"
+                    },
+                    {
+                        "name":"Sambel"
+                    },
+                    {
+                        "name":"Kecap Manis"
+                    },
+                    {
+                        "name":"Cemilan Sunpia"
+                    },
+                    {
+                        "name":"Emping Pedas"
+                    },
+                    {
+                        "name":"Kacang-kacangan"
                     }
                 ]
             }
@@ -88,15 +99,37 @@
         "icon": "",
         "vendors": [
             {
-                "name": "ISAUW Coffee Experience",
+                "name": "ISAUW Drinks",
                 "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
                 "menu": [
                     {
-                        "name": "Coffee"
+                        "name": "Nutrisari"
+                    },
+                    {
+                        "name":"Lemon Tea"
+                    },
+                    {
+                        "name":"Tora Bika Coffee"
+                    },
+                    {
+                        "name":"Water"
                     }
                 ],
-                "name2": "",
-                "menu2": []
+                "name2": "Seattle Best Tea",
+                "menu2": [
+                    {
+                        "name":"Jasmine Milk Tea"
+                    },
+                    {
+                        "name":"Heavy Oolong"
+                    },
+                    {
+                        "name":"Honey Jasmine"
+                    },
+                    {
+                        "name":"Black Milk Tea"
+                    }
+                ]
             }
         ]
     },
