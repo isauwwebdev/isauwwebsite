@@ -10,27 +10,39 @@
                 "menu": [
                     {
                         "name": "Nasi Gila"
+                    },
+                    {
+                        "name": "Sate Ayam"
+                    },
+                    {
+                        "name": "Pudding Cendol"
                     }
                 ],
-                "name2": "ISAUW Indomie",
+                "name2": "ISAUWMaret",
                 "menu2": [
                     {
                         "name": "Indomie"
+                    },
+                    {
+                        "name": "NutriSari"
+                    },
+                    {
+                        "name": "Tora Bika Coffee"
                     }
                 ]
             },
             {
-                "name": "ISAUW Coffee Experience",
+                "name": "Kopisauw",
                 "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
                 "menu": [
                     {
-                        "name": "Coffee"
+                        "name": "Indonesian Coffee"
                     }
                 ],
                 "name2": "Seattle Best Tea",
                 "menu2": [
                     {
-                        "name": "Boba"
+                        "name": "Milk Tea & Baby"
                     }
                 ]
 
@@ -61,10 +73,10 @@
                         "name": "Shirt Merch and Kain Makna"
                     }
                 ],
-                "name2": "WarJan",
+                "name2": "Waroeng Jajanan",
                 "menu2": [
                     {
-                        "name": "Indo Snacks"
+                        "name": "Indonesian Snacks"
                     }
                 ]
             }
