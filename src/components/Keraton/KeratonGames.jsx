@@ -1,44 +1,27 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import {Row, Col,Card} from 'react-bootstrap'; 
+import games from '../../data/keraton-games.json'
 
 function KeratonGames() {
   return (
-    <div className="py-5" style={{ }}>
-      <h1 className="py-3 keraton-section-header">Activities</h1>
-      <Row className="keraton-games-row">
-        <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
-          <div className='keraton-games-container'>
-            <img src="../images/keraton/games/bakiak.jpeg" className="keraton-games-image" alt=""></img>
-            <div style={{position: "relative"}}>
-              <p className="keraton-games-text">Bakiak</p>
-            </div>
-            <span class="keraton-games-overlay-top"></span>
-            <span class="keraton-games-overlay-btm"></span>
-          </div>
+    <div>
+      <div className="py-5" style={{ }}>
+        <h1 className="py-3 keraton-section-header">Activities</h1>
+      </div>
+      <Row xs={3} className="justify-content-center">
+      {games.map((game, idx) => (
+        <Col className="games-col">
+          <Card>
+            <Card.Img variant="top" src={game.img} />
+            <Card.Body>
+              <Card.Title className="keraton-games-text">{game.name}</Card.Title>
+            </Card.Body>
+          </Card>
         </Col>
-        <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
-          <div className='keraton-games-container'>
-            <img src="../images/keraton/games/balap-karung-alt.jpeg" className="keraton-games-image" alt=""></img>
-            <div style={{position: "relative"}}>
-              <p className="keraton-games-text">Balap Karung</p>
-            </div>
-            <span class="keraton-games-overlay-top"></span>
-            <span class="keraton-games-overlay-btm"></span>
-          </div>
-        </Col>
-        <Col xs={4} style={{padding: "0", margin: "0", overflow: "hidden"}}>
-          <div className='keraton-games-container'>
-            <img src="../images/keraton/games/engklek.jpeg" className="keraton-games-image" alt=""></img>
-            <div style={{position: "relative"}}>
-              <p className="keraton-games-text">Engklek</p>
-            </div>
-            <span class="keraton-games-overlay-top"></span>
-            <span class="keraton-games-overlay-btm"></span>
-          </div>
-        </Col>
-      </Row>
+      ))}
+    </Row>
     </div>
+
   )
 }
 export default KeratonGames
