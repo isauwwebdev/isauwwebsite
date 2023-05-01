@@ -1676,7 +1676,7 @@ a[type='button'] {
 	font-size: calc(0.6vw + 12px);
 	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
-	color: #6c9e74;
+	color: black;
 }
 
 .performer-social {
@@ -1707,14 +1707,17 @@ a[type='button'] {
 }
 
 .student-performer-name {
-	font-size: calc(1.4vw + 14px);
+	font-family: "Blackberry One";
+	font-size: calc(0.6vw + 10px);
 	font-weight: 700;
+	color: #6c9e74;
 }
 
 .student-performer-details {
+	font-family: "Blackberry Seven";
 	font-size: calc(0.5vw + 10px);
 	font-weight: 400;
-	font-family: 'Graphik', 'sans-serif';
+	color: black;
 }
 
 .keraton-section-header {
@@ -1739,9 +1742,9 @@ a[type='button'] {
 .keraton-about-text {
 	text-align: center;
 	line-height: 3;
-	font-family: 'Intro Rust', 'sans-serif';
+	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
-	color: rgba(0, 0, 0, 0.5);
+	color: rgb(0, 0, 0);
 }
 
 .keraton-countdown-card {
