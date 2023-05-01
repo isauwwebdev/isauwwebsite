@@ -46,7 +46,7 @@ function DisplayBlocks(props) {
 function TimeBlock(props) {
   const {time, stringArray, index} = props;
   return (
-    <Card className="keraton-countdown-card col-6 mx-auto px-2 py-2">
+    <Card className="keraton-countdown-card col-6 mx-auto px-4 py-2 my-2">
       <Card.Title className="countdown-title">{time}</Card.Title>
       <Card.Title className="countdown-sub-title">{stringArray[index].toUpperCase()}</Card.Title>
     </Card>

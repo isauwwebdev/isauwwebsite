@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
 
 import { FaInstagram } from 'react-icons/fa';
 
@@ -11,7 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import performers from '../../data/keraton-performers';
-import studentPerformers from '../../data/keraton-student-performers';
+import studentPerformers from '../../data/keraton-student-performers.json';
 
 function KeratonPerformers() {
   const [nav1, setNav1] = useState();
@@ -88,7 +89,13 @@ function KeratonPerformers() {
             </Row>
           </Col>
           <Col sm={12} md={12} lg={6}>
-              
+            <Row>
+              {studentPerformers.map((student, i) => {
+                return (
+                  <StudentPerformerItem student={student}></StudentPerformerItem>
+                )
+              })}
+            </Row>
           </Col>
         </Row>
       </Container>
@@ -99,9 +106,9 @@ function KeratonPerformers() {
 function StudentPerformerItem(props) {
   const { student } = props;
   return (
-    <div>
+    <Col sm={3} md={3} lg={4}>
 
-    </div>
+    </Col>
   )
 }
 
@@ -111,7 +118,7 @@ function PerformerItem(props) {
     <div className="">
 
       <h2 className="performer-name">{performer.name}</h2>
-      <h3 className="performer-details"> {performer.type}&emsp;|&emsp;{performer.time}&emsp;|&emsp;<a className="performer-social" href={performer.insta}><FaInstagram className="" /></a> </h3>
+      <h3 className="performer-details">{performer.type + "\t|\t" + performer.time}</h3>
 
     </div>
   )
