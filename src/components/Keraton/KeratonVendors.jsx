@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import { mdiFoodTakeoutBoxOutline } from '@mdi/js'; 
 
 import vendorList from '../../data/keraton-vendors';
+import { MdSettingsInputAntenna } from 'react-icons/md';
 
 function KeratonVendors() {
   const [nav1, setNav1] = useState();
@@ -29,7 +30,7 @@ function KeratonVendors() {
     infinite: false,
     pauseOnFocus: true,
     pauseOnHover: true,
-    centerMode: true
+    centerMode: true,
   };
 
   const bigSettings = {
