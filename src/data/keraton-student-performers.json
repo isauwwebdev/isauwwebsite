@@ -3,14 +3,14 @@
         "id": 1,
         "name": "Audrey Yip",
         "time": "4:35",
-        "img": "../../images/keraton/performers/christina.jpg",
+        "img": "../../images/keraton/2023/student-performers/audrey.jpg",
         "type": "Cultural"
     },
     {
         "id": 2,
         "name": "Enrico's Buddies",
         "time": "4:35",
-        "img": "../../images/keraton/performers/a2v.png",
+        "img": "../../images/keraton/2023/student-performers/enricoband.jpg",
         "type": "K-Pop Dance"
     },
     {
@@ -31,7 +31,7 @@
         "id": 5,
         "name": "ICA Tari Tradisional",
         "time": "5:25",
-        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "img": "../../images/keraton/2023/student-performers/ica.jpg",
         "type": "Dance"
     },
     {
@@ -59,7 +59,7 @@
         "id": 9,
         "name": "Edwardo and Allegra",
         "time": "5:40",
-        "img": "../../images/keraton/performers/undivided.jpg",
+        "img": "../../images/keraton/2023/student-performers/edward-allegra.jpeg",
         "type": "Hip Hop Dance"
     }
 ]
