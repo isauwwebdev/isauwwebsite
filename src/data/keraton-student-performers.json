@@ -1,65 +1,65 @@
 [
     {
         "id": 1,
-        "name": "Enrico and Friends",
+        "name": "Enrico's Band",
         "time": "0:00",
         "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "type": "Cultural"
     },
     {
         "id": 2,
-        "name": "StarkrUW",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "Enrico's Buddies",
+        "time": "4:35",
+        "img": "../../images/keraton/performers/a2v.png",
+        "type": "K-Pop Dance"
     },
     {
         "id": 3,
-        "name": "Tari Tradisional Indonesia",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "Starkruw",
+        "time": "4:50",
+        "img": "../../images/keraton/performers/moonlight.jpg",
+        "type": "Dance"
     },
     {
         "id": 4,
-        "name": "Husky Jam",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "Celine and Jeremy",
+        "time": "5:20",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Dance"
     },
     {
         "id": 5,
-        "name": "Celine x Regina",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "ICA Tari Tradisional",
+        "time": "5:25",
+        "img": "../../images/keraton/performers/blue-band.jpeg",
+        "type": "Dance"
     },
     {
         "id": 6,
-        "name": "ICA Tari Tradisional",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "UW Undivided",
+        "time": "5:40",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Hip Hop Dance"
     },
     {
         "id": 7,
         "name": "Faith's Group",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "time": "5:40",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Hip Hop Dance"
     },
     {
         "id": 8,
-        "name": "UW Undivided",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "Celine and Regina",
+        "time": "5:40",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Hip Hop Dance"
     },
     {
         "id": 9,
-        "name": "Celine x Jeremy",
-        "time": "0:00",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Performer"
+        "name": "Edwardo and Allegra",
+        "time": "5:40",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Hip Hop Dance"
     }
 ]
