@@ -89,10 +89,10 @@ function KeratonPerformers() {
             </Row>
           </Col>
           <Col sm={12} md={12} lg={6}>
-            <Row>
+            <Row style={{ "flex-direction":"column", "align-items":"center" }}>
               {studentPerformers.map((student, i) => {
                 return (
-                  <StudentPerformerItem student={student}></StudentPerformerItem>
+                  <StudentPerformerItem index={i} student={student}></StudentPerformerItem>
                 )
               })}
             </Row>
@@ -104,10 +104,11 @@ function KeratonPerformers() {
 }
 
 function StudentPerformerItem(props) {
-  const { student } = props;
+  const { student, index } = props;
   return (
-    <Col sm={3} md={3} lg={4}>
-
+    <Col sm={12} md={12} lg={10} className="mx-2 my-2">
+      <h2 className="student-performer-name">{student.name}</h2>
+      <h3 className="student-performer-details">{student.type + "\t|\t" + student.time}</h3>
     </Col>
   )
 }
