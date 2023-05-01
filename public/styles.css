@@ -6,6 +6,13 @@ body,
 }
 
 @font-face {
+	font-family: 'Intro Rust';
+	src: url('../fonts/intro-rust/IntroRust-Base.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Blackberry Dingbats';
 	src: url('../fonts/Blackberry/Blackberry-Dingbats.woff2') format('opentype');
 	font-weight: 800;
@@ -1730,7 +1737,7 @@ a[type='button'] {
 	text-align: center;
 	letter-spacing: 5px;
 	padding-top: 3rem;
-	font-size: calc(40px + 2.0vw);
+	font-size: calc(32px + 2.0vw);
 	color: #6c9e74;
 	font-family: 'Blackberry Three', sans-serif;
 }
@@ -1745,11 +1752,11 @@ a[type='button'] {
 }
 
 .keraton-about-text {
-	text-align: left;
-	line-height: 2;
-	font-family: 'Blackberry Seven', 'sans-serif';
-	font-weight: 800;
-	color: #1f1f1f;
+	text-align: center;
+	line-height: 3;
+	font-family: 'Intro Rust', 'sans-serif';
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .keraton-countdown-card {
@@ -1758,7 +1765,7 @@ a[type='button'] {
 	display: flex;
 	border: none;
 	border-radius: 10px;
-	background: transparent;
+	background-color: transparent;
 	margin: 0;
 }
 
@@ -2283,6 +2290,26 @@ select:invalid {
 @media (max-width: 992px) {
 	.keraton-map {
 		width: 90% !important;
+	}
+
+	.keraton-about-row {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.keraton-about-text {
+		padding: none !important;
+		margin: none !important;
+		text-align: center;
+	}
+
+	.keraton-section-header {
+		padding-left: none !important;
+		padding-right: none !important;
+
+		margin-left: none !important;
+		margin-right: none !important;
 	}
 }
 
