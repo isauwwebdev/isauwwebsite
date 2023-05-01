@@ -2,17 +2,17 @@
     {
         "id": 1,
         "name": "Charlie Burg",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/fiji_blue.jpg",
-        "insta": "https://www.instagram.com/charburg/",
-        "type": "Headliner"
+        "time": "7:50",
+        "img": "../../images/keraton/2023/charlie-burg.jpg",
+        "insta": "https://www.instagram.com/burgchar/",
+        "type": "Vocalist"
     },
     {
         "id": 2,
-        "name": "demenxtia",
-        "time": "00:00",
-        "img": "../../images/keraton/performers/mxmtoon.jpeg",
-        "insta": "https://www.instagram.com/demenxtia/",
-        "type": "Opening Act"
+        "name": "Demxntia",
+        "time": "4:50",
+        "img": "../../images/keraton/2023/demxntia.jpeg",
+        "insta": "https://www.instagram.com/wowdemxntia/",
+        "type": "Vocalist"
     }
 ]

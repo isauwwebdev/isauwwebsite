@@ -5,120 +5,89 @@
         "icon": "",
         "vendors": [
             {
+                "name": "IndoCafe",
+                "img": "../images/keraton/2023/vendors/indocafe/Indocafe.jpg",
+                "menu": [
+                    {
+                        "name": "Nasi Gila"
+                    },
+                    {
+                        "name": "Sate Ayam"
+                    },
+                    {
+                        "name": "Pudding Cendol"
+                    }
+                ],
+                "name2": "ISAUW Indomie",
+                "menu2": [
+                    {
+                        "name": "Indomie Single"
+                    },
+                    {
+                        "name": "Indomie Double"
+                    }
+                ]
+            },
+            {
                 "name": "Solar Chapter",
-                "img": "../images/keraton/vendors/sate.jpeg",
+                "img": "../images/keraton/2023/vendors/SolarChapter/solar-chapter.jpg",
                 "menu": [
                     {
-                        "name": "Sate"
+                        "name": "Lidi & Makaroni"
                     },
                     {
-                        "name": "Ketupat"
+                        "name": "Momogi"
+                    },
+                    {
+                        "name": "Beng Beng"
+                    },
+                    {
+                        "name": "Aneka Sambal"
+                    },
+                    {
+                        "name": "Kue Monas Cemilan"
+                    },
+                    {
+                        "name": "Kuping Gajah Mini"
+                    },
+                    {
+                        "name": "Shirt Merch"
+                    },
+                    {
+                        "name":"Kain Makna"
                     }
                 ],
-                "name2": "BIC",
+                "name2": "Waroeng Jajanan",
                 "menu2": [
                     {
-                        "name": "Roti Panggang"
-                    }
-                ]
-            },
-            {
-                "name": "Jajanan Indo",
-                "img": "../images/keraton/vendors/martabak-telur.jpeg",
-                "menu": [
-                    {
-                        "name": "Martabak Mini"
+                        "name": "Kusuka"
                     },
                     {
-                        "name": "Martabak Telur"
-                    }
-                ],
-                "name2": " Liv's Kitchen",
-                "menu2": [
-                    {
-                        "name": "Batagor"
-                    }
-                ]
-
-            },
-            {
-                "name": "Shoreline",
-                "img": "../images/keraton/vendors/pisang-goreng.jpeg",
-                "menu": [
-                    {
-                        "name": "Tahu Cabe Goreng"
-                    }
-                ],
-                "name2": "ISASU",
-                "menu2": [
-                    {
-                        "name": "Pisang Goreng"
+                        "name":"Teh Botol"
                     },
                     {
-                        "name": "Makaroni Goreng"
+                        "name":"Krupuk"
                     },
                     {
-                        "name": "Lidi-lidi An Goreng"
-                    }
-                ]
-            },
-            {
-                "name": "GRC",
-                "img": "../images/keraton/vendors/salted-egg-chicken.jpeg",
-                "menu": [
-                    {
-                        "name": "Salted Egg Chicken"
+                        "name":"Permen Kopiko"
                     },
                     {
-                        "name": "Chicken Skin"
+                        "name":"Silver Queen"
                     },
                     {
-                        "name": "Cimol"
-                    }
-                ],
-                "name2": "Raja Kaki Lima",
-                "menu2": [
-                    {
-                        "name": "Pempek"
-                    }                
-                ]
-            },
-            {
-                "name": "Indonesian Eatery",
-                "img": "../images/keraton/vendors/tongseng.jpeg",
-                "menu": [
-                    {
-                        "name": "Tongseng"
+                        "name":"Sambel"
                     },
                     {
-                        "name": "Gudeg"
-                    }        
-                ],
-                "name2": "Coco Pandan",
-                "menu2": [
-                    {
-                        "name": "Martabak Manis"
+                        "name":"Kecap Manis"
                     },
                     {
-                        "name": "Sampler Box"
-                    }
-                ]
-            },
-            {
-                "name": "PERMIAS Seattle",
-                "img": "../images/keraton/vendors/ayam-geprek.jpeg",
-                "menu": [
-                    {
-                        "name": "Ayam Geprek"
+                        "name":"Cemilan Sunpia"
                     },
                     {
-                        "name": "Tiramisu"
-                    }            
-                ],
-                "name2": "Pantjoeran",
-                "menu2": [
+                        "name":"Emping Pedas"
+                    },
                     {
-                        "name": "Okonomiyaki"
+                        "name":"Kacang-kacangan"
                     }
                 ]
             }
@@ -130,30 +99,61 @@
         "icon": "",
         "vendors": [
             {
-                "name": "Haus House",
-                "img": "../images/keraton/vendors/coffee.jpg",
+                "name": "ISAUW Drinks",
+                "img": "../images/keraton/2023/vendors/ISAUW-Drinks/nestea.jpeg",
                 "menu": [
                     {
-                        "name": "Kopi Susu Gula Aren"
+                        "name": "Nutrisari"
                     },
                     {
-                        "name": "Kopi Hitam"
+                        "name":"Lemon Tea"
                     },
                     {
-                        "name": "Kopi and Coconut Water"
+                        "name":"Tora Bika Coffee"
                     },
                     {
-                        "name": "Milo Dinosaur"
-                    },
-                    {
-                        "name": "Pandan Latte"
-                    },
-                    {
-                        "name": "Prepackaged Drinks"
+                        "name":"Water"
                     }
                 ],
-                "name2": "",
-                "menu2": []
+                "name2": "Seattle Best Tea",
+                "menu2": [
+                    {
+                        "name":"Jasmine Milk Tea"
+                    },
+                    {
+                        "name":"Heavy Oolong"
+                    },
+                    {
+                        "name":"Honey Jasmine"
+                    },
+                    {
+                        "name":"Black Milk Tea"
+                    }
+                ]
+            },
+            {
+                "name": "ISAUW Coffee Experience",
+                "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
+                "menu": [
+                    {
+                        "name": "Coffee"
+                    }
+                ],
+                "name2": "Seattle Best Tea",
+                "menu2": [
+                    {
+                        "name":"Jasmine Milk Tea"
+                    },
+                    {
+                        "name":"Heavy Oolong"
+                    },
+                    {
+                        "name":"Honey Jasmine"
+                    },
+                    {
+                        "name":"Black Milk Tea"
+                    }
+                ]
             }
         ]
     },
@@ -163,15 +163,45 @@
         "icon": "",
         "vendors": [
             {
-                "name": "ISAUWear",
+                "name": "Merch",
                 "img": "../images/keraton/vendors/merch.jpg",
                 "menu": [
                     {
-                        "name": "Batik"
+                        "name": "Baju Barong"
                     },
                     {
-                        "name": "Merch"
-                    }             
+                        "name": "Batik Premium"
+                    },
+                    {
+                        "name":"Batik Biasa"
+                    },
+                    {
+                        "name":"Kebaya"
+                    },
+                    {
+                        "name":"Hats"
+                    },
+                    {
+                        "name":"Sarung"
+                    },
+                    {
+                        "name": "Hoodie (S)"
+                    },
+                    {
+                        "name": "Sweater"
+                    },
+                    {
+                        "name":"Tote Bag"
+                    },
+                    {
+                        "name":"206 Hat"
+                    },
+                    {
+                        "name":"Bottle"
+                    },
+                    {
+                        "name":"Old Shirts"
+                    }                      
                 ],
                 "name2": "",
                 "menu2": []
