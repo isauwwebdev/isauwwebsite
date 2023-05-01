@@ -14,21 +14,5 @@
         "img": "../../images/keraton/2023/demxntia.jpeg",
         "insta": "https://www.instagram.com/wowdemxntia/",
         "type": "Vocalist"
-    },
-    {
-        "id": 3,
-        "name": "Charlie Burg",
-        "time": "7:50",
-        "img": "../../images/keraton/2023/charlie-burg.jpg",
-        "insta": "https://www.instagram.com/burgchar/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 4,
-        "name": "Demxntia",
-        "time": "4:50",
-        "img": "../../images/keraton/2023/demxntia.jpeg",
-        "insta": "https://www.instagram.com/wowdemxntia/",
-        "type": "Vocalist"
     }
 ]
