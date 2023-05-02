@@ -980,9 +980,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 /* Remove the old Slick Carousel Buttons */
 .slick-prev:before,
-.slick-next:before {
-	
-}
+.slick-next:before {}
 
 /* Upcoming Events Home Page */
 .home {
@@ -1242,6 +1240,10 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.all-keraton-performers {
 		flex-direction: column !important;
+	}
+
+	.all-keraton-performers .student-section {
+		margin-top: 3rem;
 	}
 }
 
@@ -1520,7 +1522,8 @@ a[type='button'] {
 }
 
 .keraton-header {
-	color: #fff9eb;;
+	color: #fff9eb;
+	;
 	font-family: 'Blackberry Three', sans-serif;
 	line-height: 1.6;
 	font-size: calc(5.2vw + 16px);
@@ -1614,10 +1617,6 @@ a[type='button'] {
 	margin: 5px 0;
 }
 
-.student-performer-details {
-	font-family: Arial, Helvetica, sans-serif;
-}
-
 .keraton-student-performer .slick-dots li.slick-active button:before {
 	color: white;
 }
@@ -1626,6 +1625,14 @@ a[type='button'] {
 	object-fit: cover;
 }
 
+.keraton-map {
+	align-items: center;
+	text-align: center;
+}
+
+.keraton-map img {
+	max-height: calc(200px + 35vw);
+}
 .student-performer-img img.framed {
 	box-shadow:
 		-50px -50px 0 -45px #6c9e74,
@@ -1635,6 +1642,10 @@ a[type='button'] {
 .slider-performer-img,
 .student-performer-img {
 	position: relative;
+}
+
+.slider-performer-img {
+	width: 85%;
 }
 
 .slider-performer-img:after {
@@ -1667,13 +1678,13 @@ a[type='button'] {
 
 .performer-name {
 	font-family: 'Blackberry One', 'sans-serif';
-	font-size: calc(2.2vw + 16px);
+	font-size: calc(2vw + 14px);
 	font-weight: 700;
 	color: #6c9e74;
 }
 
 .performer-details {
-	font-size: calc(0.6vw + 12px);
+	font-size: calc(0.6vw + 10px);
 	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
 	color: black;
@@ -1688,6 +1699,7 @@ a[type='button'] {
 .performer-img-container {
 	overflow: hidden;
 	height: 100%;
+	object-fit: cover !important;
 }
 
 .performer-img-container img {
@@ -1715,7 +1727,7 @@ a[type='button'] {
 
 .student-performer-details {
 	font-family: "Blackberry Seven";
-	font-size: calc(0.5vw + 10px);
+	font-size: calc(0.4vw + 8px);
 	font-weight: 400;
 	color: black;
 }
@@ -1733,8 +1745,7 @@ a[type='button'] {
 .keraton-student-section-header {
 	text-align: center;
 	letter-spacing: 5px;
-	padding-top: 3rem;
-	font-size: calc(40px + 1.6vw);
+	font-size: calc(24px + 1.4vw);
 	color: #6c9e74;
 	font-family: 'Blackberry Three', sans-serif;
 }
@@ -1961,9 +1972,8 @@ select:invalid {
 .keraton-faq {
 	background-color: transparent;
 }
-.keraton-faq-accordion .accordian-item {
 
-}
+.keraton-faq-accordion .accordian-item {}
 
 .keraton-faq-item .accordian-item {
 	border-bottom-color: rgba(152, 152, 152, 0.6);
@@ -2017,13 +2027,13 @@ select:invalid {
 .keraton-faq-item .accordion-button:not(.collapsed):after {
 	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
+
 /* KERATON FAQ */
 .keraton-faq {
 	background-color: transparent;
 }
-.keraton-faq-accordion .accordian-item {
 
-}
+.keraton-faq-accordion .accordian-item {}
 
 .keraton-faq-item .accordian-item {
 	border-bottom-color: rgba(152, 152, 152, 0.6);
@@ -2085,7 +2095,7 @@ select:invalid {
 
 /* KERATON SPONSORS */
 .keraton-sponsors {
-	background-color: rgb(3, 27, 40);
+	background-color: #6c9e74;
 }
 
 .keraton-sponsors-row {
@@ -2156,12 +2166,12 @@ select:invalid {
 .games-row {
 	margin-top: 20px;
 	margin-bottom: 20px;
-  }
-  
-  .games-col {
+}
+
+.games-col {
 	margin-right: 20px;
 	margin-left: 20px;
-  }
+}
 
 .back-to-top {
 	color: white;
@@ -2185,7 +2195,7 @@ select:invalid {
 }
 
 .keratonNav .navLink::after {
-	background-color: #6c9e74;
+	background-color: #fff9eb;
 }
 
 .keratonNav .navbar-brand img,
@@ -2273,14 +2283,7 @@ select:invalid {
 	border: 1px solid #6c9e74;
 } */
 
-.keraton-map {
-	width: 80% !important;
-}
-
 @media (max-width: 992px) {
-	.keraton-map {
-		width: 90% !important;
-	}
 
 	.keraton-about-row {
 		flex-direction: column;
@@ -2301,12 +2304,13 @@ select:invalid {
 		margin-left: none !important;
 		margin-right: none !important;
 	}
+
+	.slider-performer-img {
+		width: 100%;
+	}
 }
 
 @media (max-width: 768px) {
-	.keraton-map {
-		width: 95% !important;
-	}
 }
 
 .keraton-vendors-button {

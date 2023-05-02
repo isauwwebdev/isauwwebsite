@@ -1,10 +1,10 @@
 [
     {
         "id": 1,
-        "question": "How can I support Keraton?",
-        "answer": "Contribute to Keraton by donating to our GoFundMe. Every dollar makes a difference!",
-        "link": "https://gofund.me/259899c6",
-        "icon": "../images/gofundme.png"
+        "question": "What time does Keraton start?",
+        "answer": "Keraton starts at 4PM and ends at around 9PM.",
+        "link": "",
+        "icon": ""
     },
     {
         "id": 2,
