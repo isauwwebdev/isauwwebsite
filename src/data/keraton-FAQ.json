@@ -8,10 +8,10 @@
     },
     {
         "id": 2,
-        "question": "Can I volunteer in ISAUW?",
-        "answer": "Definitely! However, this year's volunteer application has closed. But don't fret! We are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They will receive merchandise and food coupons as compensation for their hard work!",
-        "link": "",
-        "icon": ""
+        "question": "Where can I find more information?",
+        "answer": "Information can be found directly on this site or through our Instagram account @isauwhuskies",
+        "link": "https://www.instagram.com/isauwhuskies/",
+        "icon": "../images/instagram-logo.png"
     },
     {
         "id": 3,

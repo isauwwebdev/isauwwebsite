@@ -39,9 +39,6 @@
                         "name": "Momogi"
                     },
                     {
-                        "name": "Beng Beng"
-                    },
-                    {
                         "name": "Aneka Sambal"
                     },
                     {
@@ -55,12 +52,6 @@
                 "menu2": [
                     {
                         "name": "Kusuka"
-                    },
-                    {
-                        "name":"Permen Kopiko"
-                    },
-                    {
-                        "name":"Silver Queen"
                     },
                     {
                         "name":"Cemilan Sunpia"
@@ -146,7 +137,7 @@
                         "name":"Sarung"
                     },
                     {
-                        "name": "Hoodie (S)"
+                        "name": "Hoodie"
                     },
                     {
                         "name": "Sweater"
@@ -156,13 +147,7 @@
                     },
                     {
                         "name":"206 Hat"
-                    },
-                    {
-                        "name":"Bottle"
-                    },
-                    {
-                        "name":"Old Shirts"
-                    }                      
+                    }                    
                 ],
                 "name2": "",
                 "menu2": []
