@@ -25,33 +25,34 @@ function OfficerCard(props) {
                 </Card.Body>
             </Card>
             <Modal
-                dialogClassName="modal-60w"
-                size="lg"
+                dialogClassName="modal-80w"
                 show={showModal}
                 onHide={() => setShowModal(false)}
                 aria-labelledby="contained-modal-title-vcenter"
+                style={{ "border-radius": "0.5rem" }}
                 centered
-                style={{ "border-radius": "0.5rem"}}
             >
                 <Modal.Header closeButton id="contained-modal-title-vcenter" style={{ "border-bottom": "none" }}>
-                    <Modal.Title className="officer-modal-main-title px-2 py-2">
-                    </Modal.Title>
                 </Modal.Header>
                 <Modal.Body className="px-3 py-4">
                     <Row className="officer-modal-information justify-content-xs-center">
-                        <Col xs={12} md={12} lg={4} className="officer-modal-profile">
-                            <img src={officerImg} style={{ width: "200px", height: "200px", "object-fit": "cover" }}></img>
-                            <h1 className="mt-2 mb-0" style={{ "font-size": "calc(0.6vw + 14px)", "font-weight": "600", "letter-spacing": "1px" }}>{officerName}</h1>
-                            <h2 className="mb-3" style={{ "font-size": "calc(0.2vw + 8px)", "letter-spacing": "2px" }}>
-                                {
-                                    (officerRole === "Director") ? 
-                                    (officerRole + " of " + officerPosition).toUpperCase() : 
-                                    (officerRole + " " + officerPosition).toUpperCase()
-                                }
-                            </h2>
+                        <Col xs={12} md={12} lg={5} className="officer-modal-profile">
+                            <div className="" style={{ "text-align": "center", "justify-content": "center", "display": "flex" }}>
+                                <img src={officerImg} style={{ "height": "400px", "width": "350px", "object-fit": "cover" }}></img>
+                            </div>
                         </Col>
-                        <Col xs={12} md={12} lg={8}>
-                            <p style={{ "font-size": "calc(0.2vw + 12px)" }}>
+                        <Col xs={12} md={12} lg={6} className="mx-1">
+                            <div className="officer-name-title">
+                                <h1 className="mt-3 mb-0" style={{ "font-size": "calc(1.2vw + 16px)", "font-weight": "600", "letter-spacing": "1px" }}>{officerName}</h1>
+                                <h2 className="mb-3 mt-1" style={{ "font-size": "calc(0.4vw + 10px)", "letter-spacing": "2px" }}>
+                                    {
+                                        (officerRole === "Director") ?
+                                            (officerRole + " of " + officerPosition).toUpperCase() :
+                                            (officerRole + " " + officerPosition).toUpperCase()
+                                    }
+                                </h2>
+                            </div>
+                            <p className="mt-4 officer-descr" style={{ "font-size": "calc(0.2vw + 12px)", "line-height": "200%" }}>
                                 {officerDescr}
                             </p>
                         </Col>
@@ -60,6 +61,9 @@ function OfficerCard(props) {
 
                     </Row>
                 </Modal.Body>
+                <Modal.Footer style={{ "border-top": "none" }}>
+
+                </Modal.Footer>
             </Modal>
         </div>
     )

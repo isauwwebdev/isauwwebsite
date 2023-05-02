@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "question": "How can I support Keraton?",
-        "answer": "Contribute to Keraton by donating to our GoFundMe. Every dollar makes a difference!",
-        "link": "https://www.gofundme.com/f/keraton-indonesia-festival-fund",
-        "icon": "../images/gofundme.png"
+        "question": "What time does Keraton start?",
+        "answer": "Keraton starts at 4PM and ends at around 9PM.",
+        "link": "",
+        "icon": ""
     },
     {
         "id": 2,
         "question": "Can I volunteer in ISAUW?",
-        "answer": "Definitely! However, this year's volunteer application has closed. But don't fret! We are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They’ll receive merchandise and food coupons as compensation for their hard work!",
+        "answer": "Definitely! However, this year's volunteer application has closed. But don't fret! We are excited to welcome new faces for next year's event. Volunteers help out our Inventory, Documentation, Event Organizing, and Creative Management teams in making sure that Keraton runs smoothly. They will receive merchandise and food coupons as compensation for their hard work!",
         "link": "",
         "icon": ""
     },
     {
         "id": 3,
         "question": "How do I pay for food?",
-        "answer": "We have cashiers located at each vendor stall. We accept credit cards, and debit cards.",
+        "answer": "We have cashiers located at each vendor stall. We only accept credit cards and debit cards.",
         "link": "",
         "icon": ""
     },
@@ -30,8 +30,8 @@
     {
         "id": 5,
         "question": "Where will Keraton be held?",
-        "answer": "UW Rainier Vista: Stevens Way NE, Seattle, WA 98195",
-        "link": "https://goo.gl/maps/JVayv7aSUjtVb9u96",
+        "answer": "UW HUB Lawn: 4001 E Stevens Way NE, Seattle, WA 98195",
+        "link": "https://goo.gl/maps/F9zn36mfR2oKENoz5",
         "icon": "../images/maps.png"
     }
 ]

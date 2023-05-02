@@ -1,5 +1,5 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {BrowserRouter, Route, Switch, NavLink, Link} from 'react-router-dom'
+import React, { useState, useRef, useEffect } from 'react';
+import { BrowserRouter, Route, Switch, NavLink, Link } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -111,7 +111,8 @@ function App() {
               {/* ISAUW Brand */}
               <Navbar.Brand href="#home">
                 <Link to="/">
-                  <img alt="isauwlogo-white" src="../images/isauwlogo-white.png" className="isauw-logo" />
+                  {keratonPage ? <img alt="isauwlogo-black" src="../images/isauwlogo-black.png" className="isauw-logo" /> :
+                    <img alt="isauwlogo-white" src="../images/isauwlogo-white.png" className="isauw-logo" />}
                 </Link>
               </Navbar.Brand>
 
@@ -119,12 +120,17 @@ function App() {
               <Navbar.Toggle aria-controls="basic-navbar-nav" className={expanded ? "hamburger-icon-open" : "hamburger-icon-close"} onClick={() => setExpanded(!expanded)} />
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto navList"> {/* ms-auto right aligns the nav links */}
-                  <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Home</NavLink>
-                  <NavLink to="/team" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Team</NavLink>
-                  <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Events</NavLink>
+                  <NavLink to="/" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Home</NavLink>
+                  <NavLink to="/team" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Team</NavLink>
+                  <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Events</NavLink>
                   {/*<NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>*/}
+<<<<<<< HEAD
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Shop</NavLink>
                   <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(true)}}>Keraton</NavLink>
+=======
+                  <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Shop</NavLink>
+                  {<NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>}
+>>>>>>> keraton-page-2023
                   {/* <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink> */}
                 </Nav>
                 {expanded && <SocialLinks />}

@@ -1,44 +1,58 @@
 [
     {
-        "id": 1,
-        "name": "Christina Sunardi",
-        "time": "4:35",
-        "img": "../../images/keraton/performers/christina.jpg",
-        "type": "Cultural"
+        "id": 2,
+        "name": "Audrey",
+        "time": "4:15",
+        "img": "../../images/keraton/performers/a2v.png",
+        "type": "Dance"
     },
     {
-        "id": 2,
-        "name": "A2V Locboy Queens",
-        "time": "4:35",
-        "img": "../../images/keraton/performers/a2v.png",
-        "type": "K-Pop Dance"
+        "id": 1,
+        "name": "Enrico's Lovers",
+        "time": "4:25",
+        "img": "../../images/keraton/performers/christina.jpg",
+        "type": "Band"
     },
     {
         "id": 3,
-        "name": "Moonlight Marmalade",
-        "time": "4:50",
+        "name": "Starkruw",
+        "time": "4:35",
         "img": "../../images/keraton/performers/moonlight.jpg",
         "type": "Dance"
     },
     {
         "id": 4,
-        "name": "ISAUW Performance",
-        "time": "5:20",
+        "name": "Celine and Jeremy",
+        "time": "4:45",
         "img": "../../images/keraton/performers/blue-band.jpeg",
-        "type": "Dance"
+        "type": "Duo"
     },
     {
         "id": 5,
-        "name": "Indonesian Cultural Association",
-        "time": "5:25",
+        "name": "ICA Tari Tradisional",
+        "time": "4:50",
         "img": "../../images/keraton/performers/blue-band.jpeg",
         "type": "Dance"
     },
     {
-        "id": 6,
-        "name": "UW Undivided XS",
-        "time": "5:40",
+        "id": 7,
+        "name": "Faith's Group",
+        "time": "5:00",
         "img": "../../images/keraton/performers/undivided.jpg",
-        "type": "Hip Hop Dance"
+        "type": "Band"
+    },
+    {
+        "id": 9,
+        "name": "Edwardo and Allegra",
+        "time": "5:15",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Sing"
+    },
+    {
+        "id": 9,
+        "name": "Wanted Aura",
+        "time": "5:35",
+        "img": "../../images/keraton/performers/undivided.jpg",
+        "type": "Dance"
     }
 ]
