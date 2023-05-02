@@ -2,17 +2,17 @@
     {
         "id": 1,
         "name": "Charlie Burg",
-        "time": "7:50",
+        "time": "7:30",
         "img": "../../images/keraton/2023/charlie-burg.jpg",
         "insta": "https://www.instagram.com/burgchar/",
-        "type": "Vocalist"
+        "type": "Headliner"
     },
     {
         "id": 2,
         "name": "Demxntia",
-        "time": "4:50",
+        "time": "6:45",
         "img": "../../images/keraton/2023/demxntia.jpeg",
         "insta": "https://www.instagram.com/wowdemxntia/",
-        "type": "Vocalist"
+        "type": "Opening"
     }
 ]

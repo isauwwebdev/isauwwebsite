@@ -6,7 +6,7 @@
         "vendors": [
             {
                 "name": "IndoCafe",
-                "img": "../images/keraton/2023/vendors/indocafe/Indocafe.jpg",
+                "img": "../images/keraton/vendors/ayam-geprek.jpeg",
                 "menu": [
                     {
                         "name": "Nasi Gila"
@@ -30,7 +30,7 @@
             },
             {
                 "name": "Solar Chapter",
-                "img": "../images/keraton/2023/vendors/SolarChapter/solar-chapter.jpg",
+                "img": "../images/keraton/vendors/tongseng.jpeg",
                 "menu": [
                     {
                         "name": "Lidi & Makaroni"
@@ -49,12 +49,6 @@
                     },
                     {
                         "name": "Kuping Gajah Mini"
-                    },
-                    {
-                        "name": "Shirt Merch"
-                    },
-                    {
-                        "name":"Kain Makna"
                     }
                 ],
                 "name2": "Waroeng Jajanan",
@@ -63,22 +57,10 @@
                         "name": "Kusuka"
                     },
                     {
-                        "name":"Teh Botol"
-                    },
-                    {
-                        "name":"Krupuk"
-                    },
-                    {
                         "name":"Permen Kopiko"
                     },
                     {
                         "name":"Silver Queen"
-                    },
-                    {
-                        "name":"Sambel"
-                    },
-                    {
-                        "name":"Kecap Manis"
                     },
                     {
                         "name":"Cemilan Sunpia"
@@ -100,7 +82,7 @@
         "vendors": [
             {
                 "name": "ISAUW Drinks",
-                "img": "../images/keraton/2023/vendors/ISAUW-Drinks/nestea.jpeg",
+                "img": "../images/keraton/vendors/coffee.jpg",
                 "menu": [
                     {
                         "name": "Nutrisari"
@@ -113,30 +95,9 @@
                     },
                     {
                         "name":"Water"
-                    }
-                ],
-                "name2": "Seattle Best Tea",
-                "menu2": [
-                    {
-                        "name":"Jasmine Milk Tea"
                     },
                     {
-                        "name":"Heavy Oolong"
-                    },
-                    {
-                        "name":"Honey Jasmine"
-                    },
-                    {
-                        "name":"Black Milk Tea"
-                    }
-                ]
-            },
-            {
-                "name": "ISAUW Coffee Experience",
-                "img": "../images/keraton/2023/vendors/ISAUWCoffeeExperience/co.jpeg",
-                "menu": [
-                    {
-                        "name": "Coffee"
+                        "name":"Coffee"
                     }
                 ],
                 "name2": "Seattle Best Tea",

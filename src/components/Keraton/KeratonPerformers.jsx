@@ -64,8 +64,8 @@ function KeratonPerformers() {
       <h1 className="py-3 keraton-section-header" style={{ marginBottom: "3vw" }}>Performers</h1>
       <Container className="performers-container" style={{ "color": "white" }}>
         <Row className="all-keraton-performers">
-          <Col sm={12} md={12} lg={6}>
-            <Row className="my-3 slider-performer-row flex-column-reverse">
+          <Col className="col" sm={12} md={12} lg={6}>
+            <Row className="my-1 slider-performer-row flex-column-reverse">
               <Col className="my-auto slider-performer-text">
                 <Slider ref={(slider1) => setNav1(slider1)} className="keraton-performer-slider" {...settingsText}>
                   {performers.map((performer) => {
@@ -88,8 +88,9 @@ function KeratonPerformers() {
               </Col>
             </Row>
           </Col>
-          <Col sm={12} md={12} lg={6}>
-            <Row style={{ "flex-direction":"column", "align-items":"center" }}>
+          <Col className="student-section" sm={12} md={12} lg={6}>
+            <h2 className="mx-3 keraton-student-section-header" style={{ marginBottom: "3vw" }}>Student Perfomers</h2> 
+            <Row className="mx-2" style={{ "flex-direction": "column", "align-items": "center" }}>
               {studentPerformers.map((student, i) => {
                 return (
                   <StudentPerformerItem index={i} student={student}></StudentPerformerItem>
@@ -106,9 +107,15 @@ function KeratonPerformers() {
 function StudentPerformerItem(props) {
   const { student, index } = props;
   return (
-    <Col sm={12} md={12} lg={10} className="mx-2 my-2">
-      <h2 className="student-performer-name">{student.name}</h2>
-      <h3 className="student-performer-details">{student.type + "\t|\t" + student.time}</h3>
+    <Col sm={12} md={12} lg={10} className="mx-2 my-3">
+      <Row className="student-performers justify-content-between">
+        <Col className="col-7 my-auto">
+          <h2 className="student-performer-name my-auto">{student.name}</h2>
+        </Col>
+        <Col className="col-3 my-auto">
+          <h3 style={{"text-align":"right"}} className="student-performer-details my-auto">{student.type + "\t|\t" + student.time}</h3>
+        </Col>
+      </Row>
     </Col>
   )
 }
