@@ -10,7 +10,7 @@ function KeratonFAQ() {
     )
   })
   return (
-    <div className="keraton-faq" style={{"background-color": "#031B28", paddingTop: "5rem", paddingBottom: "5rem"}}>
+    <div className="keraton-faq" style={{ paddingTop: "5rem", paddingBottom: "5rem"}}>
       <Container>
         <h1 className="py-3 keraton-section-header">FAQ</h1>
         <Accordion defaultActiveKey="0" flush className="keraton-faq-accordion">
@@ -36,7 +36,9 @@ function Item(props) {
             </img>
           </a>
         }
-        {item.answer}
+        <div>
+          {item.answer}
+        </div>
       </Accordion.Body>
     </Accordion.Item>
   )

@@ -14,6 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import { mdiFoodTakeoutBoxOutline } from '@mdi/js'; 
 
 import vendorList from '../../data/keraton-vendors';
+import { MdSettingsInputAntenna } from 'react-icons/md';
 
 function KeratonVendors() {
   const [nav1, setNav1] = useState();
@@ -29,13 +30,14 @@ function KeratonVendors() {
     infinite: false,
     pauseOnFocus: true,
     pauseOnHover: true,
-    centerMode: true
+    centerMode: true,
   };
 
   const bigSettings = {
     asNavFor: nav1,
     dots: false,
-    speed: 500,
+    arrows: true,
+    speed: 600,
     swipe: false,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -45,18 +47,18 @@ function KeratonVendors() {
   };
 
   const miniSettings = {
-    speed: 500,
+    speed: 600,
+    autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     infinite: false,
     pauseOnHover: false,
-    autoplaySpeed: 5000,
     dots: true,
   };
 
   return (
-    <div className="keraton-performers py-5" style={{backgroundColor: "#031B28", color: "white"}}>
+    <div className="keraton-performers py-5" style={{ color: "white"}}>
       <Container>
         <h1 className="py-3 keraton-section-header">Vendors</h1>
         <Row className="my-5 keraton-vendors-row">
@@ -86,19 +88,19 @@ function KeratonVendors() {
                         <Row className="keraton-vendors-img-row" style={{margin: "0"}}>
                           <Col xs={6} sm={5} style={{paddingRight: "0", paddingLeft: `calc(2px + 0.6vw)`}}>
                             <div style={{paddingRight: `calc(1.6vw)`, paddingTop: `calc(24px + 1.2vw)`, paddingBottom: `calc(8px + 1.2vw)`, textAlign: "right", height: "100%", display: "flex", flexDirection: "column"}}>
-                              <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name}</h1>
+                              <h1 style={{fontFamily: "Blackberry One, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74" }}>{vendor.name}</h1>
                               {vendor.menu.map((menuItem) => {
                                 return (
-                                  <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(11px + 0.6vw)`}}>
+                                  <div style={{fontFamily: "Blackberry Seven, sans-serif", fontWeight: "400", fontSize: `calc(11px + 0.6vw)`, color: "black"}}>
                                     {menuItem.name}
                                   </div>
                                 )
                               })}
                               <div style={{marginTop: "auto"}}>
-                                <h1 style={{fontFamily: "Graphik, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px"}}>{vendor.name2}</h1>
+                                <h1 style={{fontFamily: "Blackberry One, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74"}}>{vendor.name2}</h1>
                                 {vendor.menu2.map((menuItem) => {
                                   return (
-                                    <div style={{fontFamily: "Graphik, sans-serif", fontWeight: "400", fontSize: `calc(12px + 0.6vw)`}}>
+                                    <div style={{fontFamily: "Blackberry Seven, sans-serif", fontWeight: "400", fontSize: `calc(12px + 0.6vw)`, color: "black"}}>
                                       {menuItem.name}
                                     </div>
                                   )

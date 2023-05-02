@@ -31,13 +31,13 @@ function DisplayBlocks(props) {
   const {timeArray, stringArray} = props;
   const displayTime = timeArray.map((time, i) => {
     return (
-      <Col xs={2} sm={2} lg={2} className="">
+      <Col className="col-6 mx-auto">
         <TimeBlock time={time} stringArray={stringArray} index={i}></TimeBlock>
       </Col>
     )
   });
   return (
-    <Row className="countdown-row justify-content-center my-5">
+    <Row className="countdown-row justify-content-center mb-3 mx-auto">
       {displayTime}
     </Row>
   )
@@ -46,7 +46,7 @@ function DisplayBlocks(props) {
 function TimeBlock(props) {
   const {time, stringArray, index} = props;
   return (
-    <Card className="keraton-countdown-card">
+    <Card className="keraton-countdown-card col-6 mx-auto px-2 py-2 my-2">
       <Card.Title className="countdown-title">{time}</Card.Title>
       <Card.Title className="countdown-sub-title">{stringArray[index].toUpperCase()}</Card.Title>
     </Card>

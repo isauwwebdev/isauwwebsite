@@ -1,50 +1,18 @@
 [
     {
         "id": 1,
-        "name": "Dhruv",
-        "time": "7:50",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Vocalist"
+        "name": "Charlie Burg",
+        "time": "7:30",
+        "img": "../../images/keraton/2023/charlie-burg.jpg",
+        "insta": "https://www.instagram.com/burgchar/",
+        "type": "Headliner"
     },
     {
         "id": 2,
-        "name": "Xavier Weeks",
-        "time": "4:50",
-        "img": "../../images/keraton/performers/xavier-weeks.jpg",
-        "insta": "https://www.instagram.com/xavierweeks/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 3,
-        "name": "Lullaboy",
+        "name": "Demxntia",
         "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 4,
-        "name": "Dhruv",
-        "time": "7:50",
-        "img": "../../images/keraton/performers/dhruv.jpg",
-        "insta": "https://www.instagram.com/dhrvie/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 5,
-        "name": "Xavier Weeks",
-        "time": "4:50",
-        "img": "../../images/keraton/performers/xavier-weeks.jpg",
-        "insta": "https://www.instagram.com/xavierweeks/",
-        "type": "Vocalist"
-    },
-    {
-        "id": 6,
-        "name": "Lullaboy",
-        "time": "6:45",
-        "img": "../../images/keraton/performers/lullaboy.jpg",
-        "insta": "https://www.instagram.com/lullaboyxo/",
-        "type": "Vocalist"
+        "img": "../../images/keraton/2023/demxntia.jpeg",
+        "insta": "https://www.instagram.com/wowdemxntia/",
+        "type": "Opening"
     }
 ]

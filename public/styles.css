@@ -6,6 +6,76 @@ body,
 }
 
 @font-face {
+	font-family: 'Intro Rust';
+	src: url('../fonts/intro-rust/IntroRust-Base.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Dingbats';
+	src: url('../fonts/Blackberry/Blackberry-Dingbats.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Eight';
+	src: url('../fonts/Blackberry/Blackberry-Eight.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Five';
+	src: url('../fonts/Blackberry/Blackberry-Five.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Flags';
+	src: url('../fonts/Blackberry/Blackberry-Flags.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry One';
+	src: url('../fonts/Blackberry/Blackberry-One.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Seven';
+	src: url('../fonts/Blackberry/Blackberry-Seven.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Six';
+	src: url('../fonts/Blackberry/Blackberry-Six.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Three';
+	src: url('../fonts/Blackberry/Blackberry-Three.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Blackberry Two';
+	src: url('../fonts/Blackberry/Blackberry-Two.woff2') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
 	font-family: 'Graphik';
 	src: url('../fonts/Graphik/GraphikBlack.otf') format('opentype');
 	font-weight: 800;
@@ -317,7 +387,7 @@ p {
 
 	.keraton-performer-slider .slick-current .performer-name,
 	.keraton-student-performer .slick-current .student-performer-name {
-		color: rgb(247 213 161);
+		color: #6c9e74;
 	}
 }
 
@@ -373,6 +443,26 @@ p {
 .hamburger-icon-close span {
 	width: 0px;
 	height: 0px;
+}
+
+.keratonNav .hamburger-icon-close span::before,
+.keratonNav .hamburger-icon-close span::after {
+	background: #fff9eb !important;
+}
+
+.keratonNav .hamburger-icon-open span::before,
+.keratonNav .hamburger-icon-open span::after {
+	background: #fff9eb !important;
+}
+
+.keratonHide .hamburger-icon-close span::before,
+.keratonHide .hamburger-icon-close span::after {
+	background: #fff9eb !important;
+}
+
+.keratonHide .hamburger-icon-open span::before,
+.keratonHide .hamburger-icon-open span::after {
+	background: #fff9eb !important;
 }
 
 .hamburger-icon-close span::before,
@@ -890,9 +980,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 /* Remove the old Slick Carousel Buttons */
 .slick-prev:before,
-.slick-next:before {
-	display: none;
-}
+.slick-next:before {}
 
 /* Upcoming Events Home Page */
 .home {
@@ -1142,9 +1230,25 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 		flex-direction: column;
 	}
 
-	.officer-modal-profile {
+	.officer-name-title {
 		align-items: center;
 		text-align: center;
+	}
+
+	.officer-descr {
+		padding: 1rem;
+	}
+
+	.modal-body {
+		padding: 2rem;
+	}
+
+	.all-keraton-performers {
+		flex-direction: column !important;
+	}
+
+	.all-keraton-performers .student-section {
+		margin-top: 3rem;
 	}
 }
 
@@ -1155,6 +1259,7 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.student-performer-name,
 	.student-performer-details {
+		color: #6c9e74;
 		padding: 0;
 	}
 }
@@ -1432,16 +1537,28 @@ a[type='button'] {
 	margin: 0px;
 	padding: 0px;
 	overflow-x: hidden;
-	background-color: "#031B28";
+	color: #1f1f1f;
+	background-color: #fff9eb;
 }
 
 .keraton-header {
-	font-family: 'Monoton', cursive;
-	font-size: calc(3.2vw + 22px);
+	color: #fff9eb;
+	;
+	font-family: 'Blackberry Three', sans-serif;
+	line-height: 1.6;
+	font-size: calc(5.2vw + 16px);
 	text-shadow: #606060 0px 0px 10px;
 	letter-spacing: calc(12px + 1.2vw);
 	margin-right: calc(-1 * (12px + 1.2vw));
 	/* counteract the letter spacing for the last letter because the title won't be centered o.w. */
+}
+
+.keraton-sub-header {
+	font-family: 'Blackberry Five', sans-serif;
+	line-height: 1.6;
+	color: #fff9eb;
+	letter-spacing: calc(12px + 1.6vw);
+	font-size: calc(2.2vw + 12px);
 }
 
 .keraton-completed {
@@ -1466,7 +1583,6 @@ a[type='button'] {
 		top: 0;
 		bottom: 70%;
 		content: "";
-		background: linear-gradient(0deg, transparent, #031B28);
 		z-index: 99;
 	}
 
@@ -1477,7 +1593,6 @@ a[type='button'] {
 		top: 70%;
 		bottom: 0;
 		content: "";
-		background: linear-gradient(0deg, #031B28, transparent);
 		z-index: 99;
 	}
 }
@@ -1500,6 +1615,19 @@ a[type='button'] {
 	margin: 0;
 }
 
+.keraton-performer-slider2 .slick-next:before {
+	font-family: "FontAwesome";
+	content: "\f054";
+	color: #6c9e74;
+	font-size: calc(1.2vw + 10px);
+	opacity: 1;
+}
+
+.keraton-performer-slider .slick-next,
+.keraton-performer-slider .slick-prev {
+	display: none !important;
+}
+
 .keraton-student-performer .slick-dots li button:before {
 	color: white;
 	font-size: calc(0.2vw + 6px);
@@ -1507,10 +1635,6 @@ a[type='button'] {
 
 .keraton-student-performer .slick-dots {
 	margin: 5px 0;
-}
-
-.student-performer-details {
-	font-family: Arial, Helvetica, sans-serif;
 }
 
 .keraton-student-performer .slick-dots li.slick-active button:before {
@@ -1521,15 +1645,27 @@ a[type='button'] {
 	object-fit: cover;
 }
 
+.keraton-map {
+	align-items: center;
+	text-align: center;
+}
+
+.keraton-map img {
+	max-height: calc(200px + 35vw);
+}
 .student-performer-img img.framed {
 	box-shadow:
-		-50px -50px 0 -45px rgb(247 213 161),
-		50px 50px 0 -45px rgb(247 213 161);
+		-50px -50px 0 -45px #6c9e74,
+		50px 50px 0 -45px #6c9e74;
 }
 
 .slider-performer-img,
 .student-performer-img {
 	position: relative;
+}
+
+.slider-performer-img {
+	width: 85%;
 }
 
 .slider-performer-img:after {
@@ -1540,8 +1676,8 @@ a[type='button'] {
 	position: absolute;
 	top: -10px;
 	right: -10px;
-	border-top: 10px solid rgb(247 213 161);
-	border-right: 10px solid rgb(247 213 161);
+	border-top: 10px solid #6c9e74;
+	border-right: 10px solid #6c9e74;
 }
 
 .slider-performer-img:before {
@@ -1552,37 +1688,38 @@ a[type='button'] {
 	position: absolute;
 	bottom: -10px;
 	left: -10px;
-	border-bottom: 10px solid rgb(247 213 161);
-	border-left: 10px solid rgb(247 213 161);
+	border-bottom: 10px solid #6c9e74;
+	border-left: 10px solid #6c9e74;
 }
 
 .slider-performer-row {
 	display: flex;
 }
 
-.slick-vertical .slick-current {
-	color: rgb(247 213 161);
-}
-
 .performer-name {
-	font-size: calc(2.2vw + 18px);
+	font-family: 'Blackberry One', 'sans-serif';
+	font-size: calc(2vw + 14px);
 	font-weight: 700;
+	color: #6c9e74;
 }
 
 .performer-details {
-	font-size: calc(0.6vw + 12px);
-	font-family: 'Graphik', 'sans-serif';
+	font-size: calc(0.6vw + 10px);
+	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
+	color: black;
 }
 
 .performer-social {
 	color: inherit;
 	text-decoration: inherit;
+	color: #6c9e74;
 }
 
 .performer-img-container {
 	overflow: hidden;
 	height: 100%;
+	object-fit: cover !important;
 }
 
 .performer-img-container img {
@@ -1602,41 +1739,43 @@ a[type='button'] {
 }
 
 .student-performer-name {
-	font-size: calc(1.4vw + 14px);
+	font-family: "Blackberry One";
+	font-size: calc(0.6vw + 10px);
 	font-weight: 700;
+	color: #6c9e74;
 }
 
 .student-performer-details {
-	font-size: calc(0.5vw + 10px);
+	font-family: "Blackberry Seven";
+	font-size: calc(0.4vw + 8px);
 	font-weight: 400;
-	font-family: 'Graphik', 'sans-serif';
+	color: black;
 }
 
 .keraton-section-header {
 	text-align: center;
 	letter-spacing: 5px;
 	padding-top: 3rem;
-	font-size: calc(40px + 2.0vw);
-	color: rgb(247 213 161);
-	background-color: #031B28;
-	font-family: 'palm-canyon';
+	font-size: calc(32px + 2.0vw);
+	color: #6c9e74;
+	opacity: 100%;
+	font-family: 'Blackberry Three', sans-serif;
 }
 
 .keraton-student-section-header {
 	text-align: center;
 	letter-spacing: 5px;
-	padding-top: 3rem;
-	font-size: calc(40px + 1.6vw);
-	color: rgb(247 213 161);
-	background-color: #031B28;
-	font-family: 'palm-canyon';
+	font-size: calc(24px + 1.4vw);
+	color: #6c9e74;
+	font-family: 'Blackberry Three', sans-serif;
 }
 
 .keraton-about-text {
-	text-align: left;
-	font-family: "Graphik";
+	text-align: center;
+	line-height: 3;
+	font-family: 'Blackberry Seven', 'sans-serif';
 	font-weight: 400;
-	color: white;
+	color: rgb(0, 0, 0);
 }
 
 .keraton-countdown-card {
@@ -1646,7 +1785,8 @@ a[type='button'] {
 	display: flex;
 	border: none;
 	border-radius: 10px;
-	background: transparent;
+	background-color: transparent;
+	margin: 0;
 }
 
 .countdown-row {
@@ -1656,21 +1796,16 @@ a[type='button'] {
 }
 
 .countdown-title {
-	font-family: 'Roboto Condensed';
-	font-stretch: condensed;
-	font-size: calc(15px + 1.5vw);
-	font-weight: 750;
-	color: white;
-	letter-spacing: 1.5px;
+	font-size: calc(22px + 1.8vw);
+	font-family: 'Blackberry Five', sans-serif;
+	color: #6c9e74;
+	letter-spacing: 2px;
 }
 
 .countdown-sub-title {
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-	font-stretch: condensed;
-	font-size: calc(10px + 1.1vw);
-	letter-spacing: 1.5px;
-	font-weight: 500;
-	color: white;
+	font-size: calc(6px + 0.8vw);
+	font-weight: 600;
+	color: #6c9e74;
 }
 
 .shop-btn {
@@ -1805,7 +1940,7 @@ select:invalid {
 	display: block;
 	width: 100%;
 	height: 100%;
-	border: 2px solid rgb(247 213 161);
+	border: 2px solid #6c9e74;
 	position: absolute;
 	top: calc(-1 * (8px + 1.2vw));
 	right: calc(-1 * (8px + 1.2vw));
@@ -1852,16 +1987,22 @@ select:invalid {
 .keraton-vendors-category .slick-slide {
 	/* space between icons and slides */
 	margin: 16px;
+	color: rgba(108, 158, 116, 0.45)
 }
 
 /* KERATON FAQ */
-.keraton-faq,
-.keraton-faq-item {
-	background-color: #031B28;
+.keraton-faq {
+	background-color: transparent;
 }
 
-.keraton-faq-item {
+.keraton-faq-accordion .accordian-item {}
+
+.keraton-faq-item .accordian-item {
 	border-bottom-color: rgba(152, 152, 152, 0.6);
+}
+
+.keraton-faq-item-header {
+	background-color: grey;
 }
 
 .keraton-faq-item-header .accordion-button:focus {
@@ -1877,24 +2018,28 @@ select:invalid {
 
 /* accordion button */
 .keraton-faq-item-header .accordion-button {
-	color: white;
+	background-color: #fff9eb;
+	color: #6c9e74;
 	font-size: calc(13px + 0.35vw);
 	font-family: "Open Sans";
 	font-weight: 600;
-	background-color: #031B28;
 	border-top: none;
+	box-shadow: none;
 }
 
 /* accordion body */
 .keraton-faq-item .accordion-body {
-	color: white;
+	background-color: #fff9eb;
 	font-size: calc(11px + 0.3vw);
+	font-weight: 300;
+	color: #6c9e74;
 	padding-top: 0 !important;
 	padding-bottom: 2rem !important;
 }
 
 .keraton-faq-item-header .accordion-button:not(.collapsed) {
-	color: rgb(247 213 161)
+	color: #6c9e74;
+	box-shadow: none;
 }
 
 .keraton-faq-item .accordion-button:after {
@@ -1905,9 +2050,74 @@ select:invalid {
 	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
+/* KERATON FAQ */
+.keraton-faq {
+	background-color: transparent;
+}
+
+.keraton-faq-accordion .accordian-item {}
+
+.keraton-faq-item .accordian-item {
+	border-bottom-color: rgba(152, 152, 152, 0.6);
+}
+
+.keraton-faq-item-header {
+	background-color: grey;
+}
+
+.keraton-faq-item-header .accordion-button:focus {
+	box-shadow: none;
+	border-color: rgba(0, 0, 0, .125);
+}
+
+/* accordion area, minus section header */
+.keraton-faq-accordion {
+	padding-top: 1.5rem;
+	padding-bottom: 3rem;
+}
+
+/* accordion button */
+.keraton-faq-item-header .accordion-button {
+	background-color: #fff9eb;
+	color: #6c9e74;
+	font-size: calc(13px + 0.35vw);
+	font-family: "Blackberry One" !important;
+	font-weight: 600;
+	border-top: none;
+	box-shadow: none;
+}
+
+/* accordion body */
+.keraton-faq-item .accordion-body {
+	background-color: #fff9eb;
+	font-size: calc(11px + 0.3vw);
+	font-weight: bolder;
+	color: #1f1f1f;
+	font-family: "Blackberry Seven" !important;
+	padding-top: 0 !important;
+	padding-bottom: 2rem !important;
+}
+
+.keraton-faq-item-header .accordion-button:not(.collapsed) {
+	color: #6c9e74;
+	box-shadow: none;
+}
+
+.keraton-faq-item .accordion-button:after {
+	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.keraton-faq-item .accordion-button:not(.collapsed):after {
+	background-image: url("data:image/svg+xml,<svg xmlns='https://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff5470'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.keraton-faq-item-header .accordion-header {
+	font-family: "Blackberry One" !important;
+}
+
 /* KERATON SPONSORS */
 .keraton-sponsors {
-	background-color: rgb(3, 27, 40);
+	background-color: #6c9e74;
 }
 
 .keraton-sponsors-row {
@@ -1938,24 +2148,25 @@ select:invalid {
 
 /* KERATON GAMES */
 .keraton-games-image {
-	width: 100%;
+	/* width: 100%;
 	height: 100%;
 	opacity: 0;
 	object-fit: cover;
 	transition: .5s ease;
 	position: absolute;
 	left: 0;
-	top: 0;
+	top: 0; */
+	padding: 0;
 }
 
 .keraton-games-text {
 	text-align: center;
-	font-size: calc(32px + 2.4vw);
-	font-family: 'signatura_monoline_script';
-	color: rgb(247 213 161);
+	font-size: calc(15px + 1.1vw);
+	font-family: 'Blackberry One';
+	color: #6c9e74;
 	/* DELETE THIS LINE WHEN REVERTING */
 	/* -webkit-text-fill-color: transparent;
-	-webkit-text-stroke: 1px rgb(247 213 161); */
+	-webkit-text-stroke: 1px #6c9e74; */
 	opacity: 1;
 	transition: 0.5s ease-in-out;
 	padding: 12px;
@@ -1971,34 +2182,17 @@ select:invalid {
 	transition: .5s ease;
 	width: 100%;
 	overflow: hidden;
+	object-fit: cover;
 }
 
-.keraton-games-container:hover .keraton-games-image {
-	opacity: 0.5;
+.games-row {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
-/* .keraton-games-container:hover .keraton-games-text {
-	-webkit-text-fill-color: rgb(247 213 161);
-} */
-.keraton-games-overlay-top {
-	top: 0;
-	height: 30.88%;
-	background: linear-gradient(0deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
-	position: absolute;
-	left: 0;
-	width: 100%;
-	z-index: 1;
-}
-
-.keraton-games-overlay-btm {
-	bottom: 0;
-	height: 30.88%;
-	background: linear-gradient(180deg, rgba(31, 37, 52, 0) 0%, rgb(3, 27, 40) 90%);
-	position: absolute;
-	left: 0;
-	width: 100%;
-	opacity: 1.0;
-	transition: .5s ease;
+.games-col {
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 .back-to-top {
@@ -2006,7 +2200,7 @@ select:invalid {
 }
 
 .keratonNav {
-	background-color: white;
+	background-color: #6c9e74;
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 }
@@ -2019,24 +2213,20 @@ select:invalid {
 .keratonHide .navLinkeActive,
 .keratonHide .navLink-fade-up::after,
 .keratonHide .nav-social-icon {
-	color: #031B28;
+	color: #fff9eb;
 }
 
 .keratonNav .navLink::after {
-	background-color: #031B28;
+	background-color: #fff9eb;
 }
 
-.keratonNav .navbar-brand img {
-	filter: invert(92%) sepia(34%) saturate(2202%) hue-rotate(171deg) brightness(93%) contrast(98%);
-}
-
-.keratonNav .hamburger-icon-close .navbar-toggler-icon,
-.keratonNav .hamburger-icon-open .navbar-toggler-icon {
-	filter: invert(92%) sepia(34%) saturate(2202%) hue-rotate(171deg) brightness(93%) contrast(98%);
+.keratonNav .navbar-brand img,
+.keratonHide .navbar-brand img {
+	filter: invert(79%) sepia(3%) saturate(2632%) hue-rotate(321deg) brightness(125%) contrast(108%);
 }
 
 .keratonHide {
-	background-color: white;
+	background-color: #6c9e74;
 	-webkit-transition: all .2s ease-out;
 	transition: all .2s ease-out;
 	-webkit-transform: translateY(-100%);
@@ -2048,7 +2238,7 @@ select:invalid {
 }
 
 .keratonNav .footer-social-icon {
-	color: #031B28;
+	color: black;
 	z-index: 1;
 }
 
@@ -2077,15 +2267,20 @@ select:invalid {
 	height: 100%;
 	object-position: center;
 	object-fit: cover;
-	border-radius: 221px 221px 0 0;
+	border-radius: 161px 161px 0 0;
 	position: relative;
-	max-width: 441px;
+	max-width: 321px;
 	display: block;
+}
+
+.keraton-header-component {
+	text-align: center;
+	align-items: center;
 }
 
 .testing {
 	position: relative;
-	width: 75%;
+	width: 100%;
 	height: 100%;
 }
 
@@ -2097,7 +2292,7 @@ select:invalid {
 
 }
 
-.testing::after {
+/* .testing::after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -2107,23 +2302,37 @@ select:invalid {
 	position: absolute;
 	transform: translate(calc(8px + 1.2vw), calc(12px + 1.2vw));
 	border-radius: 221px 221px 0 0;
-	border: 1px solid rgb(247 213 161);
-}
-
-.keraton-map {
-	width: 80% !important;
-}
+	border: 1px solid #6c9e74;
+} */
 
 @media (max-width: 992px) {
-	.keraton-map {
-		width: 90% !important;
+
+	.keraton-about-row {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.keraton-about-text {
+		padding: none !important;
+		margin: none !important;
+		text-align: center;
+	}
+
+	.keraton-section-header {
+		padding-left: none !important;
+		padding-right: none !important;
+
+		margin-left: none !important;
+		margin-right: none !important;
+	}
+
+	.slider-performer-img {
+		width: 100%;
 	}
 }
 
 @media (max-width: 768px) {
-	.keraton-map {
-		width: 95% !important;
-	}
 }
 
 .keraton-vendors-button {
@@ -2135,6 +2344,10 @@ select:invalid {
 	transition: all 0.2s ease-in-out;
 	border: none;
 	background-color: transparent;
+}
+
+.keraton-vendors-category .slick-current {
+	color: #6c9e74;
 }
 
 .position-descr-slider .slick-list .slick-track {
@@ -2178,12 +2391,12 @@ select:invalid {
 	border-radius: 1.5rem !important;
 	text-transform: capitalize !important;
 	-webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 	box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 6px 0 rgb(0 0 0 / 8%);
 }
 
@@ -2195,4 +2408,13 @@ select:invalid {
 	background-color: rgba(129, 27, 20, 1.0);
 	transition: transform .6s;
 	color: white;
+}
+
+.modal-80w {
+	width: 80vw;
+	max-width: 80vw;
+}
+
+.modal-dialog {
+	margin: auto;
 }
