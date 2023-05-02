@@ -1652,6 +1652,7 @@ a[type='button'] {
 .keraton-map img {
 	max-height: calc(200px + 35vw);
 }
+
 .student-performer-img img.framed {
 	box-shadow:
 		-50px -50px 0 -45px #6c9e74,
@@ -2222,6 +2223,10 @@ select:invalid {
 .keratonNav .navbar-brand img,
 .keratonHide .navbar-brand img {
 	filter: invert(79%) sepia(3%) saturate(2632%) hue-rotate(321deg) brightness(125%) contrast(108%);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
 }
 
 .keratonHide {
@@ -2330,14 +2335,13 @@ select:invalid {
 		width: 100%;
 	}
 
-	.keraton-about-text, 
+	.keraton-about-text,
 	.keraton-about .keraton-section-header {
 		text-align: center !important;
 	}
 }
 
-@media (max-width: 768px) {
-}
+@media (max-width: 768px) {}
 
 .keraton-vendors-button {
 	height: fit-content;
