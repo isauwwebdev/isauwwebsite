@@ -112,7 +112,7 @@ function StudentPerformerItem(props) {
         <Col className="col-7 my-auto">
           <h2 className="student-performer-name my-auto">{student.name}</h2>
         </Col>
-        <Col className="col-3 my-auto">
+        <Col className="col-4">
           <h3 style={{"text-align":"right"}} className="student-performer-details my-auto">{student.type + "\t|\t" + student.time}</h3>
         </Col>
       </Row>

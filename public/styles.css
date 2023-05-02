@@ -424,11 +424,11 @@ p {
 }
 
 .navbar-overlay {
-	height: 100%;
+	height: 100% !important;
 }
 
 .navbar-overlay:before {
-	height: 100%;
+	height: 100% !important;
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1259,7 +1259,6 @@ div:not(.slick-disabled):not(.no-hover)>i:hover {
 
 	.student-performer-name,
 	.student-performer-details {
-		color: #6c9e74;
 		padding: 0;
 	}
 }
@@ -1704,10 +1703,10 @@ a[type='button'] {
 }
 
 .performer-details {
-	font-size: calc(0.6vw + 10px);
-	font-family: 'Blackberry Seven', 'sans-serif';
+	font-size: calc(0.6vw + 12px);
+	font-family: 'Intro Rust', 'sans-serif';
+	color: rgba(0, 0, 0, 0.5);
 	font-weight: 400;
-	color: black;
 }
 
 .performer-social {
@@ -1746,10 +1745,10 @@ a[type='button'] {
 }
 
 .student-performer-details {
-	font-family: "Blackberry Seven";
-	font-size: calc(0.4vw + 8px);
+	font-size: calc(0.4vw + 10px);
 	font-weight: 400;
-	color: black;
+	font-family: 'Intro Rust', 'sans-serif';
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .keraton-section-header {
@@ -1771,11 +1770,10 @@ a[type='button'] {
 }
 
 .keraton-about-text {
-	text-align: center;
+	text-align: left;
 	line-height: 3;
-	font-family: 'Blackberry Seven', 'sans-serif';
-	font-weight: 400;
-	color: rgb(0, 0, 0);
+	font-family: 'Intro Rust', 'sans-serif';
+	color: rgba(0, 0, 0, 0.5);
 }
 
 .keraton-countdown-card {
@@ -1805,6 +1803,7 @@ a[type='button'] {
 .countdown-sub-title {
 	font-size: calc(6px + 0.8vw);
 	font-weight: 600;
+	font-family: 'Blackberry One', sans-serif;
 	color: #6c9e74;
 }
 
@@ -2092,8 +2091,8 @@ select:invalid {
 	background-color: #fff9eb;
 	font-size: calc(11px + 0.3vw);
 	font-weight: bolder;
-	color: #1f1f1f;
-	font-family: "Blackberry Seven" !important;
+	font-family: 'Intro Rust', 'sans-serif' !important;
+	color: rgba(0, 0, 0, 0.5);
 	padding-top: 0 !important;
 	padding-bottom: 2rem !important;
 }
@@ -2329,6 +2328,11 @@ select:invalid {
 
 	.slider-performer-img {
 		width: 100%;
+	}
+
+	.keraton-about-text, 
+	.keraton-about .keraton-section-header {
+		text-align: center !important;
 	}
 }
 

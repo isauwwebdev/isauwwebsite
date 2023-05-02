@@ -8,7 +8,7 @@ import KeratonCountdown from './KeratonCountdown';
 function KeratonAbout() {
   return (
     <div style={{}}>
-      <Container className="keraton-about" style={{ paddingTop: "3rem", paddingBottom: "7rem" }}>
+      <Container className="keraton-about" style={{ paddingTop: "3rem", paddingBottom: "3rem" }}>
         <h1 className="py-4 keraton-section-header" style={{ marginLeft: "12px" }}>About</h1>
         <Row className="keraton-about-row">
           <Col className="my-auto" xs={12} sm={12} md={6} lg={6} style={{ padding: "0" }}>
