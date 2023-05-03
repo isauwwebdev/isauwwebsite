@@ -91,7 +91,7 @@ function KeratonVendors() {
                               <h1 style={{fontFamily: "Blackberry One, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.4vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74" }}>{vendor.name}</h1>
                               {vendor.menu.map((menuItem) => {
                                 return (
-                                  <div style={{fontFamily: "Intro Rust, sans-serif", fontWeight: "400", fontSize: `calc(10px + 0.4vw)`, color: "rgba(0, 0, 0, 0.5)" }}>
+                                  <div style={{fontFamily: "Intro Rust, sans-serif", fontWeight: "400", fontSize: `calc(9px + 0.3vw)`, color: "rgba(0, 0, 0, 0.5)" }}>
                                     {menuItem.name}
                                   </div>
                                 )
@@ -100,7 +100,7 @@ function KeratonVendors() {
                                 <h1 style={{fontFamily: "Blackberry One, sans-serif", fontWeight: "500", fontSize: `calc(12px + 1.2vw)`, marginBottom: "2px", marginLeft: "6px", color: "#6c9e74"}}>{vendor.name2}</h1>
                                 {vendor.menu2.map((menuItem) => {
                                   return (
-                                    <div style={{fontFamily: "Intro Rust, sans-serif", fontWeight: "400", fontSize: `calc(10px + 0.4vw)`, color: "rgba(0, 0, 0, 0.5)" }}>
+                                    <div style={{fontFamily: "Intro Rust, sans-serif", fontWeight: "400", fontSize: `calc(9px + 0.3vw)`, color: "rgba(0, 0, 0, 0.5)" }}>
                                       {menuItem.name}
                                     </div>
                                   )

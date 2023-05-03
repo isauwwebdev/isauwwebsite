@@ -1746,7 +1746,7 @@ a[type='button'] {
 }
 
 .student-performer-details {
-	font-size: calc(0.4vw + 10px);
+	font-size: calc(0.3vw + 10px);
 	font-weight: 400;
 	font-family: 'Intro Rust', 'sans-serif';
 	color: rgba(0, 0, 0, 0.5);
