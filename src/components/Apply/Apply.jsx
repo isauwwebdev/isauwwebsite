@@ -191,7 +191,7 @@ function Apply() {
         <Row className="justify-content-center">
           <Col xs={12} sm={10} md={8} lg={6} className="my-5">
             <div>
-              <h1><strong>'22-'23 ISAUW Officer Application</strong></h1>
+              <h1><strong>'23-'24 ISAUW Officer Application</strong></h1>
               <p style={{fontSize: "14px"}}>
                 We are thrilled to welcome new members to ISAUW this year!
                 Please fill in the form below to apply.
