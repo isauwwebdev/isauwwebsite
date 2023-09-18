@@ -125,8 +125,8 @@ function App() {
                   <NavLink to="/events" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Events</NavLink>
                   {/*<NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>*/}
                   <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Shop</NavLink>
-                  {<NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>}
-                  {/* <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink> */}
+                  <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>
+                  <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink>
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
@@ -141,7 +141,7 @@ function App() {
           <Route path="/shop" component={Shop} />
           <Route path="/keraton" component={Keraton} />
           <Route path="/team" component={Officers} />
-          {/* <Route path="/apply" component={Apply} /> */}
+          <Route path="/apply" component={Apply} />
         </Switch>
 
         {/* {renderPopUp()} */}
