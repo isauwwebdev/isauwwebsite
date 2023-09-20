@@ -139,14 +139,14 @@ function Apply() {
       };
 
       // upload to Google Drive
-      fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbxXwkFe5q8D_2mv2mHZrhGDht44YfNXVGIu3bu5_l5vZx4C6_9OBwzLP9vESi3NtvyW/exec', {method: 'POST', body: JSON.stringify(dataSend), mode: 'no-cors', 
+      fetch('https://script.google.com/a/macros/uw.edu/s/AKfycby1bv3HsU4lBqypa4JHfsxeLQoY2Pw4-t6jEZigCkgzAk4PDg-stSU67TXvNawRt5BF/exec', {method: 'POST', body: JSON.stringify(dataSend), mode: 'no-cors', 
                                                                                                                                           headers : {'Access-Control-Allow-Origin' : '*'}})
         .then(res => res.json()).then((a) => {
           console.log(a);
           formData.append('resume', a.url);
 
           // update Google Sheets
-          fetch('https://script.google.com/a/macros/uw.edu/s/AKfycby6JWLhFfPddgk_Ob-C_TKCdEgVnrLw2sSlzON1Lc8_viq98gMcXzQk3DUJZ4Mkf19V/exec', {method: 'POST', body: formData})
+          fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbw5JXVwWuFCYyAbJ0QTzGwsvcltjAdSM4pzhc5aYEEEvYqbgZ3ALm8t8rhKn45mDfFcrQ/exec', {method: 'POST', body: formData})
             .then(response => {
               console.log('Success', response);
               setLoadingSpinner(false);
