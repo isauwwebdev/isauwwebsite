@@ -6,14 +6,14 @@ import { FaPeopleCarry, FaCalendarCheck, FaPaintBrush, FaPiggyBank, FaMoneyBillW
 function PositionDescriptions() {
     const departmentDescriptions = [
         { title: "Inventory", description: "Providing necessary items before, during, and after events. Bring in food and purchase additional supplies. Ensure that everything owned by the company is handled, understood, and accounted for.", icon: <FaPeopleCarry/> },
-        { title: "Event Organization", description: "Organize events, paying particular attention to concept, topic, substance, and flow. Plan the arrangements and evaluate the event's logistics.", icon: <FaCalendarCheck/> },
+        { title: "Event Organization", description: "Organize events, paying particular attention to concept, topic, substance, and flow. Responsible for planning, including logistics, arrangements, and post-event evaluations for each event.", icon: <FaCalendarCheck/> },
         { title: "Creative Management", description: "Plan and design artistic needs for organization’s events, specifically physical decorations. Execute the concept and design for organization’s events.", icon: <FaPaintBrush/> },
         { title: "Treasury", description: "Accountable for overseeing and distributing the organization's finances. Prepare financial reports following each event and responsible for the organization's transactional activities. ", icon: <FaPiggyBank/> },
         { title: "Fundraising", description: "Research and development of new and or existing fundraising menu. Planning fundraising activities (date, menu, location). Work with the the rest of finance team to make sure all fundraising runs smoothly (workflow, order status, etc).", icon: <FaMoneyBillWave/> },
         { title: "Sponsorship", description: "Responsible for getting funds from sponsors and other organizations. Understand the funding resources that the organization can obtain. Write sponsorship proposals for funding purposes.", icon: <FaHandshake/> },
-        { title: "Documentation", description: "Must know or be comfortable with iMovie and/or Final Cut Pro. Document events, select, and finalize all pictures and videos.", icon: <FaPhotoVideo/> },
-        { title: "Design", description: "Design posters, flyers, and banners. Must know or be comfortable with graphics editor preferably Photoshop and/or Illustrator.", icon: <FaPencilRuler/> },
-        { title: "Marketing Communication", description: "Develop marketing strategies and promote events. Handle all media publication outreach", icon: <FaUsers/> },
+        { title: "Documentation", description: "In charge of capturing pictures and videos during ISAUW’s events. Select, edit, and finalize pictures and videos. Proficient in iMovie and/or Final Cut Pro.", icon: <FaPhotoVideo/> },
+        { title: "Design", description: "Design eye catching posters, flyers, and banners for ISAUW’s events and other promotional materials. Proficient in software tools like Photoshop and/or Illustrator.", icon: <FaPencilRuler/> },
+        { title: "Marketing Communication", description: "Develop marketing strategies and promote events both online and offline on campus. Monitor social media engagement insights and create marketing plans accordingly.", icon: <FaUsers/> },
         { title: "Web Development", description: "Maintaining ISAUW’s website by designing user interfaces to improve user experience. Writing and reviewing HTML, CSS and JavaScript (React) code.", icon: <FaCode/> }
     ];
     const settings = {
