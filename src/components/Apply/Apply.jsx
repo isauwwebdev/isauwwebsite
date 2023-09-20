@@ -139,7 +139,7 @@ function Apply() {
       };
 
       // upload to Google Drive
-      fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbxaFfxMyInXQ5uxRwgQIgyu0OWlKdCiUqSCZW550AB1Cmh8prze0sg3marbAfmqTDiA/exec', {method: 'POST', body: JSON.stringify(dataSend)})
+      fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbxaFfxMyInXQ5uxRwgQIgyu0OWlKdCiUqSCZW550AB1Cmh8prze0sg3marbAfmqTDiA/exec', {method: 'POST', body: JSON.stringify(dataSend), mode: 'cors'})
         .then(res => res.json()).then((a) => {
           console.log(a);
           formData.append('resume', a.url);
