@@ -139,13 +139,13 @@ function Apply() {
       };
 
       // upload to Google Drive
-      fetch('https://script.google.com/macros/s/AKfycbzS7gM0878oabxpLc1eB442C90L3-DJANDxDIpVD3w77i9oLtPfJxcyG9vjwoP_gr8T/exec', {method: 'POST', body: JSON.stringify(dataSend)})
+      fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbxaFfxMyInXQ5uxRwgQIgyu0OWlKdCiUqSCZW550AB1Cmh8prze0sg3marbAfmqTDiA/exec', {method: 'POST', body: JSON.stringify(dataSend)})
         .then(res => res.json()).then((a) => {
           console.log(a);
           formData.append('resume', a.url);
 
           // update Google Sheets
-          fetch('https://script.google.com/macros/s/AKfycbzCwqJl0_tfZrPQsVyYmCWfjmpfLwXkJwK9VW4ihZBmIGoZnWv01nais7SNnWeKya4/exec', {method: 'POST', body: formData})
+          fetch('https://script.google.com/a/macros/uw.edu/s/AKfycbwx4SHPwQtMz-iqncIy5OUpc-UpCr3wNzbbxN9Dld-CF9BNyk3MSqoDPQgOyjrvXiNk/exec', {method: 'POST', body: formData})
             .then(response => {
               console.log('Success', response);
               setLoadingSpinner(false);
