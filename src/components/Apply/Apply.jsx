@@ -9,6 +9,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 import FormHelper from '../Shared/FormHelper';
 import PositionDescriptions from './PositionDescriptions';
+import LinkForm from './LinkForm'
 
 function Apply() {
   const standingOptions = useMemo(() => [
@@ -205,53 +206,14 @@ function Apply() {
             </div>
 
             <Form noValidate validated={validated} onSubmit={submitForm} className="mx-auto" style={{display: "flex", flexDirection: "column"}}>
-              <section className="my-3">
-                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Personal Information</strong></h1>
-                <div className="row">
-                  <div className="col-6" style={{paddingRight: "6px"}}>
-                    <FormHelper name="firstName" label="First Name" datatype="text" handleChange={handleChange} feedback="Please enter your first name" />
-                  </div>
-                  <div className="col-6" style={{paddingLeft: "6px"}}>
-                    <FormHelper name="lastName" label="Last Name" datatype="text" handleChange={handleChange} feedback="Please enter your last name" />
-                  </div>
-                </div>
-                <FormHelper name="phoneNumber" label="US Phone Number" datatype="tel" handleChange={handleChange} feedback="Please enter a valid US phone number" pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}" />
-                <FormHelper name="emailPersonal" label="Personal Email" datatype="email" handleChange={handleChange} feedback="Please enter a valid email address" />
-                <FormHelper name="emailUW" label="UW Email" datatype="email" handleChange={handleChange} feedback="Please enter a valid UW email address" pattern="^\w+@uw.edu" />
-                <FormHelper name="major" label="Major/Intended Major" datatype="text" handleChange={handleChange} feedback="Please enter a valid major" />
-                <FormHelper name="standing" label="Class Standing" type="select" options={standingOptions} handleChange={handleChange} />
-
-                {/* Wrapper to hide file input with custom button */}
-                {/* TODO: Add validation */}
-                <div>
-                  <Row>
-                    <Row>
-                      <Col xs={7} sm={6} md={5} lg={4}>
-                        <label id="fakeResume" class="btn" for="resume" style={{fontSize: "14px", fontWeight: "300", textTransform: "none", margin: "0", width: "100%", boxShadow: "none", border: "1px solid #ced4da"}}>
-                          Upload Resume
-                          <FormHelper name="resume" type="file" accept=".doc,.docx,application/pdf" handleChange={handleFile} />
-                        </label>
-                      </Col>
-                      <Col xs={5} sm={6} md={7} lg={8} style={{margin: "auto 0", padding: "0", overflow: "hidden", textOverflow: "ellipsis"}}>
-                        <span id="fakeResumeText" style={{fontSize: "14px"}}>{resumeFile ? resumeFile.name : "No file selected."}</span>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={7} sm={6} md={5} lg={4}>
-                        <p style={{fontSize: "12px", margin: "8px 0 0", padding: "0", textAlign: "center"}}>DOC, DOCX, PDF</p>
-                      </Col>
-                    </Row>
-                  </Row>
-                </div>
-
-              </section>
+             
 
               <section className="my-3" >
-                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Rank Your Positions</strong></h1>
+                <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Our Departments</strong></h1>
                 <PositionDescriptions />
-                <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
+                {/* <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
                 <FormHelper name="secondChoice" label="Second Choice" type="select" options={options2} value={appContent.secondChoice} handleChange={handleChange} />
-                <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} />
+                <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} /> */}
 
                 {showPortfolio &&
                   <span style={{color: "rgba(129, 27, 20, 1.0)"}}>
@@ -261,16 +223,14 @@ function Apply() {
                 }
               </section>
 
-              <section className="my-3" >
+              {/* <section className="my-3" >
                 <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>More About You</strong></h1>
                 <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="10" handleChange={handleChange} />
                 <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
-              </section>
-
-              <button type="submit" className="btn btn-dark" style={{width: "60%", textTransform: "none", fontSize: `calc(14px + 0.1vw)`, fontWeight: "600", height: "50px", alignSelf: "center"}}>
-                {loadingSpinner ? <Spinner animation="border" style={{width: "1.5rem", height: "1.5rem"}}></Spinner> : "Submit"}
-              </button>
+              </section> */}
+              <LinkForm />
+              
             </Form>
           </Col>
         </Row>
