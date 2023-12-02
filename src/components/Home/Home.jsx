@@ -7,7 +7,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import {AiOutlineInstagram} from 'react-icons/ai';
 import {IoBagHandleOutline} from 'react-icons/io5'
 import Fade from 'react-reveal/Fade';
-import VisionMission from '../About/VisionMission';
+import VisionMission from '../Home/VisionMission';
 
 function Home() {
   const API_KEY = process.env.REACT_APP_INS_TOKEN;
@@ -47,7 +47,6 @@ function Home() {
           </a>
         </Container>
       </Fade>
-      <InstaFeed token={API_KEY} limit={9} />
     </div>
   )
 }

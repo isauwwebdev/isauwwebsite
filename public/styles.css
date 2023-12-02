@@ -770,6 +770,13 @@ p {
 	text-shadow: #606060 0px 0px 10px;
 }
 
+/*Temp Team Coming Soon*/
+.coming-soon {
+	font-size: calc(3.2vw + 16px);
+	font-weight: bold;
+	color: black;
+}
+
 .div-margin-btm {
 	margin-bottom: calc(1vw + 32px) !important;
 	overflow: hidden;
