@@ -56,11 +56,11 @@ function Home(props) {
 
       <Purpose />
       <VisionMission isMobile={props.isMobile} />
-      <Fade bottom>
+      {/* <Fade bottom>
         <Container>
           <UpcomingEventsGallery />
         </Container>
-      </Fade>
+      </Fade> */}
 
       <Fade bottom>
         <Container
