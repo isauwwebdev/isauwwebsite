@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 function Purpose() {
   return (
-    <div style={{position: "relative"}}>
+    <div style={{position: "relative", marginTop: "50px", marginBottom: "130px"}}>
       <img src="../images/indonesia-map.png" className="map" alt="Map of Indonesia" />
       <Container className="my-5 purpose">
         <div className="row">
