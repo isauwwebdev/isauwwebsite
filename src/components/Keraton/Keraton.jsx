@@ -7,22 +7,31 @@ import KeratonGames from './KeratonGames';
 import KeratonFAQ from './KeratonFAQ';
 import KeratonVendors from './KeratonVendors';
 import KeratonSponsors from './KeratonSponsors';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom"
 
 function Keraton() {
   return (
-    <div className="keraton">
-      <KeratonVideo></KeratonVideo>
-      {/* <KeratonHeader></KeratonHeader> */}
-      <KeratonAbout></KeratonAbout>
-      <KeratonMap></KeratonMap>
-      <KeratonPerformers></KeratonPerformers>
-      <KeratonVendors></KeratonVendors>
-      {/* <KeratonGames></KeratonGames> */}
-      <KeratonFAQ></KeratonFAQ>
-      <KeratonSponsors></KeratonSponsors>
+    <div>
+      <Link to={{ pathname: "https://keraton.vercel.app/" }} target="_blank">Click to open (new tab)</Link>
     </div>
   );
 }
+
+
+// {/* <KeratonVideo></KeratonVideo>
+//       {/* <KeratonHeader></KeratonHeader> */}
+//       <KeratonAbout></KeratonAbout>
+//       <KeratonMap></KeratonMap>
+//       <KeratonPerformers></KeratonPerformers>
+//       <KeratonVendors></KeratonVendors>
+//       {/* <KeratonGames></KeratonGames> */}
+//       <KeratonFAQ></KeratonFAQ>
+//       <KeratonSponsors></KeratonSponsors> */}
 
 // function ScrollToTop() {
 //     const [backToTop, setBacckToTop] = useState(false);
