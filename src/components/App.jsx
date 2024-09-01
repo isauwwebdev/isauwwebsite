@@ -14,7 +14,8 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
-import './index.css'
+import "./index.css";
+import SignUpForm from "./Events/SignUpForm";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -197,7 +198,18 @@ function App() {
                   </NavLink>
                   {/*<NavLink to="/about" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>About</NavLink>*/}
                   {/* <NavLink to="/shop" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(false) }}>Shop</NavLink> */}
-                  <NavLink to="/keraton" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => { setExpanded(false); setKeratonPage(true) }}>Keraton</NavLink>
+                  <NavLink
+                    to="/keraton"
+                    className={`navLink navLink-fade-up`}
+                    exact
+                    activeClassName="navLinkActive"
+                    onClick={() => {
+                      setExpanded(false);
+                      setKeratonPage(true);
+                    }}
+                  >
+                    Keraton
+                  </NavLink>
                   {/* <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink> */}
                 </Nav>
                 {expanded && <SocialLinks />}
@@ -209,10 +221,16 @@ function App() {
         <Switch>
           <Route path="/" exact render={() => <Home isMobile={isMobile} />} />
           <Route path="/events" component={Events} />
+          <Route path="/sign-up-stamp-quest" component={SignUpForm} />
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
-          <Route path="/keraton" component={() => {
-              window.location.href = 'https://keraton.vercel.app/'; return null;}} />            
+          <Route
+            path="/keraton"
+            component={() => {
+              window.location.href = "https://keraton.vercel.app/";
+              return null;
+            }}
+          />
           <Route path="/team" component={Officers} />
           {/* {<Route path="/apply" component={Apply} />} */}
         </Switch>
