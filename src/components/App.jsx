@@ -14,6 +14,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
+import './index.css'
 
 function App() {
   const [expanded, setExpanded] = useState(false);
