@@ -1,4 +1,3 @@
-
 import React from "react";
 import Fade from "react-reveal/Fade";
 
@@ -13,7 +12,7 @@ function VisionMission(props) {
       <Fade bottom cascade>
         <div className="row px-5">
           <div className="col-md-12 text-center">
-            <h1 className="my-3">
+            <h1 className="my-3 font-bold">
               <strong>Our Vision</strong>
             </h1>
             <p className="my-3">
@@ -26,7 +25,7 @@ function VisionMission(props) {
 
         <div className="row px-5">
           <div className="col-md-12 text-center">
-            <h1 className="my-3">
+            <h1 className="my-3 font-bold">
               <strong>Our Mission</strong>
             </h1>
             <p className="my-3">

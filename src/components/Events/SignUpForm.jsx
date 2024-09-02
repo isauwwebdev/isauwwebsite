@@ -11,7 +11,7 @@ export default function SignUpForm() {
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-dark">
       <div className="bg-light p-4 rounded">
-        <h2 className="text-center mb-4">Sign Up</h2>
+        <h1 className="text-center mb-4 text-lg">Sign Up</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="mb-3">
             <input
