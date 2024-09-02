@@ -84,7 +84,10 @@ export default function UpcomingEventsGallery() {
     <section className="my-5">
       <div className="row">
         <div className="col-12 upcoming-event-gal">
-          <h1 className="my-3" style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}>
+          <h1
+            className="my-3 font-bold"
+            style={{ paddingLeft: `calc(0.4vw + 1.5px)` }}
+          >
             <strong>Upcoming Events</strong>
           </h1>
           {/* Past Events */}

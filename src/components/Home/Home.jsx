@@ -88,12 +88,17 @@ function Home(props) {
             className="btn btn-home"
             href="https://instagram.com/isauwhuskies/"
           >
-            <AiOutlineInstagram class="btn-home-icon" />
-            <span> FOLLOW</span>
+            <div className="flex items-center justify-center">
+              <AiOutlineInstagram className="btn-home-icon" />
+              <span className="ml-2">FOLLOW</span>
+            </div>
           </a>
+
           <a type="button" className="btn btn-home" href="./Shop">
-            <IoBagHandleOutline class="btn-home-icon" />
-            <span> EXPLORE</span>
+            <div className="flex items-center justify-center">
+              <IoBagHandleOutline class="btn-home-icon" />
+              <span> EXPLORE</span>
+            </div>
           </a>
         </Container>
       </Fade>

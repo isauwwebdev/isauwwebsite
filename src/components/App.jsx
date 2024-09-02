@@ -14,7 +14,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
-import "./index.css";
+import "./index.css"; // Tailwind CSS
 import SignUpForm from "./Events/SignUpForm";
 
 function App() {
