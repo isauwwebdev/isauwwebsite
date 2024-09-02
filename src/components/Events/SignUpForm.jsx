@@ -101,9 +101,7 @@ export default function SignUpForm() {
               value={phoneNumber}
               onChange={(value) => {
                 setPhoneNumber(value);
-                if (value && isValidPhoneNumber(value)) {
-                  clearErrors("phone_number");
-                }
+                clearErrors("phone_number");
               }}
               className="form-control"
             />
