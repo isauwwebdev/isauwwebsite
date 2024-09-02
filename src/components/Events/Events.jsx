@@ -1,16 +1,20 @@
-import Container from 'react-bootstrap/Container'
-import Carousel from 'react-bootstrap/Carousel';
-import UpcomingEventsGallery from '../Shared/UpcomingEventsGallery';
-import PastEventsSearch from './PastEventsSearch';
-import Fade from 'react-reveal/Fade';
-import React from 'react';
+import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
+import UpcomingEventsGallery from "../Shared/UpcomingEventsGallery";
+import PastEventsSearch from "./PastEventsSearch";
+import Fade from "react-reveal/Fade";
+import React from "react";
 
-function Events() {
+export default function Events() {
   return (
     <div>
       {/* Carousel */}
-      <Carousel touch={true} indicators={false}
-        controls={false} style={{height: "calc(50vh + 10vw)"}}>
+      <Carousel
+        touch={true}
+        indicators={false}
+        controls={false}
+        style={{ height: "calc(50vh + 10vw)" }}
+      >
         <Carousel.Item interval={4000}>
           <div className="navbar-overlay">
             <img
@@ -19,7 +23,7 @@ function Events() {
               alt=""
             />
           </div>
-          <Carousel.Caption style={{bottom: "18%", letterSpacing: "10pt"}}>
+          <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
             <div className="animated fadeInDown">
               <h1 className="carousel-title">KERATON</h1>
             </div>
@@ -33,7 +37,7 @@ function Events() {
               alt=""
             />
           </div>
-          <Carousel.Caption style={{bottom: "18%", letterSpacing: "10pt"}}>
+          <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
             <div className="animated fadeInDown">
               <h1 className="carousel-title">SEATTLE 101</h1>
             </div>
@@ -47,7 +51,7 @@ function Events() {
               alt=""
             />
           </div>
-          <Carousel.Caption style={{bottom: "18%", letterSpacing: "10pt"}}>
+          <Carousel.Caption style={{ bottom: "18%", letterSpacing: "10pt" }}>
             <div className="animated fadeInDown">
               <h1 className="carousel-title">SEATHROUGH</h1>
             </div>
@@ -63,15 +67,21 @@ function Events() {
         <div className="jumbotron">
           <div>
             <h1 className="jumbotron-title display-4">ISAUW Card</h1>
-            <p className="jumbotron-desc">Discounts on your favorite restaurants for only $10!</p>
-            <a className="jumbotron-btn btn btn-dark" href="/shop" role="button">Order now</a>
+            <p className="jumbotron-desc">
+              Discounts on your favorite restaurants for only $10!
+            </p>
+            <a
+              className="jumbotron-btn btn btn-dark"
+              href="/shop"
+              role="button"
+            >
+              Order now
+            </a>
           </div>
         </div>
       </Container>
 
       <PastEventsSearch />
     </div>
-  )
+  );
 }
-
-export default Events;
