@@ -2,7 +2,7 @@
     {
         "title": "Winter Ball",
         "date": "02/24/2023",
-        "time": "6:00PM",
+        "time": "18:00 PDT",
         "location": "HUB North Ballroom, UW",
         "text": "Get your suits and dresses ready and get lost in your dance in ISAUW’s Winter Ball. Be ready for a night of love, laughter, and beautiful pictures as you get serenaded by live music. A three-course meal is provided as we sway you into a magical night. ",
         "img": [{"src": "../images/events/winter ball/2023/1.jpeg", "alt": "Card front image"},
@@ -16,7 +16,7 @@
     {
         "title": "Social Night: Indomie Eating Competition",
         "date": "04/12/2023",
-        "time": "12:00PM",
+        "time": "12:00 PDT",
         "location": "HUB 250, UW",
         "text": "A Spring Quarter kick off collaboration event with Indomie USA, where students can participate in an Indomie eating competition to win prizes and meet others!",
         "img": [{"src": "../images/events/socialnight/2023/indomie-1.jpeg", "alt": "Card front image"},
@@ -29,7 +29,7 @@
     {
         "title": "Keraton",
         "date": "05/06/2023",
-        "time": "4:00PM",
+        "time": "16:00 PDT",
         "location": "Hub Lawn, UW",
         "text": "Keraton is an annual Indonesian cultural festival hosted by ISAUW (Indonesian Student Association at University of Washington) with a purpose to introduce the rich culture of Indonesia to the greater Seattle Community. This event is a free 'one day pass to Indonesia' filled with food, games, music and performances.",
         "img": [{"src": "../images/events/keraton/2022/6.jpeg", "alt": "Card front image"},
@@ -43,8 +43,8 @@
     {
         "title": "Stamp Quest",
         "date": "09/23/2023",
-        "time": "TBD",
-        "location": "TBD",
+        "time": "14:00 PDT",
+        "location": "Red Square",
         "text": "Insert information about Stamp Quest here.",
         "img": [{"src": "../images/events/keraton/2022/2.jpeg", "alt": "Card front image"},
                 {"src": "../images/events/keraton/2022/3.jpeg"},
@@ -55,7 +55,7 @@
     {
         "title": "Friendsgiving",
         "date": "11/19/2022",
-        "time": "6:00PM",
+        "time": "18:00 PDT",
         "location": "The M Seattle, U District",
         "text": "An interactive social gathering where we will be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
         "img": [{"src": "../images/events/friendsgiving/2022/1.jpeg", "alt": "Card front image"},
@@ -68,7 +68,7 @@
     {
         "title": "Social Night",
         "date": "04/06/2022",
-        "time": "7:00PM",
+        "time": "19:00 PDT",
         "location": "HUB, UW",
         "text": "A night of mingling to form new bonds and rekindle old ones. Get a chance to win prizes, merchandise, food, and a sneak peak of our upcoming events. Enjoy yourself, and let us know what you'd want to see next.",
         "img": [{"src": "../images/events/socialnight/2021/1.jpg", "alt": "Card front image"}],
@@ -77,7 +77,7 @@
     {
         "title": "SeaRace",
         "date": "09/26/2022",
-        "time": "1:30PM",
+        "time": "13:30 PDT",
         "location": "Dahl Playground & Wading Pool",
         "text": "A fun-filled day of adventure filled with traditional Indonesian Independence Day games, where you and your team will have to cooperate to be the fastest team to complete each race!",
         "img": [{"src": "../images/events/searace/2022.jpg", "alt": "Card front image"},
@@ -89,7 +89,7 @@
     { 
         "title": "Seathrough",
         "date": "10/01/2022",
-        "time": "6:00PM",
+        "time": "18:00 PDT",
         "location": "Husky Union Building, UW",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
         "img": [{"src": "../images/events/seathrough/2022.jpg", "alt": "Card front image"},
@@ -102,7 +102,7 @@
     {
         "title": "Seattle 101",
         "date": "08/14/2022",
-        "time": "1:00PM",
+        "time": "13:00 PDT",
         "location": "Jakarta, Indonesia",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
         "img": [{"src": "../images/events/seattle 101/seattle101.jpg", "alt": "Card front image"},
@@ -113,7 +113,7 @@
         "title": "Winter Ball",
         "date": "02/14/2022",
         "time": "--",
-        "location": "IMA, UW",
+        "location PDT": "IMA, UW",
         "text": "Get your suits and dresses ready and get lost in your dance in ISAUW’s Winter Ball. Be ready for a night of love, laughter, and beautiful pictures as you get serenaded by live music. A three-course meal is provided as we sway you into a magical night. ",
         "img": [{"src": "../images/events/winter ball/2019/1.jpg", "alt": "Card front image"},
                 {"src": "../images/events/winter ball/2019/3.jpg"},
@@ -125,7 +125,7 @@
     {
         "title": "Keraton",
         "date": "05/07/2022",
-        "time": "4:00PM",
+        "time": "16:00 PDT",
         "location": "Rainier Vista, UW",
         "text": "Keraton is an annual Indonesian cultural festival hosted by ISAUW (Indonesian Student Association at University of Washington) with a purpose to introduce the rich culture of Indonesia to the greater Seattle Community. This event is a free 'one day pass to Indonesia' filled with food, games, music and performances.",
         "img": [{"src": "../images/events/keraton/2022/1.jpeg", "alt": "Card front image"},
@@ -139,7 +139,7 @@
     {
         "title": "Friendsgiving",
         "date": "11/19/2021",
-        "time": "6:30PM",
+        "time": "18:30 PDT",
         "location": "The M Seattle, U District",
         "text": "An interactive social gathering where we will be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
         "img": [{"src": "../images/events/friendsgiving/2019/1.jpg", "alt": "Card front image"},
@@ -154,7 +154,7 @@
     {
         "title": "Seathrough",
         "date": "10/02/2021",
-        "time": "6:30PM",
+        "time": "18:30 PDT",
         "location": "HUB 214, UW",
         "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
         "img": [{"src": "../images/events/seathrough/2021/1.jpeg", "alt": "Card front image"},
@@ -165,7 +165,7 @@
     {
         "title": "Boba Tour",
         "date": "09/28/2021",
-        "time": "2:00PM",
+        "time": "14:00 PDT",
         "location": "Red Square, UW",
         "text": "Travel around Seattle’s most iconic landmarks while getting a taste of boba. A fun welcoming experience to meet new friends and familiarize with the day-to-day places and transport of a Seattleite.",
         "img": [{"src": "../images/events/bobatour/2021/bobatour3.jpg", "alt": "Card front image"},
@@ -176,7 +176,7 @@
     {
         "title": "Seattle 101",
         "date": "08/14/2021",
-        "time": "1:00PM",
+        "time": "13:00 PDT",
         "location": "Zoom, Online",
         "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
         "img": [{"src": "../images/events/seattle 101/2019/1.png"},
