@@ -141,7 +141,7 @@ function UpcomingEventsCard(props) {
                       href="/sign-up-stamp-quest"
                       role="button"
                     >
-                      Sign Up Here
+                      Sign Up Here{" "}
                     </a>
                   </div>
                 ) : (

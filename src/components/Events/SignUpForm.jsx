@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Spinner } from "react-bootstrap"; // Import Spinner from Bootstrap
+import { Spinner } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import axios from "axios";
@@ -15,8 +15,8 @@ export default function SignUpForm() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Initialize tooltips
   useEffect(() => {
-    // Initialize tooltips
     const tooltipTriggerList = document.querySelectorAll(
       '[data-bs-toggle="tooltip"]'
     );
@@ -33,12 +33,11 @@ export default function SignUpForm() {
     clearErrors,
   } = useForm();
 
-  // Function to fetch colleges based on user input (name)
-  // TODO: add spinner if still loading (querying for universities)
+  // Fetch colleges based on user input (name)
   const renderCollegeList = async (name) => {
     try {
       if (name) {
-        setIsLoading(true); // Set loading state to true when fetching data
+        setIsLoading(true);
         const response = await axios.get(
           `http://universities.hipolabs.com/search`,
           {
@@ -51,15 +50,15 @@ export default function SignUpForm() {
         );
         setColleges(filteredColleges);
         setShowSuggestions(true);
-        setIsLoading(false); // Set loading state to false after fetching data
+        setIsLoading(false);
       } else {
         setColleges([]);
         setShowSuggestions(false);
-        setIsLoading(false); // Reset loading state if input is cleared
+        setIsLoading(false);
       }
     } catch (error) {
       console.error("Error fetching colleges:", error);
-      setIsLoading(false); // Reset loading state on error
+      setIsLoading(false);
     }
   };
 
@@ -75,8 +74,8 @@ export default function SignUpForm() {
     if (isValidPhoneNumber(phoneNumber)) {
       clearErrors("phone_number");
       data.phone_number = phoneNumber;
-      data.selectedCollege = selectedCollege; // Include selected college in form data
-      console.log("Form Results:", data);
+      data.selectedCollege = selectedCollege;
+      console.log("Form Results:", data); // HERES THE RESULTS
     } else {
       setError("phone_number", {
         type: "manual",
@@ -96,16 +95,16 @@ export default function SignUpForm() {
     <div className="justify-content-center align-items-center h-100">
       <div
         style={{
-          backgroundImage: `url('../images/formBGEdited.png')`, // Ensure this path is correct for your image
+          backgroundImage: `url('../images/formBGEdited.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           width: "100%",
-          minHeight: "50vh",
+          minHeight: "140vh",
         }}
       >
         <div className="flex justify-center">
-          <div className="bg-light rounded-md w-10/12 md:w-2/5 mt-28 md:mt-24 mb-24 shadow-md">
+          <div className="bg-light rounded-lg w-10/12 md:w-2/5 mt-28 md:mt-24 mb-24 shadow-md">
             {/* Carousel */}
             <div className="">
               <Carousel>
@@ -113,7 +112,7 @@ export default function SignUpForm() {
                   <img
                     alt="isauwbird"
                     src="../images/isauwcard.jpg"
-                    className="mb-2 object-fill w-100 rounded-t-md h-42 brightness-75"
+                    className="mb-2 object-fill w-100 rounded-t-lg h-42 brightness-75"
                   />
                   <Carousel.Caption></Carousel.Caption>
                 </Carousel.Item>
@@ -341,6 +340,11 @@ export default function SignUpForm() {
                       defaultChecked
                     />
                   </div>
+                </div>
+
+                <div className="flex flex-row gap-1">
+                  <div className="text-red-500"> *</div>
+                  <small> indicates required fields </small>
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100">
