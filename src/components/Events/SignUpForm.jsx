@@ -233,6 +233,7 @@ export default function SignUpForm() {
                       <Spinner animation="border" variant="primary" />
                     </div>
                   )}
+                  {/* TODO: on click away from form, setShowSugges(false) */}
                   {showSuggestions && !isLoading && (
                     <ul
                       className="list-group mt-2"
