@@ -10,7 +10,6 @@
     "@testing-library/user-event": "^12.8.3",
     "autoprefixer": "^10.4.20",
     "axios": "^0.24.0",
-    "framer-motion": "^11.3.31",
     "googleapis": "^107.0.0",
     "jquery": "^3.6.1",
     "moment": "^2.29.1",
