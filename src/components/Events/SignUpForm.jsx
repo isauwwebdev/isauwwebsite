@@ -6,6 +6,9 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import { Tooltip } from "bootstrap";
+import { collection, addDoc, doc } from "firebase/firestore";
+import { db } from "../../firebase"; 
+
 
 export default function SignUpForm() {
   const [colleges, setColleges] = useState([]);
@@ -62,7 +65,7 @@ export default function SignUpForm() {
     }
   };
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (!phoneNumber) {
       setError("phone_number", {
         type: "manual",
@@ -70,12 +73,31 @@ export default function SignUpForm() {
       });
       return;
     }
-
+  
     if (isValidPhoneNumber(phoneNumber)) {
       clearErrors("phone_number");
-      data.phone_number = phoneNumber;
-      data.selectedCollege = selectedCollege;
-      console.log("Form Results:", data); // HERES THE RESULTS
+  
+      const formData = {
+        firstName: data.firstName,
+        lastName: data.lastName,
+        email: data.email,
+        phoneNumber: phoneNumber, // Using camelCase
+        selectedCollege: selectedCollege,
+        isWARegistered: data.isWARegistered || false,
+        subscribe: data.subscribe || false,
+        timestamp: new Date(),
+      };
+  
+      try {
+        // Add the document to the 'event-registrations' subcollection inside 'stamp-quest' in the '2024' collection
+        const signupDocRef = await addDoc(collection(db, "2024/stamp-quest/event-registrations"), formData);
+        
+        console.log("Document written with ID: ", signupDocRef.id);
+        alert("Form successfully submitted!");
+      } catch (e) {
+        console.error("Error adding document: ", e);
+        alert("Error submitting the form.");
+      }
     } else {
       setError("phone_number", {
         type: "manual",
@@ -83,6 +105,9 @@ export default function SignUpForm() {
       });
     }
   };
+  
+  
+  
 
   // Function to handle selecting a college from suggestions
   const handleSelectCollege = (collegeName) => {
