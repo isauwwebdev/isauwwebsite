@@ -17,9 +17,17 @@ export default function SignUpForm() {
 
   const seattleColleges = [
     { name: "University of Washington" },
+    { name: "University of Washington Tacoma" },
+    { name: "University of Washington Bothell" },
     { name: "Shoreline Community College" },
-    { name: "Edmonds College" },
+    { name: "Edmonds Community College" },
+    { name: "Bellevue College" },
+    { name: "North Seattle College" },
+    { name: "Cascadia College" },
+    { name: "Northwest University" },
     { name: "Seattle University" },
+    { name: "Green River College" },
+    { name: "Seattle Pacific University" },
   ];
 
   // Initialize tooltips
