@@ -7,6 +7,7 @@ import { Tooltip } from "bootstrap";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { Link } from "react-router-dom";
+import "../index.css";
 
 export default function SignUpForm() {
   const [colleges, setColleges] = useState([]);
@@ -439,17 +440,17 @@ export default function SignUpForm() {
                         </button>
                       </div>
                       <div className="flex justify-center items-center mb-4">
-                        <div className="bg-green-500 rounded-full p-2">
+                        <div className="bg-[#107614] rounded-full p-2">
                           <svg
-                            xmlns="http://www.w3.org/2000/svg"
                             className="h-8 w-8 text-white"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
                           >
                             <path
-                              fillRule="evenodd"
-                              d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 4.707 7.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0l7-7a1 1 0 000-1.414z"
-                              clipRule="evenodd"
+                              stroke-width="2"
+                              d="M5 13l4 4L19 7"
+                              className="tick"
                             />
                           </svg>
                         </div>
@@ -464,9 +465,9 @@ export default function SignUpForm() {
                       <div className="flex flex-row gap-2 mt-4">
                         <Link
                           to="/"
-                          className="bg-green-500 text-white py-2 px-4 rounded-lg w-full text-center hover:bg-green-700 transition-all flex justify-center items-center gap-2"
+                          className="bg-[#107614] text-white py-2 px-4 rounded-lg w-full text-center hover:bg-[#095F0C] transition-all flex justify-center items-center gap-2"
                         >
-                          Go to Home
+                          See you there!
                         </Link>
                       </div>
                     </div>

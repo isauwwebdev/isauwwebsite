@@ -12,6 +12,7 @@ function UpcomingEventsCard(props) {
     }
   }
 
+  // Changes to render immediately instead of using onLoad()
   useEffect(() => {
     handleHeight(); // Set height on component mount
     window.addEventListener("resize", handleHeight);
