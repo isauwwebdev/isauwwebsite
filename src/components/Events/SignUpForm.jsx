@@ -163,7 +163,7 @@ export default function SignUpForm() {
   return (
     <div className="justify-content-center align-items-center h-100">
       <div
-        class="bg-cover bg-center bg-no-repeat w-full min-h-[145vh] md:min-h-[140vh]"
+        class="bg-cover bg-center bg-no-repeat w-full min-h-[146vh] md:min-h-[158vh]"
         style={{
           backgroundImage: `url('../images/bg_form_gradient.png')`,
           backgroundSize: "cover",
