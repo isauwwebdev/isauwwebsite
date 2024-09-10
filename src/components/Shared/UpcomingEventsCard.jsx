@@ -7,19 +7,24 @@ function UpcomingEventsCard(props) {
   const [height, setHeight] = useState("0px");
 
   function handleHeight() {
-    setHeight("" + ref.current.clientWidth + "px");
+    if (ref.current) {
+      setHeight(`${ref.current.clientWidth}px`);
+    }
   }
 
   useEffect(() => {
+    handleHeight(); // Set height on component mount
     window.addEventListener("resize", handleHeight);
+
     return () => {
       window.removeEventListener("resize", handleHeight);
     };
-  });
+  }, []);
 
   const toUpperCaseFilter = (d) => {
     return d.toUpperCase();
   };
+
   let month = (
     <Moment filter={toUpperCaseFilter} parse="MM/DD/YYYY" format="MMM">
       {props.date}
@@ -32,13 +37,7 @@ function UpcomingEventsCard(props) {
   );
 
   return (
-    <div
-      ref={ref}
-      style={{ padding: "0.6vw", height: `${height}` }}
-      onLoad={() => {
-        handleHeight();
-      }}
-    >
+    <div ref={ref} style={{ padding: "0.6vw", height: height }}>
       <Card className="upcoming-events-card">
         {/* Text and dark filter overlay on top of image */}
         <div className="upcoming-events-overlay">
@@ -134,27 +133,17 @@ function UpcomingEventsCard(props) {
                 ) : (
                   ""
                 )}
-                {props.title === "Stamp Quest" ? (
+                {props.title === "Seattle Stamp Quest" ? (
                   <div className="div-upcoming-events-button">
                     <a
                       className="event-card-keraton-button btn btn-dark"
                       href="/sign-up-stamp-quest"
                       role="button"
                     >
-                      Sign Up Here{" "}
+                      Sign Up{" "}
                     </a>
                   </div>
                 ) : (
-                  // <>
-                  //   <div className="div-upcoming-events-button">
-                  //     <button
-                  //       type="button"
-                  //       className="event-card-keraton-button btn bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500 ..."
-                  //     >
-                  //       Hover me
-                  //     </button>
-                  //   </div>
-                  // </>
                   ""
                 )}
               </div>

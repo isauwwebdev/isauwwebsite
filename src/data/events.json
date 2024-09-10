@@ -38,15 +38,15 @@
                 {"src": "../images/events/keraton/2022/4.jpeg"},
                 {"src": "../images/events/keraton/2022/5.jpeg"},
                 {"src": "../images/events/keraton/2022/1.jpeg"}],
-        "completed": false
+        "completed": true
     },
     {
-        "title": "Stamp Quest",
+        "title": "Seattle Stamp Quest",
         "date": "09/23/2023",
         "time": "14:00 PDT",
         "location": "Red Square",
         "text": "Insert information about Stamp Quest here.",
-        "img": [{"src": "../images/events/keraton/2022/2.jpeg", "alt": "Card front image"},
+        "img": [{"src": "../images/seattle_stamp_quest_card.png", "alt": "Card front image"},
                 {"src": "../images/events/keraton/2022/3.jpeg"},
                 {"src": "../images/events/keraton/2022/4.jpeg"},
                 {"src": "../images/events/keraton/2022/5.jpeg"}],
