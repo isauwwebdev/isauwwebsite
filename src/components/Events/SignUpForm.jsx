@@ -141,7 +141,7 @@ export default function SignUpForm() {
     try {
       setIsLoading(true); // Show loader when form is being submitted
       await addDoc(
-        collection(db, "2024/stamp-quest/event-registrations-dev"),
+        collection(db, "2024/stamp-quest/event-registrations"),
         formData
       );
       setShowSuccessModal(true); // Show success modal

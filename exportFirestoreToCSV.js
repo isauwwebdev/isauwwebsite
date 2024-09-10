@@ -6,17 +6,19 @@ const fs = require("fs");
 const serviceAccount = require("./serviceAccountKey.json"); // Replace with the path to your service account JSON key file
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(serviceAccount),
 });
 
 const firestore = admin.firestore();
 
 async function exportCollectionToCSV() {
-  const collectionRef = firestore.collection("2024/stamp-quest/event-registrations-dev"); // Replace with your collection name
+  const collectionRef = firestore.collection(
+    "2024/stamp-quest/event-registrations"
+  ); // Replace with your collection name
   const snapshot = await collectionRef.get();
 
   const data = [];
-  snapshot.forEach(doc => {
+  snapshot.forEach((doc) => {
     data.push(doc.data());
   });
 
