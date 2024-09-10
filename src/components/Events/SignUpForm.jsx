@@ -6,9 +6,6 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import axios from "axios";
 import Carousel from "react-bootstrap/Carousel";
 import { Tooltip } from "bootstrap";
-import { collection, addDoc, doc } from "firebase/firestore";
-import { db } from "../../firebase"; 
-
 
 export default function SignUpForm() {
   const [colleges, setColleges] = useState([]);
@@ -17,6 +14,23 @@ export default function SignUpForm() {
   const [selectedCollege, setSelectedCollege] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
+  const seattleColleges = [
+    { name: "University of Washington" },
+    { name: "University of Washington Tacoma" },
+    { name: "University of Washington Bothell" },
+    { name: "Shoreline Community College" },
+    { name: "Edmonds Community College" },
+    { name: "Bellevue College" },
+    { name: "North Seattle College" },
+    { name: "Cascadia College" },
+    { name: "Northwest University" },
+    { name: "Seattle University" },
+    { name: "Green River College" },
+    { name: "Seattle Pacific University" },
+    { name: "Seattle Central College" },
+    { name: "Whatcom Community College" },
+  ];
 
   // Initialize tooltips
   useEffect(() => {
@@ -37,6 +51,7 @@ export default function SignUpForm() {
   } = useForm();
 
   // Fetch colleges based on user input (name)
+  // TODO: (API unused for now due to lagg to fetch everytime)
   const renderCollegeList = async (name) => {
     try {
       if (name) {
@@ -51,6 +66,7 @@ export default function SignUpForm() {
         const filteredColleges = response.data.filter(
           (college) => college.country === "United States"
         );
+
         setColleges(filteredColleges);
         setShowSuggestions(true);
         setIsLoading(false);
@@ -65,7 +81,30 @@ export default function SignUpForm() {
     }
   };
 
-  const onSubmit = async (data) => {
+  const renderCollegeListTemp = (name) => {
+    if (name) {
+      // Filter the seattleColleges based on the input
+      const filteredColleges = seattleColleges.filter((college) =>
+        college.name.toLowerCase().includes(name.toLowerCase())
+      );
+
+      if (filteredColleges.length > 0) {
+        setColleges(filteredColleges);
+        setShowSuggestions(true);
+        setSelectedCollege(name);
+      } else {
+        setColleges([{ name }]);
+        setShowSuggestions(true);
+        setSelectedCollege(name);
+      }
+    } else {
+      setColleges([]);
+      setShowSuggestions(false);
+      setSelectedCollege("");
+    }
+  };
+
+  const onSubmit = (data) => {
     if (!phoneNumber) {
       setError("phone_number", {
         type: "manual",
@@ -73,31 +112,12 @@ export default function SignUpForm() {
       });
       return;
     }
-  
+
     if (isValidPhoneNumber(phoneNumber)) {
       clearErrors("phone_number");
-  
-      const formData = {
-        firstName: data.firstName,
-        lastName: data.lastName,
-        email: data.email,
-        phoneNumber: phoneNumber, // Using camelCase
-        selectedCollege: selectedCollege,
-        isWARegistered: data.isWARegistered || false,
-        subscribe: data.subscribe || false,
-        timestamp: new Date(),
-      };
-  
-      try {
-        // Add the document to the 'event-registrations' subcollection inside 'stamp-quest' in the '2024' collection
-        const signupDocRef = await addDoc(collection(db, "2024/stamp-quest/event-registrations"), formData);
-        
-        console.log("Document written with ID: ", signupDocRef.id);
-        alert("Form successfully submitted!");
-      } catch (e) {
-        console.error("Error adding document: ", e);
-        alert("Error submitting the form.");
-      }
+      data.phone_number = phoneNumber;
+      data.selectedCollege = selectedCollege;
+      console.log("Form Results:", data); // HERES THE RESULTS
     } else {
       setError("phone_number", {
         type: "manual",
@@ -105,9 +125,6 @@ export default function SignUpForm() {
       });
     }
   };
-  
-  
-  
 
   // Function to handle selecting a college from suggestions
   const handleSelectCollege = (collegeName) => {
@@ -249,7 +266,7 @@ export default function SignUpForm() {
                     value={searchInput}
                     onChange={(e) => {
                       setSearchInput(e.target.value);
-                      renderCollegeList(e.target.value);
+                      renderCollegeListTemp(e.target.value);
                     }}
                   />
                   {/* Show spinner while loading */}
