@@ -147,6 +147,19 @@ function UpcomingEventsCard(props) {
                 ) : (
                   ""
                 )}
+                {props.title === "Seathrough" ? (
+                  <div className="div-upcoming-events-button">
+                    <a
+                      className="event-card-keraton-button btn btn-dark"
+                      href="/sign-up-stamp-quest"
+                      role="button"
+                    >
+                      Sign Up{" "}
+                    </a>
+                  </div>
+                ) : (
+                  ""
+                )}
               </div>
             </div>
           </div>

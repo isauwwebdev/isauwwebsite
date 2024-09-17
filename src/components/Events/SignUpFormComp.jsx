@@ -131,11 +131,11 @@ export default function SignUpFormComponent({
     }
   };
 
-  // Timeout for stopped typing
+  // Timeout for stopped typing (if wanna use API)
   useEffect(() => {
     const timeout = setTimeout(() => {
       renderCollegeListTemp(searchInput);
-    }, 500);
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, [searchInput]);
