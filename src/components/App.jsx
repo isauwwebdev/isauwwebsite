@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch, NavLink, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-
 import Home from "./Home/Home";
 import Events from "./Events/Events";
 import Shop from "./Shop/Shop";
@@ -15,7 +14,8 @@ import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
-import SignUpForm from "./Events/SignUpForm";
+import SignUpForm from "./Events/DeleteSignUpForm";
+import SignUpFormComponent from "./Events/SignUpFormComp";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -221,7 +221,28 @@ function App() {
         <Switch>
           <Route path="/" exact render={() => <Home isMobile={isMobile} />} />
           <Route path="/events" component={Events} />
-          <Route path="/sign-up-stamp-quest" component={SignUpForm} />
+          <Route
+            path="/sign-up-stamp-quest"
+            render={() => (
+              <SignUpFormComponent
+                eventName="Seattle Stamp Quest"
+                BGImage="stampQuestFormBG.png"
+                firestorePath="2024/stamp-quest/event-registrations"
+                posterImage="stamp_quest_poster.png"
+              />
+            )}
+          />
+          <Route
+            path="/sign-up-seathrough"
+            render={() => (
+              <SignUpFormComponent
+                eventName="Seathrough"
+                BGImage="seathroughFormBG.png"
+                firestorePath="2024/seathrough/event-registrations"
+                posterImage="seathrough_poster.png"
+              />
+            )}
+          />
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
@@ -232,7 +253,7 @@ function App() {
             }}
           />
           <Route path="/team" component={Officers} />
-          {/* {<Route path="/apply" component={Apply} />} */}
+          {<Route path="/apply" component={Apply} />}
         </Switch>
 
         {/* {renderPopUp()} */}

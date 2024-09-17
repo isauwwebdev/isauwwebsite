@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Spinner, Modal, Button } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { Tooltip } from "bootstrap";
@@ -9,7 +9,13 @@ import { db } from "../../firebase";
 import { Link } from "react-router-dom";
 import "../index.css";
 
-export default function SignUpForm() {
+// Component for Event Sign Up Forms
+export default function SignUpFormComponent({
+  eventName,
+  posterImage,
+  firestorePath,
+  BGImage,
+}) {
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [selectedCollege, setSelectedCollege] = useState("");
@@ -125,9 +131,17 @@ export default function SignUpForm() {
     }
   };
 
+  // Timeout for stopped typing
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      renderCollegeListTemp(searchInput);
+    }, 500);
+
+    return () => clearTimeout(timeout);
+  }, [searchInput]);
+
   const onSubmit = async (data) => {
-    // The phoneNumber is already validated by react-hook-form, no need for manual validation.
-    console.log(data);
+    // console.log(data);
     const formData = {
       firstName: data.firstName,
       lastName: data.lastName,
@@ -141,10 +155,7 @@ export default function SignUpForm() {
 
     try {
       setIsLoading(true); // Show loader when form is being submitted
-      await addDoc(
-        collection(db, "2024/stamp-quest/event-registrations"),
-        formData
-      );
+      await addDoc(collection(db, firestorePath), formData);
       setShowSuccessModal(true); // Show success modal
     } catch (e) {
       console.error("Error adding document: ", e);
@@ -165,7 +176,7 @@ export default function SignUpForm() {
       <div
         class="bg-cover bg-center bg-no-repeat w-full min-h-[146vh] md:min-h-[158vh]"
         style={{
-          backgroundImage: `url('../images/bg_form_gradient.png')`,
+          backgroundImage: `url('/images/${BGImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -175,14 +186,14 @@ export default function SignUpForm() {
         <div className="flex justify-center">
           <div className="bg-light rounded-lg w-10/12 md:w-2/5 mt-28 md:mt-24 shadow-md">
             <img
-              src="../images/stamp_quest_poster.png"
+              src={`/images/${posterImage}`}
               alt="stamp quest poster"
               className="mb-2 object-fill h-42 rounded-t-lg"
             />
 
             <div className="p-4 overflow-hidden">
               <h1 className="text-center mb-4 text-lg font-bold">
-                Seattle Stamp Quest Registration
+                {`${eventName} Registration`}
               </h1>
 
               <form onSubmit={handleSubmit(onSubmit)}>
@@ -268,7 +279,6 @@ export default function SignUpForm() {
                     value={searchInput}
                     onChange={(e) => {
                       setSearchInput(e.target.value);
-                      renderCollegeListTemp(e.target.value);
                     }}
                   />
                   {showSuggestions && !isLoading && (

@@ -130,7 +130,7 @@ function Shop() {
               return (
                 <Col xs={6} md={4} lg={3} style={{marginBottom: "32px"}}>
                   <Product onAdd={onAdd} key={product.id} product={product}></Product>
-                </Col>
+                </Col> 
               );
             })}
           </Row>
