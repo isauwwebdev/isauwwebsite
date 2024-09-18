@@ -151,7 +151,7 @@ function UpcomingEventsCard(props) {
                   <div className="div-upcoming-events-button">
                     <a
                       className="event-card-keraton-button btn btn-dark"
-                      href="/sign-up-stamp-quest"
+                      href="/sign-up-seathrough"
                       role="button"
                     >
                       Sign Up{" "}

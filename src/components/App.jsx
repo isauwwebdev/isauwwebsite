@@ -14,7 +14,6 @@ import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
-import SignUpForm from "./Events/DeleteSignUpForm";
 import SignUpFormComponent from "./Events/SignUpFormComp";
 
 function App() {
@@ -226,9 +225,9 @@ function App() {
             render={() => (
               <SignUpFormComponent
                 eventName="Seattle Stamp Quest"
-                BGImage="stampQuestFormBG.png"
+                BGImage="/events/stampquest/stampQuestFormBG.png"
                 firestorePath="2024/stamp-quest/event-registrations"
-                posterImage="stamp_quest_poster.png"
+                posterImage="/events/stampquest/stamp_quest_poster.png"
               />
             )}
           />
@@ -237,9 +236,9 @@ function App() {
             render={() => (
               <SignUpFormComponent
                 eventName="Seathrough"
-                BGImage="seathroughFormBG.png"
+                BGImage="/events/seathrough/2024/seathrough_banner.png"
                 firestorePath="2024/seathrough/event-registrations"
-                posterImage="seathrough_poster.png"
+                posterImage="/events/seathrough/2024/seathrough_poster.png"
               />
             )}
           />
