@@ -6,7 +6,6 @@ import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Spinner from 'react-bootstrap/Spinner';
-
 import FormHelper from '../Shared/FormHelper';
 import PositionDescriptions from './PositionDescriptions';
 import LinkForm from './LinkForm'
@@ -211,9 +210,9 @@ function Apply() {
               <section className="my-3" >
                 <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>Our Departments</strong></h1>
                 <PositionDescriptions />
-                {/* <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
+                <FormHelper name="firstChoice" label="First Choice" type="select" options={options1} value={appContent.firstChoice} handleChange={handleChange} />
                 <FormHelper name="secondChoice" label="Second Choice" type="select" options={options2} value={appContent.secondChoice} handleChange={handleChange} />
-                <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} /> */}
+                <FormHelper name="thirdChoice" label="Third Choice" type="select" options={options3} value={appContent.thirdChoice} handleChange={handleChange} />
 
                 {showPortfolio &&
                   <span style={{color: "rgba(129, 27, 20, 1.0)"}}>
@@ -223,12 +222,12 @@ function Apply() {
                 }
               </section>
 
-              {/* <section className="my-3" >
+              <section className="my-3" >
                 <h1><strong style={{fontSize: `calc(0.8vw + 20px)`}}>More About You</strong></h1>
                 <FormHelper name="strengthsWeaknesses" label="What are your strengths and weaknesses? 2 each and why." type="textarea" rows="10" handleChange={handleChange} />
                 <FormHelper name="pastExperiences" label="What past experiences could you bring to ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
                 <FormHelper name="whyISAUW" label="Why do you want to join ISAUW?" type="textarea" rows="10" handleChange={handleChange} />
-              </section> */}
+              </section>
               <LinkForm />
               
             </Form>
