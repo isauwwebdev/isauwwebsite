@@ -9,7 +9,7 @@ import { db } from "../../firebase";
 import { Link } from "react-router-dom";
 import "../index.css";
 
-// Component for Event Sign Up Forms
+// Component for Event Sign Up (Registration) Forms
 export default function SignUpFormComponent({
   eventName,
   posterImage,
