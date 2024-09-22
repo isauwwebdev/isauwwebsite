@@ -209,7 +209,18 @@ function App() {
                   >
                     Keraton
                   </NavLink>
-                  {/* <NavLink to="/apply" className={`navLink navLink-fade-up`} exact activeClassName="navLinkActive" onClick={() => {setExpanded(false); setKeratonPage(false)}}>Apply</NavLink> */}
+                  <NavLink
+                    to="/apply"
+                    className={`navLink navLink-fade-up`}
+                    exact
+                    activeClassName="navLinkActive"
+                    onClick={() => {
+                      setExpanded(false);
+                      setKeratonPage(false);
+                    }}
+                  >
+                    Apply
+                  </NavLink>
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
