@@ -212,6 +212,7 @@ function Apply() {
       setLoadingSpinner(false);
       setShowThankYou(true);
     } catch (error) {
+      // TODO: add error handling for in catch block!
       console.error("Error submitting form:", error.message);
       setLoadingSpinner(false);
     }
