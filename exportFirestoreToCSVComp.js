@@ -20,6 +20,10 @@ async function exportFirestoreToCSVComp(pathType) {
       firestorePath = "2024/stamp-quest/event-registrations";
     } else if (pathType === "seathrough") {
       firestorePath = "2024/seathrough/event-registrations";
+    } else if (pathType === "seathrough dev") {
+      firestorePath = "2024/seathrough/event-registrations-dev";
+    } else if (pathType === "stamp-quest dev") {
+      firestorePath = "2024/seathrough/event-registrations-dev";
     } else {
       throw new Error("Invalid path type specified");
     }
@@ -56,7 +60,9 @@ async function exportFirestoreToCSVComp(pathType) {
 // Get command-line arguments
 const pathType = process.argv[2];
 if (!pathType) {
-  console.error("Please provide a pathType (e.g., 'stamp-quest' or 'seathrough').");
+  console.error(
+    "Please provide a pathType (e.g., 'stamp-quest' or 'seathrough')."
+  );
   process.exit(1);
 }
 
