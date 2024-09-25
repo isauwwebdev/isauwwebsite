@@ -133,21 +133,20 @@ export default function SignUpFormComponent({
     }
   };
 
+  const handlePhoneNumber = (e) => {
+    setPhoneNumber(e);
+    setValue("phoneNumber", e);
+    clearErrors("phoneNumber");
+  };
+
   const handleProofOfPaymentFile = (e) => {
     const file = e.target.files[0];
-    if (file) {
-      setProofOfPaymentFile(file);
-      setProofOfPaymentError("");
-    }
+    setProofOfPaymentFile(file);
+    clearErrors("proofOfPayment");
+    console.log("proof of payment file", file);
   };
 
   const onSubmit = async (data) => {
-    if (rsvp && !proofOfPaymentFile) {
-      // Check rsvp before validating proof of payment
-      setProofOfPaymentError("Proof of Payment is required.");
-      return; // Prevent form submission if proof of payment is not provided
-    }
-
     setIsLoading(true);
     let proofOfPaymentURL = "";
 
@@ -336,10 +335,20 @@ export default function SignUpFormComponent({
                       type="file"
                       accept=".jpg,.jpeg,.png,.pdf"
                       className="form-control"
-                      onChange={handleProofOfPaymentFile}
+                      {...register("proofOfPayment", {
+                        required: "Proof of payment is required",
+                      })}
+                      onChange={(value) => {
+                        handleProofOfPaymentFile(value);
+                      }}
                     />
                     {proofOfPaymentError && (
                       <div className="text-danger">{proofOfPaymentError}</div>
+                    )}
+                    {errors.proofOfPayment && (
+                      <div className="text-danger">
+                        {errors.proofOfPayment.message}
+                      </div>
                     )}
                     <small className="form-text text-muted">
                       Please upload a screenshot of your payment. Payments can
@@ -383,9 +392,7 @@ export default function SignUpFormComponent({
                       },
                     })}
                     onChange={(value) => {
-                      setPhoneNumber(value);
-                      setValue("phoneNumber", value);
-                      clearErrors("phoneNumber");
+                      handlePhoneNumber(value);
                     }}
                   />
                   <small>
