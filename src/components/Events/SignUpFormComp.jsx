@@ -337,23 +337,9 @@ export default function SignUpFormComponent({
                       accept=".jpg,.jpeg,.png,.pdf"
                       className="form-control"
                       onChange={handleProofOfPaymentFile}
-                      {...register("proofOfPayment", {
-                        required: "Proof of payment is required",
-                        validate: (value) => {
-                          return (
-                            proofOfPaymentFile ||
-                            "Proof of payment and is required."
-                          );
-                        },
-                      })}
                     />
                     {proofOfPaymentError && (
                       <div className="text-danger">{proofOfPaymentError}</div>
-                    )}
-                    {errors.proofOfPayment && (
-                      <div className="text-danger">
-                        {errors.proofOfPayment.message}
-                      </div>
                     )}
                     <small className="form-text text-muted">
                       Please upload a screenshot of your payment. Payments can
