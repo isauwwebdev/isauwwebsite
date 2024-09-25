@@ -5,7 +5,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { Tooltip } from "bootstrap";
 import { collection, addDoc } from "firebase/firestore";
-import { db, storage } from "../../firebase"; // Import storage from firebase
+import { db, storage } from "../../firebase"; 
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom";
 import "../index.css";
@@ -154,7 +154,7 @@ export default function SignUpFormComponent({
     if (rsvp && proofOfPaymentFile) { // Only upload if rsvp is true and file is selected
       const storageRef = ref(
         storage,
-        `proofs-of-payment/${proofOfPaymentFile.name}`
+        `2024/seathrough/proofs-of-payment/${proofOfPaymentFile.name}`
       );
       const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
       proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
