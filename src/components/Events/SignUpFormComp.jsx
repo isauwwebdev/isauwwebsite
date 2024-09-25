@@ -5,16 +5,17 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { Tooltip } from "bootstrap";
 import { collection, addDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import { db, storage } from "../../firebase"; // Import storage from firebase
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom";
 import "../index.css";
 
-// Component for Event Sign Up (Registration) Forms
 export default function SignUpFormComponent({
   eventName,
   posterImage,
   firestorePath,
   BGImage,
+  rsvp = false,
 }) {
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -22,10 +23,13 @@ export default function SignUpFormComponent({
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [isWARegistered, setIsWARegistered] = useState(true); // State for WhatsApp registration
-  const [subscribe, setSubscribe] = useState(true); // State for newsletter subscription
+  const [isWARegistered, setIsWARegistered] = useState(true);
+  const [subscribe, setSubscribe] = useState(true);
 
-  // State for modals
+  // Add state for Proof of Payment file
+  const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
+  const [proofOfPaymentError, setProofOfPaymentError] = useState("");
+  
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -50,7 +54,7 @@ export default function SignUpFormComponent({
   // Function to handle scrolling and escape key
   useEffect(() => {
     if (showSuccessModal || showErrorModal) {
-      document.body.style.overflow = "hidden"; // Disable scrolling
+      document.body.style.overflow = "hidden";
 
       const handleEsc = (event) => {
         if (event.key === "Escape") {
@@ -58,11 +62,11 @@ export default function SignUpFormComponent({
           setShowErrorModal(false);
         }
       };
-      window.addEventListener("keydown", handleEsc); // Add listener for ESC key
+      window.addEventListener("keydown", handleEsc);
 
       return () => {
-        document.body.style.overflow = "auto"; // Enable scrolling when modal closes
-        window.removeEventListener("keydown", handleEsc); // Cleanup ESC listener
+        document.body.style.overflow = "auto";
+        window.removeEventListener("keydown", handleEsc);
       };
     }
   }, [showSuccessModal, showErrorModal]);
@@ -77,15 +81,14 @@ export default function SignUpFormComponent({
   // Handle modal transitions
   useEffect(() => {
     if (showSuccessModal || showErrorModal) {
-      setTimeout(() => setIsVisible(true), 50); // Slight delay for smoother animation
+      setTimeout(() => setIsVisible(true), 50);
     } else {
       setIsVisible(false);
     }
   }, [showSuccessModal, showErrorModal]);
 
-  // Close the modal with fade out
   const closeModal = () => {
-    setIsVisible(false); // Start fade-out animation
+    setIsVisible(false);
     setShowSuccessModal(false);
     setShowErrorModal(false);
   };
@@ -110,7 +113,6 @@ export default function SignUpFormComponent({
 
   const renderCollegeListTemp = (name) => {
     if (name) {
-      // Filter the seattleColleges based on the input
       const filteredColleges = seattleColleges.filter((college) =>
         college.name.toLowerCase().includes(name.toLowerCase())
       );
@@ -131,39 +133,57 @@ export default function SignUpFormComponent({
     }
   };
 
-  // Timeout for stopped typing (if wanna use API)
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     renderCollegeListTemp(searchInput);
-  //   }, 100);
-
-  //   return () => clearTimeout(timeout);
-  // }, [searchInput]);
+  const handleProofOfPaymentFile = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setProofOfPaymentFile(file);
+      setProofOfPaymentError(""); 
+    }
+  };
+  
 
   const onSubmit = async (data) => {
-    // console.log(data);
+    if (rsvp && !proofOfPaymentFile) { // Check rsvp before validating proof of payment
+      setProofOfPaymentError("Proof of Payment is required.");
+      return; // Prevent form submission if proof of payment is not provided
+    }
+  
+    setIsLoading(true);
+    let proofOfPaymentURL = "";
+  
+    if (rsvp && proofOfPaymentFile) { // Only upload if rsvp is true and file is selected
+      const storageRef = ref(
+        storage,
+        `proofs-of-payment/${proofOfPaymentFile.name}`
+      );
+      const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
+      proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
+    }
+  
     const formData = {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
       phoneNumber: data.phoneNumber,
       selectedCollege: selectedCollege,
-      isWARegistered: isWARegistered, // Use state value
-      subscribe: subscribe, // Use state value
+      isWARegistered: isWARegistered,
+      subscribe: subscribe,
+      proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
       timestamp: new Date(),
     };
-
+  
     try {
-      setIsLoading(true); // Show loader when form is being submitted
       await addDoc(collection(db, firestorePath), formData);
-      setShowSuccessModal(true); // Show success modal
+      setShowSuccessModal(true);
     } catch (e) {
       console.error("Error adding document: ", e);
-      setShowErrorModal(true); // Show error modal
+      setShowErrorModal(true);
     } finally {
-      setIsLoading(false); // Hide loader after submission is complete
+      setIsLoading(false);
     }
   };
+  
+  
 
   const handleSelectCollege = (collegeName) => {
     setSelectedCollege(collegeName);
@@ -174,7 +194,7 @@ export default function SignUpFormComponent({
   return (
     <div className="justify-content-center align-items-center h-100">
       <div
-        class="bg-cover bg-center bg-no-repeat w-full min-h-[80rem] md:min-h-[158vh]"
+        className="bg-cover bg-center bg-no-repeat w-full min-h-[80rem] md:min-h-[158vh]"
         style={{
           backgroundImage: `url('/images/${BGImage}')`,
           backgroundSize: "cover",
@@ -187,7 +207,7 @@ export default function SignUpFormComponent({
           <div className="bg-light rounded-lg w-10/12 md:w-2/5 mt-28 md:mt-24 shadow-md">
             <img
               src={`/images/${posterImage}`}
-              alt="stamp quest poster"
+              alt="event poster"
               className="mb-2 object-fill h-42 rounded-t-lg"
             />
 
@@ -305,6 +325,32 @@ export default function SignUpFormComponent({
                   )}
                 </div>
 
+                {/* Proof of Payment */}
+                {rsvp && (
+                  <div className="mb-3">
+                    <label htmlFor="proofOfPayment" className="form-label">
+                      Proof of Payment <span className="text-red-500"> *</span>
+                    </label>
+                    <input
+                      id="proofOfPayment"
+                      name="proofOfPayment"
+                      type="file"
+                      accept=".jpg,.jpeg,.png,.pdf"
+                      className="form-control"
+                      onChange={handleProofOfPaymentFile}
+                    />
+                    {proofOfPaymentError && (
+                      <div className="text-danger">{proofOfPaymentError}</div>
+                    )}
+                    <small className="form-text text-muted">
+                      Please upload a screenshot of your payment. Payments can be sent via:<br />
+                      <div style={{ marginLeft: "20px" }}>Zelle: octaviog@uw.edu</div>
+                      <div style={{ marginLeft: "20px" }}>Venmo: @ISAUW-Finance</div>
+                      When making the payment, please include your registered name in the note section.
+                    </small>
+                  </div>
+                )}
+
                 {/* Phone Number */}
                 <div className="mb-3">
                   <label htmlFor="phoneNumber" className="form-label">
@@ -336,9 +382,9 @@ export default function SignUpFormComponent({
                       clearErrors("phoneNumber");
                     }}
                   />
-
                   <small>
-                    Enter a <i className="fa fa-whatsapp"></i>
+                    Enter a{" "}
+                    <i className="fa fa-whatsapp"></i>
                     <a
                       href="https://whatsapp.com"
                       target="_blank"
@@ -376,6 +422,7 @@ export default function SignUpFormComponent({
                   </div>
                 </div>
 
+
                 {/* Boolean Subscribe Newsletter */}
                 <div className="mb-3 flex flex-row gap-2">
                   <label htmlFor="subscribe" className="form-label">
@@ -395,12 +442,6 @@ export default function SignUpFormComponent({
                       onChange={(e) => setSubscribe(e.target.checked)}
                     />
                   </div>
-                </div>
-
-                {/* Indication required fields */}
-                <div className="flex flex-row gap-1">
-                  <div className="text-red-500"> *</div>
-                  <small> indicates required fields </small>
                 </div>
 
                 <button
@@ -459,7 +500,7 @@ export default function SignUpFormComponent({
                             stroke="currentColor"
                           >
                             <path
-                              stroke-width="2"
+                              strokeWidth="2"
                               d="M5 13l4 4L19 7"
                               className="tick"
                             />
@@ -543,7 +584,6 @@ export default function SignUpFormComponent({
                     </div>
                   </div>
                 )}
-
                 {/* End modal */}
               </form>
             </div>
