@@ -80,7 +80,7 @@ function Officers() {
       <div className="navbar-overlay" style={{ position: "relative" }}>
         <img
           className="d-block w-100"
-          src="../images/officers/isauw-group.jpg"
+          src="../images/officers/isauw-group.webp"
           alt=""
           style={{ height: "calc(50vh + 10vw)" }}
         />

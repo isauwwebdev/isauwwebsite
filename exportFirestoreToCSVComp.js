@@ -43,8 +43,17 @@ async function exportFirestoreToCSVComp(pathType) {
       return;
     }
 
+    console.log("Resulted data", data);
+
     // Convert JSON to CSV using json2csv
-    const fields = Object.keys(data[0]); // Use the first document's keys for the CSV headers
+    // Collect all unique fields from all documents
+    const allFields = new Set();
+
+    data.forEach((item) => {
+      Object.keys(item).forEach((key) => allFields.add(key));
+    });
+
+    const fields = Array.from(allFields); // Convert the set to an array for json2csv
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(data);
 

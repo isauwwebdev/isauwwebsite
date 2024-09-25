@@ -5,7 +5,7 @@ import "react-phone-number-input/style.css";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import { Tooltip } from "bootstrap";
 import { collection, addDoc } from "firebase/firestore";
-import { db, storage } from "../../firebase"; 
+import { db, storage } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom";
 import "../index.css";
@@ -29,7 +29,7 @@ export default function SignUpFormComponent({
   // Add state for Proof of Payment file
   const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
   const [proofOfPaymentError, setProofOfPaymentError] = useState("");
-  
+
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -137,21 +137,22 @@ export default function SignUpFormComponent({
     const file = e.target.files[0];
     if (file) {
       setProofOfPaymentFile(file);
-      setProofOfPaymentError(""); 
+      setProofOfPaymentError("");
     }
   };
-  
 
   const onSubmit = async (data) => {
-    if (rsvp && !proofOfPaymentFile) { // Check rsvp before validating proof of payment
+    if (rsvp && !proofOfPaymentFile) {
+      // Check rsvp before validating proof of payment
       setProofOfPaymentError("Proof of Payment is required.");
       return; // Prevent form submission if proof of payment is not provided
     }
-  
+
     setIsLoading(true);
     let proofOfPaymentURL = "";
-  
-    if (rsvp && proofOfPaymentFile) { // Only upload if rsvp is true and file is selected
+
+    if (rsvp && proofOfPaymentFile) {
+      // Only upload if rsvp is true and file is selected
       const storageRef = ref(
         storage,
         `2024/seathrough/proofs-of-payment/${proofOfPaymentFile.name}`
@@ -159,7 +160,7 @@ export default function SignUpFormComponent({
       const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
       proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
     }
-  
+
     const formData = {
       firstName: data.firstName,
       lastName: data.lastName,
@@ -171,7 +172,7 @@ export default function SignUpFormComponent({
       proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
       timestamp: new Date(),
     };
-  
+
     try {
       await addDoc(collection(db, firestorePath), formData);
       setShowSuccessModal(true);
@@ -182,8 +183,6 @@ export default function SignUpFormComponent({
       setIsLoading(false);
     }
   };
-  
-  
 
   const handleSelectCollege = (collegeName) => {
     setSelectedCollege(collegeName);
@@ -338,15 +337,36 @@ export default function SignUpFormComponent({
                       accept=".jpg,.jpeg,.png,.pdf"
                       className="form-control"
                       onChange={handleProofOfPaymentFile}
+                      {...register("proofOfPayment", {
+                        required: "Proof of payment is required",
+                        validate: (value) => {
+                          return (
+                            proofOfPaymentFile ||
+                            "Proof of payment and is required."
+                          );
+                        },
+                      })}
                     />
                     {proofOfPaymentError && (
                       <div className="text-danger">{proofOfPaymentError}</div>
                     )}
+                    {errors.proofOfPayment && (
+                      <div className="text-danger">
+                        {errors.proofOfPayment.message}
+                      </div>
+                    )}
                     <small className="form-text text-muted">
-                      Please upload a screenshot of your payment. Payments can be sent via:<br />
-                      <div style={{ marginLeft: "20px" }}>Zelle: octaviog@uw.edu</div>
-                      <div style={{ marginLeft: "20px" }}>Venmo: @ISAUW-Finance</div>
-                      When making the payment, please include your registered name in the note section.
+                      Please upload a screenshot of your payment. Payments can
+                      be sent via:
+                      <br />
+                      <div style={{ marginLeft: "20px" }}>
+                        Zelle: octaviog@uw.edu
+                      </div>
+                      <div style={{ marginLeft: "20px" }}>
+                        Venmo: @ISAUW-Finance
+                      </div>
+                      When making the payment, please include your registered
+                      name in the note section.
                     </small>
                   </div>
                 )}
@@ -383,8 +403,7 @@ export default function SignUpFormComponent({
                     }}
                   />
                   <small>
-                    Enter a{" "}
-                    <i className="fa fa-whatsapp"></i>
+                    Enter a <i className="fa fa-whatsapp"></i>
                     <a
                       href="https://whatsapp.com"
                       target="_blank"
@@ -421,7 +440,6 @@ export default function SignUpFormComponent({
                     />
                   </div>
                 </div>
-
 
                 {/* Boolean Subscribe Newsletter */}
                 <div className="mb-3 flex flex-row gap-2">
