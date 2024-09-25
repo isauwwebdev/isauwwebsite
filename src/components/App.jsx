@@ -250,6 +250,7 @@ function App() {
                 BGImage="/events/seathrough/2024/seathrough_banner.png"
                 firestorePath="2024/seathrough/event-registrations"
                 posterImage="/events/seathrough/2024/seathrough_poster.png"
+                rsvp={true}
               />
             )}
           />
