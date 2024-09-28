@@ -1,16 +1,5 @@
-[
-    {
-        "title": "Seattle Stamp Quest",
-        "date": "09/23/2024",
-        "time": "14:00 PDT",
-        "location": "Red Square",
-        "text": "Insert information about Stamp Quest here.",
-        "img": [{"src": "../images/events/stampquest/seattle_stamp_quest_card.png", "alt": "Card front image"},
-                {"src": "../images/events/keraton/2022/3.jpeg"},
-                {"src": "../images/events/keraton/2022/4.jpeg"},
-                {"src": "../images/events/keraton/2022/5.jpeg"}],
-        "completed": false
-    },
+[ 
+   
     {
         "title": "Seathrough",
         "date": "09/28/2024",
@@ -22,6 +11,26 @@
                 {"src": "../images/events/keraton/2022/4.jpeg"},
                 {"src": "../images/events/keraton/2022/5.jpeg"}],
         "completed": false
+    },
+    
+    {
+        "title": "Seattle Stamp Quest",
+        "date": "09/23/2024",
+        "time": "14:00 PDT",
+        "location": "Red Square",
+        "text": "Seattle Stamp Quest is an exciting scavenger hunt event that takes participants on an adventure across the city. This event is a fun-filled experience where you can meet new friends, complete activities, and win amazing prizes!",
+        "img": [{"src": "../images/events/stampquest/seattle_stamp_quest_card.png", "alt": "Card front image"},
+                {"src": "../images/events/stampquest/stamp_quest_1.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_2.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_3.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_4.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_5.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_6.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_7.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_8.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_9.jpg"}
+            ],
+        "completed": true
     },
     {
         "title": "Winter Ball",
