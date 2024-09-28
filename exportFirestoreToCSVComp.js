@@ -43,7 +43,7 @@ async function exportFirestoreToCSVComp(pathType) {
       return;
     }
 
-    console.log("Resulted data", data);
+    // console.log("Resulted data", data);
 
     // Convert JSON to CSV using json2csv
     // Collect all unique fields from all documents

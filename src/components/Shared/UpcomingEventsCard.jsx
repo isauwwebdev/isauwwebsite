@@ -121,6 +121,7 @@ function UpcomingEventsCard(props) {
                     </div>
                   </div>
                 </div>
+                {/* TODO: make this dynamic */}
                 {props.title === "Keraton" ? (
                   <div className="div-upcoming-events-button">
                     <a
