@@ -1,5 +1,4 @@
 [ 
-   
     {
         "title": "Seathrough",
         "date": "09/28/2024",
@@ -12,7 +11,6 @@
                 {"src": "../images/events/keraton/2022/5.jpeg"}],
         "completed": false
     },
-    
     {
         "title": "Seattle Stamp Quest",
         "date": "09/23/2024",
@@ -24,8 +22,8 @@
                 {"src": "../images/events/stampquest/stamp_quest_2.jpg"},
                 {"src": "../images/events/stampquest/stamp_quest_3.jpg"},
                 {"src": "../images/events/stampquest/stamp_quest_4.jpg"},
-                {"src": "../images/events/stampquest/stamp_quest_5.jpg"},
-                {"src": "../images/events/stampquest/stamp_quest_6.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_5.jpeg"},
+                {"src": "../images/events/stampquest/stamp_quest_6.jpeg"},
                 {"src": "../images/events/stampquest/stamp_quest_7.jpg"},
                 {"src": "../images/events/stampquest/stamp_quest_8.jpg"},
                 {"src": "../images/events/stampquest/stamp_quest_9.jpg"}
