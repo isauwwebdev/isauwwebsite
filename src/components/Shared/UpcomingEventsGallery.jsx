@@ -2,6 +2,7 @@ import React from "react";
 import UpcomingEventsCard from "./UpcomingEventsCard";
 import Slider from "react-slick";
 import events from "../../data/events.json";
+import ComingSoonCard from "./ComingSoonCard";
 
 export default function UpcomingEventsGallery() {
   function UpcomingEventsNextArrow(props) {
@@ -92,6 +93,7 @@ export default function UpcomingEventsGallery() {
           </h1>
           {/* Past Events */}
           <Slider {...settings}>
+            {upcomingEvents.length === 0 && <ComingSoonCard />}
             {upcomingEvents.map((event, i) => {
               return (
                 <UpcomingEventsCard

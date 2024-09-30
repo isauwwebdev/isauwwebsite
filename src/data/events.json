@@ -4,12 +4,16 @@
         "date": "09/28/2024",
         "time": "18:30 PDT",
         "location": "HUB 145",
-        "text": "Insert information about Seathrough here.",
+        "text": "Seathrough is the perfect way to kick off your UW journey! Enjoy a night filled with laughter, games, and new connections. Whether you're new or returning, this event is the perfect chance to meet fellow Huskies and create lasting memories.",
         "img": [{"src": "../images/events/seathrough/2024/seathrough2024_card.png", "alt": "Card front image"},
-                {"src": "../images/events/keraton/2022/3.jpeg"},
-                {"src": "../images/events/keraton/2022/4.jpeg"},
-                {"src": "../images/events/keraton/2022/5.jpeg"}],
-        "completed": false
+                {"src": "../images/events/seathrough/2024/seathrough_1.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_2.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_3.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_4.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_5.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_6.jpeg"}
+            ],
+        "completed": true
     },
     {
         "title": "Seattle Stamp Quest",
