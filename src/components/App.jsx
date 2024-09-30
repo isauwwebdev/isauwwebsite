@@ -127,7 +127,7 @@ function App() {
       <div>
         <section id="preloader">
           {/* <img alt="isauwbird" src="../images/isauwbird-red.png" /> */}
-          <img alt="isauwbird" src="../preloader.gif" />
+          <img alt="isauwbird" src="../preloader2.gif" />
         </section>
 
         <header>

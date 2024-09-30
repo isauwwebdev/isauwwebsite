@@ -202,6 +202,7 @@ function Apply() {
         whyISAUW,
         resume: resumeURL,
         portfolio,
+        timestamp: new Date(),
       };
 
       await addDoc(
