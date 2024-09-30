@@ -126,7 +126,8 @@ function App() {
       <ScrollToTop />
       <div>
         <section id="preloader">
-          <img alt="isauwbird" src="../images/isauwbird-red.png" />
+          {/* <img alt="isauwbird" src="../images/isauwbird-red.png" /> */}
+          <img alt="isauwbird" src="../preloader.gif" />
         </section>
 
         <header>

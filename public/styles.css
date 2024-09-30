@@ -313,12 +313,12 @@ body,
 }
 
 #preloader img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 30rem;
+  max-height: 30rem;
   background-color: none;
   z-index: 10000;
-  -webkit-animation: sk-rotatePlane 2s infinite ease-in-out;
-  animation: sk-rotatePlane 2s infinite ease-in-out;
+  /* -webkit-animation: sk-rotatePlane 2s infinite ease-in-out;
+  animation: sk-rotatePlane 2s infinite ease-in-out; */
 }
 
 @keyframes sk-rotatePlane {
