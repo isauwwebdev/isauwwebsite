@@ -31,7 +31,8 @@ export default function ComingSoonCard() {
             <Card.Img
               variant="top"
               className="upcoming-events-img"
-              src=" ../images/events/keraton/2022/6.jpeg"
+              //   src=" ../images/events/keraton/2022/6.jpeg"
+              src=" ../images/keraton/2023/keraton 1.jpeg"
               alt="Placeholder for upcoming event"
             />
           </div>
