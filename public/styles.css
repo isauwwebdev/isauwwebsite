@@ -315,7 +315,8 @@ body,
 #preloader img {
   max-width: 30rem;
   max-height: 30rem;
-  background-color: none;
+  background-color: #fff;
+  color: white;
   z-index: 10000;
   /* -webkit-animation: sk-rotatePlane 2s infinite ease-in-out;
   animation: sk-rotatePlane 2s infinite ease-in-out; */
