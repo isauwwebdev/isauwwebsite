@@ -292,7 +292,7 @@ function App() {
               />
             )}
           />
-          <Route
+          {/* <Route
             path="/sign-up-seathrough"
             render={() => (
               <EventSignUpForm
@@ -303,7 +303,7 @@ function App() {
                 rsvp={true}
               />
             )}
-          />
+          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
