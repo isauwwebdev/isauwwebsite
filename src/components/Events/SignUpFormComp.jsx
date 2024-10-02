@@ -15,7 +15,7 @@ export default function SignUpFormComponent({
   posterImage,
   firestorePath,
   BGImage,
-  rsvp = false,
+  rsvp = true,
 }) {
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
