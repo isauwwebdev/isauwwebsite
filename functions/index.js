@@ -1,69 +1,83 @@
-// /**
-//  * Import function triggers from their respective submodules:
-//  *
-//  * const {onCall} = require("firebase-functions/v2/https");
-//  * const {onDocumentWritten} = require("firebase-functions/v2/firestore");
-//  *
-//  * See a full list of supported triggers at https://firebase.google.com/docs/functions
-//  */
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+const { exec } = require("child_process");
 
-// const {onRequest} = require("firebase-functions/v2/https");
-// const logger = require("firebase-functions/logger");
+admin.initializeApp();
 
-// const functions = require("firebase-functions");
-// const admin = require("firebase-admin");
-// const { Parser } = require("json2csv");
-// const fs = require("fs");
-// const os = require("os");
-// const path = require("path");
+// Function to handle Google Sheets update using curl
+const updateGoogleSheetsWithCurl = (dataToSend, sheetUrl) => {
+  return new Promise((resolve, reject) => {
+    const jsonData = JSON.stringify(dataToSend);
 
-// admin.initializeApp();
+    const curlCommand = `curl -X POST ${sheetUrl} -H "Content-Type: application/json" -d '${jsonData}'`;
 
-// // Cloud Function to export Firestore data as a CSV file
-// exports.exportToCSV = functions.https.onRequest(async (req, res) => {
-//   try {
-//     // Access your Firestore collection
-//     const collectionRef = admin.firestore().collection("event-registrations");
-//     const snapshot = await collectionRef.get();
+    exec(curlCommand, (error, stdout, stderr) => {
+      if (error) {
+        console.error(
+          `Error updating Google Sheets with curl: ${error.message}`
+        );
+        return reject(error);
+      }
+      console.log(`Google Sheets updated: ${stdout}`);
+      resolve({ success: true });
+    });
+  });
+};
 
-//     if (snapshot.empty) {
-//       console.log('No documents found');
-//       res.status(404).send("No data found to export.");
-//       return;
-//     }
+exports.syncFirestoreWithGoogleSheets = functions.firestore
+  .document("2024/officer-application/submitted-applications/{docId}")
+  .onWrite(async (change, context) => {
+    // Get the document data after the change
+    const document = change.after.exists ? change.after.data() : null;
 
-//     const data = [];
-//     snapshot.forEach(doc => {
-//       data.push(doc.data());
-//     });
+    if (!document) {
+      console.log("No document data after the change. Exiting.");
+      return;
+    }
 
-//     // Convert the data to CSV using json2csv
-//     const fields = Object.keys(data[0]); // Use keys from the first document
-//     const json2csvParser = new Parser({ fields });
-//     const csv = json2csvParser.parse(data);
+    const sheetUrl =
+      "https://script.google.com/macros/s/AKfycbwyV3LEU-3SN1s4e3MwqthNiFLQTZqCwSJmzyWG0Ly6gddvxNj9PJ3zl2_gLFU5LahpVw/exec";
 
-//     // Write the CSV to a temporary file
-//     const tempFilePath = path.join(os.tmpdir(), "firestore-export.csv");
-//     fs.writeFileSync(tempFilePath, csv);
+    // Transform the Firestore document fields to the format expected by the Google Sheets App Script
+    const transformedDocument = {
+      name: change.after.ref.path,
+      fields: {
+        firstName: { stringValue: document.firstName || "" },
+        lastName: { stringValue: document.lastName || "" },
+        major: { stringValue: document.major || "" },
+        standing: { stringValue: document.standing || "" },
+        uwEmail: { stringValue: document.uwEmail || "" },
+        personalEmail: { stringValue: document.personalEmail || "" },
+        phoneNumber: { stringValue: document.phoneNumber || "" },
+        firstChoice: { stringValue: document.firstChoice || "" },
+        secondChoice: { stringValue: document.secondChoice || "" },
+        thirdChoice: { stringValue: document.thirdChoice || "" },
+        resume: { stringValue: document.resume || "" },
+        portfolio: { stringValue: document.portfolio || "" },
+        pastExperiences: { stringValue: document.pastExperiences || "" },
+        strengthsWeaknesses: {
+          stringValue: document.strengthsWeaknesses || "",
+        },
+        whyISAUW: { stringValue: document.whyISAUW || "" },
+        timestamp: {
+          timestampValue: document.timestamp
+            ? document.timestamp.toDate().toISOString()
+            : "",
+        },
+      },
+    };
 
-//     // Set headers to serve the CSV file
-//     res.setHeader("Content-Disposition", 'attachment; filename="firestore-export.csv"');
-//     res.setHeader("Content-Type", "text/csv");
+    const dataToSend = {
+      documents: [transformedDocument],
+    };
 
-//     // Send the CSV data
-//     res.send(csv);
-    
-//   } catch (error) {
-//     console.error("Error exporting Firestore data to CSV:", error);
-//     res.status(500).send("Error exporting data.");
-//   }
-// });
+    console.log("Data to send to Google Sheets:", dataToSend);
 
-
-// // Create and deploy your first functions
-// // https://firebase.google.com/docs/functions/get-started
-
-// // exports.helloWorld = onRequest((request, response) => {
-// //   logger.info("Hello logs!", {structuredData: true});
-// //   response.send("Hello from Firebase!");
-// // });
+    // Use curl to send data to the Google Apps Script Web App
+    try {
+      const result = await updateGoogleSheetsWithCurl(dataToSend, sheetUrl);
+      console.log(result);
+    } catch (error) {
+      console.error("Error during Google Sheets update:", error);
+    }
+  });
