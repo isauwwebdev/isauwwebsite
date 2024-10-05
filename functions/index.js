@@ -81,3 +81,9 @@ exports.syncFirestoreWithGoogleSheets = functions.firestore
       console.error("Error during Google Sheets update:", error);
     }
   });
+
+exports.getServerTime = functions.https.onCall((data, context) => {
+  // Get the server's current timestamp
+  const serverTimestamp = new Date().toISOString();
+  return { serverTimestamp };
+});

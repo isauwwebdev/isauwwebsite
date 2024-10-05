@@ -4,15 +4,87 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
-
 import FormHelper from "../Shared/FormHelper";
 import PositionDescriptions from "./PositionDescriptions";
 import { addDoc, collection } from "firebase/firestore";
 import { db, storage } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom/cjs/react-router-dom";
+import { getFunctions, httpsCallable } from "firebase/functions";
+import { app } from "../../firebase";
+import { zonedTimeToUtc } from "date-fns-tz";
 
 function Apply() {
+  const [showClosedModal, setShowClosedModal] = useState(false);
+  // Initialize Firebase Functions
+  const functions = getFunctions(app);
+
+  // Closing date details (change it here if needed)
+  const closingDate = [{ date: "04/10/2024" }, { time: "19:15" }]; // TODO: change if needed
+
+  // Convert closing date to a Date object
+  const [day, month, year] = closingDate[0].date.split("/").map(Number);
+  const [hours, minutes] = closingDate[1].time.split(":").map(Number);
+  const timeZone = "America/Los_Angeles"; // Pacific Time (Seattle)
+  const closeDate = useMemo(() => {
+    const [day, month, year] = closingDate[0].date.split("/").map(Number);
+    const [hours, minutes] = closingDate[1].time.split(":").map(Number);
+    const closeDateInSeattle = new Date(year, month - 1, day, hours, minutes);
+    // Convert the Seattle time to UTC for consistent comparison
+    return zonedTimeToUtc(closeDateInSeattle, timeZone);
+  }, [closingDate]);
+
+  // Function to check if the form is closed based on server time
+  const doCloseForm = async () => {
+    try {
+      // Call the Firebase function to get server time
+      const getServerTime = httpsCallable(functions, "getServerTime");
+      const result = await getServerTime();
+
+      const serverTimestamp = new Date(result.data.serverTimestamp);
+
+      if (serverTimestamp >= closeDate) {
+        setShowClosedModal(true);
+      }
+    } catch (error) {
+      console.error("Error getting server time:", error);
+    }
+  };
+
+  useEffect(() => {
+    // Check if form should be closed on mount and every minute
+    doCloseForm();
+    const interval = setInterval(doCloseForm, 60000); // Check every 1 minute
+    return () => clearInterval(interval); // Clear interval on unmount
+  }, []);
+
+  const closedModal = (
+    <div
+      id="modal-overlay"
+      className={`fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 ${
+        showClosedModal ? "opacity-100" : "opacity-0"
+      }`}
+    >
+      <div className="bg-white w-11/12 sm:w-96 rounded-xl shadow-lg p-6 transform transition-all duration-300">
+        <h2 className="text-center text-xl font-bold text-gray-900 mb-2">
+          Application Closed
+        </h2>
+        <p className="text-center text-gray-600 text-sm">
+          Sorry, the application for ISAUW Officers is now closed. Thank you for
+          your interest in ISAUW!
+        </p>
+        <div className="flex justify-center mt-4">
+          <Link
+            to="/"
+            className="bg-[#941A1A] hover:bg-[#7a1414] text-white py-2 px-4 rounded-lg w-full text-center transition-all flex justify-center items-center gap-2"
+          >
+            Back to Home
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+
   const standingOptions = useMemo(
     () => [
       { value: "default", text: "Select your class standing" },
@@ -255,321 +327,331 @@ function Apply() {
   const [loadingSpinner, setLoadingSpinner] = useState(false);
 
   return (
-    <div style={{ fontSize: "14px" }}>
-      <div style={{ position: "relative" }}>
-        <img
-          className="d-block w-100"
-          src="../images/recruitment/recruitment-banner.png"
-          alt=""
-          style={{ height: "calc(50vh + 10vw)" }}
-        />
-      </div>
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs={12} sm={10} md={8} lg={6} className="my-5">
-            <div style={{ marginBottom: "20px" }}>
-              <h1 style={{ marginBottom: "15px" }}>
-                <strong>ISAUW Officer Application</strong>
-              </h1>
-              <p style={{ fontSize: "14px", marginBottom: "10px" }}>
-                We are thrilled to welcome new members to ISAUW this year!
-                Please fill in the form below to apply. Selected applicants will
-                be contacted for an interview.
-              </p>
-              <p style={{ fontSize: "14px", marginBottom: "10px" }}>
-                Reach out on Instagram @isauwhuskies or email us at isauw@uw.edu
-                for any questions.
-              </p>
-              <p style={{ fontSize: "14px", marginBottom: "0" }}>
-                <strong style={{ fontSize: "14px" }}>Requirement:</strong>{" "}
-                Currently enrolled as a UW student.
-              </p>
-            </div>
-
-            <Form
-              noValidate
-              validated={validated}
-              onSubmit={submitForm}
-              className="mx-auto"
-              style={{ display: "flex", flexDirection: "column" }}
-            >
-              <section className="my-3">
-                <h1 className="my-3">
-                  <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
-                    Personal Information
-                  </strong>
+    <>
+      {showClosedModal && closedModal}
+      <div style={{ fontSize: "14px" }}>
+        <div style={{ position: "relative" }}>
+          <img
+            className="d-block w-100"
+            src="../images/recruitment/recruitment-banner.png"
+            alt=""
+            style={{ height: "calc(50vh + 10vw)" }}
+          />
+        </div>
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs={12} sm={10} md={8} lg={6} className="my-5">
+              <div style={{ marginBottom: "20px" }}>
+                <h1 style={{ marginBottom: "15px" }}>
+                  <strong>ISAUW Officer Application</strong>
                 </h1>
-                <div className="row">
-                  <div className="col-6" style={{ paddingRight: "6px" }}>
-                    <FormHelper
-                      name="firstName"
-                      label="First Name"
-                      datatype="text"
-                      handleChange={handleChange}
-                      feedback="Please enter your first name"
-                    />
-                  </div>
-                  <div className="col-6" style={{ paddingLeft: "6px" }}>
-                    <FormHelper
-                      name="lastName"
-                      label="Last Name"
-                      datatype="text"
-                      handleChange={handleChange}
-                      feedback="Please enter your last name"
-                    />
-                  </div>
-                </div>
-                <FormHelper
-                  name="phoneNumber"
-                  label="US Phone Number"
-                  datatype="tel"
-                  handleChange={handleChange}
-                  feedback="Please enter a valid US phone number"
-                  pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}"
-                />
-                <FormHelper
-                  name="emailPersonal"
-                  label="Personal Email"
-                  datatype="email"
-                  handleChange={handleChange}
-                  feedback="Please enter a valid email address"
-                />
-                <FormHelper
-                  name="emailUW"
-                  label="UW Email"
-                  datatype="email"
-                  handleChange={handleChange}
-                  feedback="Please enter a valid UW email address"
-                  pattern="^\w+@uw.edu"
-                />
-                <FormHelper
-                  name="major"
-                  label="Major/Intended Major"
-                  datatype="text"
-                  handleChange={handleChange}
-                  feedback="Please enter a valid major"
-                />
-                <FormHelper
-                  name="standing"
-                  label="Class Standing"
-                  type="select"
-                  options={standingOptions}
-                  handleChange={handleChange}
-                />
-                {/* Wrapper to hide file input with custom button */}
-                {/* TODO: Add validation */}
-                <div>
-                  <Row>
-                    <Row>
-                      <Col xs={7} sm={6} md={5} lg={4}>
-                        <label
-                          id="fakeResume"
-                          class="btn"
-                          for="resume"
-                          style={{
-                            fontSize: "14px",
-                            fontWeight: "300",
-                            textTransform: "none",
-                            margin: "0",
-                            width: "100%",
-                            boxShadow: "none",
-                            border: "1px solid #ced4da",
-                          }}
-                        >
-                          Upload Resume
-                          <FormHelper
-                            name="resume"
-                            type="file"
-                            accept=".doc,.docx,application/pdf"
-                            handleChange={handleFile}
-                          />
-                        </label>
-                      </Col>
-                      <Col
-                        xs={5}
-                        sm={6}
-                        md={7}
-                        lg={8}
-                        style={{
-                          margin: "auto 0",
-                          padding: "0",
-                          overflow: "hidden",
-                          textOverflow: "ellipsis",
-                        }}
-                      >
-                        <span id="fakeResumeText" style={{ fontSize: "14px" }}>
-                          {resumeFile ? resumeFile.name : "No file selected."}
-                        </span>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col xs={7} sm={6} md={5} lg={4}>
-                        <p
-                          style={{
-                            fontSize: "12px",
-                            margin: "8px 0 0",
-                            padding: "0",
-                            textAlign: "center",
-                          }}
-                        >
-                          DOC, DOCX, PDF
-                        </p>
-                      </Col>
-                    </Row>
-                  </Row>
-                </div>
-              </section>
+                <p style={{ fontSize: "14px", marginBottom: "10px" }}>
+                  We are thrilled to welcome new members to ISAUW this year!
+                  Please fill in the form below to apply. Selected applicants
+                  will be contacted for an interview.
+                </p>
+                <p style={{ fontSize: "14px", marginBottom: "10px" }}>
+                  Reach out on Instagram @isauwhuskies or email us at
+                  isauw@uw.edu for any questions.
+                </p>
+                <p style={{ fontSize: "14px", marginBottom: "0" }}>
+                  <strong style={{ fontSize: "14px" }}>Requirement:</strong>{" "}
+                  Currently enrolled as a UW student.
+                </p>
+              </div>
 
-              <section className="my-3">
-                <h1>
-                  <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
-                    Rank Your Positions
-                  </strong>
-                </h1>
-                <PositionDescriptions />
-                <FormHelper
-                  name="firstChoice"
-                  label="First Choice"
-                  type="select"
-                  options={options1}
-                  value={appContent.firstChoice}
-                  handleChange={handleChange}
-                />
-                <FormHelper
-                  name="secondChoice"
-                  label="Second Choice"
-                  type="select"
-                  options={options2}
-                  value={appContent.secondChoice}
-                  handleChange={handleChange}
-                />
-                <FormHelper
-                  name="thirdChoice"
-                  label="Third Choice"
-                  type="select"
-                  options={options3}
-                  value={appContent.thirdChoice}
-                  handleChange={handleChange}
-                />
-
-                {showPortfolio && (
-                  <>
-                    <span style={{ color: "rgba(129, 27, 20, 1.0)" }}>
-                      You have indicated that you are applying to at least one
-                      of the following positions: Creative Engineering,
-                      Documentation, Design, or Web Development. Please be sure
-                      to bring your portfolio should you be contacted for an
-                      interview.
-                    </span>
-                    <div style={{ marginTop: "10px" }}>
+              <Form
+                noValidate
+                validated={validated}
+                onSubmit={submitForm}
+                className="mx-auto"
+                style={{ display: "flex", flexDirection: "column" }}
+              >
+                <section className="my-3">
+                  <h1 className="my-3">
+                    <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
+                      Personal Information
+                    </strong>
+                  </h1>
+                  <div className="row">
+                    <div className="col-6" style={{ paddingRight: "6px" }}>
                       <FormHelper
-                        name="portfolio"
-                        label="Portfolio Link"
-                        datatype="url"
+                        name="firstName"
+                        label="First Name"
+                        datatype="text"
                         handleChange={handleChange}
-                        feedback="Please enter a valid URL."
+                        feedback="Please enter your first name"
                       />
                     </div>
-                  </>
-                )}
-              </section>
+                    <div className="col-6" style={{ paddingLeft: "6px" }}>
+                      <FormHelper
+                        name="lastName"
+                        label="Last Name"
+                        datatype="text"
+                        handleChange={handleChange}
+                        feedback="Please enter your last name"
+                      />
+                    </div>
+                  </div>
+                  <FormHelper
+                    name="phoneNumber"
+                    label="US Phone Number"
+                    datatype="tel"
+                    handleChange={handleChange}
+                    feedback="Please enter a valid US phone number"
+                    pattern="[\(]\d{3}[\)] \d{3}[\-]\d{4}"
+                  />
+                  <FormHelper
+                    name="emailPersonal"
+                    label="Personal Email"
+                    datatype="email"
+                    handleChange={handleChange}
+                    feedback="Please enter a valid email address"
+                  />
+                  <FormHelper
+                    name="emailUW"
+                    label="UW Email"
+                    datatype="email"
+                    handleChange={handleChange}
+                    feedback="Please enter a valid UW email address"
+                    pattern="^\w+@uw.edu"
+                  />
+                  <FormHelper
+                    name="major"
+                    label="Major/Intended Major"
+                    datatype="text"
+                    handleChange={handleChange}
+                    feedback="Please enter a valid major"
+                  />
+                  <FormHelper
+                    name="standing"
+                    label="Class Standing"
+                    type="select"
+                    options={standingOptions}
+                    handleChange={handleChange}
+                  />
+                  {/* Wrapper to hide file input with custom button */}
+                  {/* TODO: Add validation */}
+                  <div>
+                    <Row>
+                      <Row>
+                        <Col xs={7} sm={6} md={5} lg={4}>
+                          <label
+                            id="fakeResume"
+                            class="btn"
+                            for="resume"
+                            style={{
+                              fontSize: "14px",
+                              fontWeight: "300",
+                              textTransform: "none",
+                              margin: "0",
+                              width: "100%",
+                              boxShadow: "none",
+                              border: "1px solid #ced4da",
+                            }}
+                          >
+                            Upload Resume
+                            <FormHelper
+                              name="resume"
+                              type="file"
+                              accept=".doc,.docx,application/pdf"
+                              handleChange={handleFile}
+                            />
+                          </label>
+                        </Col>
+                        <Col
+                          xs={5}
+                          sm={6}
+                          md={7}
+                          lg={8}
+                          style={{
+                            margin: "auto 0",
+                            padding: "0",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                          }}
+                        >
+                          <span
+                            id="fakeResumeText"
+                            style={{ fontSize: "14px" }}
+                          >
+                            {resumeFile ? resumeFile.name : "No file selected."}
+                          </span>
+                        </Col>
+                      </Row>
+                      <Row>
+                        <Col xs={7} sm={6} md={5} lg={4}>
+                          <p
+                            style={{
+                              fontSize: "12px",
+                              margin: "8px 0 0",
+                              padding: "0",
+                              textAlign: "center",
+                            }}
+                          >
+                            DOC, DOCX, PDF
+                          </p>
+                        </Col>
+                      </Row>
+                    </Row>
+                  </div>
+                </section>
 
-              <section className="my-3">
-                <h1>
-                  <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
-                    More About You
-                  </strong>
-                </h1>
-                <FormHelper
-                  name="strengthsWeaknesses"
-                  label="What are your strengths and weaknesses? 2 each and why."
-                  type="textarea"
-                  rows="10"
-                  handleChange={handleChange}
-                />
-                <FormHelper
-                  name="pastExperiences"
-                  label="What past experiences could you bring to ISAUW?"
-                  type="textarea"
-                  rows="10"
-                  handleChange={handleChange}
-                />
-                <FormHelper
-                  name="whyISAUW"
-                  label="Why do you want to join ISAUW?"
-                  type="textarea"
-                  rows="10"
-                  handleChange={handleChange}
-                />
-              </section>
+                <section className="my-3">
+                  <h1>
+                    <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
+                      Rank Your Positions
+                    </strong>
+                  </h1>
+                  <PositionDescriptions />
+                  <FormHelper
+                    name="firstChoice"
+                    label="First Choice"
+                    type="select"
+                    options={options1}
+                    value={appContent.firstChoice}
+                    handleChange={handleChange}
+                  />
+                  <FormHelper
+                    name="secondChoice"
+                    label="Second Choice"
+                    type="select"
+                    options={options2}
+                    value={appContent.secondChoice}
+                    handleChange={handleChange}
+                  />
+                  <FormHelper
+                    name="thirdChoice"
+                    label="Third Choice"
+                    type="select"
+                    options={options3}
+                    value={appContent.thirdChoice}
+                    handleChange={handleChange}
+                  />
 
-              <button
-                type="submit"
-                className={`w-full py-2 px-4 btn-dark text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#1F1F1F] focus:ring-opacity-40 transition duration-300 ${
-                  loadingSpinner ? "opacity-50 cursor-not-allowed" : ""
-                }`}
-                disabled={loadingSpinner}
-              >
-                {loadingSpinner ? (
-                  <Spinner
-                    animation="border"
-                    style={{ width: "1.5rem", height: "1.5rem" }}
-                  ></Spinner>
-                ) : (
-                  "Submit"
-                )}
-              </button>
-            </Form>
-          </Col>
-        </Row>
+                  {showPortfolio && (
+                    <>
+                      <span style={{ color: "rgba(129, 27, 20, 1.0)" }}>
+                        You have indicated that you are applying to at least one
+                        of the following positions: Creative Engineering,
+                        Documentation, Design, or Web Development. Please be
+                        sure to bring your portfolio should you be contacted for
+                        an interview.
+                      </span>
+                      <div style={{ marginTop: "10px" }}>
+                        <FormHelper
+                          name="portfolio"
+                          label="Portfolio Link"
+                          datatype="url"
+                          handleChange={handleChange}
+                          feedback="Please enter a valid URL."
+                        />
+                      </div>
+                    </>
+                  )}
+                </section>
 
-        {showThankYou && (
-          <div
-            id="modal-overlay"
-            onClick={handleOutsideClick}
-            className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 opacity-100"
-          >
-            <div className="bg-white w-11/12 sm:w-96 rounded-xl shadow-lg p-6 transform transition-all duration-300 scale-100 opacity-100">
-              <div className="flex justify-end">
+                <section className="my-3">
+                  <h1>
+                    <strong style={{ fontSize: `calc(0.8vw + 20px)` }}>
+                      More About You
+                    </strong>
+                  </h1>
+                  <FormHelper
+                    name="strengthsWeaknesses"
+                    label="What are your strengths and weaknesses? 2 each and why."
+                    type="textarea"
+                    rows="10"
+                    handleChange={handleChange}
+                  />
+                  <FormHelper
+                    name="pastExperiences"
+                    label="What past experiences could you bring to ISAUW?"
+                    type="textarea"
+                    rows="10"
+                    handleChange={handleChange}
+                  />
+                  <FormHelper
+                    name="whyISAUW"
+                    label="Why do you want to join ISAUW?"
+                    type="textarea"
+                    rows="10"
+                    handleChange={handleChange}
+                  />
+                </section>
+
                 <button
-                  className="text-gray-500 hover:text-gray-700"
-                  onClick={() => setShowThankYou(false)} // Close the modal on click
+                  type="submit"
+                  className={`w-full py-2 px-4 btn-dark text-white font-semibold rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-[#1F1F1F] focus:ring-opacity-40 transition duration-300 ${
+                    loadingSpinner ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
+                  disabled={loadingSpinner}
                 >
-                  ✕
+                  {loadingSpinner ? (
+                    <Spinner
+                      animation="border"
+                      style={{ width: "1.5rem", height: "1.5rem" }}
+                    ></Spinner>
+                  ) : (
+                    "Submit"
+                  )}
                 </button>
-              </div>
-              <div className="flex justify-center items-center mb-4">
-                <div className="bg-[#107614] rounded-full p-2">
-                  <svg
-                    className="h-8 w-8 text-white"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
+              </Form>
+            </Col>
+          </Row>
+
+          {showThankYou && (
+            <div
+              id="modal-overlay"
+              onClick={handleOutsideClick}
+              className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50 transition-opacity duration-300 opacity-100"
+            >
+              <div className="bg-white w-11/12 sm:w-96 rounded-xl shadow-lg p-6 transform transition-all duration-300 scale-100 opacity-100">
+                <div className="flex justify-end">
+                  <button
+                    className="text-gray-500 hover:text-gray-700"
+                    onClick={() => setShowThankYou(false)} // Close the modal on click
                   >
-                    <path strokeWidth="2" d="M5 13l4 4L19 7" className="tick" />
-                  </svg>
+                    ✕
+                  </button>
+                </div>
+                <div className="flex justify-center items-center mb-4">
+                  <div className="bg-[#107614] rounded-full p-2">
+                    <svg
+                      className="h-8 w-8 text-white"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeWidth="2"
+                        d="M5 13l4 4L19 7"
+                        className="tick"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <h2 className="text-center text-xl font-bold text-gray-900 mb-2">
+                  We appreciate your time.
+                </h2>
+                <p className="text-center text-gray-600 text-sm">
+                  Thank you for applying. We will get back to you regarding the
+                  status of your application.
+                </p>
+                <div className="flex flex-row gap-2 mt-4">
+                  <Link
+                    to="/"
+                    className="bg-[#107614] text-white py-2 px-4 rounded-lg w-full text-center hover:bg-[#095F0C] transition-all flex justify-center items-center gap-2"
+                  >
+                    Back to Home
+                  </Link>
                 </div>
               </div>
-              <h2 className="text-center text-xl font-bold text-gray-900 mb-2">
-                We appreciate your time.
-              </h2>
-              <p className="text-center text-gray-600 text-sm">
-                Thank you for applying. We will get back to you regarding the
-                status of your application.
-              </p>
-              <div className="flex flex-row gap-2 mt-4">
-                <Link
-                  to="/"
-                  className="bg-[#107614] text-white py-2 px-4 rounded-lg w-full text-center hover:bg-[#095F0C] transition-all flex justify-center items-center gap-2"
-                >
-                  Back to Home
-                </Link>
-              </div>
             </div>
-          </div>
-        )}
-      </Container>
-    </div>
+          )}
+        </Container>
+      </div>
+    </>
   );
 }
 export default Apply;

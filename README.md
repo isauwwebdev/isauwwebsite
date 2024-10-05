@@ -13,6 +13,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Rename the downloaded file to serviceAccountKey.json, and save it in the root directory
 4. `node exportFirestoreToCSVComp (name of database that you want to export eg. stamp-quest)`
 
+
+## To Access .env File in Vercel
+
+### Steps to Add Environment Variables
+
+1. **Navigate to Your Project on Vercel:**
+   - Log in to your Vercel account and select your project from the dashboard.
+
+2. **Access Environment Variables Settings:**
+   - Go to the "Settings" tab of your project.
+   - Select "Environment Variables" from the sidebar.
+
+3. **Add Each Environment Variable:**
+   - Click the "Add New" button to create a new environment variable.
+   - Enter the key and value exactly as they appear in your `.env.local` file. Make sure the keys start with `REACT_APP_` as required by Create React App.
+     For example:
+     - **Key:** `REACT_APP_FIREBASE_API_KEY`
+     - **Value:** `YourFirebaseAPIKey`
+
+4. **Select Environment:**
+   - Choose the environment you want these variables to be available in (`Production`, `Preview`, or `Development`).
+
+5. **Deploy Your Project:**
+   - After adding all necessary variables, deploy or redeploy your Vercel project so that it can access these variables during build and runtime.
+
+6. **Access Variables in Code:**
+   - Your environment variables will be accessible in your React app via `process.env.REACT_APP_YOUR_VARIABLE`.
+
+### Tips:
+- Ensure that your `.env.local` file is added to `.gitignore` to avoid pushing sensitive data to your repository.
+- Do not expose any sensitive keys or credentials directly in your codebase.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -79,3 +112,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+

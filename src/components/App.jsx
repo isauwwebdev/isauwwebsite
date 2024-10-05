@@ -5,9 +5,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Home from "./Home/Home";
 import Events from "./Events/Events";
-import Shop from "./Shop/Shop";
-import About from "./About/About";
-import Keraton from "./Keraton/Keraton";
+// import Shop from "./Shop/Shop";
+// import About from "./About/About";
+// import Keraton from "./Keraton/Keraton";
 import Officers from "./Officers/Officers";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
@@ -127,7 +127,7 @@ function App() {
       <div>
         <section id="preloader">
           {/* <img alt="isauwbird" src="../images/isauwbird-red.png" /> */}
-          <img alt="isauwbird" src="../preloader2.gif" />
+          <img alt="isauwbird" src="../preloader.gif" />
         </section>
 
         <header>

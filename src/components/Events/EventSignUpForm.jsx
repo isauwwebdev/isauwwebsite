@@ -163,7 +163,6 @@ export default function EventSignUpForm({
     console.log("proof of payment file", file);
   };
 
-  // TODO: implement update to spreadsheets in real time using Google Sheets API.
   const onSubmit = async (data) => {
     setIsLoading(true);
     let proofOfPaymentURL = "";
@@ -207,14 +206,12 @@ export default function EventSignUpForm({
     setShowSuggestions(false);
   };
 
-  // Function to check if registration should be closed based on the event's date
+  // Function to check if registration should be closed (register OTS) based on the event's date at eventsData.js
   const checkRegistrationStatus = () => {
     const event = Array.from(eventsSet).find((e) => e.title === eventName);
     console.log("Event", event);
 
     if (event) {
-      console.log("event.date", event.date);
-      // Parse event date
       const [eventMonth, eventDay, eventYear] = event.date.split("/");
       const eventDate = new Date(
         `${eventYear}-${eventMonth}-${eventDay}T00:00:00`
