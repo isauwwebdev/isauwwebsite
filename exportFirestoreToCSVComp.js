@@ -9,6 +9,7 @@ admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
 });
 const firestore = admin.firestore();
+// changed this
 
 // Export Firestore Data to CSV
 async function exportFirestoreToCSVComp(pathType) {
