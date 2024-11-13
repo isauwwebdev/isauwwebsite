@@ -111,8 +111,7 @@ function UpcomingEventsCard(props) {
                         <i className="fas fa-map-marker-alt upcoming-events-icon"></i>
                       </div>
                       <div
-                        className="align-self-center align-middle"
-                        style={{ paddingLeft: "8px" }}
+                        className="align-self-center align-middle pl-2 w-[200px] break-normal break-words text-left"
                       >
                         <p className="upcoming-events-icon-text">
                           {props.location}

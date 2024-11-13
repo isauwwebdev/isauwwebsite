@@ -1,5 +1,14 @@
 [ 
     {
+        "title": "Friendsgiving",
+        "date": "11/23/2024",
+        "time": "7:00 PM PDT",
+        "location": "The Standard At Seattle, 4220 12th Ave NE",
+        "text": "The One with the Friendsgiving Feast! ISAUW and friends come together for an unforgettable Friendsgiving! Cheers for a night of thanks, photobooth, cookie decorating, and more!",
+        "img": [{"src": "../images/events/friendsgiving/2024/1.jpg", "alt": "Card front image"}],
+        "completed": false
+    },
+    {
         "title": "Seathrough",
         "date": "09/28/2024",
         "time": "18:30 PDT",
