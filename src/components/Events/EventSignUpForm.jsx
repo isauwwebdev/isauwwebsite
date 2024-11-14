@@ -19,6 +19,7 @@ export default function EventSignUpForm({
   firestorePath,
   BGImage,
   rsvp = false,
+  firebaseStoragePath,
 }) {
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -172,7 +173,7 @@ export default function EventSignUpForm({
       // Only upload if rsvp is true and file is selected
       const storageRef = ref(
         storage,
-        `2024/seathrough/proofs-of-payment/${proofOfPaymentFile.name}`
+        `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
       );
       const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
       proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
@@ -456,7 +457,11 @@ export default function EventSignUpForm({
                       </div>
                     )}
                     <small className="form-text text-muted">
-                      Please upload a screenshot of your <span style={{ fontWeight: 'bold' }}>$10 online RSVP payment.</span><br />
+                      Please upload a screenshot of your{" "}
+                      <span style={{ fontWeight: "bold" }}>
+                        $10 online RSVP payment.
+                      </span>
+                      <br />
                       Payments can be sent via:
                       <br />
                       <div style={{ marginLeft: "20px" }}>
