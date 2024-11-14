@@ -1050,6 +1050,7 @@ div:not(.slick-disabled):not(.no-hover) > i:hover {
   color: white;
   bottom: 0;
   left: 0;
+  right: 0;
   position: absolute;
   z-index: 1;
 }
@@ -1080,7 +1081,7 @@ div:not(.slick-disabled):not(.no-hover) > i:hover {
 .div-upcoming-events-button {
   width: 34%;
   padding: 0;
-  margin: auto 0;
+  margin: auto;
   float: right;
   align-items: center;
   text-align: center;
