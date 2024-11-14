@@ -296,11 +296,12 @@ function App() {
             path="/sign-up-friendsgiving"
             render={() => (
               <EventSignUpForm
-                eventName="Friendsgiving Event"
+                eventName="Friendsgiving"
                 BGImage="/events/friendsgiving/2024/friendsgivingFormBG.png"
                 firestorePath="2024/friends_giving/event-registrations"
                 posterImage="/events/friendsgiving/2024/friendsgiving_poster.png"
                 rsvp={true}
+                firebaseStoragePath="2024/friendsgiving"
               />
             )}
           />
