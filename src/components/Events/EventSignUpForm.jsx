@@ -456,8 +456,8 @@ export default function EventSignUpForm({
                       </div>
                     )}
                     <small className="form-text text-muted">
-                      Please upload a screenshot of your payment. Payments can
-                      be sent via:
+                      Please upload a screenshot of your <span style={{ fontWeight: 'bold' }}>$10 online RSVP payment.</span><br />
+                      Payments can be sent via:
                       <br />
                       <div style={{ marginLeft: "20px" }}>
                         Zelle: octaviog@uw.edu
