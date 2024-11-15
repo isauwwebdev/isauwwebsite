@@ -26,8 +26,7 @@ async function exportCollectionToCSV() {
     console.log("No documents found.");
     return;
   }
-
-  // Convert to CSV using json2csv
+  // test delete
   const fields = Object.keys(data[0]); // Use the first document's keys for field names
   const json2csvParser = new Parser({ fields });
   const csv = json2csvParser.parse(data);
