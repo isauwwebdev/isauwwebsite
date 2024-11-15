@@ -20,6 +20,10 @@ async function exportFirestoreToCSVComp(pathType) {
       firestorePath = "2024/stamp-quest/event-registrations";
     } else if (pathType === "seathrough") {
       firestorePath = "2024/seathrough/event-registrations";
+    } else if (pathType === "seathrough dev") {
+      firestorePath = "2024/seathrough/event-registrations-dev";
+    } else if (pathType === "stamp-quest dev") {
+      firestorePath = "2024/seathrough/event-registrations-dev";
     } else {
       throw new Error("Invalid path type specified");
     }
@@ -39,8 +43,17 @@ async function exportFirestoreToCSVComp(pathType) {
       return;
     }
 
+    // console.log("Resulted data", data);
+
     // Convert JSON to CSV using json2csv
-    const fields = Object.keys(data[0]); // Use the first document's keys for the CSV headers
+    // Collect all unique fields from all documents
+    const allFields = new Set();
+
+    data.forEach((item) => {
+      Object.keys(item).forEach((key) => allFields.add(key));
+    });
+
+    const fields = Array.from(allFields); // Convert the set to an array for json2csv
     const json2csvParser = new Parser({ fields });
     const csv = json2csvParser.parse(data);
 
@@ -56,7 +69,9 @@ async function exportFirestoreToCSVComp(pathType) {
 // Get command-line arguments
 const pathType = process.argv[2];
 if (!pathType) {
-  console.error("Please provide a pathType (e.g., 'stamp-quest' or 'seathrough').");
+  console.error(
+    "Please provide a pathType (e.g., 'stamp-quest' or 'seathrough')."
+  );
   process.exit(1);
 }
 

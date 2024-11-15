@@ -38,7 +38,11 @@ function UpcomingEventsCard(props) {
   );
 
   return (
-    <div ref={ref} style={{ padding: "0.6vw", height: height }}>
+    <div
+      ref={ref}
+      // style={{ padding: "0.6vw" }}
+      className="p-[0.5vw] h-[400px] sm:h-[400px] lg:h-[500px]"
+    >
       <Card className="upcoming-events-card">
         {/* Text and dark filter overlay on top of image */}
         <div className="upcoming-events-overlay">
@@ -71,95 +75,80 @@ function UpcomingEventsCard(props) {
             </div>
 
             <div className="upcoming-events-content">
-              <div
-                className="row"
-                style={{
-                  paddingRight: `calc(12px)`,
-                  paddingLeft: `calc(12px)`,
-                }}
-              >
-                {/* Event Date */}
-                <div className="text-center div-upcoming-events-date">
-                  <p className="upcoming-events-month">{month}</p>
-                  <p className="upcoming-events-date">{date}</p>
-                </div>
-
-                <div className="div-upcoming-events-content" style={{}}>
+              <div className="m-4">
+                <div className="flex flex-wrap items-center">
+                  {/* Start 1st div */}
                   <div>
-                    {/* Time and Location */}
-                    <div
-                      className="align-middle align-self-center"
-                      style={{ display: "flex", flex: "1" }}
-                    >
-                      <div className="align-self-center align-middle no-hover">
-                        <i className="fas fa-clock upcoming-events-icon"></i>
-                      </div>
-                      <div
-                        className="align-self-center align-middle"
-                        style={{ paddingLeft: "8px" }}
-                      >
-                        <p className="upcoming-events-icon-text">
-                          {props.time}
-                        </p>
+                    <div className="text-center div-upcoming-events-date align-self-center mt-6">
+                      <p className="upcoming-events-month">{month}</p>
+                      <p className="upcoming-events-date">{date}</p>
+                    </div>
+
+                    <div className="div-upcoming-events-content">
+                      <div className="align-middle">
+                        <div
+                          className="align-middle align-self-center"
+                          style={{ display: "flex", flex: "1" }}
+                        >
+                          <div className="align-self-center align-middle no-hover">
+                            <i className="fas fa-clock upcoming-events-icon"></i>
+                          </div>
+                          <div
+                            className="align-self-center align-middle"
+                            style={{ paddingLeft: "8px" }}
+                          >
+                            <p className="upcoming-events-icon-text">
+                              {props.time}
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          className="align-middle align-self-center pt-2"
+                          style={{ display: "flex", flex: "1" }}
+                        >
+                          <div className="align-self-top align-top no-hover">
+                            <i className="fas fa-map-marker-alt upcoming-events-icon"></i>
+                          </div>
+                          <div className="align-self-center align-middle pl-2 w-[170px] break-normal break-words text-left">
+                            <p className="upcoming-events-icon-text">
+                              {props.location}
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      className="align-middle align-self-center"
-                      style={{ display: "flex", flex: "1" }}
-                    >
-                      <div className="align-self-center align-middle no-hover">
-                        <i className="fas fa-map-marker-alt upcoming-events-icon"></i>
-                      </div>
-                      <div
-                        className="align-self-center align-middle"
-                        style={{ paddingLeft: "8px" }}
+                    {/* End first div */}
+                  </div>
+
+                  <div className="w-full sm:w-auto m-auto mt-2 mt-md-auto pr-2 sm:pr-0">
+                    {/* TODO: make this dynamic */}
+                    {/* Start 2nd div */}
+                    <div className="w-full m-auto justify-center mx-auto align-middle">
+                      <a
+                        className="event-card-keraton-button btn btn-dark w-full sm:w-auto"
+                        href="/sign-up-friendsgiving"
+                        role="button"
                       >
-                        <p className="upcoming-events-icon-text">
-                          {props.location}
-                        </p>
-                      </div>
+                        Sign Up
+                      </a>
                     </div>
+                    {props.title === "Keraton" ? (
+                      <div className="div-upcoming-events-button">
+                        <a
+                          className="event-card-keraton-button btn btn-dark"
+                          href="/keraton"
+                          role="button"
+                        >
+                          Learn More
+                        </a>
+                      </div>
+                    ) : (
+                      ""
+                    )}
+
+                    {/* End 2nd div */}
                   </div>
                 </div>
-                {props.title === "Keraton" ? (
-                  <div className="div-upcoming-events-button">
-                    <a
-                      className="event-card-keraton-button btn btn-dark"
-                      href="/keraton"
-                      role="button"
-                    >
-                      Learn More
-                    </a>
-                  </div>
-                ) : (
-                  ""
-                )}
-                {props.title === "Seattle Stamp Quest" ? (
-                  <div className="div-upcoming-events-button">
-                    <a
-                      className="event-card-keraton-button btn btn-dark"
-                      href="/sign-up-stamp-quest"
-                      role="button"
-                    >
-                      Sign Up{" "}
-                    </a>
-                  </div>
-                ) : (
-                  ""
-                )}
-                {props.title === "Seathrough" ? (
-                  <div className="div-upcoming-events-button">
-                    <a
-                      className="event-card-keraton-button btn btn-dark"
-                      href="/sign-up-seathrough"
-                      role="button"
-                    >
-                      Sign Up{" "}
-                    </a>
-                  </div>
-                ) : (
-                  ""
-                )}
               </div>
             </div>
           </div>

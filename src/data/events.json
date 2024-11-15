@@ -1,14 +1,11 @@
-[
+[ 
     {
-        "title": "Seattle Stamp Quest",
-        "date": "09/23/2024",
-        "time": "14:00 PDT",
-        "location": "Red Square",
-        "text": "Insert information about Stamp Quest here.",
-        "img": [{"src": "../images/events/stampquest/seattle_stamp_quest_card.png", "alt": "Card front image"},
-                {"src": "../images/events/keraton/2022/3.jpeg"},
-                {"src": "../images/events/keraton/2022/4.jpeg"},
-                {"src": "../images/events/keraton/2022/5.jpeg"}],
+        "title": "Friendsgiving",
+        "date": "11/23/2024",
+        "time": "7:00 PM PT",
+        "location": "The Standard Seattle (South Building Rooftop)",
+        "text": "The One with the Friendsgiving Feast! ISAUW and friends come together for an unforgettable Friendsgiving! Cheers for a night of thanks, photobooth, cookie decorating, and more!",
+        "img": [{"src": "../images/events/friendsgiving/2024/1.jpg", "alt": "Card front image"}],
         "completed": false
     },
     {
@@ -16,12 +13,35 @@
         "date": "09/28/2024",
         "time": "18:30 PDT",
         "location": "HUB 145",
-        "text": "Insert information about Seathrough here.",
+        "text": "Seathrough is the perfect way to kick off your UW journey! Enjoy a night filled with laughter, games, and new connections. Whether you're new or returning, this event is the perfect chance to meet fellow Huskies and create lasting memories.",
         "img": [{"src": "../images/events/seathrough/2024/seathrough2024_card.png", "alt": "Card front image"},
-                {"src": "../images/events/keraton/2022/3.jpeg"},
-                {"src": "../images/events/keraton/2022/4.jpeg"},
-                {"src": "../images/events/keraton/2022/5.jpeg"}],
-        "completed": false
+                {"src": "../images/events/seathrough/2024/seathrough_1.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_2.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_3.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_4.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_5.jpeg"},
+                {"src": "../images/events/seathrough/2024/seathrough_6.jpeg"}
+            ],
+        "completed": true
+    },
+    {
+        "title": "Seattle Stamp Quest",
+        "date": "09/23/2024",
+        "time": "14:00 PDT",
+        "location": "Red Square",
+        "text": "Seattle Stamp Quest is an exciting scavenger hunt event that takes participants on an adventure across the city. This event is a fun-filled experience where you can meet new friends, complete activities, and win amazing prizes!",
+        "img": [{"src": "../images/events/stampquest/seattle_stamp_quest_card.png", "alt": "Card front image"},
+                {"src": "../images/events/stampquest/stamp_quest_1.jpeg"},
+                {"src": "../images/events/stampquest/stamp_quest_2.jpeg"},
+                {"src": "../images/events/stampquest/stamp_quest_3.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_4.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_5.jpeg"},
+                {"src": "../images/events/stampquest/stamp_quest_6.jpeg"},
+                {"src": "../images/events/stampquest/stamp_quest_7.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_8.jpg"},
+                {"src": "../images/events/stampquest/stamp_quest_9.jpg"}
+            ],
+        "completed": true
     },
     {
         "title": "Winter Ball",

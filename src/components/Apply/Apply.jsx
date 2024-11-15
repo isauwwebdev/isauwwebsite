@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useMemo } from "react";
 import Form from "react-bootstrap/Form";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
@@ -204,6 +202,7 @@ function Apply() {
         whyISAUW,
         resume: resumeURL,
         portfolio,
+        timestamp: new Date(),
       };
 
       await addDoc(
@@ -214,6 +213,7 @@ function Apply() {
       setLoadingSpinner(false);
       setShowThankYou(true);
     } catch (error) {
+      // TODO: add error handling for in catch block
       console.error("Error submitting form:", error.message);
       setLoadingSpinner(false);
     }

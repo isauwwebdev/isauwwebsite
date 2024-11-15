@@ -14,17 +14,36 @@ import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
-import SignUpFormComponent from "./Events/SignUpFormComp";
+import EventSignUpForm from "./Events/EventSignUpForm";
+import eventsData from "../data/eventsData";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
   const [navBar, setNavBar] = useState(false);
   const [keratonPage, setKeratonPage] = useState(false);
   const [keratonScrollDown, setKeratonScrollDown] = useState(false);
+  const [events, setEvents] = useState([]);
+  const [uncompletedEvents, setUncompletedEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(
     window.location.pathname.substring(1)
   );
   const [isMobile, setIsMobile] = useState(false);
+
+  const getEvents = () => {
+    const events_ = [];
+    const uncompletedEvents_ = [];
+    for (const event of eventsData) {
+      if (!event.completed) {
+        uncompletedEvents_.push(event);
+      }
+      events_.push(event);
+    }
+
+    setEvents(events_);
+    setUncompletedEvents(uncompletedEvents_);
+  };
+
+  useEffect(getEvents, []);
 
   const resetHeight = () => {
     // reset the body height to that of the inner browser
@@ -107,7 +126,8 @@ function App() {
       <ScrollToTop />
       <div>
         <section id="preloader">
-          <img alt="isauwbird" src="../images/isauwbird-red.png" />
+          {/* <img alt="isauwbird" src="../images/isauwbird-red.png" /> */}
+          <img alt="isauwbird" src="../preloader2.gif" />
         </section>
 
         <header>
@@ -209,7 +229,7 @@ function App() {
                   >
                     Keraton
                   </NavLink>
-                  <NavLink
+                  {/* <NavLink
                     to="/apply"
                     className={`navLink navLink-fade-up`}
                     exact
@@ -220,7 +240,7 @@ function App() {
                     }}
                   >
                     Apply
-                  </NavLink>
+                  </NavLink> */}
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
@@ -231,11 +251,41 @@ function App() {
         <Switch>
           <Route path="/" exact render={() => <Home isMobile={isMobile} />} />
           <Route path="/events" component={Events} />
+          {/* TODO: make this auto generate for each of eventsData.js.eventsData.completed === false  */}
+
+          {/* Dynamically generate routes for uncompleted events */}
+          {/* {uncompletedEvents.map((uncompletedEvent, index) => {
+            const eventPath = `/sign-up-${uncompletedEvent.title
+              .toLowerCase()
+              .replace(/ /g, "-")}`;
+
+            return (
+              <Route
+                key={index}
+                path={eventPath}
+                render={() => (
+                  <EventSignUpForm
+                    eventName={uncompletedEvent.title}
+                    BGImage={
+                      uncompletedEvent.BGImage || "/default/background.png"
+                    } // Default background if none provided
+                    firestorePath={
+                      uncompletedEvent.firestorePath || "default/firestore/path"
+                    } // Default path if none provided
+                    posterImage={
+                      uncompletedEvent.img[0]?.src || "/default/poster.png"
+                    } // Default poster if none provided
+                    rsvp={uncompletedEvent.rsvp || false} // Default RSVP status
+                  />
+                )}
+              />
+            );
+          })} */}
           <Route
-            path="/sign-up-stamp-quest"
+            path="/sign-up-test-event"
             render={() => (
-              <SignUpFormComponent
-                eventName="Seattle Stamp Quest"
+              <EventSignUpForm
+                eventName="Test Event"
                 BGImage="/events/stampquest/stampQuestFormBG.png"
                 firestorePath="2024/stamp-quest/event-registrations"
                 posterImage="/events/stampquest/stamp_quest_poster.png"
@@ -243,16 +293,30 @@ function App() {
             )}
           />
           <Route
+            path="/sign-up-friendsgiving"
+            render={() => (
+              <EventSignUpForm
+                eventName="Friendsgiving"
+                BGImage="/events/friendsgiving/2024/friendsgivingFormBG.png"
+                firestorePath="2024/friends_giving/event-registrations"
+                posterImage="/events/friendsgiving/2024/friendsgiving_poster.png"
+                rsvp={true}
+                firebaseStoragePath="2024/friendsgiving"
+              />
+            )}
+          />
+          {/* <Route
             path="/sign-up-seathrough"
             render={() => (
-              <SignUpFormComponent
+              <EventSignUpForm
                 eventName="Seathrough"
                 BGImage="/events/seathrough/2024/seathrough_banner.png"
                 firestorePath="2024/seathrough/event-registrations"
                 posterImage="/events/seathrough/2024/seathrough_poster.png"
+                rsvp={true}
               />
             )}
-          />
+          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
@@ -263,7 +327,7 @@ function App() {
             }}
           />
           <Route path="/team" component={Officers} />
-          {<Route path="/apply" component={Apply} />}
+          {/* {<Route path="/apply" component={Apply} />} */}
         </Switch>
 
         {/* {renderPopUp()} */}

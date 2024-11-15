@@ -63,8 +63,8 @@ export default function Events() {
         <Fade bottom>
           <UpcomingEventsGallery />
         </Fade>
-        {/* Jumbotron */}
-        <div className="jumbotron">
+        {/* Jumbotron for ISAUW Card*/}
+        {/* <div className="jumbotron">
           <div>
             <h1 className="jumbotron-title display-4">ISAUW Card</h1>
             <p className="jumbotron-desc">
@@ -78,7 +78,7 @@ export default function Events() {
               Order now
             </a>
           </div>
-        </div>
+        </div> */}
       </Container>
 
       <PastEventsSearch />

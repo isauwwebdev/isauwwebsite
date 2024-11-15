@@ -313,12 +313,13 @@ body,
 }
 
 #preloader img {
-  max-width: 100px;
-  max-height: 100px;
-  background-color: none;
+  max-width: 30rem;
+  max-height: 30rem;
+  background-color: #fff;
+  color: white;
   z-index: 10000;
-  -webkit-animation: sk-rotatePlane 2s infinite ease-in-out;
-  animation: sk-rotatePlane 2s infinite ease-in-out;
+  /* -webkit-animation: sk-rotatePlane 2s infinite ease-in-out;
+  animation: sk-rotatePlane 2s infinite ease-in-out; */
 }
 
 @keyframes sk-rotatePlane {
@@ -1049,6 +1050,7 @@ div:not(.slick-disabled):not(.no-hover) > i:hover {
   color: white;
   bottom: 0;
   left: 0;
+  right: 0;
   position: absolute;
   z-index: 1;
 }
@@ -1079,7 +1081,7 @@ div:not(.slick-disabled):not(.no-hover) > i:hover {
 .div-upcoming-events-button {
   width: 34%;
   padding: 0;
-  margin: auto 0;
+  margin: auto;
   float: right;
   align-items: center;
   text-align: center;
