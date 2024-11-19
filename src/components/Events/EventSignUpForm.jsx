@@ -296,7 +296,7 @@ export default function EventSignUpForm({
 
   return (
     <div className="justify-content-center align-items-center h-100">
-      {showOTSModal && OTSModal}
+      {/* {showOTSModal && OTSModal} */}
       <div
         className="bg-cover bg-center bg-no-repeat w-full min-h-[80rem] md:min-h-[158vh]"
         style={{
