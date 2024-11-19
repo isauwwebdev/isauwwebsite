@@ -9,7 +9,7 @@ import { db, storage } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom";
 import "../index.css";
-import eventsData from "../../data/eventsData";
+import events from "../../data/events.json";
 
 // Component for events sign up form.
 // RI: eventName.prop === events.json.title
@@ -32,13 +32,6 @@ export default function EventSignUpForm({
   // Loader
   const [isLoading, setIsLoading] = useState(false);
 
-  // Events
-  const [eventsSet, setEventsSet] = useState(new Set());
-  const getEvents = () => {
-    setEventsSet(new Set(eventsData));
-  };
-  useEffect(getEvents, []);
-
   // Add state for Proof of Payment file
   const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
   const [proofOfPaymentError, setProofOfPaymentError] = useState("");
@@ -50,6 +43,7 @@ export default function EventSignUpForm({
 
   // During h-1 of event at 11:59 PM, we want to close the registration,
   // and show modal indicating to register OTS.
+  const [closingDate, setClosingDate] = useState(""); // Closing time for registration
   const [showOTSModal, setShowOTSModal] = useState(false); // Modal state for OTS registration
 
   const seattleColleges = [
@@ -170,7 +164,7 @@ export default function EventSignUpForm({
     let proofOfPaymentURL = "";
 
     if (rsvp && proofOfPaymentFile) {
-      // Only upload if rsvp is true and file is selected
+      // Only upload if RSVP is true and file is selected
       const storageRef = ref(
         storage,
         `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
@@ -210,62 +204,66 @@ export default function EventSignUpForm({
 
   // Function to check if registration should be closed based on the event's date
   const checkRegistrationStatus = () => {
-    const event = Array.from(eventsSet).find((e) => e.title === eventName);
-    console.log("Event", event);
+    console.log("All events:", events);
+    const uncompletedEvent = events.find((event) => event.completed === false);
+    const date = uncompletedEvent.date;
+    setClosingDate(date);
 
-    if (event) {
-      console.log("event.date", event.date);
-      // Parse event date
-      const [eventMonth, eventDay, eventYear] = event.date.split("/");
-      const eventDate = new Date(
-        `${eventYear}-${eventMonth}-${eventDay}T00:00:00`
-      );
+    console.log("date", date);
 
-      // Subtract one day from event date
-      const oneDayBeforeEvent = new Date(eventDate);
-      oneDayBeforeEvent.setDate(oneDayBeforeEvent.getDate() - 1);
+    // if (event) {
+    //   console.log("event.date", event.date);
+    //   // Parse event date
+    //   const [eventMonth, eventDay, eventYear] = event.date.split("/");
+    //   const eventDate = new Date(
+    //     `${eventYear}-${eventMonth}-${eventDay}T00:00:00`
+    //   );
 
-      // Format the current date to MM/DD/YYYY
-      const currentDateUnformatted = new Date(); // Gets the current date and time
-      const currentDate = `${(currentDateUnformatted.getMonth() + 1)
-        .toString()
-        .padStart(2, "0")}/${currentDateUnformatted
-        .getDate()
-        .toString()
-        .padStart(2, "0")}/${currentDateUnformatted.getFullYear()}`;
+    //   // Subtract one day from event date
+    //   const oneDayBeforeEvent = new Date(eventDate);
+    //   oneDayBeforeEvent.setDate(oneDayBeforeEvent.getDate() - 1);
 
-      // Format one day before the event date to MM/DD/YYYY
-      const oneDayBefore = `${(oneDayBeforeEvent.getMonth() + 1)
-        .toString()
-        .padStart(2, "0")}/${oneDayBeforeEvent
-        .getDate()
-        .toString()
-        .padStart(2, "0")}/${oneDayBeforeEvent.getFullYear()}`;
+    //   // Format the current date to MM/DD/YYYY
+    //   const currentDateUnformatted = new Date(); // Gets the current date and time
+    //   const currentDate = `${(currentDateUnformatted.getMonth() + 1)
+    //     .toString()
+    //     .padStart(2, "0")}/${currentDateUnformatted
+    //     .getDate()
+    //     .toString()
+    //     .padStart(2, "0")}/${currentDateUnformatted.getFullYear()}`;
 
-      const currentHours = currentDateUnformatted.getHours();
-      const currentMinutes = currentDateUnformatted.getMinutes();
+    //   // Format one day before the event date to MM/DD/YYYY
+    //   const oneDayBefore = `${(oneDayBeforeEvent.getMonth() + 1)
+    //     .toString()
+    //     .padStart(2, "0")}/${oneDayBeforeEvent
+    //     .getDate()
+    //     .toString()
+    //     .padStart(2, "0")}/${oneDayBeforeEvent.getFullYear()}`;
 
-      // Check if the current date is one day before the event date
-      if (currentDate === oneDayBefore) {
-        // Check if current time is 11:59 PM or later
-        if (currentHours === 23 && currentMinutes >= 59) {
-          setShowOTSModal(false); // Trigger the OTS modal
-        }
-      } else if (currentDate > oneDayBefore) {
-        // If current date is after one day before the event, show OTS modal
-        setShowOTSModal(false);
-      } else {
-        // If the current date is before one day before the event, do not show OTS modal
-        setShowOTSModal(false);
-      }
-    } else {
-      console.log("event not found in events.json");
-    }
+    //   const currentHours = currentDateUnformatted.getHours();
+    //   const currentMinutes = currentDateUnformatted.getMinutes();
+
+    //   // Check if the current date is one day before the event date
+    //   if (currentDate === oneDayBefore) {
+    //     // Check if current time is 11:59 PM or later
+    //     if (currentHours === 23 && currentMinutes >= 59) {
+    //       setShowOTSModal(true); // Trigger the OTS modal
+    //     }
+    //   } else if (currentDate > oneDayBefore) {
+    //     // If current date is after one day before the event, show OTS modal
+    //     setShowOTSModal(true);
+    //   } else {
+    //     // If the current date is before one day before the event, do not show OTS modal
+    //     setShowOTSModal(true);
+    //   }
+    // } else {
+    //   console.log("event not found in events.json");
+    // }
   };
   // Check registration status when component mounts or eventsSet changes
   useEffect(() => {
     checkRegistrationStatus();
-  }, [eventsSet]);
+  }, []);
 
   const OTSModal = (
     <div
