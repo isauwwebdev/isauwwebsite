@@ -249,11 +249,11 @@ export default function EventSignUpForm({
       if (currentDate === oneDayBefore) {
         // Check if current time is 11:59 PM or later
         if (currentHours === 23 && currentMinutes >= 59) {
-          setShowOTSModal(true); // Trigger the OTS modal
+          setShowOTSModal(false); // Trigger the OTS modal
         }
       } else if (currentDate > oneDayBefore) {
         // If current date is after one day before the event, show OTS modal
-        setShowOTSModal(true);
+        setShowOTSModal(false);
       } else {
         // If the current date is before one day before the event, do not show OTS modal
         setShowOTSModal(false);
