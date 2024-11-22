@@ -15,7 +15,7 @@ import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
 import EventSignUpForm from "./Events/EventSignUpForm";
-import eventsData from "../data/eventsData";
+import events from "../data/events.json";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -29,21 +29,21 @@ function App() {
   );
   const [isMobile, setIsMobile] = useState(false);
 
-  const getEvents = () => {
-    const events_ = [];
-    const uncompletedEvents_ = [];
-    for (const event of eventsData) {
-      if (!event.completed) {
-        uncompletedEvents_.push(event);
-      }
-      events_.push(event);
-    }
+  // const getEvents = () => {
+  //   const events_ = [];
+  //   const uncompletedEvents_ = [];
+  //   for (const event of eventsData) {
+  //     if (!event.completed) {
+  //       uncompletedEvents_.push(event);
+  //     }
+  //     events_.push(event);
+  //   }
 
-    setEvents(events_);
-    setUncompletedEvents(uncompletedEvents_);
-  };
+  //   setEvents(events_);
+  //   setUncompletedEvents(uncompletedEvents_);
+  // };
 
-  useEffect(getEvents, []);
+  // useEffect(getEvents, []);
 
   const resetHeight = () => {
     // reset the body height to that of the inner browser
