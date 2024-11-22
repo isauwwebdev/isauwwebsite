@@ -24,6 +24,8 @@ async function exportFirestoreToCSVComp(pathType) {
       firestorePath = "2024/seathrough/event-registrations-dev";
     } else if (pathType === "stamp-quest dev") {
       firestorePath = "2024/seathrough/event-registrations-dev";
+    } else if (pathType === "friends-giving") {
+      firestorePath = "2024/friends_giving/event-registrations";
     } else {
       throw new Error("Invalid path type specified");
     }
