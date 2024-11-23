@@ -44,7 +44,7 @@ export default function EventSignUpForm({
   // During h-1 of event at 11:59 PM, we want to close the registration,
   // and show modal indicating to register OTS.
   const [closingDate, setClosingDate] = useState(""); // Closing time for registration
-  const [showOTSModal, setShowOTSModal] = useState(false); // Modal state for OTS registration
+  const [showOTSModal, setShowOTSModal] = useState(true); // Modal state for OTS registration
 
   const seattleColleges = [
     { name: "University of Washington" },
@@ -294,7 +294,7 @@ export default function EventSignUpForm({
 
   return (
     <div className="justify-content-center align-items-center h-100">
-      {/* {showOTSModal && OTSModal} */}
+      {showOTSModal && OTSModal}
       <div
         className="bg-cover bg-center bg-no-repeat w-full min-h-[80rem] md:min-h-[158vh]"
         style={{
