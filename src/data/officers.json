@@ -1,26 +1,26 @@
 [
   {
-    "name": "Charisse Luhur",
+    "name": "William Perdana",
     "department": "Primaries",
     "role": "President",
     "position": "",
     "major": "Business Administration",
     "img": [
       {
-        "src": "../images/officers/Charisse.webp"
+        "src": "../images/officers/WilliamPerdana24.webp"
       }
     ],
     "descr": ""
   },
   {
-    "name": "William Perdana",
+    "name": "Sharon Sutadinata",
     "department": "Primaries",
     "role": "Vice President",
     "position": "",
-    "major": "",
+    "major": "Industrial Engineering",
     "img": [
       {
-        "src": "../images/officers/William.webp"
+        "src": "../images/officers/SharonSutandinata24.jpg"
       }
     ],
     "descr": ""

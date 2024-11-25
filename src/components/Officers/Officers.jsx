@@ -15,13 +15,13 @@ function Officers() {
   const [OPSIsClicked, setOPSIsClicked] = useState(false);
   const [COIsClicked, setCOIsClicked] = useState(false);
 
-  useEffect(() => {
-    console.log("all:" + allIsClicked);
-    console.log(primariesIsClicked);
-    console.log(FINIsClicked);
-    console.log(OPSIsClicked);
-    console.log(COIsClicked);
-  });
+  // useEffect(() => {
+  //   console.log("all:" + allIsClicked);
+  //   console.log(primariesIsClicked);
+  //   console.log(FINIsClicked);
+  //   console.log(OPSIsClicked);
+  //   console.log(COIsClicked);
+  // });
 
   const handleClick = (event) => {
     if (event.target.value === "All") {
@@ -75,6 +75,7 @@ function Officers() {
     }
   };
 
+  // TODO: Implement lazy loading for images
   return (
     <div className="officer-page">
       <div className="navbar-overlay" style={{ position: "relative" }}>
