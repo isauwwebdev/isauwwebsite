@@ -286,7 +286,7 @@ function App() {
             render={() => (
               <EventSignUpForm
                 eventName="Test Event"
-                BGImage="/events/stampquest/stampQuestFormBG.png"
+                BGImage="/events/friendsgiving/2024/friends_banner.jpg"
                 firestorePath="2024/stamp-quest/event-registrations"
                 posterImage="/events/stampquest/stamp_quest_poster.png"
               />
