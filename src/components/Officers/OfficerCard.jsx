@@ -71,7 +71,12 @@ function OfficerCard(props) {
           >
             {officerRole}
           </Card.Title>
-          {/* <Card.Subtitle className="officer-major" style={{ "font-size": "calc(0.2vw + 6px)" }}>{officerMajor}</Card.Subtitle> */}
+          <Card.Subtitle
+            className="officer-major"
+            style={{ "font-size": "calc(0.2vw + 6px)" }}
+          >
+            {officerMajor}
+          </Card.Subtitle>
         </Card.Body>
       </Card>
 
@@ -80,6 +85,7 @@ function OfficerCard(props) {
         onHide={() => setShowModal(false)}
         aria-labelledby="contained-modal-title-vcenter"
         style={{ "border-radius": "0.5rem" }}
+        className="mx-auto px-3 md:px-0"
         centered
       >
         <Modal.Header
@@ -87,56 +93,62 @@ function OfficerCard(props) {
           id="contained-modal-title-vcenter"
           style={{ "border-bottom": "none" }}
         ></Modal.Header>
-        <Modal.Body className="px-3 py-4">
-          <Row className="justify-content-xs-center">
-            {/* very hacky way to do a flex row. Fix should be to change row-col to normal div */}
-            <Col xs={12} md={12} lg={12} className="officer-modal-profile">
-              <div
-                className=""
-                style={{
-                  "text-align": "center",
-                  "justify-content": "center",
-                  display: "flex",
-                }}
-              >
-                <img
-                  src={officerImg}
+
+        <div className="mx-3">
+          <Modal.Body className="px-3 py-4" style={{ margin: "15px" }}>
+            <Row className="justify-content-xs-center">
+              {/* very hacky way to do a flex row. Fix should be to change row-col to normal div */}
+              <Col xs={12} md={12} lg={12} className="officer-modal-profile">
+                <div
+                  className=""
                   style={{
-                    height: "400px",
-                    width: "350px",
-                    "object-fit": "cover",
-                  }}
-                ></img>
-              </div>
-            </Col>
-            <Col xs={12} md={12} lg={12} className="mx-1">
-              <div className="officer-name-title">
-                <h1
-                  className="mt-3 mb-0 text-center"
-                  style={{
-                    "font-size": "calc(1.2vw + 16px)",
-                    "font-weight": "600",
-                    "letter-spacing": "1px",
+                    "text-align": "center",
+                    "justify-content": "center",
+                    display: "flex",
                   }}
                 >
-                  {officerName}
-                </h1>
-                <h2
-                  className="mb-3 mt-1 text-center"
-                  style={{
-                    "font-size": "calc(0.4vw + 10px)",
-                    "letter-spacing": "2px",
-                  }}
-                >
-                  {officerRole === "Director"
-                    ? (officerRole + " of " + officerPosition).toUpperCase()
-                    : (officerRole + " " + officerPosition).toUpperCase()}
-                </h2>
-              </div>
-            </Col>
-          </Row>
-          <Row className="officer-modal-media"></Row>
-        </Modal.Body>
+                  <img
+                    src={officerImg}
+                    style={{
+                      height: "400px",
+                      width: "350px",
+                      "object-fit": "cover",
+                    }}
+                    alt="officer portrait"
+                  />
+                </div>
+              </Col>
+              <Col xs={12} md={12} lg={12} className="mx-1">
+                <div className="officer-name-title">
+                  <h1
+                    className="mt-3 mb-0 text-center"
+                    style={{
+                      "font-size": "calc(1.2vw + 16px)",
+                      "font-weight": "600",
+                      "letter-spacing": "1px",
+                    }}
+                  >
+                    {officerName}
+                  </h1>
+                  <h2 className="mb-3 mt-1 text-center">{officerMajor}</h2>
+                  <h3 className="mb-3 text-center text-base">
+                    <div className="flex justify-center gap-x-2">
+                      <img
+                        src="/images/isauwbird-red.png"
+                        alt="quote"
+                        className="h-6 w-8"
+                      />
+                      {officerRole === "Director"
+                        ? (officerRole + " of " + officerPosition).toUpperCase()
+                        : (officerRole + " " + officerPosition).toUpperCase()}
+                    </div>
+                  </h3>
+                </div>
+              </Col>
+            </Row>
+            <Row className="officer-modal-media"></Row>
+          </Modal.Body>
+        </div>
         <Modal.Footer style={{ "border-top": "none" }}></Modal.Footer>
       </Modal>
     </div>

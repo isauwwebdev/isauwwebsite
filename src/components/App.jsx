@@ -292,7 +292,7 @@ function App() {
               />
             )}
           />
-          <Route
+          {/* <Route
             path="/sign-up-friendsgiving"
             render={() => (
               <EventSignUpForm
@@ -304,7 +304,7 @@ function App() {
                 firebaseStoragePath="2024/friendsgiving"
               />
             )}
-          />
+          /> */}
           {/* <Route
             path="/sign-up-seathrough"
             render={() => (

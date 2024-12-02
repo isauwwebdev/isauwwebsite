@@ -1,198 +1,63 @@
 [
   {
-    "name": "Charisse Luhur",
+    "name": "William Perdana",
     "department": "Primaries",
     "role": "President",
     "position": "",
-    "major": "Business Administration",
+    "major": "Operations + Supply Chain",
     "img": [
       {
-        "src": "../images/officers/Charisse.webp"
+        "src": "../images/officers/primaries/WP.webp"
       }
     ],
     "descr": ""
   },
   {
-    "name": "William Perdana",
+    "name": "Sharon Sutadinata",
     "department": "Primaries",
     "role": "Vice President",
     "position": "",
-    "major": "",
+    "major": "Industrial Engineering",
     "img": [
       {
-        "src": "../images/officers/William.webp"
+        "src": "../images/officers/primaries/sharon.webp"
       }
     ],
     "descr": ""
   },
   {
-    "name": "Jessica Fredlina",
+    "name": "Octavio Gunawan",
     "department": "Finance, Primaries",
     "role": "Director",
     "position": "Finance",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Jessica.webp"
-      }
-    ]
-  },
-  {
-    "name": "Bryan So",
-    "department": "Operations, Primaries",
-    "role": "Director",
-    "position": "Operations",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Bryan.webp"
-      }
-    ]
-  },
-  {
-    "name": "Gillian Seokawan",
-    "department": "Communications & Outreach, Primaries",
-    "role": "Director",
-    "position": "Communications & Outreach",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Gillian.webp"
-      }
-    ]
-  },
-  {
-    "name": "Andira Andala",
-    "department": "Finance",
-    "role": "Sponsorship",
-    "position": "Head",
-    "major": "Communications",
-    "img": [
-      {
-        "src": "../images/officers/Andira.webp"
-      }
-    ]
-  },
-  {
-    "name": "Bryan Sanusi",
-    "department": "Finance",
-    "role": "Fundraising",
-    "position": "Head",
-    "major": "Electrical Engineering",
-    "img": [
-      {
-        "src": "../images/officers/Sanusi.webp"
-      }
-    ]
-  },
-  {
-    "name": "Octavio Gunawan",
-    "department": "Finance",
-    "role": "Treasury",
-    "position": "Head",
     "major": "Electrical & Computer Engineering",
     "img": [
       {
-        "src": "../images/officers/Octavio.webp"
+        "src": "../images/officers/primaries/octavio.webp"
       }
     ]
   },
   {
-    "name": "Charity Joy",
-    "department": "Operations",
-    "role": "Event Organizer",
-    "position": "Head",
-    "major": "Communication",
+    "name": "Chiara Isabelle",
+    "department": "Operations, Primaries",
+    "role": "Director",
+    "position": "Operations",
+    "major": "Nutrition + Communications",
     "img": [
       {
-        "src": "../images/officers/Joy.webp"
-      }
-    ]
-  },
-  {
-    "name": "Chiara Gunaman",
-    "department": "Operations",
-    "role": "Creativity Management",
-    "position": "Head",
-    "major": "Nutrition",
-    "description": "Chiara loves the TV show Modern Family and is a certified dog lover.",
-    "img": [
-      {
-        "src": "../images/officers/Chiara.webp"
-      }
-    ]
-  },
-  {
-    "name": "George Soekawan",
-    "department": "Operations",
-    "role": "Inventory",
-    "position": "Head",
-    "major": "Business Administration",
-    "description": "George is a fanatic of Japanese cuisine and enjoys sleeping, watching TikToks, and playing tennis and basketball.",
-    "img": [
-      {
-        "src": "../images/officers/George.webp"
-      }
-    ],
-    "descr": "George is a junior double majoring in Information Systems and Supply Chain Operations. If the world suddenly has 25 hours in a day, this Japanese cuisine fanatic would spend that extra hour by sleeping, since he loses most of his time through TikTok and sports activities. "
-  },
-  {
-    "name": "Kezia Proverby",
-    "department": "Communications & Outreach",
-    "role": "Marketing Communications",
-    "position": "Head",
-    "major": "Communications",
-    "img": [
-      {
-        "src": "../images/officers/Kezia.webp"
+        "src": "../images/officers/primaries/chiara.webp"
       }
     ]
   },
   {
     "name": "Eugene Wongso",
-    "department": "Communications & Outreach",
-    "role": "Documentation",
-    "position": "Head",
-    "major": "",
+    "department": "Communications & Outreach, Primaries",
+    "role": "Director",
+    "position": "Communications & Outreach",
+    "major": "Informatics",
     "img": [
       {
-        "src": "../images/officers/Eugene.webp"
-      }
-    ]
-  },
-  {
-    "name": "Arvin Oentoro",
-    "department": "Communications & Outreach",
-    "role": "Web Development",
-    "position": "Head",
-    "major": "Computer Science",
-    "img": [
-      {
-        "src": "../images/officers/Arvin.webp"
-      }
-    ]
-  },
-  {
-    "name": "Tamaska Alimutomo",
-    "department": "Communications & Outreach",
-    "role": "Design",
-    "position": "Head",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Tamaska.webp"
-      }
-    ]
-  },
-  {
-    "name": "Gabriel Tanumihardja",
-    "department": "Finance",
-    "role": "Sponsorship",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Gabe.webp"
+        "src": "../images/officers/primaries/eugene.webp"
       }
     ]
   },
@@ -200,23 +65,11 @@
     "name": "Ryan Alexander",
     "department": "Finance",
     "role": "Sponsorship",
-    "position": "Officer",
-    "major": "",
+    "position": "Head",
+    "major": "Communications",
     "img": [
       {
-        "src": "../images/officers/Ryan.webp"
-      }
-    ]
-  },
-  {
-    "name": "Janice Dermawan",
-    "department": "Finance",
-    "role": "Sponsorship",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Janice.webp"
+        "src": "../images/officers/finance/ryan.webp"
       }
     ]
   },
@@ -224,11 +77,145 @@
     "name": "Nadine Setiawan",
     "department": "Finance",
     "role": "Fundraising",
-    "position": "Officer",
-    "major": "",
+    "position": "Head",
+    "major": "Biology",
     "img": [
       {
-        "src": "../images/officers/Nadine.webp"
+        "src": "../images/officers/finance/nadine.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chelsy Aryani",
+    "department": "Finance",
+    "role": "Treasury",
+    "position": "Head",
+    "major": "Information System",
+    "img": [
+      {
+        "src": "../images/officers/finance/chelsy.webp"
+      }
+    ]
+  },
+  {
+    "name": "Jean Cuaca",
+    "department": "Operations",
+    "role": "Event Organizer",
+    "position": "Head",
+    "major": "Intended Communication",
+    "img": [
+      {
+        "src": "../images/officers/ops/jean.webp"
+      }
+    ]
+  },
+  {
+    "name": "Callista Walla",
+    "department": "Operations",
+    "role": "Creativity Engineering",
+    "position": "Head",
+    "major": "Environmental Studies + Environmental Science",
+    "description": "Tree Whisperer.",
+    "img": [
+      {
+        "src": "../images/officers/ops/callista.webp"
+      }
+    ]
+  },
+  {
+    "name": "Jason Chen",
+    "department": "Operations",
+    "role": "Inventory",
+    "position": "Head",
+    "major": "Finance + Entrepreneurship",
+    "description": "I can meditate for 5 mins.",
+    "img": [
+      {
+        "src": "../images/officers/ops/jason.webp"
+      }
+    ]
+  },
+  {
+    "name": "Agnes Bisma",
+    "department": "Communications & Outreach",
+    "role": "Marketing Communications",
+    "position": "Head",
+    "major": "Informatics",
+    "img": [
+      {
+        "src": "../images/officers/co/agnes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Josh Setiady",
+    "department": "Communications & Outreach",
+    "role": "Documentation",
+    "position": "Head",
+    "major": "Mechanical Engineering",
+    "img": [
+      {
+        "src": "../images/officers/co/josh-s.webp"
+      }
+    ]
+  },
+  {
+    "name": "Enrico Pratama",
+    "department": "Communications & Outreach",
+    "role": "Web Development",
+    "position": "Head",
+    "major": "Informatics",
+    "img": [
+      {
+        "src": "../images/officers/co/enrico.webp"
+      }
+    ]
+  },
+  {
+    "name": "Steven Heng",
+    "department": "Communications & Outreach",
+    "role": "Design",
+    "position": "Head",
+    "major": "Informatics",
+    "img": [
+      {
+        "src": "../images/officers/co/steven.webp"
+      }
+    ]
+  },
+  {
+    "name": "Jessica Fredlina",
+    "department": "Finance",
+    "role": "Sponsorship",
+    "position": "Officer",
+    "major": "Accounting + IS + OSCM",
+    "img": [
+      {
+        "src": "../images/officers/finance/jessica-f.webp"
+      }
+    ]
+  },
+  {
+    "name": "Disney Purwo",
+    "department": "Finance",
+    "role": "Sponsorship",
+    "position": "Officer",
+    "major": "Business Administration",
+    "img": [
+      {
+        "src": "../images/officers/finance/disney.webp"
+      }
+    ]
+  },
+  {
+    "name": "Patrissa Gunawan",
+    "department": "Finance",
+    "role": "Sponsorship",
+    "position": "Officer",
+    "major": "Intended Business",
+    "img": [
+      {
+        "src": "../images/officers/finance/patrissa.webp"
       }
     ]
   },
@@ -237,10 +224,10 @@
     "department": "Finance",
     "role": "Fundraising",
     "position": "Officer",
-    "major": "",
+    "major": "Real Estate",
     "img": [
       {
-        "src": "../images/officers/Rana.webp"
+        "src": "../images/officers/finance/rana.webp"
       }
     ]
   },
@@ -249,166 +236,154 @@
     "department": "Finance",
     "role": "Fundraising",
     "position": "Officer",
-    "major": "",
+    "major": "Finance",
     "img": [
       {
-        "src": "../images/officers/Caitlyn.webp"
+        "src": "../images/officers/finance/caitlyn.webp"
       }
     ]
   },
   {
-    "name": "Clairine Buntoro",
+    "name": "Emelie Jayawiyanto",
+    "department": "Finance",
+    "role": "Fundraising",
+    "position": "Officer",
+    "major": "Informatics",
+    "img": [
+      {
+        "src": "../images/officers/finance/emelie.webp"
+      }
+    ]
+  },
+  {
+    "name": "James Samuel",
     "department": "Finance",
     "role": "Treasury",
     "position": "Officer",
-    "major": "",
+    "major": "Finance + IS",
     "img": [
       {
-        "src": "../images/officers/Clairine.webp"
+        "src": "../images/officers/finance/james.webp"
       }
     ]
   },
   {
-    "name": "Chelsy Aryani",
+    "name": "Nemuell Handoyo",
     "department": "Finance",
     "role": "Treasury",
     "position": "Officer",
-    "major": "",
+    "major": "Accounting",
     "img": [
       {
-        "src": "../images/officers/Chelsy.webp"
+        "src": "../images/officers/finance/nemuell.webp"
       }
     ]
   },
   {
-    "name": "Caitlyn Widjaja",
+    "name": "Catherine Dharma",
     "department": "Operations",
     "role": "Event Organizer",
     "position": "Officer",
-    "major": "",
+    "major": "Industrial Engineering",
     "img": [
       {
-        "src": "../images/officers/CaitlynW.webp"
+        "src": "../images/officers/ops/catherine.webp"
       }
     ]
   },
   {
-    "name": "Sharon Sutadinata",
+    "name": "Aurelle Alexandra Djaja",
     "department": "Operations",
     "role": "Event Organizer",
     "position": "Officer",
-    "major": "",
+    "major": "Business Administration",
     "img": [
       {
-        "src": "../images/officers/Sharon.webp"
+        "src": "../images/officers/ops/alexa.webp"
       }
     ]
   },
   {
-    "name": "Aurelle Alexandra",
+    "name": "Patricia Abbby",
     "department": "Operations",
     "role": "Event Organizer",
     "position": "Officer",
-    "major": "",
+    "major": "Marketing + OSCM",
     "img": [
       {
-        "src": "../images/officers/Alexa.webp"
+        "src": "../images/officers/ops/patricia.webp"
       }
     ]
   },
   {
-    "name": "Jean Cuaca",
+    "name": "Jessica Haryono",
     "department": "Operations",
     "role": "Event Organizer",
     "position": "Officer",
-    "major": "",
+    "major": "Finance + IS",
     "img": [
       {
-        "src": "../images/officers/Jean.webp"
+        "src": "../images/officers/ops/jessica-h.webp"
       }
     ]
   },
   {
-    "name": "Darren Gunadharma",
+    "name": "Monika Wangsanegara",
     "department": "Operations",
-    "role": "Creativity Management",
+    "role": "Creativity Engineering",
     "position": "Officer",
-    "major": "",
+    "major": "Intended Business",
     "img": [
       {
-        "src": "../images/officers/Darren.webp"
+        "src": "../images/officers/ops/monika.webp"
       }
     ]
   },
   {
-    "name": "Joe Enrico",
+    "name": "Nicole Haryono",
     "department": "Operations",
-    "role": "Creativity Management",
+    "role": "Creativity Engineering",
     "position": "Officer",
-    "major": "",
+    "major": "CFRM",
     "img": [
       {
-        "src": "../images/officers/Joe.webp"
+        "src": "../images/officers/ops/nicole.webp"
       }
     ]
   },
   {
-    "name": "Callista Walla",
+    "name": "Willetta Zen",
     "department": "Operations",
-    "role": "Creativity Management",
+    "role": "Creativity Engineering",
     "position": "Officer",
-    "major": "",
+    "major": "Intended Psychology",
     "img": [
       {
-        "src": "../images/officers/Callista.webp"
+        "src": "../images/officers/ops/willetta.webp"
       }
     ]
   },
   {
-    "name": "Cathy Darma",
+    "name": "Deandra Andala",
     "department": "Operations",
-    "role": "Creativity Management",
+    "role": "Creativity Engineering",
     "position": "Officer",
-    "major": "",
+    "major": "Intended Business",
     "img": [
       {
-        "src": "../images/officers/Cat.webp"
+        "src": "../images/officers/ops/deandra.webp"
       }
     ]
   },
   {
-    "name": "Daven Tejalaksana",
+    "name": "Jeremy Tedja",
     "department": "Operations",
-    "role": "Inventory",
+    "role": "Creativity Engineering",
     "position": "Officer",
-    "major": "",
+    "major": "Intended Informatics",
     "img": [
       {
-        "src": "../images/officers/Daven.webp"
-      }
-    ]
-  },
-  {
-    "name": "Jeremy Tan",
-    "department": "Operations",
-    "role": "Inventory",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Jeremy.webp"
-      }
-    ]
-  },
-  {
-    "name": "Jason Chen",
-    "department": "Operations",
-    "role": "Inventory",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Jason.webp"
+        "src": "../images/officers/ops/jeremy.webp"
       }
     ]
   },
@@ -417,34 +392,34 @@
     "department": "Operations",
     "role": "Inventory",
     "position": "Officer",
-    "major": "",
+    "major": "OCMS + Marketing",
     "img": [
       {
-        "src": "../images/officers/Bryant.webp"
+        "src": "../images/officers/ops/bryant.webp"
       }
     ]
   },
   {
-    "name": "Agnes Bisma",
-    "department": "Communications & Outreach",
-    "role": "Marketing Communications",
+    "name": "Josh Firtanto",
+    "department": "Operations",
+    "role": "Inventory",
     "position": "Officer",
-    "major": "",
+    "major": "Finance + IS",
     "img": [
       {
-        "src": "../images/officers/Agnes.webp"
+        "src": "../images/officers/ops/josh-f.webp"
       }
     ]
   },
   {
-    "name": "Bianca Romangsuriat",
-    "department": "Communications & Outreach",
-    "role": "Marketing Communications",
+    "name": "Nathanael Alvin Sujanto",
+    "department": "Operations",
+    "role": "Inventory",
     "position": "Officer",
-    "major": "",
+    "major": "Industrial Engineering",
     "img": [
       {
-        "src": "../images/officers/KK.webp"
+        "src": "../images/officers/ops/alvin.webp"
       }
     ]
   },
@@ -453,82 +428,82 @@
     "department": "Communications & Outreach",
     "role": "Marketing Communications",
     "position": "Officer",
-    "major": "",
+    "major": "Intended Business",
     "img": [
       {
-        "src": "../images/officers/Rao.webp"
+        "src": "../images/officers/co/branden.webp"
       }
     ]
   },
   {
-    "name": "Tamaska Nikola",
+    "name": "Gabe Tanumihardja",
+    "department": "Communications & Outreach",
+    "role": "Marketing Communications",
+    "position": "Officer",
+    "major": "Computer Science",
+    "img": [
+      {
+        "src": "../images/officers/co/gabe.webp"
+      }
+    ]
+  },
+  {
+    "name": "Faith Precious",
+    "department": "Communications & Outreach",
+    "role": "Marketing Communications",
+    "position": "Officer",
+    "major": "Marketing",
+    "img": [
+      {
+        "src": "../images/officers/co/faith.webp"
+      }
+    ]
+  },
+  {
+    "name": "Gillian Soekwan",
     "department": "Communications & Outreach",
     "role": "Design",
     "position": "Officer",
-    "major": "",
+    "major": "MSIM",
     "img": [
       {
-        "src": "../images/officers/Tamaska.webp"
+        "src": "../images/officers/co/gillian.webp"
       }
     ]
   },
   {
-    "name": "Steven Heng",
+    "name": "Emily Subroto",
     "department": "Communications & Outreach",
     "role": "Design",
     "position": "Officer",
-    "major": "",
+    "major": "IVA",
     "img": [
       {
-        "src": "../images/officers/Steven.webp"
+        "src": "../images/officers/co/emily.webp"
       }
     ]
   },
   {
-    "name": "Disney Purwo",
+    "name": "Tamaska Alimutomo",
     "department": "Communications & Outreach",
     "role": "Design",
     "position": "Officer",
-    "major": "",
+    "major": "Communication",
     "img": [
       {
-        "src": "../images/officers/Disney.webp"
+        "src": "../images/officers/co/tamaska.webp"
       }
     ]
   },
   {
-    "name": "Josh Setiady",
+    "name": "Calista Vidianto",
     "department": "Communications & Outreach",
     "role": "Documentation",
     "position": "Officer",
-    "major": "Communications",
+    "major": "Computer Science",
     "img": [
       {
-        "src": "../images/officers/Josh.webp"
-      }
-    ]
-  },
-  {
-    "name": "Darel Gunawan",
-    "department": "Communications & Outreach",
-    "role": "Web Development",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Darel.webp"
-      }
-    ]
-  },
-  {
-    "name": "Enrico Pratama",
-    "department": "Communications & Outreach",
-    "role": "Web Development",
-    "position": "Officer",
-    "major": "",
-    "img": [
-      {
-        "src": "../images/officers/Enrico.webp"
+        "src": "../images/officers/co/calista.webp"
       }
     ]
   },
@@ -537,10 +512,46 @@
     "department": "Communications & Outreach",
     "role": "Web Development",
     "position": "Officer",
-    "major": "",
+    "major": "Informatics",
     "img": [
       {
-        "src": "../images/officers/Theophila.webp"
+        "src": "../images/officers/co/fila.webp"
+      }
+    ]
+  },
+  {
+    "name": "Arvin Oentoro",
+    "department": "Communications & Outreach",
+    "role": "Web Development",
+    "position": "Officer",
+    "major": "Computer Science",
+    "img": [
+      {
+        "src": "../images/officers/co/arvin.webp"
+      }
+    ]
+  },
+  {
+    "name": "Charlene Liesl Lioe",
+    "department": "Communications & Outreach",
+    "role": "Web Development",
+    "position": "Officer",
+    "major": "Computer Science",
+    "img": [
+      {
+        "src": "../images/officers/co/charlene.webp"
+      }
+    ]
+  },
+  {
+    "name": "George Evans Daenuwy",
+    "department": "Communications & Outreach",
+    "role": "Web Development",
+    "position": "Officer",
+    "major": "Electrical & Computer Engineering",
+    "img": [
+      {
+        "src": "../images/officers/co/evans.webp"
       }
     ]
   }
