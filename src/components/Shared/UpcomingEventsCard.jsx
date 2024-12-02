@@ -79,7 +79,7 @@ function UpcomingEventsCard(props) {
                 <div className="flex flex-wrap items-center">
                   {/* Start 1st div */}
                   <div>
-                    <div className="text-center div-upcoming-events-date align-self-center mt-6">
+                    <div className="text-center div-upcoming-events-date align-self-center my-auto">
                       <p className="upcoming-events-month">{month}</p>
                       <p className="upcoming-events-date">{date}</p>
                     </div>
@@ -121,7 +121,6 @@ function UpcomingEventsCard(props) {
                   </div>
 
                   <div className="w-full sm:w-auto m-auto mt-2 mt-md-auto pr-2 sm:pr-0">
-                    {/* TODO: make this dynamic */}
                     {/* Start 2nd div */}
                     <div className="w-full m-auto justify-center mx-auto align-middle">
                       <a

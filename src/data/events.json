@@ -6,7 +6,7 @@
         "location": "The M Seattle Rooftop",
         "text": "The One with the Friendsgiving Feast! ISAUW and friends come together for an unforgettable Friendsgiving! Cheers for a night of thanks, photobooth, cookie decorating, and more!",
         "img": [{"src": "../images/events/friendsgiving/2024/1.jpg", "alt": "Card front image"}],
-        "completed": false
+        "completed": true
     },
     {
         "title": "Seathrough",

@@ -145,6 +145,18 @@ export default function EventSignUpForm({
     }
   };
 
+  useEffect(() => {
+    if (showSuccessModal || showErrorModal || showOTSModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showSuccessModal, showErrorModal, showOTSModal]);
+
   const handlePhoneNumber = (e) => {
     setPhoneNumber(e);
     setValue("phoneNumber", e);
