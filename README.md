@@ -11,7 +11,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2. Download the serviceAccountKey.json file from (Firebase --> project settings --> Service Accounts --> Generate new private key)
    Link: [Firestore Project Settings](https://console.firebase.google.com/u/4/project/isauw-88012/settings/serviceaccounts/adminsdk)
 3. Rename the downloaded file to serviceAccountKey.json, and save it in the root directory
-4. `node exportFirestoreToCSVComp (name of database that you want to export eg. stamp-quest)`
+4. `node exportFirestoreToCSV (name of database that you want to export eg. stamp-quest)`
 
 ## How to run Docker:
 1. Run 
