@@ -13,6 +13,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 3. Rename the downloaded file to serviceAccountKey.json, and save it in the root directory
 4. `node exportFirestoreToCSVComp (name of database that you want to export eg. stamp-quest)`
 
+## How to run Docker:
+1. Run 
+   `docker-compose up --build`
+2. Run
+   `docker-compose up`
+
 ## Available Scripts
 
 In the project directory, you can run:
