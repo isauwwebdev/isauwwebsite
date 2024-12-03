@@ -1,0 +1,6 @@
+version: "3"  # Ensure double quotes are standard ASCII characters
+services:
+  react-app:  # Define the service name
+    build: .  # Build from the Dockerfile in the current directory
+    ports:
+      - "3000:3000"  # Expose port 3000 on the host to port 3000 in the container
