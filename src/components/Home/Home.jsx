@@ -31,7 +31,7 @@ function Home(props) {
             }}
           >
             <source
-              src="https://firebasestorage.googleapis.com/v0/b/isauw-88012.appspot.com/o/2024%2Fwebsite-assets%2FFinal%20Video%20(1).mp4?alt=media&token=28475e77-c36f-4fab-8577-60953096d068"
+              src="https://firebasestorage.googleapis.com/v0/b/isauw-88012.appspot.com/o/2024%2Fwebsite-assets%2FcabinVideo24-25_16-9.mp4?alt=media&token=544be94f-bea1-41de-87aa-8a2928b16a3e"
               type="video/mp4"
             ></source>
           </video>
