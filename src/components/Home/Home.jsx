@@ -30,8 +30,12 @@ function Home(props) {
               display: "block",
             }}
           >
-            <source
+            {/* <source
               src="https://firebasestorage.googleapis.com/v0/b/isauw-88012.appspot.com/o/2024%2Fwebsite-assets%2FCabin%20Video%2024-25_doublecompressed.mp4?alt=media&token=b4413505-0399-4d39-b68a-73f3aa8d8cdd"
+              type="video/mp4"
+            ></source> */}
+            <source
+              src="/images/officers/cabinVid24-25.mp4"
               type="video/mp4"
             ></source>
           </video>
