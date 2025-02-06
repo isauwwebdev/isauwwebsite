@@ -401,16 +401,9 @@ p {
 	transform: translateY(-50px);
 }
 */
-.navSolid {
-  background: transparent;
-  box-shadow: none;
-  -webkit-transition: background 200ms linear;
-  -ms-transition: background 200ms linear;
-  transition: background 200ms linear;
-}
 
-.navSolid.active {
-  background: rgba(129, 27, 20, 1);
+.navSolid {
+  background: rgba(254, 253, 234);
   box-shadow: none;
   -webkit-transition: background 200ms linear;
   -ms-transition: background 200ms linear;
@@ -420,6 +413,7 @@ p {
 /* Navbar Brand */
 .isauw-logo {
   height: calc(1.6vw + 36px);
+  color: rgba(190, 150, 3, 1);
 }
 
 /* Remove Border when Hamburger is clicked */
@@ -612,12 +606,8 @@ p {
 }
 
 /* hamburger menu close */
-.navClose {
-  background: transparent;
+.navClose.active {
   text-align: center;
-  -webkit-transition: background 100ms ease-in;
-  -ms-transition: background 100ms ease-in;
-  transition: background 100ms ease-in;
 }
 
 .navClose .navLink {
@@ -626,12 +616,12 @@ p {
 
 .navLink {
   font-family: "brandon_grotesque", sans-serif !important;
-  font-weight: 400;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   display: inline-block;
   padding: 0.5rem 0.5rem 0 32px !important;
-  color: rgb(255, 255, 255);
+  color: rgba(190, 150, 3, 1);
   display: block;
 
   /* delay all these properties until hamburger menu closing animation finishes */
@@ -642,9 +632,10 @@ p {
 
 .navLink:hover {
   display: block;
-  color: white;
+  color: rgba(125, 0, 0, 1);
 }
 
+/* 
 .navLink::after {
   margin-top: 12.5px;
   display: block;
@@ -674,7 +665,7 @@ p {
   opacity: 1 !important;
   transition: none !important;
   transform: none !important;
-}
+} */
 
 /* Ad Banner */
 .alert-fixed {

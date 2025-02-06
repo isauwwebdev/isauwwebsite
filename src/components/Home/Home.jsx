@@ -8,6 +8,8 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { IoBagHandleOutline } from "react-icons/io5";
 import Fade from "react-reveal/Fade";
 import VisionMission from "../Home/VisionMission";
+import Counter from "./NumberCounter";
+import PartnersSponsors from "./PartnersSponsors";
 
 function Home(props) {
   const API_KEY = process.env.REACT_APP_INS_TOKEN;
@@ -60,11 +62,33 @@ function Home(props) {
 
       <Purpose />
       <VisionMission isMobile={props.isMobile} />
+
+      {/* partners and sponsors goes here */}
+      <PartnersSponsors title="test prop" />
+
       {/* <Fade bottom>
         <Container>
           <UpcomingEventsGallery />
         </Container>
       </Fade> */}
+
+      {/* Number here */}
+      <div className="flex items-center justify-center gap-16 text-center">
+        <div className="flex items-center gap-4">
+          <div className="flex items-center justify-center">
+            <Counter />
+          </div>
+          <span className="text-[#7D0000] text-2xl font-bold">
+            years of operation
+          </span>
+          <div className="flex items-center justify-center">
+            <Counter />
+          </div>
+          <span className="text-[#7D0000] text-2xl font-bold">
+            past members
+          </span>
+        </div>
+      </div>
 
       <Fade bottom>
         <Container

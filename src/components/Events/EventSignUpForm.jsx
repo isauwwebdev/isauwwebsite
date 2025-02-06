@@ -66,7 +66,7 @@ export default function EventSignUpForm({
   // Function to handle scrolling and escape key
   useEffect(() => {
     if (showSuccessModal || showErrorModal) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden"; // disallow scrolling
 
       const handleEsc = (event) => {
         if (event.key === "Escape") {
