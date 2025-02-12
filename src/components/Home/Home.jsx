@@ -32,12 +32,8 @@ function Home(props) {
               display: "block",
             }}
           >
-            {/* <source
-              src="https://students.washington.edu/isauw/images/cabin2024ISAUW.mp4"
-              type="video/mp4"
-            ></source> */}
             <source
-              src="https://students.washington.edu/isauw/images/cabin2024ISAUW.mp4"
+              src="https://students.washington.edu/isauw/images/cabin2024noTEXTwOVERLAY.mp4"
               type="video/mp4"
             ></source>
           </video>
@@ -64,7 +60,7 @@ function Home(props) {
       <VisionMission isMobile={props.isMobile} />
 
       {/* partners and sponsors goes here */}
-      <PartnersSponsors title="test prop" />
+      <PartnersSponsors />
 
       {/* <Fade bottom>
         <Container>

@@ -141,16 +141,14 @@ function App() {
                 ? keratonScrollDown
                   ? "keratonHide"
                   : "keratonNav"
-                : navBar
-                ? "navSolid active"
-                : "navSolid"
+                : "navSolid active"
             } ${expanded ? "navOpen" : "navClose"}`}
             expanded={expanded}
           >
             <Container className="navContainer">
               {/* ISAUW Brand */}
               <Navbar.Brand href="#home">
-                <Link to="/">
+                {/* <Link to="/">
                   {keratonPage ? (
                     <img
                       alt="isauwlogo-black"
@@ -164,7 +162,7 @@ function App() {
                       className="isauw-logo"
                     />
                   )}
-                </Link>
+                </Link> */}
               </Navbar.Brand>
 
               {/* Collapses to a hamburger menu at the expand="lg" breakpoint */}

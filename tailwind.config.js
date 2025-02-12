@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        customRed: "#7d0000",
+        isauwRed: "#7d0000",
+        isauwCreme: "#FEFDEA",
+      },
+      fontFamily: {
+        spartan: ["League Spartan", "sans-serif"],
       },
     },
   },

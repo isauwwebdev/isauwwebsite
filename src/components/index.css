@@ -2,6 +2,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "@fontsource/league-spartan";
 
 .tick {
   stroke-dasharray: 17;
