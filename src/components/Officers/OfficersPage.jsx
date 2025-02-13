@@ -1,11 +1,10 @@
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import officers from '../../data/officers.json'
-import Fade from 'react-reveal/Fade';
-import React from 'react';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import officers from "../../data/officers.json";
+import React from "react";
 
 function OfficersPage(props) {
-  const {showPrimaries, showDept} = props;
+  const { showPrimaries, showDept } = props;
 
   // {officers.map((group, i) => {
   //   return (
@@ -43,13 +42,11 @@ function OfficersPage(props) {
   //   )
   // })}
 
-
   return (
-    <div >
+    <div>
       <p>hi</p>
     </div>
-
   );
 }
 
-export default OfficersPage
+export default OfficersPage;

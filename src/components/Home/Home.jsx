@@ -6,16 +6,16 @@ import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoBagHandleOutline } from "react-icons/io5";
-import Fade from "react-reveal/Fade";
 import VisionMission from "../Home/VisionMission";
 import Counter from "./NumberCounter";
 import PartnersSponsors from "./PartnersSponsors";
+import Events from "./Events";
 
 function Home(props) {
   const API_KEY = process.env.REACT_APP_INS_TOKEN;
 
   return (
-    <div>
+    <div className="">
       {/* Carousel */}
       <div>
         <div className="navbar-overlay" style={{ height: "100vh" }}>
@@ -61,6 +61,7 @@ function Home(props) {
 
       {/* partners and sponsors goes here */}
       <PartnersSponsors />
+      <Events />
 
       {/* <Fade bottom>
         <Container>
@@ -70,62 +71,49 @@ function Home(props) {
 
       {/* Number here */}
       <div className="flex items-center justify-center gap-16 text-center">
-        <div className="flex items-center gap-4">
-          <div className="flex items-center justify-center">
-            <Counter />
-          </div>
-          <span className="text-[#7D0000] text-2xl font-bold">
-            years of operation
-          </span>
-          <div className="flex items-center justify-center">
-            <Counter />
-          </div>
-          <span className="text-[#7D0000] text-2xl font-bold">
-            past members
-          </span>
+        <div className="flex items-center justify-center">
+          <Counter />
         </div>
       </div>
 
-      <Fade bottom>
-        <Container
-          className="align-items-center text-center"
-          style={{ marginTop: "4rem", overflow: "auto" }}
+      <Container
+        className="align-items-center text-center"
+        style={{ marginTop: "4rem", overflow: "auto" }}
+      >
+        <h1 className="my-3 cta">
+          <strong style={{ fontFamily: "brandon_grotesque" }}>
+            DON'T MISS OUT
+          </strong>
+        </h1>
+        <p
+          className="text-center"
+          style={{
+            fontFamily: "brandon_grotesque",
+            fontWeight: "400",
+            fontSize: "calc(15px + 0.6vw)",
+            marginBottom: "0.1rem",
+          }}
         >
-          <h1 className="my-3 cta">
-            <strong style={{ fontFamily: "brandon_grotesque" }}>
-              DON'T MISS OUT
-            </strong>
-          </h1>
-          <p
-            className="text-center"
-            style={{
-              fontFamily: "brandon_grotesque",
-              fontWeight: "400",
-              fontSize: "calc(15px + 0.6vw)",
-              marginBottom: "0.1rem",
-            }}
-          >
-            join the ISAUW family today
-          </p>
-          <a
-            type="button"
-            className="btn btn-home"
-            href="https://instagram.com/isauwhuskies/"
-          >
-            <div className="flex items-center justify-center">
-              <AiOutlineInstagram className="btn-home-icon" />
-              <span className="ml-2">FOLLOW</span>
-            </div>
-          </a>
+          join the ISAUW family today
+        </p>
+        <a
+          type="button"
+          className="btn btn-home"
+          href="https://instagram.com/isauwhuskies/"
+        >
+          <div className="flex items-center justify-center">
+            <AiOutlineInstagram className="btn-home-icon" />
+            <span className="ml-2">FOLLOW</span>
+          </div>
+        </a>
 
-          <a type="button" className="btn btn-home" href="./Shop">
-            <div className="flex items-center justify-center">
-              <IoBagHandleOutline class="btn-home-icon" />
-              <span> EXPLORE</span>
-            </div>
-          </a>
-        </Container>
-      </Fade>
+        <a type="button" className="btn btn-home" href="./Shop">
+          <div className="flex items-center justify-center">
+            <IoBagHandleOutline class="btn-home-icon" />
+            <span> EXPLORE</span>
+          </div>
+        </a>
+      </Container>
     </div>
   );
 }
