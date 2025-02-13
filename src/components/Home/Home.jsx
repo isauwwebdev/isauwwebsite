@@ -7,9 +7,9 @@ import Carousel from "react-bootstrap/Carousel";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoBagHandleOutline } from "react-icons/io5";
 import VisionMission from "../Home/VisionMission";
-import Counter from "./NumberCounter";
 import PartnersSponsors from "./PartnersSponsors";
 import Events from "./Events";
+import Counter from "./Counter";
 
 function Home(props) {
   const API_KEY = process.env.REACT_APP_INS_TOKEN;
