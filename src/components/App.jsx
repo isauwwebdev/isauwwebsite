@@ -18,6 +18,7 @@ import EventSignUpForm from "./Events/EventSignUpForm";
 import events from "../data/events.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import WinterballSignUpForm from "./Events/WinterballSignUpForm";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -290,12 +291,13 @@ function App() {
           <Route
             path="/winterball-signup"
             render={() => (
-              <EventSignUpForm
+              <WinterballSignUpForm
                 eventName="Winterball"
                 bannerImage="/events/winter ball/2025/winterball2025Banner.gif"
-                firestorePath="2024/seathrough/event-registrations"
-                BGImage="/events/winter ball/2025/winterball2025BG.png"
+                firestorePath="2025/winterball/event-registrations"
+                BGImage="/events/winter ball/2025/winterball2025BG3.png"
                 rsvp={true}
+                firebaseStoragePath="2025/winterball/proofs-of-payment"
               />
             )}
           />
