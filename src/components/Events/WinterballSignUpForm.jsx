@@ -200,6 +200,7 @@ export default function WinterballSignUpForm({
         timestamp: new Date(),
       };
 
+      // Dynamically add extra attendees if registrationType is "Couple" or "Group"
       if (
         data.registrationType === "Couple" ||
         data.registrationType === "Group"
@@ -211,8 +212,7 @@ export default function WinterballSignUpForm({
 
         for (let i = 0; i < extraAttendeeCount; i++) {
           formData.extraAttendees.push({
-            firstName: data[`extraFirstName${i}`],
-            lastName: data[`extraLastName${i}`],
+            fullName: data[`extraFullName${i}`], // Store full name
           });
         }
       }
@@ -449,8 +449,8 @@ export default function WinterballSignUpForm({
                 )}
 
                 <small className="form-text text-muted">
-                  Please select how many you are registering for (ie. yourself,
-                  a couple, a group).
+                  Please select how many people you are registering for (ie.
+                  yourself, a couple, a group).
                 </small>
               </div>
 
@@ -466,7 +466,7 @@ export default function WinterballSignUpForm({
                     className="overflow-hidden"
                   >
                     <label className="form-label">
-                      Additional Attendee Names
+                      Additional Attendee Names:
                     </label>
 
                     {/* Generate extra name fields based on registration type */}
@@ -482,46 +482,24 @@ export default function WinterballSignUpForm({
                         className={`mb-4 ${index !== 0 ? "mt-4" : ""}`}
                       >
                         <label
-                          htmlFor={`extraFirstName${index}`}
+                          htmlFor={`extraFullName${index}`}
                           className="form-label"
                         >
-                          First Name (Attendee {index + 2}){" "}
+                          Full Name (Attendee {index + 2}){" "}
                           <span className="text-red-500">*</span>
                         </label>
                         <input
-                          id={`extraFirstName${index}`}
-                          name={`extraFirstName${index}`}
+                          id={`extraFullName${index}`}
+                          name={`extraFullName${index}`}
                           disabled={isLoading}
                           className="form-control"
-                          {...register(`extraFirstName${index}`, {
+                          {...register(`extraFullName${index}`, {
                             required: "This field is required.",
                           })}
                         />
-                        {errors[`extraFirstName${index}`] && (
+                        {errors[`extraFullName${index}`] && (
                           <div className="text-danger">
-                            {errors[`extraFirstName${index}`].message}
-                          </div>
-                        )}
-
-                        <label
-                          htmlFor={`extraLastName${index}`}
-                          className="form-label mt-2"
-                        >
-                          Last Name (Attendee {index + 2}){" "}
-                          <span className="text-red-500">*</span>
-                        </label>
-                        <input
-                          id={`extraLastName${index}`}
-                          name={`extraLastName${index}`}
-                          disabled={isLoading}
-                          className="form-control"
-                          {...register(`extraLastName${index}`, {
-                            required: "This field is required.",
-                          })}
-                        />
-                        {errors[`extraLastName${index}`] && (
-                          <div className="text-danger">
-                            {errors[`extraLastName${index}`].message}
+                            {errors[`extraFullName${index}`].message}
                           </div>
                         )}
                       </motion.div>
