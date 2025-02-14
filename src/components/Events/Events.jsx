@@ -2,7 +2,6 @@ import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
 import UpcomingEventsGallery from "../Shared/UpcomingEventsGallery";
 import PastEventsSearch from "./PastEventsSearch";
-import Fade from "react-reveal/Fade";
 import React from "react";
 
 export default function Events() {
@@ -60,9 +59,7 @@ export default function Events() {
       </Carousel>
 
       <Container>
-        <Fade bottom>
-          <UpcomingEventsGallery />
-        </Fade>
+        <UpcomingEventsGallery />
         {/* Jumbotron for ISAUW Card*/}
         {/* <div className="jumbotron">
           <div>
