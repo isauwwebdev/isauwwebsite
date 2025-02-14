@@ -432,7 +432,7 @@ export default function WinterballSignUpForm({
                       setValue("registrationType", e.target.value);
                     }}
                   >
-                    <option value="Single">Single (yourself)</option>
+                    <option value="Single">Solo</option>
                     <option value="Couple">Couple (2 people)</option>
                     <option value="Group">Group (5 people)</option>
                   </select>
