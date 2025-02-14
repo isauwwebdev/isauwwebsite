@@ -295,7 +295,7 @@ function App() {
                 eventName="Winterball"
                 bannerImage="/events/winter ball/2025/winterball2025Banner.gif"
                 firestorePath="2025/winterball/event-registrations"
-                BGImage="/events/winter ball/2025/winterball2025BG3.png"
+                BGImage="/events/winter ball/2025/winterball2025BG5.png"
                 rsvp={true}
                 firebaseStoragePath="2025/winterball/proofs-of-payment"
               />
