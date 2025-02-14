@@ -103,6 +103,7 @@ export default function UpcomingEventsGallery() {
                   location={event.location}
                   img={event.img[0].src}
                   alt={event.img[0].alt}
+                  link={event.link}
                 />
               );
             })}

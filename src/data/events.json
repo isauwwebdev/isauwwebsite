@@ -1,5 +1,15 @@
 [ 
     {
+        "title": "Winter Ball",
+        "date": "02/22/2025",
+        "time": "6:30 PM PT",
+        "location": "Walker-Ames Room",
+        "text": "The Gatsby Gala was an unforgettable night of elegance, cards, and all that jazz! Attendees gathered for an evening inspired by the glitz and glamour of the Jazz Age. Everyone dressed in their finest cocktail attire and enjoyed an exciting atmosphere full of laughter, music, and dancing. Whether flying solo, with a date, or in a group, the night was filled with unforgettable moments and memories.",
+        "img": [{"src": "../images/events/winter ball/2025/winterball2025Poster.gif", "alt": "Poster Image"}],
+        "completed": false,
+        "link": "/winterball-signup"
+    },
+    {
         "title": "Friendsgiving",
         "date": "11/23/2024",
         "time": "7:00 PM PT",

@@ -9,7 +9,7 @@ function VisionMission(props) {
       style={{ width: "76%" }}
     >
       <div className="row px-5">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-right">
           <h1 className="my-3 font-bold">
             <strong>Our Vision</strong>
           </h1>
@@ -22,7 +22,7 @@ function VisionMission(props) {
       </div>
 
       <div className="row px-5">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-left">
           <h1 className="my-3 font-bold">
             <strong>Our Mission</strong>
           </h1>

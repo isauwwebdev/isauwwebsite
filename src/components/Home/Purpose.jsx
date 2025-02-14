@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import Container from "react-bootstrap/Container";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 function Purpose() {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   return (
     <div
       style={{ position: "relative", marginTop: "50px", marginBottom: "130px" }}

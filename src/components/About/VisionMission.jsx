@@ -4,7 +4,7 @@ function VisionMission() {
   return (
     <section className="my-5 mx-auto" style={{ width: "70%" }}>
       <div className="row">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-right">
           <h1 className="my-3 font-bold">
             <strong className="font-extrabold">Our Vision</strong>
             <strong style={{ fontFamily: "brandon_grotesque" }}>
@@ -19,7 +19,7 @@ function VisionMission() {
         </div>
       </div>
       <div className="row">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-left">
           <h1 className="my-3 font-bold">
             <strong>Our Mission</strong>
           </h1>

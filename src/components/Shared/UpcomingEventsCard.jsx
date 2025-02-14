@@ -125,7 +125,7 @@ function UpcomingEventsCard(props) {
                     <div className="w-full m-auto justify-center mx-auto align-middle">
                       <a
                         className="event-card-keraton-button btn btn-dark w-full sm:w-auto"
-                        href="/sign-up-friendsgiving"
+                        href={props.link}
                         role="button"
                       >
                         Sign Up
