@@ -6,7 +6,6 @@ import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoBagHandleOutline } from "react-icons/io5";
-import Fade from "react-reveal/Fade";
 import VisionMission from "../Home/VisionMission";
 
 function Home(props) {
@@ -66,46 +65,44 @@ function Home(props) {
         </Container>
       </Fade> */}
 
-      <Fade bottom>
-        <Container
-          className="align-items-center text-center"
-          style={{ marginTop: "4rem", overflow: "auto" }}
+      <Container
+        className="align-items-center text-center"
+        style={{ marginTop: "4rem", overflow: "auto" }}
+      >
+        <h1 className="my-3 cta">
+          <strong style={{ fontFamily: "brandon_grotesque" }}>
+            DON'T MISS OUT
+          </strong>
+        </h1>
+        <p
+          className="text-center"
+          style={{
+            fontFamily: "brandon_grotesque",
+            fontWeight: "400",
+            fontSize: "calc(15px + 0.6vw)",
+            marginBottom: "0.1rem",
+          }}
         >
-          <h1 className="my-3 cta">
-            <strong style={{ fontFamily: "brandon_grotesque" }}>
-              DON'T MISS OUT
-            </strong>
-          </h1>
-          <p
-            className="text-center"
-            style={{
-              fontFamily: "brandon_grotesque",
-              fontWeight: "400",
-              fontSize: "calc(15px + 0.6vw)",
-              marginBottom: "0.1rem",
-            }}
-          >
-            join the ISAUW family today
-          </p>
-          <a
-            type="button"
-            className="btn btn-home"
-            href="https://instagram.com/isauwhuskies/"
-          >
-            <div className="flex items-center justify-center">
-              <AiOutlineInstagram className="btn-home-icon" />
-              <span className="ml-2">FOLLOW</span>
-            </div>
-          </a>
+          join the ISAUW family today
+        </p>
+        <a
+          type="button"
+          className="btn btn-home"
+          href="https://instagram.com/isauwhuskies/"
+        >
+          <div className="flex items-center justify-center">
+            <AiOutlineInstagram className="btn-home-icon" />
+            <span className="ml-2">FOLLOW</span>
+          </div>
+        </a>
 
-          <a type="button" className="btn btn-home" href="./Shop">
-            <div className="flex items-center justify-center">
-              <IoBagHandleOutline class="btn-home-icon" />
-              <span> EXPLORE</span>
-            </div>
-          </a>
-        </Container>
-      </Fade>
+        <a type="button" className="btn btn-home" href="./Shop">
+          <div className="flex items-center justify-center">
+            <IoBagHandleOutline class="btn-home-icon" />
+            <span> EXPLORE</span>
+          </div>
+        </a>
+      </Container>
     </div>
   );
 }
