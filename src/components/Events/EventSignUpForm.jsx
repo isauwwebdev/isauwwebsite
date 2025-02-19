@@ -12,10 +12,9 @@ import "../index.css";
 import events from "../../data/events.json";
 
 // Component for events sign up form.
-// RI: eventName.prop === events.json.title
 export default function EventSignUpForm({
   eventName,
-  posterImage,
+  bannerImage,
   firestorePath,
   BGImage,
   rsvp = false,
@@ -44,7 +43,7 @@ export default function EventSignUpForm({
   // During h-1 of event at 11:59 PM, we want to close the registration,
   // and show modal indicating to register OTS.
   const [closingDate, setClosingDate] = useState(""); // Closing time for registration
-  const [showOTSModal, setShowOTSModal] = useState(true); // Modal state for OTS registration
+  const [showOTSModal, setShowOTSModal] = useState(false); // Modal state for OTS registration
 
   const seattleColleges = [
     { name: "University of Washington" },
@@ -305,7 +304,7 @@ export default function EventSignUpForm({
   );
 
   return (
-    <div className="">
+    <>
       {showOTSModal && OTSModal}
       <div
         className="h-96 bg-cover bg-center bg-no-repeat"
@@ -316,7 +315,7 @@ export default function EventSignUpForm({
       <div className="flex justify-center items-center h-full bg-white bg-opacity-60 mb-36">
         <div className="bg-white rounded-lg w-10/12 md:w-2/5 mt-[-240px] shadow-md">
           <img
-            src={`/images/${posterImage}`}
+            src={`/images/${bannerImage}`}
             alt="event poster"
             className="mb-2 object-fill h-42 rounded-t-lg"
           />
@@ -705,6 +704,6 @@ export default function EventSignUpForm({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

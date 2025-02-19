@@ -1,5 +1,5 @@
-import React from 'react';
-import PastEventsCard from './PastEventsCard';
+import React from "react";
+import PastEventsCard from "./PastEventsCard";
 
 function PastEventsGallery(props) {
   const settings = {
@@ -14,11 +14,13 @@ function PastEventsGallery(props) {
     arrows: false,
   };
 
-  const sortEvents = props.data.sort(function compare(a, b) {
-    var dateA = new Date(a.date);
-    var dateB = new Date(b.date);
-    return dateA - dateB;
-  }).reverse();
+  const sortEvents = props.data
+    .sort(function compare(a, b) {
+      var dateA = new Date(a.date);
+      var dateB = new Date(b.date);
+      return dateA - dateB;
+    })
+    .reverse();
 
   const filteredEvents = sortEvents.map((event) => {
     return (
@@ -30,13 +32,9 @@ function PastEventsGallery(props) {
         settings={settings}
         img={event.img}
       />
-    )
+    );
   });
-  return (
-    <div>
-      {filteredEvents}
-    </div>
-  );
+  return <div>{filteredEvents}</div>;
 }
 
 export default PastEventsGallery;

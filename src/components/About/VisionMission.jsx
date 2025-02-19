@@ -4,23 +4,22 @@ function VisionMission() {
   return (
     <section className="my-5 mx-auto" style={{ width: "70%" }}>
       <div className="row">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-right">
           <h1 className="my-3 font-bold">
             <strong className="font-extrabold">Our Vision</strong>
             <strong style={{ fontFamily: "brandon_grotesque" }}>
               DON'T MISS OUT
             </strong>
           </h1>
-          <p className="my-3 italic font-spartan">
-            To celebrate Indonesia’s diverse culture through unity and
-            engagement. We believe in fostering a sense of belonging by
-            encouraging participation in cultural initiatives, networking
-            opportunities, and advocacy efforts.
+          <p className="my-3">
+            To celebrate Indonesia's diverse culture by fostering a place of
+            belonging and engaging in activities that build understanding and
+            advocacy.
           </p>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-12 text-center">
+        <div className="col-md-12 text-center" data-aos="fade-left">
           <h1 className="my-3 font-bold">
             <strong>Our Mission</strong>
           </h1>

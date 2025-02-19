@@ -16,6 +16,9 @@ import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
 import EventSignUpForm from "./Events/EventSignUpForm";
 import events from "../data/events.json";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import WinterballSignUpForm from "./Events/WinterballSignUpForm";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -28,6 +31,10 @@ function App() {
     window.location.pathname.substring(1)
   );
   const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   // const getEvents = () => {
   //   const events_ = [];
@@ -280,41 +287,18 @@ function App() {
             );
           })} */}
           <Route
-            path="/sign-up-test-event"
+            path="/winterball-signup"
             render={() => (
-              <EventSignUpForm
-                eventName="Test Event"
-                BGImage="/events/stampquest/stampQuestFormBG.png"
-                firestorePath="2024/stamp-quest/event-registrations"
-                posterImage="/events/stampquest/stamp_quest_poster.png"
+              <WinterballSignUpForm
+                eventName="Winterball"
+                bannerImage="/events/winter ball/2025/winterball2025Banner.gif"
+                firestorePath="2025/winterball/event-registrations"
+                BGImage="/events/winter ball/2025/winterball2025BG5.png"
+                rsvp={true}
+                firebaseStoragePath="2025/winterball/proofs-of-payment"
               />
             )}
           />
-          {/* <Route
-            path="/sign-up-friendsgiving"
-            render={() => (
-              <EventSignUpForm
-                eventName="Friendsgiving"
-                BGImage="/events/friendsgiving/2024/friends_banner_nowhite.jpg"
-                firestorePath="2024/friends_giving/event-registrations"
-                posterImage="/events/friendsgiving/2024/friendsgiving_poster.png"
-                rsvp={true}
-                firebaseStoragePath="2024/friendsgiving"
-              />
-            )}
-          /> */}
-          {/* <Route
-            path="/sign-up-seathrough"
-            render={() => (
-              <EventSignUpForm
-                eventName="Seathrough"
-                BGImage="/events/seathrough/2024/seathrough_banner.png"
-                firestorePath="2024/seathrough/event-registrations"
-                posterImage="/events/seathrough/2024/seathrough_poster.png"
-                rsvp={true}
-              />
-            )}
-          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
