@@ -187,6 +187,23 @@ export default function WinterballSignUpForm({
         proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
       }
 
+      // Calculate total number of attendees
+      let totalAttendees = 1; // Default to 1 (Single)
+      let extraAttendees = [];
+
+      if (data.registrationType === "Couple") {
+        totalAttendees = 2;
+        extraAttendees = [{ fullName: data["extraFullName0"] }];
+      } else if (data.registrationType === "Group") {
+        extraAttendees = [];
+        for (let i = 0; i < 7; i++) {
+          if (data[`extraFullName${i}`]) {
+            extraAttendees.push({ fullName: data[`extraFullName${i}`] });
+          }
+        }
+        totalAttendees = extraAttendees.length + 1; // Include the main registrant
+      }
+
       const formData = {
         firstName: data.firstName,
         lastName: data.lastName,
@@ -197,30 +214,14 @@ export default function WinterballSignUpForm({
         isWARegistered: isWARegistered,
         subscribe: subscribe,
         proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
+        totalAttendees: totalAttendees, // Store total number of attendees
+        extraAttendees: extraAttendees,
         timestamp: new Date(),
       };
-
-      // Dynamically add extra attendees if registrationType is "Couple" or "Group"
-      if (
-        data.registrationType === "Couple" ||
-        data.registrationType === "Group"
-      ) {
-        formData.extraAttendees = [];
-
-        // Determine the number of additional attendees
-        const extraAttendeeCount = data.registrationType === "Couple" ? 1 : 4;
-
-        for (let i = 0; i < extraAttendeeCount; i++) {
-          formData.extraAttendees.push({
-            fullName: data[`extraFullName${i}`], // Store full name
-          });
-        }
-      }
 
       await addDoc(collection(db, firestorePath), formData);
       setShowSuccessModal(true);
     } catch (e) {
-      //   console.error("Error adding document: ", e);
       setShowErrorModal(true);
     } finally {
       setIsLoading(false);
@@ -434,7 +435,7 @@ export default function WinterballSignUpForm({
                   >
                     <option value="Single">Solo</option>
                     <option value="Couple">Couple (2 people)</option>
-                    <option value="Group">Group (5 people)</option>
+                    <option value="Group">Group (5 to 8 people)</option>
                   </select>
 
                   {/* Dropdown Icon */}
@@ -471,7 +472,7 @@ export default function WinterballSignUpForm({
 
                     {/* Generate extra name fields based on registration type */}
                     {Array.from({
-                      length: registrationType === "Couple" ? 1 : 4,
+                      length: registrationType === "Couple" ? 1 : 7,
                     }).map((_, index) => (
                       <motion.div
                         key={index}
@@ -485,8 +486,11 @@ export default function WinterballSignUpForm({
                           htmlFor={`extraFullName${index}`}
                           className="form-label"
                         >
-                          Full Name (Attendee {index + 2}){" "}
-                          <span className="text-red-500">*</span>
+                          Full Name (Attendee {index + 2})
+                          {(registrationType === "Group" && index < 4) ||
+                          (registrationType === "Couple" && index < 1) ? (
+                            <span className="text-red-500"> *</span>
+                          ) : null}
                         </label>
                         <input
                           id={`extraFullName${index}`}
@@ -494,7 +498,11 @@ export default function WinterballSignUpForm({
                           disabled={isLoading}
                           className="form-control"
                           {...register(`extraFullName${index}`, {
-                            required: "This field is required.",
+                            required:
+                              (registrationType === "Group" && index < 4) ||
+                              (registrationType === "Couple" && index < 1)
+                                ? "This field is required."
+                                : false,
                           })}
                         />
                         {errors[`extraFullName${index}`] && (
