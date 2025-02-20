@@ -10,6 +10,8 @@ import VisionMission from "../Home/VisionMission";
 import PartnersSponsors from "./PartnersSponsors";
 import Events from "./Events";
 import Counter from "./Counter";
+import NewPurpose from "./NewPurpose";
+import NewVision from "./NewVision";
 
 function Home(props) {
   const API_KEY = process.env.REACT_APP_INS_TOKEN;
@@ -56,8 +58,12 @@ function Home(props) {
         </Carousel.Caption>
       </div>
 
-      <Purpose />
-      <VisionMission isMobile={props.isMobile} />
+      <NewPurpose />
+      <NewVision />
+      <Counter />
+
+      {/* <Purpose />
+      <VisionMission isMobile={props.isMobile} /> */}
 
       {/* partners and sponsors goes here */}
       <PartnersSponsors />
