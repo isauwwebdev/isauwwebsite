@@ -46,7 +46,7 @@ export default function WinterballSignUpForm({
   // During h-1 of event at 11:59 PM, we want to close the registration,
   // and show modal indicating to register OTS.
   const [closingDate, setClosingDate] = useState(""); // Closing time for registration
-  const [showOTSModal, setShowOTSModal] = useState(false); // Modal state for OTS registration
+  const [showOTSModal, setShowOTSModal] = useState(true); // Modal state for OTS registration
 
   const seattleColleges = [
     { name: "University of Washington" },
@@ -324,7 +324,7 @@ export default function WinterballSignUpForm({
   return (
     <>
       {/* commented out just to be safe */}
-      {/* {showOTSModal && OTSModal} */}
+      {showOTSModal && OTSModal}
       <div
         className="h-96 bg-cover bg-center bg-no-repeat"
         style={{
