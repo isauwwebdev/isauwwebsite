@@ -1159,11 +1159,11 @@ div:not(.slick-disabled):not(.no-hover) > i:hover {
 }
 
 .past-events-card {
-  margin-bottom: calc(32px + 2vw);
+  /* margin-bottom: calc(32px + 2vw); */
 }
 
 .past-events-card:last-child {
-  margin-bottom: 0;
+  /* margin-bottom: 0; */
 }
 
 /* Ensures that the height of all the upcoming event slides is equal to the slide with the maximum height */
