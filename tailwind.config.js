@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         isauwRed: "#7d0000",
         isauwCreme: "#FEFDEA",
+        isauwGold: "#CAA520"
       },
       fontFamily: {
         spartan: ["League Spartan", "sans-serif"],
