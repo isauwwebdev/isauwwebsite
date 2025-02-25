@@ -3,7 +3,7 @@ import PastEventsCard from "./PastEventsCard";
 
 function PastEventsGallery(props) {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
@@ -12,6 +12,8 @@ function PastEventsGallery(props) {
     variableWidth: true,
     className: "past-events-carousel",
     arrows: false,
+    autoplay: true,
+    autoplayspeed: 200,
   };
 
   const sortEvents = props.data

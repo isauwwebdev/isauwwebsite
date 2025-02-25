@@ -18,25 +18,30 @@ function PastEventsCard(props) {
   );
 
   return (
-    <div className="past-events-card">
-      <Container>
-        <Slider {...props.settings}>
-          {props.img.map((image) => (
-            <img src={image.src} className="past-events-img" alt=""></img>
-          ))}
-        </Slider>
-      </Container>
+    <div className="past-events-card flex flex-col items-center w-full">
+      <div className="w-[85%] bg-[#861501] rounded-2xl p-6 flex flex-col mx-auto min-h-[60vh] justify-center">
+        <Container className="w-full max-w-6xl">
+          <Slider {...props.settings}>
+            {props.img.map((image) => (
+              <img src={image.src} className="past-events-img" alt=""></img>
+            ))}
+          </Slider>
+        </Container>
+         {/*Event Details */}
+         <div className="text-left mt-6 w-[85%] mx-auto">
+          <p className="inline-block px-2 py-1 border-1 border-white rounded-full text-[8px] font-medium uppercase tracking-wide text-white">
+            {date}
+          </p>
 
-      <Container>
-        <div
-          className="mx-auto"
-          style={{ padding: `calc(0.8vw + 8px) 0 0 calc(1.5px + 0.4vw)` }}
-        >
-          <p className="past-events-date">{date}</p>
-          <p className="events-title highlight-title">{props.title}</p>
-          <p className="past-events-text highlight-desc">{props.text}</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[#F5F5F5] mt-2.5">
+            {props.title}
+          </h2>
+
+          <p className="text-sm text-[#E0E0E0] mt-3">
+            {props.text}
+          </p>
         </div>
-      </Container>
+      </div>
     </div>
   );
 }

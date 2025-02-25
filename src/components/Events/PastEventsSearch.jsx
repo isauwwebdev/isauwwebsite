@@ -79,16 +79,38 @@ function PastEventsSearch() {
   return (
     <section className="my-5 btm-margin">
       <Container>
-        <h1
-          className="font-bold"
-          style={{
-            paddingLeft: `calc(0.4vw + 1.5px)`,
-            marginBottom: `calc(1rem + 0.6vw)`,
-            display: "block",
-          }}
-        >
-          <strong>Past Events</strong>
-        </h1>
+        {/* Title */}
+        <section className="my-5 btm-margin text-center">
+          <Container>
+            <p
+              className="text-lg font-semibold tracking-wide text-gray-600 uppercase"
+              style={{
+                paddingLeft: `calc(0.4vw + 1.5px)`,
+                marginBottom: `calc(1rem + 0.6vw)`,
+              }}>
+              A Glimpse Into
+            </p>
+
+            <h1
+              className="text-5xl md:text-6xl font-extrabold text-[#7B1E0F]"
+              style={{
+                paddingLeft: `calc(0.4vw + 1.5px)`,
+                marginBottom: `calc(1rem + 0.6vw)`,
+              }}>
+              Past Events
+            </h1>
+
+            <p
+              className="text-lg text-gray-600 max-w-3xl mx-auto"
+              style={{
+                paddingLeft: `calc(0.4vw + 1.5px)`,
+                marginBottom: `calc(1rem + 0.6vw)`,
+              }}>
+              Relive our past moments and experiences that brought our community together.
+            </p>
+          </Container>
+        </section>
+
         {/* TODO: remove display: "none" to show search bar */}
         <Row
           className="justify-content-between"
