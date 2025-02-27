@@ -19,6 +19,7 @@ import events from "../data/events.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WinterballSignUpForm from "./Events/WinterballSignUpForm";
+import ResourceHub from "./ResourceHub/ResourceHub";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -234,6 +235,17 @@ function App() {
                   >
                     Keraton
                   </NavLink>
+                  <NavLink
+                    to="/resourceHub"
+                    className={`navLink navLink-fade-up`}
+                    exact
+                    activeClassName="navLinkActive"
+                    onClick={() => {
+                      setExpanded(false);
+                    }}
+                  >
+                    Resource Hub
+                  </NavLink>
                   {/* <NavLink
                     to="/apply"
                     className={`navLink navLink-fade-up`}
@@ -301,6 +313,7 @@ function App() {
           />
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
+          <Route path="/resourceHub" component={ResourceHub} />
           <Route
             path="/keraton"
             component={() => {
