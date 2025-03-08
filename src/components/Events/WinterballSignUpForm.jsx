@@ -240,54 +240,6 @@ export default function WinterballSignUpForm({
     const date = uncompletedEvent.date;
     setClosingDate(date);
 
-    // if (event) {
-    //   console.log("event.date", event.date);
-    //   // Parse event date
-    //   const [eventMonth, eventDay, eventYear] = event.date.split("/");
-    //   const eventDate = new Date(
-    //     `${eventYear}-${eventMonth}-${eventDay}T00:00:00`
-    //   );
-
-    //   // Subtract one day from event date
-    //   const oneDayBeforeEvent = new Date(eventDate);
-    //   oneDayBeforeEvent.setDate(oneDayBeforeEvent.getDate() - 1);
-
-    //   // Format the current date to MM/DD/YYYY
-    //   const currentDateUnformatted = new Date(); // Gets the current date and time
-    //   const currentDate = `${(currentDateUnformatted.getMonth() + 1)
-    //     .toString()
-    //     .padStart(2, "0")}/${currentDateUnformatted
-    //     .getDate()
-    //     .toString()
-    //     .padStart(2, "0")}/${currentDateUnformatted.getFullYear()}`;
-
-    //   // Format one day before the event date to MM/DD/YYYY
-    //   const oneDayBefore = `${(oneDayBeforeEvent.getMonth() + 1)
-    //     .toString()
-    //     .padStart(2, "0")}/${oneDayBeforeEvent
-    //     .getDate()
-    //     .toString()
-    //     .padStart(2, "0")}/${oneDayBeforeEvent.getFullYear()}`;
-
-    //   const currentHours = currentDateUnformatted.getHours();
-    //   const currentMinutes = currentDateUnformatted.getMinutes();
-
-    //   // Check if the current date is one day before the event date
-    //   if (currentDate === oneDayBefore) {
-    //     // Check if current time is 11:59 PM or later
-    //     if (currentHours === 23 && currentMinutes >= 59) {
-    //       setShowOTSModal(true); // Trigger the OTS modal
-    //     }
-    //   } else if (currentDate > oneDayBefore) {
-    //     // If current date is after one day before the event, show OTS modal
-    //     setShowOTSModal(true);
-    //   } else {
-    //     // If the current date is before one day before the event, do not show OTS modal
-    //     setShowOTSModal(true);
-    //   }
-    // } else {
-    //   console.log("event not found in events.json");
-    // }
   };
   // Check registration status when component mounts or eventsSet changes
   useEffect(() => {
@@ -323,7 +275,6 @@ export default function WinterballSignUpForm({
 
   return (
     <>
-      {/* commented out just to be safe */}
       {showOTSModal && OTSModal}
       <div
         className="h-96 bg-cover bg-center bg-no-repeat"

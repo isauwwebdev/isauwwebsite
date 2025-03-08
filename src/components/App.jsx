@@ -18,7 +18,6 @@ import EventSignUpForm from "./Events/EventSignUpForm";
 import events from "../data/events.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import WinterballSignUpForm from "./Events/WinterballSignUpForm";
 
 function App() {
   const [expanded, setExpanded] = useState(false);
@@ -288,7 +287,7 @@ function App() {
               />
             );
           })} */}
-          <Route
+          {/* <Route
             path="/winterball-signup"
             render={() => (
               <WinterballSignUpForm
@@ -300,7 +299,7 @@ function App() {
                 firebaseStoragePath="2025/winterball/proofs-of-payment"
               />
             )}
-          />
+          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
