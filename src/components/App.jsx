@@ -216,7 +216,7 @@ function App() {
                     activeClassName="navLinkActive"
                     onClick={() => {
                       setExpanded(false);
-                      setKeratonPage(false);
+                      // setKeratonPage(false);
                     }}
                   >
                     Events
