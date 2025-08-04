@@ -20,7 +20,7 @@ export default function EventSignUpForm({
   rsvp = false,
   firebaseStoragePath,
 }) {
-  console.log("🔥 Firestore path passed to form:", firestorePath);
+  // console.log("🔥 Firestore path passed to form:", firestorePath);
 
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -203,10 +203,21 @@ export default function EventSignUpForm({
     };
 
     try {
-      await addDoc(collection(db, firestorePath), formData);
-      setShowSuccessModal(true);
-    } catch (e) {
-      console.error("Error adding document: ", e);
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSuccessModal(true);
+      } else {
+        setShowErrorModal(true);
+      }
+    } catch (error) {
+      console.error("Error submitting registration: ", error);
       setShowErrorModal(true);
     } finally {
       setIsLoading(false);
@@ -221,12 +232,12 @@ export default function EventSignUpForm({
 
   // Function to check if registration should be closed based on the event's date
   const checkRegistrationStatus = () => {
-    console.log("All events:", events);
+    // console.log("All events:", events);
     const uncompletedEvent = events.find((event) => event.completed === false);
     const date = uncompletedEvent.date;
     setClosingDate(date);
 
-    console.log("date", date);
+    // console.log("date", date);
 
     // if (event) {
     //   console.log("event.date", event.date);
