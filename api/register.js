@@ -5,10 +5,13 @@ const admin = require("firebase-admin");
 // uses vercel serverless function, hosts all /api endpts in vercel
 if (!admin.apps.length) {
   try {
+    const serviceAccount = JSON.parse(
+      Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_KEY, "base64").toString(
+        "utf-8"
+      )
+    );
     admin.initializeApp({
-      credential: admin.credential.cert(
-        JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_KEY)
-      ),
+      credential: admin.credential.cert(serviceAccount),
     });
   } catch (error) {
     console.error("Firebase admin initialization error", error.stack);
