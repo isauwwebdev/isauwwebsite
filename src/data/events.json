@@ -13,7 +13,8 @@
       { "src": "../images/isauwcard.png" }
     ],
     "completed": false,
-    "firestorePath": "2025/seattle101/events_registration"
+    "firestorePath": "2025/seattle101/events_registration",
+    "link": "/sign-up-seattle-101"
   },
   {
     "title": "Winter Ball",
