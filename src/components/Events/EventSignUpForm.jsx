@@ -194,6 +194,7 @@ export default function EventSignUpForm({
       // selectedCollege: selectedCollege,
       major: data.major,
       cityOfOrigin: data.cityOfOrigin,
+      incomingSchool: data.incomingSchool,
       batch: data.batch,
       additionalQuestion: data.additionalQuestion,
       isWARegistered: isWARegistered,
@@ -584,27 +585,27 @@ export default function EventSignUpForm({
                 )}
               </div>
 
-              {/* Previous School */}
+              {/* Incoming School */}
               <div className="mb-3">
-                <label htmlFor="previousSchool" className="form-label">
+                <label htmlFor="incomingSchool" className="form-label">
                   <div className="flex flex-row gap-1">
-                    Previous School / Institution{" "}
+                    Incoming School / Institution{" "}
                     <div className="text-red-500"> *</div>
                   </div>
                 </label>
                 <input
-                  id="previousSchool"
-                  name="previousSchool"
+                  id="incomingSchool"
+                  name="incomingSchool"
                   className="form-control"
-                  placeholder="Enter your previous school or institution"
-                  autoComplete="previousSchool"
-                  {...register("previousSchool", {
-                    required: "Previous School / Institution is required.",
+                  placeholder="Enter your incoming school or institution"
+                  autoComplete="incomingSchool"
+                  {...register("incomingSchool", {
+                    required: "Incoming School / Institution is required.",
                   })}
                 />
-                {errors.previousSchool && (
+                {errors.incomingSchool && (
                   <div className="text-danger">
-                    {errors.previousSchool.message}
+                    {errors.incomingSchool.message}
                   </div>
                 )}
               </div>
