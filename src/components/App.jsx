@@ -15,7 +15,7 @@ import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
 import EventSignUpForm from "./Events/EventSignUpForm";
-import events from "../data/events.json";
+import eventsData from "../data/events.json";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -31,35 +31,19 @@ function App() {
   );
   const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
-  // const getEvents = () => {
-  //   const events_ = [];
-  //   const uncompletedEvents_ = [];
-  //   for (const event of eventsData) {
-  //     if (!event.completed) {
-  //       uncompletedEvents_.push(event);
-  //     }
-  //     events_.push(event);
-  //   }
-
-  //   setEvents(events_);
-  //   setUncompletedEvents(uncompletedEvents_);
-  // };
-
-  // useEffect(getEvents, []);
+  const navbarRef = useRef();
 
   const resetHeight = () => {
     // reset the body height to that of the inner browser
     document.body.style.height = window.innerHeight + "px";
   };
-  // called to initially set the height.
-  resetHeight();
 
-  const navbarRef = useRef();
   useEffect(() => {
+    AOS.init();
+
+    // called to initially set the height.
+    resetHeight();
+
     let keratonY = window.scrollY;
 
     // 'load' event listener to hide the preloader once the main content is loaded
@@ -102,7 +86,32 @@ function App() {
       }
       keratonY = window.scrollY;
     });
-  });
+
+    // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 70px.
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 70) {
+        setNavBar(true);
+      } else {
+        setNavBar(false);
+      }
+    });
+  }, []);
+
+  const getEvents = () => {
+    const events_ = [];
+    const uncompletedEvents_ = [];
+    for (const event of eventsData) {
+      if (!event.completed) {
+        uncompletedEvents_.push(event);
+      }
+      events_.push(event);
+    }
+
+    setEvents(events_);
+    setUncompletedEvents(uncompletedEvents_);
+  };
+
+  useEffect(getEvents, []);
 
   // const [showPopUp, setShowPopUp] = useState(true);
   // function renderPopUp() {
@@ -117,15 +126,6 @@ function App() {
   //         );
   //     }
   // }
-
-  // 'scroll' event listener to change opacity of navbar. Initially opaque, but turns solid after scrolling down 70px.
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= 70) {
-      setNavBar(true);
-    } else {
-      setNavBar(false);
-    }
-  });
 
   return (
     <BrowserRouter>
@@ -260,7 +260,7 @@ function App() {
           {/* TODO: make this auto generate for each of eventsData.js.eventsData.completed === false  */}
 
           {/* Dynamically generate routes for uncompleted events */}
-          {/* {uncompletedEvents.map((uncompletedEvent, index) => {
+          {uncompletedEvents.map((uncompletedEvent, index) => {
             const eventPath = `/sign-up-${uncompletedEvent.title
               .toLowerCase()
               .replace(/ /g, "-")}`;
@@ -273,12 +273,12 @@ function App() {
                   <EventSignUpForm
                     eventName={uncompletedEvent.title}
                     BGImage={
-                      uncompletedEvent.BGImage || "/default/background.png"
+                      uncompletedEvent.img[1]?.src || "/default/background.png"
                     } // Default background if none provided
                     firestorePath={
                       uncompletedEvent.firestorePath || "default/firestore/path"
                     } // Default path if none provided
-                    posterImage={
+                    bannerImage={
                       uncompletedEvent.img[0]?.src || "/default/poster.png"
                     } // Default poster if none provided
                     rsvp={uncompletedEvent.rsvp || false} // Default RSVP status
@@ -286,7 +286,7 @@ function App() {
                 )}
               />
             );
-          })} */}
+          })}
           {/* <Route
             path="/winterball-signup"
             render={() => (

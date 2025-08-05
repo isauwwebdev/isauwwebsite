@@ -20,6 +20,8 @@ export default function EventSignUpForm({
   rsvp = false,
   firebaseStoragePath,
 }) {
+  // console.log("🔥 Firestore path passed to form:", firestorePath);
+
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [selectedCollege, setSelectedCollege] = useState("");
@@ -32,8 +34,8 @@ export default function EventSignUpForm({
   const [isLoading, setIsLoading] = useState(false);
 
   // Add state for Proof of Payment file
-  const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
-  const [proofOfPaymentError, setProofOfPaymentError] = useState("");
+  // const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
+  // const [proofOfPaymentError, setProofOfPaymentError] = useState("");
 
   // Modal
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -45,22 +47,22 @@ export default function EventSignUpForm({
   const [closingDate, setClosingDate] = useState(""); // Closing time for registration
   const [showOTSModal, setShowOTSModal] = useState(false); // Modal state for OTS registration
 
-  const seattleColleges = [
-    { name: "University of Washington" },
-    { name: "University of Washington Tacoma" },
-    { name: "University of Washington Bothell" },
-    { name: "Shoreline Community College" },
-    { name: "Edmonds Community College" },
-    { name: "Bellevue College" },
-    { name: "North Seattle College" },
-    { name: "Cascadia College" },
-    { name: "Northwest University" },
-    { name: "Seattle University" },
-    { name: "Green River College" },
-    { name: "Seattle Pacific University" },
-    { name: "Seattle Central College" },
-    { name: "Whatcom Community College" },
-  ];
+  // const seattleColleges = [
+  //   { name: "University of Washington" },
+  //   { name: "University of Washington Tacoma" },
+  //   { name: "University of Washington Bothell" },
+  //   { name: "Shoreline Community College" },
+  //   { name: "Edmonds Community College" },
+  //   { name: "Bellevue College" },
+  //   { name: "North Seattle College" },
+  //   { name: "Cascadia College" },
+  //   { name: "Northwest University" },
+  //   { name: "Seattle University" },
+  //   { name: "Green River College" },
+  //   { name: "Seattle Pacific University" },
+  //   { name: "Seattle Central College" },
+  //   { name: "Whatcom Community College" },
+  // ];
 
   // Function to handle scrolling and escape key
   useEffect(() => {
@@ -122,27 +124,27 @@ export default function EventSignUpForm({
     clearErrors,
   } = useForm();
 
-  const renderCollegeListTemp = (name) => {
-    if (name) {
-      const filteredColleges = seattleColleges.filter((college) =>
-        college.name.toLowerCase().includes(name.toLowerCase())
-      );
+  // const renderCollegeListTemp = (name) => {
+  //   if (name) {
+  //     const filteredColleges = seattleColleges.filter((college) =>
+  //       college.name.toLowerCase().includes(name.toLowerCase())
+  //     );
 
-      if (filteredColleges.length > 0) {
-        setColleges(filteredColleges);
-        setShowSuggestions(true);
-        setSelectedCollege(name);
-      } else {
-        setColleges([{ name }]);
-        setShowSuggestions(true);
-        setSelectedCollege(name);
-      }
-    } else {
-      setColleges([]);
-      setShowSuggestions(false);
-      setSelectedCollege("");
-    }
-  };
+  //     if (filteredColleges.length > 0) {
+  //       setColleges(filteredColleges);
+  //       setShowSuggestions(true);
+  //       setSelectedCollege(name);
+  //     } else {
+  //       setColleges([{ name }]);
+  //       setShowSuggestions(true);
+  //       setSelectedCollege(name);
+  //     }
+  //   } else {
+  //     setColleges([]);
+  //     setShowSuggestions(false);
+  //     setSelectedCollege("");
+  //   }
+  // };
 
   useEffect(() => {
     if (showSuccessModal || showErrorModal || showOTSModal) {
@@ -162,65 +164,81 @@ export default function EventSignUpForm({
     clearErrors("phoneNumber");
   };
 
-  const handleProofOfPaymentFile = (e) => {
-    const file = e.target.files[0];
-    setProofOfPaymentFile(file);
-    clearErrors("proofOfPayment");
-    console.log("proof of payment file", file);
-  };
+  // const handleProofOfPaymentFile = (e) => {
+  //   const file = e.target.files[0];
+  //   setProofOfPaymentFile(file);
+  //   clearErrors("proofOfPayment");
+  //   console.log("proof of payment file", file);
+  // };
 
   // TODO: implement update to spreadsheets in real time using Google Sheets API.
   const onSubmit = async (data) => {
     setIsLoading(true);
-    let proofOfPaymentURL = "";
+    // let proofOfPaymentURL = "";
 
-    if (rsvp && proofOfPaymentFile) {
-      // Only upload if RSVP is true and file is selected
-      const storageRef = ref(
-        storage,
-        `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
-      );
-      const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
-      proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
-    }
+    // if (rsvp && proofOfPaymentFile) {
+    //   // Only upload if RSVP is true and file is selected
+    //   const storageRef = ref(
+    //     storage,
+    //     `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
+    //   );
+    //   const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
+    //   proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
+    // }
 
     const formData = {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
       phoneNumber: data.phoneNumber,
-      selectedCollege: selectedCollege,
+      // selectedCollege: selectedCollege,
+      major: data.major,
+      cityOfOrigin: data.cityOfOrigin,
+      incomingSchool: data.incomingSchool,
+      batch: data.batch,
+      additionalQuestion: data.additionalQuestion,
       isWARegistered: isWARegistered,
       subscribe: subscribe,
-      proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
+      // proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
       timestamp: new Date(),
     };
 
     try {
-      await addDoc(collection(db, firestorePath), formData);
-      setShowSuccessModal(true);
-    } catch (e) {
-      console.error("Error adding document: ", e);
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setShowSuccessModal(true);
+      } else {
+        setShowErrorModal(true);
+      }
+    } catch (error) {
+      console.error("Error submitting registration: ", error);
       setShowErrorModal(true);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleSelectCollege = (collegeName) => {
-    setSelectedCollege(collegeName);
-    setSearchInput(collegeName);
-    setShowSuggestions(false);
-  };
+  // const handleSelectCollege = (collegeName) => {
+  //   setSelectedCollege(collegeName);
+  //   setSearchInput(collegeName);
+  //   setShowSuggestions(false);
+  // };
 
   // Function to check if registration should be closed based on the event's date
   const checkRegistrationStatus = () => {
-    console.log("All events:", events);
+    // console.log("All events:", events);
     const uncompletedEvent = events.find((event) => event.completed === false);
     const date = uncompletedEvent.date;
     setClosingDate(date);
 
-    console.log("date", date);
+    // console.log("date", date);
 
     // if (event) {
     //   console.log("event.date", event.date);
@@ -309,7 +327,7 @@ export default function EventSignUpForm({
       <div
         className="h-96 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/images/${BGImage}')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/${BGImage}')`,
         }}
       />
       <div className="flex justify-center items-center h-full bg-white bg-opacity-60 mb-36">
@@ -392,7 +410,7 @@ export default function EventSignUpForm({
               </div>
 
               {/* University Search and Suggest */}
-              <div className="mb-3">
+              {/* <div className="mb-3">
                 <label htmlFor="selectedCollege" className="form-label">
                   University / College
                 </label>
@@ -429,10 +447,10 @@ export default function EventSignUpForm({
                     ))}
                   </ul>
                 )}
-              </div>
+              </div> */}
 
               {/* Proof of Payment */}
-              {rsvp && (
+              {/* {rsvp && (
                 <div className="mb-3">
                   <label htmlFor="proofOfPayment" className="form-label">
                     Proof of Payment <span className="text-red-500"> *</span>
@@ -472,7 +490,7 @@ export default function EventSignUpForm({
                     in the note section.
                   </small>
                 </div>
-              )}
+              )} */}
 
               {/* Phone Number */}
               <div className="mb-3">
@@ -518,6 +536,116 @@ export default function EventSignUpForm({
                 {errors.phoneNumber && (
                   <div className="text-danger">
                     {errors.phoneNumber.message}
+                  </div>
+                )}
+              </div>
+
+              {/* Major */}
+              <div className="mb-3">
+                <label htmlFor="major" className="form-label">
+                  <div className="flex flex-row gap-1">
+                    Major / Intended Major{" "}
+                    <div className="text-red-500"> *</div>
+                  </div>
+                </label>
+                <input
+                  id="major"
+                  name="major"
+                  className="form-control"
+                  placeholder="Enter your major"
+                  autoComplete="major"
+                  {...register("major", {
+                    required: "Major is required.",
+                  })}
+                />
+                {errors.major && (
+                  <div className="text-danger">{errors.major.message}</div>
+                )}
+              </div>
+
+              {/* City of Origin */}
+              <div className="mb-3">
+                <label htmlFor="city" className="form-label">
+                  <div className="flex flex-row gap-1">
+                    City of Origin <div className="text-red-500"> *</div>
+                  </div>
+                </label>
+                <input
+                  id="city"
+                  name="city"
+                  className="form-control"
+                  placeholder="Enter your city of origin"
+                  autoComplete="city"
+                  {...register("cityOfOrigin", {
+                    required: "City of Origin is required.",
+                  })}
+                />
+                {errors.city && (
+                  <div className="text-danger">{errors.city.message}</div>
+                )}
+              </div>
+
+              {/* Incoming School */}
+              <div className="mb-3">
+                <label htmlFor="incomingSchool" className="form-label">
+                  <div className="flex flex-row gap-1">
+                    Incoming School / Institution{" "}
+                    <div className="text-red-500"> *</div>
+                  </div>
+                </label>
+                <input
+                  id="incomingSchool"
+                  name="incomingSchool"
+                  className="form-control"
+                  placeholder="Enter your incoming school or institution"
+                  autoComplete="incomingSchool"
+                  {...register("incomingSchool", {
+                    required: "Incoming School / Institution is required.",
+                  })}
+                />
+                {errors.incomingSchool && (
+                  <div className="text-danger">
+                    {errors.incomingSchool.message}
+                  </div>
+                )}
+              </div>
+              {/* batch */}
+              <div className="mb-3">
+                <label htmlFor="batch" className="form-label">
+                  <div className="flex flex-row gap-1">
+                    Batch <div className="text-red-500"> *</div>
+                  </div>
+                </label>
+                <input
+                  id="batch"
+                  name="batch"
+                  className="form-control"
+                  placeholder="e.g., Freshman, Sophomore, Junior"
+                  autoComplete="batch"
+                  {...register("batch", {
+                    required: "Batch is required",
+                  })}
+                />
+                {errors.batch && (
+                  <div className="text-danger">{errors.batch.message}</div>
+                )}
+              </div>
+              {/* Additional Question */}
+              <div className="mb-3">
+                <label htmlFor="additionalQuestion" className="form-label">
+                  Additional Question (Optional)
+                </label>
+                <textarea
+                  id="additionalQuestion"
+                  name="additionalQuestion"
+                  className="form-control"
+                  rows="4"
+                  placeholder="Ask us anything or share additional information..."
+                  {...register("additionalQuestion")}
+                />
+                {errors.additionalQuestion && (
+                  <div className="text-danger">
+                    {errors.additionalQuestion.message}
                   </div>
                 )}
               </div>
