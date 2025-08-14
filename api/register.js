@@ -21,7 +21,7 @@ const db = admin.firestore();
 // ---- Allowed collections (keep this list tight) ----
 const ALLOWED_PATHS = new Set([
   "2025/seattle101/events_registration",
-  "2025/seattle-sendoff/events_registration",
+  "2025/IsauwSeattleSendOff/events_registration",
 ]);
 
 // ---- Reusable validation for form payload (not the path) ----

@@ -20,7 +20,7 @@ export default function EventSignUpForm({
   rsvp = false,
   firebaseStoragePath,
 }) {
-  // console.log("🔥 Firestore path passed to form:", firestorePath);
+  console.log("🔥 Firestore path passed to form:", firestorePath);
 
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
