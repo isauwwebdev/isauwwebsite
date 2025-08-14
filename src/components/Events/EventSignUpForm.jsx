@@ -200,7 +200,8 @@ export default function EventSignUpForm({
       isWARegistered: isWARegistered,
       subscribe: subscribe,
       // proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
-      timestamp: new Date(),
+      timestamp: new Date().toISOString(), // ✅ ISO is safest for server date parsing
+      firestorePath, // ✅ SEND THE TARGET COLLECTION
     };
 
     try {
