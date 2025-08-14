@@ -3,6 +3,9 @@ const yup = require("yup");
 
 // ---- Firebase Admin init ----
 let initError;
+if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+  console.error("Missing FIREBASE_SERVICE_ACCOUNT_KEY env var");
+}
 if (!admin.apps.length) {
   try {
     const svc = JSON.parse(
@@ -21,7 +24,7 @@ const db = admin.firestore();
 // ---- Allowed collections (keep this list tight) ----
 const ALLOWED_PATHS = new Set([
   "2025/seattle101/events_registration",
-  "2025/IsauwSeattleSendOff/events_registration",
+  "2025/IsauwSeattleSendOff/event_registration",
 ]);
 
 // ---- Reusable validation for form payload (not the path) ----
