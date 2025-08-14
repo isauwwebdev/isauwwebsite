@@ -1,34 +1,49 @@
+// api/register.js  (Vercel serverless function - CommonJS)
+
 const admin = require("firebase-admin");
 const yup = require("yup");
 
-// ---- Firebase Admin init ----
+/* ──────────────────────────────────────────────────────────────
+   1) Firebase Admin init (expects FIREBASE_SERVICE_ACCOUNT_KEY base64)
+   ────────────────────────────────────────────────────────────── */
 let initError;
-if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
-  console.error("Missing FIREBASE_SERVICE_ACCOUNT_KEY env var");
-}
-if (!admin.apps.length) {
-  try {
+
+try {
+  if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+    throw new Error(
+      "Missing FIREBASE_SERVICE_ACCOUNT_KEY. Put a base64-encoded service account JSON in .env.local"
+    );
+  }
+
+  if (!admin.apps.length) {
     const svc = JSON.parse(
       Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_KEY, "base64").toString(
-        "utf-8"
+        "utf8"
       )
     );
     admin.initializeApp({ credential: admin.credential.cert(svc) });
-  } catch (err) {
-    initError = err;
-    console.error("Firebase admin initialization error", err.stack || err);
   }
+} catch (err) {
+  initError = err;
+  console.error("[register] Firebase Admin init error:", err.message);
 }
+
 const db = admin.firestore();
 
-// ---- Allowed collections (keep this list tight) ----
+/* ──────────────────────────────────────────────────────────────
+   2) Security: only allow writes to these collections
+   ────────────────────────────────────────────────────────────── */
 const ALLOWED_PATHS = new Set([
   "2025/seattle101/events_registration",
   "2025/IsauwSeattleSendOff/event_registration",
 ]);
 
-// ---- Reusable validation for form payload (not the path) ----
-const schema = yup.object().shape({
+/* ──────────────────────────────────────────────────────────────
+   3) Validation schemas (per-form)
+   - Seattle 101: full form (requires cityOfOrigin, incomingSchool, batch)
+   - Send-Off: shorter form (does NOT require those)
+   ────────────────────────────────────────────────────────────── */
+const baseCommon = {
   firstName: yup.string().required("First name is required."),
   lastName: yup.string().required("Last name is required."),
   email: yup
@@ -37,20 +52,40 @@ const schema = yup.object().shape({
     .required("Email is required."),
   phoneNumber: yup.string().required("Phone number is required."),
   major: yup.string().required("Major is required."),
-  cityOfOrigin: yup.string().required("City of origin is required."),
-  incomingSchool: yup.string().nullable(), // optional in your UI, make optional if desired
-  batch: yup.string().required("Batch is required."),
   additionalQuestion: yup.string().nullable(),
   isWARegistered: yup.boolean(),
   subscribe: yup.boolean(),
   timestamp: yup.date().required("timestamp is required."),
+};
+
+const schemaSeattle101 = yup.object().shape({
+  ...baseCommon,
+  cityOfOrigin: yup.string().required("City of origin is required."),
+  incomingSchool: yup.string().required("Incoming school is required."),
+  batch: yup.string().required("Batch is required."),
 });
 
+const schemaSendOff = yup.object().shape({
+  ...baseCommon,
+  cityOfOrigin: yup.string().nullable(), // optional for Send-Off
+  incomingSchool: yup.string().nullable(), // optional for Send-Off
+  batch: yup.string().nullable(), // optional for Send-Off
+});
+
+/* Map collection → schema so we can pick per form */
+const SCHEMAS_BY_PATH = {
+  "2025/seattle101/events_registration": schemaSeattle101,
+  "2025/IsauwSeattleSendOff/event_registration": schemaSendOff,
+};
+
+/* ──────────────────────────────────────────────────────────────
+   4) Handler
+   ────────────────────────────────────────────────────────────── */
 module.exports = async (req, res) => {
   if (initError) {
     return res
       .status(500)
-      .json({ error: "Firebase Admin failed to initialize" });
+      .json({ error: "Firebase Admin failed to initialize on the server." });
   }
 
   if (req.method !== "POST") {
@@ -66,29 +101,38 @@ module.exports = async (req, res) => {
 
     const { firestorePath, ...formData } = raw;
 
-    // Validate and protect the collection path
+    // 4a) Guard collection path
     if (!firestorePath || !ALLOWED_PATHS.has(firestorePath)) {
       return res
         .status(400)
         .json({ error: "Invalid or missing firestorePath" });
     }
 
-    // Validate the rest of the fields
-    await schema.validate(formData, { abortEarly: false });
+    // 4b) Choose and run the right schema
+    const schema = SCHEMAS_BY_PATH[firestorePath];
+    if (!schema) {
+      return res
+        .status(400)
+        .json({ error: "No validation schema for this firestorePath" });
+    }
 
-    // Write to Firestore (add server timestamp as canonical time)
+    const cleaned = await schema.validate(formData, {
+      abortEarly: false,
+      stripUnknown: true, // drop any unexpected fields
+    });
+
+    // 4c) Write to Firestore (server timestamp)
     const docRef = await db.collection(firestorePath).add({
-      ...formData,
+      ...cleaned,
       serverCreatedAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
     return res.status(200).json({ ok: true, id: docRef.id });
   } catch (err) {
-    // yup validation errors
     if (err && err.name === "ValidationError") {
       return res.status(400).json({ error: err.errors.join(", ") });
     }
-    console.error("Error in /api/register:", err);
+    console.error("[register] Internal error:", err);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };

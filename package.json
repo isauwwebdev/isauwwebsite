@@ -40,7 +40,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^3.4.10",
-    "yup": "^1.7.0"
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",
