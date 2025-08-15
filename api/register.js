@@ -52,6 +52,7 @@ const baseCommon = {
     .required("Email is required."),
   phoneNumber: yup.string().required("Phone number is required."),
   major: yup.string().required("Major is required."),
+  batch: yup.string().required("Batch is required."),
   additionalQuestion: yup.string().nullable(),
   isWARegistered: yup.boolean(),
   subscribe: yup.boolean(),
@@ -62,14 +63,12 @@ const schemaSeattle101 = yup.object().shape({
   ...baseCommon,
   cityOfOrigin: yup.string().required("City of origin is required."),
   incomingSchool: yup.string().required("Incoming school is required."),
-  batch: yup.string().required("Batch is required."),
 });
 
 const schemaSendOff = yup.object().shape({
   ...baseCommon,
   cityOfOrigin: yup.string().nullable(), // optional for Send-Off
   incomingSchool: yup.string().nullable(), // optional for Send-Off
-  batch: yup.string().nullable(), // optional for Send-Off
 });
 
 /* Map collection → schema so we can pick per form */

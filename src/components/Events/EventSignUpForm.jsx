@@ -192,6 +192,7 @@ export default function EventSignUpForm({
       email: data.email,
       phoneNumber: data.phoneNumber,
       major: data.major,
+      batch: data.batch,
       additionalQuestion: data.additionalQuestion,
       isWARegistered: isWARegistered,
       subscribe: subscribe,
@@ -203,7 +204,6 @@ export default function EventSignUpForm({
     if (firestorePath === "2025/seattle101/events_registration") {
       baseData.cityOfOrigin = data.cityOfOrigin;
       baseData.incomingSchool = data.incomingSchool;
-      baseData.batch = data.batch;
     }
 
     const formData = baseData;
@@ -625,30 +625,30 @@ export default function EventSignUpForm({
                       </div>
                     )}
                   </div>
-
-                  {/* Batch (Seattle 101 only) */}
-                  <div className="mb-3">
-                    <label htmlFor="batch" className="form-label">
-                      <div className="flex flex-row gap-1">
-                        Batch <div className="text-red-500"> *</div>
-                      </div>
-                    </label>
-                    <input
-                      id="batch"
-                      name="batch"
-                      className="form-control"
-                      placeholder="e.g., Freshman, Sophomore, Junior"
-                      autoComplete="batch"
-                      {...register("batch", {
-                        required: isSeattle101 ? "Batch is required" : false,
-                      })}
-                    />
-                    {errors.batch && (
-                      <div className="text-danger">{errors.batch.message}</div>
-                    )}
-                  </div>
                 </>
               )}
+
+              {/* Batch (Seattle 101 only) */}
+              <div className="mb-3">
+                <label htmlFor="batch" className="form-label">
+                  <div className="flex flex-row gap-1">
+                    Batch <div className="text-red-500"> *</div>
+                  </div>
+                </label>
+                <input
+                  id="batch"
+                  name="batch"
+                  className="form-control"
+                  placeholder="e.g., Freshman, Sophomore, Junior"
+                  autoComplete="batch"
+                  {...register("batch", {
+                    required: isSeattle101 ? "Batch is required" : false,
+                  })}
+                />
+                {errors.batch && (
+                  <div className="text-danger">{errors.batch.message}</div>
+                )}
+              </div>
 
               {/* Additional Question */}
               <div className="mb-3">
