@@ -1,71 +1,137 @@
+// api/register.js  (Vercel serverless function - CommonJS)
+
 const admin = require("firebase-admin");
 const yup = require("yup");
 
-// Initialize the Firebase Admin SDK
-// You need to set the FIREBASE_SERVICE_ACCOUNT_KEY environment variable in Vercel
-// uses vercel serverless function, hosts all /api endpts in vercel
-if (!admin.apps.length) {
-  try {
-    const serviceAccount = JSON.parse(
+/* ──────────────────────────────────────────────────────────────
+   1) Firebase Admin init (expects FIREBASE_SERVICE_ACCOUNT_KEY base64)
+   ────────────────────────────────────────────────────────────── */
+let initError;
+
+try {
+  if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
+    throw new Error(
+      "Missing FIREBASE_SERVICE_ACCOUNT_KEY. Put a base64-encoded service account JSON in .env.local"
+    );
+  }
+
+  if (!admin.apps.length) {
+    const svc = JSON.parse(
       Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_KEY, "base64").toString(
-        "utf-8"
+        "utf8"
       )
     );
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-    });
-  } catch (error) {
-    console.error("Firebase admin initialization error", error.stack);
+    admin.initializeApp({ credential: admin.credential.cert(svc) });
   }
+} catch (err) {
+  initError = err;
+  console.error("[register] Firebase Admin init error:", err.message);
 }
 
 const db = admin.firestore();
 
-module.exports = async (req, res) => {
-  if (req.method === "POST") {
-    console.log("Received registration request.");
-    const formData = req.body;
-    console.log("Form data:", formData);
-    const firestorePath = "2025/seattle101/events_registration";
+/* ──────────────────────────────────────────────────────────────
+   2) Security: only allow writes to these collections
+   ────────────────────────────────────────────────────────────── */
+const ALLOWED_PATHS = new Set([
+  "2025/seattle101/events_registration",
+  "2025/IsauwSeattleSendOff/event_registration",
+]);
 
-    const schema = yup.object().shape({
-      firstName: yup.string().required("First name is required."),
-      lastName: yup.string().required("Last name is required."),
-      email: yup
-        .string()
-        .email("Invalid email format.")
-        .required("Email is required."),
-      phoneNumber: yup.string().required("Phone number is required."),
-      major: yup.string().required("Major is required."),
-      cityOfOrigin: yup.string().required("City of origin is required."),
-      batch: yup.string().required("Batch is required."),
-      additionalQuestion: yup.string(),
-      isWARegistered: yup.boolean(),
-      subscribe: yup.boolean(),
-      timestamp: yup.date().required(),
+/* ──────────────────────────────────────────────────────────────
+   3) Validation schemas (per-form)
+   - Seattle 101: full form (requires cityOfOrigin, incomingSchool, batch)
+   - Send-Off: shorter form (does NOT require those)
+   ────────────────────────────────────────────────────────────── */
+const baseCommon = {
+  firstName: yup.string().required("First name is required."),
+  lastName: yup.string().required("Last name is required."),
+  email: yup
+    .string()
+    .email("Invalid email format.")
+    .required("Email is required."),
+  phoneNumber: yup.string().required("Phone number is required."),
+  major: yup.string().required("Major is required."),
+  batch: yup.string().required("Batch is required."),
+  additionalQuestion: yup.string().nullable(),
+  isWARegistered: yup.boolean(),
+  subscribe: yup.boolean(),
+  timestamp: yup.date().required("timestamp is required."),
+};
+
+const schemaSeattle101 = yup.object().shape({
+  ...baseCommon,
+  cityOfOrigin: yup.string().required("City of origin is required."),
+  incomingSchool: yup.string().required("Incoming school is required."),
+});
+
+const schemaSendOff = yup.object().shape({
+  ...baseCommon,
+  cityOfOrigin: yup.string().nullable(), // optional for Send-Off
+  incomingSchool: yup.string().nullable(), // optional for Send-Off
+});
+
+/* Map collection → schema so we can pick per form */
+const SCHEMAS_BY_PATH = {
+  "2025/seattle101/events_registration": schemaSeattle101,
+  "2025/IsauwSeattleSendOff/event_registration": schemaSendOff,
+};
+
+/* ──────────────────────────────────────────────────────────────
+   4) Handler
+   ────────────────────────────────────────────────────────────── */
+module.exports = async (req, res) => {
+  if (initError) {
+    return res
+      .status(500)
+      .json({ error: "Firebase Admin failed to initialize on the server." });
+  }
+
+  if (req.method !== "POST") {
+    res.setHeader("Allow", "POST");
+    return res.status(405).end("Method Not Allowed");
+  }
+
+  try {
+    const raw = typeof req.body === "string" ? JSON.parse(req.body) : req.body;
+    if (!raw || typeof raw !== "object") {
+      return res.status(400).json({ error: "Invalid JSON body" });
+    }
+
+    const { firestorePath, ...formData } = raw;
+
+    // 4a) Guard collection path
+    if (!firestorePath || !ALLOWED_PATHS.has(firestorePath)) {
+      return res
+        .status(400)
+        .json({ error: "Invalid or missing firestorePath" });
+    }
+
+    // 4b) Choose and run the right schema
+    const schema = SCHEMAS_BY_PATH[firestorePath];
+    if (!schema) {
+      return res
+        .status(400)
+        .json({ error: "No validation schema for this firestorePath" });
+    }
+
+    const cleaned = await schema.validate(formData, {
+      abortEarly: false,
+      stripUnknown: true, // drop any unexpected fields
     });
 
-    try {
-      await schema.validate(formData);
-      console.log("Validation successful.");
-    } catch (error) {
-      console.error("Validation failed:", error.errors.join(", "));
-      return res.status(400).json({ error: error.errors.join(", ") });
-    }
+    // 4c) Write to Firestore (server timestamp)
+    const docRef = await db.collection(firestorePath).add({
+      ...cleaned,
+      serverCreatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    });
 
-    try {
-      const docRef = await db.collection(firestorePath).add(formData);
-      console.log(
-        "Registration successful. Document written with ID: ",
-        docRef.id
-      );
-      res.status(200).json({ message: "Registration successful" });
-    } catch (error) {
-      console.error("Error adding document: ", error);
-      res.status(500).json({ error: "Error adding document to Firestore" });
+    return res.status(200).json({ ok: true, id: docRef.id });
+  } catch (err) {
+    if (err && err.name === "ValidationError") {
+      return res.status(400).json({ error: err.errors.join(", ") });
     }
-  } else {
-    res.setHeader("Allow", "POST");
-    res.status(405).end("Method Not Allowed");
+    console.error("[register] Internal error:", err);
+    return res.status(500).json({ error: "Internal Server Error" });
   }
 };

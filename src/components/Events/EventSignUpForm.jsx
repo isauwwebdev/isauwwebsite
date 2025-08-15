@@ -20,7 +20,7 @@ export default function EventSignUpForm({
   rsvp = false,
   firebaseStoragePath,
 }) {
-  // console.log("🔥 Firestore path passed to form:", firestorePath);
+  console.log("🔥 Firestore path passed to form:", firestorePath);
 
   const [colleges, setColleges] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -186,22 +186,27 @@ export default function EventSignUpForm({
     //   proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
     // }
 
-    const formData = {
+    const baseData = {
       firstName: data.firstName,
       lastName: data.lastName,
       email: data.email,
       phoneNumber: data.phoneNumber,
-      // selectedCollege: selectedCollege,
       major: data.major,
-      cityOfOrigin: data.cityOfOrigin,
-      incomingSchool: data.incomingSchool,
       batch: data.batch,
       additionalQuestion: data.additionalQuestion,
       isWARegistered: isWARegistered,
       subscribe: subscribe,
-      // proofOfPayment: proofOfPaymentURL, // Include proofOfPayment URL only if rsvp is true
-      timestamp: new Date(),
+      timestamp: new Date().toISOString(),
+      firestorePath,
     };
+
+    // Add these fields only for seattle101
+    if (firestorePath === "2025/seattle101/events_registration") {
+      baseData.cityOfOrigin = data.cityOfOrigin;
+      baseData.incomingSchool = data.incomingSchool;
+    }
+
+    const formData = baseData;
 
     try {
       const response = await fetch("/api/register", {
@@ -320,6 +325,9 @@ export default function EventSignUpForm({
       </div>
     </div>
   );
+
+  // Treat path as the source of truth for what to render/require
+  const isSeattle101 = firestorePath === "2025/seattle101/events_registration";
 
   return (
     <>
@@ -563,53 +571,64 @@ export default function EventSignUpForm({
                 )}
               </div>
 
-              {/* City of Origin */}
-              <div className="mb-3">
-                <label htmlFor="city" className="form-label">
-                  <div className="flex flex-row gap-1">
-                    City of Origin <div className="text-red-500"> *</div>
+              {isSeattle101 && (
+                <>
+                  {/* City of Origin (Seattle 101 only) */}
+                  <div className="mb-3">
+                    <label htmlFor="city" className="form-label">
+                      <div className="flex flex-row gap-1">
+                        City of Origin <div className="text-red-500"> *</div>
+                      </div>
+                    </label>
+                    <input
+                      id="city"
+                      name="city"
+                      className="form-control"
+                      placeholder="Enter your city of origin"
+                      autoComplete="city"
+                      {...register("cityOfOrigin", {
+                        required: isSeattle101
+                          ? "City of Origin is required."
+                          : false,
+                      })}
+                    />
+                    {errors.cityOfOrigin && (
+                      <div className="text-danger">
+                        {errors.cityOfOrigin.message}
+                      </div>
+                    )}
                   </div>
-                </label>
-                <input
-                  id="city"
-                  name="city"
-                  className="form-control"
-                  placeholder="Enter your city of origin"
-                  autoComplete="city"
-                  {...register("cityOfOrigin", {
-                    required: "City of Origin is required.",
-                  })}
-                />
-                {errors.city && (
-                  <div className="text-danger">{errors.city.message}</div>
-                )}
-              </div>
 
-              {/* Incoming School */}
-              <div className="mb-3">
-                <label htmlFor="incomingSchool" className="form-label">
-                  <div className="flex flex-row gap-1">
-                    Incoming School / Institution{" "}
-                    <div className="text-red-500"> *</div>
+                  {/* Incoming School (Seattle 101 only) */}
+                  <div className="mb-3">
+                    <label htmlFor="incomingSchool" className="form-label">
+                      <div className="flex flex-row gap-1">
+                        Incoming School / Institution{" "}
+                        <div className="text-red-500"> *</div>
+                      </div>
+                    </label>
+                    <input
+                      id="incomingSchool"
+                      name="incomingSchool"
+                      className="form-control"
+                      placeholder="Enter your incoming school or institution"
+                      autoComplete="incomingSchool"
+                      {...register("incomingSchool", {
+                        required: isSeattle101
+                          ? "Incoming School / Institution is required."
+                          : false,
+                      })}
+                    />
+                    {errors.incomingSchool && (
+                      <div className="text-danger">
+                        {errors.incomingSchool.message}
+                      </div>
+                    )}
                   </div>
-                </label>
-                <input
-                  id="incomingSchool"
-                  name="incomingSchool"
-                  className="form-control"
-                  placeholder="Enter your incoming school or institution"
-                  autoComplete="incomingSchool"
-                  {...register("incomingSchool", {
-                    required: "Incoming School / Institution is required.",
-                  })}
-                />
-                {errors.incomingSchool && (
-                  <div className="text-danger">
-                    {errors.incomingSchool.message}
-                  </div>
-                )}
-              </div>
-              {/* batch */}
+                </>
+              )}
+
+              {/* Batch (Seattle 101 only) */}
               <div className="mb-3">
                 <label htmlFor="batch" className="form-label">
                   <div className="flex flex-row gap-1">
@@ -623,13 +642,14 @@ export default function EventSignUpForm({
                   placeholder="e.g., Freshman, Sophomore, Junior"
                   autoComplete="batch"
                   {...register("batch", {
-                    required: "Batch is required",
+                    required: isSeattle101 ? "Batch is required" : false,
                   })}
                 />
                 {errors.batch && (
                   <div className="text-danger">{errors.batch.message}</div>
                 )}
               </div>
+
               {/* Additional Question */}
               <div className="mb-3">
                 <label htmlFor="additionalQuestion" className="form-label">

@@ -1,7 +1,24 @@
 [
   {
+    "title": "ISAUW Seattle Send-Off",
+    "date": "08/23/2025",
+    "time": "14.00PM WIB",
+    "location": "La Rocca Cafe, Jakarta",
+    "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
+    "img": [
+      {
+        "src": "../images/officers/isauw-group.webp",
+        "alt": "Card front image"
+      },
+      { "src": "../images/isauwcard.png" }
+    ],
+    "completed": false,
+    "firestorePath": "2025/IsauwSeattleSendOff/event_registration",
+    "link": "/sign-up-isauw-seattle-send-off"
+  },
+  {
     "title": "Seattle 101",
-    "date": "08/16/2024",
+    "date": "08/16/2025",
     "time": "08:00PM PDT / 10:00AM WIB",
     "location": "Online",
     "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
