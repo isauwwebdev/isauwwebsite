@@ -29,7 +29,7 @@
       },
       { "src": "../images/isauwcard.png" }
     ],
-    "completed": false,
+    "completed": true,
     "firestorePath": "2025/seattle101/events_registration",
     "link": "/sign-up-seattle-101"
   },
