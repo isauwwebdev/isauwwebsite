@@ -12,7 +12,7 @@
       },
       { "src": "../images/isauwcard.png" }
     ],
-    "completed": false,
+    "completed": true,
     "firestorePath": "2025/IsauwSeattleSendOff/event_registration",
     "link": "/sign-up-isauw-seattle-send-off"
   },
