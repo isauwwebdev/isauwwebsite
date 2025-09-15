@@ -33,15 +33,10 @@ const db = admin.firestore();
 /* ──────────────────────────────────────────────────────────────
    2) Security: only allow writes to these collections
    ────────────────────────────────────────────────────────────── */
-const ALLOWED_PATHS = new Set([
-  "2025/seattle101/events_registration",
-  "2025/IsauwSeattleSendOff/event_registration",
-]);
+const ALLOWED_PATHS = new Set(["2025/seattleBingoRun/events_registration"]);
 
 /* ──────────────────────────────────────────────────────────────
    3) Validation schemas (per-form)
-   - Seattle 101: full form (requires cityOfOrigin, incomingSchool, batch)
-   - Send-Off: shorter form (does NOT require those)
    ────────────────────────────────────────────────────────────── */
 const baseCommon = {
   firstName: yup.string().required("First name is required."),
@@ -59,22 +54,13 @@ const baseCommon = {
   timestamp: yup.date().required("timestamp is required."),
 };
 
-const schemaSeattle101 = yup.object().shape({
+const schemaSeattleBingoRun = yup.object().shape({
   ...baseCommon,
-  cityOfOrigin: yup.string().required("City of origin is required."),
-  incomingSchool: yup.string().required("Incoming school is required."),
-});
-
-const schemaSendOff = yup.object().shape({
-  ...baseCommon,
-  cityOfOrigin: yup.string().nullable(), // optional for Send-Off
-  incomingSchool: yup.string().nullable(), // optional for Send-Off
 });
 
 /* Map collection → schema so we can pick per form */
 const SCHEMAS_BY_PATH = {
-  "2025/seattle101/events_registration": schemaSeattle101,
-  "2025/IsauwSeattleSendOff/event_registration": schemaSendOff,
+  "2025/seattle101/events_registration": schemaSeattleBingoRun,
 };
 
 /* ──────────────────────────────────────────────────────────────

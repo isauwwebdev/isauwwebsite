@@ -571,10 +571,10 @@ export default function EventSignUpForm({
                 )}
               </div>
 
-              {isSeattle101 && (
-                <>
-                  {/* City of Origin (Seattle 101 only) */}
-                  <div className="mb-3">
+              {/* {isSeattle101 && (
+                <> */}
+              {/* City of Origin (Seattle 101 only) */}
+              {/* <div className="mb-3">
                     <label htmlFor="city" className="form-label">
                       <div className="flex flex-row gap-1">
                         City of Origin <div className="text-red-500"> *</div>
@@ -597,10 +597,10 @@ export default function EventSignUpForm({
                         {errors.cityOfOrigin.message}
                       </div>
                     )}
-                  </div>
+                  </div> */}
 
-                  {/* Incoming School (Seattle 101 only) */}
-                  <div className="mb-3">
+              {/* Incoming School (Seattle 101 only) */}
+              {/* <div className="mb-3">
                     <label htmlFor="incomingSchool" className="form-label">
                       <div className="flex flex-row gap-1">
                         Incoming School / Institution{" "}
@@ -624,11 +624,11 @@ export default function EventSignUpForm({
                         {errors.incomingSchool.message}
                       </div>
                     )}
-                  </div>
-                </>
-              )}
+                  </div> */}
+              {/* </>
+              )} */}
 
-              {/* Batch (Seattle 101 only) */}
+              {/* Batch */}
               <div className="mb-3">
                 <label htmlFor="batch" className="form-label">
                   <div className="flex flex-row gap-1">
