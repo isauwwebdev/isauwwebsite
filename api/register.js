@@ -60,7 +60,7 @@ const schemaSeattleBingoRun = yup.object().shape({
 
 /* Map collection → schema so we can pick per form */
 const SCHEMAS_BY_PATH = {
-  "2025/seattle101/events_registration": schemaSeattleBingoRun,
+  "2025/seattleBingoRun/events_registration": schemaSeattleBingoRun,
 };
 
 /* ──────────────────────────────────────────────────────────────
