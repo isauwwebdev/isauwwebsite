@@ -174,17 +174,17 @@ export default function EventSignUpForm({
   // TODO: implement update to spreadsheets in real time using Google Sheets API.
   const onSubmit = async (data) => {
     setIsLoading(true);
-    // let proofOfPaymentURL = "";
+    let proofOfPaymentURL = "";
 
-    // if (rsvp && proofOfPaymentFile) {
-    //   // Only upload if RSVP is true and file is selected
-    //   const storageRef = ref(
-    //     storage,
-    //     `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
-    //   );
-    //   const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
-    //   proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
-    // }
+    if (rsvp && proofOfPaymentFile) {
+      // Only upload if RSVP is true and file is selected
+      const storageRef = ref(
+        storage,
+        `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
+      );
+      const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
+      proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
+    }
 
     const baseData = {
       firstName: data.firstName,
@@ -325,9 +325,6 @@ export default function EventSignUpForm({
       </div>
     </div>
   );
-
-  // Treat path as the source of truth for what to render/require
-  const isSeattle101 = firestorePath === "2025/seattle101/events_registration";
 
   return (
     <>
@@ -599,7 +596,7 @@ export default function EventSignUpForm({
                   placeholder="e.g., Freshman, Sophomore, Junior"
                   autoComplete="batch"
                   {...register("batch", {
-                    required: isSeattle101 ? "Batch is required" : false,
+                    required: "Batch is required.",
                   })}
                 />
                 {errors.batch && (
