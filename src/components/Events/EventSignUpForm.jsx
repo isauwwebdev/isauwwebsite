@@ -34,8 +34,8 @@ export default function EventSignUpForm({
   const [isLoading, setIsLoading] = useState(false);
 
   // Add state for Proof of Payment file
-  // const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
-  // const [proofOfPaymentError, setProofOfPaymentError] = useState("");
+  const [proofOfPaymentFile, setProofOfPaymentFile] = useState(null);
+  const [proofOfPaymentError, setProofOfPaymentError] = useState("");
 
   // Modal
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -164,12 +164,12 @@ export default function EventSignUpForm({
     clearErrors("phoneNumber");
   };
 
-  // const handleProofOfPaymentFile = (e) => {
-  //   const file = e.target.files[0];
-  //   setProofOfPaymentFile(file);
-  //   clearErrors("proofOfPayment");
-  //   console.log("proof of payment file", file);
-  // };
+  const handleProofOfPaymentFile = (e) => {
+    const file = e.target.files[0];
+    setProofOfPaymentFile(file);
+    clearErrors("proofOfPayment");
+    console.log("proof of payment file", file);
+  };
 
   // TODO: implement update to spreadsheets in real time using Google Sheets API.
   const onSubmit = async (data) => {
@@ -457,49 +457,6 @@ export default function EventSignUpForm({
                 )}
               </div> */}
 
-              {/* Proof of Payment */}
-              {rsvp && (
-                <div className="mb-3">
-                  <label htmlFor="proofOfPayment" className="form-label">
-                    Proof of Payment <span className="text-red-500"> *</span>
-                  </label>
-                  <input
-                    id="proofOfPayment"
-                    name="proofOfPayment"
-                    type="file"
-                    accept=".jpg,.jpeg,.png,.pdf"
-                    className="form-control"
-                    {...register("proofOfPayment", {
-                      required: "Proof of payment is required.",
-                    })}
-                    onChange={(value) => {
-                      handleProofOfPaymentFile(value);
-                    }}
-                  />
-                  {proofOfPaymentError && (
-                    <div className="text-danger">{proofOfPaymentError}</div>
-                  )}
-                  {errors.proofOfPayment && (
-                    <div className="text-danger">
-                      {errors.proofOfPayment.message}
-                    </div>
-                  )}
-                  <small className="form-text text-muted">
-                    Please upload a screenshot of your payment. Payments can be
-                    sent via:
-                    <br />
-                    <div style={{ marginLeft: "20px" }}>
-                      Zelle: (206) 981-6934
-                    </div>
-                    <div style={{ marginLeft: "20px" }}>
-                      Venmo: @ISAUW-Finance
-                    </div>
-                    When making the payment, please include your registered name
-                    in the note section.
-                  </small>
-                </div>
-              )}
-
               {/* Phone Number */}
               <div className="mb-3">
                 <label htmlFor="phoneNumber" className="form-label">
@@ -649,6 +606,52 @@ export default function EventSignUpForm({
                   <div className="text-danger">{errors.batch.message}</div>
                 )}
               </div>
+
+              {/* Proof of Payment */}
+              {rsvp && (
+                <div className="mb-3">
+                  <label htmlFor="proofOfPayment" className="form-label">
+                    Proof of Payment <span className="text-red-500"> *</span>
+                  </label>
+                  <input
+                    id="proofOfPayment"
+                    name="proofOfPayment"
+                    type="file"
+                    accept=".jpg,.jpeg,.png,.pdf"
+                    className="form-control"
+                    {...register("proofOfPayment", {
+                      required: "Proof of payment is required.",
+                    })}
+                    onChange={(value) => {
+                      handleProofOfPaymentFile(value);
+                    }}
+                  />
+                  {proofOfPaymentError && (
+                    <div className="text-danger">{proofOfPaymentError}</div>
+                  )}
+                  {errors.proofOfPayment && (
+                    <div className="text-danger">
+                      {errors.proofOfPayment.message}
+                    </div>
+                  )}
+                  <small className="form-text text-muted">
+                    Please upload a screenshot of your payment. Payments can be
+                    sent via:
+                    <br />
+                    <div style={{ marginLeft: "20px" }}>
+                      Zelle: (206) 981-6934
+                    </div>
+                    <div style={{ marginLeft: "20px" }}>
+                      Venmo: @ISAUW-Finance
+                    </div>
+                    When making the payment, please include your registered name
+                    in the note section.
+                    <br />
+                    RSVP : $10 <br />
+                    OTS : $15
+                  </small>
+                </div>
+              )}
 
               {/* Additional Question */}
               <div className="mb-3">
