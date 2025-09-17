@@ -17,6 +17,23 @@
     "link": "/sign-up-seattle-bingo-run"
   },
   {
+    "title": "Seattle Bingo Run",
+    "date": "09/22/2025",
+    "time": "2-5PM",
+    "location": "Red Square (In front of Suzallo Library), UW Seattle",
+    "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
+    "img": [
+      {
+        "src": "../images/events/stampquest/stamp_quest_3.jpeg",
+        "alt": "Card front image"
+      },
+      { "src": "../images/events/stampquest/stamp_quest_2.jpeg" }
+    ],
+    "completed": false,
+    "firestorePath": "2025/seattleBingoRun/events_registration",
+    "link": "/sign-up-seattle-bingo-run"
+  },
+  {
     "title": "ISAUW Seattle Send-Off",
     "date": "08/23/2025",
     "time": "14.00PM WIB",

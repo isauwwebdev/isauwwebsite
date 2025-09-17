@@ -458,7 +458,7 @@ export default function EventSignUpForm({
               </div> */}
 
               {/* Proof of Payment */}
-              {/* {rsvp && (
+              {rsvp && (
                 <div className="mb-3">
                   <label htmlFor="proofOfPayment" className="form-label">
                     Proof of Payment <span className="text-red-500"> *</span>
@@ -489,7 +489,7 @@ export default function EventSignUpForm({
                     sent via:
                     <br />
                     <div style={{ marginLeft: "20px" }}>
-                      Zelle: octaviog@uw.edu
+                      Zelle: (206) 981-6934
                     </div>
                     <div style={{ marginLeft: "20px" }}>
                       Venmo: @ISAUW-Finance
@@ -498,7 +498,7 @@ export default function EventSignUpForm({
                     in the note section.
                   </small>
                 </div>
-              )} */}
+              )}
 
               {/* Phone Number */}
               <div className="mb-3">
