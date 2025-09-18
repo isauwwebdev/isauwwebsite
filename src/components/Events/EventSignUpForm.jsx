@@ -193,6 +193,7 @@ export default function EventSignUpForm({
       phoneNumber: data.phoneNumber,
       major: data.major,
       batch: data.batch,
+      proofOfPayment: proofOfPaymentURL,
       additionalQuestion: data.additionalQuestion,
       isWARegistered: isWARegistered,
       subscribe: subscribe,
