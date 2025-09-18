@@ -33,7 +33,10 @@ const db = admin.firestore();
 /* ──────────────────────────────────────────────────────────────
    2) Security: only allow writes to these collections
    ────────────────────────────────────────────────────────────── */
-const ALLOWED_PATHS = new Set(["2025/seattleBingoRun/events_registration"]);
+const ALLOWED_PATHS = new Set([
+  "2025/seattleBingoRun/events_registration",
+  "2025/seathrough/events_registration",
+]);
 
 /* ──────────────────────────────────────────────────────────────
    3) Validation schemas (per-form)
@@ -58,9 +61,15 @@ const schemaSeattleBingoRun = yup.object().shape({
   ...baseCommon,
 });
 
+const schemaSeathrough = yup.object().shape({
+  ...baseCommon,
+  proofOfPayment: yup.string().required("This field is required."),
+});
+
 /* Map collection → schema so we can pick per form */
 const SCHEMAS_BY_PATH = {
   "2025/seattleBingoRun/events_registration": schemaSeattleBingoRun,
+  "2025/seathrough/events_registration": schemaSeathrough,
 };
 
 /* ──────────────────────────────────────────────────────────────
