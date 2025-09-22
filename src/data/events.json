@@ -1,10 +1,28 @@
 [
   {
+    "title": "Seathrough",
+    "date": "09/27/2025",
+    "time": "6PM - End",
+    "location": "HUB 250, UW Seattle",
+    "text": "Our annual dinner party that welcomes you to the IndoHuskies Community. An event that you do not want to miss out on as we’ll be providing delicious Indonesian food, an opportunity to create new friends, and win one-of-kind prizes by playing our games!",
+    "img": [
+      {
+        "src": "../images/events/seathrough/2024/seathrough_3.jpeg",
+        "alt": "Card front image"
+      },
+      { "src": "../images/events/seathrough/2021/1.jpeg" }
+    ],
+    "completed": false,
+    "firestorePath": "2025/seathrough/events_registration",
+    "link": "/sign-up-seathrough",
+    "rsvp": true
+  },
+  {
     "title": "Seattle Bingo Run",
     "date": "09/22/2025",
     "time": "2-5PM",
     "location": "Red Square (In front of Suzallo Library), UW Seattle",
-    "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
+    "text": "Seattle Bingo Run is an exciting scavenger hunt event that takes participants on an adventure across the city. This event is a fun-filled experience where you can meet new friends, complete activities, and win amazing prizes!",
     "img": [
       {
         "src": "../images/events/stampquest/stamp_quest_3.jpeg",
@@ -24,10 +42,21 @@
     "text": "Seattle 101 is our annual informative session designed to help prepare you to adjust to college life as easily as possible! This event aims to help you learn more about Seattle culture and the necessary tasks you have to do after arriving. Additionally, you will have the opportunity to learn about the experiences of our presenters, find and meet new friends during our networking session, and ask your burning questions during our QnA session, such as:  “Which bank should I register for?” “What’s the weather like?” “Where do people go to have fun?” etc.",
     "img": [
       {
-        "src": "../images/officers/isauw-group.webp",
-        "alt": "Card front image"
+        "src": "../images/events/sendOff/DSC_7163.jpg",
+        "alt": "Poster Image"
       },
-      { "src": "../images/isauwcard.png" }
+      {
+        "src": "../images/events/sendOff/DSC_7209.jpg",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/sendOff/DSC_7309.jpg",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/sendOff/DSC_7261.jpg",
+        "alt": "Poster Image"
+      }
     ],
     "completed": true,
     "firestorePath": "2025/IsauwSeattleSendOff/event_registration",
