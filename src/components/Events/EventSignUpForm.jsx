@@ -174,6 +174,7 @@ export default function EventSignUpForm({
   // TODO: implement update to spreadsheets in real time using Google Sheets API.
   const onSubmit = async (data) => {
     setIsLoading(true);
+
     let proofOfPaymentURL = "";
 
     if (rsvp && proofOfPaymentFile) {
