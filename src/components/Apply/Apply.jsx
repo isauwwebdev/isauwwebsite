@@ -7,8 +7,8 @@ import Spinner from "react-bootstrap/Spinner";
 
 import FormHelper from "../Shared/FormHelper";
 import PositionDescriptions from "./PositionDescriptions";
-import { addDoc, collection } from "firebase/firestore";
-import { db, storage } from "../../firebase";
+// import { addDoc, collection } from "firebase/firestore";
+import { storage } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
@@ -180,7 +180,7 @@ function Apply() {
       if (resumeFile) {
         const storageRef = ref(
           storage,
-          `2024/officer-application/resumes/${resumeFile.name}`
+          `2025/officer-application/resumes/${resumeFile.name}`
         );
         const uploadResult = await uploadBytes(storageRef, resumeFile);
         resumeURL = await getDownloadURL(uploadResult.ref);
@@ -202,13 +202,26 @@ function Apply() {
         whyISAUW,
         resume: resumeURL,
         portfolio,
-        timestamp: new Date(),
+        timestamp: new Date().toISOString(),
+        firestorePath: "2025/officer-application/submitted-applications",
       };
 
-      await addDoc(
-        collection(db, "2024/officer-application/submitted-applications"),
-        formData
-      );
+      // await addDoc(
+      //   collection(db, "2025/officer-application/submitted-applications"),
+      //   formData
+      // );
+      const resp = await fetch("/api/submit-application", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!resp.ok) {
+        const { error } = await resp
+          .json()
+          .catch(() => ({ error: "Unknown error" }));
+        throw new Error(error || "Submission failed");
+      }
 
       setLoadingSpinner(false);
       setShowThankYou(true);
@@ -216,6 +229,8 @@ function Apply() {
       // TODO: add error handling for in catch block
       console.error("Error submitting form:", error.message);
       setLoadingSpinner(false);
+      // Optionally surface a toast/modal for the error here
+      alert(error.message || "Submission failed");
     }
   };
 
@@ -259,9 +274,9 @@ function Apply() {
       <div style={{ position: "relative" }}>
         <img
           className="d-block w-100"
-          src="../images/recruitment/recruitment-banner.png"
+          src="../images/recruitment/recruitment2025.jpg"
           alt=""
-          style={{ height: "calc(50vh + 10vw)" }}
+          style={{ height: "calc(60vh + 10vw)" }}
         />
       </div>
       <Container>

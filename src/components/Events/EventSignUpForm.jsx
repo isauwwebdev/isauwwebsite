@@ -177,7 +177,7 @@ export default function EventSignUpForm({
     // let proofOfPaymentURL = "";
 
     // if (rsvp && proofOfPaymentFile) {
-    //   // Only upload if RSVP is true and file is selected
+    //   // Only upload if RSVP is true uand file is selected
     //   const storageRef = ref(
     //     storage,
     //     `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
