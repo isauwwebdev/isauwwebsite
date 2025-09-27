@@ -12,7 +12,7 @@
       },
       { "src": "../images/events/seathrough/2021/1.jpeg" }
     ],
-    "completed": false,
+    "completed": true,
     "firestorePath": "2025/seathrough/events_registration",
     "link": "/sign-up-seathrough",
     "rsvp": true
@@ -30,7 +30,7 @@
       },
       { "src": "../images/events/stampquest/stamp_quest_2.jpeg" }
     ],
-    "completed": false,
+    "completed": true,
     "firestorePath": "2025/seattleBingoRun/events_registration",
     "link": "/sign-up-seattle-bingo-run"
   },
