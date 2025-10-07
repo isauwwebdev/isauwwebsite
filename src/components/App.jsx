@@ -235,7 +235,7 @@ function App() {
                   >
                     Keraton
                   </NavLink>
-                  {/* <NavLink
+                  <NavLink
                     to="/apply"
                     className={`navLink navLink-fade-up`}
                     exact
@@ -246,7 +246,7 @@ function App() {
                     }}
                   >
                     Apply
-                  </NavLink> */}
+                  </NavLink>
                 </Nav>
                 {expanded && <SocialLinks />}
               </Navbar.Collapse>
@@ -310,7 +310,7 @@ function App() {
             }}
           />
           <Route path="/team" component={Officers} />
-          {/* <Route path="/apply" component={Apply} /> */}
+          <Route path="/apply" component={Apply} />
         </Switch>
 
         {/* {renderPopUp()} */}
