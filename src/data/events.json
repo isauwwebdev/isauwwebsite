@@ -1,5 +1,23 @@
 [
   {
+    "title": "Friendsgiving",
+    "date": "11/21/2025",
+    "time": "7PM - End",
+    "location": "The M Seattle Rooftop, U District",
+    "text": "An interactive social gathering where we will be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
+    "img": [
+      {
+        "src": "../images/events/friendsgiving/2024/6.JPG",
+        "alt": "Card front image"
+      },
+      { "src": "../images/events/friendsgiving/2024/4.JPG" }
+    ],
+    "completed": false,
+    "firestorePath": "2025/friendsGiving/events_registration",
+    "link": "/sign-up-friendsgiving",
+    "rsvp": true
+  },
+  {
     "title": "Seathrough",
     "date": "09/27/2025",
     "time": "6PM - End",
