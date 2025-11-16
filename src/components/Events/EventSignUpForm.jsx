@@ -638,7 +638,7 @@ export default function EventSignUpForm({
                     sent via:
                     <br />
                     <div style={{ marginLeft: "20px" }}>
-                      Zelle: nem406@uw.edu
+                      Zelle: nem409@uw.edu
                     </div>
                     When making the payment, please include your registered name
                     in the note section.
