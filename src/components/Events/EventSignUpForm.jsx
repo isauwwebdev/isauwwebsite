@@ -638,10 +638,7 @@ export default function EventSignUpForm({
                     sent via:
                     <br />
                     <div style={{ marginLeft: "20px" }}>
-                      Zelle: (206) 981-6934
-                    </div>
-                    <div style={{ marginLeft: "20px" }}>
-                      Venmo: @ISAUW-Finance
+                      Zelle: nem406@uw.edu
                     </div>
                     When making the payment, please include your registered name
                     in the note section.
