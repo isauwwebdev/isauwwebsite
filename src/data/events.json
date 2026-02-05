@@ -1,5 +1,39 @@
 [
   {
+    "title": "Winter Ball",
+    "date": "02/20/2026",
+    "time": "6:00 PM PT",
+    "location": "Walker-Ames Room, Kane Hall",
+    "text": "Under the Hollywood Lights was a night of pure silver-screen magic! Guests stepped back in time for an evening of vintage glamour, fine food, and classic games. From the red-carpet style to the electric atmosphere of the Walker Ames Room, it was a premiere-worthy celebration filled with laughter and elegance. Whether flying solo or with a full cast of friends, it was truly a night to remember!",
+    "img": [
+      {
+        "src": "../images/events/winter ball/2026/poster.png",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/winter ball/2025/gif_small.gif",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/winter ball/2025/2.jpg",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/winter ball/2025/3.jpg",
+        "alt": "Poster Image"
+      },
+      {
+        "src": "../images/events/winter ball/2025/4.jpg",
+        "alt": "Poster Image"
+      }
+    ],
+    "completed": false,
+    "firestorePath": "2026/winterball/event_registration",
+    "link": "/sign-up-winter-ball",
+    "rsvp": true,
+    "firebaseStoragePath": "2026/winterball"
+  },
+  {
     "title": "Friendsgiving",
     "date": "11/21/2025",
     "time": "7PM - End",

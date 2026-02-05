@@ -643,8 +643,9 @@ export default function EventSignUpForm({
                     When making the payment, please include your registered name
                     in the note section.
                     <br />
-                    RSVP : $10 <br />
-                    OTS : $15
+                    $28 Single <br />
+                    $25 Couple (per person) <br />
+                    $20 Group of 5+ (per person)
                   </small>
                 </div>
               )}

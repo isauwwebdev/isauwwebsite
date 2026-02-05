@@ -11,15 +11,15 @@ let initError;
 try {
   if (!process.env.FIREBASE_SERVICE_ACCOUNT_KEY) {
     throw new Error(
-      "Missing FIREBASE_SERVICE_ACCOUNT_KEY. Put a base64-encoded service account JSON in .env.local"
+      "Missing FIREBASE_SERVICE_ACCOUNT_KEY. Put a base64-encoded service account JSON in .env.local",
     );
   }
 
   if (!admin.apps.length) {
     const svc = JSON.parse(
       Buffer.from(process.env.FIREBASE_SERVICE_ACCOUNT_KEY, "base64").toString(
-        "utf8"
-      )
+        "utf8",
+      ),
     );
     admin.initializeApp({ credential: admin.credential.cert(svc) });
   }
@@ -33,7 +33,10 @@ const db = admin.firestore();
 /* ──────────────────────────────────────────────────────────────
    2) Security: only allow writes to these collections
    ────────────────────────────────────────────────────────────── */
-const ALLOWED_PATHS = new Set(["2025/friendsGiving/events_registration"]);
+const ALLOWED_PATHS = new Set([
+  "2025/friendsGiving/events_registration",
+  "2026/winterball/event_registration",
+]);
 
 /* ──────────────────────────────────────────────────────────────
    3) Validation schemas (per-form)
@@ -59,9 +62,15 @@ const schemaFriendsGiving = yup.object().shape({
   proofOfPayment: yup.string().required("This field is required."),
 });
 
+const schemaWinterball = yup.object().shape({
+  ...baseCommon,
+  proofOfPayment: yup.string().required("Proof of payment is required."),
+});
+
 /* Map collection → schema so we can pick per form */
 const SCHEMAS_BY_PATH = {
   "2025/friendsGiving/events_registration": schemaFriendsGiving,
+  "2026/winterball/event_registration": schemaWinterball,
 };
 
 /* ──────────────────────────────────────────────────────────────

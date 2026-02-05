@@ -27,7 +27,7 @@ function App() {
   const [events, setEvents] = useState([]);
   const [uncompletedEvents, setUncompletedEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(
-    window.location.pathname.substring(1)
+    window.location.pathname.substring(1),
   );
   const [isMobile, setIsMobile] = useState(false);
 
@@ -148,8 +148,8 @@ function App() {
                   ? "keratonHide"
                   : "keratonNav"
                 : navBar
-                ? "navSolid active"
-                : "navSolid"
+                  ? "navSolid active"
+                  : "navSolid"
             } ${expanded ? "navOpen" : "navClose"}`}
             expanded={expanded}
           >
@@ -287,19 +287,6 @@ function App() {
               />
             );
           })}
-          {/* <Route
-            path="/winterball-signup"
-            render={() => (
-              <WinterballSignUpForm
-                eventName="Winterball"
-                bannerImage="/events/winter ball/2025/winterball2025Banner.gif"
-                firestorePath="2025/winterball/event-registrations"
-                BGImage="/events/winter ball/2025/winterball2025BG5.png"
-                rsvp={true}
-                firebaseStoragePath="2025/winterball/proofs-of-payment"
-              />
-            )}
-          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route
