@@ -79,7 +79,6 @@ export default function EventSignUpForm({
         document.body.style.overflow = "auto";
         window.removeEventListener("keydown", handleEsc);
       };
-    }
   }, [showSuccessModal, showErrorModal]);
 
   const handleOutsideClick = (e) => {

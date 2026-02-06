@@ -4,7 +4,7 @@ import Moment from "react-moment";
 
 function UpcomingEventsCard(props) {
   const ref = useRef(null);
-  // ...existing code...
+  const [height, setHeight] = useState("0px");
 
   function handleHeight() {
     if (ref.current) {
