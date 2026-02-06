@@ -4,15 +4,12 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Home from "./Home/Home";
-import Events from "./Events/Events";
 import Shop from "./Shop/Shop";
 import About from "./About/About";
-import Keraton from "./Keraton/Keraton";
 import Officers from "./Officers/Officers";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
-import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
 import EventSignUpForm from "./Events/EventSignUpForm";
 import eventsData from "../data/events.json";
@@ -49,11 +46,6 @@ function App() {
     // 'load' event listener to hide the preloader once the main content is loaded
     window.addEventListener("load", () => {
       document.getElementById("preloader").style.display = "none";
-      if (currentPage.includes("keraton")) {
-        setKeratonPage(true);
-      } else {
-        setKeratonPage(false);
-      }
       setCurrentPage(window.location.pathname.substring(1));
     });
 

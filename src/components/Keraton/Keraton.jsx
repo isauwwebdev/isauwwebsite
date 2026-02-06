@@ -1,18 +1,4 @@
 import React from 'react';
-import KeratonVideo from './KeratonVideo';
-import KeratonMap from './KeratonMap';
-import KeratonAbout from './KeratonAbout';
-import KeratonPerformers from './KeratonPerformers';
-import KeratonGames from './KeratonGames';
-import KeratonFAQ from './KeratonFAQ';
-import KeratonVendors from './KeratonVendors';
-import KeratonSponsors from './KeratonSponsors';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom"
 
 function Keraton() {
   return (

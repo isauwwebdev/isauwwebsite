@@ -1,6 +1,5 @@
 import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// ...existing code...
 import Container from 'react-bootstrap/Container';
 
 function KeratonMap() {
