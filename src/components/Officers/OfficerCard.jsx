@@ -10,7 +10,7 @@ function OfficerCard(props) {
     officerRole,
     officerMajor,
     officerPosition,
-    officerDescr,
+    // ...existing code...
     officerImg,
   } = props;
   const [showModal, setShowModal] = useState(false);

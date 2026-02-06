@@ -4,16 +4,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import Home from "./Home/Home";
-import Events from "./Events/Events";
 import Shop from "./Shop/Shop";
 import About from "./About/About";
-import Keraton from "./Keraton/Keraton";
 import Officers from "./Officers/Officers";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
-import Apply from "./Apply/Apply";
 import "./index.css"; // Tailwind CSS
+import Events from "./Events/Events";
 import EventSignUpForm from "./Events/EventSignUpForm";
 import eventsData from "../data/events.json";
 import AOS from "aos";
@@ -27,7 +25,7 @@ function App() {
   const [events, setEvents] = useState([]);
   const [uncompletedEvents, setUncompletedEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(
-    window.location.pathname.substring(1)
+    window.location.pathname.substring(1),
   );
   const [isMobile, setIsMobile] = useState(false);
 
@@ -49,11 +47,6 @@ function App() {
     // 'load' event listener to hide the preloader once the main content is loaded
     window.addEventListener("load", () => {
       document.getElementById("preloader").style.display = "none";
-      if (currentPage.includes("keraton")) {
-        setKeratonPage(true);
-      } else {
-        setKeratonPage(false);
-      }
       setCurrentPage(window.location.pathname.substring(1));
     });
 
@@ -148,8 +141,8 @@ function App() {
                   ? "keratonHide"
                   : "keratonNav"
                 : navBar
-                ? "navSolid active"
-                : "navSolid"
+                  ? "navSolid active"
+                  : "navSolid"
             } ${expanded ? "navOpen" : "navClose"}`}
             expanded={expanded}
           >
@@ -287,19 +280,6 @@ function App() {
               />
             );
           })}
-          {/* <Route
-            path="/winterball-signup"
-            render={() => (
-              <WinterballSignUpForm
-                eventName="Winterball"
-                bannerImage="/events/winter ball/2025/winterball2025Banner.gif"
-                firestorePath="2025/winterball/event-registrations"
-                BGImage="/events/winter ball/2025/winterball2025BG5.png"
-                rsvp={true}
-                firebaseStoragePath="2025/winterball/proofs-of-payment"
-              />
-            )}
-          /> */}
           {/* <Route path="/about" component={About} /> */}
           {/* <Route path="/shop" component={Shop} /> */}
           <Route

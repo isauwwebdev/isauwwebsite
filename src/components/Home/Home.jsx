@@ -1,15 +1,13 @@
 import React from "react";
-import Purpose from "./Purpose";
-import InstaFeed from "./InstaFeed";
-import UpcomingEventsGallery from "../Shared/UpcomingEventsGallery";
-import Container from "react-bootstrap/Container";
-import Carousel from "react-bootstrap/Carousel";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { IoBagHandleOutline } from "react-icons/io5";
+import Purpose from "./Purpose";
+import Container from "react-bootstrap/Container";
+import Carousel from "react-bootstrap/Carousel";
 import VisionMission from "../Home/VisionMission";
 
 function Home(props) {
-  const API_KEY = process.env.REACT_APP_INS_TOKEN;
+  // ...existing code...
 
   return (
     <div>

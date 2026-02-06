@@ -66,8 +66,6 @@ export default function EventSignUpForm({
 
   // Function to handle scrolling and escape key
   useEffect(() => {
-    if (showSuccessModal || showErrorModal) {
-      document.body.style.overflow = "hidden";
 
       const handleEsc = (event) => {
         if (event.key === "Escape") {
@@ -81,7 +79,6 @@ export default function EventSignUpForm({
         document.body.style.overflow = "auto";
         window.removeEventListener("keydown", handleEsc);
       };
-    }
   }, [showSuccessModal, showErrorModal]);
 
   const handleOutsideClick = (e) => {
@@ -643,8 +640,9 @@ export default function EventSignUpForm({
                     When making the payment, please include your registered name
                     in the note section.
                     <br />
-                    RSVP : $10 <br />
-                    OTS : $15
+                    $28 Single <br />
+                    $25 Couple (per person) <br />
+                    $20 Group of 5+ (per person)
                   </small>
                 </div>
               )}
