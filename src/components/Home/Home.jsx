@@ -1,4 +1,6 @@
 import React from "react";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { IoBagHandleOutline } from "react-icons/io5";
 import Purpose from "./Purpose";
 import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";

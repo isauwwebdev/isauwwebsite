@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import "./index.css"; // Tailwind CSS
+import Events from "./Events/Events";
 import EventSignUpForm from "./Events/EventSignUpForm";
 import eventsData from "../data/events.json";
 import AOS from "aos";

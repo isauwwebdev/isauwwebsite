@@ -82,6 +82,8 @@ export default function EventSignUpForm({
     }
   }, [showSuccessModal, showErrorModal]);
 
+  const handleOutsideClick = (e) => {
+    if (e.target.id === "modal-overlay") {
       setShowSuccessModal(false);
       setShowErrorModal(false);
     }
