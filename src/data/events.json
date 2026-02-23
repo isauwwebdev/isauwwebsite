@@ -27,7 +27,7 @@
         "alt": "Poster Image"
       }
     ],
-    "completed": false,
+    "completed": true,
     "firestorePath": "2026/winterball/event_registration",
     "link": "/sign-up-winter-ball",
     "rsvp": true,
