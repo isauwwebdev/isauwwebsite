@@ -282,6 +282,7 @@ function App() {
                       uncompletedEvent.img[0]?.src || "/default/poster.png"
                     } // Default poster if none provided
                     rsvp={uncompletedEvent.rsvp || false} // Default RSVP status
+                    firebaseStoragePath={uncompletedEvent.firebaseStoragePath || ""}
                   />
                 )}
               />

@@ -60,6 +60,7 @@ const baseCommon = {
 
 const schemaIndomie = yup.object().shape({
   ...baseCommon,
+  proofOfPayment: yup.string().required("Proof of payment is required."),
 });
 
 const schemaWinterball = yup.object().shape({

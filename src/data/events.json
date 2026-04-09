@@ -18,7 +18,8 @@
     "completed": false,
     "firestorePath": "2026/IndomieSocialNight/event_registration",
     "link": "/sign-up-indomie-social-night",
-    "rsvp": false
+    "rsvp": true,
+    "firebaseStoragePath": "2026/IndomieSocialNight"
   },
   {
     "title": "Winter Ball",

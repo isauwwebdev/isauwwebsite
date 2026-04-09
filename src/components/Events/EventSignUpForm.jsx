@@ -643,9 +643,7 @@ export default function EventSignUpForm({
                     When making the payment, please include your registered name
                     in the note section.
                     <br />
-                    $28 Single <br />
-                    $25 Couple (per person) <br />
-                    $20 Group of 5+ (per person)
+                    $3 / person <br />
                   </small>
                 </div>
               )}
