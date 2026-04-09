@@ -1,5 +1,26 @@
 [
   {
+    "title": "Social Night: Indomie Eating Competition",
+    "date": "04/16/2023",
+    "time": "12:00 PDT",
+    "location": "The M Seattle Rooftop, U District",
+    "text": "A Spring Quarter kick off collaboration event with Indomie USA, where students can participate in an Indomie eating competition to win prizes and meet others!",
+    "img": [
+      {
+        "src": "../images/events/socialnight/2023/indomie-1.jpeg",
+        "alt": "Card front image"
+      },
+      { "src": "../images/events/socialnight/2023/indomie-2.jpeg" },
+      { "src": "../images/events/socialnight/2023/indomie-3.jpeg" },
+      { "src": "../images/events/socialnight/2023/indomie-4.jpeg" },
+      { "src": "../images/events/socialnight/2023/indomie-5.jpeg" }
+    ],
+    "completed": false,
+    "firestorePath": "2026/IndomieSocialNight/event_registration",
+    "link": "/sign-up-indomie-social-night",
+    "rsvp": false
+  },
+  {
     "title": "Winter Ball",
     "date": "02/20/2026",
     "time": "6:00 PM PT",
@@ -38,7 +59,7 @@
     "date": "11/21/2025",
     "time": "7PM - End",
     "location": "The M Seattle Rooftop, U District",
-    "text": "An interactive social gathering where we will be serving “Thanksgiving” - themed dinner, karaoke and drinks served in a bar for those 21+. This event aims to serve as an opportunity to de-stress, relax and have some quality time with your friends in the days leading up to the Thanksgiving break.",
+    "text": "Step into the spotlight at Under the Hollywood Lights, where vintage glamour meets a night of silver-screen magic. Enjoy fine food, classic games, and a red-carpet atmosphere as the Walker Ames Room transforms into a timeless Hollywood premiere!  Whether you arrive solo or with your full cast, expect an evening filled with elegance, laughter, and unforgettable moments. ✨🎬",
     "img": [
       {
         "src": "../images/events/friendsgiving/2024/6.jpg",

@@ -36,6 +36,7 @@ const db = admin.firestore();
 const ALLOWED_PATHS = new Set([
   "2025/friendsGiving/events_registration",
   "2026/winterball/event_registration",
+  "2026/IndomieSocialNight/event_registration",
 ]);
 
 /* ──────────────────────────────────────────────────────────────
@@ -57,12 +58,16 @@ const baseCommon = {
   timestamp: yup.date().required("timestamp is required."),
 };
 
-const schemaFriendsGiving = yup.object().shape({
+const schemaIndomie = yup.object().shape({
   ...baseCommon,
-  proofOfPayment: yup.string().required("This field is required."),
 });
 
 const schemaWinterball = yup.object().shape({
+  ...baseCommon,
+  proofOfPayment: yup.string().required("Proof of payment is required."),
+});
+
+const schemaFriendsGiving = yup.object().shape({
   ...baseCommon,
   proofOfPayment: yup.string().required("Proof of payment is required."),
 });
@@ -71,6 +76,7 @@ const schemaWinterball = yup.object().shape({
 const SCHEMAS_BY_PATH = {
   "2025/friendsGiving/events_registration": schemaFriendsGiving,
   "2026/winterball/event_registration": schemaWinterball,
+  "2026/IndomieSocialNight/event_registration": schemaIndomie,
 };
 
 /* ──────────────────────────────────────────────────────────────

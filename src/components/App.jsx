@@ -261,7 +261,7 @@ function App() {
 
           {/* Dynamically generate routes for uncompleted events */}
           {uncompletedEvents.map((uncompletedEvent, index) => {
-            const eventPath = `/sign-up-${uncompletedEvent.title
+            const eventPath = uncompletedEvent.link || `/sign-up-${uncompletedEvent.title
               .toLowerCase()
               .replace(/ /g, "-")}`;
 

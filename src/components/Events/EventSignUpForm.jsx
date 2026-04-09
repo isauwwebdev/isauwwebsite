@@ -109,7 +109,7 @@ export default function EventSignUpForm({
   // Initialize tooltips
   useEffect(() => {
     const tooltipTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="tooltip"]'
+      '[data-bs-toggle="tooltip"]',
     );
     tooltipTriggerList.forEach((tooltipTriggerEl) => {
       new Tooltip(tooltipTriggerEl);
@@ -181,7 +181,7 @@ export default function EventSignUpForm({
       // Only upload if RSVP is true and file is selected
       const storageRef = ref(
         storage,
-        `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`
+        `${firebaseStoragePath}/proofs-of-payment/${proofOfPaymentFile.name}`,
       );
       const uploadResult = await uploadBytes(storageRef, proofOfPaymentFile);
       proofOfPaymentURL = await getDownloadURL(uploadResult.ref);
