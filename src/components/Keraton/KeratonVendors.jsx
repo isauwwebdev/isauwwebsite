@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import { mdiFoodTakeoutBoxOutline } from '@mdi/js'; 
 
 import vendorList from '../../data/keraton-vendors';
-import { MdSettingsInputAntenna } from 'react-icons/md';
+// ...existing code...
 
 function KeratonVendors() {
   const [nav1, setNav1] = useState();

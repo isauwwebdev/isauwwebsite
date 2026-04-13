@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 
-import { FaInstagram } from 'react-icons/fa';
+// ...existing code...
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -105,7 +105,7 @@ function KeratonPerformers() {
 }
 
 function StudentPerformerItem(props) {
-  const { student, index } = props;
+  const { student } = props;
   return (
     <Col sm={12} md={12} lg={10} className="mx-2 my-3">
       <Row className="student-performers justify-content-between">
