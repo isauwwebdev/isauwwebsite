@@ -13,6 +13,7 @@ import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import SocialLinks from "./SocialLinks";
 import Apply from "./Apply/Apply";
+import ApplyOld from "./Apply/ApplyOld";
 import "./index.css"; // Tailwind CSS
 import EventSignUpForm from "./Events/EventSignUpForm";
 import eventsData from "../data/events.json";
@@ -186,6 +187,18 @@ function App() {
                   {" "}
                   {/* ms-auto right aligns the nav links */}
                   <NavLink
+                    to="/apply"
+                    className={`navLink navApply`}
+                    exact
+                    activeClassName="navLinkActive"
+                    onClick={() => {
+                      setExpanded(false);
+                      setKeratonPage(false);
+                    }}
+                  >
+                    <span className="navApplyPill">Apply!</span>
+                  </NavLink>
+                  <NavLink
                     to="/"
                     className={`navLink navLink-fade-up`}
                     exact
@@ -298,7 +311,8 @@ function App() {
             }}
           />
           <Route path="/team" component={Officers} />
-          {/* <Route path="/apply" component={Apply} /> */}
+          <Route path="/apply-old" component={ApplyOld} />
+          <Route path="/apply" component={Apply} />
         </Switch>
 
         {/* {renderPopUp()} */}

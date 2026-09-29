@@ -47,9 +47,8 @@ const positionEnum = [
   "Treasury",
   "Fundraising",
   "Sponsorship",
-  "MarCom",
+  "MediaMarketing",
   "Design",
-  "Documentation",
   "WebDev",
 ];
 

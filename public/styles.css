@@ -676,6 +676,49 @@ p {
   transform: none !important;
 }
 
+/* Apply button: same text styling as other nav links, on a red pill */
+.navApply::after {
+  display: none;
+}
+
+.navApplyPill {
+  background-color: #811b16;
+  border-radius: 999px;
+  padding: 0.35em 1em;
+  transition: filter 0.3s;
+}
+
+.navApply:hover .navApplyPill {
+  filter: brightness(1.2);
+}
+
+/* Apply Now button on /apply: matches the navbar Apply! pill */
+.apply-now-button {
+  display: inline-block;
+  font-family: "brandon_grotesque", sans-serif;
+  font-weight: 400;
+  font-size: calc(0.8vw + 24px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #811b16;
+  border-radius: 999px;
+  padding: 0.35em 1em;
+  transition: filter 0.3s;
+}
+
+.apply-now-button:hover {
+  color: #ffffff;
+  filter: brightness(1.2);
+}
+
+/* navbar turns the same red when scrolled or opened, so outline the pill */
+.navSolid.active .navApplyPill,
+.navOpen .navApplyPill {
+  box-shadow: inset 0 0 0 1.5px #ffffff;
+}
+
 /* Ad Banner */
 .alert-fixed {
   position: fixed;
@@ -2393,8 +2436,75 @@ select:invalid {
   color: #6c9e74;
 }
 
-.position-descr-slider .slick-list .slick-track {
-  display: flex !important;
+/* Position descriptions: horizontally scrollable row that snaps to cards */
+.position-carousel {
+  position: relative;
+}
+
+.position-track {
+  position: relative; /* so card offsetLeft is measured from the track */
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #ced4da transparent;
+}
+
+/* show 2.2 cards on desktop so the next one peeks in */
+.position-card {
+  flex: 0 0 calc((100% - 2rem) / 2.2);
+  scroll-snap-align: start;
+}
+
+@media (max-width: 992px) {
+  .position-card {
+    flex-basis: calc((100% - 1rem) / 2);
+  }
+}
+
+@media (max-width: 576px) {
+  .position-card {
+    flex-basis: 92%;
+  }
+}
+
+.position-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #ced4da;
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #212529;
+  font-size: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.2s, background-color 0.2s;
+}
+
+.position-arrow:hover:not(:disabled) {
+  background-color: #f1f1f1;
+}
+
+.position-arrow:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.position-arrow-left {
+  left: -16px;
+}
+
+.position-arrow-right {
+  right: -16px;
 }
 
 .position-icon svg {
