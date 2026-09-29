@@ -14,7 +14,7 @@ import {
   FaCode,
 } from "react-icons/fa";
 
-function PositionDescriptions() {
+function PositionDescriptionsOld() {
   const departmentDescriptions = [
     {
       title: "Inventory",
@@ -209,4 +209,4 @@ function PositionDescriptions() {
   );
 }
 
-export default PositionDescriptions;
+export default PositionDescriptionsOld;
