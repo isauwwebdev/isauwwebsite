@@ -15,9 +15,13 @@ function Apply() {
       <div style={{ position: "relative" }}>
         <img
           className="d-block w-100"
-          src="../images/recruitment/recruitment2025.jpg"
+          src="../images/recruitment/recruitment2026.jpeg"
           alt=""
-          style={{ height: "calc(60vh + 10vw)" }}
+          style={{
+            height: "calc(60vh + 10vw)",
+            objectFit: "cover",
+            objectPosition: "center",
+          }}
         />
       </div>
       <Container>
